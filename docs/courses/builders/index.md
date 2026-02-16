@@ -14,7 +14,6 @@ course_language: en
 From Claude user to Claude builder in 5 weeks. This cohort-based course teaches you to move beyond basic AI usage and build production-grade AI systems — configuring a complete builder infrastructure, creating reusable AI capabilities, developing autonomous workflows, and shipping applications using agentic coding principles.
 
 [Enroll on Maven :material-arrow-right:](https://maven.com/james-gray/claude){ .md-button .md-button--primary }
-[View full syllabus :material-format-list-bulleted:](syllabus.md){ .md-button }
 
 ## Who This Course Is For
 
@@ -61,3 +60,9 @@ Setup guides are available under [Builder Setup](../../builder-setup/claude-code
 
 - [Maven Profile](https://maven.com/james-gray)
 - [Other course: Hands-on Agentic AI for Leaders](../leaders/)
+
+---
+
+## Full Syllabus
+
+--8<-- "docs/courses/builders/_syllabus_body.md"
