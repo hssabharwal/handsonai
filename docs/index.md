@@ -15,7 +15,7 @@ Practical guides, patterns, ready-made tools, and direct answers — everything 
 
 ---
 
-**Ready-made AI tools you can use today** — agents, skills, and prompts for business workflows, writing, research, and meeting prep. [Install as plugins](use-the-cookbook/build/index.md) or [browse on GitHub](https://github.com/jamesgray-ai/handsonai/tree/main/plugins).
+**Ready-made AI tools you can use today** — agents, skills, and prompts that give your AI tool domain expertise it doesn't have out of the box. [Install as plugins](use-the-cookbook/build/index.md) or [browse on GitHub](https://github.com/jamesgray-ai/handsonai/tree/main/plugins).
 
 <!-- latest-updates -->
 
