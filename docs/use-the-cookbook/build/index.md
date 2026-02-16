@@ -178,11 +178,41 @@ Document, name, register, and sync AI operational workflows and skills.
 
 ---
 
+## :material-code-tags: Agentic Coding
+
+Skills for AI-assisted coding workflows. Define requirements before you build — structured PRDs with user stories, acceptance criteria, and GitHub issue tracking.
+
+```bash
+/plugin install agentic-coding@handsonai
+```
+
+??? skills "Skills included — all available as slash commands"
+
+    | Skill | Command | What it does |
+    |-------|---------|-------------|
+    | [`writing-feature-prds`](agentic-coding.md#writing-feature-prds) | `/agentic-coding:feature-prd` | Guides you through creating a structured feature PRD with user stories, acceptance criteria, and GitHub issue tracking. Walks through 4 phases: Define, Stress-test, Create Issue, Handoff to implementation. |
+
+??? usage "Example usage"
+
+    ```
+    "I want to build a new feature for user authentication"
+    → Walks through the 4-phase PRD workflow: Define, Stress-test, Create Issue, Handoff
+
+    "Create a spec for adding dark mode support"
+    → Creates a PRD at specs/dark-mode.md with user stories and acceptance criteria
+
+    "New feature: webhook notifications when a deployment fails"
+    → Asks clarifying questions, produces a PRD, creates a GitHub issue
+    ```
+
+---
+
 ## Quick Reference
 
 | Plugin | Agents | Skills | Prompts | Install command |
 |--------|--------|--------|---------|----------------|
 | `business-first-ai` | 8 | 5 | 3 | `/plugin install business-first-ai@handsonai` |
 | `ai-registry` | 0 | 5 | 0 | `/plugin install ai-registry@handsonai` |
+| `agentic-coding` | 0 | 1 | 0 | `/plugin install agentic-coding@handsonai` |
 
 All plugins are maintained in the [handsonai GitHub repository](https://github.com/jamesgray-ai/handsonai).

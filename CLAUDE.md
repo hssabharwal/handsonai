@@ -50,9 +50,9 @@ Hands-On AI (handsonai.info) — the consolidated site for James Gray's AI cours
 
 For non-trivial changes (new pages, structural reorganization, script additions, multi-file updates), follow this workflow. Skip to step 3 for small edits.
 
-### 1. Define — `/feature-spec`
+### 1. Define — `/agentic-coding:feature-prd`
 
-Use `/feature-spec` to create a spec, or write one manually in `specs/` (gitignored). For early-stage ideas, use the `brainstorming` superpowers skill first.
+Use `/agentic-coding:feature-prd` to create a PRD, or write one manually in `specs/` (gitignored). For early-stage ideas, use the `brainstorming` superpowers skill first.
 
 A spec should include: **Summary**, **Motivation**, **Approach**, **Changes**, **Verification**. See `specs/google-analytics.md` for a format example.
 
@@ -95,7 +95,7 @@ After shipping, use `/revise-claude-md` to capture any session learnings.
 
 | Command | Purpose |
 |---------|---------|
-| `/feature-spec` | Create a feature spec in `specs/` |
+| `/agentic-coding:feature-prd` | Create a feature PRD in `specs/` |
 | `/feature-dev` | Guided feature development workflow |
 | `/commit` | Create a git commit |
 | `/commit-push-pr` | Commit, push, and open a PR |

@@ -146,6 +146,7 @@ plugins:
         plugins/using-plugins.md: use-the-cookbook/build/using-plugins.md
         plugins/business-first-ai.md: use-the-cookbook/build/business-first-ai.md
         plugins/ai-registry.md: use-the-cookbook/build/ai-registry.md
+        plugins/agentic-coding.md: use-the-cookbook/build/agentic-coding.md
         # MCP Server → Use the Cookbook / Ask
         mcp-server.md: use-the-cookbook/ask/index.md
         # Course syllabus pages → consolidated course pages
@@ -195,6 +196,7 @@ nav:
       - Using Plugins: use-the-cookbook/build/using-plugins.md
       - Business-First AI: use-the-cookbook/build/business-first-ai.md
       - AI Registry: use-the-cookbook/build/ai-registry.md
+      - Agentic Coding: use-the-cookbook/build/agentic-coding.md
     - Resources:
       - resources/index.md
       - resources/openai-use-cases-report.md
