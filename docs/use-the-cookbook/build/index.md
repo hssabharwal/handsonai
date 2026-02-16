@@ -1,13 +1,18 @@
 ---
 title: Hands-on AI Marketplace
-description: Pre-built Claude Code plugins with agents and skills you can install in one command
+description: Pre-built agents, skills, and prompts you can install as Claude Code plugins or download from GitHub to use in any AI tool
 ---
 
 # Hands-on AI Marketplace
 
-The Hands-on AI Marketplace is a collection of ready-to-use plugins for [Claude Code](../../builder-setup/claude-code-install.md). Each plugin gives Claude specialized knowledge — things like how to write a LinkedIn post, how to research a company before a meeting, or how to document a business workflow. Install a plugin with a single command and Claude gains that expertise across every conversation.
+A growing collection of ready-to-use **agents**, **skills**, and **prompts** that give your AI tool domain expertise it doesn't have out of the box. Every file is plain-text Markdown — no compiled code, no special format — so you can use them in any AI tool.
 
-**What's inside:** The marketplace currently includes two plugins with a combined **8 agents**, **10 skills**, and **3 reusable prompts** — all focused on real business tasks. Browse the available plugins below, or start with the [Getting Started guide](getting-started.md) for a step-by-step walkthrough.
+**Two ways to get them:**
+
+- :material-puzzle-outline: **Install as Claude Code plugins** — one command, automatic expertise across every session. [Get started below.](#what-are-plugins)
+- :material-github: **Download from GitHub** — copy any file and paste it into ChatGPT, Gemini, Copilot, or the Claude API. [Browse on GitHub.](#dont-use-plugins-browse-on-github)
+
+Browse the available plugins below to see what's included, or start with the [Getting Started guide](getting-started.md) for a step-by-step walkthrough.
 
 ## What Are Plugins?
 
