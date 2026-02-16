@@ -21,7 +21,7 @@ The Hands-on AI Cookbook isn't just a reference site — it's a toolkit you can 
 
     ---
 
-    Install pre-built agents and skills that give Claude expert knowledge in business workflows, writing, research, and more.
+    Pre-built agents, skills, and prompts for business workflows, writing, research, and more. Install as Claude Code plugins or [browse on GitHub](https://github.com/jamesgray-ai/handsonai/tree/main/plugins) to download and use in any AI tool.
 
     [:octicons-arrow-right-24: Browse plugins](build/index.md)
 
