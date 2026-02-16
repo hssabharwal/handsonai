@@ -231,6 +231,7 @@ nav:
         - Deterministic Automation: business-first-ai-framework/build/deterministic-automation.md
         - AI Collaborative: business-first-ai-framework/build/ai-collaborative.md
         - Autonomous Agent: business-first-ai-framework/build/autonomous-agent.md
+        - "Full Example: Content Calendar Planning": business-first-ai-framework/examples/content-calendar-planning.md
     - Questions:
       - Find workflows worth applying AI to: business-first-ai-framework/questions/how-do-i-find-workflows-worth-applying-ai-to.md
       - Identify the right AI tools for a workflow: business-first-ai-framework/questions/how-do-i-identify-the-right-ai-tools-for-a-workflow.md
