@@ -196,6 +196,6 @@ With your builder stack in place, you're ready to start building with AI.
 
     Structured learning that walks you through building with AI step by step.
 
-    [:octicons-arrow-right-24: Browse Courses](../courses/index.md)
+    [:octicons-arrow-right-24: Learn with James](../courses/index.md)
 
 </div>

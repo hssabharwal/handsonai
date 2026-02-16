@@ -22,42 +22,18 @@ From AI user to AI builder in 30 days. This cohort-based course goes beyond Chat
 - **Managers** strengthening their collaboration with technical stakeholders
 - No coding experience required
 
-## What You'll Learn
-
-- Systematize AI-powered workflows with version-controlled asset libraries and opportunity catalogs
-- Master agentic frameworks including the autonomy spectrum, seven building blocks, and twelve architecture patterns
-- Build prompt workflows and project workspaces with memory systems and custom instructions across platforms
-- Develop agent skills that package your expertise for reusable task execution
-- Create browser automation workflows that execute multi-step web tasks hands-free
-- Deploy autonomous agents across ChatGPT, Claude, M365 Copilot, and Google Workspace
-
-## What You'll Build
-
-By the end of the course, you'll ship workflows that save 5-10 hours weekly, complete 26 hands-on projects, and have the practical experience to reimagine business processes, identify automation patterns, and communicate credibly with technical teams.
-
-## Course Format
-
-| | |
-|---|---|
-| **Duration** | 4 weeks |
-| **Commitment** | 5-8 hours per week |
-| **Live Sessions** | Two session options per week (morning/evening US ET) |
-| **Office Hours** | Optional Wednesday and Saturday sessions with 1:1 coaching |
-| **Community** | Private LinkedIn group with bi-weekly updates post-course |
-| **Recordings** | Lifetime access to all session recordings with monthly content updates |
-
-## Prerequisites
-
-- Paid subscription to ChatGPT, Claude, or Gemini
-- macOS or Windows computer
-- Comfort with small-group learning — no coding required
-
 ## Instructor
 
 **James Gray** — UC Berkeley AI instructor and former CIO/CPO. Previously spent 10 years at Microsoft building enterprise data platforms. Has trained 5,000+ executives globally in AI strategy.
 
 - [Maven Profile](https://maven.com/james-gray)
 - [Other course: Claude and Claude Code for Builders](../builders/)
+
+## Prerequisites
+
+- Paid subscription to ChatGPT, Claude, or Gemini
+- macOS or Windows computer
+- Comfort with small-group learning — no coding required
 
 ---
 

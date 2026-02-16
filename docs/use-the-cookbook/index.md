@@ -25,12 +25,12 @@ The Hands-on AI Cookbook isn't just a reference site — it's a toolkit you can 
 
     [:octicons-arrow-right-24: Browse plugins](build/index.md)
 
--   :material-school:{ .lg .middle } **Learn (Courses)**
+-   :material-school:{ .lg .middle } **Learn (Learn with James)**
 
     ---
 
-    Join a cohort course for structured, hands-on learning with live instruction and peer collaboration.
+    Cohort courses, corporate training, 1-on-1 coaching, and the Graymatter newsletter — multiple ways to learn AI hands-on.
 
-    [:octicons-arrow-right-24: Browse courses](../courses/index.md)
+    [:octicons-arrow-right-24: Explore learning options](../courses/index.md)
 
 </div>
