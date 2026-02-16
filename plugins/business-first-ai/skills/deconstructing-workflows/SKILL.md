@@ -1,9 +1,12 @@
 ---
 name: deconstructing-workflows
 description: >
-  Interactively deconstruct a business workflow into a structured Workflow Definition. Use when
-  the user wants to break down a workflow, decompose a business process, or deeply analyze a
-  workflow's steps, decisions, data flows, and failure modes. This is the Deconstruct step.
+  This skill should be used when the user wants to deconstruct a workflow, break down a business
+  process, or deeply analyze a workflow's steps, decisions, data flows, and failure modes.
+  Interactively decomposes a workflow into a structured Workflow Definition using the 5-question
+  framework. This is Step 2 of the Business-First AI Framework.
+user_invocable: true
+command: deconstruct
 ---
 
 # Workflow Deconstruction

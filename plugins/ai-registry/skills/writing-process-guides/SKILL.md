@@ -1,6 +1,12 @@
 ---
 name: writing-process-guides
-description: Write Business Process Guide documentation that explains when, why, and how to execute a complete business process with its component workflows. Use when documenting a business process end-to-end, creating playbooks, or explaining how multiple workflows fit together. Triggers on "write process guide", "document this process", "create a playbook for", or "how do these workflows connect".
+description: >
+  This skill should be used when the user wants to write a process guide, document a business
+  process end-to-end, create a playbook, or explain how multiple workflows fit together.
+  Writes Business Process Guide documentation that explains when, why, and how to execute a
+  complete business process with its component workflows.
+user_invocable: true
+command: process-guide
 ---
 
 # Writing Business Process Guides

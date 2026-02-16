@@ -1,10 +1,12 @@
 ---
 name: preparing-meeting-briefs
 description: >
-  Research attendees and companies before meetings. Produces a structured meeting prep
-  brief with attendee profiles, company snapshots, talking points, and suggested questions.
-  Use when the user mentions preparing for a meeting, researching someone before a call,
-  or needing talking points for an upcoming conversation.
+  This skill should be used when the user wants to prepare for a meeting, research attendees
+  or companies before a call, or needs talking points for an upcoming conversation. Produces
+  a structured meeting prep brief with attendee profiles, company snapshots, talking points,
+  and suggested questions.
+user_invocable: true
+command: meeting-prep
 ---
 
 # Preparing Meeting Briefs

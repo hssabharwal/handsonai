@@ -1,6 +1,12 @@
 ---
 name: naming-workflows
-description: Generate consistent, outcome-focused names and descriptions for business workflows and add them to the Notion Workflows database. Use when the user asks to name workflows, write workflow descriptions, standardize workflow documentation, add a workflow to Notion, or needs help structuring workflow entries.
+description: >
+  This skill should be used when the user wants to name a workflow, write workflow descriptions,
+  standardize workflow documentation, add a workflow to Notion, or structure workflow entries.
+  Generates consistent, outcome-focused names and descriptions for business workflows and creates
+  entries in the Notion Workflows database.
+user_invocable: true
+command: name-workflow
 ---
 
 # Naming Workflows

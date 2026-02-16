@@ -1,11 +1,13 @@
 ---
 name: editing-hbr-articles
 description: >
-  Edit business articles to HBR publication quality. Makes prescriptive edits for clarity,
-  structure, evidence quality, and executive voice. Use when: (1) reviewing draft articles
-  before publication, (2) improving business writing for executive audiences, (3) user asks
-  to "edit," "review," or "improve" an article, or (4) user mentions "HBR quality" or
-  "publication ready." Targets feature articles and thought leadership pieces.
+  This skill should be used when the user wants to edit a business article to HBR publication
+  quality, review a draft before publication, improve business writing for executive audiences,
+  or mentions "HBR quality" or "publication ready". Makes prescriptive edits for clarity,
+  structure, evidence quality, and executive voice. Targets feature articles and thought
+  leadership pieces.
+user_invocable: true
+command: edit-article
 ---
 
 # Editing HBR Articles

@@ -21,16 +21,28 @@ How you use this plugin depends on your platform:
 
     Install the plugin and everything is available immediately. Agents activate automatically
     when your prompt matches — just describe what you need and Claude handles the rest.
+    Skills can also be invoked directly as slash commands.
 
     ```bash
     /plugin install business-first-ai@handsonai
     ```
 
+    **Slash commands:**
+
+    | Command | Skill |
+    |---------|-------|
+    | `/business-first-ai:discover` | `discovering-workflows` — Step 1 |
+    | `/business-first-ai:deconstruct` | `deconstructing-workflows` — Step 2 |
+    | `/business-first-ai:build-workflow` | `building-workflows` — Step 3 |
+    | `/business-first-ai:edit-article` | `editing-hbr-articles` |
+    | `/business-first-ai:meeting-prep` | `preparing-meeting-briefs` |
+
     **Recommended path:**
 
-    1. Say *"Help me discover AI workflow opportunities"* → the `discovering-workflows` skill runs Step 1
-    2. Say *"I want to deconstruct my [workflow] into AI building blocks"* → the `workflow-deconstructor` agent orchestrates Steps 2 and 3
-    3. Review your outputs in the `outputs/` folder
+    1. Run `/business-first-ai:discover` (or say *"Help me discover AI workflow opportunities"*) → the `discovering-workflows` skill runs Step 1
+    2. Run `/business-first-ai:deconstruct` (or say *"I want to deconstruct my [workflow] into AI building blocks"*) → the `deconstructing-workflows` skill runs Step 2
+    3. Run `/business-first-ai:build-workflow` to design and build the AI workflow → Step 3
+    4. Review your outputs in the `outputs/` folder
 
 === "Cowork"
 

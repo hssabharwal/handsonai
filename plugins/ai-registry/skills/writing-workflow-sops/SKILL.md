@@ -1,6 +1,12 @@
 ---
 name: writing-workflow-sops
-description: Write Standard Operating Procedure documentation for workflows and save to Notion workflow page bodies. Use when the user asks to write an SOP, document a workflow, create procedure documentation, add operating instructions to a workflow, or wants to capture how a workflow is executed. Adapts template for Manual, Augmented, and Automated workflow types.
+description: >
+  This skill should be used when the user wants to write an SOP, document a workflow procedure,
+  create operating instructions, or capture how a workflow is executed. Writes Standard Operating
+  Procedure documentation for workflows and saves to Notion workflow page bodies. Adapts template
+  for Manual, Augmented, and Automated workflow types.
+user_invocable: true
+command: workflow-sop
 ---
 
 # Writing Workflow SOPs

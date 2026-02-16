@@ -1,11 +1,13 @@
 ---
 name: building-workflows
 description: >
-  Design and build an AI workflow from a Workflow Definition. The Design phase chooses an execution
-  pattern, classifies steps, maps building blocks, identifies skill candidates, and configures agents.
-  The Construct phase generates the Baseline Workflow Prompt, skills, and agent files based on the
-  chosen pattern. Use when the user has a Workflow Definition and wants to design and build the
-  workflow. This is the Build step (Design + Construct).
+  This skill should be used when the user has a Workflow Definition and wants to design and build
+  an AI workflow. The Design phase chooses an execution pattern, classifies steps, maps building
+  blocks, identifies skill candidates, and configures agents. The Construct phase generates the
+  Baseline Workflow Prompt, skills, and agent files based on the chosen pattern.
+  This is Step 3 of the Business-First AI Framework (Design + Construct).
+user_invocable: true
+command: build-workflow
 ---
 
 # Workflow Build

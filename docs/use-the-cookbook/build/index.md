@@ -73,15 +73,15 @@ The [Business-First AI Framework](../../business-first-ai-framework/index.md) as
     | [`ai-news-researcher`](business-first-ai.md#ai-news-researcher) | Utility | Scans news outlets, blogs, YouTube channels, podcasts, and communities for the latest AI developments. |
     | [`claude-research-daily`](business-first-ai.md#claude-research-daily) | Utility | Produces a daily brief on Anthropic, Claude, Claude Code, and Cowork from the last 24 hours. |
 
-???+ skills "Skills included (5)"
+???+ skills "Skills included (5) — all available as slash commands"
 
-    | Skill | Step | What it does |
-    |-------|-------|-------------|
-    | [`discovering-workflows`](business-first-ai.md#discovering-workflows) | 1 | Structured audit of your workflows to discover where AI can help. Produces a categorized opportunity report with structured workflow candidates. |
-    | [`deconstructing-workflows`](business-first-ai.md#deconstructing-workflows) | 2 | Interactively deconstructs a business workflow into a structured Workflow Definition using the 5-question framework. |
-    | [`building-workflows`](business-first-ai.md#building-workflows) | 3 | Designs the AI implementation (execution pattern, building blocks, skill candidates, agent configs) and constructs the Baseline Workflow Prompt. |
-    | [`editing-hbr-articles`](business-first-ai.md#editing-hbr-articles) | 3 | HBR editorial criteria for article editing. Used by the `hbr-editor` agent. |
-    | [`preparing-meeting-briefs`](business-first-ai.md#preparing-meeting-briefs) | 3 | Structured research workflow for meeting preparation. Used by the `meeting-prep-researcher` agent. |
+    | Skill | Command | Step | What it does |
+    |-------|---------|-------|-------------|
+    | [`discovering-workflows`](business-first-ai.md#discovering-workflows) | `/business-first-ai:discover` | 1 | Structured audit of your workflows to discover where AI can help. Produces a categorized opportunity report with structured workflow candidates. |
+    | [`deconstructing-workflows`](business-first-ai.md#deconstructing-workflows) | `/business-first-ai:deconstruct` | 2 | Interactively deconstructs a business workflow into a structured Workflow Definition using the 5-question framework. |
+    | [`building-workflows`](business-first-ai.md#building-workflows) | `/business-first-ai:build-workflow` | 3 | Designs the AI implementation (execution pattern, building blocks, skill candidates, agent configs) and constructs the Baseline Workflow Prompt. |
+    | [`editing-hbr-articles`](business-first-ai.md#editing-hbr-articles) | `/business-first-ai:edit-article` | 3 | HBR editorial criteria for article editing. Used by the `hbr-editor` agent. |
+    | [`preparing-meeting-briefs`](business-first-ai.md#preparing-meeting-briefs) | `/business-first-ai:meeting-prep` | 3 | Structured research workflow for meeting preparation. Used by the `meeting-prep-researcher` agent. |
 
 ???+ prompts "Prompts included (3)"
 
@@ -126,15 +126,15 @@ Document, name, register, and sync AI operational workflows and skills.
 /plugin install ai-registry@handsonai
 ```
 
-??? skills "Skills included"
+??? skills "Skills included — all available as slash commands"
 
-    | Skill | What it does |
-    |-------|-------------|
-    | [`naming-workflows`](ai-registry.md#naming-workflows) | Generates consistent, outcome-focused names and descriptions for business workflows. Follows domain-specific naming patterns (Sales, Marketing, Product, etc.) and creates entries in the Notion Workflows database. |
-    | [`writing-workflow-sops`](ai-registry.md#writing-workflow-sops) | Writes Standard Operating Procedure documentation for workflows. Adapts SOP templates for Manual, Augmented, and Automated workflow types. Saves SOPs to Notion workflow page bodies. |
-    | [`writing-process-guides`](ai-registry.md#writing-process-guides) | Writes Business Process Guide documentation explaining when, why, and how to execute a complete business process with its component workflows. Covers strategic context while linking to individual SOPs for tactical details. |
-    | [`registering-building-blocks`](ai-registry.md#registering-building-blocks) | Registers or updates AI building blocks (Skills, Agents, Prompts, Context MDs) in the Notion AI Building Blocks database. Resolves asset type automatically, extracts metadata, generates Quick Start Prompts, and handles duplicate detection. |
-    | [`syncing-skills-to-github`](ai-registry.md#syncing-skills-to-github) | Syncs skills from `~/.claude/skills/` to a GitHub repository. Detects changes, generates semantic commit messages, pushes to remote, and updates Notion AI Building Blocks with GitHub URLs. |
+    | Skill | Command | What it does |
+    |-------|---------|-------------|
+    | [`naming-workflows`](ai-registry.md#naming-workflows) | `/ai-registry:name-workflow` | Generates consistent, outcome-focused names and descriptions for business workflows. Follows domain-specific naming patterns (Sales, Marketing, Product, etc.) and creates entries in the Notion Workflows database. |
+    | [`writing-workflow-sops`](ai-registry.md#writing-workflow-sops) | `/ai-registry:workflow-sop` | Writes Standard Operating Procedure documentation for workflows. Adapts SOP templates for Manual, Augmented, and Automated workflow types. Saves SOPs to Notion workflow page bodies. |
+    | [`writing-process-guides`](ai-registry.md#writing-process-guides) | `/ai-registry:process-guide` | Writes Business Process Guide documentation explaining when, why, and how to execute a complete business process with its component workflows. Covers strategic context while linking to individual SOPs for tactical details. |
+    | [`registering-building-blocks`](ai-registry.md#registering-building-blocks) | `/ai-registry:register-block` | Registers or updates AI building blocks (Skills, Agents, Prompts, Context MDs) in the Notion AI Building Blocks database. Resolves asset type automatically, extracts metadata, generates Quick Start Prompts, and handles duplicate detection. |
+    | [`syncing-skills-to-github`](ai-registry.md#syncing-skills-to-github) | `/ai-registry:sync-skills` | Syncs skills from `~/.claude/skills/` to a GitHub repository. Detects changes, generates semantic commit messages, pushes to remote, and updates Notion AI Building Blocks with GitHub URLs. |
 
 ??? workflow "Recommended workflow"
 

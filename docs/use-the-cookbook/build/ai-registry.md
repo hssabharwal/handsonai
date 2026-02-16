@@ -16,6 +16,18 @@ Skills for building a structured registry of your AI workflows and skills. This 
 /plugin install ai-registry@handsonai
 ```
 
+## Slash Commands
+
+All skills can be invoked directly as slash commands in Claude Code:
+
+| Command | Skill |
+|---------|-------|
+| `/ai-registry:name-workflow` | `naming-workflows` |
+| `/ai-registry:workflow-sop` | `writing-workflow-sops` |
+| `/ai-registry:process-guide` | `writing-process-guides` |
+| `/ai-registry:register-block` | `registering-building-blocks` |
+| `/ai-registry:sync-skills` | `syncing-skills-to-github` |
+
 ## Components
 
 ### Skills

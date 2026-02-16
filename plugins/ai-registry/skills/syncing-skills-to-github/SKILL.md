@@ -1,6 +1,12 @@
 ---
 name: syncing-skills-to-github
-description: Sync Claude Agent Skills from ~/.claude/skills/ (local) to GitHub repository using git commands. Skills are stored in a flat directory structure. Commits changes, pushes to remote, and updates Notion AI Building Blocks with GitHub URLs. Designed for Claude Code with access to terminal and git credentials.
+description: >
+  This skill should be used when the user wants to sync skills to GitHub, push skill changes
+  to a remote repository, or back up local skills. Syncs Claude Agent Skills from
+  ~/.claude/skills/ (local) to GitHub repository using git commands. Commits changes, pushes
+  to remote, and updates Notion AI Building Blocks with GitHub URLs.
+user_invocable: true
+command: sync-skills
 ---
 
 # Syncing Skills to GitHub
