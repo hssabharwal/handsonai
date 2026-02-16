@@ -1,59 +1,106 @@
 ---
-title: Courses
-description: Structured learning paths for hands-on AI — live cohorts on Maven and custom corporate training programs for teams
+title: Learn with James
+description: Multiple ways to learn AI hands-on with James Gray — live cohort courses, corporate training, 1-on-1 coaching, and the Graymatter newsletter
 ---
 
-# Courses
+<style>
+/* Hero subtitle */
+.learn-hero {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--md-default-fg-color--light);
+  max-width: 40rem;
+  margin-bottom: 2rem;
+}
 
-Structured learning paths — live cohorts on Maven and custom programs for teams.
+/* Compact cards */
+.learn-cards.grid.cards > ul > li {
+  padding: 0.6rem 0.8rem;
+}
+.learn-cards.grid.cards > ul > li > hr {
+  margin: 0.4rem 0;
+}
 
-## Available Courses
 
-### Claude and Claude Code for Builders
 
-Transform from a Claude user into a Claude builder through hands-on experience with the complete AI builder stack.
+/* Course list inside a card */
+.course-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+.course-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  font-size: 0.85rem;
+}
+.course-list li:last-child {
+  border-bottom: none;
+}
+[data-md-color-scheme="slate"] .course-list li {
+  border-bottom-color: rgba(255,255,255,0.08);
+}
+.course-list .course-meta {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--md-default-fg-color--lighter);
+  margin-top: 0.15rem;
+}
 
-**Duration:** 5 weeks | **Format:** Live cohort-based
+</style>
 
-[:octicons-arrow-right-24: Course details](builders/)
+# Learn with James
 
----
+<p class="learn-hero">Live cohort courses, corporate training, personal coaching, and a weekly newsletter — choose the format that fits how you learn best.</p>
 
-### Hands-on Agentic AI for Leaders
+<div class="grid cards learn-cards" markdown>
 
-Learn to evaluate, implement, and lead AI initiatives that drive business value.
+-   :material-school:{ .lg .middle } **Cohort Courses**
 
-**Duration:** 4 weeks | **Format:** Live cohort-based
+    ---
 
-[:octicons-arrow-right-24: Course details](leaders/)
+    Live, hands-on cohorts on Maven with weekly sessions, peer collaboration, and direct access to James.
 
----
+    <ul class="course-list">
+      <li>
+        <a href="builders/"><strong>Claude & Claude Code for Builders</strong></a>
+        <span class="course-meta">5 weeks · Live cohort-based · <a href="builders/">View details →</a></span>
+      </li>
+      <li>
+        <a href="leaders/"><strong>Agentic AI for Leaders</strong></a>
+        <span class="course-meta">4 weeks · Live cohort-based · <a href="leaders/">View details →</a></span>
+      </li>
+    </ul>
 
-### Corporate & Custom Training
+-   :material-domain:{ .lg .middle } **Corporate & Custom Training**
 
-Hands-on AI courses tailored to your organization's goals, industry, and team skill level. From half-day executive workshops to multi-week hands-on programs — covering AI fundamentals, tool proficiency across major platforms (Claude, ChatGPT, Gemini, Copilot), and AI-first process design.
+    ---
 
-Designed and delivered by **James Gray** — UC Berkeley AI instructor, former CIO/CPO, with 10 years at Microsoft building enterprise data platforms and 5,000+ executives trained globally in AI strategy.
+    AI courses tailored to your organization — from half-day executive workshops to multi-week programs covering AI fundamentals, platform proficiency, and AI-first process design.
 
-**Format:** Customized to your team and your company
+    [:octicons-arrow-right-24: Schedule a training call](https://jamesgray.ai/corporate-ai-training)
 
-[:octicons-arrow-right-24: Learn more & schedule a training call](https://jamesgray.ai/corporate-ai-training){ .md-button }
+-   :material-account-star:{ .lg .middle } **1-on-1 AI Coaching**
 
----
+    ---
 
-## About These Courses
+    Personalized guidance for leaders and builders. Whether you're figuring out where AI fits, building your first agent, or preparing a team rollout — sessions are tailored to your goals.
 
-Both courses are taught by [James Gray](https://maven.com/james-gray) on Maven. They emphasize:
+    [:octicons-arrow-right-24: Book a coaching session](https://jamesgray.ai/coaching)
 
-- **Hands-on practice** - Build real systems, not just theory
-- **Live instruction** - Interactive sessions with Q&A
-- **Community** - Private Slack workspace for peer collaboration
-- **Practical outcomes** - Skills you can use immediately
+-   :material-email-newsletter:{ .lg .middle } **Graymatter Newsletter**
 
-## Prerequisites
+    ---
 
-Each course has specific prerequisites. Generally you'll need:
+    Master AI. Master yourself. Build what matters. For builders drowning in AI noise who need a trusted guide — simplifying what's possible and showing you how, plus the self-leadership that accelerates your inner transformation.
 
-- A Claude Pro, Max, or Team subscription
-- macOS or Windows with admin access
-- Willingness to work in the terminal
+    [:octicons-arrow-right-24: Subscribe on Substack](https://graymatter.jamesgray.ai)
+
+</div>
+
+## What to Expect
+
+- :material-hammer-wrench: **Hands-on practice** — Build real systems, not just theory
+- :material-video: **Live interaction** — Direct access to James in every format
+- :material-rocket-launch: **Practical outcomes** — Skills and systems you can use immediately
+- :material-account-group: **Community** — Course students join a private Slack for peer collaboration
