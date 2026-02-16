@@ -36,6 +36,8 @@ All skills can be invoked directly as slash commands in Claude Code:
 
 #### `naming-workflows`
 
+**Command:** `/ai-registry:name-workflow`
+
 **What it does:** Generates consistent, outcome-focused names and descriptions for business workflows, then creates entries in your Notion Workflows database. Follows domain-specific naming patterns so your registry stays organized as it grows.
 
 **When to use it:** Use this when you have a new workflow to document, need to standardize existing workflow names, or want to add a workflow entry to Notion. Also useful when you're not sure what to call a workflow.
@@ -79,6 +81,8 @@ Names are always 2-4 words, noun phrases (not verb phrases), in Title Case.
 ---
 
 #### `writing-workflow-sops`
+
+**Command:** `/ai-registry:workflow-sop`
 
 **What it does:** Writes Standard Operating Procedure documentation for workflows and saves it directly to the Notion workflow page body. Adapts the SOP template based on whether the workflow is Manual, Augmented, or Automated.
 
@@ -125,6 +129,8 @@ Names are always 2-4 words, noun phrases (not verb phrases), in Title Case.
 
 #### `writing-process-guides`
 
+**Command:** `/ai-registry:process-guide`
+
 **What it does:** Writes Business Process Guide documentation that explains the strategic context and rhythm of a complete business process — when to execute it, why it matters, and how its component workflows fit together. This is the strategic companion to the tactical SOPs.
 
 **When to use it:** Use this when you need to document how multiple workflows connect into a larger business process. Process guides answer "when, why, and what order" while SOPs answer "how."
@@ -168,6 +174,8 @@ Names are always 2-4 words, noun phrases (not verb phrases), in Title Case.
 
 #### `registering-building-blocks`
 
+**Command:** `/ai-registry:register-block`
+
 !!! info "Migration note"
     This skill replaces `registering-skills` (v2.0.0). It handles all AI building block types — Skills, Agents, Prompts, and Context MDs — using the same registration workflow. If you previously used `registering-skills`, update your plugin to v3.0.0.
 
@@ -207,6 +215,8 @@ For batch registration, Claude searches for each building block individually fir
 ---
 
 #### `syncing-skills-to-github`
+
+**Command:** `/ai-registry:sync-skills`
 
 **What it does:** Syncs Claude Skills from your local `~/.claude/skills/` directory to a GitHub repository. Detects changes, generates semantic commit messages, pushes to remote, and updates Notion AI Building Blocks with GitHub URLs.
 

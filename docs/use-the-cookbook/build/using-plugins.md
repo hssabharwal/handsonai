@@ -56,18 +56,18 @@ Skills activate the same way — describe what you need and the relevant skill l
 You can also invoke a skill directly with a slash command:
 
 ```
-/ai-registry:naming-workflows
+/ai-registry:name-workflow
 ```
 
-The format is `/plugin-name:skill-name`.
+The format is `/plugin-name:command` (the command may differ from the skill directory name).
 
 **Examples:**
 
 | Plugin | Slash command | What it does |
 |--------|--------------|-------------|
-| `ai-registry` | `/ai-registry:naming-workflows` | Generates consistent workflow names and creates Notion entries |
-| `ai-registry` | `/ai-registry:writing-workflow-sops` | Writes Standard Operating Procedure docs for workflows |
-| `business-first-ai` | `/business-first-ai:editing-hbr-articles` | Loads HBR editorial criteria for article editing |
+| `ai-registry` | `/ai-registry:name-workflow` | Generates consistent workflow names and creates Notion entries |
+| `ai-registry` | `/ai-registry:workflow-sop` | Writes Standard Operating Procedure docs for workflows |
+| `business-first-ai` | `/business-first-ai:edit-article` | Loads HBR editorial criteria for article editing |
 
 !!! note
     Skills from the `ai-registry` plugin require the [Notion MCP connector](../../builder-setup/notion-registry-setup.md) to be configured. Without it, Claude can follow the naming conventions and draft the output, but cannot read from or write to Notion.
@@ -284,7 +284,7 @@ Both support the same plugin format and skill files. If you're not comfortable w
 | Plugin install | `/plugin install` | Upload skills as ZIP | **+** button > **Add plugins...** | Skills API |
 | Agent auto-routing | Yes | No | No | No |
 | Skills (auto-trigger) | Yes | Yes (after upload) | Yes (via plugin) | Yes (Skills API) |
-| Skills (slash command) | `/plugin-name:skill-name` | No | `/` commands | No |
+| Skills (slash command) | `/plugin-name:command` | No | `/` commands | No |
 | MCP / Connectors | Yes | Some skills (via MCP) | Yes (connectors) | No |
 | Browser automation | No | No | Yes (Chrome) | No |
 | Reference file loading | Automatic | Included in ZIP | Automatic (via plugin) | Manual |

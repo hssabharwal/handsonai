@@ -76,21 +76,21 @@ How you use this plugin depends on your platform:
 
 ### Platform Compatibility
 
-| Component | Type | Claude Code | Cowork | Claude.ai |
-|-----------|------|:-----------:|:------:|:---------:|
-| `workflow-deconstructor` | Agent | Yes | Yes | No |
-| `discovering-workflows` | Skill | Yes | Yes | Yes |
-| `deconstructing-workflows` | Skill | Yes | Yes | Yes |
-| `building-workflows` | Skill | Yes | Yes | Yes |
-| `tech-executive-writer` | Agent | Yes | Yes | No |
-| `hbr-editor` | Agent | Yes | Yes | No |
-| `hbr-publisher` | Agent | Yes | Yes | No |
-| `ai-productivity-researcher` | Agent | Yes | Yes | No |
-| `meeting-prep-researcher` | Agent | Yes | Yes | No |
-| `ai-news-researcher` | Agent | Yes | Yes | No |
-| `claude-research-daily` | Agent | Yes | Yes | No |
-| `editing-hbr-articles` | Skill | Yes | Yes | No |
-| `preparing-meeting-briefs` | Skill | Yes | Yes | Yes |
+| Component | Type | Command | Claude Code | Cowork | Claude.ai |
+|-----------|------|---------|:-----------:|:------:|:---------:|
+| `workflow-deconstructor` | Agent | — | Yes | Yes | No |
+| `discovering-workflows` | Skill | `/business-first-ai:discover` | Yes | Yes | Yes |
+| `deconstructing-workflows` | Skill | `/business-first-ai:deconstruct` | Yes | Yes | Yes |
+| `building-workflows` | Skill | `/business-first-ai:build-workflow` | Yes | Yes | Yes |
+| `tech-executive-writer` | Agent | — | Yes | Yes | No |
+| `hbr-editor` | Agent | — | Yes | Yes | No |
+| `hbr-publisher` | Agent | — | Yes | Yes | No |
+| `ai-productivity-researcher` | Agent | — | Yes | Yes | No |
+| `meeting-prep-researcher` | Agent | — | Yes | Yes | No |
+| `ai-news-researcher` | Agent | — | Yes | Yes | No |
+| `claude-research-daily` | Agent | — | Yes | Yes | No |
+| `editing-hbr-articles` | Skill | `/business-first-ai:edit-article` | Yes | Yes | No |
+| `preparing-meeting-briefs` | Skill | `/business-first-ai:meeting-prep` | Yes | Yes | Yes |
 
 Agents activate automatically in Claude Code when your prompt matches. In Cowork, describe your task using the prompts above and Claude activates the right agent. Skills marked "Yes" for Claude.ai can be uploaded as ZIP files.
 
@@ -152,6 +152,8 @@ Find which workflows are candidates for AI.
 
 #### `discovering-workflows`
 
+**Command:** `/business-first-ai:discover`
+
 **What it does:** Runs a structured audit of your workflows to discover where AI can help. Scans memory and conversation history, interviews you about your work, then produces a prioritized opportunity report with structured workflow candidates ready for the Deconstruct step.
 
 **When to use it:** Use this when you want to figure out where AI fits in your work. Especially useful when you're new to AI and need a starting point, or when you want a systematic review before choosing which workflow to deconstruct.
@@ -186,6 +188,8 @@ Break workflows into structured definitions.
 ---
 
 #### `deconstructing-workflows`
+
+**Command:** `/business-first-ai:deconstruct`
 
 **What it does:** Interactively deconstructs a business workflow into a structured Workflow Definition using the 5-question framework. This is the Deconstruct step.
 
@@ -230,6 +234,8 @@ Design your AI implementation and construct the workflow.
 ---
 
 #### `building-workflows`
+
+**Command:** `/business-first-ai:build-workflow`
 
 **What it does:** Takes a Workflow Definition and runs the full Build process: Design (execution pattern, autonomy classification, building block mapping, skill candidates, agent configuration) and Construct (Baseline Workflow Prompt, auto-generated skills and agents on Claude). This is the Build step.
 
@@ -377,6 +383,8 @@ Design your AI implementation and construct the workflow.
 
 #### `editing-hbr-articles`
 
+**Command:** `/business-first-ai:edit-article`
+
 **What it does:** Teaches Claude specific editorial criteria for editing articles to HBR publication quality. Loaded automatically by the `hbr-editor` agent, but can also be invoked directly.
 
 **When to use it:** Use this when you want Claude to make direct, prescriptive edits to an article rather than just providing feedback. The skill focuses on hands-on editing rather than review.
@@ -401,6 +409,8 @@ Design your AI implementation and construct the workflow.
 ---
 
 #### `preparing-meeting-briefs`
+
+**Command:** `/business-first-ai:meeting-prep`
 
 **What it does:** Provides a structured research workflow for meeting preparation. Loaded automatically by the `meeting-prep-researcher` agent, but can also be invoked directly.
 

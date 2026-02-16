@@ -149,7 +149,7 @@ Folders containing instructions, scripts, and resources that the AI discovers an
 **Key characteristics:**
 
 - Encapsulates a specific capability: instructions, context, and output format bundled together
-- Dynamically loaded: the AI discovers and invokes skills when they're relevant
+- Invocable two ways: auto-triggered when relevant, or invoked directly with a slash command
 - Reusable across conversations, shareable with others, and becoming an open standard
 
 **When to use it:** When you find yourself writing the same prompt repeatedly, or when a workflow step is well-defined enough to package as a repeatable routine.

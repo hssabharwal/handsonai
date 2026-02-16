@@ -62,6 +62,8 @@ Installed plugins add agents and skills that Claude Code can use automatically. 
 
 Each plugin on the [marketplace page](index.md) includes a recommended workflow and example prompts so you know exactly what to ask.
 
+You can also invoke any skill directly with a slash command — type `/plugin-name:command` (e.g., `/business-first-ai:discover`). Each plugin's page on the [marketplace](index.md) lists the available commands.
+
 !!! tip "Want to use plugins outside Claude Code?"
     Skills from plugins also work in Claude.ai, Claude Cowork, and the Claude API. See [Using Plugins](using-plugins.md) for setup instructions on every platform.
 

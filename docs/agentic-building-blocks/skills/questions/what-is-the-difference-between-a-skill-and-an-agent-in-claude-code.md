@@ -61,7 +61,7 @@ The skill does one focused task when you call it. The agent orchestrates an enti
 
 ## Key Takeaways
 
-- **Skills are routines** — they package reusable expertise and do one thing consistently when invoked
+- **Skills are routines** — they package reusable expertise and do one thing consistently, whether auto-triggered or invoked directly via slash command (`/plugin-name:command`)
 - **Agents are autonomous** — they plan, use tools, invoke skills, and execute multi-step workflows
 - **Skills persist across sessions** — they're like permanent training that lives in Claude's knowledge base
 - **Agents orchestrate workflows** — they decide *when* to use skills and *how* to sequence actions
