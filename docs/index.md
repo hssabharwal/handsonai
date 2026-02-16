@@ -13,6 +13,10 @@ This cookbook lives at the intersection of **people, business, and technology** 
 
 Practical guides, patterns, ready-made tools, and direct answers — everything you need to move from experimenting with AI to getting real results. Browse by platform, look up a topic, or work through a structured course.
 
+---
+
+**Ready-made AI tools you can use today** — agents, skills, and prompts for business workflows, writing, research, and meeting prep. [Install as plugins](use-the-cookbook/build/index.md) or [browse on GitHub](https://github.com/jamesgray-ai/handsonai/tree/main/plugins).
+
 <!-- latest-updates -->
 
 <!-- curated-feed -->

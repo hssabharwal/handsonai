@@ -38,6 +38,16 @@ Plugins are plain-text Markdown files — there's no compiled code or hidden log
 
     The Hands-on AI plugins contain only Markdown instruction files — no MCP servers, no executable code, and no external network calls. You can verify this yourself by browsing the [plugin source](https://github.com/jamesgray-ai/handsonai/tree/main/plugins).
 
+## Don't Use Plugins? Browse on GitHub
+
+Every agent, skill, and prompt in this marketplace is a plain-text Markdown file — no compiled code, no special format. You can download and use them in any AI tool:
+
+- **Paste into a system prompt** — copy an agent or skill file and use it as instructions in ChatGPT, Gemini, Copilot, or any LLM
+- **Upload to Claude.ai** — zip a skill folder and upload it under Settings > Capabilities > Upload skill ([detailed instructions](using-plugins.md#using-skills-in-claudeai-web))
+- **Use via the Claude API** — embed skill content in the `system` parameter ([code example](using-plugins.md#using-skills-via-the-claude-api))
+
+:material-github: [Browse all tools on GitHub](https://github.com/jamesgray-ai/handsonai/tree/main/plugins){ .md-button }
+
 ## Add This Marketplace
 
 In your Claude Code session, type this once to register the Hands-on AI marketplace:
