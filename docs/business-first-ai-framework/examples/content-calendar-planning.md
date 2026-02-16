@@ -15,7 +15,7 @@ The framework produced three deliverables. Each one is a detailed markdown docum
 
 ### 1. Workflow Definition (Step 2 — Deconstruct)
 
-[:material-github: View full Workflow Definition on GitHub](https://github.com/jamesgray-ai/handsonai/blob/main/examples/content-calendar-planning/workflow-definition.md){ .md-button .md-button--primary }
+[:material-github: View full Workflow Definition on GitHub](https://github.com/jamesgray-ai/handsonai/blob/main/examples/content-calendar-planning/workflow-definition.md){ .md-button .md-button--primary target="_blank" }
 
 The Workflow Definition is what [Deconstruct](../deconstruct/index.md) produces. What started as "I plan content on Sundays" became **10 refined steps across four phases** after the five-question deep dive.
 
@@ -34,7 +34,7 @@ The Workflow Definition is what [Deconstruct](../deconstruct/index.md) produces.
 
 ### 2. AI Building Block Spec (Step 3.1 — Design)
 
-[:material-github: View full Building Block Spec on GitHub](https://github.com/jamesgray-ai/handsonai/blob/main/examples/content-calendar-planning/building-block-spec.md){ .md-button .md-button--primary }
+[:material-github: View full Building Block Spec on GitHub](https://github.com/jamesgray-ai/handsonai/blob/main/examples/content-calendar-planning/building-block-spec.md){ .md-button .md-button--primary target="_blank" }
 
 The AI Building Block Spec is what [Design](../build/design.md) produces from the Workflow Definition. It classifies each step on the autonomy spectrum, identifies which steps should become reusable skills, and recommends an implementation order.
 
@@ -54,7 +54,7 @@ The AI Building Block Spec is what [Design](../build/design.md) produces from th
 
 ### 3. Baseline Workflow Prompt (Step 3.2 — Construct)
 
-[:material-github: View full Baseline Workflow Prompt on GitHub](https://github.com/jamesgray-ai/handsonai/blob/main/examples/content-calendar-planning/baseline-prompt.md){ .md-button .md-button--primary }
+[:material-github: View full Baseline Workflow Prompt on GitHub](https://github.com/jamesgray-ai/handsonai/blob/main/examples/content-calendar-planning/baseline-prompt.md){ .md-button .md-button--primary target="_blank" }
 
 The Baseline Workflow Prompt is what [Construct](../build/prompt.md) produces. This is the ready-to-run prompt you paste into any AI tool to execute the workflow.
 
