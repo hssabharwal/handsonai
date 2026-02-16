@@ -214,6 +214,9 @@ Skills from the `superpowers` plugin, invoked automatically based on context:
 | 5. Review | Quality gate | `requesting-code-review` + review agents |
 | 6. Ship | Commit, push, PR | `/commit-push-pr` + `/revise-claude-md` |
 
+!!! note "Keeping the website template in sync"
+    The Feature Development Workflow above is the source of truth for this repo. A generic (repo-agnostic) version lives on the [Agentic Coding plugin page](docs/use-the-cookbook/build/agentic-coding.md) as a copyable template for students. **When you change the workflow structure** (add/remove steps, change which skills or agents are referenced), also update the template on that page. Repo-specific changes (verify commands, implementation details) don't need to be synced — the template uses placeholders for those.
+
 ## Plugin Marketplace
 
 The `plugins/` directory contains distributable Claude Code plugins. Each plugin bundles related agents and skills into a themed toolkit that students can install via `/plugin install`.
