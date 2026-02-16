@@ -16,7 +16,7 @@ Skills are now an open standard and being adopted broadly across platforms. Thin
 ## Key Characteristics
 
 - **Encapsulates a specific capability** — instructions, context, and output format bundled together
-- **Dynamically loaded** — the AI discovers and invokes skills when they're relevant to the task
+- **Dynamically loaded or directly invoked** — the AI discovers and loads skills automatically when relevant, or you invoke them with a slash command (`/plugin-name:command`)
 - **Reusable across conversations** — write once, use every time the task comes up
 - **Shareable** — skills can be distributed to others through plugins or file sharing
 - **Becoming an open standard** — the skill format is being adopted across compatible platforms
@@ -39,7 +39,7 @@ A good rule of thumb: if you give an AI the same instructions more than three ti
 
 | Platform | How It Works |
 |----------|-------------|
-| **Claude** | Claude Code Skills (SKILL.md files with instructions and references) |
+| **Claude** | Claude Code Skills (SKILL.md files); auto-triggered or invoked via `/plugin-name:command` |
 | **OpenAI (ChatGPT)** | Custom GPTs, or Actions within a GPT |
 | **Gemini** | Gems with structured instructions |
 | **M365 Copilot** | Copilot agent actions, Power Automate flows triggered by Copilot |
@@ -57,6 +57,8 @@ skill-name/
 ```
 
 The `SKILL.md` file contains the instructions. The `references/` folder holds any context the skill needs — style guides, templates, examples, or data.
+
+Skills with `user_invocable: true` and a `command:` field in their frontmatter can be invoked directly as slash commands in Claude Code.
 
 ## Skill, Project, or Prompt?
 
