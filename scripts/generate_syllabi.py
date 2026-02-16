@@ -437,7 +437,7 @@ def generate_lesson_page(lesson, course, session_name, module_name):
     lines.append("---")
     lines.append("")
     lines.append(
-        "[Back to syllabus :material-arrow-left:](../syllabus.md){ .md-button }"
+        "[Back to course overview :material-arrow-left:](../){ .md-button }"
     )
     lines.append("")
 
@@ -493,19 +493,14 @@ def write_lesson_pages(course, assembled_weeks):
     return slug_map
 
 
-def generate_markdown(course, assembled_weeks, lesson_slug_map=None):
-    """Generate the full syllabus Markdown for a course."""
+def _generate_syllabus_body(course, assembled_weeks, lesson_slug_map=None):
+    """Generate the syllabus body content (no frontmatter or title).
+
+    Returns a list of Markdown lines starting from the Enroll button
+    through the weekly content and footer.
+    """
     lesson_slug_map = lesson_slug_map or {}
     lines = [
-        "---",
-        f'title: "Course Syllabus — {course["name"]}"',
-        'description: "Full syllabus including weekly sessions, modules, lessons, and resources."',
-        "---",
-        "",
-        "# Course Syllabus",
-        "",
-        f'Full syllabus for **{course["name"]}**.',
-        "",
         f'[Enroll on Maven :material-arrow-right:]({course["url"]}){{ .md-button .md-button--primary }}',
         "",
     ]
@@ -513,7 +508,7 @@ def generate_markdown(course, assembled_weeks, lesson_slug_map=None):
     if not assembled_weeks:
         lines.append("Syllabus coming soon — check back shortly!")
         lines.append("")
-        return "\n".join(lines)
+        return lines
 
     for week in assembled_weeks:
         lines.append("---")
@@ -632,7 +627,33 @@ def generate_markdown(course, assembled_weeks, lesson_slug_map=None):
     )
     lines.append("")
 
-    return "\n".join(lines)
+    return lines
+
+
+def generate_markdown(course, assembled_weeks, lesson_slug_map=None):
+    """Generate the full syllabus Markdown for a course.
+
+    Returns a tuple of (full_syllabus, body_only) where body_only
+    is the content without frontmatter or title (for snippet inclusion).
+    """
+    body_lines = _generate_syllabus_body(course, assembled_weeks, lesson_slug_map)
+
+    header_lines = [
+        "---",
+        f'title: "Course Syllabus — {course["name"]}"',
+        'description: "Full syllabus including weekly sessions, modules, lessons, and resources."',
+        "---",
+        "",
+        "# Course Syllabus",
+        "",
+        f'Full syllabus for **{course["name"]}**.',
+        "",
+    ]
+
+    full = "\n".join(header_lines + body_lines)
+    body_only = "\n".join(body_lines)
+
+    return full, body_only
 
 
 # ---------------------------------------------------------------------------
@@ -668,6 +689,8 @@ def main():
             output = OUTPUT_DIR / config["slug"] / "syllabus.md"
             output.parent.mkdir(parents=True, exist_ok=True)
             output.write_text(PLACEHOLDER)
+            body_output = OUTPUT_DIR / config["slug"] / "_syllabus_body.md"
+            body_output.write_text("Syllabus coming soon — check back shortly!\n")
             print(f"  Wrote {output}")
         return
 
@@ -728,11 +751,15 @@ def main():
         print("  Generating lesson pages...")
         lesson_slug_map = write_lesson_pages(course, assembled)
 
-        markdown = generate_markdown(course, assembled, lesson_slug_map)
+        markdown, body_only = generate_markdown(course, assembled, lesson_slug_map)
 
         output = OUTPUT_DIR / course["slug"] / "syllabus.md"
         output.parent.mkdir(parents=True, exist_ok=True)
         output.write_text(markdown)
+
+        body_output = OUTPUT_DIR / course["slug"] / "_syllabus_body.md"
+        body_output.write_text(body_only)
+        print(f"  Wrote {body_output} (snippet include)")
 
         total_sessions = sum(len(w.get("sessions", [])) for w in assembled)
         total_modules = sum(
@@ -759,6 +786,8 @@ def main():
             output = OUTPUT_DIR / config["slug"] / "syllabus.md"
             output.parent.mkdir(parents=True, exist_ok=True)
             output.write_text(PLACEHOLDER)
+            body_output = OUTPUT_DIR / config["slug"] / "_syllabus_body.md"
+            body_output.write_text("Syllabus coming soon — check back shortly!\n")
             print(f"\n  {name} not found — wrote placeholder to {output}")
 
 

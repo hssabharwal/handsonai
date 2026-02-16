@@ -148,6 +148,9 @@ plugins:
         plugins/ai-registry.md: use-the-cookbook/build/ai-registry.md
         # MCP Server → Use the Cookbook / Ask
         mcp-server.md: use-the-cookbook/ask/index.md
+        # Course syllabus pages → consolidated course pages
+        courses/builders/syllabus.md: courses/builders/index.md
+        courses/leaders/syllabus.md: courses/leaders/index.md
         # What's New → Changelog
         whats-new.md: blog/index.md
         # Use Cases resources → subdirectories (main pages keep same URL)
@@ -367,12 +370,10 @@ nav:
         - Autonomous Agents: patterns/workflow-architecture/autonomous-agents.md
   - Courses:
     - Overview: courses/index.md
-    - Agentic AI for Leaders:
-      - Overview: courses/leaders/index.md
-      - Syllabus: courses/leaders/syllabus.md
-    - Claude for Builders:
-      - Overview: courses/builders/index.md
-      - Syllabus: courses/builders/syllabus.md
+    - Agentic AI for Leaders: courses/leaders/index.md
+    - Claude for Builders: courses/builders/index.md
+    - Questions:
+      - Corporate AI Training: courses/questions/corporate-ai-training.md
   - What People Built: what-people-built.md
 
 

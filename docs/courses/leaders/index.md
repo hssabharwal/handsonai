@@ -14,7 +14,6 @@ course_language: en
 From AI user to AI builder in 30 days. This cohort-based course goes beyond ChatGPT prompting to give you hands-on experience building AI-powered workflows, autonomous agents, and browser automations — the practical skills leaders need to reimagine business processes and communicate credibly with technical teams.
 
 [Enroll on Maven :material-arrow-right:](https://maven.com/james-gray/hands-on-ai-for-leaders){ .md-button .md-button--primary }
-[View full syllabus :material-format-list-bulleted:](syllabus.md){ .md-button }
 
 ## Who This Course Is For
 
@@ -59,3 +58,9 @@ By the end of the course, you'll ship workflows that save 5-10 hours weekly, com
 
 - [Maven Profile](https://maven.com/james-gray)
 - [Other course: Claude and Claude Code for Builders](../builders/)
+
+---
+
+## Full Syllabus
+
+--8<-- "docs/courses/leaders/_syllabus_body.md"
