@@ -105,11 +105,10 @@ Draft a curated changelog entry from recent git history, get approval, publish i
 
    After the commit is pushed (so the link is live), run the Slack notification script:
    ```bash
-   source .env
    ./scripts/notify-slack.sh "<title>" "<one-line summary>" "https://handsonai.info/blog/YYYY/MM/DD/<slug>/"
    ```
 
-   If the webhook environment variables are not set, remind James to configure `SLACK_WEBHOOK_1` and `SLACK_WEBHOOK_2` in the `.env` file at the project root.
+   The script loads `.env` automatically. If the webhooks are not configured, it will skip with a message — remind James to set `SLACK_WEBHOOK_1` and `SLACK_WEBHOOK_2` in `.env` at the project root.
 
 ## Important Notes
 
