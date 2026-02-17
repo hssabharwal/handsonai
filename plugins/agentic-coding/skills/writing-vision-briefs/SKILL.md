@@ -45,19 +45,50 @@ Offer multiple-choice options based on common user types if the context suggests
 - (c) Administrators / managers
 - (d) Someone else — describe them
 
-**Question 3 — The Vision:**
+**Question 3 — Current State:**
+> "How are you handling this today? Any workarounds, tools, or manual processes — even ugly ones?"
+
+This reveals the severity of the pain (hacking together workarounds = high urgency), what "good enough" looks like (the bar to clear), and implicit requirements (what they like or hate about current approaches).
+
+**Question 4 — Strategic Context:**
+> "Why is now the right time to solve this? What's changed — or what will happen if you don't act?"
+
+This separates "nice to have" ideas from urgent, high-value ones. If the user says "nothing specific," that's a useful signal too — note it and move on.
+
+**Question 5 — The Vision:**
 > "Imagine this problem is solved. What does the ideal outcome look like? Don't describe a solution — describe the result."
 
-**Question 4 — Key Capabilities:**
+**Question 6 — Key Capabilities:**
 > "What 3-5 things must the solution be able to do? Write them from the user's perspective — 'I can...' or 'Users can...'"
 
 If the user gives a vague answer, help them break it down:
 > "Let me help break that down. It sounds like you need: [a], [b], and [c]. What am I missing?"
 
-**Question 5 — Success:**
-> "How will you know it's working? Think business outcomes — what changes for the better?"
+**After capabilities are listed, ask the user to prioritize:**
+> "If you could only ship ONE of these capabilities, which one? That's your must-have. Which ones could wait for a later version?"
 
-**Question 6 — Constraints:**
+Categorize each capability as **Must have** or **Nice to have** based on their answer.
+
+**Question 7 — Inspiration (optional):**
+> "Is there a product, feature, or experience — even in a different domain — that does something close to what you're imagining? This helps me understand the vibe you're going for."
+
+If the user says "nothing comes to mind," skip this section in the brief. Don't push — this is a bonus question.
+
+**Question 8 — Success Criteria:**
+> "Let's define success in two timeframes:
+> - **Early signal** (first 1-2 weeks): What's the first sign this is working?
+> - **Real outcome** (1-3 months): What measurable result tells you this was worth building?"
+
+If the user struggles, offer concrete examples:
+> "For instance, an early signal might be 'setup completion goes from 60% to 85%' and a real outcome might be 'support tickets drop by half.' What would yours be?"
+
+**Question 9 — Risks & Assumptions:**
+> "What's the biggest risk or assumption here? What would need to be true for this to work — and what could derail it?"
+
+If the user says "I'm not sure," help them surface it:
+> "Every idea has a hidden bet. Yours might be something like 'users will actually use this if we build it' or 'the data we need already exists.' What's the bet you're making?"
+
+**Question 10 — Constraints:**
 > "What's already in place? Any boundaries I should know about — budget, timeline, existing tools, audience size?"
 
 If the user says "none" or "not sure," that's fine — note it in the brief and move on.
@@ -67,13 +98,16 @@ If the user says "none" or "not sure," that's fine — note it in the brief and 
 - Use plain language. No technical jargon (no "architecture," "components," "data flow," "API").
 - Be encouraging and conversational. This is ideation, not interrogation.
 - If the user gives a long, rambling answer, reflect it back concisely: "So the core problem is [X] — does that capture it?"
-- If the user is struggling, offer examples: "For instance, some people describe success as 'we cut response time in half' or 'customers stop asking the same question.' What would yours be?"
+- If the user is struggling, offer examples to prime their thinking.
+- Coach toward specificity. If an answer is vague ("make things better"), gently push: "What does 'better' look like? Can you describe a moment where someone says 'this is working'?"
 
 ---
 
 ## Phase 2: Refine
 
 After gathering all answers, draft a Vision Brief using the template in [vision-brief-template.md](references/vision-brief-template.md).
+
+**Important:** The template includes inline examples that set the bar for world-class product thinking. Replace each example with the user's actual content — but use the examples as your target for specificity and strategic reasoning. If the user's answers are vague, coach them toward the level of detail shown in the examples during refinement.
 
 Present the draft to the user:
 
@@ -84,6 +118,7 @@ Iterate until the user is satisfied. Common refinements:
 - Adding or removing capabilities
 - Clarifying who the users really are
 - Sharpening the success criteria
+- Surfacing risks the user hadn't considered
 
 ---
 
@@ -149,11 +184,17 @@ Work with the user until they're happy with the breakdown. Common adjustments:
 
 ### Recommend a starting point
 
-Once the breakdown is approved, recommend which feature to build first:
+Once the breakdown is approved, present three sequencing strategies and let the user choose:
 
-> "I'd suggest starting with **[Feature Name]** because [reason — e.g., 'it's the foundation the other features build on' or 'it delivers the most value with the least effort' or 'it's the simplest way to validate the idea']."
+> "Here are three ways to think about what to build first:
 >
-> "Which feature would you like to start with?"
+> 1. **Riskiest first** — **[Feature X]** tests your biggest assumption: [assumption]. If it doesn't work, you'll know before investing in the rest.
+> 2. **Quickest win** — **[Feature Y]** is the simplest to build and proves the approach works. Good for building momentum.
+> 3. **Highest value** — **[Feature Z]** delivers the most impact immediately. Best if you're confident in the approach.
+>
+> Which strategy fits your situation?"
+
+Fill in the specific feature names and reasoning based on the user's capabilities and risks. If the same feature fits multiple strategies, say so.
 
 ### Create epic issues
 
@@ -193,7 +234,7 @@ Choose the output location based on what exists in the repo:
 - [ ] Feature 2a: [one-sentence description]
 - [ ] Feature 2b: [one-sentence description]
 
-**Recommended starting feature:** [Feature Name] — [reason]
+**Recommended starting feature:** [Feature Name] — [reason and sequencing strategy]
 ```
 
 If the vision is a single feature (no epics), omit this section.
@@ -244,7 +285,11 @@ When writing a PRD for a single feature from a Vision Brief, these sections map 
 |---------------------|-------------------|
 | The Problem | "What problem does it solve?" |
 | Who Feels It | "Who are the users?" |
+| Current State | Context for problem severity and implicit requirements |
+| Strategic Context | Urgency and prioritization signal |
 | The Vision | "What feature are you building?" |
 | Key Capabilities | "What should happen?" (scoped to this feature) |
+| Inspiration | Reference points for design and UX decisions |
 | What Success Looks Like | Acceptance criteria seed |
-| Constraints & Context | Open questions / scope |
+| Risks & Assumptions | Open questions and validation needs |
+| Constraints & Context | Scope boundaries and technical constraints |
