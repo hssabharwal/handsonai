@@ -50,13 +50,28 @@ Hands-On AI (handsonai.info) — the consolidated site for James Gray's AI cours
 
 For non-trivial changes (new pages, structural reorganization, script additions, multi-file updates), follow this workflow. Skip to step 3 for small edits.
 
+### 0. Discover — `/agentic-coding:vision-brief`
+
+For fuzzy or early-stage ideas, use the `/agentic-coding:vision-brief` slash command to create a Vision Brief before writing a PRD. It:
+- Walks you through the problem, users, vision, capabilities, and success criteria in plain language
+- Assesses the scope — is this one feature or multiple?
+- Breaks bigger visions into **epics** (major themes) and **features** (individual buildable pieces)
+- Creates `type:epic` GitHub issues for each epic
+- Recommends which feature to build first
+- Saves everything to `specs/[name]-vision.md`
+
+If the vision is small enough to be a single feature, the breakdown is skipped.
+
+**Skip this step if** you already know exactly what single feature you want to build. Go straight to Step 1.
+
 ### 1. Define — `/agentic-coding:feature-prd`
 
-Use the `/agentic-coding:feature-prd` slash command to create a PRD. It will:
-- Gather requirements and explore existing code
+Use the `/agentic-coding:feature-prd` slash command to create a PRD for **one feature**. It will:
+- Check if you're coming from a Vision Brief — if so, scope the PRD to your chosen feature
+- If starting fresh, gather requirements (and redirect to Step 0 if the idea is too big for one feature)
 - Create a PRD at `specs/<feature-name>.md` using the template
 - Stress-test the PRD for edge cases and ambiguity
-- Create a GitHub issue linking back to the PRD
+- Create a GitHub issue linking back to the PRD (and referencing the epic issue if applicable)
 
 For early-stage ideas that need exploration, use the `brainstorming` superpowers skill first to validate the approach before writing a PRD.
 
@@ -64,9 +79,11 @@ A spec should include: **Summary**, **Motivation**, **Approach**, **Changes**, *
 
 **Skip specs for:** Bug fixes, trivial changes, urgent hotfixes.
 
-### 2. Plan
+### 2. Plan (plan mode)
 
-After the spec is approved, create an implementation plan before writing code:
+After the PRD is approved, **enter plan mode** to design the implementation before writing any code. Plan mode explores the codebase, designs the approach, and presents a plan for user approval.
+
+- For complex features, use the `code-explorer` agent (from `feature-dev`) to trace execution paths and map dependencies, then the `code-architect` agent to design the architecture before planning
 - The `writing-plans` superpowers skill converts specs into bite-sized tasks with exact file paths, code snippets, and commands
 - Plans are saved to `.claude/plans/<feature-name>.md`
 - **Always save the plan file before starting implementation** — even if the plan was provided inline or from a prior session, persist it to `.claude/plans/` first
@@ -91,6 +108,8 @@ Use the `/feature-dev` slash command, referencing the spec and issue:
 - Use the `test-driven-development` superpowers skill: write a failing test first, then write minimal code to pass, then refactor. No production code without a failing test.
 - For long implementations, use `executing-plans` to work through the plan in batches with review checkpoints between each batch.
 - For plans with independent tasks, use `dispatching-parallel-agents` to implement multiple tasks concurrently.
+
+**Safety net:** The `security-guidance` plugin (Anthropic) runs a hook that automatically warns about potential security issues (command injection, XSS, unsafe patterns) when editing files.
 
 **When things break:**
 - Use `systematic-debugging` for any test failure or unexpected behavior — 4-phase structured debugging instead of guessing. Stops after 3 failed fixes to rethink the approach.
@@ -119,6 +138,7 @@ No "should work" or "seems correct" — only verified passing output.
 
 | Agent | Task tool identifier | Purpose |
 |-------|---------------------|---------|
+| Code Reviewer | `feature-dev:code-reviewer` | Review for bugs, security vulnerabilities, and logic errors |
 | Test Analyzer | `pr-review-toolkit:pr-test-analyzer` | Verify test coverage and identify gaps |
 | Code Simplifier | `pr-review-toolkit:code-simplifier` | Simplify code for clarity and maintainability |
 
@@ -162,6 +182,7 @@ When writing acceptance criteria:
 
 | Command | Description |
 |---------|-------------|
+| `/agentic-coding:vision-brief` | Capture a fuzzy idea as a structured Vision Brief |
 | `/agentic-coding:feature-prd` | Create a feature PRD, stress-test it, and open a GitHub issue |
 | `/feature-dev` | Guided feature development with codebase understanding |
 | `/commit` | Create a git commit |
@@ -197,21 +218,30 @@ Skills from the `superpowers` plugin, invoked automatically based on context:
 
 | Agent | Identifier | Purpose |
 |-------|-----------|---------|
+| Code Reviewer | `feature-dev:code-reviewer` | Review for bugs, security vulnerabilities, logic errors |
 | Test Analyzer | `pr-review-toolkit:pr-test-analyzer` | Verify test coverage completeness |
 | Code Simplifier | `pr-review-toolkit:code-simplifier` | Simplify for clarity and maintainability |
 | Silent Failure Hunter | `pr-review-toolkit:silent-failure-hunter` | Find suppressed errors and bad fallbacks |
 | Type Design Analyzer | `pr-review-toolkit:type-design-analyzer` | Review type invariants and encapsulation |
 | Comment Analyzer | `pr-review-toolkit:comment-analyzer` | Verify comment accuracy and usefulness |
 
+### Codebase Analysis Agents (via Task tool)
+
+| Agent | Identifier | Purpose |
+|-------|-----------|---------|
+| Code Explorer | `feature-dev:code-explorer` | Trace execution paths, map architecture, document dependencies |
+| Code Architect | `feature-dev:code-architect` | Design feature architecture with implementation blueprints |
+
 ## Quick Reference
 
 | Step | Action | Tools |
 |------|--------|-------|
-| 1. Define | Create PRD + issue | `/agentic-coding:feature-prd` (use `brainstorming` for early ideas) |
-| 2. Plan | Create implementation plan | `writing-plans` superpowers skill |
-| 3. Implement | Build with TDD | `/feature-dev` + `test-driven-development` |
+| 0. Discover | Capture idea as Vision Brief, break into epics + features | `/agentic-coding:vision-brief` (skip if single feature is clear) |
+| 1. Define | Create PRD + issue for one feature | `/agentic-coding:feature-prd` (use `brainstorming` for early ideas) |
+| 2. Plan | Enter plan mode, explore codebase, create plan | `code-explorer` + `code-architect` agents, `writing-plans` skill |
+| 3. Implement | Build with TDD | `/feature-dev` + `test-driven-development` + `security-guidance` hook |
 | 4. Verify | Prove it works | `verification-before-completion` |
-| 5. Review | Quality gate | `requesting-code-review` + review agents |
+| 5. Review | Quality gate | `requesting-code-review` + `code-reviewer` + review agents |
 | 6. Ship | Commit, push, PR | `/commit-push-pr` + `/revise-claude-md` |
 
 !!! note "Keeping the website template in sync"
