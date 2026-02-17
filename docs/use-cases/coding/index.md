@@ -93,6 +93,7 @@ Coding is the primitive where AI agents are most mature. Modern AI coding agents
 
 ## Related
 
+- [Product & Engineering](../../product-engineering/index.md) — PRDs, user stories, acceptance criteria, and the full software development lifecycle
 - [AI Use Cases Overview](index.md) — all six primitives at a glance
 - [Agents](../../agentic-building-blocks/agents/index.md) — autonomous coding agents that plan, write, test, and iterate
 - [Context](../../agentic-building-blocks/context/index.md) — providing codebases, documentation, and examples

@@ -348,9 +348,6 @@ nav:
       - Topics:
         - Overview: platforms/openai/topics/README.md
       - Resources: platforms/openai/topics/resources.md
-  - AI Engineering:
-    - Overview: ai-engineering/index.md
-    - Context Engineering: ai-engineering/context-engineering.md
   - Builder Stack Setup:
     - builder-setup/index.md
     - "Step 1 — Terminal Basics": builder-setup/terminal-basics.md
@@ -360,6 +357,17 @@ nav:
     - "Step 5 — AI Coding CLIs": builder-setup/claude-code-install.md
     - "Step 6 — AI Registry": builder-setup/notion-registry-setup.md
     - "Step 7 — Voice to Text": builder-setup/voice-to-text-setup.md
+  - Product & Engineering:
+    - product-engineering/index.md
+    - Software Development Lifecycle: product-engineering/sdlc.md
+    - Product Requirements: product-engineering/requirements.md
+    - User Stories & Acceptance Criteria: product-engineering/user-stories.md
+    - Roadmaps & Prioritization: product-engineering/roadmapping.md
+    - Stakeholder Management: product-engineering/stakeholder-management.md
+    - Project Tracking with GitHub: product-engineering/tracking.md
+    - AI Engineering:
+        - Overview: ai-engineering/index.md
+        - Context Engineering: ai-engineering/context-engineering.md
   - Patterns:
     - Overview: patterns/index.md
     - Workflow Architecture Patterns:
