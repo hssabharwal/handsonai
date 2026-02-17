@@ -12,6 +12,14 @@
 
 set -euo pipefail
 
+# Load .env if it exists (auto-export so variables are available in this script)
+SCRIPT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+if [ -f "$SCRIPT_DIR/.env" ]; then
+  set -a
+  source "$SCRIPT_DIR/.env"
+  set +a
+fi
+
 TITLE="${1:?Usage: notify-slack.sh TITLE SUMMARY URL}"
 SUMMARY="${2:?Usage: notify-slack.sh TITLE SUMMARY URL}"
 URL="${3:?Usage: notify-slack.sh TITLE SUMMARY URL}"
