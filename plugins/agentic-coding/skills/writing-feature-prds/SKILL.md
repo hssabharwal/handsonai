@@ -9,11 +9,14 @@ command: feature-prd
 
 Guide the user through creating a well-defined feature PRD (Product Requirements Document) before implementation.
 
+**Important:** A PRD describes **one feature** — a single, buildable piece of work. If the user's idea is bigger than one feature (multiple epics, many capabilities), they should run `/agentic-coding:vision-brief` first to break it down. This skill takes one feature as input, not an entire vision.
+
 ## When to Use This Skill
 
 - User wants to build a new feature
 - User mentions "create a spec", "create a PRD", "new feature", or "feature PRD"
 - User wants to define requirements before coding
+- User has completed a Vision Brief and is ready to spec out one of the features from the breakdown
 
 ## Workflow Overview
 
@@ -21,12 +24,31 @@ Guide the user through creating a well-defined feature PRD (Product Requirements
 |-------|------|
 | 1. Define | Create PRD in a `specs/` directory |
 | 2. Stress-test | Review for gaps and ambiguities |
-| 3. Create Issue | GitHub issue with `type:feature` label |
-| 4. Handoff | User runs `/feature-dev` to implement |
+| 3. Track | GitHub issue with `type:feature` label |
+| 4. Handoff | Move to plan mode for implementation planning |
 
 ---
 
 ## Phase 1: Define the Feature
+
+**First, figure out where the user is coming from:**
+
+**Path A — Coming from a Vision Brief (recommended flow):**
+If the user references a Vision Brief or a specific feature from a breakdown (e.g., "Write a PRD for email verification from specs/onboarding-vision.md"):
+
+1. Read the Vision Brief
+2. Find the specific feature in the Feature Breakdown section
+3. Pre-populate the PRD from the Vision Brief's context, scoped to that one feature
+4. Confirm with the user: "I'm writing the PRD for **[Feature Name]** from your Vision Brief. I've pulled in the problem, users, and relevant capabilities. Anything you'd change before I draft the full PRD?"
+
+**Path B — Starting fresh (no Vision Brief):**
+If the user doesn't mention a Vision Brief:
+
+1. Ask: "Do you have a Vision Brief for this idea? If so, point me to it and I'll use it as a head start. If not, no worries — I'll walk you through the questions."
+2. If they provide one, follow Path A above
+3. If they don't have one, check the scope: does their idea sound like one feature, or something bigger?
+    - If it sounds like one feature, proceed with the questions below
+    - If it sounds bigger (multiple capabilities, multiple user types, multiple workflows), suggest they start with a Vision Brief first: "This sounds like it might be bigger than one feature. Want to run `/agentic-coding:vision-brief` first to break it into pieces? That way we can spec each piece clearly."
 
 Ask the user these questions to understand the feature:
 
@@ -41,6 +63,9 @@ Then create a PRD file. Use this structure for the PRD:
 
 ```markdown
 # Feature: [Feature Name]
+
+**Epic:** [Epic Name] (issue #XX) — omit if standalone feature
+**Vision Brief:** specs/[name]-vision.md — omit if no Vision Brief exists
 
 ## Summary
 One-sentence description of the feature.
@@ -103,7 +128,7 @@ Iterate with the user until the PRD is solid.
 
 ## Phase 3: Create GitHub Issue
 
-Once the PRD is finalized, create a GitHub issue:
+Once the PRD is finalized, create a GitHub issue to track the feature. A GitHub issue is a to-do item in your project that links back to the PRD so you can track progress, leave comments, and close it when the feature ships.
 
 ```bash
 gh issue create --title "[Feature] Feature Name" --label "type:feature" --body "..."
@@ -113,18 +138,21 @@ The issue body should include:
 - Link to the PRD file
 - Summary of the feature
 - Key acceptance criteria (can reference PRD for full list)
+- **If this feature belongs to an epic:** Reference the epic issue (e.g., "Part of #XX") so the feature is linked to the bigger picture
 
 ---
 
-## Phase 4: Handoff to Implementation
+## Phase 4: Handoff to Planning
+
+The PRD defines *what* to build. The next step is planning *how* to build it — Claude will enter **plan mode** to explore the codebase, design the approach, and break the work into implementation tasks before writing any code.
 
 Tell the user:
 
-> "The PRD and issue are ready. To implement, run:
-> ```
-> /feature-dev
-> ```
-> Then tell Claude: 'Implement specs/[feature-name].md (tracked in issue #XX)'"
+> "Your PRD and issue are ready. The next step is planning the implementation. Tell Claude:
+>
+> *'Plan the implementation for specs/[feature-name].md (tracked in issue #XX)'*
+>
+> Claude will enter plan mode — it'll explore your codebase, design the approach, and present an implementation plan for your approval before writing any code."
 
 ---
 

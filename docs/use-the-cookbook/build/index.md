@@ -190,19 +190,20 @@ Skills for AI-assisted coding workflows. Define requirements before you build �
 
     | Skill | Command | What it does |
     |-------|---------|-------------|
-    | [`writing-feature-prds`](agentic-coding.md#writing-feature-prds) | `/agentic-coding:feature-prd` | Guides you through creating a structured feature PRD with user stories, acceptance criteria, and GitHub issue tracking. Walks through 4 phases: Define, Stress-test, Create Issue, Handoff to implementation. |
+    | [`writing-vision-briefs`](agentic-coding.md#writing-vision-briefs) | `/agentic-coding:vision-brief` | Captures a fuzzy idea as a structured Vision Brief, then breaks it into epics and features you can build one at a time. Creates GitHub issues for each epic and recommends where to start. |
+    | [`writing-feature-prds`](agentic-coding.md#writing-feature-prds) | `/agentic-coding:feature-prd` | Guides you through creating a structured feature PRD for **one feature** — with user stories, acceptance criteria, and GitHub issue tracking. Walks through 4 phases: Define, Stress-test, Track, Handoff to plan mode. |
 
 ??? usage "Example usage"
 
     ```
+    "I have an idea for improving how we onboard new customers"
+    → writing-vision-briefs captures the idea as a structured Vision Brief
+
     "I want to build a new feature for user authentication"
-    → Walks through the 4-phase PRD workflow: Define, Stress-test, Create Issue, Handoff
+    → writing-feature-prds walks through the 4-phase PRD workflow
 
     "Create a spec for adding dark mode support"
     → Creates a PRD at specs/dark-mode.md with user stories and acceptance criteria
-
-    "New feature: webhook notifications when a deployment fails"
-    → Asks clarifying questions, produces a PRD, creates a GitHub issue
     ```
 
 ---
@@ -213,6 +214,6 @@ Skills for AI-assisted coding workflows. Define requirements before you build �
 |--------|--------|--------|---------|----------------|
 | `business-first-ai` | 8 | 5 | 3 | `/plugin install business-first-ai@handsonai` |
 | `ai-registry` | 0 | 5 | 0 | `/plugin install ai-registry@handsonai` |
-| `agentic-coding` | 0 | 1 | 0 | `/plugin install agentic-coding@handsonai` |
+| `agentic-coding` | 0 | 2 | 0 | `/plugin install agentic-coding@handsonai` |
 
 All plugins are maintained in the [handsonai GitHub repository](https://github.com/jamesgray-ai/handsonai).
