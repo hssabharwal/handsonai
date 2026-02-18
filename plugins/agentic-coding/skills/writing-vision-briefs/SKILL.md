@@ -2,7 +2,6 @@
 name: writing-vision-briefs
 description: Use when a user has a fuzzy idea they want to explore before writing a formal PRD. Captures the essence of an idea as a Vision Brief — a structured, business-focused artifact that feeds directly into the feature-prd workflow.
 user_invocable: true
-command: vision-brief
 ---
 
 # Vision Brief Workflow
@@ -247,7 +246,7 @@ If the vision is a single feature (no epics), omit this section.
 >
 > The next step is writing a detailed spec for your first feature: **[Feature Name]**. Run:
 > ```
-> /agentic-coding:feature-prd
+> /agentic-coding:writing-feature-prds
 > ```
 > Then tell Claude: *'Write a PRD for [Feature Name] from the Vision Brief at specs/[name]-vision.md (epic issue #XX)'*
 >
@@ -257,7 +256,7 @@ If the vision is a single feature (no epics), omit this section.
 
 > "Your Vision Brief is saved at `specs/[name]-vision.md`. This is focused enough to build as a single feature. Run:
 > ```
-> /agentic-coding:feature-prd
+> /agentic-coding:writing-feature-prds
 > ```
 > Then tell Claude: *'Use the Vision Brief at specs/[name]-vision.md as the starting point.'*"
 

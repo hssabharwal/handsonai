@@ -24,7 +24,7 @@
       "name": "agentic-coding",
       "source": "./plugins/agentic-coding",
       "description": "Skills for AI-assisted coding workflows — feature PRDs, specs, and implementation planning",
-      "version": "1.2.2"
+      "version": "1.2.3"
     }
   ]
 }
