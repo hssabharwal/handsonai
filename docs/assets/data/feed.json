@@ -1,10 +1,338 @@
 {
-  "updated": "2026-02-18T08:36:13.852728+00:00",
+  "updated": "2026-02-18T12:43:12.084293+00:00",
   "categories": [
     "Google",
     "Microsoft"
   ],
   "items": [
+    {
+      "title": "How the Cleveland Metropolitan School District is using artificial intelligence - WKYC",
+      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQeElKVHlNdXFTUnRVeWlpQTdLOGM4bEVCQVAxV0ZBOGdqSHJodWZ0blZkZlphN2ZOUXJTV3I4NEZuY0ZyUVVhVHotZlh6aDNkM1dfelNsaC1HeTFKOHZJeDJxbDVIMVRqbDRpb2stTnVWR1BzXzhLeFdpNDM3UTdxbnl0ckNXTjRjY0R0bmZ3RHFJVTJnQWJmbXN3XzVNRlh5R1hZV2NYWC1tek9mRW5mU0FSOUVPVk9KaTJuWUk5cE5JWnotN0FVTGlqd0hUX2NtdnlLN3RMSFpHOTF0RGx6UmVZakZGYkIyU2tRV3ZfLW1aM0k?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-18T11:57:00+00:00",
+      "category": "Google",
+      "excerpt": "How the Cleveland Metropolitan School District is using artificial intelligence WKYC"
+    },
+    {
+      "title": "Microsoft on pace for $50bn AI investment in \"global south\" - DatacenterDynamics",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOOWxENi1pV280QzRLdElwZkJoWGI0OUxaejllcFJnX3VrTGhmNVVZQWNkU2dQOEUwaHFRWG5KR0VzY1FINUdRblNldUVzN2pYTUZxQlVZa0ltQ3BLT3FtR2JqQkt0Q1E5RGpDb1hwbW1kS2RZWFBfVW1NYWt6WTBjeDdqQzVnN2ZVX1hYM3RlZ3h1NVFWWHRvWGxaSGY0V3lXM2c?oc=5",
+      "source": "\"microsoft ai\" - Google News",
+      "published": "2026-02-18T11:56:52+00:00",
+      "category": "Microsoft",
+      "excerpt": "Microsoft on pace for $50bn AI investment in \"global south\" DatacenterDynamics"
+    },
+    {
+      "title": "Mistral AI deepens compute ambitions with Koyeb acquisition - Computerworld",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPeWk3eVZoQ0M0dzBwR09LMlZCRXFVMUF6Z0w2a2NFV2dOZTkwLWJ1clR6N1FDVjZUcTliV2ZuQzdleENCbGpzckRka3dyRmpFalZvNlg3d3lCdHJFSS10UXAzdzYta3BuQ1hCVVM0VkFnNDBnQUp2ZVlJVkdXc09EVm02RjBzSTNDU25mTV9fUEU0b3c1WmZjbnR1U0JORnJIbERoblo4S2YybWNBQ0x0M2N3?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-18T11:53:54+00:00",
+      "category": "Google",
+      "excerpt": "Mistral AI deepens compute ambitions with Koyeb acquisition Computerworld"
+    },
+    {
+      "title": "Merck and Mayo Clinic Announce New Research and Development Collaboration to Support AI-Enabled Drug Discovery and Precision Medicine - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxObHRUYTF0T1l5WlpXT3FQWjNkcnNGMElidE5tSUpENVBBX0hiNHlNM0tiNDZYRVFZdGZmY1dyM2lwSDlNajY5VjQwN21UVkJCdGs3dmk1eFc2OGpFbVhrc0doaC1xbEs1YUJkaDg4QTlDb3hqZHJLOFMycjEtTHRxdTQ0eEFjMGxF?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-18T11:45:00+00:00",
+      "category": "Google",
+      "excerpt": "Merck and Mayo Clinic Announce New Research and Development Collaboration to Support AI-Enabled Drug Discovery and Precision Medicine Yahoo Finance"
+    },
+    {
+      "title": "Markets AM Need to Know: Microsoft's AI expansion, Meta legal challenge and more (SP500:) - Seeking Alpha",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOTzJvN3MtaE13bGZTSEdBTm00RWJRQ3JsNFVuMFIxbVcwSmhjb3dQMjBicFFCS2g3MDJENnZSVnRCaHZld0ladHQxU3JRa1RBXzBmZC1jcWpmUEMtU0NaRHRIMG15Yk50cGFtVkc0ak80TnVteXhtenFKZ3NwcC1xV2JTYnlGWXhnU29NQVd6dXJPemNITXB3Z2R3MllHc2dfaExHOWRxaERYeG1NMHdXenM1Tlh1UQ?oc=5",
+      "source": "\"microsoft ai\" - Google News",
+      "published": "2026-02-18T11:30:15+00:00",
+      "category": "Microsoft",
+      "excerpt": "Markets AM Need to Know: Microsoft's AI expansion, Meta legal challenge and more (SP500:) Seeking Alpha"
+    },
+    {
+      "title": "Microsoft AI boss issues 18 month warning to all office workers with jobs severely at risk - LADbible",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxORGlZRFhNUEp0R0I5dFAzSHRLcER6WDVwcXFkZkpMMXRWelZGckV4TGhUTDBmTkhBZU9JNTlxcHBKc2lHdk1ENWVyaDR6Yl9Ma2ktclN6aXlOUmpGa3dyeFh3Q1g5X1lQY2gzVFJhOGZWVVBxdkE4ejdfMVAxeUtKRDdZdUczQkk0Z20tLWdEN21OVmlvdG5wRExyZDBlM0J0VmZrWkZn?oc=5",
+      "source": "\"microsoft ai\" - Google News",
+      "published": "2026-02-18T11:21:33+00:00",
+      "category": "Microsoft",
+      "excerpt": "Microsoft AI boss issues 18 month warning to all office workers with jobs severely at risk LADbible"
+    },
+    {
+      "title": "SGT Capital Closes Artificial Intelligence Co-Investment Fund - PR Newswire",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOUldQcUJ1QTRBMWNqWUlZZ3JLVlRYSFNCOU1LRUZHRkNZczdMNzNhRlJ0ekh1UUhydzJEc0xndVNBM3FzZFZzZGZwVVJVbVNobGswVkdoMWZOcHVlNk1uamg1aWctMXE4Zm9wREQxQW9rT0lSdUVmNVVqWGY2TGpvbTB0QUxwdUxDbXdVelVjanFSWEFfSEFJaDk5U2tzeUpibVNTZjhtUDl3U1ZlaGt4TGZLUUllZHBn?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-18T11:19:00+00:00",
+      "category": "Google",
+      "excerpt": "SGT Capital Closes Artificial Intelligence Co-Investment Fund PR Newswire"
+    },
+    {
+      "title": "SPEECH BY GOVERNOR BARR ON ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET \u2013 FEDERAL RESERVE BOARD - InsuranceNewsNet",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQWnJRQjlsZUlBZ213b3FlUzRBQm9TajlfUjFqa0ZxNVFkMFhSNXRNZVJrX1FBRnlvSWtIQ0h1TTNFcjFFd0N0Q1F0a2xPVWFDWFNMT1hjLVljMDhldzA5VzlYc0RqN3RFcFpDQ3E2NUNDRUJBX1ZpbUZzRGhqSUlmeGJwLWk1aDNzMnJyVzRYNkFFeFU3cVJBWjZuVUVBVy1DcmcyY2lyTXNEdDB4blZvWnBIS3Z0TldUSHZLZ3Z2ekRNcmMxQnQxakQ3dw?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-18T11:16:38+00:00",
+      "category": "Google",
+      "excerpt": "SPEECH BY GOVERNOR BARR ON ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET \u2013 FEDERAL RESERVE BOARD InsuranceNewsNet"
+    },
+    {
+      "title": "Businesses Move to Rein In AI in the Shift to Autonomous Finance - PYMNTS.com",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQa0Q5U2Z4Q2FES1lXQkFhZjhzSWNOMGNtN250U2t3OF9ua2pvanZkWnR6S2daNC1WVGtxazF6S1JNeWhYaUhZNnk3MWFaMW1rR1oyQVBQVmM3dTNhcEdjMDVMSmFIY09neGlkeDBQd0Z0Z3hLMTA5Zi1QN040amhKY2w3TXFQcFRGZHpaMjQyQWhTc25ncnRjRml3eS0teWpGVWtmOTJiWGl4bkJzdThyZTg1MDhYTnhGQ2Iw?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-18T11:03:45+00:00",
+      "category": "Google",
+      "excerpt": "Businesses Move to Rein In AI in the Shift to Autonomous Finance PYMNTS.com"
+    },
+    {
+      "title": "Microsoft's AI Ambitions Face Investor Scrutiny Amid Soaring Costs - AD HOC NEWS",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPYTNMcFptVU5KNHdDZnNGLXN4NkpWT0pnWWpSVUQwTlN3QVFwSHVIQ1hCWFlPdGlqcG9fMmJ6OVA2Umo3NFhYS19RWGhSSF9fMVBKQ1ZNd2FIOFJqSVliQ0tLNTVSYUIzR1J1Qm96UzJOaVdCekNiaTBvaFZ4NkVXZFFHVHdTVlpBbWQyZ1RxZDdIVXNmd1NEMGxuX092eVZDaU9WN1h5YTFyM2c2RFRERWNtWE50UGt3N0tPMFlYdmQydlE?oc=5",
+      "source": "\"microsoft ai\" - Google News",
+      "published": "2026-02-18T11:00:20+00:00",
+      "category": "Microsoft",
+      "excerpt": "Microsoft's AI Ambitions Face Investor Scrutiny Amid Soaring Costs AD HOC NEWS"
+    },
+    {
+      "title": "How AI-powered \u2018smart homes\u2019 could transform care for people with dementia - Scientific American",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNUWI4ZjJUUDhBR09FcW1RTWIyQmZhWkhVZ2NEOVU5WEU4alhZZWgtLTdzNkUtd21rRzdlTG1lQ2g3bkk3UC1sdXNnUTJ6amIxWEs0QktqTWNqcHJTcHl3Q1gxUkVaUFRfV0UtU21zb3ozRS1VTkRkZjd4ZWZBRkxsSXYzVUN0MFZEMGlRSG9aZlpTZw?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-18T11:00:00+00:00",
+      "category": "Google",
+      "excerpt": "How AI-powered \u2018smart homes\u2019 could transform care for people with dementia Scientific American"
+    },
+    {
+      "title": "Video | Microsoft's Puneet Chandok: \"Stop Clinging to Your Job Description; Build With AI Every Day\" - NDTV",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNb25LNXBDMWJKcUhkdHAzVFdOOE1EOVYyZGRXcnBsQVQyQ0VleFFzNWRiRDFBMHZBUklYeExQVTBGbGdKYW10M3dtUlEzTDJGclhxSHcwTkhKUnlUT01FLWY0eEkyNTI5ZDNBTXE5ejVoTjAzbkRHNU9SS0VYb01qZG8xbkF6QUg2Zno1bXM1aHNvZWM2V2NfOXBvY2ZFLW5fZ2QwOFBvR2FrNm5QTkFMbkFyTGQ4cFA1dFR2ODB6MUQ?oc=5",
+      "source": "\"microsoft ai\" - Google News",
+      "published": "2026-02-18T10:57:32+00:00",
+      "category": "Microsoft",
+      "excerpt": "Video | Microsoft's Puneet Chandok: \"Stop Clinging to Your Job Description; Build With AI Every Day\" NDTV"
+    },
+    {
+      "title": "Microsoft to invest USD 50 billion in Global South AI expansion: Brad Smith - Tribune India",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPNVBfb2FjR3ZiYjFnSHJUVFFIczNGTzc2cUZaVVlScUp4VXNZeDhoWUFyZVN6V1hTcERfb2tRckZVRnNEV3VhZ2EzSXRwZXlKVnZQUzYyT3hUN3I4N2k3dmoyMVhJMmRUalNsVGFKd29BR0lpRERfVFdSWUZMLW9pcDdUWndOZUdMY3RCLXVjS0VBRFE4RWhwSXdpcjBCWmExT1hJOXJVZXZYTnRmcWxrZTZ0RmhxZmdDWVdzZk1Ja2hwdVk2UTI4ZHlKblhQRExHSnRSZFRpVjVoUdIB2gFBVV95cUxPNVBfb2FjR3ZiYjFnSHJUVFFIczNGTzc2cUZaVVlScUp4VXNZeDhoWUFyZVN6V1hTcERfb2tRckZVRnNEV3VhZ2EzSXRwZXlKVnZQUzYyT3hUN3I4N2k3dmoyMVhJMmRUalNsVGFKd29BR0lpRERfVFdSWUZMLW9pcDdUWndOZUdMY3RCLXVjS0VBRFE4RWhwSXdpcjBCWmExT1hJOXJVZXZYTnRmcWxrZTZ0RmhxZmdDWVdzZk1Ja2hwdVk2UTI4ZHlKblhQRExHSnRSZFRpVjVoUQ?oc=5",
+      "source": "\"microsoft ai\" - Google News",
+      "published": "2026-02-18T10:50:33+00:00",
+      "category": "Microsoft",
+      "excerpt": "Microsoft to invest USD 50 billion in Global South AI expansion: Brad Smith Tribune India"
+    },
+    {
+      "title": "Markets are underestimating the cost of artificial intelligence - The Armchair Trader",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOTUdYVHhJMFFyNGotNmtsb0RuSmkwUUZudmprTUJTaTNZVm1RMVpmVEJCT0VFMGVEaUgyOHU1QWJ6U2toYmducXJaQVpfU0tZQWVpcnRpRWNXOVVpcFhFZ1BxSDUycWJkdURaMEJpMnJDUnJzbFdOQzRxaF9QMXVQdkNzVlhxM21QWU9ta1ZYSC01bnhCLWIzZzRZM29tUFFzSXNDLWFhVzhRcTFM?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-18T10:49:55+00:00",
+      "category": "Google",
+      "excerpt": "Markets are underestimating the cost of artificial intelligence The Armchair Trader"
+    },
+    {
+      "title": "Ukraine Ministry and Microsoft Sign MoU to Boost Digital Infrastructure and AI Development - Odessa Journal",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNZFhVTW5MdmNVd1dEREloblBidHhvM2VBOXJpYzZlaDNtQXhPM21odDNSamdzN1k1d3VrUmFFOU5SR1MtdXkweGYwMEVuUldieGItYjRXaE5feXdib3ExRjFFckZYZXJiUF95VWdRMmVZX1BkQ0xxQlFuS2d5VXlUTjVjTHV0YWhGeWZTRmRWV1hKVkdKZ1gyS0tPZ0ZoZ3RuZ2RycA?oc=5",
+      "source": "\"microsoft ai\" - Google News",
+      "published": "2026-02-18T10:43:38+00:00",
+      "category": "Microsoft",
+      "excerpt": "Ukraine Ministry and Microsoft Sign MoU to Boost Digital Infrastructure and AI Development Odessa Journal"
+    },
+    {
+      "title": "\"Ignorance Towards AI Wrong\": Microsoft's Puneet Chandok At NDTV AI Summit - NDTV",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNbWhHaXlMd3kxcHFxUlEtdUJ1LU5VZmMySUw0Vkhwa29WQjl3bTBpbEczSXEtQTFJQ1NJai1sTW1sQXFFMm5RdnBjWTJyUUhVdUczaXp4d3BtZzJGakZVOEsyeW0tOWNmVWtiM1ZpVUk0aDZQRWFFWGNzc1V5c0pqMTlxa2VSMzl6dHBFWnpzbm9xM2kyUmVBUHBtb1RPOGVrdjduaUZuakJsSDBX0gG0AUFVX3lxTE9HdWJYS2FHc2VJZE1reUNxZHI4bEs5VGN6N3NrMnF3U18yQjYydzN3T2w4NGRIT0RSelA3bkZTX1ZMZGhvWVJkRkJVaGljZ21QQ0xSWUJJREV3UHJCa0FmZ21nU1A1dGtUMElNM2FoaFFQOHhVNy1xYmFpYXBjLVQ0ZFpTTE9VNUtndncyTUd5cUI5UlpITy1IQXJBTVJuMDJyYjdIcTRkYkREVElPSWFtalpBUw?oc=5",
+      "source": "\"microsoft ai\" - Google News",
+      "published": "2026-02-18T10:41:50+00:00",
+      "category": "Microsoft",
+      "excerpt": "\"Ignorance Towards AI Wrong\": Microsoft's Puneet Chandok At NDTV AI Summit NDTV"
+    },
+    {
+      "title": "Microsoft on pace to invest $50B into AI for Global South - YourStory.com",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPVHBzaEVzM3hXWkFoUGl2SXd4ZExTajFEVmtvM0F0a0lJOFpIYTYwY0JvSEJHbWJPUVBRUU5nek9ONTEwdVJBbjk5enRUbFNMYW4tN0xFcVVZY0lCNnhtSFJwVWMzMnhlNWs3VjVXbnh3a1NVSzE1eTBzV0dIZm1EWWtwbkxEOUtJRDZwWmE3UDNNNkVaQ1lJWQ?oc=5",
+      "source": "\"microsoft ai\" - Google News",
+      "published": "2026-02-18T10:30:00+00:00",
+      "category": "Microsoft",
+      "excerpt": "Microsoft on pace to invest $50B into AI for Global South YourStory.com"
+    },
+    {
+      "title": "'Urgent need to bridge global AI divide': Microsoft President at AI Summit - Business Standard",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOTVpsNkFaY2h0S0xHMHdVaWd1NV9Odm5ucm1GUDBBWDdrLWxyLWtvYTd0bTkzY3FlMV9PMXJaY1hocWZwRGdwMzFDZ0FzTUt6dElnb2EwemM2T3ExSk5rUktsYkt2M2VMYWFzMHlBY3p2UTZEWW9DbDFnVmRQbVM2RGUyWHlwOUhER0NZYi1Sb2djMzhJMnlxLVZBdFVCenlCbE5fSGhMcm9PVTk0bk96aFZoZ21VX3NtRlpQU2NjUmZpWldUaktNLW5ycl9hb3pVRkExWNIB2gFBVV95cUxQQS0xT2syaDFCQzBWcFgyd1g1MWxJTmpERFhtS1ZsZ3Nta044ZWw1dE1SUFQzUjdNcVVQV1dJRTdEaGRHV2xJSEJGcWZsODU3OHUyNGozOXRyYVFhRS1HS3FyTWlFVkxWMlBZUXAzTFIxNjJ0ZHJ6NUQ2U3FFZHU4WFB3cEFpSE41aFNGOFZQS0RmeTAyNnp0MVpYWlV4RlBlTjZaVi16WWlrQkpIenlqUFZYWC02ZXprWHN3alNmYmZmczl6YzNKbk9aVk84WmdOVXZqblU1cE9mUQ?oc=5",
+      "source": "\"microsoft ai\" - Google News",
+      "published": "2026-02-18T10:28:07+00:00",
+      "category": "Microsoft",
+      "excerpt": "'Urgent need to bridge global AI divide': Microsoft President at AI Summit Business Standard"
+    },
+    {
+      "title": "India Boots a Private University From an AI Summit Over a Robot Dog Controversy - U.S. News & World Report",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNZXJfWWlNcS1VeGpSMjFrVWNIR3czWFMyVlZ4aE9SUzVQT0tRcDNDVXBSWjVSUVAzQ3VGNjRDR3I3eFVYUUxobkxiXzBYTGdPVDdKc1dPa3FZZjRFQzlnaUE5eTI0VkwtdERoVnQyLVlWXzhKQ0g0bEEtZ2JkQzYtY0FCOHhKV1I2RHVsNWZDV25pRUpJVFowR2tGa25ObHdaOTVyeU13d2dwUGNPaFVtV0Z1S3p5X05oOVIzTnZNakVjQVpoLXF5ckRJVjB2aDk1akZ6cQ?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-18T10:19:00+00:00",
+      "category": "Google",
+      "excerpt": "India Boots a Private University From an AI Summit Over a Robot Dog Controversy U.S. News & World Report"
+    },
+    {
+      "title": "OpenAI has deleted the word \u2018safely\u2019 from its mission; will AI serve society or shareholders? - WMNF 88.5 FM",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOM2lMNHRidndaUFo4WjFnV1BVNzVfbU1DMzlDb0xwSlBRdWVhMjZCMlR0bDk5WVFzMDZycXYtTnIzbW94NTJVX0VnNjktV0lGUzVLSVpSeTBheGFINjR2b3VQQ002Z05VcFc0c2JjUzJBVUE2TzlaWTVUb0hoaDJQRlJDbEg3alhQdDUzT1R4b2tfOWpzMGc?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-18T10:11:51+00:00",
+      "category": "Google",
+      "excerpt": "OpenAI has deleted the word \u2018safely\u2019 from its mission; will AI serve society or shareholders? WMNF 88.5 FM"
+    },
+    {
+      "title": "Microsoft to invest $50 billion to expand AI access across Global South, launches teacher skilling programme in India - ddnews.gov.in",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPT2lIOXh2S2U3aF9zNkJYUFZXZ01mMG9wdGRJTzhRb0ljNXB4TFBTUmk3eWdIVDJGM2hzUWZodzJYeDBZbmdMYWxSdlV2NVpYV1hQem5oa2pYd0hzTFhtM2UyaktYUk9XZ1VkVUwycWJHM29sd0VYbkpabktIcVJOVnRHRVNXOFk4UkR3cnl3TTlsUFVYOFZmRnFxcDBmU0FkanFZLVZKbG55bVQtbFNVaGpCZ0tiVXdJakpMXzNxWFY3RHEyUDcwUUhyRHlIcS1VcmVuYnVZOUI?oc=5",
+      "source": "\"microsoft ai\" - Google News",
+      "published": "2026-02-18T10:07:06+00:00",
+      "category": "Microsoft",
+      "excerpt": "Microsoft to invest $50 billion to expand AI access across Global South, launches teacher skilling programme in India ddnews.gov.in"
+    },
+    {
+      "title": "Opinion | The A.I. Disruption Is Actually Here, and It\u2019s Not Terrible - The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB2Z2tpUXZ6Z2ZjV0U2RG5salVmekZpTkZMN1VFb2N3NGFMOElTNFdneGhHN1VyYWhZaEdiaUNqcDdRbXJmVDNpM3BMbUpxZnJfRHRlck9US1VSNmk1VVJKam9JZGNtcnZRWFBn?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-18T10:03:19+00:00",
+      "category": "Google",
+      "excerpt": "Opinion | The A.I. Disruption Is Actually Here, and It\u2019s Not Terrible The New York Times"
+    },
+    {
+      "title": "Microsoft (MSFT) Bets Big on the Global South With $50 Billion AI Buildout Through 2030 - TipRanks",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPS08xOFdRUVBaV253N2VIdkJORWZMVTBWdzVYSUM0aGUzTGlsLU4yelhLRlVPRVdSRG1iVnY0NUpzb0Z2QUFRdlkzd2xEMy04SWNweWR0ZW9uUnVFa0NFMkFhTTR0Z3o0NWVNMDVwVlA2Vkt0SWFGdzdRa01rSkFLbXJ3bmtyS1VKbWYyNVY1RjZhNDNjdTAyOGVEOHg0aFdIay1xeTc4bW9xcjVDYnFzVFBUV2k?oc=5",
+      "source": "\"microsoft ai\" - Google News",
+      "published": "2026-02-18T10:01:55+00:00",
+      "category": "Microsoft",
+      "excerpt": "Microsoft (MSFT) Bets Big on the Global South With $50 Billion AI Buildout Through 2030 TipRanks"
+    },
+    {
+      "title": "Red and Blue States Alike Want To Limit AI in Insurance. Trump Wants To Limit the States. - KFF Health News",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPak9CRTI4dW5FQzB5bnRralNFTkNPWXlCeDVfMnpFWVFjcW9icXQ3eVBZZ3dTbmlIUmJKVlVpV2tyaXB6YnNDQUZVdnUtaGNiYTFmZ3J6TzdOTkdGZ0xwYlQtX1FuS0d4ZEoxV2ljNi1mdWZXX3ZxZnN5ejZlYUFobV9lY29mbklGWkVDb0Z3VFg1RVNVR1Ewajg1QTlnSEhTeEZkQ0FhcS1oZWpqdWQ5ZDhuM2U4YVE?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-18T10:00:00+00:00",
+      "category": "Google",
+      "excerpt": "Red and Blue States Alike Want To Limit AI in Insurance. Trump Wants To Limit the States. KFF Health News"
+    },
+    {
+      "title": "Louisville AI Week spotlights technology's promise and risks - Spectrum News",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNNFlyM1lMcEsxY3RNTUgzd2pfSHBsZlQwa0F4TThsNUlzUXdpbXZIZDdqR2Zkd1JmZzdRY3h2X0RBcDhJSmZuT0tTNHVHbmFVbGJYZ2g4MUpNY3Axd3ZqTV9xV1RMZExxWkVydERTd0lzZkdRZEZGdE54b3NlN0ZEcGNmRDZNQkstNlVJblZNT2tVaWd4YThGVnNXYWpGMEVLZnNXSzBhX1pxbjYy?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-18T10:00:00+00:00",
+      "category": "Google",
+      "excerpt": "Louisville AI Week spotlights technology's promise and risks Spectrum News"
+    },
+    {
+      "title": "AI is playing a bigger role at the 2026 Olympics - Axios",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOWVZYWXhBa3FuUkE4MXF6dFcyRVp1dE9vRXZxdk9BajlVS1JKby1xeVFxbWJuSjVoSDNkR1hoc1g2TTRzdTZWOG5kNURyU2ktYmhBd0dsNlp6TVFwU0J4dmdKQ1BQS1R1X2hpNzhNclJsbGg2cUdIRk5ZekgzY3Z4OXBMcUM?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-18T09:58:09+00:00",
+      "category": "Google",
+      "excerpt": "AI is playing a bigger role at the 2026 Olympics Axios"
+    },
+    {
+      "title": "Will AI safety pit federal government against Pa. other states? - Erie Times-News",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQNWdPTHFoeExJOFpCLWc3aHB4eWthajRNMHVKZ2dtbFhiYWNTNy1YZUR4R0NQSEl3VE9VVVlLZXU3OHp3c2ZKZndOLXZvNVZIUHRMNnNrUUdxZnlfUlIyRjNmd0JGeEZuSThBUGZPX1pjNV8xQ1Fpd2NzZm1welhGMmtyckF1a3FfNW93a3I1OTBrdw?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-18T09:55:00+00:00",
+      "category": "Google",
+      "excerpt": "Will AI safety pit federal government against Pa. other states? Erie Times-News"
+    },
+    {
+      "title": "Microsoft commits $50 B to Global South AI - Transformers Magazine",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOZGRGUXNRb3NuY3dWZ193QXhwa1UyRnZ3S18yTWUwQ3dRZE5nOFZWa2g4N3NRMWtqazVqVm5WdWx6V0l3djJCMGFfWDBWaVpMakxSb1ZNVC0tenZMZmN3N0g2c19ZWnY2aUZnWFR5aVkxUWxNN1VpRTRScmhTMlVDR0x5QlVMaFVra3RPeg?oc=5",
+      "source": "\"microsoft ai\" - Google News",
+      "published": "2026-02-18T09:50:31+00:00",
+      "category": "Microsoft",
+      "excerpt": "Microsoft commits $50 B to Global South AI Transformers Magazine"
+    },
+    {
+      "title": "Microsoft (MSFT) Stock: Tech Giant Eyes $50 Billion AI Expansion Into Emerging Markets - CoinCentral",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNVTJRY1JXSDJFVUJwNGFrZ0NYWFJpUzZNMHFHdkx0bXRuN0o1Z3dvX09Oa0x1U0lQLUdVZXYyTDc5Q2h2b2EzTEg0NUF3UG1WdzZmLXhzcTJ4QXJMTF90bmwwQkdod0lScVkxUU44bGxmWVJCTGVZM1NBOTdld1pta00xLUpXa2MxM3JfUTJOdG9JZ2V0U3ZMV0lJWXljSlNRdmxiNURhTUU3a0E?oc=5",
+      "source": "\"microsoft ai\" - Google News",
+      "published": "2026-02-18T09:37:44+00:00",
+      "category": "Microsoft",
+      "excerpt": "Microsoft (MSFT) Stock: Tech Giant Eyes $50 Billion AI Expansion Into Emerging Markets CoinCentral"
+    },
+    {
+      "title": "Microsoft targets $50 Billion investment to expand AI across global south by 2030 - Storyboard18",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxORzd2bWFOeXc4aEhTcTlCZjBrQmpOYnRkdEZDRmJ5NVc2cVRDaWRDRDlkaVhYV0VPN0lrVzlWVDhrUTlQUW1LemtvZmRzcm9yYldISDZMUTV4cmljZHpDb1JrQVlLekdWd3pRQ3dlbTBlZ1J2anBMMDY2WUpvNVhDRUVzM21WeXdkeF82QllpcUNaSVhzRTdnTEtQXzZQbkkzcWxqaUtFTlYtM2dpTUk0OGkyb19MYWg1R1lBM2hRMDlLSHZqbUHSAcsBQVVfeXFMTUZZTnRQODZ5UEctWW1zWXIzUDBObDM4c283WE1MVGdFYWtVZmg2MGVWczZFLUxmaFdWUERXdzJINlFQdXhYemRwWGxYdmRyakwwVjA1U3lwZHQxVUNOUk5ZSEs0RFNzQjYzYjQ0VzB6UlFTRW85WjJlYWNuVEhEUUJhWE1nMEJxZm0wdUFKZ1hxSjRDci1pbnN4eEdNMTRqWUdsbjVwMDVrTVhqMlBrX0ZrTWlXU2liRU5IR0o4RXFaYmF2NlhITnNDSVU?oc=5",
+      "source": "\"microsoft ai\" - Google News",
+      "published": "2026-02-18T09:25:08+00:00",
+      "category": "Microsoft",
+      "excerpt": "Microsoft targets $50 Billion investment to expand AI across global south by 2030 Storyboard18"
+    },
+    {
+      "title": "Bonds swept up in leap of faith on AI productivity - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPSl8zMENmSUlJZ1Z4WjdEQ1VfVVFUOTN0cGU3Z29CTkREbXowaUJoaG5QTXlCdHp0RGIxYVd2TDdPTUpoU1plVE9yaG40aDdhRHByQ0U5ZE5ZblNlQm9MWlpERDlZVVBEeTJfZ0FuVFJrb3VQQWZXYjRzYmkxZ3pkNjBubnpqRGNVbUx1MmVxRkFTVHN2aGxJX1JWZGNoWVRJYkJtaTZoWDV0VlBpSGFMR0NR?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-18T09:24:56+00:00",
+      "category": "Google",
+      "excerpt": "Bonds swept up in leap of faith on AI productivity Reuters"
+    },
+    {
+      "title": "Microsoft AI partnership brings real-time Premier League Companion data to Gary Neville's Overlap podcasts - Prolific North",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQVjNYLWpwdk9JcHhGZDBYZ0VhVWVPSnpuRC1qeHJaeVdwM2dzR1ZBSDRqd29nSk1vV1RaWnRuWmdPbGE0NTdJUEZPU3diNHhzMGNSUWQtZTZwbmgzYUc1SWlDNHN6a3c4N19KdFZFRXpDcEZDRmhjQXQzM3ppYk1haUdIQXp6WGgwSjczeFllN1lIUmV5UHlHRUc2eW41eHNIOHduT3BzTmdfOTRCVkNTMzRSTzlFdm1sSUpHbTFlNkdVdmxDZWVrdXdZcm92dHZXQUJnS3d6QmlCc2M?oc=5",
+      "source": "\"microsoft ai\" - Google News",
+      "published": "2026-02-18T09:19:22+00:00",
+      "category": "Microsoft",
+      "excerpt": "Microsoft AI partnership brings real-time Premier League Companion data to Gary Neville's Overlap podcasts Prolific North"
+    },
+    {
+      "title": "Democratising Artificial Intelligence: The Swadeshi Model Of AI For All - NDTV",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNWm1XUl9nU3NLU1lpazNIZ1JYMTNSYkRzQjFnS0EyYklPcWtFX0RnMzRVSE81SmZqbkNkelUzbDhGUXBtbXhJY21DUkl0ekJGckhqek9sNnpXVkJmZExYVDQ2eG1Mdk43eGhhRlFRNGNsZzBKTXVqUHN3Z3k3YU9kcHp5TVg5WVlTQng5aFNFR3ZmYWJzUFRDSm9KNjloUkZRUExHQjVSenY1REE0Z3I3etIBuAFBVV95cUxNT283RW1qMHRiM2lHcEZqdWdXcENZVlgzdjc2Qy1rcjNPS1puOVRWQ0dnUFl5Z1haRlBQQXpLdVg4dkJ4bE9JRkdVZWxFa3JOc2c1N2tDNEItc0JzY3ZKdHlNcWcwWGJzeU5JMFRhQ2I2aVMtbG5ablZIYmVKR1pxUW5Ma1QtLXJqT25CdG4zQkVJWm4yYndCY1IxOFdVbDJoYUU3SmtvQ29hb3FYUzllYU1WZGpZOWhH?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-18T09:10:12+00:00",
+      "category": "Google",
+      "excerpt": "Democratising Artificial Intelligence: The Swadeshi Model Of AI For All NDTV"
+    },
+    {
+      "title": "How Microsoft\u2019s New Saudi Cloud Region Powers AI Growth - Technology Magazine",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPbHhUTVdRaUZKZnN6RFcta2dCUHpLTDh1c0hsUGRaUU5CQm54QXp1OGlsSlA0cjdDNjdoS2ZVQVhJZUw5Q2NvVmdVMVR1QzBaaTdYYjNKT2hzWV82MERDZThUNFVkclgwaXNMNFktOW5pLWt6dDBzT0NXNm84ajhQOHp6X0UyVUw4cno0dlVtQTUwcm13?oc=5",
+      "source": "\"microsoft ai\" - Google News",
+      "published": "2026-02-18T09:08:23+00:00",
+      "category": "Microsoft",
+      "excerpt": "How Microsoft\u2019s New Saudi Cloud Region Powers AI Growth Technology Magazine"
+    },
+    {
+      "title": "Max Planck spin-off draws Epic Games to T\u00fcbingen - Max-Planck-Gesellschaft zur F\u00f6rderung der Wissenschaften",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOVXZNeWVXaEJjQVZVSkU2OURmN09LMmhWa21HenVPM3hOMk85dGJubGxFOU50dVB3LS02MnYta3V5ZWVxM3E5Und1ZFpOdU9CdnViMV9DOGh2eG9BbEpBNE4taTAtTVBvSVRnLU5XZHQ4YmNCOFlIQUw4QW1TMmE4NDBsemdyYV9ESkJ3T2owWmphQQ?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-18T09:03:39+00:00",
+      "category": "Google",
+      "excerpt": "Max Planck spin-off draws Epic Games to T\u00fcbingen Max-Planck-Gesellschaft zur F\u00f6rderung der Wissenschaften"
+    },
+    {
+      "title": "Max Planck spin-off draws Epic Games to T\u00fcbingen - Max-Planck-Gesellschaft zur F\u00f6rderung der Wissenschaften",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQTXBaVnJLN0x4RkRNMVFDVjNLR0prYzBDY090di02VE1IUXlpa3FnYWlGQ3EwNzl3YjJEMFZXVE5FaEpnVmZxWE53YzNGcXRtV25ubEhCLW9oenRtQVNGSVdLQXp4VFpfTm1DUTNOZkdnRmhrcm42a1NHUnB5UGFTTUx0bzA1ZERGeDdnOWhPRzMzWUNrVnZ6ek4wOA?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-18T09:03:39+00:00",
+      "category": "Google",
+      "excerpt": "Max Planck spin-off draws Epic Games to T\u00fcbingen Max-Planck-Gesellschaft zur F\u00f6rderung der Wissenschaften"
+    },
+    {
+      "title": "Artificial intelligence not a replacement for expertise: Airbus executive - The Economic Times",
+      "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQZGZDU2IxWTE2U0Vxbmtvc0lsRi0yY3ZKWFhxNGpXaE5HdGZic0ZZWE1iRXBkY0RINk4zMi1aSnd1dEZMTzV2Qlp6aUp0UmNMNE9laVdfaWg2WVlNSURrYmxnRGZESW5jREZiUXBiSkdqZy1OYzFKNEVoMHZMMjk5WVc5X0dJQjBZcEZlaU11Zm11TGdpcU0xVkFTMFlnZ1FzX3NMVGluTjUtemJxNUU2M2Vud29tcGw0Y2NjNWpZeFN2QW9nai1YcHp5OHFadXc1eDEwaWJZaVlEQVFVQVlYR0Q1YjhaWWZYbTBV0gHwAUFVX3lxTE9Jd09zUjdtSlUtSjV3d1pzS3FHRWZodUc5ZnRPeXlScU44MDFMZVItOUZra1prQzZxdUNNenpQOXBGT0dVZURXUHRhU3p1WWJIZGw5amNyS2VyR3NxYjNpNlR4djJsSE5lXzdZR3RpZXR6NkowdDk1MGVyYXd3dkZXQ0pQS3UyUXRsa3ZFOWE2akdvV0JjZVJCTGF6N2Y2UV9iWkNiQWdVMFZ6RW9US21hMzNGaE85bzRETEQ4ZHpBeEpBTVllVzVoaWJOdDhrVVFicTVjMXMyb1RFbW9Qa3F4RURhWHpadzlmbzNtenRQRQ?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-18T08:54:26+00:00",
+      "category": "Google",
+      "excerpt": "Artificial intelligence not a replacement for expertise: Airbus executive The Economic Times"
+    },
+    {
+      "title": "Microsoft Invests $50B in Global AI Access - Rediff MoneyWiz",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPSjctSVk2NUlueGtsWUFrUkwyMFQyNHU3YUw3bkhGZndBSkVocGZKREVzVGlXbDJqb2lfWG84T1dVYVE0T3FGbWp1QnMwY2tld2UzaDBrZUczU0QtdmJSQVJHckx3Uk0zTHRXWnF2UjZ5SHVvMDdYbHpBTGlwcFpXMXlHLXdCYTB2V2k3bnM5TGVXLTQ3TmtENdIBngFBVV95cUxNTnpNaTFUaGpyandfd1dmeTRsdmxuN29OWXpPNGxnOVdVZDVqWVJJY1p6VzNlcFB2c0Z4ZWdScko3ZEt4eU9VSnBTbF9XaUQtSUNjZDRXal9GdnBWcnpFNkxWaUdoVzZ4Smo3VFktd1VxaGdQdnRJa3prU3IyQ0laOGRINWd5d3B0WExIZjIxeUVBNmdkaVZQcDdzaXF4dw?oc=5",
+      "source": "\"microsoft ai\" - Google News",
+      "published": "2026-02-18T08:51:49+00:00",
+      "category": "Microsoft",
+      "excerpt": "Microsoft Invests $50B in Global AI Access Rediff MoneyWiz"
+    },
+    {
+      "title": "Microsoft Plans $50 Billion Investment To Expand AI In Global South - indica News",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPS3VBeXZ3MGk3a3ZkSS11ZGJOT1d3STdFSldaT1BJS0txYVMyVVRQblE0U045MkRjV2dSTkJLUV9jVzY4X2w3UnZxWEdkVWp0LWFkMXFUTU5ubEx3OTdLanV6RkNjSGk1ZWJRS2hHUl9jQzhrYXRYaXVJRmpZR09OQjBwYm5vZV9vcUpPb0FFV2l4WjVl?oc=5",
+      "source": "\"microsoft ai\" - Google News",
+      "published": "2026-02-18T08:43:03+00:00",
+      "category": "Microsoft",
+      "excerpt": "Microsoft Plans $50 Billion Investment To Expand AI In Global South indica News"
+    },
+    {
+      "title": "Stock markets are teetering today on the edge between artificial intelligence fears and signs of easing tensions between the US and Iran. Will Lagarde leave the ECB before the end of her term? - firstonline.info",
+      "url": "https://news.google.com/rss/articles/CBMi1gJBVV95cUxPQ0l1U05leGhrSUdZcUFtMjE5clBXemdWamlsSnpNMk56TmdDdVVSMFYtZVRDMXRnekVxdlBMVkRJRmY5TFlVN1dKMnNoUl9jN1R3ZmVQb1hSU292U1VSZFFpRTNVYjMxUWF0VlhqVW43cXd6OWJ1eklxaUFfX2hjSC16S0I2QU1kMmYyWEJ3QzVmVkJSR2lPZnJKaTlBZ1JqbjNtYXNySlRqWlFTZVZPUHByNWZRYTZjT0tBS0Z0VzNPY25zLVgwTkotR0pIc1F3OU5mVjh4S3FZR1pSU01ReGR1QzkyVy0xdjV3bDlxa296M3ByM0JGSVdMYVBCaHBtcGV2YnJSbUVGdWF5Rmw5eF82cHNkRXhRTXNRbWgzZ1VMSWdndnBLVnlsclBTenZfLWJZb1AyaWNPNmZwQ3dPa2xVRTN3ZlZUNUVYd0Y4VGttU0pBNVE?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-18T08:20:14+00:00",
+      "category": "Google",
+      "excerpt": "Stock markets are teetering today on the edge between artificial intelligence fears and signs of easing tensions between the US and Iran. Will Lagarde..."
+    },
+    {
+      "title": "Microsoft to invest $50 billion in Global South AI expansion by 2030, flags widening digital divide - Fortune India",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNLU1GZ2hnQ1NkS05ITmJva1Rnd3c2MTVYTGlNdG5sRHVPdFNVRkdWa2lITFBtVDJGSzl3cTM2SkJjTTFhb0Y4VXdSOWNNRlRNbFh6c1VEWXNCdmwyX3VpLWdfUS11MHFuUGU2SU5JekNSLW1mNTNNQi1TRERYN01NUlU2SVhMTktsTVl5NWMxZmpFZ0RINGZsZmpOU2RCbEhiRE42V3hsT000OERGcDdUODRPeWNLYkdLeFZsemw4ZFZseEc3UGhCd1M3SVk0SzUyQUlvSkhZam9oTVEx0gHqAUFVX3lxTE1oT2h6QVRXbGdPTWdndzZZWFhnUFgtWWw4STdDaVFvRGdQVlBnOFhjWmwtSjFJejd1UVBINE5TeTFBVDFuczhpYkdzZEI4NEtYbjloZlFUZjhWNGJfVlZZei1qMXlsM1N3dDBCOXJDRjBmdDBfQnhhWDBGeFhWUi05enotdVFkc1FEbTRoS2RneThhMWRPNFktZllVTXNPSmpHdlBraDI2VjFZeHAzWTM4RnZGRWNMZThidDEwd25JcFU1WWV5N2gwVk5RdmxoLWNoQ1VvOTFBQlNVOEpPeDVBQXJMN0xhMktRdw?oc=5",
+      "source": "\"microsoft ai\" - Google News",
+      "published": "2026-02-18T08:13:45+00:00",
+      "category": "Microsoft",
+      "excerpt": "Microsoft to invest $50 billion in Global South AI expansion by 2030, flags widening digital divide Fortune India"
+    },
     {
       "title": "Strategic leapfrogging: Moving past AI maturity models with diagnostic precision - imd.org",
       "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPaHcxUWhxcFVMZnJHNEFPQmY4cjFJR0xhd0VyM29YREN0NDk1OXRvU010MWd2VFVxVlhIQUVzUWctY0JMZV85Q1p6TWJXbUVaY2l1NmY5b3dNRzVHdjlwbzdOazNzWGR0WnZ0bzN3a0pOUkNOS251eWtsa2pqcGxpTFVRUHp3cUdqQ0lTZjVhTTNHY0ZJc1QtWlpTNXJic3hoeDJVMGlKYjRON1VWYnpCM1pZeUkwWXZDUkRWdERkNjI3d05oTUJQQmJibw?oc=5",
@@ -22,12 +350,28 @@
       "excerpt": "Why One AI Administrator Is Skeptical of AI Inside Higher Ed"
     },
     {
+      "title": "Redmond\u2019s global reach: Microsoft on pace for $50 billion AI investment in the Global South - domain-b.com",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPM3hJNWwwamxBcnQzbUltT3p4dmstaTE2REFYS0sxTnUxTmhNNEtSa2o4OW1LdE5FMFI4WjRCeU5LV0tMM2YyazdZc1RxSnlCZWRnOFVRczBXbmI2clc0N2pXaVUzWkFUQnlYUnpXUndybGktcVpELWdtaFF4VHRRZkVIVlkzUjA2ek04b2dnVFhqZGFNcXc?oc=5",
+      "source": "\"microsoft ai\" - Google News",
+      "published": "2026-02-18T08:00:31+00:00",
+      "category": "Microsoft",
+      "excerpt": "Redmond\u2019s global reach: Microsoft on pace for $50 billion AI investment in the Global South domain-b.com"
+    },
+    {
       "title": "Norway\u2019s oil fund reaps major savings through artificial intelligence - AMWatch",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFA2WWxra1Z4czFVTzE4T0dsUTJtazh6SS02Tnp1MmNMVWw5TWd1aVlUZW5tNFNMbHl2X1Itdk1qMURuSksxQlRoMHJDS19VQ1FSd3FnYWVqaFhIUQ?oc=5",
       "source": "artificial intelligence - Google News",
       "published": "2026-02-18T08:00:00+00:00",
       "category": "Google",
       "excerpt": "Norway\u2019s oil fund reaps major savings through artificial intelligence AMWatch"
+    },
+    {
+      "title": "ZAWYA-PRESSR: Microsoft and Ericsson bring enterprise-grade 5G laptop management to Windows 11 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQYnNSQkNBSVA3TDVtQllNRHZmdXFOS25rdEJMdnFkU3dSM0YtTldSSnl6WlZiNDJNWXRNVnlleTRjaVZUd2hEVVVXMkZ6REZadDhQLWxHQ3ZCaUlLQkJveXI1V0dSd3Z4NGVwejcxeHd2aURUMFFSck8wRVRZVmF4M2ZBXzZ6SWQ5aVVLS2VwWXg1VnRBZ3ZOQWdvTEgxYTJpMWVVX0NEYWtlWEVMeHZ5RGx0NndNVnpxQnIyMGd5QW5rMk5YYjYtUVFUOHdzc01KWjhjeDRzbVJKQ29vSjlqYkNGR2YycVZLNFJqYnotTHd5TW1Eb1JrLUxKdlFFZw?oc=5",
+      "source": "\"microsoft ai\" - Google News",
+      "published": "2026-02-18T07:59:00+00:00",
+      "category": "Microsoft",
+      "excerpt": "ZAWYA-PRESSR: Microsoft and Ericsson bring enterprise-grade 5G laptop management to Windows 11 TradingView"
     },
     {
       "title": "Microsoft warns about growing global AI divide as it pledges $50 billion for Global South | Business News - Hindustan Times",
@@ -60,6 +404,14 @@
       "published": "2026-02-18T07:28:56+00:00",
       "category": "Google",
       "excerpt": "From automated farm tractors to exam paper grading, AI boosts efficiency for some in India WRAL"
+    },
+    {
+      "title": "Ireland watchdog opens probe into sexual AI imagery from Grok chatbot - RFI",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNVkJycWxJWEw5NFRxTWFENmRSbi14TVBBOTBQejRZem5PU2JzREwwMHpSU1FNUURVNkV4UGFjajd3RHl4R251NHZTQnBUVm5iZ0k3d1IzdTFMSTVQR1dVTWJQamhveXNKdXNxaDhsX09uTU15N2E5UkxhcnFueWFYNU1FbnRiOEoxQUdJRVdPLTAyMHVVQmVnR2NOWEp5NVhnTE1yUzBOUFl0VUtRVFpTMzZHRnU?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-18T07:14:50+00:00",
+      "category": "Google",
+      "excerpt": "Ireland watchdog opens probe into sexual AI imagery from Grok chatbot RFI"
     },
     {
       "title": "'India wants data sovereignty and we're delivering it': Microsoft's Puneet Chandok on the $17.5 billion I - Times of India",
@@ -140,6 +492,14 @@
       "published": "2026-02-18T06:33:23+00:00",
       "category": "Microsoft",
       "excerpt": "Microsoft says it is on pace to invest $50 billion in 'Global South' AI push MSN"
+    },
+    {
+      "title": "How Articul8 CEO Arun Subramaniyan Moved From Aerospace To Artificial Intelligence - NDTV",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQMlhQOXJoaVRhbjh5dlR2b2xIS2hiNFlJdlprRlVsMWNfb295SlhPeDlPMGZfSWZHaXJ0ZFZudnE0OGh4R3BnQkwyWFRVNGhVUHN4Z09VU3pjemFjQ1pGWVY1LTBVazlQTVk1eFkzOEJ6ZHJCeFBseXhuVUVjQnZsYTJEcHFnTVJEaVRyOVhWQ3A4WDRzQlY5OXVyTTBIU0tFLVdYM0VQSFNQVG9aSVl0QjZKOGlMRVFzRHpodEozNGNDQnN0SHhYTjAyOS1kNlhyem9zNtIB3AFBVV95cUxOWno1cVVQaXc0V3Z5WkFYTU5vdmJFb0RlZURJVGxVSjV3enVpX2ZPUXZEdXJLeEZlRHZ6QjRPZTU4NWVYR2xObHNLbTgxYVBuZFdPbGlkZk8yYUFDS0pERnM4VElTQjUtYWNnSGZvc05VYmVvV1VoSFZsOGVtbG9HMlI0OEx2d0tQaUxKenVnaHIwNWFIeklXcms3dW56c2Z2bEh5T3dBd1gtNHZ0aldKMk9ZOW9NUFpuQS1qZ0hBMWY2Q3pESVJEOG1HOE4wc0lJQzJUZG5yRll4bkJN?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-18T06:28:20+00:00",
+      "category": "Google",
+      "excerpt": "How Articul8 CEO Arun Subramaniyan Moved From Aerospace To Artificial Intelligence NDTV"
     },
     {
       "title": "Why Trump tried to kill this Utah bill - Deseret News",
@@ -444,366 +804,6 @@
       "published": "2026-02-18T00:18:01+00:00",
       "category": "Google",
       "excerpt": "Private Software Firms Beat AI Disruption Fears With Early Earnings PYMNTS.com"
-    },
-    {
-      "title": "Seton Hall introduces advisory council to shape ethical AI policy, classroom guidance - The Setonian",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOVEpybjlZUVRxN0NyMU91RWhKaTlDSGRpWmZiUnNyc3VLcWt3cE1PVmZpMjQtbW9yd1ZzUktUeEJ0UzVMaVhmVG5DaEROTEtaY01CekJxLUZXR2JEcTVsckViLUM4NndIakZUNzNoQ0E1bTlhZ1pVdmgwQ3NEbkMyak1yOHpoaFE2dmJaVUs0bmRCWG9NM0NDTWw1N1AxVnlGUTFVaG5UUjNSUQ?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-18T00:00:00+00:00",
-      "category": "Google",
-      "excerpt": "Seton Hall introduces advisory council to shape ethical AI policy, classroom guidance The Setonian"
-    },
-    {
-      "title": "Evening Edition: AI Warfare Is Here, The Pentagon Considers Switching Models - FOX News Radio",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNd2l2Sl81NWYxa2RLVzRCNktBdHJwUWRVN19MTWhnZWZEZE5MNjNsMmNybVRjZ2Z4bnNESDVvZVlLczRiMWttTkpKZ1lQTEpCQzUzZWluczR3UVZHUFI1UnZiYU5WUmRmcmxBWUdzXzlOMlBaYnUwaVpHQ1c3OWgxTFFaOExEcjI1WmE1QWF6UVk2UU5YWkVnekxvZm5VVG5OSW13cDBSZ2NLWUpzYTR4OWd3?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T23:55:03+00:00",
-      "category": "Google",
-      "excerpt": "Evening Edition: AI Warfare Is Here, The Pentagon Considers Switching Models FOX News Radio"
-    },
-    {
-      "title": "Artificial Intelligence: Remaking the AMS Annual Meetings. Part 2. - AMS Headlines",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQUVBrWDlyb3g0eGNfRVdVRjdaTm5ZNWFCMFM2Q3NpQUNRTkpjMmRsY2VmTW5GR1JLa0JBdEVMSmhaQUlsM1hxeUhWc012RE42bjlZMmNBNE85Z3BtUmlnSHNxRnBYbzZYQnk5TFlMZFRaeWZ2cFM4Ujh4RDRlRENkai1DSHJqUS03d2ZMMS1rRW85Q0VOcmhWYjMzRTVvMXVsRjNNMFl3RjQ?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T23:51:43+00:00",
-      "category": "Google",
-      "excerpt": "Artificial Intelligence: Remaking the AMS Annual Meetings. Part 2. AMS Headlines"
-    },
-    {
-      "title": "More Pushback on AI and Interest Rates - National Review",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQY2RoZ28zbU9mYW9uV2VJOVRyaHlvT0hGMDhWVGdnS29uV3M0c0RRQ3AwY0F2OG1ibHJld3hyZGZFcHc4Wm12LXUyTmFOQkxnRkZlSUxwaFpxWEU4dHprNF95MkdXcUtvWGFuVkg3bG11MkE4OGxFZ2FtRFZuZDZfUTFMSdIBiAFBVV95cUxNR2NudjBMRlozWmtnSjdBMEFDRHlXT2gzSVgtT2MzVldGSTM2SGJIRko5a3hxWkJySWMwMDNuOTkzZVhjOHBCNzNYSDBueXhxVUVrUTNacWNjOGp5bmRUSkY1Qmpod0M2NkR0eHlCYzZZeDA1VG5yNDBUZHFDcUc0aGxsdkRUVGx4?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T23:47:22+00:00",
-      "category": "Google",
-      "excerpt": "More Pushback on AI and Interest Rates National Review"
-    },
-    {
-      "title": "AI toy company Miko adds an AI off switch after political pressure - NBC News",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQS2E1TDZIREpFemdqbHRFRjB5OEJsU25obV9YTmZGN05FbVhNTUFXTGgwVWNQTG80UWJvSUkzRjJyLXpZTDkzMzFXYnhwWl9yUnc1SnZFejVPQ1UwRnMzcVc2LTVUYjI4bXBTZG9CX3F2Q1lPdmZWbC1xU3E4VGlveEtfZjM1aDZjNF9nUnFzMUZTWVBlRXFjYURpRTJyaDVZdE5fSg?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T23:40:31+00:00",
-      "category": "Google",
-      "excerpt": "AI toy company Miko adds an AI off switch after political pressure NBC News"
-    },
-    {
-      "title": "GenAI 101: IU\u2019s Artificial Intelligence Training Course - WFHB",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBZNDJuUEN4NDlLS2ZDZ1lFbmNXcDRha3k1dTdSZGRXVTlBTXB4MU9oT045RG1ZUXpFU05yVnBGd0JEYzBucUhXRlgwbk9CV051aFZCb0h5QzhfdW0zTEh3RTlKcHNUVEExOHBmWm9CZVpua3ZPZTFHY2lTTQ?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T23:38:23+00:00",
-      "category": "Google",
-      "excerpt": "GenAI 101: IU\u2019s Artificial Intelligence Training Course WFHB"
-    },
-    {
-      "title": "Apple Bets on AI Wearables to Lock in iPhone Users - PYMNTS.com",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPcDZFMUc3Q1MtX0FvYkk1TUdhTjJocFVQNWo0cEN5U3hBU21ZV2taeEw5WG5kb0puMTgwWS1NaHVkeWh3ekgzMVBUclJSYnpwWE9SVWRvUkw4YkIzcWVVQ3JrYk0zQTZzYldMUldKMXlsanRDQXRtMWpXNDNfSk9TQlU0ZElBdTFHamRtbWZKUlhwX2l2SDgwMmpn?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T23:34:42+00:00",
-      "category": "Google",
-      "excerpt": "Apple Bets on AI Wearables to Lock in iPhone Users PYMNTS.com"
-    },
-    {
-      "title": "Acting with urgency to address the growing AI divide - The Official Microsoft Blog",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQOG9fTzA1aTZ4ZlJlVERDNnI0SWtvVVRJWjNnU2JnWUpyMm5sWEhOWUVGNDFJaXZ5YzI4VnFNN1o4Um15NTFSam1QRHBjbHpycjZzM2FUWXVMWnNZRzVXck5kWXNRUG80RlBuVTVINURrY1dZWmJvMHRnTzdVQ0g3YUNWMHRTc2hVX0k2ZTF6SnZTZ2VzUFhYbGVoNlRSOEJfWEhPU3pmSlhMUQ?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T23:33:39+00:00",
-      "category": "Google",
-      "excerpt": "Acting with urgency to address the growing AI divide The Official Microsoft Blog"
-    },
-    {
-      "title": "Sims Primed for Growth in Artificial Intelligence - Morningstar",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPRDRJZzlQT3p0b3RuR1ZLS0NjRzdRaTZzcXpTOHBBQXplSmNIbUZVSkROZ2hIM1dZa19oUnBHcXFMYkVyRU5BR2RWNDZ3bEZ5R0tyNHhYQ251Rmx3NjNFV25FRkhMbGZjM2lkSGVDaDBxcjJObk9CNG9EclBzdUlUdERjTnRrT0xFeEZISUpCRWU0YmF5U3NnYW90LVM1NDdOZDQ0?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T23:28:13+00:00",
-      "category": "Google",
-      "excerpt": "Sims Primed for Growth in Artificial Intelligence Morningstar"
-    },
-    {
-      "title": "ABAC Bainbridge hosts \u2018Introduction to Artificial Intelligence\u2019 workshop - BainbridgeGA.com",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOR1BfdEhRbmZHYndwWnNGVVZnekRLQmlkWVdFUTBkUHNiSTJRZG1tNndkSXJxeV9JMnFXX2tMTjFERjZreGdka2xSRkd3ekZJY2FyLVYyTzdlYXpPbDVHS3JDSWtxamRPSmRNODVhLWxxYTdtUDVOMGlGZTdnYUJVTHgxbkFMaVlRSWphSXNMMWxKNE9QVG4zOTRmUmpxMTIwQTlGWGRNMA?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T23:25:55+00:00",
-      "category": "Google",
-      "excerpt": "ABAC Bainbridge hosts \u2018Introduction to Artificial Intelligence\u2019 workshop BainbridgeGA.com"
-    },
-    {
-      "title": "There\u2019s a New Term for Workers Freaking Out Over Being Replaced by AI - Gizmodo",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQUzBFSGdEVjBPUU5kcXUtN3JBQ045X2g1Q1ZKR1pYdWhUWHk0aG1ZbnU0X1M4bElzUnE3eXdTY3NkM0ZRMEl4ZWUtUXVwcTEwVEI1bm9nUEQ2X1NZTEVLQU9sc0o0c1ZxaWdDZHdSaElMVXNzSkxOc0hiTUlSdTBxTkhWY0JyU2F1V2RpTXNFMXoyT21wUXU1TlJrWTRaQ0hH?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T23:20:28+00:00",
-      "category": "Google",
-      "excerpt": "There\u2019s a New Term for Workers Freaking Out Over Being Replaced by AI Gizmodo"
-    },
-    {
-      "title": "Beaver Valley could become center of AI infrastructure for region - CBS News",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFA5azJNWlRBejNhVkdIYlVtQU5GQnJtUGlqd1lRLWxNNkdKdXR5YV9VTTg1WFVVRGZfM0R2UUpBSjJtUjlxUVFHSlczblRBWW5IM1lfVlFHRl83MDR1anBtUmYwMGNlSWVyR0p0cElrLTQyY2pUSWUtUVBPQXU?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T23:18:00+00:00",
-      "category": "Google",
-      "excerpt": "Beaver Valley could become center of AI infrastructure for region CBS News"
-    },
-    {
-      "title": "Artificial Intelligence Now Designs Optimal Training Data For Language Models - Quantum Zeitgeist",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNX0pqdTRBd3hTbzJoSUlERFNEWFlFZzVRMG9yMmVkVkJpV3BpbzV5eEM5UnpuZWUxR3gyMFZVQm04RlpvYTR4T25RdVVKNGpqeHYyX2tKMDlEc3k3OUhHQktYbFo1Mm9BeENCY2I4MjZpa1liMFE0dVRSZHhPaEgtbUFYT1lmemRUd0NhLU1jWFMwY2xsMVJ3Sjd3?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T22:54:50+00:00",
-      "category": "Google",
-      "excerpt": "Artificial Intelligence Now Designs Optimal Training Data For Language Models Quantum Zeitgeist"
-    },
-    {
-      "title": "USF's new president faces challenges including new football stadium, artificial intelligence - FOX 13 Tampa Bay",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPbkx4aXBSQmhkOGRiblVmNGJTTE9VWVhDQ19EbW1qam1lSUNBRVlxc09RZFYwMk0wcXpDaDRmbUpTRDBfdmFRRUtmeFBCenBVVG0zcmtTWjNTLWJVN0Z1S3pLdzN6QWJiVm5ONjYtNHFDeDRpSDZ0ZnpLVWM0aEdYTnkwNWNhQ1dkbWM5b0VwM0pVWkcyZE1kbkxzVFRCM1BFWk1aaF9aWG5HVzlYTEZkTENFR29yZnRaVk1aYnpR0gHDAUFVX3lxTFBTamE5T2dueWVFNWFrVDhIMTNRX0JCWWVSZ3lIaHlMblhUZTVlOHJWTGdjV2c3S0RQNGVrQkdMaHc4RkxsU3U4ekxPenNILUdsTlBaemNmY3VkVnNUalE5a3J4dDYyRDhyOHZhS2xSVzRwQ3VhNnhRbEdCRlItN3ZscWRKdXRULWR5SV80cUwyYzJ5cFJaOFMyaEFwSkotUVBWVzA1Sl9JQ0VfeThwLXg2VWt6c0xIM1h4aXlTNEYwTXpqWQ?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T22:54:14+00:00",
-      "category": "Google",
-      "excerpt": "USF's new president faces challenges including new football stadium, artificial intelligence FOX 13 Tampa Bay"
-    },
-    {
-      "title": "When Artificial Intelligence Discriminates: Employer Compliance in the Rise of AI Hiring (US) - The National Law Review",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQQTU2c09wTUFtMzVjaV9DWWREVlQtckg5WERyZnp2S2Q1eU9yLWpYRHp2SGttWTFTUzVxcWZtakRBcFZkMW9wTUJlaXRLN0UzTjdNVFJPZGY5UEk1bU9OdklGbENUYmwyVVlQNHZET19JTkRMMm11bHJfYmItMkZjbXBpV1VydEZfeTJELVZ4dlczR3JZQ2ZQX3hFRjlxWlNmMjFCUVFZVklJZ0JmdnAyLTRjd9IBuAFBVV95cUxQXzQtRTk1Q1h5X0xJSFEwRHAyRUJ5aWRfSkVHdXU1d0JCanBlS2pTSjk0aXhwUTBpZDVoN2piQzZMNTdoOThzTVRHMmFVMFpSSExoNE1zVTV0djlKZW5icTVOYUhVdlhnSTYzTzMwQ2hLZTA0SHhXSG1VY3FXY1hqREJha2E5VWw0Qy1JUG1fc1BLdWdvTlBfak1rZURmMFJZdUN1eVVOTWhjNnV0eHVOcVBfZ3FhN1df?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T22:37:47+00:00",
-      "category": "Google",
-      "excerpt": "When Artificial Intelligence Discriminates: Employer Compliance in the Rise of AI Hiring (US) The National Law Review"
-    },
-    {
-      "title": "The $37.5 Billion AI Bill: Microsoft Faces Investor Reckoning Over Sky-High Spending - FinancialContent",
-      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQeG16aFU5ZGhSQzBnVnBMN1hZQUFpTHRCQVM1NEVIUzRDd0VtZWRCVXdWSC1PeGZoYjZBQ0ZEY3pTNWpnSnhJb3lpZFpacnQ4aGhVNXlMYXVvZ3FrNXhCQkxSNTBpS3Z4UHBlRVkxYUdMUlliejlvSlo2MFNtNGRuV05VWVdSck9zSTdHX2tKQ0IxdENvYnpSVHlYNW5BMUVsWXVzQm9WNDJhS0JCcVlVZDhiRENOUFg5QVJWNkpmVFppeWJtcVFEb1RsTDVqLUxKTW12bUoxalVxX0stRzdNSEw5VmJOU2ZTbnc?oc=5",
-      "source": "\"microsoft ai\" - Google News",
-      "published": "2026-02-17T22:23:00+00:00",
-      "category": "Microsoft",
-      "excerpt": "The $37.5 Billion AI Bill: Microsoft Faces Investor Reckoning Over Sky-High Spending FinancialContent"
-    },
-    {
-      "title": "MSFT Stock Eyes $350 If Critical Support Breaks, Amid Microsoft\u2019s AI Cost Concerns - FXLeaders",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxONmgwdVcza2NrVUFLN3JGbW9kNV9DLS1yckJOYkt2S0h1eXI2VHBUN2t5T3RiZHpZLUhiQkxwVUl1dS1UVEFEZHh2ejd5OG5ta3VRcG5GYi1nTEg2UVl3cGlkWlhBQzM3RFROdmZBMExVOXExWG1TVmlOQlZ1eEJTaG1iLXN1YUFuMTdBb1NmNGM1SVQ4YUg5dWl5dmNwR0RWZWdfUFlTLWthNWxGQnVtUHZRSHdhdkxUZWg2dV91TQ?oc=5",
-      "source": "\"microsoft ai\" - Google News",
-      "published": "2026-02-17T22:13:24+00:00",
-      "category": "Microsoft",
-      "excerpt": "MSFT Stock Eyes $350 If Critical Support Breaks, Amid Microsoft\u2019s AI Cost Concerns FXLeaders"
-    },
-    {
-      "title": "When Artificial Intelligence Discriminates: Employer Compliance in the Rise of AI Hiring (US) - Employment Law Worldview",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPT2tqTTl0cDZ0REJQRmZVT1VzXzdkLWhlWnRZaEVvM28xeUwwd3V0NUNiUlNKTHZzbWNQMGY1M1JoUm8xXzh0OVNueHRwZS03Z2ZkMk5lbjQ5dG9PSTRaWG9tODR6aGFRNkdKUksxV2VRamdwamxLVk9jeHktS0NfWDU2aTBCcnV4UExrMDZwRXlCOEtpalFSLXZwYmtZLTV0X0RTRS04SjJYbkpFb3Y3YXpLODRaT2d0QXc1YS1USF9VcTgzRXRhamR3?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T22:09:26+00:00",
-      "category": "Google",
-      "excerpt": "When Artificial Intelligence Discriminates: Employer Compliance in the Rise of AI Hiring (US) Employment Law Worldview"
-    },
-    {
-      "title": "Oklahoma lawmakers eye \u2018guardrails\u2019 for use of AI-generated media - Oklahoma Voice",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOQnlVcEJGNERPamFRM202ZXd2LVhfdUc3WTlHaTRSOXRFZEZPbGY2aG1ac1I0Q19EdllhdHp4RTBkeWREdDA0bC04WHBySC1OcUlIcUl4MnJ1WmRXdEVJQ1Q1Rjg3ZjZscUdRTGt0UXRORDdmalB1bkk5MnRXZkxVaTJoQ1Y1WHdvaXoyWmdvVTJwRFduMlRCYnJVaVZVQQ?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T22:09:02+00:00",
-      "category": "Google",
-      "excerpt": "Oklahoma lawmakers eye \u2018guardrails\u2019 for use of AI-generated media Oklahoma Voice"
-    },
-    {
-      "title": "In New Delhi, India throws a pro-AI party - Politico",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPeE9WNmhzYktzVXRfdlk0MV9HMW5CODdUTDhiMk1acFpGZUh6NEQwTDlySl9ablNVUVM2MXFwQjRETE1mSUpNMEpiYVhpTkR2dEh0bHJOLTZnRjNVcjZNY3BMRF9wemVTNWtZbHdvaGFDQXVJcnRrODR4TWpwNmxNbTAxUE50aDNDdlB3VFRGbV9zSDdwbzBIclFvcmpLSjZUTHBDZWE1b1dGQ1VKazJRR2R6QmlEcWx0X3c?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T22:07:02+00:00",
-      "category": "Google",
-      "excerpt": "In New Delhi, India throws a pro-AI party Politico"
-    },
-    {
-      "title": "Palo Alto to acquire Israeli startup Koi for agentic AI security - Network World",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOSW5uQWdFcVM3S0RVQm9PYWh2M0FaWWZkSlAwQTZSSGNoaXMxWm9maHRDbEIwYjJGRzdPVzhsc1JpZDdmblNjeEdzS2lyZG9WaUt3Q3U4MWM0cU1IX1ZwZVo4eXdLUUltTFBCQU1VeGI1YS0xdHk4bUNRamJwQmJUWU5FWEZ1VjVLRE95TFR0SmliX2ZjdWhiRHJyVFhzazRIZG1ncVV6aWd3Z2RMZHFpNWlzSC0?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T22:05:41+00:00",
-      "category": "Google",
-      "excerpt": "Palo Alto to acquire Israeli startup Koi for agentic AI security Network World"
-    },
-    {
-      "title": "Your favorite developer's favorite development tool just got an AI upgrade &mdash; and it's 90% off - Boing Boing",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPc0VsRnVpeVRJWnFxNWpKTHJ3dk5mWENsUTNKaWRXVWZaWjVYOV96NWNRM2hDa1BTMEJFb3EwRnlZeTVxRkZMYy1ZMHBwVVBvdGFpanlqMTcza3hMOTZFTWIwX1F5dlZxNTZQV3lueTF2Zk5mZnQwS0NZN05wZ1BTMXBqMnRkUExQU1I5SVJkd09tT1dnVEdael9YeTJ5YXpLQ3RhcS1ZZmFobU1ORnQ3SWd6OVJ0aV9TM1lSeEdaR3V3Z2p1YnfSAcsBQVVfeXFMTjVGVjBPMmJ4RXM3M080U2w1X1doaGlickVzRnZZLVlOQkJqVnJZVEpQcURoMWxpYW52cXdjZnctQW1yVWMzbU40c25HQkdDN2FwRW1sdVdMMmtVRVNWZFhKT2FWdmVGVFY0dXV3OXp0djZkYW45T2o0aDJaYUFBaFFlbHdFRmxkVDd3VlBqY1V6SUgzVXJKNy00b012YVBGMmk3bG5LMjJyQnFnTDhzNjZEWG45VDdaNTR0RDQ2Rjg0LUZnYkZIVGtkRG8?oc=5",
-      "source": "\"microsoft ai\" - Google News",
-      "published": "2026-02-17T22:00:00+00:00",
-      "category": "Microsoft",
-      "excerpt": "Your favorite developer's favorite development tool just got an AI upgrade \u2014 and it's 90% off Boing Boing"
-    },
-    {
-      "title": "Lam Research opens new Boise facility to support artificial intelligence growth - KTVB",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxONDdxcERMQ3QxSjRvVFlpSWhzMkNXQXFVdkJHVHg5YkktLVc4b2taMTROOE41ZEV3Q215Ukcxb3AxWTIyWVBYWDVScDhUc211SGVyVnlKWmRzcGptTUhEWG5aQm5TR1o1TjBQU2lGMHJZUG1ScG10clplaDVGUHhUelNEZHpKT2FPUUlGQ2hZRFNLSGFiTEJEblV4VnFNNVlRQjVxRUZLY2dYbHVXZ1R5aDRKUlc4bWFKcUhSWEE0RjVYR1N6T0tHcElydUlmLUNjUGhJdF8tdXBkd21IZ1E?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T21:53:00+00:00",
-      "category": "Google",
-      "excerpt": "Lam Research opens new Boise facility to support artificial intelligence growth KTVB"
-    },
-    {
-      "title": "AI Impact on Corporate Growth Seen as Limited Outside Big Tech - Bloomberg",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQdk1SM29XYVdLWFAzOVdSbkNMRXFMRV9WNXg0bnAxTWZndFNMZVdJVFJfZm50UjN4Zk1aWnFKSFVFRDZSTHJnOHhSa0ppUXlkNG40Y1ktU2dHbVRuQmtmLUF2NTBVSlhpMnZVVjRPSjVpTndfc25MOWZHN05WXzAtSFdhT3JzeXFTbXJkZHJOc0ktWEtrUEtrRTIyYW1GUzF1R0pYcGMxSVRmcmxnZ3ZpQ1dWYw?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T21:50:09+00:00",
-      "category": "Google",
-      "excerpt": "AI Impact on Corporate Growth Seen as Limited Outside Big Tech Bloomberg"
-    },
-    {
-      "title": "Artificial intelligence making video production more efficient - KFYR-TV",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOOEg3eGJua1RaTVBBc3dLaXZiZTlJeV93Wk8xXy0zd2FDNFZ1bWFadDZNdC1yRjExQTBOamV3ZFdueXNtNVlDUW9RNzRWUVFxMUpuMlpOUk94ODdVRVowX1gxYmFTY1FEeHhxRFMtQ3Zfa2QxdXdzVk9KTFRBVDRqMm1YSU5TQTd1YlY4RlIwQTlVZzdraElleTVEYzltZ9IBsgFBVV95cUxNMDV6NlNyVi03dFRGLVE4TXdUakZPNXRVek9Ld2VSUmFWOGVfaTRwdzdVUEgteXVoalNDSjJUVHlaWFFlN3FCSXBJYTc1TlpET0l4ZzBQeW5MLTJJVWxIel9vTGdNZnBtMXF4MFNFNkFwaFF0MC16eGtzcmlOXzd6UGZIQ25nMlducE9BYUdqUDhISDFVYjF2U2NBODJrYk9lSEF4bS02dnN1OU8wRGQ0cjlB?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T21:48:00+00:00",
-      "category": "Google",
-      "excerpt": "Artificial intelligence making video production more efficient KFYR-TV"
-    },
-    {
-      "title": "Artificial Intelligence Tracks Arm Movements With A Single Camera For Clinical Assessments - Quantum Zeitgeist",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQeEdPLUVyZnZWZFJ4NGY3X245Q1pNTkQwUkJFaXVCeFFZX0w2Tno1WjRWWTNHQVROLTNiX0xJZ0dUbWR5RmNoZ2ZXTnVOSkMtVXFHWUtBaFF4MndXdzhwWGFkWDdveEozRmpvYXVfN3h1ZndyN2RpOUxmcjVFbTBTV01NQjEtSXVn?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T21:42:50+00:00",
-      "category": "Google",
-      "excerpt": "Artificial Intelligence Tracks Arm Movements With A Single Camera For Clinical Assessments Quantum Zeitgeist"
-    },
-    {
-      "title": "ABAC Bainbridge to host \u2018Introduction to Artificial Intelligence\u2019 workshop - The Post-Searchlight",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPdDMtMl9rQUE3eV80WkdYTm9rZEZCUFlFNzRaNFRtcXVnbnBiUkljOFZnd2dVNHZxUFZJVVpDWUdaWjJQT1AzUzdjZllKMGs1X3ZGRnExdVRuWTdoUU9YaWNyalVzQkFkVW81ZExxaV9VSWpmZXFOZVhtS1h3cUtiaDFGVVczd3Vl?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T21:41:14+00:00",
-      "category": "Google",
-      "excerpt": "ABAC Bainbridge to host \u2018Introduction to Artificial Intelligence\u2019 workshop The Post-Searchlight"
-    },
-    {
-      "title": "How Will Courts Address Potential Liability Against AI Companies? - The National Law Review",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUUxxdE91X2FTUUd5Tmx2ajFfVjVNNUlQdWpQMUVfZ0RvcDdYVFZ6b0U2enVpYjVoS1M5OWxZZmlxSlZ2UnBiMXR5eDV3eGFCdXlIM2ZrOHBNTnpmX19LdkpZazM2aVR6cUVKTHByUkpjb2l6X0hIU3ZBcWFqbFNCRWNOSlE4Zm1qMTU2UjNYMjduTjRDRk5FaHJZdzV1d9IBowFBVV95cUxQZElQQUlLMHJOYkYwc3hMVVJnak9TMC1QYXlpVC0tUG5DUGJDa0RwU2JYTm5sQl9mYnhMTDh5Q1hoa2gwM3FnOE9vWFRJRUx6cUZCYkhvNlRDUVpfcXpybGltSkIzTUl4SW1FRlFxLTNhX3poLVpRSjlCRlBQelRfOHJIc3hRYWlwTjZ6ejFCQnRPZExoWjFSRUxSX1REcmpJbVJ3?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T21:34:13+00:00",
-      "category": "Google",
-      "excerpt": "How Will Courts Address Potential Liability Against AI Companies? The National Law Review"
-    },
-    {
-      "title": "SEC chair considers \u2018innovation exemption\u2019 for in-house AI testing - FedScoop",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBMVUVpT0ExWHBrYzRqNjU3QWNEdHItMXpxeFczdk9taHRlX25ndDVibmMxeldrQzFOMlpvMVJYc2RmTVhTZmhUWmJKTGI0YjhZbzdKR1JGWi1ld2owYnYw?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T21:28:13+00:00",
-      "category": "Google",
-      "excerpt": "SEC chair considers \u2018innovation exemption\u2019 for in-house AI testing FedScoop"
-    },
-    {
-      "title": "Most Americans say AI will reduce the number of jobs in the U.S. - YouGov",
-      "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxOdU9QNzNDbmV2QlIxYkZid0xZS052U05iU2dsaEVjcFd2Sk1ZVWpEM2VNN0g1SGk0d0kyRFRiaTQ1Mm5laERLWmtUUlNuQl9aaU5nQ1VNOFo2VUNyUzhnQXMycHZPYXZaVFlSbXpRMnluYWdIX2R3NWhVM1BGT2xtZWJ4UlNtVHVBX3RaSDBzc2tUTVNvVHlRdjFPak50MUFtZ0t2QnJIWFB3T2RhYUQyak1HSURpVkVldHdKeUtHbG1KMlZYdzQ3NVE1bTVBRXlGZWtvdm5Yb0pDMlM1dlhSejhqMl9SM2pEUi1feXlQY04xTEQtQ3o0MUNpdGE5STM4cXBObU9jR1EyTVF5T3ZZ?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T21:06:00+00:00",
-      "category": "Google",
-      "excerpt": "Most Americans say AI will reduce the number of jobs in the U.S. YouGov"
-    },
-    {
-      "title": "AI-powered MRI evaluations predict STEMI outcomes better than existing risk scores - Cardiovascular Business",
-      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPYUJ2WHpyM3BhVWt6WjdLelNHQ0hlTTZMVjdCMk53S2R3d3hJTDVOUVk1eXpnYlBTQkJkU3NUem1tZ2h2VG9YdVJ1NWNXaElXZkdWRURkRU1hMU5HcDNZaEN0SzVyWkpPeGUtR1RqTld1VndYMm9yLWlocVZwQzE1ck43SG5kTEh5Z28xSDI3dlJzSkxZNGdWeUJTdjc0S0RMTXQ2andUeHc4MmFvX0Mxbk03dTdKZ3FrazV5U1I4ZWJ0TGlDS0E5OVdZUFdsZ2s4YmZnQ3NiNnFBTE0?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T21:04:30+00:00",
-      "category": "Google",
-      "excerpt": "AI-powered MRI evaluations predict STEMI outcomes better than existing risk scores Cardiovascular Business"
-    },
-    {
-      "title": "Strengthening IBM\u2019s proven enterprise software for the AI era - IBM",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOZDZQQUhQQmZZSkdKSFItVGowT1B1bHhVSGkyS1F4RmNldWVnZ0tPSzEzaHBXX2UwSmxLcVhKVVBtV0lTOTc0ak9OcDlFUER3aDJIREhHMVR2NWNNQmRmVndiRlBqWmRJeFBXZFZEazY5azVocjN2Q0haNno0WVFfdFZva3pDSWU5TVNMUm9YbnRmX0o5UjQ5QjFaTWNjNTg?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T20:58:50+00:00",
-      "category": "Google",
-      "excerpt": "Strengthening IBM\u2019s proven enterprise software for the AI era IBM"
-    },
-    {
-      "title": "Swedish AI browser Strawberry is now available to everyone - Computerworld",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUVI3SlNaZXloTFZqTjFldXNwMEtfdGN3dElEZ0Z2ZVE5UGtRWUZ5ZlVzcUxkb2tBdGtGVnZrNmxLQXBJbm15U3JZbTRLUXotcmZCWVhPTnMtb2pXbnkwN2gzRUliZWh5bFNNWnJxVlFVWVQ2dlhRVjB2Q3JDSXlZUjZQNlEtSkFtU3N5XzVoZ3RKRDBlcUlqMjF3YVhkOXI5dW1XVnZSQW5QZw?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T20:55:49+00:00",
-      "category": "Google",
-      "excerpt": "Swedish AI browser Strawberry is now available to everyone Computerworld"
-    },
-    {
-      "title": "Race for AI is making Hindenburg-style disaster \u2018a real risk\u2019, says leading expert - The Guardian",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPTzlRZVBSWkN2bG1hdGdjS19iUnFpR2thd1dxUkdsbXVEV0xmWS1TMkJBckgzU01wT3o3UVgxTl9tR1JyX3FDS09NTEFPVGhlR3liLUQtWnFmRHlZRTZ5dmhiak9wdko5ZXQ2Mk1DZDRodGgzNTF1TnNyRGJCeW5Zc2RETFZNWFVMZ0c4SGFXZUU3dDQ1M2dYLXN1MHlfajd0YzcyQVU0clI0NmU1ckJnRVlB?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T20:47:00+00:00",
-      "category": "Google",
-      "excerpt": "Race for AI is making Hindenburg-style disaster \u2018a real risk\u2019, says leading expert The Guardian"
-    },
-    {
-      "title": "U.S. Vice President Vance: I worry about companies using artificial intelligence to surveil Americans - marketscreener.com",
-      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOU0tQZGZiUTdjUXNiMFVtUGgzNXB3eE1xeERrZ19WdFBRcTg4VTFOcGNzUDdTSnEwRVlkR2JsZWs1Ui1nbkJIRUFFSC1mOEM1Ti1Uc0VDQ3ZTdDYzQ2FQRTBiVXY5bXFEbzJsUldMTldqQmJlcDBfQmtxVGtpT2l2ZjNSczdxNWlGRnJ3NU9qZTlXS0lfVlVuVFpJSjdRTFZiTHJieklwRFBZUjd5Q2tUTVNJNU16R0JyWXZpc1I0ekExbHl3Z2ZYaDY2emRReEl5bHFQclp2UXFEeUdqSVZnUGx6d0lQZw?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T20:41:22+00:00",
-      "category": "Google",
-      "excerpt": "U.S. Vice President Vance: I worry about companies using artificial intelligence to surveil Americans marketscreener.com"
-    },
-    {
-      "title": "Seven colleges join CT\u2019s next AI workforce initiative - Hartford Business Journal",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQR185cmgzMWZJSVkyRmE5dVhROXFqZHEteVJKdUk1TVVmMWhIVzhLRlp3OXZ4N2s0SU1Ic0l2alNadW9lQldCejRSZ0otTUJpSGRvbC1BUGN0VDJqWE5ZSzJrR0ZGQjNITlBDY2dEUzNaR2YtdWRCWWd3WHE1RHpHcnJzbldYTERWTmFGX2o1ejFBTjl3?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T20:35:44+00:00",
-      "category": "Google",
-      "excerpt": "Seven colleges join CT\u2019s next AI workforce initiative Hartford Business Journal"
-    },
-    {
-      "title": "Pentagon looking to scale AI-infused enterprise task management platform to more than 150K users - DefenseScoop",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPVjk1S1I3QW5HOGFCUU05V3QtRUhqVk1Ea294UGpEU3lLVHVIVWd6OVZYb1BHT0ZmN1lCTEJMeUtiaEtyQWFmV1VkaU9rUjJMckw1SHFqZUs0Z1ZxLUxFcXptTjFDWHdmWGpkNEdlQzZKdXZVeDdQSl9qb2JlNVhnNC1EUTRfQThpN2ZJZTE4ZHN5THR2TG1sQm5R?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T20:25:06+00:00",
-      "category": "Google",
-      "excerpt": "Pentagon looking to scale AI-infused enterprise task management platform to more than 150K users DefenseScoop"
-    },
-    {
-      "title": "2026 diplomacy: own the data layer before the AI layer - Nextgov/FCW",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQWk1yZ05yejBHT25UdnNoZ3FIdkR6elV2dlA4Y21VZm00N1U4V1c3Und1ODQzeXlHdmY1TVVCdGxxSHltbGpyRG9VVDBlcFhwaHFCbjZZdTdPdHNvWGtiVDg3YUJicXVCbmhPQjZDZ2xjbGE3ZmtRcURjRXZobUtvSFY0aXJyejNaWkRYUQ?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T20:25:00+00:00",
-      "category": "Google",
-      "excerpt": "2026 diplomacy: own the data layer before the AI layer Nextgov/FCW"
-    },
-    {
-      "title": "JPMorgan Chase Analysts Predict AI Costs Could Trigger Bank Mergers - PYMNTS.com",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPSXY2ZklkdDNBazlEQVFmcDJGTy1OY1VCQXVIR3ZmdHlaMzBhalRyUmZvWkdjVG1hV0dKWkNYNW1xaGhaVnhlbUNIYWxZTUx2RDNMX2Z5WmU4Y2NnSHZDQThFc0lwZWxpQmtCQVFkbVhQR2FEcVpXay1HY1hvaG45MnpBM3JSNGFGY2VYVS1UeUR4NndnaWdpNlVnTnZHQzlLNUkzVDd1Ym5sSTVNQTlBLThSSWtndzBDdDBQYnltMWVzVDg?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T20:24:05+00:00",
-      "category": "Google",
-      "excerpt": "JPMorgan Chase Analysts Predict AI Costs Could Trigger Bank Mergers PYMNTS.com"
-    },
-    {
-      "title": "Artificial Intelligence Swiftly Predicts Starlight Signatures From Space Molecules - Quantum Zeitgeist",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNbXptSjcwODhyYlpOU05BT0JTWXByb29uVFBuY1JlVzNGMWpvbVktN2VmSTdkOTBSS255QTk0bE9XWC1iQkJMQkdfM3pZbEc1bmppZGtMOE95cDJicjU3Z2lWcGRyNEF2YVF6SlVhRGRaM2V6bXE4dkQ0MWFsZFdTUmxlZkx3T1EwU0pzbkVaU1FnVkRISkE?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T20:20:46+00:00",
-      "category": "Google",
-      "excerpt": "Artificial Intelligence Swiftly Predicts Starlight Signatures From Space Molecules Quantum Zeitgeist"
-    },
-    {
-      "title": "HII Teams with Path Robotics to Integrate Physical AI into Manned and Unmanned Shipbuilding - HII",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNMTdKMG9fNjdJYkgtaERGUkRYbDREZXlET05VcXZHV2hfaWhTMjVfbUJMVlk2YlhWRC1GTGtFaUNQSDJBZHhPUEJjSVYzczFPRzVpMU5sZkRSQnp1UE04b2p5NlZBWldZSjJfVjcxTWpVb19fTnhhREZ3aDFfdnMxNHFuMXV5eGdFSVVSV2RCaGpQbE5FTUVtcXNkV2Uzb3RpMkduOExFdkxwczFGWldKNkx5NA?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T20:12:55+00:00",
-      "category": "Google",
-      "excerpt": "HII Teams with Path Robotics to Integrate Physical AI into Manned and Unmanned Shipbuilding HII"
-    },
-    {
-      "title": "HII Teams with Path Robotics to Integrate Physical AI into Manned and Unmanned Shipbuilding - HII",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPMllyaHlpZ1R4SzIwNkF6TnFVWWFjQjFJTDRpOHlXWHp4VU5QOWtvb1hpcHE4MGQ5RmtkQV9FVXQ5TmhCWTBWUnBBTG9Ed25zMFZkb2lTZTduODNWRlJCMXBwajhVNXFTX0k2SjFaTEtTSmY3REpqSUw4UFZLR3pqVnVCZXlsLUIxZ2dNUEhVSmsxZFlVUks2RHRYN3AyandCX2R6UGlDT1F4ZHM?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T20:12:55+00:00",
-      "category": "Google",
-      "excerpt": "HII Teams with Path Robotics to Integrate Physical AI into Manned and Unmanned Shipbuilding HII"
-    },
-    {
-      "title": "AI Moves SaaS From Subscriptions to Consumption - PYMNTS.com",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOR2VjM0w1VEJuT0MtZEpVSkNXX01sT2NuV2hscmMyVVc1MUVFdXdnT2NXRV82VUZiMldvZzRsMTVJakdIendxUVBTOW9yQ2xKdHZQYUVIUDNXRXk4d1g2a0o3cFhYZVR3eWRpTGVydkF5V2NTZE9feXBNYmsyeTl2VzA3aDNDTEtMWFJaN29TZDNVb3RQYy1JS1lsazVHdw?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T20:07:13+00:00",
-      "category": "Google",
-      "excerpt": "AI Moves SaaS From Subscriptions to Consumption PYMNTS.com"
-    },
-    {
-      "title": "Artificial Intelligence: Promise, Peril, and the Path Forward - Yonkers Times",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPLVlPdEU0eHU0R0ZDLWJEa2Qxalk4SzN5c1A2bXpjWENxblkzdFkwWjFZT3lpRU9OZE5KWlIxYnRrbTlycnJFc1JXVTlfU0NsbWYzNExGRWxXYUVUYWFKdms2bXZMM1AxM21WS0RRTmFpeUV0YzNjRURSaVpYMW5HOFZ0aTBtUHNTbkhRRQ?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T20:05:39+00:00",
-      "category": "Google",
-      "excerpt": "Artificial Intelligence: Promise, Peril, and the Path Forward Yonkers Times"
-    },
-    {
-      "title": "New research from Notre Dame theologian and Vatican working group explores how to \u2018reclaim human agency\u2019 in age of AI - Notre Dame News",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPT2QtVEd0c3habVE3aVRiYk9SY0lXdEdHd2Fudi15NEt1NGlhMmMtRTZKNnF4bDJldFItYTZIQTZMTEhPQ0xrTG41X3ltWHNtNU1UcGtCeGxUNjBvVWJOUHVRNGpka1dPOFE4R1g0Q2tiOG5YUm9GNjNVa0VKbF85ZUxKeUVfdXdCcHEzTTdnSlpua2JGX1BNc3V0bTJzamJTd3RES1JNOFUtM2xoQTJBa0g1bEFfMzZBMjhLalY1bU9aQ3NIVnVTOXI3a2kyVWh3SE4tTmxpeVY?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-17T20:00:00+00:00",
-      "category": "Google",
-      "excerpt": "New research from Notre Dame theologian and Vatican working group explores how to \u2018reclaim human agency\u2019 in age of AI Notre Dame News"
     }
   ]
 }
