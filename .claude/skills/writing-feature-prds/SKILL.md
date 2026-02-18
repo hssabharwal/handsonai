@@ -2,14 +2,13 @@
 name: writing-feature-prds
 description: Use when starting a new feature, defining requirements before implementation, or when the user says "new feature", "create a spec", "create a PRD", or "feature PRD".
 user_invocable: true
-command: feature-prd
 ---
 
 # Feature PRD Workflow
 
 Guide the user through creating a well-defined feature PRD (Product Requirements Document) before implementation.
 
-**Important:** A PRD describes **one feature** — a single, buildable piece of work. If the user's idea is bigger than one feature (multiple epics, many capabilities), they should run `/agentic-coding:vision-brief` first to break it down. This skill takes one feature as input, not an entire vision.
+**Important:** A PRD describes **one feature** — a single, buildable piece of work. If the user's idea is bigger than one feature (multiple epics, many capabilities), they should run `/agentic-coding:writing-vision-briefs` first to break it down. This skill takes one feature as input, not an entire vision.
 
 ## When to Use This Skill
 
@@ -48,7 +47,7 @@ If the user doesn't mention a Vision Brief:
 2. If they provide one, follow Path A above
 3. If they don't have one, check the scope: does their idea sound like one feature, or something bigger?
     - If it sounds like one feature, proceed with the questions below
-    - If it sounds bigger (multiple capabilities, multiple user types, multiple workflows), suggest they start with a Vision Brief first: "This sounds like it might be bigger than one feature. Want to run `/agentic-coding:vision-brief` first to break it into pieces? That way we can spec each piece clearly."
+    - If it sounds bigger (multiple capabilities, multiple user types, multiple workflows), suggest they start with a Vision Brief first: "This sounds like it might be bigger than one feature. Want to run `/agentic-coding:writing-vision-briefs` first to break it into pieces? That way we can spec each piece clearly."
 
 Ask the user these questions to understand the feature:
 

@@ -365,6 +365,7 @@ nav:
     - Roadmaps & Prioritization: product-engineering/roadmapping.md
     - Stakeholder Management: product-engineering/stakeholder-management.md
     - Project Tracking with GitHub: product-engineering/tracking.md
+    - Architecture Decision Records: product-engineering/architecture-decisions.md
     - AI Engineering:
         - Overview: ai-engineering/index.md
         - Context Engineering: ai-engineering/context-engineering.md

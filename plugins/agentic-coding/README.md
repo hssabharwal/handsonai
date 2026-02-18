@@ -14,13 +14,15 @@ Skills for AI-assisted coding workflows — feature PRDs, specs, and implementat
 
 | Skill | Description |
 |-------|-------------|
+| `writing-vision-briefs` | Capture a fuzzy idea as a structured Vision Brief, then break it into epics and features |
 | `writing-feature-prds` | Guide the user through creating a well-defined feature PRD before implementation |
 
 ## Slash Commands
 
 | Command | Skill |
 |---------|-------|
-| `/agentic-coding:feature-prd` | `writing-feature-prds` |
+| `/agentic-coding:writing-vision-briefs` | `writing-vision-briefs` |
+| `/agentic-coding:writing-feature-prds` | `writing-feature-prds` |
 
 ## Quick Start
 

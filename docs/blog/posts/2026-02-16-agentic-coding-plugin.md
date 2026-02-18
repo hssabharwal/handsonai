@@ -9,18 +9,22 @@ description: "New plugin for AI-assisted coding workflows — define requirement
 
 # New Plugin: Agentic Coding
 
-The **Agentic Coding** plugin is now available in the marketplace — the third plugin alongside Business-First AI and AI Registry. It packages the `writing-feature-prds` skill for defining requirements before you write code.
+The **Agentic Coding** plugin is now available in the marketplace — the third plugin alongside Business-First AI and AI Registry. It packages two skills for the "discover and define" phase of AI-assisted coding: `writing-vision-briefs` and `writing-feature-prds`.
 
 <!-- more -->
 
-## What it does
+## What's included
 
-The `/agentic-coding:feature-prd` command walks you through a 4-phase workflow to create a structured Product Requirements Document (PRD):
+**`/agentic-coding:writing-vision-briefs`** — Capture a fuzzy idea as a structured Vision Brief. Walks you through the problem, users, vision, and success criteria, then breaks bigger ideas into epics and features you can build one at a time.
 
-1. **Define** — answer four questions about the feature, get a PRD at `specs/[feature-name].md`
+**`/agentic-coding:writing-feature-prds`** — Turn a Vision Brief (or a fresh idea) into a structured PRD through a 4-phase workflow:
+
+1. **Define** — answer questions about the feature, get a PRD at `specs/[feature-name]-prd.md`
 2. **Stress-test** — review for missing edge cases and ambiguous criteria
 3. **Create issue** — GitHub issue with `type:feature` label linking to the PRD
 4. **Handoff** — clear instructions to run `/feature-dev` for implementation
+
+The two skills are designed to flow together — the Vision Brief feeds directly into the PRD — but each works standalone too.
 
 ## Install
 
@@ -30,6 +34,6 @@ The `/agentic-coding:feature-prd` command walks you through a 4-phase workflow t
 
 ## Real-world usage
 
-This plugin is step 1 of the feature development workflow used to build this cookbook. The full 6-step workflow — from PRD through planning, implementation, review, and shipping — is documented in our [CLAUDE.md](https://github.com/jamesgray-ai/handsonai/blob/main/CLAUDE.md#feature-development-workflow) as a working example you can adapt for your own projects.
+This plugin covers steps 0 (Discover) and 1 (Define) of the feature development workflow used to build this cookbook. The full 6-step workflow — from vision brief through planning, implementation, review, and shipping — is documented in our [CLAUDE.md](https://github.com/jamesgray-ai/handsonai/blob/main/CLAUDE.md#feature-development-workflow) as a working example you can adapt for your own projects.
 
 See the [Agentic Coding plugin page](../../use-the-cookbook/build/agentic-coding.md) for full documentation, example prompts, and a recommended CLAUDE.md workflow you can copy.

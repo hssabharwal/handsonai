@@ -17,8 +17,8 @@ Skills for AI-assisted coding workflows. This plugin helps you go from idea to s
 
 | Command | Skill |
 |---------|-------|
-| `/agentic-coding:vision-brief` | `writing-vision-briefs` |
-| `/agentic-coding:feature-prd` | `writing-feature-prds` |
+| `/agentic-coding:writing-vision-briefs` | `writing-vision-briefs` |
+| `/agentic-coding:writing-feature-prds` | `writing-feature-prds` |
 
 ## Components
 
@@ -28,7 +28,7 @@ Skills for AI-assisted coding workflows. This plugin helps you go from idea to s
 
 #### `writing-vision-briefs`
 
-**Command:** `/agentic-coding:vision-brief`
+**Command:** `/agentic-coding:writing-vision-briefs`
 
 **What it does:** Guides you through capturing a fuzzy idea as a structured Vision Brief — a business-focused artifact that clarifies the problem, users, vision, capabilities, and success criteria in plain language. Then assesses the scope of your vision and breaks it into buildable features, so you know exactly what to build first.
 
@@ -39,7 +39,7 @@ Skills for AI-assisted coding workflows. This plugin helps you go from idea to s
 1. **Discover** — Claude asks six questions one at a time: What's the problem? Who feels it? What does the ideal outcome look like? What must the solution do? How will you know it's working? What constraints exist? Multiple-choice options are offered where possible to reduce cognitive load
 2. **Refine** — Claude presents the draft Vision Brief and iterates with you until it captures the idea accurately
 3. **Scope** — Claude assesses the size of your vision. A big idea might contain multiple features that need to be built separately. Claude breaks the vision into **epics** (major themes) and **features** (individual buildable pieces), creates GitHub issues to track each epic, and recommends which feature to build first
-4. **Handoff** — Claude saves the brief (with the feature breakdown) to `specs/[name]-vision.md` and tells you to run `/agentic-coding:feature-prd` for your first feature
+4. **Handoff** — Claude saves the brief (with the feature breakdown) to `specs/[name]-vision.md` and tells you to run `/agentic-coding:writing-feature-prds` for your first feature
 
 **How visions become features:**
 
@@ -71,7 +71,7 @@ Each **feature** becomes its own PRD in Step 1. You build and ship one feature a
 
 **What you'll get:** A Vision Brief at `specs/[name]-vision.md` with a clear problem statement, user description, vision, key capabilities, success criteria, constraints, and a feature breakdown showing exactly what to build and in what order.
 
-**Next step:** Run `/agentic-coding:feature-prd` for your first feature and tell Claude which feature from the breakdown you're starting with. Claude will pull context from the Vision Brief and scope the PRD to that one feature — so you go from idea to spec without repeating yourself.
+**Next step:** Run `/agentic-coding:writing-feature-prds` for your first feature and tell Claude which feature from the breakdown you're starting with. Claude will pull context from the Vision Brief and scope the PRD to that one feature — so you go from idea to spec without repeating yourself.
 
 **Platform compatibility:** Claude Code &#10003;
 
@@ -79,15 +79,15 @@ Each **feature** becomes its own PRD in Step 1. You build and ship one feature a
 
 #### `writing-feature-prds`
 
-**Command:** `/agentic-coding:feature-prd`
+**Command:** `/agentic-coding:writing-feature-prds`
 
 **What it does:** Guides you through creating a well-defined feature PRD for **one specific feature** before implementation. Produces a structured spec file with summary, motivation, user stories, approach, changes, and acceptance criteria — then creates a GitHub issue to track the work.
 
-**When to use it:** Use this when you know which feature you're building and need a detailed spec. If you're coming from a Vision Brief, pick one feature from your breakdown and spec it out here. If you're starting fresh with a small, focused idea, you can start here directly — but if the idea is bigger than one feature, Claude will suggest running [`/agentic-coding:vision-brief`](#writing-vision-briefs) first to break it down.
+**When to use it:** Use this when you know which feature you're building and need a detailed spec. If you're coming from a Vision Brief, pick one feature from your breakdown and spec it out here. If you're starting fresh with a small, focused idea, you can start here directly — but if the idea is bigger than one feature, Claude will suggest running [`/agentic-coding:writing-vision-briefs`](#writing-vision-briefs) first to break it down.
 
 **How it works:**
 
-1. **Define** — Claude checks if you're coming from a Vision Brief. If so, it pulls context from the brief and scopes to your chosen feature. If not, it asks four questions: What feature? What problem? Who are the users? What should happen? Then creates a PRD file at `specs/[feature-name].md`
+1. **Define** — Claude checks if you're coming from a Vision Brief. If so, it pulls context from the brief and scopes to your chosen feature. If not, it asks four questions: What feature? What problem? Who are the users? What should happen? Then creates a PRD file at `specs/[feature-name]-prd.md`
 2. **Stress-test** — Claude reviews the draft critically, checking for missing edge cases, ambiguous acceptance criteria, incomplete scope, and unresolved questions. You iterate until the PRD is solid
 3. **Track** — Claude creates a GitHub issue with a `type:feature` label linking to the PRD (and referencing the epic issue if this feature came from a Vision Brief breakdown)
 4. **Handoff** — Claude tells you to move to plan mode, where it will explore your codebase and design the implementation approach before writing any code
@@ -101,7 +101,7 @@ Each **feature** becomes its own PRD in Step 1. You build and ship one feature a
     → Walks through all 4 phases: define, stress-test, create issue, handoff
 
     "Create a spec for adding dark mode support"
-    → Creates a PRD at specs/dark-mode.md with user stories and
+    → Creates a PRD at specs/dark-mode-prd.md with user stories and
       acceptance criteria
 
     "Use the Vision Brief at specs/onboarding-vision.md as the starting point"
@@ -121,8 +121,8 @@ You don't need every step for every task. Skip Step 0 if you already know what y
 
 | Step | What happens | Command / Skill / Agent | Plugin |
 |------|-------------|------------------------|--------|
-| **0. Discover** | Capture a fuzzy idea as a Vision Brief, then break it into epics and features you can build one at a time | `/agentic-coding:vision-brief` | `agentic-coding` (Hands-on AI) |
-| **1. Define** | Turn the Vision Brief (or a new idea) into a PRD with user stories, acceptance criteria, and a GitHub issue to track the feature | `/agentic-coding:feature-prd` | `agentic-coding` (Hands-on AI) |
+| **0. Discover** | Capture a fuzzy idea as a Vision Brief, then break it into epics and features you can build one at a time | `/agentic-coding:writing-vision-briefs` | `agentic-coding` (Hands-on AI) |
+| **1. Define** | Turn the Vision Brief (or a new idea) into a PRD with user stories, acceptance criteria, and a GitHub issue to track the feature | `/agentic-coding:writing-feature-prds` | `agentic-coding` (Hands-on AI) |
 | **2. Plan** | Enter **plan mode** — Claude explores the codebase, designs the architecture, and converts the PRD into bite-sized implementation tasks for your approval | `code-explorer` agent, `code-architect` agent, `writing-plans` skill | `feature-dev` + `superpowers` (Anthropic) |
 | **3. Implement** | Build the feature with codebase-aware guidance, test-driven development, and automatic security warnings on unsafe patterns | `/feature-dev` command + `test-driven-development` skill + `security-guidance` hook | `feature-dev` + `superpowers` + `security-guidance` (Anthropic) |
 | **4. Verify** | Prove it works with actual passing build/test output | `verification-before-completion` skill | `superpowers` (Anthropic) |
@@ -145,9 +145,9 @@ To teach Claude Code this workflow automatically in every session, copy the temp
 
 For non-trivial changes, follow this workflow. Skip to step 3 for small edits.
 
-### 0. Discover — `/agentic-coding:vision-brief`
+### 0. Discover — `/agentic-coding:writing-vision-briefs`
 
-For fuzzy or early-stage ideas, use the `/agentic-coding:vision-brief` slash command to create a Vision Brief before writing a PRD. It:
+For fuzzy or early-stage ideas, use the `/agentic-coding:writing-vision-briefs` slash command to create a Vision Brief before writing a PRD. It:
 - Walks you through the problem, users, vision, capabilities, and success criteria in plain language
 - Assesses the scope — is this one feature or multiple?
 - Breaks bigger visions into **epics** (major themes) and **features** (individual buildable pieces)
@@ -157,18 +157,22 @@ For fuzzy or early-stage ideas, use the `/agentic-coding:vision-brief` slash com
 
 If the vision is small enough to be a single feature, the breakdown is skipped.
 
+Record architectural decisions about scope or direction (see [Architecture Decision Records](#architecture-decision-records) below).
+
 **Skip this step if** you already know exactly what single feature you want to build. Go straight to Step 1.
 
-### 1. Define — `/agentic-coding:feature-prd`
+### 1. Define — `/agentic-coding:writing-feature-prds`
 
-Use the `/agentic-coding:feature-prd` slash command to create a PRD for **one feature**. It will:
+Use the `/agentic-coding:writing-feature-prds` slash command to create a PRD for **one feature**. It will:
 - Check if you're coming from a Vision Brief — if so, scope the PRD to your chosen feature
 - If starting fresh, gather requirements (and redirect to Step 0 if the idea is too big for one feature)
-- Create a PRD at `specs/<feature-name>.md` using the template
+- Create a PRD at `specs/<feature-name>-prd.md` using the template
 - Stress-test the PRD for edge cases and ambiguity
 - Create a GitHub issue linking back to the PRD (and referencing the epic issue if applicable)
 
 For early-stage ideas that need exploration, use the `brainstorming` superpowers skill first to validate the approach before writing a PRD.
+
+Record scope and design decisions (see [Architecture Decision Records](#architecture-decision-records) below).
 
 **Skip specs for:** Bug fixes, trivial changes, urgent hotfixes.
 
@@ -178,15 +182,17 @@ After the PRD is approved, **enter plan mode** to design the implementation befo
 
 - For complex features, use the `code-explorer` agent (from `feature-dev`) to trace execution paths and map dependencies, then the `code-architect` agent to design the architecture before planning
 - The `writing-plans` superpowers skill converts specs into bite-sized tasks with exact file paths, code snippets, and commands
-- Plans are saved to `.claude/plans/<feature-name>.md`
-- **Always save the plan file before starting implementation** — even if the plan was provided inline or from a prior session, persist it first
+- Plans are saved to `specs/<feature-name>-plan.md` (alongside the PRD)
+- **Always save the plan file before starting implementation** — even if the plan was provided inline or from a prior session, persist it to `specs/` first
 - For features needing workspace isolation, use `using-git-worktrees` to create a clean worktree before starting
+
+Record implementation approach decisions (see [Architecture Decision Records](#architecture-decision-records) below).
 
 ### 3. Implement — `/feature-dev`
 
 Use the `/feature-dev` slash command, referencing the spec and issue:
 ```
-/feature-dev specs/feature-name.md (issue #123)
+/feature-dev specs/feature-name-prd.md (issue #123)
 ```
 
 **Implementation approach:**
@@ -262,14 +268,43 @@ When writing acceptance criteria:
 - Use active voice ("Error message is displayed" not "User sees error")
 - Include concrete expected values when possible
 
+## Architecture Decision Records
+
+When choosing between meaningful alternatives during Steps 0–2, capture the decision as an ADR in `specs/decisions/`. Not every feature needs one — only when there's a real fork in the road (e.g., "JWT vs session auth", "one plugin or two", "flat structure vs nested").
+
+**File naming:** `specs/decisions/NNN-short-title.md` (zero-padded, e.g., `001-plan-files-alongside-prds.md`)
+
+**Template:**
+
+```markdown
+# NNN — Title
+
+**Status:** Accepted | Superseded by NNN
+**Date:** YYYY-MM-DD
+**Step:** Discover | Define | Plan
+
+## Context
+What prompted the decision and why it matters.
+
+## Options Considered
+1. **Option A** — tradeoffs
+2. **Option B** — tradeoffs
+
+## Decision
+Which option and why.
+
+## Consequences
+What changes as a result — both positive and negative.
+```
+
 ## Slash Commands
 
 ### Core Workflow
 
 | Command | Description |
 |---------|-------------|
-| `/agentic-coding:vision-brief` | Capture a fuzzy idea as a structured Vision Brief |
-| `/agentic-coding:feature-prd` | Create a feature PRD, stress-test it, and open a GitHub issue |
+| `/agentic-coding:writing-vision-briefs` | Capture a fuzzy idea as a structured Vision Brief |
+| `/agentic-coding:writing-feature-prds` | Create a feature PRD, stress-test it, and open a GitHub issue |
 | `/feature-dev` | Guided feature development with codebase understanding |
 | `/commit` | Create a git commit |
 | `/commit-push-pr` | Commit, push, and open a PR |
@@ -322,8 +357,8 @@ Skills from the `superpowers` plugin, invoked automatically based on context:
 
 | Step | Action | Tools |
 |------|--------|-------|
-| 0. Discover | Capture idea as Vision Brief, break into epics + features | `/agentic-coding:vision-brief` (skip if single feature is clear) |
-| 1. Define | Create PRD + issue for one feature | `/agentic-coding:feature-prd` (use `brainstorming` for early ideas) |
+| 0. Discover | Capture idea as Vision Brief, break into epics + features | `/agentic-coding:writing-vision-briefs` (skip if single feature is clear) |
+| 1. Define | Create PRD + issue for one feature | `/agentic-coding:writing-feature-prds` (use `brainstorming` for early ideas) |
 | 2. Plan | Enter plan mode, explore codebase, create plan | `code-explorer` + `code-architect` agents, `writing-plans` skill |
 | 3. Implement | Build with TDD | `/feature-dev` + `test-driven-development` + `security-guidance` hook |
 | 4. Verify | Prove it works | `verification-before-completion` |
@@ -334,7 +369,7 @@ Skills from the `superpowers` plugin, invoked automatically based on context:
 !!! tip "Plugins used in this workflow"
     This template references commands from these plugins:
 
-    - **`agentic-coding@handsonai`** — `/agentic-coding:vision-brief` (step 0), `/agentic-coding:feature-prd` (step 1)
+    - **`agentic-coding@handsonai`** — `/agentic-coding:writing-vision-briefs` (step 0), `/agentic-coding:writing-feature-prds` (step 1)
     - **`feature-dev`** (Anthropic official) — `/feature-dev` (step 3)
     - **`superpowers`** (Anthropic official) — `brainstorming`, `writing-plans`, `test-driven-development`, `systematic-debugging`, `verification-before-completion`, `requesting-code-review`, `receiving-code-review`, `finishing-a-development-branch`
     - **`pr-review-toolkit`** (Anthropic official) — review agents (step 5)
@@ -355,10 +390,10 @@ This workflow is how we build the Hands-on AI Cookbook. Our `CLAUDE.md` is a fil
 A PRD forces you to think through requirements, edge cases, and acceptance criteria *before* writing code. This prevents scope creep, reduces rework, and gives you a reference document during implementation and review.
 
 **Do I need all the plugins referenced in the template?**
-No. The `/agentic-coding:feature-prd` skill works standalone. The template shows how it fits into a full development lifecycle with Anthropic's official plugins, but you can use any combination — or just the steps that apply to your project.
+No. The `/agentic-coding:writing-feature-prds` skill works standalone. The template shows how it fits into a full development lifecycle with Anthropic's official plugins, but you can use any combination — or just the steps that apply to your project.
 
 **Where do PRDs get saved?**
-By default, `specs/[feature-name].md`. The skill respects your repo conventions — if your `CLAUDE.md` specifies a different spec location, or if `docs/specs/` exists, it adapts automatically.
+By default, `specs/[feature-name]-prd.md`. The skill respects your repo conventions — if your `CLAUDE.md` specifies a different spec location, or if `docs/specs/` exists, it adapts automatically.
 
 **Can I use this for bug fixes?**
 You can, but it's overkill for most bugs. Skip to step 3 for small fixes. PRDs are most valuable for new features or changes where requirements need to be formalized.

@@ -190,8 +190,8 @@ Skills for AI-assisted coding workflows. Define requirements before you build �
 
     | Skill | Command | What it does |
     |-------|---------|-------------|
-    | [`writing-vision-briefs`](agentic-coding.md#writing-vision-briefs) | `/agentic-coding:vision-brief` | Captures a fuzzy idea as a structured Vision Brief, then breaks it into epics and features you can build one at a time. Creates GitHub issues for each epic and recommends where to start. |
-    | [`writing-feature-prds`](agentic-coding.md#writing-feature-prds) | `/agentic-coding:feature-prd` | Guides you through creating a structured feature PRD for **one feature** — with user stories, acceptance criteria, and GitHub issue tracking. Walks through 4 phases: Define, Stress-test, Track, Handoff to plan mode. |
+    | [`writing-vision-briefs`](agentic-coding.md#writing-vision-briefs) | `/agentic-coding:writing-vision-briefs` | Captures a fuzzy idea as a structured Vision Brief, then breaks it into epics and features you can build one at a time. Creates GitHub issues for each epic and recommends where to start. |
+    | [`writing-feature-prds`](agentic-coding.md#writing-feature-prds) | `/agentic-coding:writing-feature-prds` | Guides you through creating a structured feature PRD for **one feature** — with user stories, acceptance criteria, and GitHub issue tracking. Walks through 4 phases: Define, Stress-test, Track, Handoff to plan mode. |
 
 ??? usage "Example usage"
 
