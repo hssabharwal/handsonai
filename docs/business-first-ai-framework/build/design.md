@@ -14,7 +14,7 @@ description: Gather architecture decisions, choose an execution pattern and inte
 
 The Design phase is where you decide *how* your workflow should be built — before you build it. You take the Workflow Definition from the [Deconstruct step](../deconstruct/index.md) and make four design decisions:
 
-1. **Architecture decisions** — What platform, deployment surface, integrations, and constraints shape the build?
+1. **Architecture decisions** — What platform are you using, and what integrations and constraints does the Workflow Definition reveal?
 2. **Execution pattern** — How complex does the AI implementation need to be?
 3. **Autonomy classification** — How much AI assistance does each step need?
 4. **Building block mapping** — What specific AI components does each step require?
@@ -24,7 +24,7 @@ The Design phase is where you decide *how* your workflow should be built — bef
 
 | | |
 |---|---|
-| **What you'll do** | Upload your Workflow Definition, answer architecture questions about your platform and constraints, review the AI's execution pattern recommendation and step classifications, and adjust anything that doesn't look right |
+| **What you'll do** | Upload your Workflow Definition, confirm your platform, review the AI's extracted architecture analysis and execution pattern recommendation, review step classifications, and adjust anything that doesn't look right |
 | **What you'll get** | An **AI Building Block Spec** — architecture decisions, execution pattern with interaction mode, autonomy classifications, building block mapping, skill candidates, agent blueprints (when applicable), and a prioritized build sequence |
 | **Time** | ~15–25 minutes (architecture questions + reviewing the AI's analysis) |
 
@@ -36,18 +36,20 @@ Design also maps each step to specific **AI building blocks** — Prompt, Contex
 
 ## Architecture Decisions
 
-Before choosing an execution pattern, gather the information that shapes platform-aware recommendations. The AI model will ask eight questions about your environment and constraints:
+Before choosing an execution pattern, the model gathers the information that shapes platform-aware recommendations. Rather than walking through a checklist, it uses an **extract-then-confirm** approach: ask one question, extract everything else from your Workflow Definition, and present the analysis for confirmation.
 
-1. **Platform** — Which AI platform will this run on?
-2. **Deployment surface** — Web browser, desktop app, or command-line tool?
-3. **Code comfort** — Comfortable with code, or no-code only?
-4. **Tool integrations** — What external tools or services does this workflow connect to? (The model researches current integration options for your platform via web search.)
-5. **Shareability** — Will team members run this? What's their technical comfort?
-6. **Authenticated browser access** — Does any step require logging into a website through a browser?
-7. **Scheduled execution** — Does it need to run on a schedule without human triggering?
-8. **Data sensitivity** — Does it handle PII, financial, or regulated data?
+**One question: Platform.** The only thing not already in your Workflow Definition is which AI platform you'll use. If you've already mentioned it in conversation, the model confirms. If not, it asks — and accepts whatever level of specificity you provide ("Claude Code", "ChatGPT", "Google Gemini", "Claude" are all fine). The model doesn't try to disambiguate to a specific offering upfront — the ecosystem is enough for Design decisions, and the specific tool is resolved during Construct when generating artifacts.
 
-These decisions gate subsequent recommendations — for example, no-code constraints limit the execution pattern, and scheduled execution influences the interaction mode.
+**Everything else is extracted from the Workflow Definition:**
+
+- **Tool integrations** — pulled from data flows, context needs, and step details across all steps. The model researches availability on your platform via web search and categorizes each: Built-in, Available with setup, Possible with code, or Manual.
+- **Trigger/schedule** — pulled from your Scenario Metadata. Time-based triggers are noted as scheduled execution requirements with implications for interaction mode and infrastructure.
+- **Browser access** — if any step involves logging into a website, it's flagged during step classification rather than asked about separately. The connection details are handled during Construct.
+- **Shareability** — deferred to Construct, where it determines artifact format (file-based vs. code-based). Not asked during Design.
+
+Code comfort and deployment surface are inferred from the platform choice when specific (Claude Code = CLI + code-comfortable, ChatGPT = web + no-code) or resolved during Construct when vague.
+
+After extracting, the model presents a single confirmation block showing the platform, extracted tool integrations with availability mapping, trigger implications, and any flags — then asks if anything was missed or needs adjustment. The confirmed decisions gate all subsequent recommendations.
 
 ## Execution Pattern Spectrum
 
@@ -62,15 +64,19 @@ Every AI workflow falls somewhere on this spectrum. The right pattern depends on
 
 ### Choosing a Pattern
 
-Work through these five questions in order. The first "yes" tells you the minimum pattern your workflow needs:
+The model analyzes your workflow steps and architecture decisions, then presents a confident recommendation — for example: *"Based on your workflow, I recommend **Skill-Powered Prompt** with **Interactive** mode because your steps are sequential with two reusable sub-routines, and you're running this from the web UI."*
 
-1. **Does the workflow require tool use?** (web search, file access, APIs, databases) → If no, you're in Prompt or Skill-Powered Prompt territory
-2. **Does it require autonomous decision-making?** (the AI needs to decide what to do next based on what it finds) → If yes, you need at least a Single Agent
-3. **Are there steps with complex, reusable logic?** (sub-routines that appear in multiple workflows or need consistent execution) → If yes, those steps are skill candidates
-4. **Does it span multiple expertise domains?** (research vs. writing vs. editing, each needing different instructions) → If yes, consider Multi-Agent
-5. **Would it benefit from parallel execution or review gates?** (stages that can run simultaneously, or checkpoints where a human should review before proceeding) → If yes, Multi-Agent
+The signals it reasons through internally:
 
-Most workflows start as Prompt or Skill-Powered Prompt and evolve toward agents as you add automation. Start simple, upgrade when you hit limits.
+- **Tool use** (web search, file access, APIs) → pushes toward agent patterns
+- **Autonomous decision-making** (AI decides what to do next) → requires at least Single Agent
+- **Reusable logic** (sub-routines across workflows) → flags skill candidates
+- **Multiple expertise domains** (research vs. writing vs. editing) → suggests Multi-Agent
+- **Parallel execution or review gates** → suggests Multi-Agent
+
+If you disagree with the recommendation, the model explains the alternatives and you discuss. Most workflows start as Prompt or Skill-Powered Prompt and evolve toward agents as you add automation.
+
+When the execution pattern is agent-based and the platform has multiple agent offerings (e.g., Claude Code sub-agents vs. Claude Agent SDK), the model asks which offering you want to use — this determines the artifact format in the Construct phase.
 
 ### Interaction Mode
 
@@ -82,7 +88,7 @@ After choosing an execution pattern, determine how the human and AI interact dur
 | **Autonomous** | AI executes end-to-end without human involvement during the run. | Scheduled/unattended execution, CLI |
 | **Hybrid** | Some steps run autonomously, others pause for human interaction. | Mix of automated and review steps |
 
-The interaction mode is determined by your architecture decisions — deployment surface, scheduled execution needs, and which steps require human review.
+The interaction mode is determined by your architecture decisions — platform, scheduled execution needs, and which steps require human review.
 
 !!! info "Deeper architectural patterns"
     For detailed implementation blueprints (prompt chaining, routing, parallelization, orchestrator-workers, evaluator-optimizer, and autonomous agents), see [Workflow Architecture Patterns](../../patterns/workflow-architecture/index.md).
@@ -189,7 +195,7 @@ Design has two distinct phases that use different modes of interaction with the 
 
 **Phase 1: Collaborative decisions (normal conversation)**
 
-The first part of Design is a back-and-forth conversation. The model asks you the 8 architecture questions, recommends an execution pattern and interaction mode, and you discuss and confirm. This is normal conversational mode — you're making decisions together.
+The first part of Design is a back-and-forth conversation. The model scans your Workflow Definition for known answers, confirms what it can infer, asks about anything genuinely unknown, recommends an execution pattern and interaction mode, and you discuss and confirm. This is normal conversational mode — you're making decisions together.
 
 **Phase 2: Plan the spec (plan mode)**
 
@@ -211,7 +217,7 @@ After the model produces the plan, **review and approve the AI Building Block Sp
 The **AI Building Block Spec** contains:
 
 - **Execution pattern** — Prompt, Skill-Powered Prompt, Single Agent, or Multi-Agent, with interaction mode and reasoning
-- **Architecture decisions** — platform, deployment surface, code comfort, integrations (with connector mapping), shareability, browser access, scheduling, data sensitivity — each with rationale and a constraints summary showing how they shaped the recommendations
+- **Architecture decisions** — platform, tool integrations (with connector mapping), trigger/schedule implications, and any flags (browser access, infrastructure needs) — each with rationale and a constraints summary showing how they shaped the recommendations. Deployment surface, code comfort, and shareability are resolved during Construct.
 - **Scenario summary** — workflow metadata from the Workflow Definition
 - **Decomposition table** — every step with autonomy classification, decision points, failure modes, data flows, context needs, AI building block mapping, and skill candidate flags
 - **Autonomy spectrum summary** — steps grouped by classification level

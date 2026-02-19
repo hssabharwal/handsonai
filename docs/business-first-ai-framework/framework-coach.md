@@ -100,7 +100,7 @@ Build has three parts: **3.1 Design**, **3.2 Construct**, and **3.3 Run**.
 
 **Process:** Take the Workflow Definition and make four design decisions:
 
-1. **Architecture decisions** — What platform, deployment surface, integrations, and constraints shape the build? (8 questions about platform, code comfort, tools, data sensitivity, etc.)
+1. **Architecture decisions** — Confirm the platform, then extract tool integrations, trigger/schedule, and constraints from the Workflow Definition. One question, then a confirmation block.
 2. **Execution pattern** — How complex does the AI implementation need to be?
 3. **Autonomy classification** — How much AI assistance does each step need?
 4. **Building block mapping** — What specific AI components does each step require?
@@ -147,7 +147,7 @@ Build has three parts: **3.1 Design**, **3.2 Construct**, and **3.3 Run**.
 
 **Two phases, two modes:** Design has two distinct phases:
 
-1. **Collaborative decisions (normal conversation)** — The model asks the 8 architecture questions, recommends an execution pattern and interaction mode, and the user confirms. This is back-and-forth.
+1. **Collaborative decisions (normal conversation)** — The model confirms the platform, extracts architecture decisions from the Workflow Definition, presents a confirmation block, then recommends an execution pattern and interaction mode. This is back-and-forth.
 2. **Plan the spec (plan mode)** — Once architecture decisions and execution pattern are locked in, the user activates plan mode. The model then plans the full AI Building Block Spec — classifying steps, mapping building blocks, identifying skill candidates, and documenting agent blueprints.
 
 After the model produces the spec, the user reviews and approves the AI Building Block Spec before moving to Construct.

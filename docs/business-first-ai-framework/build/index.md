@@ -25,7 +25,7 @@ Before building anything, decide *how* the workflow should be built. The Design 
 
 Design covers:
 
-1. **Architecture decisions** — Eight questions about your platform, deployment surface, code comfort, integrations, shareability, browser access, scheduling, and data sensitivity. These gate all subsequent recommendations.
+1. **Architecture decisions** — The model confirms your platform (the one thing not in the Workflow Definition), then extracts tool integrations, trigger/schedule, and browser access flags directly from the definition. It presents a single confirmation block with the platform, integration mapping, and trigger implications — you review and adjust. These gate all subsequent recommendations.
 
 2. **Execution pattern** — Choose from four patterns based on what your workflow needs:
 
@@ -48,7 +48,7 @@ Design covers:
 
 ## 3.2: Construct
 
-The AI Building Block Spec tells you exactly what to build — and the execution pattern determines which steps you follow. The model uses your architecture decisions (platform, code comfort, integrations) to generate artifacts in the right format for your specific setup. Work through **only** the steps that apply to your pattern:
+The AI Building Block Spec tells you exactly what to build — and the execution pattern determines which steps you follow. The model uses your architecture decisions (platform, integrations) and resolves deferred decisions (specific platform offering, shareability, code comfort) to generate artifacts in the right format for your specific setup. Work through **only** the steps that apply to your pattern:
 
 === "Prompt"
 
