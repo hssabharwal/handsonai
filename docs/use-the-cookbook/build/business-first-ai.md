@@ -213,7 +213,7 @@ Design your AI implementation and construct the workflow.
 
 1. **Load Workflow Definition** — The AI reads the Workflow Definition from `outputs/`
 2. **Confirm understanding** — The AI summarizes the workflow and asks you to confirm
-3. **Architecture decisions** — 8 questions about platform, deployment, code comfort, integrations, shareability, browser access, scheduling, and data sensitivity
+3. **Architecture decisions** — Confirm platform (the one question), then extract tool integrations, trigger/schedule, and constraints from the Workflow Definition and present a confirmation block
 4. **Execution pattern assessment** — The AI walks you through the four execution patterns and recommends one with an interaction mode (Interactive, Autonomous, or Hybrid)
 5. **Classify each step** — Autonomy level, AI building blocks, tools, human review gates
 6. **Identify skill candidates** — Steps tagged for skill creation with generation-ready detail

@@ -23,38 +23,56 @@ Take a Workflow Definition and produce the Build deliverables: an AI Building Bl
 
 1. **Load Workflow Definition** — Read the Workflow Definition from `outputs/[workflow-name]-definition.md`. If the user specifies a file path, use that. Otherwise, look for the most recent Workflow Definition in `outputs/`.
 2. **Confirm understanding** — Summarize the workflow name, step count, and outcome. Ask the user to confirm before proceeding.
-3. **Architecture Decisions** — Before assessing execution patterns, gather the information needed to make platform-aware recommendations. Ask these questions one at a time, waiting for each answer before asking the next:
+3. **Architecture Decisions** — Before assessing execution patterns, gather the information needed to make platform-aware recommendations. The approach: **one question, then extract everything else from the Workflow Definition.**
 
-   **Fixed checklist (8 questions):**
+   **a. One question: Platform**
 
-   1. **Platform** — Which AI platform will this run on? (Let the user name their tool — do not present a fixed list of platforms.)
-   2. **Deployment surface** — How will you access it — web browser, desktop app, or command-line tool?
-   3. **Code comfort** — Comfortable with code, or no-code only?
-   4. **Tool integrations** — What external tools or services does this workflow connect to?
-      After the answer: **use web search** to research current integration options for the user's platform. Categorize each as:
-      - Native/zero-config (built into the platform)
-      - MCP or connector available (requires setup)
-      - API integration possible (requires code/configuration)
-      - Manual only (export/paste)
+   Platform is the only thing not already in the Workflow Definition. Determine the user's AI platform:
+   - If stated in conversation or definition → confirm: "You mentioned [platform] — is that still correct?"
+   - If not stated → ask. Let the user name their tool — do not present a fixed list.
 
-      Surface the mapping to the user immediately. **Web search is required** — if the environment doesn't support it, instruct the user to switch to a tool that does. No static mapping tables in the skill.
-   5. **Shareability** — Will team members run this? What's their technical comfort?
-   6. **Authenticated browser access** — Does any step require logging into a website through a browser?
-   7. **Scheduled execution** — Does it need to run on a schedule without human triggering?
-   8. **Data sensitivity** — Does it handle PII, financial, or regulated data?
+   Accept whatever level of specificity the user provides — "Claude Code", "Google Gemini", "ChatGPT", "Claude" are all fine. Do NOT try to disambiguate to a specific offering upfront. Instead:
+   - **For Design:** The ecosystem (Claude, Google, OpenAI, M365) is enough for integration research. Code-vs-nocode is inferred if the tool is specific (Claude Code = code, ChatGPT = no-code) or left open if vague.
+   - **For Execution Pattern:** The recommendation is driven by workflow characteristics first (tool use? autonomous decisions? multiple domains?). If the recommended pattern requires capabilities the named platform might or might not support (e.g., recommending agents when "Google Gemini" could mean the web app or ADK), ask a **motivated follow-up** in context: "I recommend a Single Agent pattern — that needs an agent-capable tool. Are you using Google ADK, or the Gemini web app?"
+   - **For Construct:** The specific offering (Claude Code vs. Claude.ai, ADK vs. Gemini web) is resolved when generating artifacts in step 11 — not during Design. This is where deployment surface, code comfort, and artifact format are determined.
 
-   After all 8 questions: summarize as Architecture Decisions with rationale for each. Confirm with user.
+   **b. Extract everything else from the Workflow Definition**
 
-   **AI-driven follow-up:** Review the Workflow Definition steps against the architecture decisions. Ask additional questions only where the answer would materially change a building block recommendation or surface a blocker. One at a time. Stop when no further questions are needed.
+   After confirming the platform, read the Workflow Definition and extract:
 
-   **Downstream propagation — architecture decisions gate subsequent steps:**
-   - No-code + no native connectors → cap at Skill-Powered Prompt
-   - Scheduled execution + deployment surface doesn't support unattended runs → flag infrastructure needed (research options via web search)
-   - Authenticated browser access → flag browser automation requirement
-   - Data sensitivity → note compliance considerations
-   - State which decisions influenced the execution pattern recommendation
+   - **Tool integrations** — from Data In, Context Needed, and Context Shopping List across all steps. Then **use web search** to research availability on the user's platform. Categorize in plain language:
+     - Built-in (works out of the box)
+     - Available with setup (MCP server, connector, or plugin exists)
+     - Possible with code (API integration required)
+     - Manual (copy-paste between tools)
+     - **Web search is required** — if the environment doesn't support it, instruct the user to switch to a tool that does.
 
-4. **Execution pattern assessment** — Walk the user through the execution pattern spectrum:
+   - **Trigger/schedule** — from Scenario Metadata. If time-based → note as scheduled execution requirement and its implications (interaction mode, infrastructure). If manual → no action needed.
+
+   - **Browser access** — deferred to Construct. If any step's Data In references a web portal, CRM login, or authenticated website, flag it during step classification (step 5) as a "requires browser access" note on that step. Do not ask about it here.
+
+   - **Shareability** — deferred to Construct. The model asks about team sharing when generating artifacts in step 11, not during Design.
+
+   **c. Present architecture analysis for confirmation**
+
+   Present a single confirmation block:
+
+   > "Here's what I found in your Workflow Definition:
+   > - **Platform:** [confirmed platform]
+   > - **Tools needed:** [extracted list] — here's what's available on [platform]: [integration mapping]
+   > - **Trigger:** [extracted trigger] → [implications for interaction mode]
+   > - [Any flags: e.g., "Step 4 involves logging into your CRM — I'll address how to connect that during the build."]
+   >
+   > Anything I missed or got wrong?"
+
+   **d. Downstream propagation — architecture decisions gate subsequent steps:**
+   - No-code platform + no built-in connectors → cap at Skill-Powered Prompt
+   - Scheduled trigger + platform doesn't support unattended runs → flag infrastructure needed (research options via web search)
+   - State which extracted facts influenced the execution pattern recommendation
+
+4. **Execution pattern assessment** — Analyze the workflow steps and architecture decisions internally, then present a confident recommendation. Do NOT walk through 5 decision questions — instead, reason through the signals yourself and present the result.
+
+   **Execution pattern spectrum (for internal reasoning):**
 
    | Pattern | Description | Signals |
    |---------|-------------|---------|
@@ -63,16 +81,9 @@ Take a Workflow Definition and produce the Build deliverables: an AI Building Bl
    | **Single Agent** | One agent with tool access, capable of autonomous decisions | Tool use required, autonomous decisions, multi-step reasoning |
    | **Multi-Agent** | Specialized agents coordinating in a pipeline | Multiple expertise domains, parallel execution, review gates |
 
-   Decision questions:
-   1. Does the workflow require tool use? (web, files, APIs)
-   2. Does it require autonomous decision-making?
-   3. Are there steps with complex, reusable logic? → skill candidates
-   4. Does it span multiple expertise domains?
-   5. Would it benefit from parallel execution or review gates?
+   **Present as a confident recommendation:** "Based on your workflow, I recommend **[pattern]** with **[interaction mode]** because [2-3 sentence reasoning tying the recommendation to the workflow steps and architecture decisions]." If the user pushes back, then explain the alternatives and discuss.
 
-   Present the recommended pattern with reasoning. State which architecture decisions influenced the recommendation.
-
-   **Interaction Mode** — After recommending the pattern, determine the interaction mode based on architecture decisions:
+   **Interaction Mode** — Determine the interaction mode from architecture decisions and include it in the recommendation:
 
    | Mode | Description | Determined by |
    |------|-------------|---------------|
@@ -80,7 +91,23 @@ Take a Workflow Definition and produce the Build deliverables: an AI Building Bl
    | **Autonomous** | AI executes end-to-end without human involvement during the run. | Scheduled/unattended execution, CLI |
    | **Hybrid** | Some steps run autonomously, others pause for human interaction. | Mix of automated and review steps |
 
-   Present the recommended interaction mode with reasoning tied to the architecture decisions. Ask the user to confirm both the pattern and the interaction mode.
+   **Platform sub-choice for agent patterns:** When the execution pattern is Single Agent or Multi-Agent, the platform choice determines the implementation path. Some platforms have multiple agent offerings (e.g., Claude Code has sub-agents via markdown files vs. Claude Agent SDK in TypeScript/Python). If the platform has multiple agent offerings, ask the user which offering they want to use — this determines whether the Construct phase generates markdown files, Python code, TypeScript code, or GUI configuration steps. For non-agent patterns (Prompt, Skill-Powered Prompt), no sub-choice is needed — artifacts are always markdown files.
+
+   Ask the user to confirm the pattern, interaction mode, and platform sub-choice (if applicable).
+
+   **Fast-track for complete definitions:** If the Workflow Definition + conversation context provide enough information to resolve ALL architecture dimensions AND the execution pattern is clear, present the entire Design analysis as a single confirmation block instead of stepping through questions one at a time:
+
+   > "Based on your workflow definition, here's my design analysis:
+   > - **Platform:** [platform] ([surface])
+   > - **Execution pattern:** [pattern] ([interaction mode])
+   > - **Integrations:** [list with availability]
+   > - **Steps classified:** [summary table]
+   > - **Skill candidates:** [list]
+   > - **Agent blueprints:** [summary]
+   >
+   > Does this look right, or would you like to adjust anything?"
+
+   Only drop into the question-by-question flow when genuinely missing information.
 
 5. **Classify each step** — For every refined step, determine:
    - **Autonomy level**: Human / AI-Deterministic / AI-Semi-Autonomous / AI-Autonomous
@@ -157,7 +184,7 @@ Take a Workflow Definition and produce the Build deliverables: an AI Building Bl
 10. **Check for existing skills and instructions** — Before generating artifacts:
     - Ask: "Did you build any skills for this workflow? If yes, list each skill name and which steps it covers."
     - Check the Context Inventory for existing prompt instructions, project instructions, or system prompts. These must be incorporated into the generated artifacts.
-11. **Generate platform artifacts** — Based on the platform and code comfort from Architecture Decisions:
+11. **Generate platform artifacts** — Based on the platform from Architecture Decisions. Resolve any deferred decisions now: ask about **shareability** (will team members run this?) to determine artifact format (file-based vs. code-based), and resolve the **specific platform offering** if not yet determined (e.g., Claude Code vs. Claude.ai). Infer **code comfort** from the specific offering (Claude Code = code-comfortable, ChatGPT = no-code).
 
     **a. Start with the cookbook's platform reference.** Read the Hands-on AI Cookbook platform guide for the user's platform to find curated links to official documentation:
 
@@ -175,7 +202,7 @@ Take a Workflow Definition and produce the Build deliverables: an AI Building Bl
     **c. Generate artifacts.** Using the verified documentation as the authoritative source, generate artifacts in the platform's latest recommended tools and patterns. The skill provides the *specs* (what each building block should do, its inputs/outputs/instructions from the Design phase). The model provides the *implementation* (how to build it on the user's platform, researched and verified at runtime).
 12. **Write SOP to Notion (if available)** — After artifacts are generated, check if the Notion MCP server is accessible AND this workflow was registered during the Deconstruct step. If so, offer to write the workflow SOP to the Notion page.
 
-13. **Launch Guide** — Walk the user through getting the workflow running. Use the platform, deployment surface, and code comfort from Architecture Decisions to tailor every instruction to their specific setup. Use web search to verify current platform steps. Write in plain language — assume no technical background unless code comfort was confirmed.
+13. **Launch Guide** — Walk the user through getting the workflow running. Use the platform and code comfort (resolved during artifact generation) to tailor every instruction to their specific setup. Use web search to verify current platform steps. Write in plain language — assume no technical background unless code comfort was confirmed.
 
     The Launch Guide covers four sections:
 
@@ -198,7 +225,7 @@ Take a Workflow Definition and produce the Build deliverables: an AI Building Bl
 
     **D. What to do next** — Brief guidance on:
     - How to run the workflow again in the future (the repeatable trigger)
-    - How to share it with team members (if shareability was flagged in Architecture Decisions)
+    - How to share it with team members (if shareability was confirmed during Construct)
     - When to revisit and improve (signs the workflow needs updating)
 
     Present the Launch Guide directly in the conversation. Also save it to `outputs/[workflow-name]-launch-guide.md` so the user has a reference they can follow later or share with teammates.
