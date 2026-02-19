@@ -5,13 +5,34 @@ description: Skills for AI-assisted coding workflows — feature PRDs, specs, an
 
 # Agentic Coding
 
-Skills for AI-assisted coding workflows. This plugin helps you go from idea to spec before you build. Start with a **Vision Brief** to capture a fuzzy idea in plain language, then turn it into a structured **PRD** (Product Requirements Document) with user stories, acceptance criteria, and GitHub issue tracking. The two skills are designed to flow together — the Vision Brief feeds directly into the PRD — but each works standalone too. It's the "discover and define" step that plugs into the broader development lifecycle alongside `/feature-dev` and test-driven development.
+Skills for AI-assisted coding workflows — go from idea to spec before you build. Start with a **Vision Brief** to capture a fuzzy idea in plain language, then turn it into a structured **PRD** (Product Requirements Document) with user stories, acceptance criteria, and GitHub issue tracking. The two skills flow together — the Vision Brief feeds directly into the PRD — but each works standalone too. Download them from GitHub or install as a Claude Code plugin.
 
-## Install
+!!! note "Platform note"
+    These skills are designed for **Claude Code** — they create local files in `specs/`, use the GitHub CLI to open issues, and integrate with plan mode. The skill files can be downloaded and adapted for other platforms, but you'll get the best experience in Claude Code or tools with file system and GitHub CLI access.
 
-```bash
-/plugin install agentic-coding@handsonai
-```
+## Get These Skills
+
+These skills are plain-text Markdown files. Choose how you want to get them:
+
+=== "Any Platform"
+
+    Download from GitHub and add to your platform's skill directory:
+
+    :material-github: [Browse on GitHub](https://github.com/jamesgray-ai/handsonai/tree/main/plugins/agentic-coding){ .md-button }
+
+    Works with **Claude Code, Cursor, Codex CLI, Gemini CLI, VS Code Copilot**, and more. See [How to Add Skills to Your Platform](../../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for step-by-step instructions for each tool.
+
+    You can also paste any skill file directly into your system prompt, project instructions, or custom GPT.
+
+=== "Claude Code Plugin"
+
+    One-command install with automatic slash commands:
+
+    ```bash
+    /plugin install agentic-coding@handsonai
+    ```
+
+    See [Using Plugins](using-plugins.md) for setup details, including [Claude.ai upload](using-plugins.md#using-skills-in-claudeai-web), [Cowork](using-plugins.md#using-plugins-in-claude-cowork), and [API usage](using-plugins.md#using-skills-via-the-claude-api).
 
 ## Slash Commands
 

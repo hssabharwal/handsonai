@@ -11,8 +11,14 @@
     {
       "name": "business-first-ai",
       "source": "./plugins/business-first-ai",
-      "description": "The Business-First AI Framework — discover AI opportunities, deconstruct workflows, and build with worked examples",
-      "version": "2.3.0"
+      "description": "The Business-First AI Framework — discover AI opportunities, deconstruct workflows, and build working AI workflows",
+      "version": "3.0.0"
+    },
+    {
+      "name": "ai-workflow-examples",
+      "source": "./plugins/ai-workflow-examples",
+      "description": "Working examples of AI workflows — agents for executive writing, editorial review, research, meeting prep, and AI news, plus supporting skills and portable prompts",
+      "version": "1.0.0"
     },
     {
       "name": "ai-registry",

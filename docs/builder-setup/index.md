@@ -123,7 +123,7 @@ This step has three parts:
 /plugin marketplace add jamesgray-ai/handsonai
 ```
 
-See the [Getting Started with Plugins](../use-the-cookbook/build/getting-started.md) guide for the full walkthrough.
+See the [Using Plugins](../use-the-cookbook/build/using-plugins.md) guide for the full walkthrough.
 
 **2. Set up the AI Registry.** The AI Registry is a Notion workspace template that gives you a structured system for tracking your workflows, AI building blocks, and connected applications. Once it's connected, Claude can name workflows, write SOPs (Standard Operating Procedures), and register skills directly in Notion.
 

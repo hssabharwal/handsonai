@@ -155,7 +155,8 @@ plugins:
         wall-of-love.md: what-people-built.md
         # Plugins → Use the Cookbook / Build
         plugins/index.md: use-the-cookbook/build/index.md
-        plugins/getting-started.md: use-the-cookbook/build/getting-started.md
+        plugins/getting-started.md: use-the-cookbook/build/using-plugins.md
+        use-the-cookbook/build/getting-started.md: use-the-cookbook/build/using-plugins.md
         plugins/using-plugins.md: use-the-cookbook/build/using-plugins.md
         plugins/business-first-ai.md: use-the-cookbook/build/business-first-ai.md
         plugins/ai-registry.md: use-the-cookbook/build/ai-registry.md
@@ -201,12 +202,12 @@ nav:
   - About: about.md
   - Use the Cookbook:
     - Overview: use-the-cookbook/index.md
-    - Ask (MCP Server): use-the-cookbook/ask/index.md
+    - MCP Server: use-the-cookbook/ask/index.md
     - Agents & Skills:
       - Browse Agents & Skills: use-the-cookbook/build/index.md
-      - Getting Started: use-the-cookbook/build/getting-started.md
       - Using Plugins: use-the-cookbook/build/using-plugins.md
-      - Business-First AI: use-the-cookbook/build/business-first-ai.md
+      - Business-First AI Framework: use-the-cookbook/build/business-first-ai.md
+      - AI Workflow Examples: use-the-cookbook/build/ai-workflow-examples.md
       - AI Registry: use-the-cookbook/build/ai-registry.md
       - Agentic Coding: use-the-cookbook/build/agentic-coding.md
     - Resources:

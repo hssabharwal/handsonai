@@ -5,16 +5,34 @@ description: Document, name, register, and sync AI operational workflows and ski
 
 # AI Registry
 
-Skills for building a structured registry of your AI workflows and skills. This plugin gives Claude the conventions for naming workflows, writing documentation (SOPs and process guides), registering skills in Notion, and syncing everything to GitHub. Use it to build an organized, searchable inventory of your AI operations.
+Skills for building a structured registry of your AI workflows and skills — naming conventions, documentation templates (SOPs and process guides), Notion registration, and GitHub syncing. These are plain-text Markdown files that work in any AI tool. Download them from GitHub, install as a Claude Code plugin, or paste directly into your system prompt to give any AI assistant your registry conventions.
 
 !!! note "Prerequisites"
-    This plugin requires a **Notion account** and the **Notion MCP connector**. Without it, Claude can follow the naming and documentation conventions but cannot save entries to Notion. See [Notion Registry Setup](../../builder-setup/notion-registry-setup.md) for configuration instructions.
+    These skills work best with a **Notion account** and the **Notion MCP connector**. Without it, Claude can follow the naming and documentation conventions but cannot save entries to Notion. See [Notion Registry Setup](../../builder-setup/notion-registry-setup.md) for configuration instructions.
 
-## Install
+## Get These Skills
 
-```bash
-/plugin install ai-registry@handsonai
-```
+These skills are plain-text Markdown files that work in any AI tool. Choose how you want to get them:
+
+=== "Any Platform"
+
+    Download from GitHub and add to your platform's skill directory:
+
+    :material-github: [Browse on GitHub](https://github.com/jamesgray-ai/handsonai/tree/main/plugins/ai-registry){ .md-button }
+
+    Works with **Claude Code, Cursor, Codex CLI, Gemini CLI, VS Code Copilot**, and more. See [How to Add Skills to Your Platform](../../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for step-by-step instructions for each tool.
+
+    You can also paste any skill file directly into your system prompt, project instructions, or custom GPT.
+
+=== "Claude Code Plugin"
+
+    One-command install with automatic slash commands:
+
+    ```bash
+    /plugin install ai-registry@handsonai
+    ```
+
+    See [Using Plugins](using-plugins.md) for setup details, including [Claude.ai upload](using-plugins.md#using-skills-in-claudeai-web), [Cowork](using-plugins.md#using-plugins-in-claude-cowork), and [API usage](using-plugins.md#using-skills-via-the-claude-api).
 
 ## Slash Commands
 

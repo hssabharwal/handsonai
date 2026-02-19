@@ -1,6 +1,6 @@
 ---
 title: Use the Cookbook
-description: Four ways to use the Hands-on AI Cookbook — ask for instant answers, download agents and skills, browse curated resources, or take a structured course
+description: Four ways to use the Hands-on AI Cookbook — connect the MCP server for instant answers, download agents and skills, browse curated resources, or take a structured course
 ---
 
 # Use the Cookbook
@@ -9,7 +9,7 @@ The Hands-on AI Cookbook isn't just a reference site — it's a toolkit you can 
 
 <div class="grid cards" markdown>
 
--   :material-chat-question:{ .lg .middle } **Ask (MCP Server)**
+-   :material-chat-question:{ .lg .middle } **MCP Server**
 
     ---
 
