@@ -18,7 +18,7 @@ The most common question at this point is: **"Where do I run this? How do I run 
 | Agent + skills + MCP | **Command an agent** — give a goal, it plans and executes | Claude Code subagents, OpenAI Agents, Google Agents, M365 Copilot Agents |
 | Any of the above + a schedule | **Automate** — recurring trigger, runs without you | Claude Code + launchd / Task Scheduler |
 
-If you ran the [Prompt](prompt.md) step, your Build outputs include a **Where to Run** section — it recommends whether to run your workflow in a normal chat or a project, based on how many context files you have and how often you'll run it. Use that as your starting point. If you don't have that output, the guidance below will help you decide.
+Your [Launch Guide](index.md#33-launch) from the Construct phase tells you exactly how to set up and run your workflow on your specific platform. The guidance below covers the general execution patterns if you need to decide independently.
 
 ---
 
@@ -30,8 +30,8 @@ The simplest execution pattern. You have a prompt and maybe some context files. 
 
 1. Open any AI tool — Claude, ChatGPT, Gemini, M365 Copilot, or any chat interface
 2. If you have context files (reference materials, style guides, example data), attach or upload them to the conversation
-3. Paste your Baseline Workflow Prompt
-4. Provide the inputs the prompt asks for — the prompt's input requirements section tells you exactly what's needed
+3. Paste the prompt generated during the Construct phase
+4. Provide the inputs the prompt asks for — the input requirements section tells you exactly what's needed
 5. Review the output
 
 This is where most workflows start, and many stay here permanently. If the workflow runs well as a paste-and-run prompt, there's no reason to add complexity.
@@ -57,7 +57,7 @@ When you're running the same workflow frequently and attaching the same context 
 2. **Upload your context artifacts** — the documents, data, rules, and examples from the [Context](context.md) step
 3. **Add custom instructions** (optional) — a brief orientation for the AI about this workflow's purpose
 4. **Start a new conversation** within the project
-5. **Paste the Baseline Workflow Prompt** — the prompt is always pasted fresh each run, never embedded in project instructions. The prompt IS the workflow.
+5. **Paste the workflow prompt** — the prompt is always pasted fresh each run, never embedded in project instructions. The prompt IS the workflow.
 6. **Provide inputs and review the output**
 
 Each time you run the workflow, start a new conversation in the project. The context is already there — you just paste the prompt and provide the inputs.

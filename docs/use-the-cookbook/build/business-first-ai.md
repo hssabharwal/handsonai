@@ -112,7 +112,7 @@ Agents activate automatically in Claude Code when your prompt matches. In Cowork
 
 1. **Discover** (`discovering-workflows`) — Audit your workflows, interview you about your work, and produce an opportunity report with structured candidates. If you already know which workflow to deconstruct, this step is brief.
 2. **Deconstruct** (`deconstructing-workflows`) — Interactive deep-dive that decomposes the workflow into refined steps using the 5-question framework. Produces the Workflow Definition.
-3. **Build** (`building-workflows`) — Design phase: choose an execution pattern, classify steps, map building blocks, identify skill candidates, configure agents. Construct phase: generate the Baseline Workflow Prompt, auto-generate skills/agents on the Claude platform, and produce a platform-specific implementation guide for non-Claude platforms (OpenAI, Gemini, M365 Copilot).
+3. **Build** (`building-workflows`) — Design phase: gather architecture decisions, choose an execution pattern and interaction mode, classify steps, map building blocks, identify skill candidates, configure agents. Construct phase: generate platform-appropriate artifacts (prompts, skills, agents, configs) and a Launch Guide tailored to your platform and technical comfort level.
 
 Files are saved to `outputs/` using kebab-case workflow names (e.g., `outputs/lead-qualification-definition.md`).
 
@@ -138,9 +138,8 @@ Files are saved to `outputs/` using kebab-case workflow names (e.g., `outputs/le
 1. **Opportunity Report** — `ai-opportunity-report.md` — categorized opportunities with structured workflow candidates (if generated)
 2. **Workflow Definition** — `[name]-definition.md` — structured decomposition of every step
 3. **AI Building Block Spec** — `[name]-building-block-spec.md` — execution pattern, autonomy classifications, building block mapping, skill candidates, agent configs
-4. **Baseline Workflow Prompt** — `[name]-prompt.md` — ready-to-use prompt (skill-aware if applicable)
-
-Plus auto-generated skills and agents on the Claude platform when the execution pattern calls for them.
+4. **Platform Artifacts** — prompts, skills, agents, and configs generated for your platform
+5. **Launch Guide** — `[name]-launch-guide.md` — step-by-step setup and first-run instructions
 
 ---
 
@@ -237,7 +236,7 @@ Design your AI implementation and construct the workflow.
 
 **Command:** `/business-first-ai:build-workflow`
 
-**What it does:** Takes a Workflow Definition and runs the full Build process: Design (execution pattern, autonomy classification, building block mapping, skill candidates, agent configuration) and Construct (Baseline Workflow Prompt, auto-generated skills and agents on Claude, platform-specific implementation guide for non-Claude platforms). This is the Build step.
+**What it does:** Takes a Workflow Definition and runs the full Build process: Design (architecture decisions, execution pattern with interaction mode, autonomy classification, building block mapping, skill candidates, agent configuration) and Construct (platform-appropriate artifacts and a Launch Guide). This is the Build step.
 
 **When to use it:** Use this when you have a Workflow Definition (from the Deconstruct step) and want to design and build your AI workflow. The Design phase produces the AI Building Block Spec; the Construct phase generates everything you need to run the workflow.
 
@@ -247,18 +246,18 @@ Design your AI implementation and construct the workflow.
 
 1. **Load Workflow Definition** — Claude reads the Workflow Definition from `outputs/`
 2. **Confirm understanding** — Claude summarizes the workflow and asks you to confirm
-3. **Execution pattern assessment** — Claude walks you through the four execution patterns (Prompt, Skill-Powered Prompt, Single Agent, Multi-Agent) and recommends one based on your workflow's needs
-4. **Classify each step** — Autonomy level, AI building blocks, tools, human review gates
-5. **Identify skill candidates** — Steps tagged for skill creation with generation-ready detail
-6. **Agent configuration** (when applicable) — Platform-agnostic agent blueprint
-7. **Generate AI Building Block Spec** — Complete design document
+3. **Architecture decisions** — 8 questions about platform, deployment, code comfort, integrations, shareability, browser access, scheduling, and data sensitivity
+4. **Execution pattern assessment** — Claude walks you through the four execution patterns and recommends one with an interaction mode (Interactive, Autonomous, or Hybrid)
+5. **Classify each step** — Autonomy level, AI building blocks, tools, human review gates
+6. **Identify skill candidates** — Steps tagged for skill creation with generation-ready detail
+7. **Agent configuration** (when applicable) — Platform-agnostic agent blueprint
+8. **Generate AI Building Block Spec** — Complete design document
 
 **Construct phase:**
 
-8. **Pattern-specific build path** — Only the steps relevant to your chosen execution pattern
-9. **Generate Baseline Workflow Prompt** — Self-contained, ready-to-use prompt
-10. **Auto-generate skills and agents** (Claude platform) — SKILL.md and agent .md files from the Design output
-11. **Platform-specific implementation guide** (non-Claude agent patterns) — GUI walkthroughs and code examples for OpenAI, Gemini, or M365 Copilot
+9. **Pattern-specific build path** — Only the steps relevant to your chosen execution pattern
+10. **Generate platform artifacts** — Prompts, skills, agents, and configs in whatever format your platform needs (researched via web search at runtime)
+11. **Launch Guide** — Plain-language setup instructions, first-run test, and next steps tailored to your platform
 
 **Example prompts:**
 
@@ -272,11 +271,9 @@ Design your AI implementation and construct the workflow.
 
 **What you'll get:**
 
-- **AI Building Block Spec** (`outputs/[name]-building-block-spec.md`) — execution pattern, step classifications, skill candidates, agent configs, implementation order
-- **Baseline Workflow Prompt** (`outputs/[name]-prompt.md`) — self-contained prompt you can run immediately
-- **Platform Implementation Guide** (`outputs/[name]-implementation-guide.md`, when applicable) — GUI walkthrough and code/config for your chosen platform
-- **Skills** (`.claude/skills/*/SKILL.md`) — auto-generated on Claude platform when applicable
-- **Agents** (`.claude/agents/*.md`) — auto-generated on Claude platform when applicable
+- **AI Building Block Spec** (`outputs/[name]-building-block-spec.md`) — architecture decisions, execution pattern with interaction mode, step classifications, skill candidates, agent configs, implementation order
+- **Platform Artifacts** — prompts, skills, agents, and configs in whatever format your platform needs
+- **Launch Guide** (`outputs/[name]-launch-guide.md`) — step-by-step setup, first-run test, and next steps
 
 **Platform compatibility:** Claude Code &#10003; | Claude.ai &#10003;
 
@@ -508,7 +505,7 @@ The plugin covers the full Business-First AI Framework. Here's the recommended p
 
 1. **Discover** — Run `discovering-workflows` to audit your workflows and identify where AI creates the most value
 2. **Deconstruct** — Pick your highest-impact candidate and run it through the `workflow-deconstructor` agent (or use the skills individually: `deconstructing-workflows` → `building-workflows`)
-3. **Build** — Use the Baseline Workflow Prompt on a real scenario, then build skills in priority order from the recommendations. Study the Step 3 agents and skills as working examples.
+3. **Build** — Follow the Launch Guide to get your workflow running, then iterate. Study the Step 3 agents and skills as working examples.
 
 ## FAQ
 
