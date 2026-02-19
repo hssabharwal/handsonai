@@ -6,7 +6,6 @@ description: >
   Interactively decomposes a workflow into a structured Workflow Definition using the 5-question
   framework. This is Step 2 of the Business-First AI Framework.
 user_invocable: true
-command: deconstruct
 ---
 
 # Workflow Deconstruction
