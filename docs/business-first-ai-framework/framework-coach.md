@@ -27,7 +27,7 @@ Each step produces a specific deliverable that feeds into the next:
 | **2. Deconstruct** | Deep-dive a specific workflow using the 5-question framework | Workflow Definition | `[name]-definition.md` |
 | **3.1 Design** | Choose execution pattern, classify steps, map building blocks | AI Building Block Spec | `[name]-building-block-spec.md` |
 | **3.2 Construct** | Build the components your pattern requires | Platform artifacts + Launch Guide | Context, skills, agents, configs |
-| **3.3 Launch** | Get the workflow running, test on a real scenario, iterate | Refined workflow | `[name]-launch-guide.md` |
+| **3.3 Run** | Get the workflow running, test on a real scenario, iterate | Refined workflow | `[name]-launch-guide.md` |
 
 ---
 
@@ -98,11 +98,12 @@ Build has three parts: **3.1 Design**, **3.2 Construct**, and **3.3 Run**.
 
 **Purpose:** Decide *how* the workflow should be built before building it.
 
-**Process:** Take the Workflow Definition and make three design decisions:
+**Process:** Take the Workflow Definition and make four design decisions:
 
-1. **Execution pattern** — How complex does the AI implementation need to be?
-2. **Autonomy classification** — How much AI assistance does each step need?
-3. **Building block mapping** — What specific AI components does each step require?
+1. **Architecture decisions** — What platform, deployment surface, integrations, and constraints shape the build? (8 questions about platform, code comfort, tools, data sensitivity, etc.)
+2. **Execution pattern** — How complex does the AI implementation need to be?
+3. **Autonomy classification** — How much AI assistance does each step need?
+4. **Building block mapping** — What specific AI components does each step require?
 
 **Execution Pattern Spectrum:**
 
@@ -144,11 +145,20 @@ Build has three parts: **3.1 Design**, **3.2 Construct**, and **3.3 Run**.
 
 **Output:** An AI Building Block Spec with execution pattern, autonomy classifications, building block mapping, skill candidates (with generation-ready detail), agent configurations (when applicable), context inventory, and implementation order.
 
+**Two phases, two modes:** Design has two distinct phases:
+
+1. **Collaborative decisions (normal conversation)** — The model asks the 8 architecture questions, recommends an execution pattern and interaction mode, and the user confirms. This is back-and-forth.
+2. **Plan the spec (plan mode)** — Once architecture decisions and execution pattern are locked in, the user activates plan mode. The model then plans the full AI Building Block Spec — classifying steps, mapping building blocks, identifying skill candidates, and documenting agent blueprints.
+
+After the model produces the spec, the user reviews and approves the AI Building Block Spec before moving to Construct.
+
 **Coaching guidance:**
 
 - Most workflows start as Prompt or Skill-Powered Prompt — start simple
 - The AI Building Block Spec is platform-agnostic — it works on any AI platform
 - Implementation order: quick wins first, complex agent steps last
+- After confirming architecture decisions and execution pattern, prompt the user to activate plan mode before the model proceeds to classify steps and map building blocks
+- After the user approves the AI Building Block Spec, prompt them to exit plan mode before starting Construct
 
 ### 3.2: Construct
 
@@ -163,7 +173,7 @@ Each pattern has a specific build path — users follow only the steps that appl
 | **Single Agent** | Create context → Build skills → Connect MCP → Build agent → Run |
 | **Multi-Agent** | Create context → Build skills → Connect MCP → Build agents → Build orchestrator → Run |
 
-**Building block guides:** Context, Projects, Skills, Prompt, Agents, MCP — each covers one building block in depth.
+**Building blocks:** See [3.2: Construct](https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/build/construct.md) for the full guide — covers all building blocks (Context, Projects, Skills, Prompt, Agents, MCP) and what the user needs to do themselves (gathering context, configuring MCP connections, operationalizing agents on their platform).
 
 **Operational rhythm:** After creating each building block: **test it, register it** (in the AI Registry), **commit it** (to GitHub).
 
@@ -232,16 +242,10 @@ When the user needs more depth on a specific topic, fetch the raw Markdown from 
 |-------|-------------|-----------------|
 | Framework overview | Full methodology, key concepts, vocabulary | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/index.md` |
 | Step 1: Discover | Opportunity finder prompt template and instructions | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/discover.md` |
-| Step 2: Deconstruct overview | How Deconstruct works, tips, examples | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/deconstruct/index.md` |
-| Step 2: Workflow Definition prompt | The full prompt template for breaking down workflows | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/deconstruct/workflow-definition.md` |
+| Step 2: Deconstruct | How Deconstruct works, examples, tips, and what the skill produces | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/deconstruct/index.md` |
 | Step 3: Build overview | The three parts (Design, Construct, Run) and pattern-specific paths | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/build/index.md` |
 | 3.1: Design | Execution pattern spectrum, autonomy classification, the Design prompt template | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/build/design.md` |
-| 3.2: Context | Creating context artifacts for your workflow | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/build/context.md` |
-| 3.2: Projects | Setting up project workspaces | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/build/projects.md` |
-| 3.2: Skills | Building reusable skills from your AI Building Block Spec | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/build/skills.md` |
-| 3.2: Prompt | How prompts work as a building block | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/build/prompt.md` |
-| 3.2: Agents | Agent decision framework and building agents | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/build/agents.md` |
-| 3.2: MCP | Connecting AI to external tools and services | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/build/mcp.md` |
+| 3.2: Construct | How the model builds your workflow's building blocks, plus what you need to do yourself | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/build/construct.md` |
 | 3.3: Run | Executing, testing, and iterating your workflow | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/build/run.md` |
 
 ### Worked Examples

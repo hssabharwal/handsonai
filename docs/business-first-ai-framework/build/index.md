@@ -34,11 +34,11 @@ Design covers:
 4. **Autonomy classification** — Classify each step (Human → Deterministic → Semi-Autonomous → Autonomous)
 5. **Building block mapping** — Map each step to AI building blocks (Prompt, Context, Skill, Agent, MCP, Project)
 6. **Skill candidates** — Tag steps that should become reusable skills, with generation-ready detail
-7. **Agent configuration** (when applicable) — Platform-agnostic blueprint for each agent (name, description, instructions, model, tools, context, goal)
+7. **Agent blueprints** (when applicable) — Platform-agnostic specification for each agent (name, description, instructions, model, tools, context, goal) — built into working agents by the model in 3.2
 
-**[Design Your AI Workflow](design.md)** — the full Design guide with prompt template, execution pattern decision flow, and output format
+**[Design Your AI Workflow](design.md)** — the full Design guide with execution pattern decision flow and output format
 
-**Produces:** `[name]-building-block-spec.md` — your AI Building Block Spec with architecture decisions, execution pattern with interaction mode, step classifications, skill candidates, agent configurations (when applicable), and implementation order.
+**Produces:** `[name]-building-block-spec.md` — your AI Building Block Spec with architecture decisions, execution pattern with interaction mode, step classifications, skill candidates, agent blueprints (when applicable), and implementation order.
 
 ## 3.2: Construct
 
@@ -46,40 +46,40 @@ The AI Building Block Spec tells you exactly what to build — and the execution
 
 === "Prompt"
 
-    1. **[Create context](context.md)** — Build the context artifacts listed in your Building Block Spec's Context Inventory
-    2. **[Set up project workspace](projects.md)** (optional) — If the Building Block Spec's Where to Run recommends a project
+    1. **Create context** — Build the context artifacts listed in your Building Block Spec's Context Inventory
+    2. **Set up project workspace** (optional) — If the Building Block Spec's Where to Run recommends a project
     3. **Generate platform artifacts** — The model generates the prompt and any configuration needed for your platform
     4. **Launch Guide** → 3.3
 
 === "Skill-Powered Prompt"
 
-    1. **[Create context](context.md)** — Build the context artifacts listed in your Building Block Spec's Context Inventory
-    2. **[Set up project workspace](projects.md)** (optional) — If the Building Block Spec's Where to Run recommends a project
-    3. **[Build skills](skills.md)** — Build skills for the steps tagged as skill candidates in your Building Block Spec. The model generates skills in the format appropriate to your platform.
+    1. **Create context** — Build the context artifacts listed in your Building Block Spec's Context Inventory
+    2. **Set up project workspace** (optional) — If the Building Block Spec's Where to Run recommends a project
+    3. **Build skills** — Build skills for the steps tagged as skill candidates in your Building Block Spec. The model generates skills in the format appropriate to your platform.
     4. **Generate platform artifacts** — The model generates the prompt and skill configurations for your platform
     5. **Launch Guide** → 3.3
 
 === "Single Agent"
 
-    1. **[Create context](context.md)** — Build the context artifacts listed in your Building Block Spec's Context Inventory
-    2. **[Build skills](skills.md)** — Build skills for tagged candidates
-    3. **[Connect tools](mcp.md)** — Wire external tools from the Tools and Connectors section of your Building Block Spec
+    1. **Create context** — Build the context artifacts listed in your Building Block Spec's Context Inventory
+    2. **Build skills** — Build skills for tagged candidates
+    3. **Connect tools** — Wire external tools from the Tools and Connectors section of your Building Block Spec
     4. **Generate platform artifacts** — The model generates agent configs, skills, and connectors for your platform
     5. **Launch Guide** → 3.3
 
 === "Multi-Agent"
 
-    1. **[Create context](context.md)** — Build the context artifacts listed in your Building Block Spec's Context Inventory
-    2. **[Build skills](skills.md)** — Build skills for tagged candidates
-    3. **[Connect tools](mcp.md)** — Wire external tools from the Tools and Connectors section of your Building Block Spec
+    1. **Create context** — Build the context artifacts listed in your Building Block Spec's Context Inventory
+    2. **Build skills** — Build skills for tagged candidates
+    3. **Connect tools** — Wire external tools from the Tools and Connectors section of your Building Block Spec
     4. **Generate platform artifacts** — The model generates agent configs, orchestrator, skills, and connectors for your platform
     5. **Launch Guide** → 3.3
 
-Each guide page covers one building block in depth. You only visit the pages your pattern requires — no "skip if not needed."
+The model handles each step based on your execution pattern. See [Construct](construct.md) for details on what you'll need to do yourself (gathering context, configuring MCP connections, building agents on your platform).
 
-## 3.3: Launch
+## 3.3: Run
 
-The Construct phase ends with a **Launch Guide** — a plain-language walkthrough tailored to your platform and technical comfort level. It tells you exactly what to do with the artifacts that were built:
+The final Construct deliverable is a **Launch Guide** (`[name]-launch-guide.md`) — a plain-language walkthrough tailored to your platform and technical comfort level. It tells you exactly what to do with the artifacts that were built:
 
 1. **What was built** — Every artifact listed with what it does and where it lives
 2. **Setup steps** — Numbered instructions for getting each artifact into the right place on your platform (menu paths, button names, what you should see when it's working)
@@ -116,9 +116,9 @@ The workflow is ready when you can run it on a new scenario and trust the output
 | File | From | What it is |
 |------|------|-----------|
 | `[name]-definition.md` | Deconstruct | Your Workflow Definition — the raw decomposition |
-| `[name]-building-block-spec.md` | Build: 3.1 Design | Your AI Building Block Spec — architecture decisions, execution pattern, classifications, skill candidates, agent configs |
+| `[name]-building-block-spec.md` | Build: 3.1 Design | Your AI Building Block Spec — architecture decisions, execution pattern, classifications, skill candidates, agent blueprints |
 | Platform artifacts | Build: 3.2 Construct | Prompts, skills, agents, and configs generated in whatever format your platform needs |
-| `[name]-launch-guide.md` | Build: 3.3 Launch | Step-by-step setup instructions, first-run test, and next steps — tailored to your platform |
+| `[name]-launch-guide.md` | Build: 3.3 Run | Step-by-step setup instructions, first-run test, and next steps — tailored to your platform |
 
 The Building Block Spec is the design document — it captures *what* to build and *why*. The platform artifacts are the implementation — generated by the model using your architecture decisions and current platform knowledge. The Launch Guide bridges the gap between "artifacts exist" and "workflow is running."
 
@@ -144,15 +144,10 @@ These aren't separate steps — they're part of the rhythm of building. Each tim
 | | Guide | When to use |
 |-------|-------|-------------|
 | 3.1 | [Design Your AI Workflow](design.md) | Always — produces your AI Building Block Spec |
-| 3.2 | [Context](context.md) | Always |
-| 3.2 | [Projects](projects.md) | When Where to Run recommends a project workspace |
-| 3.2 | [Skills](skills.md) | When Building Block Spec tags steps as skill candidates |
-| 3.2 | [Prompt](prompt.md) | For Prompt and Skill-Powered Prompt patterns |
-| 3.2 | [Agents](agents.md) | For Single Agent and Multi-Agent patterns |
-| 3.2 | [MCP](mcp.md) | When Building Block Spec lists external tools or connectors |
-| 3.3 | [Launch & Run](run.md) | Always — Launch Guide + iterating |
+| 3.2 | [Construct](construct.md) | Always — the model builds your building blocks, with your help on context, MCP, and platform agents |
+| 3.3 | [Run](run.md) | Always — Launch Guide + iterating |
 
-Each building block guide cross-references the corresponding [Agentic Building Blocks](../../agentic-building-blocks/index.md) page for platform-specific implementation details.
+For deep dives on individual building blocks, see the [Agentic Building Blocks](../../agentic-building-blocks/index.md) reference pages.
 
 ## Worked Examples
 
@@ -212,4 +207,4 @@ These are the working building blocks included across all three examples. Each o
 - [AI Use Cases](../../use-cases/index.md) — browse use cases by type (content creation, research, coding, data analysis, ideation, automation)
 - [Discover AI Workflow Opportunities](../discover.md) — discover which of your workflows are candidates for AI
 - [Deconstruct Workflows](../deconstruct/index.md) — break down workflows into structured definitions
-- [Plugin Marketplace](../../use-the-cookbook/build/index.md) — browse all available plugins
+- [Agents & Skills](../../use-the-cookbook/build/index.md) — browse all available agents, skills, and prompts

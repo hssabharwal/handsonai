@@ -3,11 +3,13 @@ title: Run Workflows
 description: How to execute your AI workflow — choosing between normal chats, projects, and agent systems based on what you built.
 ---
 
-# Run Workflows
+# 3.3: Run Workflows
 
-You've built your building blocks — context artifacts, a prompt, maybe skills, agents, or MCP connections. Now run the workflow.
+You've worked with the model to build your building blocks — context artifacts, a prompt, maybe skills, agents, or MCP connections. Now run the workflow.
 
-The most common question at this point is: **"Where do I run this? How do I run this?"** The answer depends on what you built.
+**Start with your Launch Guide.** The model generates a Launch Guide (`[name]-launch-guide.md`) at the end of [Construct](index.md#32-construct) — it tells you exactly how to set up and run everything on your specific platform. If you have one, follow it.
+
+The sections below cover the general execution patterns if you need to decide independently or want to understand the options.
 
 ## Choose Your Execution Pattern
 
@@ -17,8 +19,6 @@ The most common question at this point is: **"Where do I run this? How do I run 
 | Prompt + context + project | **Run in a project** — context is pre-loaded, paste the prompt each run | Claude Projects, ChatGPT Projects, Gemini Gems, M365 Copilot Notebooks |
 | Agent + skills + MCP | **Command an agent** — give a goal, it plans and executes | Claude Code subagents, OpenAI Agents, Google Agents, M365 Copilot Agents |
 | Any of the above + a schedule | **Automate** — recurring trigger, runs without you | Claude Code + launchd / Task Scheduler |
-
-Your [Launch Guide](index.md#33-launch) from the Construct phase tells you exactly how to set up and run your workflow on your specific platform. The guidance below covers the general execution patterns if you need to decide independently.
 
 ---
 
@@ -54,7 +54,7 @@ When you're running the same workflow frequently and attaching the same context 
 ### How to run it:
 
 1. **Create the project** — name it after your workflow
-2. **Upload your context artifacts** — the documents, data, rules, and examples from the [Context](context.md) step
+2. **Upload your context artifacts** — the documents, data, rules, and examples you gathered during the [Construct](construct.md) step
 3. **Add custom instructions** (optional) — a brief orientation for the AI about this workflow's purpose
 4. **Start a new conversation** within the project
 5. **Paste the workflow prompt** — the prompt is always pasted fresh each run, never embedded in project instructions. The prompt IS the workflow.

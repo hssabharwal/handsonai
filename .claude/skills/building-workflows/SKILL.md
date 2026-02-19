@@ -157,7 +157,22 @@ Take a Workflow Definition and produce the Build deliverables: an AI Building Bl
 10. **Check for existing skills and instructions** — Before generating artifacts:
     - Ask: "Did you build any skills for this workflow? If yes, list each skill name and which steps it covers."
     - Check the Context Inventory for existing prompt instructions, project instructions, or system prompts. These must be incorporated into the generated artifacts.
-11. **Generate platform artifacts** — Based on the platform and code comfort from Architecture Decisions, use web search to research the platform's current recommended approach for building the needed artifacts (prompts, skills, agents, orchestration, connectors). Verify what's current vs. deprecated. Then generate artifacts using the platform's latest recommended tools and patterns. The skill provides the *specs* (what each building block should do, its inputs/outputs/instructions from the Design phase). The model provides the *implementation* (how to build it on the user's platform, researched at runtime).
+11. **Generate platform artifacts** — Based on the platform and code comfort from Architecture Decisions:
+
+    **a. Start with the cookbook's platform reference.** Read the Hands-on AI Cookbook platform guide for the user's platform to find curated links to official documentation:
+
+    | User's platform | Cookbook reference page |
+    |---|---|
+    | Claude | `docs/platforms/claude/index.md` (and `docs/platforms/claude/agents/building-agents.md` for agents) |
+    | OpenAI | `docs/platforms/openai/index.md` (and `docs/platforms/openai/agents/building-agents.md` for agents) |
+    | Google Gemini | `docs/platforms/google-gemini/index.md` (and `docs/platforms/google-gemini/agents/building-agents.md` for agents) |
+    | M365 Copilot | `docs/platforms/m365-copilot/index.md` (and `docs/platforms/m365-copilot/agents/building-agents.md` for agents) |
+
+    These pages contain links to the platform's official documentation, SDK references, and setup guides — maintained as part of the cookbook.
+
+    **b. Verify currency via web search.** Use web search to confirm the documentation links are still current and to find any newer resources. Verify what's current vs. deprecated.
+
+    **c. Generate artifacts.** Using the verified documentation as the authoritative source, generate artifacts in the platform's latest recommended tools and patterns. The skill provides the *specs* (what each building block should do, its inputs/outputs/instructions from the Design phase). The model provides the *implementation* (how to build it on the user's platform, researched and verified at runtime).
 12. **Write SOP to Notion (if available)** — After artifacts are generated, check if the Notion MCP server is accessible AND this workflow was registered during the Deconstruct step. If so, offer to write the workflow SOP to the Notion page.
 
 13. **Launch Guide** — Walk the user through getting the workflow running. Use the platform, deployment surface, and code comfort from Architecture Decisions to tailor every instruction to their specific setup. Use web search to verify current platform steps. Write in plain language — assume no technical background unless code comfort was confirmed.

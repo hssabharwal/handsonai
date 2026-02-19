@@ -1,9 +1,9 @@
 ---
 title: Design Your AI Workflow
-description: Gather architecture decisions, choose an execution pattern and interaction mode, classify steps on the autonomy spectrum, map AI building blocks, identify skill candidates, and configure agents — producing a platform-agnostic AI Building Block Spec.
+description: Gather architecture decisions, choose an execution pattern and interaction mode, classify steps on the autonomy spectrum, map AI building blocks, identify skill candidates, and document agent blueprints — producing a platform-agnostic AI Building Block Spec.
 ---
 
-# Design Your AI Workflow
+# 3.1: Design Your AI Workflow
 
 > **Part of:** [Build Workflows](index.md)
 
@@ -25,7 +25,7 @@ The Design phase is where you decide *how* your workflow should be built — bef
 | | |
 |---|---|
 | **What you'll do** | Upload your Workflow Definition, answer architecture questions about your platform and constraints, review the AI's execution pattern recommendation and step classifications, and adjust anything that doesn't look right |
-| **What you'll get** | An **AI Building Block Spec** — architecture decisions, execution pattern with interaction mode, autonomy classifications, building block mapping, skill candidates, agent configurations (when applicable), and a prioritized build sequence |
+| **What you'll get** | An **AI Building Block Spec** — architecture decisions, execution pattern with interaction mode, autonomy classifications, building block mapping, skill candidates, agent blueprints (when applicable), and a prioritized build sequence |
 | **Time** | ~15–25 minutes (architecture questions + reviewing the AI's analysis) |
 
 ## Why This Matters
@@ -87,6 +87,11 @@ The interaction mode is determined by your architecture decisions — deployment
 !!! info "Deeper architectural patterns"
     For detailed implementation blueprints (prompt chaining, routing, parallelization, orchestrator-workers, evaluator-optimizer, and autonomous agents), see [Workflow Architecture Patterns](../../patterns/workflow-architecture/index.md).
 
+---
+
+!!! warning "Activate plan mode now"
+    You've made the key decisions — architecture, execution pattern, and interaction mode. This is the transition point. **Activate plan mode** on your AI tool before continuing. The model will now plan the rest of the spec (autonomy classification, building block mapping, skill candidates, agent blueprints) based on the decisions you've locked in. See [How to activate plan mode](#two-phases-two-modes) for platform-specific instructions.
+
 ## Autonomy Classification
 
 For each step in your Workflow Definition, classify it on the autonomy spectrum:
@@ -137,9 +142,9 @@ For each skill candidate, document enough detail for generation:
 
 This detail enables generation of skills on any platform during the Construct phase.
 
-## Agent Configuration
+## Agent Blueprints
 
-When the execution pattern is Single Agent or Multi-Agent, document each agent your workflow needs:
+When the execution pattern is Single Agent or Multi-Agent, document each agent your workflow needs. These are platform-agnostic specifications — the model builds them into working agents during [Construct](index.md#32-construct).
 
 | Component | What to specify |
 |-----------|----------------|
@@ -164,308 +169,42 @@ This agent configuration is **platform-agnostic** — it serves as a blueprint. 
 
 ## How to Use This
 
-There are two ways to run the Design phase, depending on which tools you use:
+This step is facilitated by the **`building-workflows`** Business-First AI Framework Skill. How you get it depends on your platform — see [How to Add Skills to Your Platform](../../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for installation instructions for Claude Code, Cursor, Codex CLI, Gemini CLI, and VS Code Copilot.
 
-### Option A: Prompt template (any AI tool)
+**Start with this prompt:**
 
-1. **Copy the prompt** from the code block below
-2. **Paste it into a new conversation** in your preferred AI tool
-3. **Press Enter** — the model will ask you to paste your Workflow Definition
-4. **Upload or paste your Workflow Definition file** (`[workflow-name]-definition.md`) from the Deconstruct step
-5. **Answer the architecture questions** — the model will ask about your platform, deployment surface, integrations, and constraints
-6. **Review the analysis** — the model will recommend an execution pattern and interaction mode, classify steps, and map building blocks
-7. **Download the AI Building Block Spec** the model produces at the end — a Markdown file named `[workflow-name]-building-block-spec.md`
-8. **Keep this file** — you'll use it in the [Construct phase](index.md), and you can share it with your team for feedback
-
-!!! note "Web search and platform research"
-    When the model asks for your platform and researches integration options, this is by design. The framework delegates platform-specific knowledge to the model rather than hardcoding it, so you always get current recommendations. Use an AI tool that supports web search for the best experience.
-
-### Option B: Claude skill
-
-Use the `building-workflows` skill from the [Business-First AI plugin](../../use-the-cookbook/build/business-first-ai.md). It reads the Workflow Definition, runs the Design analysis, and saves the AI Building Block Spec automatically.
-
-- **Claude Code or Cowork** — install the plugin (`/plugin install business-first-ai@handsonai`) and start with:
-    ```
-    Design the AI workflow from outputs/[workflow-name]-definition.md.
-    Recommend an execution pattern and map building blocks.
-    ```
-    The AI Building Block Spec is saved to `outputs/[workflow-name]-building-block-spec.md`.
-- **Claude.ai** — zip the `building-workflows` skill folder and upload it via **Settings > Capabilities > Upload skill**, then start a new chat with: "Design my AI workflow from this Workflow Definition." Upload or paste your Workflow Definition when prompted. See [Using Skills in Claude.ai](../../use-the-cookbook/build/using-plugins.md#using-skills-in-claudeai-web) for detailed instructions.
-
-!!! tip "Design is mostly analytical"
-    Unlike the Deconstruct step's extended back-and-forth, the Design phase is focused on analysis. The model does the heavy lifting — gathering architecture decisions, recommending an execution pattern and interaction mode, classifying steps, mapping building blocks, and identifying skill and agent candidates. Expect 15-25 minutes of interaction.
-
-## The Prompt
-
-```text
-You are an expert AI Workflow Designer who specializes in translating business workflow definitions into AI implementation blueprints. Use web search to research the user's chosen platform's current tools, APIs, and conventions. Do not rely on potentially outdated knowledge — always verify what's current before recommending or generating platform-specific implementations.
-
-I have a Workflow Definition from a previous conversation. I'll paste it when you ask for it.
-
----
-
-## Part 1 — Paste Your Workflow Definition
-
-Say: "Upload your Workflow Definition file, or paste its contents below, then press Enter."
-
-Wait for me to provide it. After receiving the Workflow Definition, confirm you've read it by summarizing: the workflow name, the number of steps, and the workflow outcome. Then proceed to Part 2.
-
----
-
-## Part 2 — Architecture Decisions
-
-Before assessing execution patterns, gather the information needed to make platform-aware recommendations. Ask these questions one at a time, waiting for each answer before asking the next:
-
-1. **Platform** — Which AI platform will this run on? (Let me name my tool — do not present a fixed list of platforms.)
-2. **Deployment surface** — How will I access it — web browser, desktop app, or command-line tool?
-3. **Code comfort** — Am I comfortable with code, or no-code only?
-4. **Tool integrations** — What external tools or services does this workflow connect to?
-   After my answer: **use web search** to research current integration options for my platform. Categorize each as:
-   - Native/zero-config (built into the platform)
-   - MCP or connector available (requires setup)
-   - API integration possible (requires code/configuration)
-   - Manual only (export/paste)
-   Surface the mapping to me immediately.
-5. **Shareability** — Will team members run this? What's their technical comfort?
-6. **Authenticated browser access** — Does any step require logging into a website through a browser?
-7. **Scheduled execution** — Does it need to run on a schedule without human triggering?
-8. **Data sensitivity** — Does it handle PII, financial, or regulated data?
-
-After all 8 questions: summarize as Architecture Decisions with rationale for each. Ask me to confirm before proceeding.
-
-Then review the Workflow Definition steps against the architecture decisions. Ask additional follow-up questions only where the answer would materially change a building block recommendation or surface a blocker. One at a time. Stop when no further questions are needed.
-
-**Downstream propagation** — architecture decisions gate subsequent steps:
-- No-code + no native connectors → cap at Skill-Powered Prompt
-- Scheduled execution + deployment surface doesn't support unattended runs → flag infrastructure needed (research options via web search)
-- Authenticated browser access → flag browser automation requirement
-- Data sensitivity → note compliance considerations
-
----
-
-## Part 3 — Execution Pattern Assessment
-
-Assess the overall workflow against the execution pattern spectrum:
-
-| Pattern | Description | Signals |
-|---------|-------------|---------|
-| **Prompt** | Single structured prompt with step-by-step instructions, all logic inline | Sequential steps, human provides inputs and makes decisions |
-| **Skill-Powered Prompt** | Prompt that invokes reusable skills for complex sub-routines | Repeatable sub-routines, moderate complexity, steps that recur across workflows |
-| **Single Agent** | One agent with tool access, capable of autonomous decisions | Tool use required, autonomous decisions, multi-step reasoning |
-| **Multi-Agent** | Specialized agents coordinating in a pipeline | Multiple expertise domains, parallel execution, review gates |
-
-Work through five decision questions:
-1. Does the workflow require tool use? (web, files, APIs)
-2. Does it require autonomous decision-making?
-3. Are there steps with complex, reusable logic? → skill candidates
-4. Does it span multiple expertise domains?
-5. Would it benefit from parallel execution or review gates?
-
-Present your recommended execution pattern with reasoning. State which architecture decisions influenced the recommendation.
-
-**Interaction Mode** — After recommending the pattern, determine the interaction mode based on architecture decisions:
-
-| Mode | Description | Determined by |
-|------|-------------|---------------|
-| **Interactive** | Human and AI collaborate in real-time. AI pauses for input, review, and decisions at marked steps. | Web/desktop deployment, no scheduled execution |
-| **Autonomous** | AI executes end-to-end without human involvement during the run. | Scheduled/unattended execution, CLI |
-| **Hybrid** | Some steps run autonomously, others pause for human interaction. | Mix of automated and review steps |
-
-Present the recommended interaction mode with reasoning tied to the architecture decisions. Ask if I agree with both the pattern and the interaction mode before proceeding.
-
----
-
-## Part 4 — AI Building Block Mapping
-
-For each refined step from the Workflow Definition, determine:
-
-1. **Autonomy classification** — Classify each step on the autonomy spectrum:
-   - **Human step** — Requires human judgment, creativity, or physical action; AI cannot perform this
-   - **AI step (deterministic)** — Repeatable with clear rules; AI can execute reliably with minimal supervision
-   - **AI step (semi-autonomous)** — AI handles most of the work but needs human review at key checkpoints
-   - **AI step (fully autonomous / agentic)** — AI executes end-to-end, including decisions and tool use, with no human in the loop
-
-2. **AI building block** — Map each AI-assisted step to one or more of these seven building blocks:
-   - **Model** — The AI engine for this step; choose based on the step's requirements (speed, reasoning depth, multimodal)
-   - **Prompt** — A well-crafted instruction that tells the model what to do for this step
-   - **Context** — Background information, reference documents, examples, or data the model needs to perform the step well
-   - **Skill** — A reusable routine the model can invoke — give it inputs, it follows a defined process, it produces consistent outputs
-   - **Agent** — An autonomous AI that plans, uses tools, and executes multi-step work with minimal supervision
-   - **MCP (Model Context Protocol)** — A connector that gives the model access to external tools, APIs, databases, or services
-   - **Project** — A persistent workspace that groups prompts, context, skills, and agents for a specific workflow
-
-3. **Tools and connectors** — What external tools, APIs, or integrations does this step need? (Populated from the integration mapping in Architecture Decisions; manual-only integrations cap the step at Semi-Autonomous.)
-
-4. **Human-in-the-loop gates** — Flag any steps where human review is recommended before the workflow continues, even if the step is AI-executed.
-
-5. **Skill candidate flag** — Tag steps that should become skills. For each skill candidate, note: purpose, inputs, outputs, decision logic, and failure modes — enough detail for a skill to be built from this description alone.
-
-Present the mapping as a clear table, then walk me through your reasoning for any non-obvious classifications. Ask if I want to adjust anything before proceeding.
-
----
-
-## Part 5 — Agent Configuration (if applicable)
-
-If the recommended execution pattern is Single Agent or Multi-Agent, document the agent configuration.
-
-For each agent the workflow needs, specify:
-
-| Component | What to specify |
-|-----------|----------------|
-| **Name** | Unique agent name |
-| **Description** | Agent purpose and when it should be used |
-| **Instructions** | Mission, responsibilities, behavior, goals, tone & style, output format |
-| **Model** | Recommended model capability (reasoning-heavy, fast, etc.) |
-| **Tools** | Tools the agent can call (MCP servers, file access, web, APIs) |
-
-Plus: **Context** requirements (data, files, knowledge base) and **Goal** (trigger/invocation pattern).
-
-For multi-agent workflows, also document:
-- **Orchestration pattern** (supervisor, pipeline, parallel)
-- **Agent handoffs** (what each agent passes to the next)
-- **Human review gates** (where a human reviews before proceeding)
-
-This configuration is platform-agnostic — it serves as a blueprint for any AI platform.
-
-Present the agent configuration and ask for my review before generating the final output. If the execution pattern is Prompt or Skill-Powered Prompt, skip this part.
-
----
-
-## Part 6 — Generate AI Building Block Spec
-
-After I confirm the mapping (and agent configuration, if applicable), produce the complete **AI Building Block Spec** as a Markdown file.
-
-**File naming:** Name the file `[workflow-name]-building-block-spec.md` using the same workflow name from the Workflow Definition (e.g., `lead-qualification-building-block-spec.md`).
-
-Generate the AI Building Block Spec as a downloadable Markdown file. If your platform doesn't support file downloads, format it inside a single Markdown code block so I can copy and save it manually.
-
-### Execution Pattern
-- Recommended pattern (Prompt / Skill-Powered Prompt / Single Agent / Multi-Agent)
-- Interaction mode (Interactive / Autonomous / Hybrid)
-- Reasoning (including which architecture decisions influenced the recommendation)
-
-### Scenario Summary
-- Workflow name (from Workflow Definition)
-- Description
-- Workflow outcome
-- Trigger
-- Type
-- Business objective
-- Current owner(s)
-
-### Architecture Decisions
-
-| Decision | Choice | Rationale |
-|----------|--------|-----------|
-| Platform | | |
-| Deployment surface | | |
-| Code comfort | | |
-| Interaction mode | | |
-| Scheduled execution | | |
-| Authenticated browser access | | |
-| Data sensitivity | | |
-| Team shareability | | |
-
-**Integration Mapping**
-
-| Integration needed | Connector type | Setup complexity | Notes |
-|--------------------|---------------|-----------------|-------|
-
-**Constraints Summary**
-[How these decisions shaped the execution pattern and building block recommendations]
-
-### Step-by-Step Decomposition Table
-
-| # | Step | Action | Type | Decision Points | Failure Mode | Data In | Data Out | Context Needed | AI Building Block(s) | Skill Candidate? |
-|---|------|--------|------|----------------|-------------|---------|----------|----------------|---------------------|-----------------|
-| 1 | [Name] | [What happens] | Human / AI-Deterministic / AI-Semi-Autonomous / AI-Autonomous | [If/then logic] | [What happens on failure] | [Inputs] | [Outputs] | [Knowledge required] | [Prompt / Context / Skill / Agent / MCP / Project] | Yes/No |
-
-### Autonomy Spectrum Summary
-- List of fully human steps
-- List of deterministic AI steps
-- List of semi-autonomous AI steps (with review gates noted)
-- List of fully autonomous AI steps
-
-### Skill Candidates
-
-For each step tagged as a skill candidate:
-
-| Step | Skill Purpose | Inputs | Outputs | Decision Logic | Failure Modes |
-|------|--------------|--------|---------|---------------|---------------|
-
-### Agent Configuration (if applicable)
-
-For each agent:
-- Name, Description, Instructions summary, Model recommendation, Tools list
-- Context requirements, Goal/trigger
-
-For multi-agent: orchestration pattern, handoff protocol, human review gates.
-
-### Step Sequence and Dependencies
-- Which steps are sequential (must happen in order)?
-- Which steps can run in parallel?
-- What is the critical path through the workflow?
-- Step dependency map
-
-### Prerequisites
-- What must be in place before this workflow can run?
-- External dependencies (accounts, access, data sources)
-
-### Context Inventory
-
-List every piece of context the workflow requires that the model does not have in its training data:
-
-| Artifact | Description | Used By Steps | Status | Format | Key Contents |
-|----------|-------------|---------------|--------|--------|--------------|
-| [Name] | [What it contains and why the workflow needs it] | [Step numbers] | Exists / Needs Creation | [e.g., Markdown doc, spreadsheet, CSV, PDF] | [Essential fields, sections, or data points it should include] |
-
-If an artifact needs to be created, the "Key Contents" column should be specific enough that the user knows exactly what to build.
-
-### Tools and Connectors Required
-- All external tools, APIs, and integrations referenced in the mapping
-
-### Recommended Implementation Order
-Prioritize the AI-eligible steps into a build sequence:
-1. **Quick wins** — Deterministic steps with clear inputs/outputs that can be automated with a Prompt or Context alone. Start here.
-2. **High-value semi-autonomous steps** — Steps where AI does most of the work but needs a human review gate. Build these next.
-3. **Complex agent steps** — Fully autonomous steps requiring Agents, MCP connectors, or multi-tool orchestration. Tackle these last.
-
-For each priority tier, list the specific steps and what needs to be built.
-
-### Where to Run
-
-Recommend where the workflow should be run:
-
-**Normal chat** — recommended when:
-- The workflow runs infrequently (monthly or less)
-- Few or no context files are needed (0-2 files)
-- All context can be provided inline each time
-- The workflow is a one-off or experimental process
-
-**Project workspace** — recommended when:
-- The workflow runs frequently (weekly or more)
-- Multiple context files are needed (3+ files)
-- The same reference materials are used every run
-- Conversation memory across runs would be valuable
-- Multiple people will run the same workflow
-
-State the recommendation, the reasoning, and list the specific context files to attach (chat) or pre-load in the project.
-
----
-
-After presenting the AI Building Block Spec, tell me:
-
-> **Next step:** Download (or copy and save) the AI Building Block Spec file. Then go to [Step 3 — Build Workflows](https://handsonai.info/business-first-ai-framework/build/) to construct your workflow — the Build overview page will show you exactly which steps to follow based on your execution pattern.
-
----
-
-## General Instructions
-
-- If the Workflow Definition is missing information needed for classification, ask me to clarify before guessing.
-- Use web search to research the user's chosen platform's current tools, APIs, and conventions when answering architecture questions and generating recommendations.
-- Explain your reasoning for any non-obvious classifications.
-- Use plain language. Avoid jargon unless I introduced it.
 ```
+Design the AI workflow from my Workflow Definition.
+Recommend an execution pattern and map building blocks.
+```
+
+Upload or paste your Workflow Definition file (`[workflow-name]-definition.md`) from the Deconstruct step when prompted. The skill runs the Design analysis and produces an AI Building Block Spec.
+
+!!! tip "If your AI tool doesn't support skills"
+    Use this page as a conversation guide — walk through each section in order with your AI tool. The methodology works the same way whether or not a skill is driving the process.
+
+### Two phases, two modes
+
+Design has two distinct phases that use different modes of interaction with the model:
+
+**Phase 1: Collaborative decisions (normal conversation)**
+
+The first part of Design is a back-and-forth conversation. The model asks you the 8 architecture questions, recommends an execution pattern and interaction mode, and you discuss and confirm. This is normal conversational mode — you're making decisions together.
+
+**Phase 2: Plan the spec (plan mode)**
+
+Once the architecture decisions and execution pattern are locked in, the model has everything it needs to plan the full AI Building Block Spec. This is when you **activate plan mode** — the model shifts from asking you questions to planning: classifying each step on the autonomy spectrum, mapping building blocks, identifying skill candidates, and documenting agent blueprints.
+
+**How to activate plan mode on your platform:**
+
+| Platform | How to activate plan mode |
+|---|---|
+| **Claude Code** | Press `Shift+Tab` twice, or type `/plan` |
+| **Cursor** | Select "Plan" in the composer mode |
+| **Codex CLI** | Run with the `--plan` flag |
+| **Other AI tools** | Ask the model: *"Switch to plan mode. Based on the architecture decisions and execution pattern we've agreed on, plan the full AI Building Block Spec — classify each step, map building blocks, identify skill candidates, and document agent blueprints."* |
+
+After the model produces the plan, **review and approve the AI Building Block Spec** before moving on. If anything needs adjustment — a step classification, a skill candidate, an agent blueprint — now is the time. Once you approve, the model transitions to [Construct (3.2)](construct.md) and begins building.
 
 ## What This Produces
 
@@ -477,7 +216,7 @@ The **AI Building Block Spec** contains:
 - **Decomposition table** — every step with autonomy classification, decision points, failure modes, data flows, context needs, AI building block mapping, and skill candidate flags
 - **Autonomy spectrum summary** — steps grouped by classification level
 - **Skill candidates** — steps tagged for skill creation, with generation-ready detail (purpose, inputs, outputs, decision logic, failure modes)
-- **Agent configuration** (when applicable) — platform-agnostic blueprint for each agent with all five core components plus context and goal
+- **Agent blueprints** (when applicable) — platform-agnostic specification for each agent with all five core components plus context and goal
 - **Step sequence and dependencies** — sequential vs. parallel execution paths
 - **Prerequisites** — what must be in place before the workflow can run
 - **Context inventory** — every piece of context the workflow needs, with status and key contents

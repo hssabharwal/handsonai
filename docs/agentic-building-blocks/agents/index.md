@@ -31,7 +31,7 @@ Each platform has its own agent system. These guides show how to build agents on
 | **Google Gemini** | Agent Designer (no-code), Agent Development Kit (open-source framework) | [Building Agents on Google](../../platforms/google-gemini/agents/building-agents.md) |
 | **M365 Copilot** | Declarative agents (no-code/low-code), Custom engine agents (bring your own models) | [Building Agents on M365 Copilot](../../platforms/m365-copilot/agents/building-agents.md) |
 
-For guidance on deciding *whether* your workflow needs an agent, see [Build Workflows > Agents](../../business-first-ai-framework/build/agents.md).
+For guidance on deciding *whether* your workflow needs an agent, see [Build Workflows > Agents](../../business-first-ai-framework/build/construct.md).
 
 ## Related
 
