@@ -159,10 +159,10 @@ Find which workflows are candidates for AI.
 
 **How it works:**
 
-1. **Memory & history scan** — Claude reviews everything it knows about you from prior conversations, memory, and project files. Presents findings for you to confirm or correct.
-2. **Targeted discovery interview** — Claude asks focused questions one at a time about your role, repetitive tasks, information synthesis, multi-step processes, quality issues, communication overhead, and decision-making. Follows up based on your answers.
+1. **Memory & history scan** — The AI reviews everything it knows about you from prior conversations, memory, and project files. Presents findings for you to confirm or correct.
+2. **Targeted discovery interview** — The AI asks focused questions one at a time about your role, repetitive tasks, information synthesis, multi-step processes, quality issues, communication overhead, and decision-making. Follows up based on your answers.
 3. **Opportunity analysis & report** — Produces a summary table and detailed opportunity cards grouped by category (Deterministic Workflows, Collaborative AI, Autonomous Agents), ordered by impact.
-4. **Workflow candidate summary** — You pick your top candidates, and Claude produces structured metadata for each: name, description, category, pain point, AI opportunity, frequency, priority, and reasoning. Recommends which to deconstruct first.
+4. **Workflow candidate summary** — You pick your top candidates, and the AI produces structured metadata for each: name, description, trigger, deliverable, category, pain point, AI opportunity, frequency, priority, and reasoning. Recommends which to deconstruct first.
 
 **Example prompts:**
 
@@ -174,7 +174,7 @@ Find which workflows are candidates for AI.
     → Interactive discovery session followed by a structured report
       with specific, actionable recommendations
 
-**What you'll get:** An opportunity report (`outputs/ai-opportunity-report.md`) with a summary table, detailed cards for each opportunity, and a structured workflow candidate summary with metadata for each candidate you select.
+**What you'll get:** An opportunity report (`outputs/ai-opportunity-report.md`) with a report header, summary table, top 3 recommendations, detailed cards for each opportunity, and a structured workflow candidate summary with metadata for each candidate you select.
 
 **Platform compatibility:** Claude Code &#10003; | Claude.ai &#10003;
 
@@ -196,19 +196,19 @@ Break workflows into structured definitions.
 
 **How it works:**
 
-1. **Scenario discovery** — Claude asks about the business scenario, objective, high-level steps, and ownership. One question at a time. If you describe a problem instead of a workflow, Claude proposes a candidate workflow for you to react to.
-2. **Scope check** — Claude assesses whether this is one workflow or multiple bundled together. If multiple, it recommends splitting and asks which to start with.
-3. **Name the workflow** — Claude presents 2-3 name options (2-4 word noun phrases, Title Case) and confirms name, description, outcome, trigger, and type.
-4. **Deep dive** — For each step, Claude probes five dimensions:
+1. **Scenario discovery** — The AI determines how you're arriving: if you reference an opportunity report from the Discover step, it reads the workflow candidates and pre-populates metadata. Otherwise, it asks about the business scenario, objective, high-level steps, and ownership. If you describe a problem instead of a workflow, the AI proposes a candidate workflow for you to react to.
+2. **Scope check** — The AI assesses whether this is one workflow or multiple bundled together. If multiple, it recommends splitting and asks which to start with.
+3. **Name the workflow** — The AI presents 2-3 name options (2-4 word noun phrases, Title Case) and confirms name, description, outcome, trigger, and type.
+4. **Deep dive** — For each step, the AI probes five dimensions:
     - Discrete steps (is this actually multiple steps?)
     - Decision points (if/then branches, quality gates)
     - Data flows (inputs, outputs, sources, destinations)
     - Context needs (specific documents, files, reference materials)
     - Failure modes (what happens when this step fails)
-5. **Propose and react** — From step 4 onward, Claude proposes a hypothesis across all five dimensions and asks "What's right, what's wrong, what am I missing?"
-6. **Map sequence** — Claude identifies sequential vs. parallel steps and the critical path
-7. **Consolidate context** — Claude presents a rolled-up "context shopping list" of every artifact the workflow needs
-8. **Generate Workflow Definition** — Claude writes the structured Workflow Definition to the output file
+5. **Propose and react** — From step 4 onward, the AI proposes a hypothesis across all five dimensions and asks "What's right, what's wrong, what am I missing?"
+6. **Map sequence** — The AI identifies sequential vs. parallel steps and the critical path
+7. **Consolidate context** — The AI presents a rolled-up "context shopping list" of every artifact the workflow needs
+8. **Generate Workflow Definition** — The AI writes the structured Workflow Definition to the output file
 
 **Example prompts:**
 
@@ -244,10 +244,10 @@ Design your AI implementation and construct the workflow.
 
 **Design phase:**
 
-1. **Load Workflow Definition** — Claude reads the Workflow Definition from `outputs/`
-2. **Confirm understanding** — Claude summarizes the workflow and asks you to confirm
+1. **Load Workflow Definition** — The AI reads the Workflow Definition from `outputs/`
+2. **Confirm understanding** — The AI summarizes the workflow and asks you to confirm
 3. **Architecture decisions** — 8 questions about platform, deployment, code comfort, integrations, shareability, browser access, scheduling, and data sensitivity
-4. **Execution pattern assessment** — Claude walks you through the four execution patterns and recommends one with an interaction mode (Interactive, Autonomous, or Hybrid)
+4. **Execution pattern assessment** — The AI walks you through the four execution patterns and recommends one with an interaction mode (Interactive, Autonomous, or Hybrid)
 5. **Classify each step** — Autonomy level, AI building blocks, tools, human review gates
 6. **Identify skill candidates** — Steps tagged for skill creation with generation-ready detail
 7. **Agent configuration** (when applicable) — Platform-agnostic agent blueprint

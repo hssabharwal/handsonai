@@ -55,10 +55,10 @@ The skill runs a structured audit and produces a categorized opportunity report.
 
 Here's what typically happens:
 
-1. **Step 1** — The AI reviews what it knows about you and presents a summary. Correct anything that's wrong and fill in gaps.
-2. **Step 2** — The AI asks you a series of questions. Answer as specifically as you can — concrete examples produce better recommendations than general descriptions.
-3. **Step 3** — You receive a structured report with a summary table and detailed cards for each opportunity, grouped by category.
-4. **Step 4** — You pick one opportunity from each category to build first, and the AI formats a **Workflow Candidate Summary** you can copy and save.
+1. The AI reviews what it knows about you and presents a summary. Correct anything that's wrong and fill in gaps.
+2. The AI asks you a series of questions. Answer as specifically as you can — concrete examples produce better recommendations than general descriptions.
+3. You receive a structured report with a summary table and detailed cards for each opportunity, grouped by category.
+4. You pick your top workflow candidates, and the AI formats a **Workflow Candidate Summary** with structured metadata — including trigger and deliverable — ready for the Deconstruct step.
 
 Most people discover 5–15 opportunities across the three categories. Pick three to start with — one from each category.
 
@@ -67,6 +67,18 @@ Most people discover 5–15 opportunities across the three categories. Pick thre
 - **Start with Collaborative AI** opportunities if you're new to AI — they're the easiest to try and lowest risk
 - **Move to Deterministic Workflows** once you've identified a process you repeat often — the time savings compound quickly
 - **Explore Autonomous Agents** when you have experience with the other two categories and need to automate complex, multi-step processes
+
+## What Discover Produces
+
+The **AI Opportunity Report** (`ai-opportunity-report.md`) captures:
+
+- **Report header** — your name, role, date, opportunity count, and top recommendation
+- **Summary table** — every opportunity listed with its category and impact level
+- **Top recommendations** — the 3 highest-priority opportunities with one-sentence rationales
+- **Detailed opportunity cards** — grouped by category (Deterministic Workflow, Collaborative AI, Autonomous Agent), each with: why it's a good candidate, current pain point, how AI helps, and a practical first step
+- **Workflow Candidate Summary** — structured metadata for the workflows you choose to pursue: name, description, trigger, deliverable, category, pain point, AI opportunity, frequency, priority, and reasoning
+
+The Workflow Candidate Summary is the input for [Deconstruct Workflows](deconstruct/index.md) (Step 2) — the trigger and deliverable fields map directly to the scope check that starts the deconstruction.
 
 ## Tips for Better Results
 
