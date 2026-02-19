@@ -34,9 +34,9 @@ Research becomes particularly powerful when paired with MCP connections to your 
 
 **NOT the right primitive when:**
 
-- The main output is a written piece for an audience (that's [Content Creation](../content-creation/))
-- You're exploring ideas and strategies rather than gathering facts (that's [Ideation & Strategy](../ideation-and-strategy/))
-- You're analyzing structured numerical data (that's [Data Analysis](../data-analysis/))
+- The main output is a written piece for an audience (that's [Content Creation](../content-creation/index.md))
+- You're exploring ideas and strategies rather than gathering facts (that's [Ideation & Strategy](../ideation-and-strategy/index.md))
+- You're analyzing structured numerical data (that's [Data Analysis](../data-analysis/index.md))
 
 ## Department Examples
 
@@ -97,5 +97,5 @@ Research becomes particularly powerful when paired with MCP connections to your 
 - [Agents](../../agentic-building-blocks/agents/index.md) — autonomous AI that can plan and execute multi-step research
 - [MCP](../../agentic-building-blocks/mcp/index.md) — connecting AI to external data sources for live research
 - [Context](../../agentic-building-blocks/context/index.md) — providing source documents and background knowledge
-- [Automation](../automation/) — running research workflows on a schedule
+- [Automation](../automation/index.md) — running research workflows on a schedule
 - [Research Resources](resources.md) — curated reports, guides, and references

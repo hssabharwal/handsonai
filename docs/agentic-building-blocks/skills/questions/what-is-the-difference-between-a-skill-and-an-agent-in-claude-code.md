@@ -69,9 +69,9 @@ The skill does one focused task when you call it. The agent orchestrates an enti
 
 ## Related Questions
 
-- [How do I create a skill in Claude Code?](../../platforms/claude/skills/index.md)
-- [When should I use a skill vs. a project?](../skills/index.md)
-- [What can agents do with MCP?](../mcp/index.md)
+- [How do I create a skill in Claude Code?](../../../platforms/claude/skills/skills-discovery-meta-prompt.md)
+- [When should I use a skill vs. a project?](../index.md)
+- [What can agents do with MCP?](../../mcp/index.md)
 
 ---
 

@@ -17,7 +17,7 @@ Platform-specific setup guides, topics, and Q&A organized by AI platform.
 
     Anthropic's Claude models, Claude Code CLI, and MCP integrations
 
-    [:octicons-arrow-right-24: Claude guides](claude/)
+    [:octicons-arrow-right-24: Claude guides](claude/index.md)
 
 -   :simple-openai:{ .lg .middle } **OpenAI / ChatGPT**
 
@@ -25,7 +25,7 @@ Platform-specific setup guides, topics, and Q&A organized by AI platform.
 
     GPT models, Assistants API, and function calling
 
-    [:octicons-arrow-right-24: OpenAI guides](openai/)
+    [:octicons-arrow-right-24: OpenAI guides](openai/index.md)
 
 -   :material-google:{ .lg .middle } **Google Gemini**
 
@@ -33,7 +33,7 @@ Platform-specific setup guides, topics, and Q&A organized by AI platform.
 
     Gemini models and Vertex AI
 
-    [:octicons-arrow-right-24: Gemini guides](gemini/)
+    [:octicons-arrow-right-24: Gemini guides](google-gemini/index.md)
 
 -   :material-microsoft:{ .lg .middle } **M365 Copilot**
 
@@ -41,6 +41,6 @@ Platform-specific setup guides, topics, and Q&A organized by AI platform.
 
     Microsoft 365 Copilot and Azure OpenAI
 
-    [:octicons-arrow-right-24: M365 Copilot guides](m365-copilot/)
+    [:octicons-arrow-right-24: M365 Copilot guides](m365-copilot/index.md)
 
 </div>

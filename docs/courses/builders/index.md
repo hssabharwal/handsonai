@@ -26,7 +26,7 @@ From Claude user to Claude builder in 5 weeks. This cohort-based course teaches 
 **James Gray** — UC Berkeley AI instructor and former CIO/CPO. Previously spent 10 years at Microsoft building enterprise data platforms. Has trained 5,000+ executives globally in AI strategy.
 
 - [Maven Profile](https://maven.com/james-gray)
-- [Other course: Hands-on Agentic AI for Leaders](../leaders/)
+- [Other course: Hands-on Agentic AI for Leaders](../leaders/index.md)
 
 ## Prerequisites
 

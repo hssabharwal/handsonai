@@ -34,9 +34,9 @@ Content creation use cases scale from simple (rewriting an email for a different
 
 **NOT the right primitive when:**
 
-- The main goal is gathering and synthesizing information (that's [Research](../research/))
-- You're generating code, scripts, or technical artifacts (that's [Coding](../coding/))
-- The content is a plan, strategy, or set of recommendations (that's [Ideation & Strategy](../ideation-and-strategy/))
+- The main goal is gathering and synthesizing information (that's [Research](../research/index.md))
+- You're generating code, scripts, or technical artifacts (that's [Coding](../coding/index.md))
+- The content is a plan, strategy, or set of recommendations (that's [Ideation & Strategy](../ideation-and-strategy/index.md))
 
 ## Department Examples
 

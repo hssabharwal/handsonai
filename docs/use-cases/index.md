@@ -16,12 +16,12 @@ OpenAI's analysis of over 600 enterprise AI deployments found that nearly all us
 
 | Primitive | What AI Does | Typical Building Blocks | Example |
 |-----------|-------------|------------------------|---------|
-| [**Content Creation**](content-creation/) | Drafts, edits, translates, repurposes | Prompt, Context, Skill, Project | First-draft blog posts in brand voice |
-| [**Research**](research/) | Searches, synthesizes, structures information | Prompt, Context, Agent, MCP | Multi-source competitive analysis |
-| [**Coding**](coding/) | Generates, debugs, ports, explains code | Prompt, Context, Agent | Python scripts for non-coders |
-| [**Data Analysis**](data-analysis/) | Harmonizes data, identifies trends, visualizes | Prompt, Context, Skill | Expense analysis across sources |
-| [**Ideation & Strategy**](ideation-and-strategy/) | Brainstorms, plans, gives feedback, models scenarios | Prompt, Context, Project | Campaign ideation with constraints |
-| [**Automation**](automation/) | Executes repeatable routine tasks with minimal human involvement | Skill, Agent, MCP | Weekly competitive update pipeline |
+| [**Content Creation**](content-creation/index.md) | Drafts, edits, translates, repurposes | Prompt, Context, Skill, Project | First-draft blog posts in brand voice |
+| [**Research**](research/index.md) | Searches, synthesizes, structures information | Prompt, Context, Agent, MCP | Multi-source competitive analysis |
+| [**Coding**](coding/index.md) | Generates, debugs, ports, explains code | Prompt, Context, Agent | Python scripts for non-coders |
+| [**Data Analysis**](data-analysis/index.md) | Harmonizes data, identifies trends, visualizes | Prompt, Context, Skill | Expense analysis across sources |
+| [**Ideation & Strategy**](ideation-and-strategy/index.md) | Brainstorms, plans, gives feedback, models scenarios | Prompt, Context, Project | Campaign ideation with constraints |
+| [**Automation**](automation/index.md) | Executes repeatable routine tasks with minimal human involvement | Skill, Agent, MCP | Weekly competitive update pipeline |
 
 ## Content Creation
 
@@ -29,7 +29,7 @@ AI drafts, edits, translates, and repurposes content across formats. This is the
 
 Content creation works best when you provide context (brand voice, style guides, examples) so the AI produces output that matches your standards rather than generic copy.
 
-[:octicons-arrow-right-24: Content Creation detail](content-creation/)
+[:octicons-arrow-right-24: Content Creation detail](content-creation/index.md)
 
 ---
 
@@ -39,7 +39,7 @@ AI searches, synthesizes, and structures information from multiple sources. Rese
 
 Research primitives are particularly powerful when combined with MCP connections to external data sources, letting the AI pull from your actual tools rather than just web search.
 
-[:octicons-arrow-right-24: Research detail](research/)
+[:octicons-arrow-right-24: Research detail](research/index.md)
 
 ---
 
@@ -49,7 +49,7 @@ AI generates, debugs, ports, and explains code. This primitive isn't limited to 
 
 Coding use cases range from simple formula generation (Excel, SQL) to full application development with agents that plan, write, test, and iterate autonomously.
 
-[:octicons-arrow-right-24: Coding detail](coding/)
+[:octicons-arrow-right-24: Coding detail](coding/index.md)
 
 ---
 
@@ -59,7 +59,7 @@ AI harmonizes data from multiple sources, identifies trends, and produces visual
 
 This primitive often pairs with coding (generating analysis scripts) and research (interpreting results in context).
 
-[:octicons-arrow-right-24: Data Analysis detail](data-analysis/)
+[:octicons-arrow-right-24: Data Analysis detail](data-analysis/index.md)
 
 ---
 
@@ -69,7 +69,7 @@ AI brainstorms ideas, plans approaches, provides feedback, and runs scenario ana
 
 Ideation works best in project workspaces where the AI has persistent context about your goals, constraints, and past decisions.
 
-[:octicons-arrow-right-24: Ideation & Strategy detail](ideation-and-strategy/)
+[:octicons-arrow-right-24: Ideation & Strategy detail](ideation-and-strategy/index.md)
 
 ---
 
@@ -79,7 +79,7 @@ AI executes repeatable routine tasks with minimal human involvement. Automation 
 
 Automation typically builds on the other primitives. A content creation workflow becomes automation when it runs on a schedule. A research workflow becomes automation when it monitors sources continuously.
 
-[:octicons-arrow-right-24: Automation detail](automation/)
+[:octicons-arrow-right-24: Automation detail](automation/index.md)
 
 ## Classifying Your Use Cases
 

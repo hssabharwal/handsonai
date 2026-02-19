@@ -34,9 +34,9 @@ Unlike the other primitives where AI executes work, ideation and strategy is abo
 
 **NOT the right primitive when:**
 
-- You need to find facts or gather information (that's [Research](../research/))
-- The deliverable is a finished document for an audience (that's [Content Creation](../content-creation/))
-- You're analyzing numerical data to find patterns (that's [Data Analysis](../data-analysis/))
+- You need to find facts or gather information (that's [Research](../research/index.md))
+- The deliverable is a finished document for an audience (that's [Content Creation](../content-creation/index.md))
+- You're analyzing numerical data to find patterns (that's [Data Analysis](../data-analysis/index.md))
 
 ## Department Examples
 

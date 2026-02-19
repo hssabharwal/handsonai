@@ -6,6 +6,9 @@ site_author: James Gray
 repo_name: jamesgray-ai/handsonai
 repo_url: https://github.com/jamesgray-ai/handsonai
 
+exclude_docs: |
+  _templates/
+
 theme:
   name: material
   language: en

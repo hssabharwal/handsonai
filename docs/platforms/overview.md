@@ -11,10 +11,10 @@ Platform-specific documentation and guides.
 
 | Platform | Description |
 |----------|-------------|
-| [OpenAI](./openai/) | GPT models, Assistants API, function calling |
-| [Claude](./claude/) | Anthropic's Claude models, tool use, artifacts |
-| [Gemini](./gemini/) | Google's Gemini models and Vertex AI |
-| [M365 Copilot](./m365-copilot/) | Microsoft 365 Copilot and Azure OpenAI |
+| [OpenAI](./openai/index.md) | GPT models, Assistants API, function calling |
+| [Claude](./claude/index.md) | Anthropic's Claude models, tool use, artifacts |
+| [Gemini](./google-gemini/index.md) | Google's Gemini models and Vertex AI |
+| [M365 Copilot](./m365-copilot/index.md) | Microsoft 365 Copilot and Azure OpenAI |
 
 ## Cross-Platform Topics
 
