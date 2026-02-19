@@ -37,16 +37,22 @@ A good rule of thumb: if you give an AI the same instructions more than three ti
 
 ## Platform Implementations
 
-| Platform | How It Works |
-|----------|-------------|
-| **Claude** | Claude Code Skills (SKILL.md files); auto-triggered or invoked via `/plugin-name:command` |
-| **OpenAI (ChatGPT)** | Custom GPTs, or Actions within a GPT |
-| **Gemini** | Gems with structured instructions |
-| **M365 Copilot** | Copilot agent actions, Power Automate flows triggered by Copilot |
+Agent Skills are an **open standard** — the same `SKILL.md` format works across platforms. Each platform reads skill files from its own directory, but the file format is identical:
 
-## Anatomy of a Claude Skill
+| Platform | Skill Directory | Notes |
+|----------|----------------|-------|
+| **[Claude Code](https://code.claude.com/docs/en/skills)** | `.claude/skills/` | Also installable via plugins (`/plugin install`) |
+| **[Cursor](https://cursor.com/docs/context/skills)** | `.cursor/skills/`, `.claude/skills/`, `.codex/skills/`, or `.agents/skills/` | Reads from Claude and Codex directories too — no need to move files |
+| **[Codex CLI](https://developers.openai.com/codex/skills)** | `.agents/skills/` | Same SKILL.md format |
+| **[Gemini CLI](https://geminicli.com/docs/cli/skills/)** | `.gemini/skills/` or `.agents/skills/` | Same SKILL.md format |
+| **[VS Code Copilot](https://code.visualstudio.com/docs/copilot/customization/agent-skills)** | `.github/skills/` or `.agents/skills/` | Same SKILL.md format |
 
-On Claude, a skill is a folder containing:
+!!! info "Cross-platform convention"
+    `.agents/skills/` is a shared convention recognized by Cursor, Codex CLI, Gemini CLI, and VS Code Copilot. Place your skills there to make them available across multiple platforms from one location.
+
+## Anatomy of a Skill
+
+A skill is a folder containing:
 
 ```
 skill-name/
@@ -58,7 +64,42 @@ skill-name/
 
 The `SKILL.md` file contains the instructions. The `references/` folder holds any context the skill needs — style guides, templates, examples, or data.
 
-Skills with `user_invocable: true` and a `command:` field in their frontmatter can be invoked directly as slash commands in Claude Code.
+On Claude Code, skills with `user_invocable: true` and a `command:` field in their frontmatter can be invoked directly as slash commands.
+
+## How to Add Skills to Your Platform
+
+Skills are plain-text Markdown — no compiled code, no special format. Getting them into your platform takes two steps: get the files, then place them where your platform looks.
+
+### Step 1: Get the skill files
+
+**Option A: Install a plugin (Claude Code)**
+
+```bash
+/plugin install business-first-ai@handsonai
+```
+
+This installs the skills automatically into your project's `.claude/skills/` directory.
+
+**Option B: Download from GitHub**
+
+Browse the [plugins directory on GitHub](https://github.com/jamesgray-ai/handsonai/tree/main/plugins), find the skill folder you want, and download it. Each skill is a folder containing a `SKILL.md` file and an optional `references/` directory.
+
+### Step 2: Place them in your platform's skill directory
+
+| Platform | Where to put skills |
+|----------|-------------------|
+| **Claude Code** | `.claude/skills/` in your project root (or use plugin install) |
+| **Cursor** | `.cursor/skills/` in your project root — but also reads from `.claude/skills/`, `.codex/skills/`, and `.agents/skills/` automatically |
+| **Codex CLI** | `.agents/skills/` in your project root |
+| **Gemini CLI** | `.gemini/skills/` or `.agents/skills/` in your project root |
+| **VS Code Copilot** | `.github/skills/` or `.agents/skills/` in your project root |
+
+!!! tip "Already using Claude Code or Codex?"
+    If you already have skills installed for Claude Code (`.claude/skills/`) or Codex (`.codex/skills/`), **Cursor picks them up automatically** — no copying or moving required. This means installing a plugin in Claude Code makes those skills available in Cursor too.
+
+### Step 3: Verify
+
+Invoke the skill by name in your AI tool. For example, in Claude Code: `/business-first-ai:discover`. In other platforms, reference the skill name in your prompt — the platform discovers it automatically from the skill directory.
 
 ## Skill, Project, or Prompt?
 
@@ -80,4 +121,4 @@ Skills with `user_invocable: true` and a `command:` field in their frontmatter c
 - [AI Use Cases](../../use-cases/index.md) — what teams build with skills, organized by six primitives
 - [Prompts](../prompts/index.md) — the foundation that skills build on
 - [Agents](../agents/index.md) — autonomous systems that invoke skills as part of multi-step workflows
-- [Plugin Marketplace](../../use-the-cookbook/build/index.md) — pre-built skills you can install
+- [Agents & Skills](../../use-the-cookbook/build/index.md) — pre-built skills you can download or install
