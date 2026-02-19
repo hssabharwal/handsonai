@@ -1,22 +1,23 @@
 ---
 title: Building Agents on Claude
-description: How to build agents on the Claude platform — custom subagents for focused tasks and agent teams for multi-agent coordination.
+description: How to build agents on the Claude platform — subagents, agent teams, and the Agent SDK for production applications.
 ---
 
 # Building Agents on Claude
 
 > **Part of:** [Build Workflows > Agents](../../../business-first-ai-framework/build/construct.md)
 
-Claude Code provides two approaches to building agents, each suited to different workflow patterns. Both use Markdown files with YAML frontmatter — no code required.
+Claude provides three approaches to building agents, each suited to different workflow patterns.
 
 | Approach | Best for | Complexity |
 |----------|----------|------------|
-| [Custom subagents](#custom-subagents) | Focused, single-responsibility tasks | Low — one `.md` file per agent |
-| [Agent teams](#agent-teams) | Multi-agent coordination with parallel execution | Higher — experimental feature, multiple agents collaborating |
+| [Subagents](#subagents) | Focused, single-responsibility tasks | Low — one `.md` file per agent, no code required |
+| [Agent teams](#agent-teams) | Multi-agent coordination with parallel execution | Medium — experimental feature, multiple agents collaborating |
+| [Agent SDK](#agent-sdk) | Production applications and CI/CD automation | Higher — Python or TypeScript code, full programmatic control |
 
-## Custom Subagents
+## Subagents
 
-A custom subagent is a Markdown file that defines an agent's role, instructions, and capabilities. Claude Code spawns it as a subprocess with its own context window, tools, and permissions.
+A subagent is a Markdown file that defines an agent's role, instructions, and capabilities. Claude Code spawns it as a subprocess with its own context window, tools, and permissions.
 
 **Official docs:** [Claude Code Sub-agents](https://code.claude.com/docs/en/sub-agents)
 
@@ -172,8 +173,165 @@ For multi-agent workflows, the Design phase produced configurations for multiple
 3. **Handoff points** map to task list entries and messaging patterns
 4. **Human review gates** map to plan approval checkpoints
 
+## Agent SDK
+
+The Claude Agent SDK lets you build agents in Python or TypeScript with full programmatic control. It gives you the same tools, agent loop, and context management that power Claude Code — but as a library you can embed in your own applications.
+
+**Official docs:** [Agent SDK Overview](https://platform.claude.com/docs/en/agent-sdk/overview)
+
+### When to use the SDK vs. Markdown agents
+
+| Use Markdown agents when... | Use the Agent SDK when... |
+|----------------------------|--------------------------|
+| You're working interactively in Claude Code | You're building a production application |
+| You want no-code configuration | You need programmatic control over agent behavior |
+| One-off or ad-hoc tasks | CI/CD pipelines and automation |
+| You don't need custom logic between agent steps | You need hooks, callbacks, or custom orchestration |
+
+### Installation
+
+=== "TypeScript"
+
+    ```bash
+    npm install @anthropic-ai/claude-agent-sdk
+    ```
+
+=== "Python"
+
+    ```bash
+    pip install claude-agent-sdk
+    ```
+
+Set your API key as an environment variable:
+
+```bash
+export ANTHROPIC_API_KEY=your-api-key
+```
+
+The SDK also supports [Amazon Bedrock](https://code.claude.com/docs/en/amazon-bedrock), [Google Vertex AI](https://code.claude.com/docs/en/google-vertex-ai), and [Azure AI Foundry](https://code.claude.com/docs/en/azure-ai-foundry) as alternative providers.
+
+### Basic example
+
+=== "TypeScript"
+
+    ```typescript
+    import { query } from "@anthropic-ai/claude-agent-sdk";
+
+    for await (const message of query({
+      prompt: "Find all TODO comments and create a summary",
+      options: { allowedTools: ["Read", "Glob", "Grep"] }
+    })) {
+      if ("result" in message) console.log(message.result);
+    }
+    ```
+
+=== "Python"
+
+    ```python
+    import asyncio
+    from claude_agent_sdk import query, ClaudeAgentOptions
+
+
+    async def main():
+        async for message in query(
+            prompt="Find all TODO comments and create a summary",
+            options=ClaudeAgentOptions(allowed_tools=["Read", "Glob", "Grep"]),
+        ):
+            if hasattr(message, "result"):
+                print(message.result)
+
+
+    asyncio.run(main())
+    ```
+
+The SDK handles the full agent loop — Claude autonomously reads files, runs commands, and produces results without you implementing tool execution.
+
+### Key capabilities
+
+The SDK exposes the same capabilities as Claude Code's Markdown agents, plus programmatic features:
+
+| Capability | Description |
+|-----------|-------------|
+| **Built-in tools** | Read, Write, Edit, Bash, Glob, Grep, WebSearch, WebFetch — no tool implementation needed |
+| **Subagents** | Spawn specialized agents with their own tools and instructions |
+| **MCP servers** | Connect to external systems (databases, browsers, APIs) via the Model Context Protocol |
+| **Hooks** | Run callback functions at key points in the agent lifecycle (PreToolUse, PostToolUse, Stop, etc.) |
+| **Sessions** | Maintain context across multiple exchanges — resume or fork conversations |
+| **Permissions** | Control exactly which tools the agent can use, from read-only to full access |
+| **Skills and memory** | Load project skills and CLAUDE.md instructions via `settingSources` |
+
+### Subagents in the SDK
+
+Define custom subagents programmatically — useful when you need multiple specialized agents coordinating within your application:
+
+=== "TypeScript"
+
+    ```typescript
+    import { query } from "@anthropic-ai/claude-agent-sdk";
+
+    for await (const message of query({
+      prompt: "Use the code-reviewer agent to review this codebase",
+      options: {
+        allowedTools: ["Read", "Glob", "Grep", "Task"],
+        agents: {
+          "code-reviewer": {
+            description: "Expert code reviewer for quality and security reviews.",
+            prompt: "Analyze code quality and suggest improvements.",
+            tools: ["Read", "Glob", "Grep"]
+          }
+        }
+      }
+    })) {
+      if ("result" in message) console.log(message.result);
+    }
+    ```
+
+=== "Python"
+
+    ```python
+    import asyncio
+    from claude_agent_sdk import query, ClaudeAgentOptions, AgentDefinition
+
+
+    async def main():
+        async for message in query(
+            prompt="Use the code-reviewer agent to review this codebase",
+            options=ClaudeAgentOptions(
+                allowed_tools=["Read", "Glob", "Grep", "Task"],
+                agents={
+                    "code-reviewer": AgentDefinition(
+                        description="Expert code reviewer for quality and security reviews.",
+                        prompt="Analyze code quality and suggest improvements.",
+                        tools=["Read", "Glob", "Grep"],
+                    )
+                },
+            ),
+        ):
+            if hasattr(message, "result"):
+                print(message.result)
+
+
+    asyncio.run(main())
+    ```
+
+### Mapping your Design blueprint
+
+Your [Design phase](../../../business-first-ai-framework/build/design.md) produced a platform-agnostic agent blueprint. Here's how each component maps to the Agent SDK:
+
+| Design blueprint | Agent SDK |
+|-----------------|-----------|
+| **Name** | Key in the `agents` dictionary |
+| **Description** | `description` field in the agent definition |
+| **Instructions** | `prompt` field — the agent's role, process, constraints, and output format |
+| **Model** | `model` option (`opus`, `sonnet`, `haiku`) |
+| **Tools** | `allowedTools` list + `mcpServers` for external connections |
+| **Context** | `settingSources` to load skills and CLAUDE.md, or inline in the prompt |
+| **Goal** | Captured in the `description` (activation trigger) and `prompt` (success criteria) |
+
 ## What's Next
 
 - [Agents overview](../../../business-first-ai-framework/build/construct.md) — the platform-agnostic agent decision framework
 - [Design Your AI Workflow](../../../business-first-ai-framework/build/design.md) — produce the agent blueprint that feeds into these implementations
 - [Scheduling Subagents](../subagents/scheduling-subagents.md) — run agents automatically on a schedule
+- [Agent SDK Quickstart](https://platform.claude.com/docs/en/agent-sdk/quickstart) — build a bug-fixing agent in minutes
+- [Agent SDK Example Agents](https://github.com/anthropics/claude-agent-sdk-demos) — email assistant, research agent, and more
