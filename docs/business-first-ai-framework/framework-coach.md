@@ -45,7 +45,7 @@ Each step produces a specific deliverable that feeds into the next:
 | **Collaborative AI** | Human and AI work together in real time | Co-writing, brainstorming, code review |
 | **Autonomous Agent** | AI plans and executes steps autonomously | Research pipelines, monitoring systems |
 
-**Output:** An opportunity report with a summary table, detailed cards for each opportunity, and a workflow candidate summary with structured metadata (name, description, category, priority, reasoning).
+**Output:** An opportunity report with a report header, summary table, top recommendations, detailed cards for each opportunity, and a workflow candidate summary with structured metadata (name, description, trigger, deliverable, category, priority, reasoning).
 
 **Coaching guidance:**
 
