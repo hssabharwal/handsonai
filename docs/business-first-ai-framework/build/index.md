@@ -11,7 +11,11 @@ You've just finished [Deconstructing](../deconstruct/index.md) your workflow. Yo
 
 - **Workflow Definition** (`[name]-definition.md`) — every step in your workflow broken down with decision points, data flows, context needs, and failure modes
 
-This file is your input. Build has three parts: **Design** your AI implementation, **Construct** the components, and **Launch** the workflow.
+This file is your input. Build has three parts:
+
+- **3.1: Design** — decide how the workflow should be built
+- **3.2: Construct** — build the components
+- **3.3: Run** — launch and operate the workflow
 
 ## 3.1: Design
 
