@@ -17,6 +17,8 @@ This file is your input. Build has three parts:
 - **3.2: Construct** — build the components
 - **3.3: Run** — launch and operate the workflow
 
+![Step 3: Build Workflow — Design, Construct, and Run phases showing the flow from Workflow Definition through architecture decisions, AI Building Block Spec approval, component construction, and Launch Guide](../../assets/images/build-workflow-design-construct-run-diagram.png)
+
 ## 3.1: Design
 
 Before building anything, decide *how* the workflow should be built. The Design phase takes your Workflow Definition and produces an **AI Building Block Spec** — a complete blueprint that tells you exactly what to build.
