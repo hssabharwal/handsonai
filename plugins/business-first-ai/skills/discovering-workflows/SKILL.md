@@ -7,7 +7,6 @@ description: >
   then produces a prioritized opportunity report with structured workflow
   candidates ready for the Deconstruct step. This is Step 1 of the Business-First AI Framework.
 user_invocable: true
-command: discover
 ---
 
 # Discovering Workflows
