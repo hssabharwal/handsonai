@@ -7,7 +7,7 @@ description: How to add the Hands-on AI marketplace, install plugins, and use th
 
 Plugins give Claude domain expertise — writing standards, naming conventions, research processes — that it applies automatically. This guide walks you through installing your first plugin in three steps.
 
-Not sure what plugins are? Read the [Plugin Marketplace overview](index.md#why-plugins) first.
+Not sure what plugins are? Read the [Agents & Skills overview](index.md#what-are-plugins) first.
 
 ## Prerequisites
 

@@ -21,7 +21,7 @@ An interactive deep-dive that breaks down a business workflow into discrete step
 
 You can't operationalize AI on a process you don't understand. Before you can build an AI-powered workflow, you need to break it down into discrete steps, identify the decision points and data flows, and understand what context each step needs and what happens when things go wrong.
 
-This prompt walks you through that deconstruction interactively. You provide the business scenario and rough steps — the model handles the structured analysis, applying the 5-question framework (discrete steps, decision points, data flows, context needs, failure modes) to every step. The deliverable:
+The skill walks you through that deconstruction interactively. You provide the business scenario and rough steps — the model handles the structured analysis, applying the 5-question framework (discrete steps, decision points, data flows, context needs, failure modes) to every step. The deliverable:
 
 - A **Workflow Definition** — the structured breakdown of your workflow into refined steps, with decision points, data flows, context needs, and failure modes captured for every step
 
@@ -31,64 +31,22 @@ This builds directly on the concepts of workflow deconstruction. If terms like t
 
 ## How to Use This
 
-There are two ways to run this: as a **prompt** in any AI tool, or with the **Claude platform** plugin.
+This step is facilitated by the **`deconstructing-workflows`** Business-First AI Framework Skill. How you get it depends on your platform — see [How to Add Skills to Your Platform](../../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for installation instructions for Claude Code, Cursor, Codex CLI, Gemini CLI, and VS Code Copilot.
 
-=== "Any AI Tool"
+**Start with this prompt:**
 
-    Works with ChatGPT, Gemini, M365 Copilot, Claude, or any AI chat tool.
+```
+I need to deconstruct my [workflow name] workflow.
+```
 
-    1. **Go to [Break Down Your Workflow](workflow-definition.md)** — Copy the prompt, start a new conversation, paste the prompt, and describe your workflow
-    2. **Save the Workflow Definition** — Download the `.md` file the model produces (or copy the output and save it as `[workflow-name]-definition.md`)
-    3. **Go to [Build Workflows](../build/index.md)** — Start with the Design phase to choose your execution pattern and map building blocks
+The skill runs an interactive deep dive — interviewing you about your scenario, refining your steps, then probing each step for sub-steps, decisions, data flows, context needs, and failure modes. It produces a structured Workflow Definition file.
 
-=== "Claude Platform"
-
-    Install the [Business-First AI plugin](../../use-the-cookbook/build/business-first-ai.md) and the `workflow-deconstructor` agent orchestrates the full process — running discovery, deconstruction, design, and build in sequence with file-based handoffs between stages.
-
-    **Install the plugin:**
-
-    ```bash
-    /plugin install business-first-ai@handsonai
-    ```
-
-    **Start with this prompt:**
-
-    ```
-    I want to deconstruct my [workflow name] workflow.
-    Walk me through the full process.
-    ```
-
-    **Review the outputs** — deliverables are saved to the `outputs/` directory. You can also run individual steps using the skills directly: `discovering-workflows` (Discover), `deconstructing-workflows` (Deconstruct), `building-workflows` (Build).
-
-    The plugin works on three Claude interfaces:
-
-    | Interface | How to install | Notes |
-    |-----------|---------------|-------|
-    | **Claude Code** | Run `/plugin install` in the terminal | Full agent + skill support |
-    | **Cowork** | Click **+** > **Add plugins...** > upload the plugin ZIP | Same capabilities, visual interface |
-    | **Claude.ai** | Upload skill ZIPs under **Settings > Capabilities > Upload skill** | Skills only — the orchestrator agent doesn't work in Claude.ai, so you run skills individually with manual handoffs ([details](../../use-the-cookbook/build/using-plugins.md#using-skills-in-claudeai-web)) |
-
-    For setup details, see [Using Plugins](../../use-the-cookbook/build/using-plugins.md).
-
-Both options follow the same process and produce the same deliverable.
-
-!!! tip "Start with a workflow you actually do"
-    Real workflows produce the best results. The model will surface hidden steps and assumptions you've internalized — that's much harder with hypothetical processes. If you don't have an existing workflow but have a clear problem to solve, that works too — the model will help you design one.
-
-!!! tip "Register your workflow in the AI Registry"
-    If you're using the [AI Registry](../../use-the-cookbook/build/ai-registry.md) Notion database, register your workflow as soon as naming is confirmed — the prompt walks you through it. This creates a record of the workflow with its name, description, trigger, outcome, and type. You'll update this entry as you move through Build. Even if you're not using Notion, save the metadata somewhere — it's the first entry in your workflow inventory. See [Builder Stack Setup — Step 6](../../builder-setup/notion-registry-setup.md) if you haven't set up the AI Registry yet.
-
-!!! tip "Keep your files together"
-    By the end of the full process you'll have several Markdown files: `[name]-definition.md` (from Deconstruct), `[name]-building-block-spec.md` (from Build: Design), and `[name]-prompt.md` (from Build: Construct), plus any skills you built. Keep them in a single folder — they form a complete record of your workflow deconstruction. You can share any of these files with your team for feedback, put them in version control, or hand them to a colleague.
-
-!!! tip "Markdown renders as formatted text"
-    Markdown (`.md`) files are plain text with lightweight formatting — headings, bold, lists, tables. Many tools render them automatically: GitHub, Notion, VS Code, and most code editors show the formatted version when you open the file. You can also paste Markdown into Google Docs or Notion and it converts on the fly.
-
-    If you'd prefer a polished document, ask your AI tool: "Convert this to a Word document" or "Reformat this as a PDF." The content is the same — Markdown is just the most portable starting format because it works everywhere and is easy to version-control.
+!!! tip "If your AI tool doesn't support skills"
+    Use this page as a conversation guide — walk through each section in order with your AI tool. The methodology works the same way whether or not a skill is driving the process.
 
 ### Example: What the first exchange looks like
 
-After you paste the prompt, the model will ask about your scenario. Here's what a typical opening looks like:
+After you start the conversation, the model will ask about your scenario. Here's what a typical opening looks like:
 
 > **Model:** Let's start by understanding the workflow you want to deconstruct. First — what's the business scenario? What's the objective of this workflow, and why does it matter?
 >
@@ -102,7 +60,7 @@ From there, the model takes your rough steps and systematically breaks each one 
 
 ### Example: Starting with a problem instead of a workflow
 
-You don't need an existing process to use this prompt. If you have a gap or pain point, describe that — the model will help you design a workflow from scratch:
+You don't need an existing process. If you have a gap or pain point, describe that — the model will help you design a workflow from scratch:
 
 > **Model:** Let's start by understanding the workflow you want to deconstruct. First — what's the business scenario? What's the objective of this workflow, and why does it matter?
 >
@@ -130,13 +88,18 @@ Or pick something you do regularly and could describe to a colleague over coffee
 - **Vendor evaluation** — gathering proposals, comparing against criteria, scoring, and recommending a decision
 - **Course enrollment follow-up** — people start signing up but don't finish, and there's no process to detect drop-offs or send reminders
 
-You don't need to know all the steps before you start — that's what the prompt helps you figure out. Even "I onboard new clients and it takes forever" is enough to begin. You can also start with a problem instead of a workflow — "People drop off during enrollment and I have no way to follow up" is a perfectly valid starting point.
+You don't need to know all the steps before you start — that's what the skill helps you figure out. Even "I onboard new clients and it takes forever" is enough to begin. You can also start with a problem instead of a workflow — "People drop off during enrollment and I have no way to follow up" is a perfectly valid starting point.
 
-## What to Expect
+## What the Skill Produces
 
-**[Break Down Your Workflow](workflow-definition.md)** (~15-25 minutes) — The model asks about your business scenario, objective, steps, and who's involved. Then it works through each step one by one, asking about sub-steps, decision points, data flows, context needs, and failure modes. For later steps, it switches to a "propose and react" pattern — presenting hypotheses for you to correct, which is faster and surfaces more detail. Produces a **Workflow Definition**.
+The **Workflow Definition** captures:
 
-Most workflows expand from 5-8 rough steps to 12-20 refined steps after the deep dive. After the Workflow Definition is complete, take it to [Step 3 — Build Workflows](../build/index.md). The Build step starts with a Design phase where you choose your execution pattern and map each step to AI building blocks.
+- **Scenario metadata** — name, description, outcome, trigger, type, objective, owners
+- **Refined step-by-step breakdown** — each step with action, sub-steps, decision points, data in/out, context needs, failure modes
+- **Step sequence and dependencies** — what's sequential, what's parallel, where the critical path is
+- **Context shopping list** — every artifact the workflow needs, with status and key contents
+
+Most workflows expand from 5–8 rough steps to 12–20 refined steps after the deep dive. This Workflow Definition is the input for the [Design phase](../build/design.md) in Step 3 — Build, where the model chooses an execution pattern, classifies each step on the autonomy spectrum, and maps it to AI building blocks.
 
 ## Tips for Better Results
 
@@ -144,8 +107,9 @@ Most workflows expand from 5-8 rough steps to 12-20 refined steps after the deep
 - **Include the messy details.** "Sometimes I skip this step if the client is a repeat customer" is exactly the kind of decision logic the model needs to capture.
 - **Don't over-prepare your steps.** The model is designed to work with rough, incomplete descriptions. Let it do the work of refining and organizing.
 - **Gather your context resources early.** The model will identify specific resources the workflow needs — documents like buyer personas and style guides, but also spreadsheets, databases, CRM access, application credentials, and sample data. If you already have these, have them ready. If you don't, the analysis will tell you exactly what to create or set up and what each resource should contain.
-- **Save your files.** The Workflow Definition is your reference material. Keep it in a folder or version control — you'll use it throughout the Build step.
-- **Iterate the executable prompt.** Once you generate it in Build, run it once, see what works and what doesn't, then refine. The first version is a strong draft, not a final product.
+
+!!! tip "Register your workflow in the AI Registry"
+    If you're using the [AI Registry](../../use-the-cookbook/build/ai-registry.md) Notion database, register your workflow as soon as naming is confirmed — the skill walks you through it. This creates a record of the workflow with its name, description, trigger, outcome, and type. You'll update this entry as you move through Build. Even if you're not using Notion, save the metadata somewhere — it's the first entry in your workflow inventory. See [Builder Stack Setup — Step 6](../../builder-setup/notion-registry-setup.md) if you haven't set up the AI Registry yet.
 
 ## Related
 

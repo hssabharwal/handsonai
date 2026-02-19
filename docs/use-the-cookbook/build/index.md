@@ -1,18 +1,18 @@
 ---
-title: Hands-on AI Marketplace
-description: Pre-built agents, skills, and prompts you can install as Claude Code plugins or download from GitHub to use in any AI tool
+title: Agents & Skills
+description: Pre-built agents, skills, and prompts you can download and use in any AI tool that supports the Agent Skills standard, or install as Claude Code plugins
 ---
 
-# Hands-on AI Marketplace
+# Agents & Skills
 
-A growing collection of ready-to-use **agents**, **skills**, and **prompts** that give your AI tool domain expertise it doesn't have out of the box. Every file is plain-text Markdown — no compiled code, no special format — so you can use them in any AI tool.
+A growing collection of ready-to-use **agents**, **skills**, and **prompts** that give your AI tool domain expertise it doesn't have out of the box. Every file is plain-text Markdown — no compiled code, no special format — so you can use them in any AI tool that supports the [Agent Skills standard](../../agentic-building-blocks/skills/index.md).
 
 **Two ways to get them:**
 
+- :material-download: **Download from GitHub** — grab any skill folder and place it in your platform's skill directory. Works with Claude Code, Cursor, Codex CLI, Gemini CLI, and VS Code Copilot. [See how.](#download-from-github)
 - :material-puzzle-outline: **Install as Claude Code plugins** — one command, automatic expertise across every session. [Get started below.](#what-are-plugins)
-- :material-github: **Download from GitHub** — copy any file and paste it into ChatGPT, Gemini, Copilot, or the Claude API. [Browse on GitHub.](#dont-use-plugins-browse-on-github)
 
-Browse the available plugins below to see what's included, or start with the [Getting Started guide](getting-started.md) for a step-by-step walkthrough.
+Browse the available collections below to see what's included, or start with the [Getting Started guide](getting-started.md) for a step-by-step walkthrough.
 
 ## What Are Plugins?
 
@@ -43,15 +43,19 @@ Plugins are plain-text Markdown files — there's no compiled code or hidden log
 
     The Hands-on AI plugins contain only Markdown instruction files — no MCP servers, no executable code, and no external network calls. You can verify this yourself by browsing the [plugin source](https://github.com/jamesgray-ai/handsonai/tree/main/plugins).
 
-## Don't Use Plugins? Browse on GitHub
+## Download from GitHub
 
-Every agent, skill, and prompt in this marketplace is a plain-text Markdown file — no compiled code, no special format. You can download and use them in any AI tool:
+Every agent, skill, and prompt here is a plain-text Markdown file — no compiled code, no special format. You don't need plugins to use them.
+
+**Download skill folders from GitHub** and place them in your platform's skill directory. See [How to Add Skills to Your Platform](../../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for step-by-step instructions for Claude Code, Cursor, Codex CLI, Gemini CLI, and VS Code Copilot.
+
+:material-github: [Browse all skills on GitHub](https://github.com/jamesgray-ai/handsonai/tree/main/plugins){ .md-button }
+
+**Other ways to use them:**
 
 - **Paste into a system prompt** — copy an agent or skill file and use it as instructions in ChatGPT, Gemini, Copilot, or any LLM
 - **Upload to Claude.ai** — zip a skill folder and upload it under Settings > Capabilities > Upload skill ([detailed instructions](using-plugins.md#using-skills-in-claudeai-web))
 - **Use via the Claude API** — embed skill content in the `system` parameter ([code example](using-plugins.md#using-skills-via-the-claude-api))
-
-:material-github: [Browse all tools on GitHub](https://github.com/jamesgray-ai/handsonai/tree/main/plugins){ .md-button }
 
 ## Add This Marketplace
 

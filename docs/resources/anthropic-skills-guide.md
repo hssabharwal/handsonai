@@ -22,7 +22,7 @@ Skills are one of the most powerful ways to customize Claude. Instead of re-expl
 
 ## How the Cookbook Uses This
 
-This guide is the primary reference for the [Skills](../agentic-building-blocks/skills/index.md) building block and directly informs the cookbook's [Build (Plugins)](../use-the-cookbook/build/index.md) section. The skill structure and progressive disclosure concepts appear throughout the cookbook's plugin development guides.
+This guide is the primary reference for the [Skills](../agentic-building-blocks/skills/index.md) building block and directly informs the cookbook's [Agents & Skills](../use-the-cookbook/build/index.md) section. The skill structure and progressive disclosure concepts appear throughout the cookbook's plugin development guides.
 
 ## Access
 
