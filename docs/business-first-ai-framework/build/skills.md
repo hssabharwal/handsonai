@@ -17,7 +17,7 @@ Build reusable skills before generating your prompt, so the prompt can reference
 | | |
 |---|---|
 | **What you'll do** | Identify skill candidates from your AI Building Block Spec, then build each one by giving Claude your Workflow Definition and Building Block Spec — the analysis you've already done provides everything it needs |
-| **What you'll get** | Reusable skills that your Baseline Workflow Prompt can invoke instead of spelling out every step |
+| **What you'll get** | Reusable skills that your workflow prompt can invoke instead of spelling out every step |
 | **Time** | ~10-15 minutes per skill (the heavy analysis is already in your artifacts) |
 
 ## Identify Skill Candidates
@@ -92,6 +92,6 @@ The skill handles the complexity. The prompt stays clean and focused on workflow
 
 ## What's Next
 
-Generate your Baseline Workflow Prompt — [Prompt](prompt.md). When the AI asks, list the skills you built and it generates a prompt that references them instead of spelling out those steps.
+Continue to the next step in [Construct](index.md#32-construct). When the model generates your platform artifacts, list the skills you built — it generates prompts and configurations that reference your skills instead of spelling out those steps.
 
-If you skipped building skills (or your platform doesn't support them), the Prompt step generates the full baseline with every step spelled out. You can always extract skills later.
+If you skipped building skills (or your platform doesn't support them), the model generates the full prompt with every step spelled out. You can always extract skills later.

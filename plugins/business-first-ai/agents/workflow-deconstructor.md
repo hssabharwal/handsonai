@@ -51,21 +51,20 @@ Read the Workflow Definition and run the full Build process:
 
 **Construct phase:**
 1. Present the pattern-specific build path (only the steps that apply)
-2. Generate the Baseline Workflow Prompt
-3. Auto-generate skill and agent files (Claude platform, when applicable)
+2. Generate platform artifacts (prompts, skills, agents, configs)
+3. Generate the Launch Guide
 
 **Reads:** `outputs/[name]-definition.md`
 **Produces:**
 - `outputs/[name]-building-block-spec.md` (Design)
-- `outputs/[name]-prompt.md` (Construct)
-- `.claude/skills/*/SKILL.md` (Construct, Claude platform, when applicable)
-- `.claude/agents/*.md` (Construct, Claude platform, when applicable)
+- Platform artifacts — prompts, skills, agents, configs (Construct)
+- `outputs/[name]-launch-guide.md` (Construct)
 
 ### Post-Build — Registry & SOP (if Notion available)
 
-If the workflow was registered to the Notion Workflows database during Step 2 naming, offer to generate the workflow SOP and save it to the page body. Use the Baseline Prompt's steps as the procedure source. This completes the workflow's Notion page: metadata in properties, SOP in the page content.
+If the workflow was registered to the Notion Workflows database during Step 2 naming, offer to generate the workflow SOP and save it to the page body. Use the generated artifacts' procedure steps as the source. This completes the workflow's Notion page: metadata in properties, SOP in the page content.
 
-**Reads:** `outputs/[name]-prompt.md` (for procedure steps)
+**Reads:** Generated platform artifacts (for procedure steps)
 **Updates:** The workflow's Notion page body
 
 ## File Conventions
@@ -105,9 +104,8 @@ After all three steps, present a summary:
 >
 > **Build — Construct (Step 3):**
 >
-> 4. **Baseline Workflow Prompt** — `outputs/[name]-prompt.md`
-> 5. **Skills** — `.claude/skills/*/SKILL.md` (if generated)
-> 6. **Agents** — `.claude/agents/*.md` (if generated)
-> 7. **Workflow SOP** — saved to the workflow's Notion page (if registered)
+> 4. **Platform Artifacts** — prompts, skills, agents, and configs for your platform
+> 5. **Launch Guide** — `outputs/[name]-launch-guide.md`
+> 6. **Workflow SOP** — saved to the workflow's Notion page (if registered)
 >
-> Start by running the baseline prompt on a real scenario. Then iterate based on results.
+> Follow the Launch Guide to get your workflow running. Then iterate based on results.

@@ -26,8 +26,8 @@ Each step produces a specific deliverable that feeds into the next:
 | **1. Discover** | Audit workflows, identify AI opportunities | Opportunity Report + Workflow Candidates | `ai-opportunity-report.md` |
 | **2. Deconstruct** | Deep-dive a specific workflow using the 5-question framework | Workflow Definition | `[name]-definition.md` |
 | **3.1 Design** | Choose execution pattern, classify steps, map building blocks | AI Building Block Spec | `[name]-building-block-spec.md` |
-| **3.2 Construct** | Build the components your pattern requires | Baseline Workflow Prompt (+ skills/agents) | `[name]-prompt.md` |
-| **3.3 Run** | Test on a real scenario, iterate | Refined workflow | — |
+| **3.2 Construct** | Build the components your pattern requires | Platform artifacts + Launch Guide | Context, skills, agents, configs |
+| **3.3 Launch** | Get the workflow running, test on a real scenario, iterate | Refined workflow | `[name]-launch-guide.md` |
 
 ---
 
@@ -172,7 +172,7 @@ Each pattern has a specific build path — users follow only the steps that appl
 - Point users to the specific build path for their execution pattern
 - Don't overwhelm with all options — show only what applies
 - Skills: build only for steps with complex, reusable logic
-- The Baseline Workflow Prompt must be self-contained — paste and run on any AI platform
+- Generated prompts should be self-contained — paste and run on any AI platform
 
 ### 3.3: Run
 
@@ -239,7 +239,7 @@ When the user needs more depth on a specific topic, fetch the raw Markdown from 
 | 3.2: Context | Creating context artifacts for your workflow | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/build/context.md` |
 | 3.2: Projects | Setting up project workspaces | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/build/projects.md` |
 | 3.2: Skills | Building reusable skills from your AI Building Block Spec | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/build/skills.md` |
-| 3.2: Prompt | Generating the Baseline Workflow Prompt | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/build/prompt.md` |
+| 3.2: Prompt | How prompts work as a building block | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/build/prompt.md` |
 | 3.2: Agents | Agent decision framework and building agents | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/build/agents.md` |
 | 3.2: MCP | Connecting AI to external tools and services | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/build/mcp.md` |
 | 3.3: Run | Executing, testing, and iterating your workflow | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/build/run.md` |

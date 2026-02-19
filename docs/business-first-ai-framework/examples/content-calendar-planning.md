@@ -1,6 +1,6 @@
 ---
 title: "Example: Content Calendar Planning"
-description: A complete worked example showing all three framework deliverables — Workflow Definition, AI Building Block Spec, and Baseline Workflow Prompt — for a real content calendar planning workflow.
+description: A complete worked example showing the framework deliverables — Workflow Definition, AI Building Block Spec, and workflow prompt — for a real content calendar planning workflow.
 ---
 
 # Example: Content Calendar Planning
@@ -48,15 +48,15 @@ The AI Building Block Spec is what [Design](../build/design.md) produces from th
 - **Context inventory** — what data sources and reference materials each step needs
 - **Recommended implementation order** — Quick Wins first (prompt + 2 simple skills), then Semi-Autonomous (2 complex skills), then Future Enhancements
 
-**Key insight:** The spec doesn't say "build everything at once." It recommends starting with the Baseline Workflow Prompt — pure conversation, no infrastructure — so you get value immediately. Database skills layer in incrementally. This build order means you're running the workflow on day one.
+**Key insight:** The spec doesn't say "build everything at once." It recommends starting with a prompt — pure conversation, no infrastructure — so you get value immediately. Database skills layer in incrementally. This build order means you're running the workflow on day one.
 
 ---
 
-### 3. Baseline Workflow Prompt (Step 3.2 — Construct)
+### 3. Workflow Prompt (Step 3.2 — Construct)
 
-[:material-github: View full Baseline Workflow Prompt on GitHub](https://github.com/jamesgray-ai/handsonai/blob/main/examples/content-calendar-planning/baseline-prompt.md){ .md-button .md-button--primary target="_blank" }
+[:material-github: View full Workflow Prompt on GitHub](https://github.com/jamesgray-ai/handsonai/blob/main/examples/content-calendar-planning/baseline-prompt.md){ .md-button .md-button--primary target="_blank" }
 
-The Baseline Workflow Prompt is what [Construct](../build/prompt.md) produces. This is the ready-to-run prompt you paste into any AI tool to execute the workflow.
+The workflow prompt is one of the platform artifacts that [Construct](../build/index.md#32-construct) produces. This is the ready-to-run prompt you paste into any AI tool to execute the workflow.
 
 **What's inside:**
 
@@ -75,8 +75,8 @@ A few things to take away from this example:
 
 - **The expansion.** "I plan content on Sundays" became 10 steps across 4 phases, with decision logic, failure modes, and a dependency map. That expansion is what makes the workflow executable by AI.
 - **The autonomy spectrum.** Not every step needs AI autonomy. Steps 1, 2, 4, and 10 are fully automated (deterministic data operations). Steps 5-8 are collaborative (AI proposes, human decides). Steps 3 and 9 are human-led. The framework helps you see this clearly.
-- **The build order.** The Building Block Spec doesn't just say "build everything." It recommends starting with the prompt (pure conversation, no infrastructure needed), then layering in skills incrementally. You get value from the first run.
-- **Platform-agnostic.** The Workflow Definition and prompt work in any AI tool. The skills and MCP connections are implementation details that vary by platform — but the underlying logic is the same everywhere.
+- **The build order.** The Building Block Spec doesn't just say "build everything." It recommends starting with a prompt (pure conversation, no infrastructure needed), then layering in skills incrementally. You get value from the first run.
+- **Platform-agnostic.** The Workflow Definition and Building Block Spec work with any AI tool. The skills and MCP connections are implementation details that vary by platform — but the underlying logic is the same everywhere.
 
 ---
 
