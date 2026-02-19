@@ -284,7 +284,10 @@ nav:
         - Guardrails: agentic-building-blocks/agents/capability-patterns/guardrails.md
         - Human-in-the-Loop: agentic-building-blocks/agents/capability-patterns/human-in-the-loop.md
       - Resources: agentic-building-blocks/agents/resources.md
-    - MCP: agentic-building-blocks/mcp/index.md
+    - MCP:
+      - Overview: agentic-building-blocks/mcp/index.md
+      - Questions:
+        - How do I connect an MCP server to Claude Code: agentic-building-blocks/mcp/questions/how-do-i-connect-an-mcp-server-to-claude-code.md
   - Use Cases:
     - Overview: use-cases/index.md
     - Content Creation:
