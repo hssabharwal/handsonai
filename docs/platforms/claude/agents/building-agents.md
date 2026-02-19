@@ -5,7 +5,7 @@ description: How to build agents on the Claude platform — custom subagents for
 
 # Building Agents on Claude
 
-> **Part of:** [Build Workflows > Agents](../../../business-first-ai-framework/build/agents.md)
+> **Part of:** [Build Workflows > Agents](../../../business-first-ai-framework/build/construct.md)
 
 Claude Code provides two approaches to building agents, each suited to different workflow patterns. Both use Markdown files with YAML frontmatter — no code required.
 
@@ -174,6 +174,6 @@ For multi-agent workflows, the Design phase produced configurations for multiple
 
 ## What's Next
 
-- [Agents overview](../../../business-first-ai-framework/build/agents.md) — the platform-agnostic agent decision framework
+- [Agents overview](../../../business-first-ai-framework/build/construct.md) — the platform-agnostic agent decision framework
 - [Design Your AI Workflow](../../../business-first-ai-framework/build/design.md) — produce the agent blueprint that feeds into these implementations
 - [Scheduling Subagents](../subagents/scheduling-subagents.md) — run agents automatically on a schedule
