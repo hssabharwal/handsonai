@@ -1,6 +1,6 @@
 ---
 title: Building Agents on Google
-description: How to build agents on Google's Gemini platform — Workspace Studio for natural-language automation, Agent Designer for no-code workflows, and the Agent Development Kit for custom development.
+description: How to build agents on Google's Gemini platform — Workspace Studio for natural-language automation, Gemini Enterprise Agent Designer for no-code workflows, and the Agent Development Kit for custom development.
 ---
 
 # Building Agents on Google
@@ -12,7 +12,7 @@ Google offers three approaches to building agents on the Gemini platform, rangin
 | Approach | Best for | Complexity |
 |----------|----------|------------|
 | [Workspace Studio](#workspace-studio) | Non-technical users automating everyday work across Workspace apps | Lowest — describe what you want in natural language |
-| [Agent Designer](#agent-designer) | Business users who want to build agents without writing code | Low — no-code/low-code visual interface |
+| [Gemini Enterprise Agent Designer](#gemini-enterprise-agent-designer) | Business users who want to build agents without writing code | Low — no-code/low-code visual interface |
 | [Agent Development Kit (ADK)](#agent-development-kit-adk) | Developers building custom agents for deployment on Vertex AI | Higher — open-source framework, full programmatic control |
 
 ## Workspace Studio
@@ -63,11 +63,11 @@ Here's how a research analyst agent from the Design phase maps to Workspace Stud
 
 Workspace Studio is best suited for the **Prompt** execution pattern — describe what you want, Gemini generates the automation, and you refine it conversationally.
 
-## Agent Designer
+## Gemini Enterprise Agent Designer
 
-Agent Designer is a no-code, low-code platform within Gemini Enterprise for building AI agents using natural language and a visual workflow editor.
+Gemini Enterprise Agent Designer is a no-code, low-code platform within Gemini Enterprise for building AI agents using natural language and a visual workflow editor.
 
-**Official docs:** [Agent Designer](https://docs.cloud.google.com/gemini/enterprise/docs/agent-designer)
+**Official docs:** [Gemini Enterprise — Agents overview](https://docs.cloud.google.com/gemini/enterprise/docs/agents-overview)
 
 ### What you can build
 
@@ -91,7 +91,7 @@ The interface has two main sections:
 
 ### Mapping your Design blueprint
 
-| Design blueprint | Agent Designer |
+| Design blueprint | Gemini Enterprise Agent Designer |
 |-----------------|----------------|
 | **Name** | Agent name in the Designer interface |
 | **Description** | Agent description and purpose |
@@ -101,7 +101,7 @@ The interface has two main sections:
 
 ### Example: Implementing your Design blueprint
 
-Here's how a research analyst agent from the Design phase maps to Agent Designer:
+Here's how a research analyst agent from the Design phase maps to Gemini Enterprise Agent Designer:
 
 1. **Name** → Enter `research-analyst` as the agent name when creating a new agent
 2. **Description** → Add the agent's purpose in the description field: "Researches companies and produces structured briefs"
