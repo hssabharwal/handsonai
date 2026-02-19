@@ -94,7 +94,7 @@ With a prompt, you define every step and the AI follows your script. With an age
 
 | Platform | Agent system | How it works |
 |---|---|---|
-| Claude | Claude Code subagents | Define agents as `.md` files with system prompts, skills, and tool access. Run with `claude --agent` or via the `workflow-deconstructor` pattern. |
+| Claude | Claude Code subagents | Define agents as `.md` files with system prompts, skills, and tool access. Run with `claude --agent` or via the `framework-orchestrator` pattern. |
 | OpenAI | OpenAI Agents | Build agents with the Agents API or in the Assistants playground. Agents have tools, instructions, and persistent threads. |
 | Google | Google Agents | Build with Vertex AI Agent Builder or Gemini's agent capabilities. Agents connect to Google Workspace tools. |
 | M365 Copilot | Copilot Agents | Build declarative or custom agents in Copilot Studio. Agents connect to Microsoft Graph and business data. |

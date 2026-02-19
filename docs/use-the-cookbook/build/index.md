@@ -5,219 +5,36 @@ description: Pre-built agents, skills, and prompts you can download and use in a
 
 # Agents & Skills
 
-A growing collection of ready-to-use **agents**, **skills**, and **prompts** that give your AI tool domain expertise it doesn't have out of the box. Every file is plain-text Markdown — no compiled code, no special format — so you can use them in any AI tool that supports the [Agent Skills standard](../../agentic-building-blocks/skills/index.md).
-
-**Two ways to get them:**
-
-- :material-download: **Download from GitHub** — grab any skill folder and place it in your platform's skill directory. Works with Claude Code, Cursor, Codex CLI, Gemini CLI, and VS Code Copilot. [See how.](#download-from-github)
-- :material-puzzle-outline: **Install as Claude Code plugins** — one command, automatic expertise across every session. [Get started below.](#what-are-plugins)
-
-Browse the available collections below to see what's included, or start with the [Getting Started guide](getting-started.md) for a step-by-step walkthrough.
-
-## What Are Plugins?
-
-Out of the box, Claude is a generalist. It can write, research, and analyze — but it doesn't know your standards, your workflows, or your preferred formats. Every time you start a new conversation, you'd need to re-explain how you want things done.
-
-**Plugins solve this.** Each plugin packages domain expertise — writing standards, naming conventions, research processes, editorial criteria — into a format Claude can use automatically. Install a plugin once and Claude gains that expertise across every session.
-
-A plugin can bundle several types of components:
-
-- **Agents** — Expert personalities that Claude activates automatically. Ask for a LinkedIn post and Claude brings in a writing specialist. Ask for an AI news briefing and a research specialist takes over.
-- **Skills** — Step-by-step workflows that teach Claude specific tasks. A skill might encode your editorial standards, your workflow naming conventions, or your documentation templates.
-- **Commands** — Slash commands that trigger specific actions (like `/commit` for git workflows).
-- **Hooks** — Automations that run in response to events (e.g., running a linter after every file edit).
-- **MCP servers** — Connections to external tools and services (e.g., Notion, GitHub, Slack).
-
-The plugins in this marketplace currently focus on **agents** and **skills**. For the full plugin format, see the official [Plugin structure overview](https://code.claude.com/docs/en/plugins#plugin-structure-overview).
-
-**The result:** Instead of writing long prompts to explain what you want, you describe your goal in plain language and Claude applies the right expertise automatically.
-
-## Transparency & Security
-
-Plugins are plain-text Markdown files — there's no compiled code or hidden logic. Every agent and skill in this marketplace is fully readable, so you can review exactly what instructions Claude receives before you install anything.
-
-**Review the source:** All plugin files are open source in the [handsonai GitHub repository](https://github.com/jamesgray-ai/handsonai/tree/main/plugins). Each plugin's detail page (linked below) includes the full list of agents and skills with descriptions of what they do.
-
-!!! warning "Anthropic's guidance on third-party plugins"
-    Anthropic recommends reviewing any plugin before installing it. From the official [plugin documentation](https://code.claude.com/docs/en/discover-plugins): *"Make sure you trust a plugin before installing it. Anthropic does not control what MCP servers, files, or other software are included in plugins and cannot verify that they work as intended."*
-
-    The Hands-on AI plugins contain only Markdown instruction files — no MCP servers, no executable code, and no external network calls. You can verify this yourself by browsing the [plugin source](https://github.com/jamesgray-ai/handsonai/tree/main/plugins).
-
-## Download from GitHub
-
-Every agent, skill, and prompt here is a plain-text Markdown file — no compiled code, no special format. You don't need plugins to use them.
-
-**Download skill folders from GitHub** and place them in your platform's skill directory. See [How to Add Skills to Your Platform](../../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for step-by-step instructions for Claude Code, Cursor, Codex CLI, Gemini CLI, and VS Code Copilot.
-
-:material-github: [Browse all skills on GitHub](https://github.com/jamesgray-ai/handsonai/tree/main/plugins){ .md-button }
-
-**Other ways to use them:**
-
-- **Paste into a system prompt** — copy an agent or skill file and use it as instructions in ChatGPT, Gemini, Copilot, or any LLM
-- **Upload to Claude.ai** — zip a skill folder and upload it under Settings > Capabilities > Upload skill ([detailed instructions](using-plugins.md#using-skills-in-claudeai-web))
-- **Use via the Claude API** — embed skill content in the `system` parameter ([code example](using-plugins.md#using-skills-via-the-claude-api))
-
-## Add This Marketplace
-
-In your Claude Code session, type this once to register the Hands-on AI marketplace:
-
-```bash
-/plugin marketplace add jamesgray-ai/handsonai
-```
-
-Then install any plugin below with a single command. All `/plugin` commands are typed inside Claude Code, not in a regular terminal.
-
-For the full details on how marketplaces and plugin installation work, see the official [Discover and install plugins](https://code.claude.com/docs/en/discover-plugins) documentation.
+A growing collection of ready-to-use **agents**, **skills**, and **prompts** that give your AI tool domain expertise it doesn't have out of the box. These are plain-text Markdown files — download from [GitHub](https://github.com/jamesgray-ai/handsonai/tree/main/plugins) and add to any AI tool, or install as Claude Code plugins. See [Using Plugins](using-plugins.md) for setup details.
 
 ---
 
-## :material-rocket-launch: Business-First AI
+## :material-rocket-launch: Business-First AI Framework
 
-The [Business-First AI Framework](../../business-first-ai-framework/index.md) as executable Claude Code skills. Discover AI workflow opportunities (Step 1), deconstruct workflows into AI building blocks (Step 2), and build working AI workflows (Step 3).
+The [Business-First AI Framework](../../business-first-ai-framework/index.md) as executable skills. Discover AI workflow opportunities, deconstruct workflows into AI building blocks, and build working AI workflows. 1 agent, 3 skills.
 
-```bash
-/plugin install business-first-ai@handsonai
-```
+[:octicons-arrow-right-24: Business-First AI Framework](business-first-ai.md){ .md-button }
 
-???+ agents "Agents included (8)"
+---
 
-    | Agent | Step | What it does |
-    |-------|-------|-------------|
-    | [`workflow-deconstructor`](business-first-ai.md#workflow-deconstructor) | 1-3 | Orchestrates the end-to-end Discover, Deconstruct, and Build process. Runs candidate discovery, deep deconstruction, design, and build sequentially with file-based handoffs. |
-    | [`tech-executive-writer`](business-first-ai.md#tech-executive-writer) | 3 | Writes business-focused content about AI and technology. LinkedIn posts, magazine articles, executive briefs, and thought leadership pieces. |
-    | [`hbr-editor`](business-first-ai.md#hbr-editor) | 3 | Reviews drafts against HBR editorial standards. Provides prescriptive feedback on structure, evidence quality, voice, and argument strength. |
-    | [`hbr-publisher`](business-first-ai.md#hbr-publisher) | 3 | Formats finalized articles for web publication and PDF distribution. Handles SEO metadata, social snippets, and professional layout. |
-    | [`ai-productivity-researcher`](business-first-ai.md#ai-productivity-researcher) | 3 | Finds documented case studies of companies using AI for productivity gains. Prioritizes HBR-caliber sources with quantified outcomes. |
-    | [`meeting-prep-researcher`](business-first-ai.md#meeting-prep-researcher) | 3 | Researches meeting attendees and companies, then produces a structured prep brief with profiles, talking points, and suggested questions. |
-    | [`ai-news-researcher`](business-first-ai.md#ai-news-researcher) | Utility | Scans news outlets, blogs, YouTube channels, podcasts, and communities for the latest AI developments. |
-    | [`claude-research-daily`](business-first-ai.md#claude-research-daily) | Utility | Produces a daily brief on Anthropic, Claude, Claude Code, and Cowork from the last 24 hours. |
+## :material-lightbulb-on-outline: AI Workflow Examples
 
-???+ skills "Skills included (5) — all available as slash commands"
+Working examples of AI workflows built with the Business-First AI Framework — executive writing, editorial review, research, meeting prep, AI news, and portable prompts. 7 agents, 2 skills, 3 prompts.
 
-    | Skill | Command | Step | What it does |
-    |-------|---------|-------|-------------|
-    | [`discovering-workflows`](business-first-ai.md#discovering-workflows) | `/business-first-ai:discover` | 1 | Structured audit of your workflows to discover where AI can help. Produces a categorized opportunity report with structured workflow candidates. |
-    | [`deconstructing-workflows`](business-first-ai.md#deconstructing-workflows) | `/business-first-ai:deconstruct` | 2 | Interactively deconstructs a business workflow into a structured Workflow Definition using the 5-question framework. |
-    | [`building-workflows`](business-first-ai.md#building-workflows) | `/business-first-ai:build-workflow` | 3 | Designs the AI implementation (architecture decisions, execution pattern, building blocks, skill candidates, agent configs) and constructs platform artifacts with a Launch Guide. |
-    | [`editing-hbr-articles`](business-first-ai.md#editing-hbr-articles) | `/business-first-ai:edit-article` | 3 | HBR editorial criteria for article editing. Used by the `hbr-editor` agent. |
-    | [`preparing-meeting-briefs`](business-first-ai.md#preparing-meeting-briefs) | `/business-first-ai:meeting-prep` | 3 | Structured research workflow for meeting preparation. Used by the `meeting-prep-researcher` agent. |
-
-???+ prompts "Prompts included (3)"
-
-    | Prompt | What it does |
-    |--------|-------------|
-    | [`linkedin-prospect-research`](business-first-ai.md#linkedin-prospect-research) | Deterministic prospecting prompt — finds and qualifies LinkedIn prospects against a buyer persona. |
-    | [`buyer-persona-revenue-leader-rachel`](business-first-ai.md#buyer-persona-revenue-leader-rachel) | Example buyer persona used as input to the prospect research workflow. |
-    | [`meeting-prep-quick`](business-first-ai.md#meeting-prep-quick) | Portable one-shot meeting prep prompt for any AI tool. |
-
-???+ usage "Example usage"
-
-    ```
-    "Help me discover AI workflow opportunities"
-    → discovering-workflows runs a structured audit and produces an opportunity report
-
-    "I want to deconstruct my client onboarding workflow"
-    → workflow-deconstructor walks you through the full deconstruction process
-
-    "Write a LinkedIn post about how RAG is transforming enterprise search"
-    → tech-executive-writer drafts the article
-
-    "Review this article for HBR quality"
-    → hbr-editor provides structured editorial feedback
-
-    "I have a meeting with Sarah Chen from Acme Corp tomorrow. Help me prepare."
-    → meeting-prep-researcher researches the attendee and company, produces a prep brief
-
-    "What's new in AI today?"
-    → ai-news-researcher scans sources and produces a categorized briefing
-    ```
+[:octicons-arrow-right-24: AI Workflow Examples](ai-workflow-examples.md){ .md-button }
 
 ---
 
 ## :material-clipboard-text-outline: AI Registry
 
-Document, name, register, and sync AI operational workflows and skills.
+Name, document, register, and sync your AI workflows and skills — naming conventions, SOPs, process guides, Notion registration, and GitHub syncing. 5 skills.
 
-!!! note
-    This plugin requires a Notion account and the [Notion MCP connector](../../builder-setup/notion-registry-setup.md). Without it, Claude can follow the naming and writing conventions but cannot save entries to Notion.
-
-```bash
-/plugin install ai-registry@handsonai
-```
-
-??? skills "Skills included — all available as slash commands"
-
-    | Skill | Command | What it does |
-    |-------|---------|-------------|
-    | [`naming-workflows`](ai-registry.md#naming-workflows) | `/ai-registry:name-workflow` | Generates consistent, outcome-focused names and descriptions for business workflows. Follows domain-specific naming patterns (Sales, Marketing, Product, etc.) and creates entries in the Notion Workflows database. |
-    | [`writing-workflow-sops`](ai-registry.md#writing-workflow-sops) | `/ai-registry:workflow-sop` | Writes Standard Operating Procedure documentation for workflows. Adapts SOP templates for Manual, Augmented, and Automated workflow types. Saves SOPs to Notion workflow page bodies. |
-    | [`writing-process-guides`](ai-registry.md#writing-process-guides) | `/ai-registry:process-guide` | Writes Business Process Guide documentation explaining when, why, and how to execute a complete business process with its component workflows. Covers strategic context while linking to individual SOPs for tactical details. |
-    | [`registering-building-blocks`](ai-registry.md#registering-building-blocks) | `/ai-registry:register-block` | Registers or updates AI building blocks (Skills, Agents, Prompts, Context MDs) in the Notion AI Building Blocks database. Resolves asset type automatically, extracts metadata, generates Quick Start Prompts, and handles duplicate detection. |
-    | [`syncing-skills-to-github`](ai-registry.md#syncing-skills-to-github) | `/ai-registry:sync-skills` | Syncs skills from `~/.claude/skills/` to a GitHub repository. Detects changes, generates semantic commit messages, pushes to remote, and updates Notion AI Building Blocks with GitHub URLs. |
-
-??? workflow "Recommended workflow"
-
-    1. **Name** — Use `naming-workflows` to create a consistent workflow entry in Notion
-    2. **Document** — Use `writing-workflow-sops` to write the SOP for each workflow
-    3. **Connect** — Use `writing-process-guides` to document how workflows fit together in a business process
-    4. **Register** — Use `registering-building-blocks` to track building blocks in Notion AI Building Blocks
-    5. **Sync** — Use `syncing-skills-to-github` to version-control everything in GitHub
-
-    ```
-    "Name a workflow for drafting email responses"
-    → naming-workflows generates options and creates a Notion entry
-
-    "Write an SOP for the Email Response Drafting workflow"
-    → writing-workflow-sops produces a complete SOP in Notion
-
-    "Write a process guide for the Email Management business process"
-    → writing-process-guides documents the end-to-end process
-
-    "Register the email-response-drafting skill in Notion"
-    → registering-building-blocks adds it to the AI Building Blocks database
-
-    "Sync all changed skills to GitHub"
-    → syncing-skills-to-github commits and pushes with Notion tracking
-    ```
+[:octicons-arrow-right-24: AI Registry](ai-registry.md){ .md-button }
 
 ---
 
 ## :material-code-tags: Agentic Coding
 
-Skills for AI-assisted coding workflows. Define requirements before you build — structured PRDs with user stories, acceptance criteria, and GitHub issue tracking.
+Define requirements before you build — structured Vision Briefs and PRDs with user stories, acceptance criteria, and GitHub issue tracking. 2 skills.
 
-```bash
-/plugin install agentic-coding@handsonai
-```
-
-??? skills "Skills included — all available as slash commands"
-
-    | Skill | Command | What it does |
-    |-------|---------|-------------|
-    | [`writing-vision-briefs`](agentic-coding.md#writing-vision-briefs) | `/agentic-coding:writing-vision-briefs` | Captures a fuzzy idea as a structured Vision Brief, then breaks it into epics and features you can build one at a time. Creates GitHub issues for each epic and recommends where to start. |
-    | [`writing-feature-prds`](agentic-coding.md#writing-feature-prds) | `/agentic-coding:writing-feature-prds` | Guides you through creating a structured feature PRD for **one feature** — with user stories, acceptance criteria, and GitHub issue tracking. Walks through 4 phases: Define, Stress-test, Track, Handoff to plan mode. |
-
-??? usage "Example usage"
-
-    ```
-    "I have an idea for improving how we onboard new customers"
-    → writing-vision-briefs captures the idea as a structured Vision Brief
-
-    "I want to build a new feature for user authentication"
-    → writing-feature-prds walks through the 4-phase PRD workflow
-
-    "Create a spec for adding dark mode support"
-    → Creates a PRD at specs/dark-mode.md with user stories and acceptance criteria
-    ```
-
----
-
-## Quick Reference
-
-| Plugin | Agents | Skills | Prompts | Install command |
-|--------|--------|--------|---------|----------------|
-| `business-first-ai` | 8 | 5 | 3 | `/plugin install business-first-ai@handsonai` |
-| `ai-registry` | 0 | 5 | 0 | `/plugin install ai-registry@handsonai` |
-| `agentic-coding` | 0 | 2 | 0 | `/plugin install agentic-coding@handsonai` |
-
-All plugins are maintained in the [handsonai GitHub repository](https://github.com/jamesgray-ai/handsonai).
+[:octicons-arrow-right-24: Agentic Coding](agentic-coding.md){ .md-button }

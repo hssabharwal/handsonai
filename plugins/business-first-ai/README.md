@@ -1,6 +1,6 @@
 # Business-First AI
 
-The Business-First AI Framework as executable Claude Code skills. Discover AI workflow opportunities, deconstruct workflows into building blocks, and build with worked examples across the autonomy spectrum.
+The Business-First AI Framework as executable Claude Code skills. Discover AI workflow opportunities, deconstruct workflows into building blocks, and build working AI workflows.
 
 ## Install
 
@@ -14,14 +14,7 @@ The Business-First AI Framework as executable Claude Code skills. Discover AI wo
 
 | Agent | Description |
 |-------|-------------|
-| `workflow-deconstructor` | Orchestrates the end-to-end Discover → Deconstruct → Build process |
-| `tech-executive-writer` | Writes business-focused content about AI for non-technical audiences |
-| `hbr-editor` | Reviews articles against Harvard Business Review editorial standards |
-| `hbr-publisher` | Formats finalized articles for web publication and PDF distribution |
-| `ai-productivity-researcher` | Finds case studies of companies using AI with quantified outcomes |
-| `meeting-prep-researcher` | Researches attendees and companies before meetings |
-| `ai-news-researcher` | Scans news outlets and YouTube for the latest AI developments |
-| `claude-research-daily` | Daily brief on Anthropic, Claude, Claude Code, and Cowork news |
+| `framework-orchestrator` | Orchestrates the end-to-end Discover → Deconstruct → Build process |
 
 ### Skills
 
@@ -30,16 +23,6 @@ The Business-First AI Framework as executable Claude Code skills. Discover AI wo
 | `discovering-workflows` | Audit your workflows to find where AI creates the most value |
 | `deconstructing-workflows` | Break a workflow into structured steps using the 5-question framework |
 | `building-workflows` | Design execution patterns and generate prompts, skills, and agents |
-| `editing-hbr-articles` | Make direct, prescriptive edits to articles for HBR quality |
-| `preparing-meeting-briefs` | Step-by-step research workflow for meeting preparation |
-
-### Prompts
-
-| Prompt | Description |
-|--------|-------------|
-| `linkedin-prospect-research` | Find and qualify LinkedIn prospects against a buyer persona |
-| `buyer-persona-revenue-leader-rachel` | Example buyer persona for the prospect research workflow |
-| `meeting-prep-quick` | Portable one-shot meeting prep prompt for any AI tool |
 
 ## Slash Commands
 
@@ -48,8 +31,6 @@ The Business-First AI Framework as executable Claude Code skills. Discover AI wo
 | `/business-first-ai:discover` | `discovering-workflows` — Step 1 |
 | `/business-first-ai:deconstruct` | `deconstructing-workflows` — Step 2 |
 | `/business-first-ai:build-workflow` | `building-workflows` — Step 3 |
-| `/business-first-ai:edit-article` | `editing-hbr-articles` |
-| `/business-first-ai:meeting-prep` | `preparing-meeting-briefs` |
 
 ## Quick Start
 
@@ -58,6 +39,10 @@ The Business-First AI Framework as executable Claude Code skills. Discover AI wo
 3. **Build** — Run `/business-first-ai:build-workflow` to design and generate the AI workflow
 
 Outputs are saved to the `outputs/` folder.
+
+## Worked Examples
+
+The example agents, skills, and prompts (executive writing, editorial review, research, meeting prep, AI news) have moved to the [AI Workflow Examples](https://handsonai.info/use-the-cookbook/build/ai-workflow-examples/) plugin. Install with `/plugin install ai-workflow-examples@handsonai`.
 
 ## Full Documentation
 

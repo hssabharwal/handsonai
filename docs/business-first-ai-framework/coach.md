@@ -40,7 +40,7 @@ The AI will ask where you are in the process and guide you from there. Answer it
 
     Claude.ai can browse URLs. When you paste the coaching prompt, it will fetch the Framework Coach Guide from the URL in the prompt. For detailed questions, it can fetch additional documentation pages as needed.
 
-    **Claude Code and Cowork** users: consider using the `workflow-deconstructor` agent from the [Business-First AI plugin](../use-the-cookbook/build/business-first-ai.md) instead — it runs the full framework interactively with file-based handoffs.
+    **Claude Code and Cowork** users: consider using the `framework-orchestrator` agent from the [Business-First AI plugin](../use-the-cookbook/build/business-first-ai.md) instead — it runs the full framework interactively with file-based handoffs.
 
 === "Gemini"
 

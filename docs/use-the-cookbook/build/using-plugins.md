@@ -1,23 +1,27 @@
 ---
 title: Using Plugins
-description: How to use plugin agents and skills across Claude Code, Claude.ai, Claude Desktop / Cowork, and the Claude API
+description: What plugins are, how to install and use them in Claude Code, Claude.ai, Cowork, and the Claude API, and how to manage and troubleshoot them
 ---
 
 # Using Plugins
 
-You've installed a plugin — now what? This guide explains what plugins give you and how to use them across every Claude surface.
+Out of the box, Claude is a generalist. It can write, research, and analyze — but it doesn't know your standards, your workflows, or your preferred formats. Every time you start a new conversation, you'd need to re-explain how you want things done.
 
-!!! tip "Haven't installed a plugin yet?"
-    Start with the [Getting Started guide](getting-started.md) — three quick steps.
+**Plugins solve this.** Each plugin packages domain expertise — writing standards, naming conventions, research processes, editorial criteria — into a format Claude can use automatically. Install a plugin once and Claude gains that expertise across every session.
 
-## What You Get After Installing a Plugin
+**The result:** Instead of writing long prompts to explain what you want, you describe your goal in plain language and Claude applies the right expertise automatically.
+
+## What's Inside a Plugin
 
 The [plugin format](https://code.claude.com/docs/en/plugins#plugin-structure-overview) supports agents, skills, commands, hooks, and MCP server connections. The Hands-on AI plugins currently provide:
 
-- **Agents** — Expert personalities that Claude activates automatically based on your request. For example, ask for a LinkedIn post and Claude brings in a writing specialist.
-- **Skills** — Step-by-step workflows (an instruction file plus optional reference material) that teach Claude how to do specific tasks. For example, a skill might teach Claude your company's naming conventions.
+- **Agents** — Expert personalities that Claude activates automatically based on your request. Ask for a LinkedIn post and Claude brings in a writing specialist. Ask for an AI news briefing and a research specialist takes over.
+- **Skills** — Step-by-step workflows (an instruction file plus optional reference material) that teach Claude specific tasks. A skill might encode your editorial standards, your workflow naming conventions, or your documentation templates.
+- **Commands** — Slash commands that trigger specific actions (like `/commit` for git workflows).
+- **Hooks** — Automations that run in response to events (e.g., running a linter after every file edit).
+- **MCP servers** — Connections to external tools and services (e.g., Notion, GitHub, Slack).
 
-As the plugins grow, they may also include commands, hooks, and connectors — but you don't need to worry about that now. Describe what you need and Claude picks the right agent or skill.
+The plugins in this marketplace currently focus on **agents** and **skills**. As they grow, they may also include commands, hooks, and connectors.
 
 ## Agents vs Skills
 
@@ -28,9 +32,65 @@ As the plugins grow, they may also include commands, hooks, and connectors — b
 | Where they work | Claude Code only | Claude Code, Claude.ai (upload as ZIP), and Claude Cowork |
 | Example | "Write a LinkedIn post about RAG" activates `tech-executive-writer` | "Name a workflow for drafting email responses" loads `naming-workflows` naming conventions |
 
-## Using Plugins in Claude Code
+## Transparency & Security
 
-### Agents — just talk naturally
+Plugins are plain-text Markdown files — there's no compiled code or hidden logic. Every agent and skill in this marketplace is fully readable, so you can review exactly what instructions Claude receives before you install anything.
+
+**Review the source:** All plugin files are open source in the [handsonai GitHub repository](https://github.com/jamesgray-ai/handsonai/tree/main/plugins). Each plugin's detail page (linked from the [marketplace](index.md)) includes the full list of agents and skills with descriptions of what they do.
+
+!!! warning "Anthropic's guidance on third-party plugins"
+    Anthropic recommends reviewing any plugin before installing it. From the official [plugin documentation](https://code.claude.com/docs/en/discover-plugins): *"Make sure you trust a plugin before installing it. Anthropic does not control what MCP servers, files, or other software are included in plugins and cannot verify that they work as intended."*
+
+    The Hands-on AI plugins contain only Markdown instruction files — no MCP servers, no executable code, and no external network calls. You can verify this yourself by browsing the [plugin source](https://github.com/jamesgray-ai/handsonai/tree/main/plugins).
+
+## Getting Started in Claude Code
+
+### Prerequisites
+
+- **Claude Code** installed and working ([Installation Guide](../../builder-setup/claude-code-install.md))
+- An active **Claude Pro, Max, Team, or Enterprise** subscription (plugins are not available on the free plan)
+
+### Step 1: Add the Marketplace
+
+A marketplace is a collection of plugins hosted online. Adding it tells Claude Code where to find plugins you can install. You only need to add it once.
+
+In your Claude Code session, type:
+
+```bash
+/plugin marketplace add jamesgray-ai/handsonai
+```
+
+This tells Claude Code where to find the Hands-on AI plugins. It does not install anything yet. For more on how marketplaces work, see the official [Discover and install plugins](https://code.claude.com/docs/en/discover-plugins) guide.
+
+!!! tip
+    You can see which marketplaces you've added with `/plugin marketplace list`.
+
+### Step 2: Install a Plugin
+
+Browse the [Plugin Marketplace](index.md) to find a plugin that matches your workflow. Each plugin lists the agents and skills it includes.
+
+To install a plugin, type the install command shown on the marketplace page in your Claude Code session:
+
+```bash
+/plugin install <plugin-name>@handsonai
+```
+
+For example:
+
+```bash
+/plugin install business-first-ai@handsonai
+```
+
+After installing, the plugin's agents and skills are available in your Claude Code session. Installed plugins are stored in `~/.claude/plugins/` on your machine.
+
+!!! tip
+    You can install as many plugins as you like. They don't conflict with each other.
+
+### Step 3: Use It
+
+Installed plugins add agents and skills that Claude Code can use automatically. You don't need to call them by name — just describe what you need and Claude will use the right agent or skill.
+
+#### Agents — just talk naturally
 
 Describe what you need. Claude Code matches your request to the right agent automatically.
 
@@ -49,7 +109,7 @@ Describe what you need. Claude Code matches your request to the right agent auto
 
 Claude Code shows which agent it selected at the top of the response. You can list all available agents with `/agents`.
 
-### Skills — natural language or slash commands
+#### Skills — natural language or slash commands
 
 Skills activate the same way — describe what you need and the relevant skill loads automatically.
 
@@ -68,6 +128,8 @@ The format is `/plugin-name:command` (the command may differ from the skill dire
 | `ai-registry` | `/ai-registry:name-workflow` | Generates consistent workflow names and creates Notion entries |
 | `ai-registry` | `/ai-registry:workflow-sop` | Writes Standard Operating Procedure docs for workflows |
 | `business-first-ai` | `/business-first-ai:edit-article` | Loads HBR editorial criteria for article editing |
+
+Each plugin on the [marketplace page](index.md) includes a recommended workflow and example prompts so you know exactly what to ask.
 
 !!! note
     Skills from the `ai-registry` plugin require the [Notion MCP connector](../../builder-setup/notion-registry-setup.md) to be configured. Without it, Claude can follow the naming conventions and draft the output, but cannot read from or write to Notion.
@@ -222,6 +284,18 @@ You can also click the **Customize with plugins** card on the Cowork home screen
 
 Both support the same plugin format and skill files. If you're not comfortable with the terminal, Cowork is the recommended path.
 
+## Download from GitHub
+
+Every file is plain-text Markdown — no compiled code, no special format. You don't need Claude Code or plugins to use them. Download skill folders from GitHub and place them in your platform's skill directory. See [How to Add Skills to Your Platform](../../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for step-by-step instructions for Claude Code, Cursor, Codex CLI, Gemini CLI, and VS Code Copilot.
+
+:material-github: [Browse all skills on GitHub](https://github.com/jamesgray-ai/handsonai/tree/main/plugins){ .md-button }
+
+**Other ways to use them:**
+
+- **Paste into a system prompt** — copy an agent or skill file and use it as instructions in ChatGPT, Gemini, Copilot, or any LLM
+- **Upload to Claude.ai** — zip a skill folder and upload it under Settings > Capabilities > Upload skill ([detailed instructions](#upload-a-plugin-skill-to-claudeai))
+- **Use via the Claude API** — embed skill content in the `system` parameter ([code example](#using-skills-via-the-claude-api))
+
 ## Using Skills via the Claude API
 
 ??? advanced "For developers"
@@ -277,6 +351,56 @@ Both support the same plugin format and skill files. If you're not comfortable w
     !!! note
         MCP-dependent skills (like `registering-building-blocks` or `syncing-skills-to-github`) won't work via the raw API since they require tool integrations that the API alone doesn't provide.
 
+## Managing Plugins
+
+### Updating plugins
+
+When a plugin is updated with new agents, skills, or improvements, pull the latest version:
+
+```bash
+/plugin update <plugin-name>@handsonai
+```
+
+Or update all installed plugins at once:
+
+```bash
+/plugin update --all
+```
+
+### Enabling auto-updates
+
+By default, Claude Code only auto-updates **official Anthropic marketplaces**. Third-party marketplaces like Hands-on AI have auto-updates disabled, so you won't receive new agents, skills, or fixes automatically.
+
+To enable auto-updates for the Hands-on AI marketplace:
+
+1. Run `/plugin` to open the plugin manager
+2. Select the **Marketplaces** tab
+3. Choose **handsonai** from the list
+4. Select **Enable auto-update**
+
+![Plugin manager showing the Marketplaces tab with the handsonai marketplace selected and the auto-update option highlighted](../../assets/images/plugin-auto-update.png)
+
+Once enabled, Claude Code refreshes the marketplace and updates installed plugins each time it starts. If any plugins were updated, you'll see a notification suggesting you restart Claude Code.
+
+!!! tip
+    You can still update manually at any time with `/plugin update --all` — auto-update just makes it happen automatically at startup.
+
+For more details on auto-update behavior and environment variables, see the official [Configure auto-updates](https://code.claude.com/docs/en/discover-plugins#configure-auto-updates) documentation.
+
+### Uninstalling
+
+To remove a plugin you no longer need:
+
+```bash
+/plugin uninstall <plugin-name>@handsonai
+```
+
+To remove the marketplace entirely:
+
+```bash
+/plugin marketplace remove handsonai
+```
+
 ## Platform Summary
 
 | Capability | Claude Code | Claude.ai | Cowork | API |
@@ -291,6 +415,36 @@ Both support the same plugin format and skill files. If you're not comfortable w
 | Best for | Developers | Quick skill use, any device | Knowledge work, non-technical users | Programmatic access |
 
 ## Troubleshooting
+
+### "Marketplace not found"
+
+Make sure you've added the marketplace first:
+
+```bash
+/plugin marketplace add jamesgray-ai/handsonai
+```
+
+### "Plugin not found"
+
+Check the plugin name is spelled correctly and includes the `@handsonai` suffix:
+
+```bash
+# Correct
+/plugin install business-first-ai@handsonai
+
+# Wrong — missing marketplace suffix
+/plugin install business-first-ai
+```
+
+### "Permission denied" or authentication errors
+
+The marketplace is public. If you see authentication errors, check your GitHub CLI configuration ([GitHub Setup guide](../../builder-setup/github-setup.md)).
+
+Run this in your **terminal** (not inside Claude Code):
+
+```bash
+gh auth status
+```
 
 ### "I installed a plugin but nothing happens"
 
@@ -333,6 +487,5 @@ https://github.com/jamesgray-ai/handsonai/tree/main/plugins/<plugin-name>/skills
 
 ## Next Steps
 
-- [Getting Started](getting-started.md) — install your first plugin (if you haven't already)
 - [Plugin Marketplace](index.md) — browse available plugins and see what each one does
 - [Notion Registry setup](../../builder-setup/notion-registry-setup.md) — required for `ai-registry` skills that save to Notion
