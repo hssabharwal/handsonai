@@ -15,7 +15,7 @@ The Hands-on AI Cookbook isn't just a reference site — it's a toolkit you can 
 
     Get instant answers from the cookbook inside Claude, ChatGPT, Claude Code, or any MCP-compatible tool. Connect once, ask anytime.
 
-    [:octicons-arrow-right-24: Connect now](ask/index.md)
+    [:octicons-arrow-right-24: Connect now](../mcp-server/index.md)
 
 -   :material-puzzle-outline:{ .lg .middle } **Agents & Skills**
 
