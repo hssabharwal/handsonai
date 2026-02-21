@@ -103,7 +103,7 @@ claude mcp add --transport http \
 ## Related Questions
 
 - [What is MCP and when should I use it?](../index.md)
-- [How do I set up Claude Code?](../../../builder-setup/claude-code-install.md)
+- [How do I set up Claude Code?](../../../builder-setup/cli.md)
 
 ## Sources
 

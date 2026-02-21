@@ -34,7 +34,7 @@ From Claude user to Claude builder in 5 weeks. This cohort-based course teaches 
 - GitHub, Cursor or VS Code, Chrome installed
 - macOS or Windows with admin access to install software
 
-Setup guides are available under [Builder Setup](../../builder-setup/claude-code-install.md).
+Setup guides are available under [Builder Setup](../../builder-setup/index.md).
 
 ---
 

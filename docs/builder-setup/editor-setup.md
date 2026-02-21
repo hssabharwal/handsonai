@@ -65,7 +65,7 @@ The Claude Code extension connects your editor to Claude's AI capabilities.
 3. Click **Install**
 4. Follow any sign-in prompts
 
-The Claude Code extension also includes an integrated terminal panel. See the [Claude Code Installation guide](claude-code-install.md) for CLI (command-line tool) setup.
+The Claude Code extension also includes an integrated terminal panel. See the [CLI Setup Guide](cli.md) for CLI (command-line tool) setup.
 
 ### OpenAI Codex (Optional)
 
@@ -92,7 +92,7 @@ Requires a Google Cloud account. See [Gemini Code Assist documentation](https://
 ## Next Steps
 
 - Set up Git (see [Git Installation Guide](git-install.md))
-- Install AI coding CLIs (see [Claude Code Installation Guide](claude-code-install.md))
+- Install AI coding CLIs (see [CLI Setup Guide](cli.md))
 
 ## Resources
 
