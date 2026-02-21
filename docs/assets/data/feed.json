@@ -1,11 +1,139 @@
 {
-  "updated": "2026-02-21T12:30:14.428552+00:00",
+  "updated": "2026-02-21T16:19:45.279252+00:00",
   "categories": [
     "Claude",
     "Google",
     "Microsoft"
   ],
   "items": [
+    {
+      "title": "Sam Altman Says Companies Are \u2018AI Washing\u2019 Layoffs - Gizmodo",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPZ3F2SUtLd0V5c0RIRFVtSS1GX1dKanBYWVRUTTBYeWVuT3hab21kbFJtSkZRY0puTWR2NzEyRnNOZFhmWkEtWWJ3cVlMc0FoYlRiWHUwUXhhRmJTTkhPWGU5WWIxeE1vYURIeFg5Zkc5SlkyY3Nxcm5yblRReTB1RUxWSVJPdw?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-21T15:15:29+00:00",
+      "category": "Google",
+      "excerpt": "Sam Altman Says Companies Are \u2018AI Washing\u2019 Layoffs Gizmodo"
+    },
+    {
+      "title": "Can Microsoft define an AI PC? A new beginner's guide suggests otherwise. - Windows Central",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQRVBCNl9oSTl4UTlYNnVwcllDQ3lKQ0FFZHljSk1BMXAwQzlxaExKY3Q3MHU0RmN0MTRMSGFUOHlXM1J1NkxENWE5bnpsZUNySThMdmdkNWlWV3lMdEJVT2lIT3NFNlVGeWw0T0YtcW1Xd0hkTTM1cDhaMElNVXBVUjlCUzQ4UW5tS19EWnVfNA?oc=5",
+      "source": "\"microsoft ai\" - Google News",
+      "published": "2026-02-21T15:08:20+00:00",
+      "category": "Microsoft",
+      "excerpt": "Can Microsoft define an AI PC? A new beginner's guide suggests otherwise. Windows Central"
+    },
+    {
+      "title": "The Country That\u2019s Madly in Love With AI - Politico",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNdFktWHhteVVLUEdYWHgxWEh4cHlKSUMtMXNQWjJqN0VsNG1lLWRTNk00S19TZlBvc0ptTDBjemo2TW44VE1vN3NPY1JncC1FUzUzQXVXTGFFMmt5c3RCRVpWUFZpM2VIUkNueVhrT1J2SmowUTI4NlBFa0xTc2t4akNMVk9UQmRHREJ0bXNB?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-21T15:00:00+00:00",
+      "category": "Google",
+      "excerpt": "The Country That\u2019s Madly in Love With AI Politico"
+    },
+    {
+      "title": "SEBASTIAN BACH Says He 'Hates' A.I.: 'I Will Always Give You Real Stupidity Instead Of Artificial Intelligence' - BLABBERMOUTH.NET",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOb1huWURVM2s3RFF0R3Z5MHpvdWxsUEVTQTFzTnkyTTcxRk95X3g1WWZTVUhqU3RoRkUtNVd4TVNFaWFjNDkyT2NCdnVkN0Z4aXBFREdjZk1heWptTkNrYWhnQmVzZXhCVFQyQzlxRm9nM1ZMaGlPNFY4LW1rWHdIMV9FdldTTExzWWl2RFdrVU5wbmhJOGFfM2l0TmhCU3h0RmRMT1ZlN05aV3FaLW1lMm5qSW4tWllRT0Y0emwwR1A0X1c1RG8xTXRsQ25ZVzlL?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-21T14:56:32+00:00",
+      "category": "Google",
+      "excerpt": "SEBASTIAN BACH Says He 'Hates' A.I.: 'I Will Always Give You Real Stupidity Instead Of Artificial Intelligence' BLABBERMOUTH.NET"
+    },
+    {
+      "title": "\u2018Indian Nepotism\u2019 claims erupt after Microsoft names Asha Sharma as gaming chief - The American Bazaar",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQZngtZWNDN2tBY09QaGJ2aW45V2s5S004S3hFNmRVVWxUa0hSZXA1c2tIRVlJMTJTWURBY3BwOURJTWRvX19LVkFYdVVIaTNuSDlDWWJvXzN4UG85ODMyckNYaklva2J3ZHpIOTMxOFRWSjRFOGNFOF9pVHpvUGo0RUZnN2pBa1U5cER4b0hCc0NlYjhBNFRvT0x3bnNrRlJvc3dwY1RoeUdBeHIzMnhmVnFjV1pfWS1lQ2xSd0pfUWt0QmpRQXd0VG5B?oc=5",
+      "source": "\"microsoft ai\" - Google News",
+      "published": "2026-02-21T14:33:17+00:00",
+      "category": "Microsoft",
+      "excerpt": "\u2018Indian Nepotism\u2019 claims erupt after Microsoft names Asha Sharma as gaming chief The American Bazaar"
+    },
+    {
+      "title": "AI (artificial intelligence) - The Guardian",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPWTdKSFF6YkRvMkUteGxwT2hLcUlQS3RVZ01pZy1TS0lKZWJXTHJHWS1WLTh3dTR6SFFvcFMzOG9WODhlMzUzcUtRMklKLUo3REdnRFlfVE1RbEhKejBIdzU1RHI2WjFkOEY3b1hQY1kxS0Q3NUpnblFzQW8zZEhhbndDNUdJQQ?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-21T14:10:17+00:00",
+      "category": "Google",
+      "excerpt": "AI (artificial intelligence) The Guardian"
+    },
+    {
+      "title": "US farmers are rejecting multimillion-dollar datacenter bids for their land: \u2018I\u2019m not for sale\u2019 - The Guardian",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE44eDlSVW9XMEZ5U0F5TDNnTVhEdXZKc3JhQWlocno1Y1pkLUt6a2Rjckg4dWFlWURLUU5KLVAxTE1VQTZKOGY2clhhRWlWdU53ZVZ2ZmV5QXVWcW5OSUdfemlEaThHZ1FzU1U4dkVTNVE1QklidXpwd1ZJNExEZw?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-21T14:01:00+00:00",
+      "category": "Google",
+      "excerpt": "US farmers are rejecting multimillion-dollar datacenter bids for their land: \u2018I\u2019m not for sale\u2019 The Guardian"
+    },
+    {
+      "title": "Dozens of countries steer clear of safety commitment in global AI pledge - politico.eu",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPaFNheHdhSXl0MXdiX2YtLUh5YmRJZXl6U21LdWpXNVp3akRJWUc4LXFvc1YzWVA4UGNjeHpjdVhvTlB5b3loM05aeW03WTJkMEI5aGFpZU1SbUh4WEJWOUpFX2I5ZmxKcUdKY01NeEtGWW1xa0NCOEEydTI0ODZHUjFxZGRSY2hwXzFzeWxVR1ZOdHVhandnS0tndC14eHpNdkdTQw?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-21T13:54:00+00:00",
+      "category": "Google",
+      "excerpt": "Dozens of countries steer clear of safety commitment in global AI pledge politico.eu"
+    },
+    {
+      "title": "Opinion | Progressives for news media regulation - The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE91NjZmYktBMlZoRzJ5OGJVSXBZcXFwR1N0LXVkZXVNN2VTb2xmdG9zWXB3eE1Dc283NDEwUGthM2hoSldfVl9CZHpMLUYybW04UHhOU2d4MlNqQ1FvdVo4MDB2VlhXQXV3eUJSLTJDWmxJenpfRHY3dg?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-21T13:02:00+00:00",
+      "category": "Google",
+      "excerpt": "Opinion | Progressives for news media regulation The Washington Post"
+    },
+    {
+      "title": "China\u2019s tech giants pursue AI, semiconductor talent in US amid fierce rivalry - South China Morning Post",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQZWF6NGMtUVdfY295NjNodGtTNnhyUGRKSUtVbzJRMlBmTWFXeTRUbkg1aEJoZm1oRXpMLWZfdVZvWXJCSnloNWxTdzRXWTh3cDlTX1JYRG1IMUZoTTZzSE1BQ1NSZ0tJSjJoaENkMmt0MVltdk1mVHlEUU1Sam1Xc1Y2VVJmR0JDU3pSRkNfaWFncmJIbHdwaHQtOHdXQVJGU0hNcGNxOWFjZERBb3lNVXR0RDFnNUpreDZHQzZ2TGRCbjVWaHfSAcYBQVVfeXFMT0RxeVQtMjV4VE9xa0s3YmpnODIzRTVpYXRZMGJJTW02eXFfTUJ2bnctWktuVTZQTVlJa2cwZnJXUVYzakVfVG1CSXdEZ0ZLQmNaWndNdTYzUFZmcXVTLU95dk9IREozLWxpOVVvZUY2NV9nb2ktbFVqRXd6TUFTU2wwQ3g2YlVSVDJGeHNzY1Fidkt1MVVnczRwZTNfSFlFMUYzOVJ2b3JpbUFIcnZTM2ZPMjFtOVRmVHdUWW9TaG9jUXA3X1Bn?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-21T13:00:09+00:00",
+      "category": "Google",
+      "excerpt": "China\u2019s tech giants pursue AI, semiconductor talent in US amid fierce rivalry South China Morning Post"
+    },
+    {
+      "title": "Not so fast: Quick-moving AI leaves accountability behind in the dust - The Hill",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPT3VnbGxEaXNMQktUVGxBOTJSMUNvRXJBbnozb2VMZXZlUDZNZ0NkZTJRS0c2MDNkSzd5eVB4VDFzU2g2Mnc1bFhiN2Y3NVIweDk3YnpoZ2xNRDlFMnF4cFIyMElKU01WdkNaYVcyOVlvTmNidEsydjZCbHprQUFhQTJzNFc?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-21T13:00:00+00:00",
+      "category": "Google",
+      "excerpt": "Not so fast: Quick-moving AI leaves accountability behind in the dust The Hill"
+    },
+    {
+      "title": "\u2018An AlphaFold 4\u2019\u2014scientists marvel at DeepMind drug spin-off\u2019s exclusive new AI - Scientific American",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNaFRGaDVKLWFkYVN2M25BZGJEZnJWWF9aOUNtaE1ORm40UVBNT3I0bGJTekhBZ0ZIZ3ozMjA1ak9pVGlKb1lCUUVUdlkwQXVXem5KN0R3M1VDNGtvOHZKdzV3LU5HOVd2bHNsSXBvanpfaWtma3BVSWowRWYxU1luOFJsMmpLbHRBWHFYckhhc2VFUkR1TG94UG1Yem9hU3FUSTBocHNNMnl3Z2hTc2hHNWU2T3FoQlRzdlExWQ?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-21T13:00:00+00:00",
+      "category": "Google",
+      "excerpt": "\u2018An AlphaFold 4\u2019\u2014scientists marvel at DeepMind drug spin-off\u2019s exclusive new AI Scientific American"
+    },
+    {
+      "title": "Oregon Senate Advances Unusual Plan to Regulate Conversations With Artificial Intelligence - Grants Pass Tribune",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNU0NlcGplVjFwc3REdG9rWG9Xd1VEbG5EVHF3RTREUl91OV8ySjNoc28yaEJIMGFiVDdaX2tEQ2JJTGhSY0t0TmNWeW0wVnRxQnBtcUxrZTJSTzdoazd6N1c3UHE5SG9pQzVFdnkwVW5WcG9sNkVqMnF4dVVyaTZLOEJkMFQtdENPU0l6RVVKWk9KVFFQWFhGdXFUWko1bUlUd2tuRFBZOGlPSUVsR3ZjQ2cta254RDdmdmR2T0RvWmdxVUE?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-21T12:49:41+00:00",
+      "category": "Google",
+      "excerpt": "Oregon Senate Advances Unusual Plan to Regulate Conversations With Artificial Intelligence Grants Pass Tribune"
+    },
+    {
+      "title": "The Next Wave of Artificial Intelligence: From Experimentation to Everyday Impact - The AI Journal",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOTjZmM092TkR6cGFtc2hOSHY2MDdmd0VGTlRaY3dMUTN2aFNyVFFoUGJuUUo2OGM3TzFQZDBZRjdCWVAtWDVuNGJ3VFlUMThZY21HVTJVc215RU1LNFB3NmpibXR0blBXTDQxN0dwVkpsTXVORTd5eWFRNmdFVVZzb2ZXSG9KZ1pRZzFVcnlnRDBfRDJScDhCaDZUOTlsS2t0Rzdn?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-21T12:47:15+00:00",
+      "category": "Google",
+      "excerpt": "The Next Wave of Artificial Intelligence: From Experimentation to Everyday Impact The AI Journal"
+    },
+    {
+      "title": "COLUMN: Friend or foe? The uneasy truth about living with AI - MidlandToday.ca",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUlUyTkR6eEJpbk1OcTI4S29ENks4dDRWWW83N3c4c1BGb1dkSDVoSWZWWW9WN1FtU3dMcDJHUDQ4eXBHR0pZTEUxTTRVaVpIRC03ZHlEYWUzeUZlNHBUNEVTczhJUlpBQTRhNzZEQnYxZC1SVTdpX3RkSlR4ckdTN0l4TzdMR2Vad3I3NWF4eTVDYXlNaG1PNVYwUlRMdlc4TU9vZ0hsTEQzdw?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-21T12:35:13+00:00",
+      "category": "Google",
+      "excerpt": "COLUMN: Friend or foe? The uneasy truth about living with AI MidlandToday.ca"
+    },
+    {
+      "title": "The CEO of a $1 billion AI unicorn says his peers have a blind spot for AI taking jobs - Fortune",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNRGRxOEt3emo1RGZvTDJFeWZobWUzcEkybGpGRE5aY2xidExyd25XbndRc2VqNF9sUWxNSnhtTE8xNUFsSmNiMms1TW9kMDZhVVVWOFh0ZnpZRWU1Tkxnc2d2VXU0dlBFRy1hMmNCWTJJMHhUV1U1V092X2wycWVlWHM1ai1CTW5MQ2hmTlZlcW5mUmp6Qkp3?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-21T12:30:00+00:00",
+      "category": "Google",
+      "excerpt": "The CEO of a $1 billion AI unicorn says his peers have a blind spot for AI taking jobs Fortune"
+    },
     {
       "title": "Anthropic\u2019s safety-first AI collides with the Pentagon as Claude expands into autonomous agents - Scientific American",
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNaUp5Q3dabTR5cHI5ZWJQRkJSZEpQMVZ2Z0xXTDZZZU1fWTNxUUpBOTliNWlYNndtUlozelVERDFjZjRFd3lLLVBxRk9vaUQyczdpZ0tzYW1WWU93YUt0NXVLcGpIeVFXUmJwcXkxc3RaQ084WndtRHA1SnIzaHZYeXlyeWEybVdpTXd0WXFTMkljaFE2eXltQ3RUV1VsUmFkOTMtdEdEWlBDNUtwNDNTcDlsWW1qbEVsNXBjMg?oc=5",
@@ -95,6 +223,22 @@
       "excerpt": "AI News: Italy Sets the Rules for AI in the Workplace K&L Gates"
     },
     {
+      "title": "Industry first guidance on AI and machine learning for intelligent Wi-Fi - IOT Insider",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOTTlac0RlQzVrMDRpQ1BNQU1teUF2a25XaEZjQ1h6cndkaGZERDQxaEhBVkRrZjNvRzQxRE15VXpaQ09Odzh3QS02MmNmNkRleUVjOVFrT3BHQnZUNTRRZVdqVjB2LWloZVYyMHppMUU1UWhuOTZCczAwYmhkLUQ5bXY0U2UyUXBaX0NjMDc2QXlZUUV5VndLbXpUSktWUjF0Nkpmb1pBWUhmc1AxbzZ1SEM4WlRjaFh2TU5RbDdoeVlRRUhI?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-21T09:53:47+00:00",
+      "category": "Google",
+      "excerpt": "Industry first guidance on AI and machine learning for intelligent Wi-Fi IOT Insider"
+    },
+    {
+      "title": "This Week's Top Five Stories in AI - AI Magazine",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE40aU9yazR3cWhUeEFtTWdfQmxDZGJyMW92ekdlQXJMREw3NGtqWEJaTGo4aFhBYzFTWGVOYXpfSHF1NDYweUZXNnFHUU0xblB2NVJmLTdIZTFNYktpTHVUWGZXbkFFQ0xE?oc=5",
+      "source": "artificial intelligence - Google News",
+      "published": "2026-02-21T09:11:56+00:00",
+      "category": "Google",
+      "excerpt": "This Week's Top Five Stories in AI AI Magazine"
+    },
+    {
       "title": "Chaos, confusion and $200 billion dreams: What I saw at India\u2019s AI summit - CNBC",
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5Hb2p3em1Pbmt6Rm1PN09hSW0yU3JaelU2UXE2bVFPazRnaGJ2MTlEYTUzdmVLRllRU0pMa2xiRlE3eEFfc1ZuQ3NBUFNZY01hVGRuZmxoOFZ0YWVWWmFkZ0JkRWpiSjdC0gFuQVVfeXFMTlJEcjViTXd4V1pCYmJ1ZXBvS2xLUHdWWW1Ld0JPSElLNVlBVnlVSG1WRXVkdUFZbklBQVUxUG1rMEdERE1BTElvZzZMRDhJUnN6aW0zVzFDU3NOZVhCb0JjTGxVRnkwZWlxQ1I5RHc?oc=5",
       "source": "artificial intelligence - Google News",
@@ -119,12 +263,12 @@
       "excerpt": "AI superintelligence race: Meta and Microsoft back rival visions\u2014Who will win? The News International"
     },
     {
-      "title": "Where artificial intelligence and architecture may intersect - Moscow-Pullman Daily News",
+      "title": "OPINION: Where artificial intelligence and architecture may intersect ... - Moscow-Pullman Daily News",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOX2NteVkwNnZ4U3AzYnA0dy1zM0JyX3BfRGZFb2RZWmE1aFNmbGNWMVBweE53MTVDcWliLXdVUnVELWR1OWpYel9fRElYc2o2X045UTNxZGlEYkExTERtOS1rakNOTmFmdVhIekVlR2M0Vnhja2prSXJiWkFNcHpKVGtHdHBKeUJMeEh2MXdwaW9BSDRRdVMyUkJHTmtmUlZv?oc=5",
       "source": "artificial intelligence - Google News",
-      "published": "2026-02-21T08:17:13+00:00",
+      "published": "2026-02-21T08:17:06+00:00",
       "category": "Google",
-      "excerpt": "Where artificial intelligence and architecture may intersect Moscow-Pullman Daily News"
+      "excerpt": "OPINION: Where artificial intelligence and architecture may intersect ... Moscow-Pullman Daily News"
     },
     {
       "title": "Where artificial intelligence and architecture may intersect - Moscow-Pullman Daily News",
@@ -269,6 +413,14 @@
       "published": "2026-02-21T04:30:00+00:00",
       "category": "Google",
       "excerpt": "EC-Council Expands AI Certification Portfolio to Strengthen U.S. AI Workforce Readiness and Security The Hacker News"
+    },
+    {
+      "title": "Asha Sharma: The Microsoft Gaming's New CEO Who Will Lead Xbox - NDTV",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQMVh1Z3hLaktKQnVmVENWQ3IwMktXVm1lNWp0ZUNsWXQ1SG05dGh0YzZ1TXVwRmZHSHpONGx5MTJ2cmFFNDBBVWpINE82SVFQY0lOSGxIZWt4Y1lSUUkxTDVacGg3MG5QV2cteEFZbGVUa1hvdkdjdlJiamJGSzgwcV9ocmIyZUhsVXJkT1ZTQ3ZWbmgyZWgtSnY2Y2dkczZRUURwendVZzRmVmVNMTRxZkM4Tm1RVTRHRG4xZ084a9IBxwFBVV95cUxObmxSMDJkRHg3c3BZbDUxZG9sWWdHelF0ek1GQ01ESC1zMExGWFVZVUV6T0dNaG9SSExvRk5LblRTU0NuM2s1bjVfb2NaS09yM1dYSXI5RjNXbDllVmlyVmdoVEV6c0YtRUIxaFFab1ZhaURZMWNHTUFLLVhjVzg0RlhYWEVPdTNidzY4Rk9zeTdvTjNkV1h2VVNwNzhHTWdTMUplLUczeGs0ZlMzenprMmVUTWd2Vjh0UTVXWnJxdFFlX2dCdWRN?oc=5",
+      "source": "\"microsoft ai\" - Google News",
+      "published": "2026-02-21T04:11:58+00:00",
+      "category": "Microsoft",
+      "excerpt": "Asha Sharma: The Microsoft Gaming's New CEO Who Will Lead Xbox NDTV"
     },
     {
       "title": "Agentic AI Transforms Chip Design Engineering - Design News",
@@ -431,12 +583,12 @@
       "excerpt": "Wikipedia Founder Sees No Threat From Musk\u2019s Grokipedia Bloomberg Law News"
     },
     {
-      "title": "New Microsoft Gaming CEO Asha Sharma on What Makes a \u2018Great Game,\u2019 Having \u2018No Tolerance for Bad AI\u2019 and Replacing Phil Spencer - Variety",
+      "title": "New Microsoft Gaming, Xbox CEO: Asha Sharma on Great Games, AI Use - Variety",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOdGlSSVZBc25ISHFMWXd1OE13VWk5MWNpdlNTY1B0RHk0Wkd5RC1LNzdRU3EyRVRNY191VjVtUzN5T3NGMVYza3ZXMmNsajhkYk9zSlVYcHdya1FmcUZISUdnT0QtcElCb3F2QUZpVkttaVRJZ1UxWTFkQjh0YndwN01TYkZJSU5ZNXNCYm16RDMydkVrVU9ZNkJ4eF90a193?oc=5",
       "source": "\"microsoft ai\" - Google News",
       "published": "2026-02-20T23:57:00+00:00",
       "category": "Microsoft",
-      "excerpt": "New Microsoft Gaming CEO Asha Sharma on What Makes a \u2018Great Game,\u2019 Having \u2018No Tolerance for Bad AI\u2019 and Replacing Phil Spencer Variety"
+      "excerpt": "New Microsoft Gaming, Xbox CEO: Asha Sharma on Great Games, AI Use Variety"
     },
     {
       "title": "NIST agentic AI initiative looks to get handle on security - Federal News Network",
@@ -447,52 +599,12 @@
       "excerpt": "NIST agentic AI initiative looks to get handle on security Federal News Network"
     },
     {
-      "title": "On Your Side Podcast: The A.I. era of weddings - AZ Family",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPc3RyWW93cEpCWTBXM0ozbGVmRkdUZ295Y0NHOEt2Wk12ZW9namRaTTZxVjhaYnhQaU5tN3ljYjZNcDYtLUE3d1FXU3RIS09KWWNDam9POE1vQUcwMS1vLXplSXd6NWJOa1VnTG13STZYNUZnNkt6NjVTWjVQTndVdExR?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-20T23:31:00+00:00",
-      "category": "Google",
-      "excerpt": "On Your Side Podcast: The A.I. era of weddings AZ Family"
-    },
-    {
       "title": "Xbox Fans Aren\u2019t Happy About Microsoft Putting an AI Executive in Charge - ComicBook.com",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOa0VmZ0tEVGJzc2FQZzI1Y04tZ1hyWHRYUjlSdTV3U3pWaVctTUUtLWIxTnQtM0JZTjRIWGFDN2VDTzVoWFBWTEhmWndCMnN3SEJrWXA2UW9lNV9EMUJPRGZkWFRZakRPUGhSZE8wWUJDZVg4TzlaSVVpX0xvWlVrSDBOazBhYzhCOVZrSy1mX3pNNWxZRDI4eG5EZVJtRkYtREdReUJpZVZuQQ?oc=5",
       "source": "\"microsoft ai\" - Google News",
       "published": "2026-02-20T23:28:46+00:00",
       "category": "Microsoft",
       "excerpt": "Xbox Fans Aren\u2019t Happy About Microsoft Putting an AI Executive in Charge ComicBook.com"
-    },
-    {
-      "title": "To incoming University President Mnookin: Please don\u2019t let artificial intelligence devalue the liberal arts - Columbia Daily Spectator",
-      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQZk9uWnJaeFpXcFZOSzVSSmtGWEhHNVlaZ2NwNy1wQlhMSVB2TVdDRkVBOVAxRjk4VUh3MTIzbWtTejNreFhIM0d0N21Dd3JRLVotVkRCUFBTZ24taEt1c3BzVjhDa0wxT05oR19hVWdQbHRCaXZnYzBnazRtdk1BTGFBWTNjR2FOSzhzNXhPenB6RVdYenYxMkRQSEdPWGh3QmxNNzYxQm5vQ3RrTFJUVnFwSWJmNDh6T3Rma0U3cU4zSnBOcU1qQ3ZHcWFEcm9PWFVsQ1F5cGItN0dzMWpWUEcwTm8tS0xNS0lUYkR3Zzg?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-20T23:22:42+00:00",
-      "category": "Google",
-      "excerpt": "To incoming University President Mnookin: Please don\u2019t let artificial intelligence devalue the liberal arts Columbia Daily Spectator"
-    },
-    {
-      "title": "In the News: Jonathan Keiser on AI and the Tommie Buildfest - Newsroom | University of St. Thomas",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQVHpEUVRuNTBrS29nNVo2NE92MHVtaWdBQnZteldodElHWmRIdlBKTURwdGZBS3d6OFZfcmFrSGNNY3hyQ04yanNCU1YtblJRbWxNZzJDV1puQ3JIZjRIVnZTWGlRVXFtaHdDRS1OcFZOc1dlVVphRGVZMzhhRkpyZDQzR0U4WVVkakt5UExB?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-20T23:19:56+00:00",
-      "category": "Google",
-      "excerpt": "In the News: Jonathan Keiser on AI and the Tommie Buildfest Newsroom | University of St. Thomas"
-    },
-    {
-      "title": "Mississippi AI Innovation Hub\u2019s New Chatbot Targets Procurement - GovTech",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOWXFQbGFEeEFycjl5bkp3Ui1FOXd1dmUwSlVCdm96SFBJTmJmdlB0bURUT0lDVkV6VmhQZ1VwMXpGSVNUQlcyakN5VzNRVE02WnN1TktZUUx6bWo5YUh3TzlWdmxoWXJieEIyUnM5blYyLUFEWEF3SzFiZFJBS1FEeFpRdlZVSThyVW9QVkdwMF9PcU5VS3lTZnpFWjBKQ2xrS2xWY2hrdDlJZmRrajVN?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-20T23:17:52+00:00",
-      "category": "Google",
-      "excerpt": "Mississippi AI Innovation Hub\u2019s New Chatbot Targets Procurement GovTech"
-    },
-    {
-      "title": "In the News: Jena Zangs on AI Safety Within Academic Institutions - Newsroom | University of St. Thomas",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOMzZ2ODFiWnB6RWdnSWhYdUJFZlNCQndjTmJUYXh3Nm9nYVUwNktIX0lTenNNMERNS09EOFVtdDlqZHVPOHFiZG9TU21saEZCZ19CZHdMajBNNUV5N0k1Z3hKakJSVGFhVDJRVGtNN2lLLXpTd0VLTjR6c2pXakdQMWF3LU9nUW1xQTM4Qy1URWVkSnlybWc?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-20T23:09:39+00:00",
-      "category": "Google",
-      "excerpt": "In the News: Jena Zangs on AI Safety Within Academic Institutions Newsroom | University of St. Thomas"
     },
     {
       "title": "Exclusive: Clippy explains what he knows about Microsoft's big Xbox shakeup - Polygon",
@@ -503,52 +615,12 @@
       "excerpt": "Exclusive: Clippy explains what he knows about Microsoft's big Xbox shakeup Polygon"
     },
     {
-      "title": "Multi-Agent Systems Move Business AI From Chatbot to Operations - PYMNTS.com",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPOFVRLVVWaVdBU0NIWnVVenVlRm5qd0d3dlFjd1NoM000eWM0YjFTNUZLbU1PVE5pSG9od1dkYkp3amlUX2Y1ZWhjR0ZuOHpLRTF3dVFPclpJVGFkOWk5LUdpNUIteFdlVjB0NlgwYVlFejVjNGROME5vNGhhNFlZNE5wWlR4X1ROd2ppWDhQb3EtR1lmUDFWeDJ1Sk5LNWY0eEhyRERSRDhHR0NhQWt3VzYyOA?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-20T23:01:40+00:00",
-      "category": "Google",
-      "excerpt": "Multi-Agent Systems Move Business AI From Chatbot to Operations PYMNTS.com"
-    },
-    {
-      "title": "A.I. Is Coming for the 2026 Midterms - The New York Times",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9BQ2h5a2VVdkZUdERZVGRHX195bWVxSFZ6eGlrTDJDNEFSN3Exb0RsSVRyNExSUjg1UUJZRS1Sck04T0NiUUhqRUZkdndsSlNRRllsRU9QSmR4V0hRd2RqaEZkaVZveFdjNTdiUkFiR3ZjbGZsLTVwMjg1SjliQQ?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-20T22:52:14+00:00",
-      "category": "Google",
-      "excerpt": "A.I. Is Coming for the 2026 Midterms The New York Times"
-    },
-    {
       "title": "New Xbox boss promises no 'soulless AI slop' after moving over from Microsoft's CoreAI products division - PC Gamer",
       "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBuOW10dHU4NC03SjN6RHN1Q2NTcW5fQ014a0Y2REpfUVBIMkg4dWNsZEhpNGZHb2VlaWdpZUMwc0FXdGE4SVZjVENxVkZQVjRUZGhDRXpjUW5LcnBWOTlaVktQN0RtVnBHcUdUSFltTHZpQm1iVHNR?oc=5",
       "source": "\"microsoft ai\" - Google News",
       "published": "2026-02-20T22:47:29+00:00",
       "category": "Microsoft",
       "excerpt": "New Xbox boss promises no 'soulless AI slop' after moving over from Microsoft's CoreAI products division PC Gamer"
-    },
-    {
-      "title": "Texas Could Pass Virginia as World\u2019s Top Data Center Market - GovTech",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPMkplQk5IbENzd2hkRzBlVlpWalF4QlNidEdZTFVDZmJSUi1RRFdYR0Q1Sl9PMFdwR29iekoySGpTLW5QdEg5XzdMRXdld29sekxzc0JhWXNuV1FGU3pBVU1DM0ItZ1JmYVRhd1R3RF9qNnZ4WGlHRnc2VGlMWUR5cnNMMnpGOWdacEhCR1hqQkFpSmRRWTZrbGFPbGtyTzlvWWNiTDJNMlpZdw?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-20T22:44:50+00:00",
-      "category": "Google",
-      "excerpt": "Texas Could Pass Virginia as World\u2019s Top Data Center Market GovTech"
-    },
-    {
-      "title": "In the News: Manjeet Rege on AI at the Minnesota State Capitol - Newsroom | University of St. Thomas",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQVnd6YndQb1czVE1MZ0dtZnk0M3dHa2dTT3JOX1FNeFlhaVRna3ZuTFQ2YnVYYTdjMGZMTlFobDRpWXljNlhWRmFEaWpYdVJsVW8tTVBFVklVRG5zVjFucjdFTUN1M1JSWk9yWFp1WFpQV3pPTUFuTXF3NW5CYXBSWGFIbFJsTWFJYTFkVzg3TlZkdw?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-20T22:40:04+00:00",
-      "category": "Google",
-      "excerpt": "In the News: Manjeet Rege on AI at the Minnesota State Capitol Newsroom | University of St. Thomas"
-    },
-    {
-      "title": "Artificial Intelligence News for the Week of February 20; Updates from IBM, Infosys, Rackspace & More - solutionsreview.com",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPdFRKMWEzYkk3T1JDWlRlWlQ1bGszVHpjUWU3cDdpWThRc3dLX0g5Q2NkV2lrSHI0YkxsZ2pNeVFsTnQ4dWdOQVA3N2VYUUYzRVVieHNtRU1odzJjUnFHendrVWJvdllTYjdvM0Vmb3B4NldiS2hVREdMNkVtX2EyNm9MQkRWazg4T3piZVpiUjVucmhxRUtFQkJhVHRpSm5PSi0zQjdiRTVXTk84ampXWHlNd1pNV1JObktpVzNESlZiN3c?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-20T22:39:43+00:00",
-      "category": "Google",
-      "excerpt": "Artificial Intelligence News for the Week of February 20; Updates from IBM, Infosys, Rackspace & More solutionsreview.com"
     },
     {
       "title": "Microsoft isn't giving up on Xbox as a console even if others have, claims new CEO - Polygon",
@@ -559,28 +631,12 @@
       "excerpt": "Microsoft isn't giving up on Xbox as a console even if others have, claims new CEO Polygon"
     },
     {
-      "title": "Labor Department Shows Employers How to Boost AI Literacy for Workers: Your Guide to New Training Framework - JD Supra",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNWjhPeGpuNlRJS1dTZFBqRUVMRDMydXRxcEkzQ3doM2lFOU5VUkZ3N0ZwcWREbjdHOG1xdFRDRGxmSjVqSjdlVmJNTWNxTGdpekRkcDluVFBvWHVqa0hMcVkxaV9rWXZPMV9JeEZyWWM5bV96QnoybWEzNHFLWWp6dmQ4Sk5vVHc2Z3c?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-20T22:28:05+00:00",
-      "category": "Google",
-      "excerpt": "Labor Department Shows Employers How to Boost AI Literacy for Workers: Your Guide to New Training Framework JD Supra"
-    },
-    {
       "title": "Spencer and Bond out at Microsoft Gaming as AI exec Sharma takes over - Mobilegamer.biz",
       "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNcE5Ta083Z0ZuZllfWVdFMWx0elBwWTVFVVgyTUZHR1Z0V3BJbHp2S0NWdGdyQ0RsSXY5UzFreFhuWXhQcmxtMXdkRVVBalpldUZCcE4tTXFwank1b1B6a0wyRkhsY043a1c4TXprU19DbGZ5WlNocG9UeFMtV1dnWE5TWjZUV0YwWTBkTW5OYkhZUGJ1a0preUdn?oc=5",
       "source": "\"microsoft ai\" - Google News",
       "published": "2026-02-20T22:24:20+00:00",
       "category": "Microsoft",
       "excerpt": "Spencer and Bond out at Microsoft Gaming as AI exec Sharma takes over Mobilegamer.biz"
-    },
-    {
-      "title": "Texas Tech Joins NVIDIA to Launch Next-Generation AI Infrastructure - KCBD",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNY015N0lNQzVGeFF6QjNjTnNuQWNoSk5SZER0THBXQ3JWNFYtRlpoYVk3V2kxR2NNWFNYZXNrM0pQeGVqQ2VRMmFfTHpEZ3A2Nm9uektQekgtSnR2ZTBtRHVjbnhxWC1LZWk3dnNDODVmN0RNT3ItRmFTLTVRX1J2YXpQXzVZR0FaWWpZU2RsdzlGRDhGczcyS244TndWZ9IBsgFBVV95cUxOR1NYbUd2azNQdktTdmx2em9kcHBvQlBzVnZieVdwZ0pOVDhiaTRDelo0bTRmd0lrZWVtcDdsdU9kYmR6dnZCd2hPdmZFdnpHT2xHS18wRjRCdTUtVVF1WDIxcXh3MlpKeFc4VDVCSEh3VUJPVzhEaHROdEpmNUU1VU43RHpBT0lWMzVzRi1KODlkamJmQWZGVkFBSWNpR2wxUlJwOW92Wng4SlA5dUJwZzZ3?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-20T22:22:00+00:00",
-      "category": "Google",
-      "excerpt": "Texas Tech Joins NVIDIA to Launch Next-Generation AI Infrastructure KCBD"
     },
     {
       "title": "Microsoft Valuation Hits Decade-Low: Citigroup Issues Rare \"Buy\" Alert Amid AI Volatility - FinancialContent",
@@ -597,22 +653,6 @@
       "published": "2026-02-20T22:16:46+00:00",
       "category": "Microsoft",
       "excerpt": "Xbox head Phil Spencer is retiring, and Microsoft's head of AI is taking over XDA"
-    },
-    {
-      "title": "Artificial Intelligence 'Bill of Rights' - ABC7 WWSB",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPOXRyaEFIOFVzaVZpUHBfS3lJWGFISzBfNC1nM1lYV2ZBUnI1aFB4dFhmNEdkMTVmbGwwQUNwUml6c015TFp1d29tZXBwZFVPM0xscVg0RlZKeU9Zc2x6QzhfN1VvYk5LUVZwSDhWRS1UWG1FSXAzeEVsVGxCbEtjOXBZSzY4c3c?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-20T22:13:00+00:00",
-      "category": "Google",
-      "excerpt": "Artificial Intelligence 'Bill of Rights' ABC7 WWSB"
-    },
-    {
-      "title": "A.I. Data Centers and legislative updates, Francisco Men\u00e9ndez and Fort Mose, and more - WJCT News 89.9",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNRU9mSm9MaHRHdHQ2VGYyU1Vta0psX2dvWFRrWm1vcDFQTDUwVzloNGF4LVNaclcxcGtFajZOWmZ6SXpoQ1BodWQtYnRZQ0NGbU5IOW0tNXFMblVtVExpYVlmTzR2a0pCajV2b0ZXTWZqQ2tfdGc4V09RSDM0YXZ1Z3JSN0JKYzQxY2JaaWRpc3dYdkxKZnFKRjdtZUlXZW1uZnkzN1NDNUp5UThxMlVDVHJkb1dYUExEUVBPbzRya3h0anpaVTgzZ2hNbjl0VHZITEE?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-20T22:07:00+00:00",
-      "category": "Google",
-      "excerpt": "A.I. Data Centers and legislative updates, Francisco Men\u00e9ndez and Fort Mose, and more WJCT News 89.9"
     },
     {
       "title": "\"No AI Slop\": New Microsoft Gaming Head Asha Sharma Pledges Xbox Won't Chase Short-Term Efficiency - IXBT.games",
@@ -639,38 +679,6 @@
       "excerpt": "Ethical Governance of Artificial Intelligence in Cardiovascular Disease Management: A Health Policy Perspective Cureus"
     },
     {
-      "title": "Ethical Governance of Artificial Intelligence in Cardiovascular Disease Management: A Health Policy Perspective - Cureus",
-      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOVXVFYUhaZUl5QlFGRk5ycXJhaFpTTl9yc3Q4RERLaElBN3gtVkxGQlZUOG5qdlAxdUppNFF5N296TXFoTjZwQVZJOHJCMDJEUGI2RDhyRHNsSEt3Sm1OdTlRSDFUamtuY3ozX3hSbXhlU2pzeEkwbFJsS1hzaGZwVWtwN1JIaUNETjNjandfNW9jYkNmdjdqY1VQcTdjeHhDTFFCV0RPSHByaGFIZm5sY2FNcTBlUUUtVzg2YVktbGQ1ZHdobEUwMjE1OUVOclpRczBWY05sTWlSVkktaHlKd2V6WQ?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-20T21:57:53+00:00",
-      "category": "Google",
-      "excerpt": "Ethical Governance of Artificial Intelligence in Cardiovascular Disease Management: A Health Policy Perspective Cureus"
-    },
-    {
-      "title": "SEMO Hosts Industry Leaders to Discuss Artificial Intelligence in the Workforce - Southeast Missouri State University",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNWVdBVzZJcDFsN05OZGxNQ05VSUt1a2QtMTJRbVVzejMxVlFDa0x5a1B1akRQWjJFdEJkcElUNFJENUdhclpFTkRWOHI3SU1BeHRGaG84dHVkalZQMjJidWRyWmo0b2g0N0V1R3JTd21yUmhSTWFsa0VHXzJSN2hRLTY4UUF1bFBzekM1ZFFkY3pxYUhyeVNCb2VyeW82ZWRxeDdxRGJqY3hudzBtbGc?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-20T21:49:29+00:00",
-      "category": "Google",
-      "excerpt": "SEMO Hosts Industry Leaders to Discuss Artificial Intelligence in the Workforce Southeast Missouri State University"
-    },
-    {
-      "title": "Artificial intelligence: A tool for engineering consciousness or a healing aid?- opinion - The Jerusalem Post",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE44V2x3NG5qODdMcDktRzVyV3FnNkpjXzM4YW9VQ2NhV19zeFpMQUVsODM4NTQzU1lKWUlhV2hYcm1QaFc1WE9rYTh3NHJJbV9BTHVsNlVDbw?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-20T21:46:22+00:00",
-      "category": "Google",
-      "excerpt": "Artificial intelligence: A tool for engineering consciousness or a healing aid?- opinion The Jerusalem Post"
-    },
-    {
-      "title": "Tech bills of the week: AI training tax breaks; modernizing agriculture with emerging tech, and more - Nextgov/FCW",
-      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQU3NKbjZ3MktoZUN6M0RsRzU5TVVvNnJ1MTZvd1pFc1M3V3gwaGl0MGI0SjQ2TDlfUWRnSTF4WmptOTVSY0ZKV0pCdW91TjNRU2NSYnJiMDVINU5xS1Y5T0U4S1l3bGVmNjdjNVpDc3lXNTVMXzBiOVg4MVpEZ0d0RjVJYmJoLW9IamFWYnlOc3lTZ0h0NVJrd1F2T3NpRE03dHY5ZDRTd0V6ZFNGeDd6LTJpRmowaEM0ZEtEdW9OV0JFOWtWSFdSUU9mbUJiR3UxTVUyYmpjSUlIQ01fdVNhbm80TTQ?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-20T21:44:00+00:00",
-      "category": "Google",
-      "excerpt": "Tech bills of the week: AI training tax breaks; modernizing agriculture with emerging tech, and more Nextgov/FCW"
-    },
-    {
       "title": "Phil Spencer Retiring, Sarah Bond Out, Matt Booty Promoted as Microsoft AI Exec Asha Sharma Named New Xbox Boss \u2013 EXCLUSIVE - IGN",
       "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOZURlaFdBQmItTXFCeko5WDR0YjFJQVI4dHpPLWRxTXdOX2JXMU5BRGxtdGhDWjZNOFZkZXFkejJnOFlUVm5aTVRjMjBORDlEdmJQZDgxVm0ybVBhb3VUTVNtdHhsRW43QnUzOVU3X0VkSkNhMy1aUk0zVEptTG12YVNZc2Rnb3B0RVFuaEd1LUhFTXJ1NEZFUzJ2Q0RKWmhNNHE2LUdka0Zad0R5VVlXaUNGZjNSQXBEZ1RPUlJDVlFDNDZjakRVTGxxXzlrczNTZnhwcTQzUlNrRHhVZktXWjVn?oc=5",
       "source": "\"microsoft ai\" - Google News",
@@ -685,22 +693,6 @@
       "published": "2026-02-20T21:34:29+00:00",
       "category": "Microsoft",
       "excerpt": "Microsoft gaming head Phil Spencer is retiring, replaced by an AI exec who promises no \"soulless AI slop\" Rock Paper Shotgun"
-    },
-    {
-      "title": "UCSB computer science department to offer undergraduate major in AI - UC Santa Barbara",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPcjBYbkZvTUlHSzlIWlNBWHhfRHgyeUhMVU1yRjByeXFqaUtXUWwyb0MzejRSemd2RGl5NEd5TEtlSzNLd0RqRHdUMHNhS2JaOU1KQkwtZXd0QVBxM3YtT2YzdEpuX1luLU1rZEp6b3ZBcVpFY19aTlZCVk11MWlZWDNmZ2d3WEZxVUhROXc0Ynk4Vi0xbUM2Q0laRQ?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-20T21:34:22+00:00",
-      "category": "Google",
-      "excerpt": "UCSB computer science department to offer undergraduate major in AI UC Santa Barbara"
-    },
-    {
-      "title": "Pros and Cons of Artificial Intelligence - A Wealth of Common Sense",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOOUxUaG5UMHJFRW51eU5MNG8yX1hjVVhKZzJ2LXBzNk9uZWxwZTYxZEdPZk5iOWdYTW1iWmhOYXA3NTh6ekJmdVh0SzE1LVVqTTF4Z0pWUWtVZmdNbU5DS1dZcHBGTFl1a1hQTk9lYWV4X21yU0xVX1IyME5mMXpxQlR5M29ZdkpjeGc?oc=5",
-      "source": "artificial intelligence - Google News",
-      "published": "2026-02-20T21:30:51+00:00",
-      "category": "Google",
-      "excerpt": "Pros and Cons of Artificial Intelligence A Wealth of Common Sense"
     },
     {
       "title": "Asha Sharma named EVP and CEO, Microsoft Gaming - The Official Microsoft Blog",
@@ -805,6 +797,14 @@
       "published": "2026-02-20T20:56:42+00:00",
       "category": "Microsoft",
       "excerpt": "Microsoft Copilot ignored sensitivity labels twice in eight months \u2014 and no DLP stack caught either one VentureBeat"
+    },
+    {
+      "title": "Xbox CEO Phil Spencer retires, Sarah Bond resigns, Microsoft AI - TweakTown",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNbzVGbGptX3dVVWFha0xYUXpMSGdHNVlJbTFCMXlCU0Yta1NaTzltbFJYR3lVeEktTC1XUHI3a3k0b0VnRWxRZXY5NG5rdFlGdkVETlFYMkVMakhGWmN0NnZjeGRydGtFS3BOYi1KNzJrWmw0eTk4a3NkQmdaV0gySG5hb1V3NGRSczlNMW9rcXdGcl9uZE9IdjR6TTktdkFxSkVGcThXZmo0Z3lrMHRJ?oc=5",
+      "source": "\"microsoft ai\" - Google News",
+      "published": "2026-02-20T20:56:03+00:00",
+      "category": "Microsoft",
+      "excerpt": "Xbox CEO Phil Spencer retires, Sarah Bond resigns, Microsoft AI TweakTown"
     }
   ]
 }
