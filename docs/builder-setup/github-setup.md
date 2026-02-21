@@ -84,7 +84,7 @@ Claude Code handles the Git commands for you.
 
 ## Next Steps
 
-- Install Claude Code to manage Git operations with natural language (see [AI Coding CLIs Guide](claude-code-install.md))
+- Install AI coding CLIs to manage Git operations with natural language (see [CLI Setup Guide](cli.md))
 - Try cloning a public repository to practice the workflow
 
 ## Resources

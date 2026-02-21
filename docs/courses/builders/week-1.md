@@ -23,7 +23,7 @@ Set up Claude Code for AI-assisted development in your editor and terminal.
 
 **Setup Guide:**
 
-- [Claude Code Setup](../../builder-setup/claude-code-install.md) — Install extension and CLI, configure your environment
+- [CLI Setup Guide](../../builder-setup/cli.md) — Install Claude Code CLI and configure your environment
 
 ## Lesson: Implement Voice-to-Text for Hands-Free AI Collaboration
 

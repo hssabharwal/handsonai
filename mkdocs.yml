@@ -125,7 +125,8 @@ plugins:
         fundamentals/prompt-engineering/resources.md: agentic-building-blocks/prompts/prompt-engineering/resources.md
         # Fundamentals builder setup → new top-level builder-setup
         fundamentals/developer-setup/terminal-basics.md: builder-setup/terminal-basics.md
-        fundamentals/developer-setup/claude-code-install.md: builder-setup/claude-code-install.md
+        fundamentals/developer-setup/claude-code-install.md: builder-setup/cli.md
+        builder-setup/claude-code-install.md: builder-setup/cli.md
         fundamentals/developer-setup/editor-setup.md: builder-setup/editor-setup.md
         fundamentals/developer-setup/git-install.md: builder-setup/git-install.md
         fundamentals/developer-setup/github-setup.md: builder-setup/github-setup.md
@@ -361,7 +362,7 @@ nav:
     - "Step 2 — AI Code Editor": builder-setup/editor-setup.md
     - "Step 3 — Git": builder-setup/git-install.md
     - "Step 4 — GitHub": builder-setup/github-setup.md
-    - "Step 5 — AI Coding CLIs": builder-setup/claude-code-install.md
+    - "Step 5 — CLIs": builder-setup/cli.md
     - "Step 6 — AI Registry": builder-setup/notion-registry-setup.md
     - "Step 7 — Voice to Text": builder-setup/voice-to-text-setup.md
   - Product & Engineering:

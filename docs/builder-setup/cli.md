@@ -1,51 +1,36 @@
 ---
-title: AI Coding CLI Installation Guide
-description: Install Claude Code and other AI coding CLIs (OpenAI Codex, Gemini CLI) on macOS, Linux, or Windows
+title: CLI Setup Guide
+description: Install developer CLIs for AI coding (Claude Code, OpenAI Codex, Gemini CLI) and GitHub management (gh) on macOS, Linux, or Windows
 schema_type: HowTo
 howto_steps:
-  - name: Install the Claude Code extension
-    text: Open the Extensions panel (Cmd/Ctrl + Shift + X), search for Claude Code, and click Install.
   - name: Install the CLI
     text: Run the install command for your OS — curl on macOS/Linux or irm on Windows PowerShell.
   - name: Set up your PATH
-    text: Ensure the claude command is available from any directory by configuring your shell profile or system PATH.
+    text: Ensure the CLI command is available from any directory by configuring your shell profile or system PATH.
   - name: Log in
-    text: Run 'claude' in your terminal and authenticate through the browser with your Claude subscription.
+    text: Authenticate with the CLI through the browser or an API key.
   - name: Verify installation
-    text: Run 'claude --version' to confirm the CLI is working, then start an interactive session.
+    text: Run the version command to confirm the CLI is working.
 ---
 
-# AI Coding CLI Setup Guide
+# CLI Setup Guide
 
-Quick reference for setting up Claude Code in your editor and terminal.
-
-**Official docs:** [code.claude.com/docs/en/quickstart](https://code.claude.com/docs/en/quickstart)
+Quick reference for setting up developer CLIs in your terminal. Each section covers one CLI — install whichever ones you need.
 
 ## Prerequisites
 
-- Code editor installed (Cursor or VS Code)
-- Git installed (see Git Installation Guide)
-- Claude Pro, Max, or Team subscription
+- Code editor installed (Cursor or VS Code) — see [Step 2](editor-setup.md)
+- Git installed — see [Step 3](git-install.md)
 
-## Part 1: Install the Claude Code Extension
+## Claude Code
 
-!!! tip "Already done?"
-    If you installed the Claude Code extension during Step 2 (Editor Setup), skip to Part 2.
+Anthropic's AI coding CLI. Requires a Claude Pro, Max, or Team subscription.
 
-The Claude Code extension works the same in both Cursor and VS Code.
+**Official docs:** [code.claude.com/docs/en/quickstart](https://code.claude.com/docs/en/quickstart)
 
-1. Open the Extensions panel (Cmd/Ctrl + Shift + X)
-2. Search for **Claude Code**
-3. Click **Install**
-4. Follow any sign-in prompts
+### Install
 
-Once installed, you'll use Claude Code through the integrated terminal in your editor.
-
-## Part 2: CLI Installation
-
-The Claude Code CLI lets you use Claude directly in your terminal.
-
-### macOS / Linux
+#### macOS / Linux
 
 Open Terminal and run:
 
@@ -53,7 +38,7 @@ Open Terminal and run:
 curl -fsSL https://claude.ai/install.sh | bash
 ```
 
-### Windows PowerShell
+#### Windows PowerShell
 
 Open PowerShell and run:
 
@@ -61,19 +46,19 @@ Open PowerShell and run:
 irm https://claude.ai/install.ps1 | iex
 ```
 
-### Windows CMD
+#### Windows CMD
 
 ```batch
 curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd
 ```
 
-## Set Up Your PATH
+### Set Up Your PATH
 
 Your PATH is a list of folders your computer checks when you type a command. If Claude Code's folder isn't in that list, your terminal won't recognize the `claude` command.
 
 After installation, you may need to configure your PATH so `claude` works from any directory.
 
-### macOS / Linux
+#### macOS / Linux
 
 The installer usually updates your shell profile automatically. If `claude` isn't recognized:
 
@@ -100,7 +85,7 @@ echo 'export PATH="$HOME/.claude/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-### Windows
+#### Windows
 
 The installer should add Claude Code to your PATH automatically. If `claude` isn't recognized:
 
@@ -118,7 +103,7 @@ To add it manually:
     $env:CLAUDE_CODE_GIT_BASH_PATH="C:\Program Files\Git\bin\bash.exe"
     ```
 
-## Log In
+### Log In
 
 Start Claude Code and log in with your Claude account:
 
@@ -130,7 +115,7 @@ You'll be prompted to authenticate in your browser. Follow the prompts to connec
 
 Once logged in, your credentials are stored and you won't need to log in again.
 
-## Verify Installation
+### Verify Installation
 
 Test that everything is working:
 
@@ -151,7 +136,7 @@ Ask Claude a question to confirm it's working:
 > what does this project do?
 ```
 
-## Troubleshooting
+### Troubleshooting
 
 **"command not found: claude"**
 - Close and reopen your terminal
@@ -175,7 +160,7 @@ Ask Claude a question to confirm it's working:
 - Ensure you're in a directory with a project (not an empty folder)
 - Try `claude --help` to verify the CLI responds
 
-## Essential Commands
+### Essential Commands
 
 | Command | What it does |
 |---------|--------------|
@@ -187,64 +172,97 @@ Ask Claude a question to confirm it's working:
 | `/login` | Re-authenticate (inside Claude Code) |
 | `exit` or Ctrl+C | Exit Claude Code |
 
-## Next Steps
-
-- Explore the [Claude Code documentation](https://code.claude.com/docs/en/quickstart) for more workflows
-- Try asking Claude to explain a project, commit changes, or write tests
-
-## Resources
+### Resources
 
 - [Claude Code Quickstart](https://code.claude.com/docs/en/quickstart)
 - [Claude Code CLI Reference](https://code.claude.com/docs/en/cli-reference)
 
----
+## OpenAI Codex CLI
 
-## Other AI Coding CLIs
+OpenAI's command-line coding agent. Requires [Node.js](https://nodejs.org/) 22+ and an OpenAI API key.
 
-Claude Code is the primary CLI covered in this cookbook, but you may also want to install these alternatives.
-
-### OpenAI Codex CLI
-
-OpenAI's command-line coding agent.
-
-**Prerequisites:** Requires [Node.js](https://nodejs.org/) 22+ (which includes npm, the package manager used to install it) and an OpenAI API key.
-
-**Install (macOS / Linux):**
+### Install
 
 ```bash
 npm install -g @openai/codex
 ```
 
-**Verify:**
-
-```bash
-codex --version
-```
-
-**Authenticate:**
+### Authenticate
 
 ```bash
 export OPENAI_API_KEY="your-api-key"
 ```
 
-See the [Codex CLI documentation](https://github.com/openai/codex) for full setup.
+### Verify
 
-### Gemini CLI
+```bash
+codex --version
+```
 
-Google's command-line AI coding assistant.
+### Resources
 
-**Prerequisites:** Requires [Node.js](https://nodejs.org/) 18+ (which includes npm) and a Google account.
+- [Codex CLI documentation](https://github.com/openai/codex)
 
-**Install (macOS / Linux):**
+## Gemini CLI
+
+Google's command-line AI coding assistant. Requires [Node.js](https://nodejs.org/) 18+ and a Google account.
+
+### Install
 
 ```bash
 npm install -g @google/gemini-cli
 ```
 
-**Verify:**
+### Verify
 
 ```bash
 gemini --version
 ```
 
-See the [Gemini CLI documentation](https://github.com/google-gemini/gemini-cli) for full setup.
+### Resources
+
+- [Gemini CLI documentation](https://github.com/google-gemini/gemini-cli)
+
+## GitHub CLI
+
+Manage GitHub pull requests, issues, and repos from your terminal. Requires a [GitHub account](github-setup.md).
+
+### Install
+
+#### macOS
+
+```bash
+brew install gh
+```
+
+#### Windows
+
+```powershell
+winget install --id GitHub.cli
+```
+
+#### Linux (Debian/Ubuntu)
+
+```bash
+sudo apt install gh
+```
+
+For other Linux distributions, see the [official install instructions](https://github.com/cli/cli/blob/trunk/docs/install_linux.md).
+
+### Authenticate
+
+```bash
+gh auth login
+```
+
+Follow the browser prompts to connect your GitHub account.
+
+### Verify
+
+```bash
+gh --version
+```
+
+### Resources
+
+- [GitHub CLI manual](https://cli.github.com/manual/)

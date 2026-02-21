@@ -96,7 +96,7 @@ GitHub hosts your projects (called *repositories*) in the cloud. You'll use it t
 
 Claude Code is the primary AI coding CLI used throughout this cookbook. The guide also covers OpenAI Codex CLI and Gemini CLI as optional alternatives.
 
-[:octicons-arrow-right-24: Go to AI Coding CLIs guide](claude-code-install.md)
+[:octicons-arrow-right-24: Go to CLI Setup Guide](cli.md)
 
 **You're done when:** Running `claude --version` prints a version number, and typing `claude` starts a conversation with Claude in your terminal.
 
