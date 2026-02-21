@@ -161,8 +161,9 @@ plugins:
         plugins/business-first-ai.md: use-the-cookbook/build/business-first-ai.md
         plugins/ai-registry.md: use-the-cookbook/build/ai-registry.md
         plugins/agentic-coding.md: use-the-cookbook/build/agentic-coding.md
-        # MCP Server → Use the Cookbook / Ask
-        mcp-server.md: use-the-cookbook/ask/index.md
+        # MCP Server → current location
+        mcp-server.md: mcp-server/index.md
+        use-the-cookbook/ask/index.md: mcp-server/index.md
         # Course syllabus pages → consolidated course pages
         courses/builders/syllabus.md: courses/builders/index.md
         courses/leaders/syllabus.md: courses/leaders/index.md
@@ -202,7 +203,7 @@ nav:
   - About: about.md
   - Use the Cookbook:
     - Overview: use-the-cookbook/index.md
-    - MCP Server: use-the-cookbook/ask/index.md
+    - MCP Server: mcp-server/index.md
     - Agents & Skills:
       - Browse Agents & Skills: use-the-cookbook/build/index.md
       - Using Plugins: use-the-cookbook/build/using-plugins.md

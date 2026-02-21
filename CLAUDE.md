@@ -15,7 +15,7 @@ Hands-On AI (handsonai.info) — the consolidated site for James Gray's AI cours
 - `docs/ai-engineering/` - AI engineering concepts (context engineering) — nested under Product & Engineering in nav
 - `docs/platforms/` - Platform-specific content (Claude, OpenAI, Gemini, M365 Copilot)
 - `docs/use-the-cookbook/` - Three consumption modes: Ask (MCP Server), Build (Plugins), Learn (Courses)
-- `docs/use-the-cookbook/ask/` - MCP server connection guides
+- `docs/mcp-server/` - MCP server connection guide (connect from Claude, ChatGPT, Cursor, VS Code, etc.)
 - `docs/use-the-cookbook/build/` - Plugin marketplace, getting started, plugin detail pages
 - `docs/builder-setup/` - Developer tool installation guides (terminal, Git, editor, Claude Code)
 - `docs/patterns/` - Reusable patterns and best practices
@@ -376,7 +376,7 @@ The MCP server (`mcp-server/`) logs tool calls and resource reads to a Cloudflar
 - `mcp-server/migrations/` — D1 schema migrations (applied via `wrangler d1 migrations apply`)
 - `mcp-server/scripts/analytics-query.ts` — CLI for querying analytics (`npm run analytics <command>`)
 - `mcp-server/.env.example` — Required env vars for the CLI script
-- `docs/use-the-cookbook/ask/index.md` — Privacy disclosure ("Analytics & Privacy" section)
+- `docs/mcp-server/index.md` — MCP server page with privacy disclosure ("Analytics & Privacy" section)
 
 ### What's logged
 

@@ -21,6 +21,6 @@ This replaces the old "What's New" page with something more intentional — shor
 
 ## MCP Server
 
-The cookbook now has an [MCP server](/use-the-cookbook/ask/) that lets AI assistants like Claude search and retrieve cookbook content directly. Connect it to Claude Desktop, Claude Code, or any MCP-compatible client to ask questions and get answers grounded in the cookbook.
+The cookbook now has an [MCP server](/mcp-server/) that lets AI assistants like Claude search and retrieve cookbook content directly. Connect it to Claude Desktop, Claude Code, or any MCP-compatible client to ask questions and get answers grounded in the cookbook.
 
 For long-form articles and deep dives, head to the [Graymatter newsletter](https://graymatter.jamesgray.ai).
