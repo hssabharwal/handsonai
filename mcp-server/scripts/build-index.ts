@@ -126,6 +126,7 @@ async function main() {
       "_templates/**",
       "assets/**",
       "blog/.authors.yml",
+      "**/_*_body.md",
     ],
   });
 

@@ -362,20 +362,6 @@ def _split_list_items(text):
     return items
 
 
-def format_resources(lesson):
-    """Format resource links for a lesson."""
-    parts = []
-    if lesson.get("slide_url"):
-        parts.append(
-            f'[:material-presentation: Slides]({lesson["slide_url"]}){{:target="_blank"}}'
-        )
-    if lesson.get("video_url"):
-        parts.append(
-            f'[:material-video: Video]({lesson["video_url"]}){{:target="_blank"}}'
-        )
-    return " · ".join(parts)
-
-
 def format_lesson_type(lesson_type):
     """Format lesson type with Material icon."""
     icon = LESSON_TYPE_ICONS.get(lesson_type, "")
@@ -613,97 +599,12 @@ def _generate_syllabus_body(course, assembled_weeks, lesson_slug_map=None):
     return lines
 
 
-def _generate_resources_body(course, assembled_weeks, lesson_slug_map=None):
-    """Generate the alumni resources body with Resources column.
-
-    Same hierarchical structure as the syllabus but keeps Resource links
-    (slide decks, videos) for enrolled students.
-    """
-    lesson_slug_map = lesson_slug_map or {}
-    lines = []
-
-    if not assembled_weeks:
-        lines.append("Resources coming soon — check back shortly!")
-        lines.append("")
-        return lines
-
-    for week in assembled_weeks:
-        lines.append("---")
-        lines.append("")
-        lines.append(f'## {week["name"]}')
-        lines.append("")
-
-        for session in week.get("sessions", []):
-            session_num = (
-                int(session["number"]) if session.get("number") else ""
-            )
-            session_name = re.sub(
-                r"^Session\s+\d+:\s*", "", session["name"]
-            )
-            lines.append(f"### Session {session_num}: {session_name}")
-            lines.append("")
-
-            for module in session.get("modules", []):
-                mod_num = (
-                    int(module["number"]) if module.get("number") else ""
-                )
-                lines.append(
-                    f'???+ note "Module {mod_num}: {module["name"]}"'
-                )
-                lines.append("")
-
-                if module.get("lessons"):
-                    lines.append(
-                        "    | # | Lesson | Type | Duration | Resources |"
-                    )
-                    lines.append(
-                        "    |---|--------|------|----------|-----------|"
-                    )
-                    for lesson in module["lessons"]:
-                        num = (
-                            int(lesson["number"])
-                            if lesson.get("number")
-                            else ""
-                        )
-                        name = lesson.get("name", "")
-                        lesson_slug = lesson_slug_map.get(
-                            (name, module.get("name", ""))
-                        )
-                        if lesson_slug:
-                            name = f"[{name}](lessons/{lesson_slug}.md)"
-                        ltype = format_lesson_type(lesson.get("type"))
-                        dur = (
-                            f'{int(lesson["duration"])} min'
-                            if lesson.get("duration")
-                            else ""
-                        )
-                        resources = format_resources(lesson)
-                        lines.append(
-                            f"    | {num} | {name} | {ltype} | {dur} | {resources} |"
-                        )
-                    lines.append("")
-
-    lines.append("---")
-    lines.append("")
-    lines.append(
-        "*This resource list is generated from the course database "
-        "and may be updated between cohorts.*"
-    )
-    lines.append("")
-
-    return lines
-
-
 def generate_markdown(course, assembled_weeks, lesson_slug_map=None):
     """Generate the full syllabus Markdown for a course.
 
-    Returns a tuple of (full_syllabus, syllabus_body, resources_body)
-    where the body variants are for snippet inclusion.
+    Returns a tuple of (full_syllabus, syllabus_body).
     """
     syllabus_body_lines = _generate_syllabus_body(
-        course, assembled_weeks, lesson_slug_map
-    )
-    resources_body_lines = _generate_resources_body(
         course, assembled_weeks, lesson_slug_map
     )
 
@@ -721,9 +622,8 @@ def generate_markdown(course, assembled_weeks, lesson_slug_map=None):
 
     full = "\n".join(header_lines + syllabus_body_lines)
     syllabus_body = "\n".join(syllabus_body_lines)
-    resources_body = "\n".join(resources_body_lines)
 
-    return full, syllabus_body, resources_body
+    return full, syllabus_body
 
 
 # ---------------------------------------------------------------------------
@@ -761,8 +661,6 @@ def main():
             output.write_text(PLACEHOLDER)
             body_output = OUTPUT_DIR / config["slug"] / "_syllabus_body.md"
             body_output.write_text("Syllabus coming soon — check back shortly!\n")
-            resources_output = OUTPUT_DIR / config["slug"] / "_resources_body.md"
-            resources_output.write_text("Resources coming soon — check back shortly!\n")
             print(f"  Wrote {output}")
         return
 
@@ -823,7 +721,7 @@ def main():
         print("  Generating lesson pages...")
         lesson_slug_map = write_lesson_pages(course, assembled)
 
-        markdown, syllabus_body, resources_body = generate_markdown(
+        markdown, syllabus_body = generate_markdown(
             course, assembled, lesson_slug_map
         )
 
@@ -834,10 +732,6 @@ def main():
         body_output = OUTPUT_DIR / course["slug"] / "_syllabus_body.md"
         body_output.write_text(syllabus_body)
         print(f"  Wrote {body_output} (syllabus snippet)")
-
-        resources_output = OUTPUT_DIR / course["slug"] / "_resources_body.md"
-        resources_output.write_text(resources_body)
-        print(f"  Wrote {resources_output} (resources snippet)")
 
         total_sessions = sum(len(w.get("sessions", [])) for w in assembled)
         total_modules = sum(
@@ -866,8 +760,6 @@ def main():
             output.write_text(PLACEHOLDER)
             body_output = OUTPUT_DIR / config["slug"] / "_syllabus_body.md"
             body_output.write_text("Syllabus coming soon — check back shortly!\n")
-            resources_output = OUTPUT_DIR / config["slug"] / "_resources_body.md"
-            resources_output.write_text("Resources coming soon — check back shortly!\n")
             print(f"\n  {name} not found — wrote placeholder to {output}")
 
 
