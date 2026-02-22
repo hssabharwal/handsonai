@@ -471,14 +471,10 @@ def write_lesson_pages(course, assembled_weeks):
 def _generate_syllabus_body(course, assembled_weeks, lesson_slug_map=None):
     """Generate the public syllabus body (no Duration or Resources columns).
 
-    Returns a list of Markdown lines starting from the Enroll button
-    through the weekly content and footer.
+    Returns a list of Markdown lines with the weekly content and footer.
     """
     lesson_slug_map = lesson_slug_map or {}
-    lines = [
-        f'[Enroll on Maven :material-arrow-right:]({course["url"]}){{ .md-button .md-button--primary }}',
-        "",
-    ]
+    lines = []
 
     if not assembled_weeks:
         lines.append("Syllabus coming soon — check back shortly!")
