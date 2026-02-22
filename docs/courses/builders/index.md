@@ -1,5 +1,5 @@
 ---
-title: Claude and Claude Code for Builders
+title: "Claude for Builders: AI Workflows and Agentic Coding"
 description: From Claude user to Claude builder in 5 weeks. A hands-on cohort course on Maven.
 schema_type: Course
 course_duration: P5W
@@ -9,7 +9,7 @@ course_provider: Maven
 course_language: en
 ---
 
-# Claude and Claude Code for Builders
+# Claude for Builders: AI Workflows and Agentic Coding
 
 From Claude user to Claude builder in 5 weeks. This cohort-based course teaches you to move beyond basic AI usage and build production-grade AI systems — configuring a complete builder infrastructure, creating reusable AI capabilities, developing autonomous workflows, and shipping applications using agentic coding principles.
 

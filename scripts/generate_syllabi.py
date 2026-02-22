@@ -38,7 +38,7 @@ LESSONS_DB = "c5865fa3-d44f-4b44-b0fd-a8ff83cb7177"
 
 # Course name → output directory slug and Maven enrollment URL
 COURSE_CONFIG = {
-    "Claude and Claude Code for Builders": {
+    "Claude for Builders: AI Workflows and Agentic Coding": {
         "slug": "builders",
         "url": "https://maven.com/james-gray/claude",
     },
