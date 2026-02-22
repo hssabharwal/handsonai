@@ -22,6 +22,10 @@ From AI user to AI builder in 30 days. This cohort-based course goes beyond Chat
 - **Managers** strengthening their collaboration with technical stakeholders
 - No coding experience required
 
+## Full Syllabus
+
+--8<-- "docs/courses/leaders/_syllabus_body.md"
+
 ## Instructor
 
 **James Gray** — UC Berkeley AI instructor and former CIO/CPO. Previously spent 10 years at Microsoft building enterprise data platforms. Has trained 5,000+ executives globally in AI strategy.
@@ -34,9 +38,3 @@ From AI user to AI builder in 30 days. This cohort-based course goes beyond Chat
 - Paid subscription to ChatGPT, Claude, or Gemini
 - macOS or Windows computer
 - Comfort with small-group learning — no coding required
-
----
-
-## Full Syllabus
-
---8<-- "docs/courses/leaders/_syllabus_body.md"
