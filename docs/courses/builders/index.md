@@ -21,6 +21,10 @@ From Claude user to Claude builder in 5 weeks. This cohort-based course teaches 
 - **Builder-Founders** prototyping quickly without engineering resources
 - **AI-First Professionals** establishing AI-centered workflows
 
+## Full Syllabus
+
+--8<-- "docs/courses/builders/_syllabus_body.md"
+
 ## Instructor
 
 **James Gray** — UC Berkeley AI instructor and former CIO/CPO. Previously spent 10 years at Microsoft building enterprise data platforms. Has trained 5,000+ executives globally in AI strategy.
@@ -35,9 +39,3 @@ From Claude user to Claude builder in 5 weeks. This cohort-based course teaches 
 - macOS or Windows with admin access to install software
 
 Setup guides are available under [Builder Setup](../../builder-setup/index.md).
-
----
-
-## Full Syllabus
-
---8<-- "docs/courses/builders/_syllabus_body.md"
