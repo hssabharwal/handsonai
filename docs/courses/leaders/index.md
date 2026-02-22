@@ -31,7 +31,7 @@ From AI user to AI builder in 30 days. This cohort-based course goes beyond Chat
 **James Gray** — UC Berkeley AI instructor and former CIO/CPO. Previously spent 10 years at Microsoft building enterprise data platforms. Has trained 5,000+ executives globally in AI strategy.
 
 - [Maven Profile](https://maven.com/james-gray)
-- [Other course: Claude for Builders: AI Workflows and Agentic Coding](../builders/index.md)
+- [Other course: Claude for Builders: AI Workflows and Product Prototyping](../builders/index.md)
 
 ## Prerequisites
 
