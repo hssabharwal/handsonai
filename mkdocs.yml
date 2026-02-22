@@ -202,7 +202,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - About: about.md
-  - Use the Cookbook:
+  - Tools & Resources:
     - Overview: use-the-cookbook/index.md
     - MCP Server: mcp-server/index.md
     - Agents & Skills:

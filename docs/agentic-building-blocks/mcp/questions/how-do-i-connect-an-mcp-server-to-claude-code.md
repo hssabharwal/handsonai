@@ -13,11 +13,11 @@ author: James Gray
 
 ## The Full Answer
 
-Claude Code connects to external tools and data sources through the Model Context Protocol (MCP), an open source standard for AI-tool integrations. When you add an MCP server, you're giving Claude Code access to tools, databases, and APIs that extend what it can do beyond the conversation.
+Claude Code connects to external tools and data sources through the Model Context Protocol (MCP), an open source standard for AI-tool integrations (*[Model Context Protocol documentation](https://modelcontextprotocol.io/docs/develop/connect-local-servers)*). When you add an MCP server, you're giving Claude Code access to tools, databases, and APIs that extend what it can do beyond the conversation.
 
-There are three main ways to connect MCP servers to Claude Code, depending on whether the server runs remotely or locally. HTTP servers are the recommended option for cloud-based services and remote MCP servers. This is the most widely supported transport method. Stdio servers run as local processes on your machine, making them ideal for tools that need direct system access or custom scripts. SSE (Server-Sent Events) servers provide another option for remote services, though this transport method is deprecated in favor of HTTP.
+There are three main ways to connect MCP servers to Claude Code, depending on whether the server runs remotely or locally. HTTP servers are the recommended option for cloud-based services and remote MCP servers. This is the most widely supported transport method. Stdio servers run as local processes on your machine, making them ideal for tools that need direct system access or custom scripts. SSE (Server-Sent Events) servers provide another option for remote services, though this transport method is deprecated in favor of HTTP (*[official Claude Code MCP documentation](https://code.claude.com/docs/en/mcp)*).
 
-The difference between Claude Code and Claude Desktop is important to understand here. Claude Desktop uses a configuration file at `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) or `%APPDATA%\Claude\claude_desktop_config.json` (Windows) and also supports a newer Desktop Extensions interface in Settings for one-click installation. Claude Code, on the other hand, uses command-line configuration through the `claude mcp add` command and stores settings in `~/.claude.json` or `.mcp.json` files. While both products support MCP, Claude Code is designed for developers working in the terminal and integrates directly with your development workflow.
+The difference between Claude Code and Claude Desktop is important to understand here. Claude Desktop uses a configuration file at `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) or `%APPDATA%\Claude\claude_desktop_config.json` (Windows) (*[Getting Started with Local MCP Servers on Claude Desktop](https://support.claude.com/en/articles/10949351-getting-started-with-local-mcp-servers-on-claude-desktop)*). Claude Code, on the other hand, uses command-line configuration through the `claude mcp add` command and stores settings in `~/.claude.json` or `.mcp.json` files. While both products support MCP, Claude Code is designed for developers working in the terminal and integrates directly with your development workflow.
 
 MCP servers can be configured at three scope levels: local (default, stored in `~/.claude.json` under your project path and available only to you in the current project), project (stored in `.mcp.json` at your project root and shared with the team via version control), and user (stored in `~/.claude.json` and available to you across all projects). Understanding these scopes helps you decide whether a server should be personal, project-specific, or available everywhere you work.
 
@@ -104,12 +104,3 @@ claude mcp add --transport http \
 
 - [What is MCP and when should I use it?](../index.md)
 - [How do I set up Claude Code?](../../../builder-setup/cli.md)
-
-## Sources
-
-Research for this answer drew from:
-
-- [Connect Claude Code to tools via MCP - Claude Code Docs](https://code.claude.com/docs/en/mcp) - Official Claude Code documentation on MCP configuration
-- [Getting Started with Local MCP Servers on Claude Desktop](https://support.claude.com/en/articles/10949351-getting-started-with-local-mcp-servers-on-claude-desktop) - Claude Help Center guide on Desktop Extensions
-- [Model Context Protocol Documentation](https://modelcontextprotocol.io/docs/develop/connect-local-servers) - Open source MCP protocol documentation
-- [Add MCP Servers to Claude Code - Setup & Configuration Guide](https://mcpcat.io/guides/adding-an-mcp-server-to-claude-code/) - Community guide on MCP server setup

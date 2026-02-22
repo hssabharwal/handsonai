@@ -13,9 +13,27 @@ This cookbook lives at the intersection of **people, business, and technology** 
 
 Practical guides, patterns, ready-made tools, and direct answers — everything you need to move from experimenting with AI to getting real results. Browse by platform, look up a topic, or work through a structured course.
 
----
+<div class="grid cards" markdown>
 
-**Ready-made AI tools you can use today** — agents, skills, and prompts that give your AI tool domain expertise it doesn't have out of the box. [Install as plugins](use-the-cookbook/build/index.md) or [browse on GitHub](https://github.com/jamesgray-ai/handsonai/tree/main/plugins).
+-   :material-chat-question:{ .lg .middle } **MCP Server**
+
+    ---
+
+    Ask the cookbook directly inside Claude, ChatGPT, or any MCP-compatible tool. Connect once, ask anytime.
+
+    [:octicons-arrow-right-24: Connect now](mcp-server/index.md)
+
+-   :material-puzzle-outline:{ .lg .middle } **Agents & Skills**
+
+    ---
+
+    Pre-built agents, skills, and prompts that give your AI tool domain expertise it doesn't have out of the box.
+
+    [:octicons-arrow-right-24: Browse agents & skills](use-the-cookbook/build/index.md)
+
+</div>
+
+---
 
 <!-- latest-updates -->
 
