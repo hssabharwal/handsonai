@@ -331,7 +331,7 @@ The `.claude/` directory is the **development/local** copy (used for repo-local 
 4. Add a new entry to `.claude-plugin/marketplace.json`
 5. Add a grid card + collapsible detail section to `docs/use-the-cookbook/build/index.md` — include links to the detail page anchors for every agent and skill
 6. Create a detail page at `docs/use-the-cookbook/build/<plugin-name>.md` following the template used by existing detail pages (see `docs/use-the-cookbook/build/business-first-ai.md` for reference)
-7. Add the detail page to the `nav:` section in `mkdocs.yml` under "Use the Cookbook > Build (Plugins)"
+7. Add the detail page to the `nav:` section in `mkdocs.yml` under "Tools & Resources > Agents & Skills"
 8. Commit and push
 
 ### Catalog page linking convention
@@ -359,7 +359,7 @@ The `docs/resources/` section hosts curated resource pages for external PDFs and
 1. Download the PDF to `docs/assets/pdfs/<descriptive-filename>.pdf`
 2. Create a resource page at `docs/resources/<slug>.md` with frontmatter (`title`, `description`), source attribution, "Why This Matters" section, "Key Takeaways" bullets, "How the Cookbook Uses This" cross-links, and a download button linking to `../assets/pdfs/<filename>.pdf`
 3. Add the page to `docs/resources/index.md` catalog table
-4. Add the page to the `nav:` section in `mkdocs.yml` under "Use the Cookbook > Resources"
+4. Add the page to the `nav:` section in `mkdocs.yml` under "Tools & Resources > Resources"
 5. Update any existing pages that linked to the external PDF URL to point to the new resource page instead
 
 The MCP server indexes resource pages automatically — no changes to `build-index.ts` or `tools.ts` needed (the `resources` section mapping is already configured).
