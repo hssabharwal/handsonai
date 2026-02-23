@@ -98,6 +98,11 @@ Use the email address you plan to use for your GitHub account (set up in the nex
 - On Mac, you may need to enter your password during Xcode tools installation
 - On Windows, run the installer as Administrator
 
+??? tip "Ask AI for help"
+    If you're stuck, paste this into ChatGPT, Claude, or Gemini:
+
+    > I'm trying to install Git on [Mac / Windows] and getting this error: [paste the error message]. I followed the steps from the official guide. What should I try next?
+
 ## Next Steps
 
 - Set up your GitHub account (see [GitHub Setup Guide](github-setup.md))
