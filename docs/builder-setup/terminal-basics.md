@@ -5,8 +5,6 @@ schema_type: HowTo
 howto_steps:
   - name: Open your terminal
     text: "macOS: Press Cmd+Space, type Terminal, press Enter. Windows: Click Start, type PowerShell, click Windows PowerShell."
-  - name: Open the terminal in your editor
-    text: In Cursor or VS Code, press Ctrl+` (backtick) to open the integrated terminal panel.
   - name: Learn essential commands
     text: Practice pwd (print directory), ls (list files), cd (change directory), mkdir (create folder), and clear (clear screen).
   - name: Try the practice exercise
@@ -31,7 +29,7 @@ The good news: you only need a handful of commands to get started.
 
     You have two quick ways to open Terminal:
 
-    1. **Spotlight Search**: Press ++cmd+space++, type `Terminal`, press Enter
+    1. **Spotlight Search**: Press **Cmd + Space**, type `Terminal`, press Enter
     2. **Finder**: Open Applications > Utilities > Terminal
 
     You'll see a window with a short line of text ending in `$` or `%` and a blinking cursor. That's your **prompt** — it means the terminal is ready for a command.
@@ -42,24 +40,6 @@ The good news: you only need a handful of commands to get started.
     2. **Windows Terminal** (if installed): Click Start, type `Terminal`, click **Terminal**
 
     You'll see a window with a line ending in `>` and a blinking cursor. That's your **prompt** — it means the terminal is ready for a command.
-
-## Open the Terminal in Your Editor
-
-!!! note "Come back after Step 2"
-    This section requires a code editor. If you're following the [Builder Stack Setup Guide](index.md) in order, complete Step 2 (Editor Setup) first, then return here.
-
-Once you have Cursor or VS Code installed, you can use the terminal directly inside your editor. This is where you'll spend most of your time — running commands without switching windows.
-
-The steps are the same for both Cursor and VS Code:
-
-1. Open Cursor or VS Code
-2. Press ++ctrl+grave++ (the backtick key, to the left of 1 on most keyboards)
-3. A terminal panel opens at the bottom of the editor
-
-You can also open it from the menu: **Terminal > New Terminal**.
-
-!!! tip "Keep it visible"
-    Drag the top edge of the terminal panel to resize it. Many developers keep the terminal open at all times while they work.
 
 ## Essential Commands
 
@@ -186,7 +166,7 @@ The `$`, `%`, or `>` at the start of each line is the **prompt**. It means the t
 
 ### Tab Completion
 
-Start typing a file or folder name and press ++tab++. The terminal will auto-complete the name if there's a match, or show you options if there are multiple matches. This saves typing and helps avoid typos.
+Start typing a file or folder name and press **Tab**. The terminal will auto-complete the name if there's a match, or show you options if there are multiple matches. This saves typing and helps avoid typos.
 
 ## Troubleshooting
 
@@ -210,3 +190,8 @@ Start typing a file or folder name and press ++tab++. The terminal will auto-com
 
 - Run `pwd` (macOS/Linux) or `Get-Location` (Windows) to see your current directory
 - Run `cd ~` to go back to your home directory
+
+??? tip "Ask AI for help"
+    If you're stuck, paste this into ChatGPT, Claude, or Gemini:
+
+    > I'm learning to use the terminal on [Mac / Windows] and ran into this issue: [describe what happened or paste the error message]. I was trying to [what you were doing]. What does this mean and what should I try?

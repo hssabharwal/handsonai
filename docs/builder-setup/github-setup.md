@@ -40,6 +40,19 @@ Use your code editor to download (clone) repositories from GitHub.
 4. Choose a local folder location
 5. Open the cloned repository when prompted
 
+### Verify the Clone Worked
+
+After cloning, confirm the repository is on your machine:
+
+1. Check the **sidebar** in your editor — you should see the project's files and folders
+2. Open the integrated terminal (**Ctrl + `**) and run:
+
+```bash
+git status
+```
+
+You should see a message like `On branch main` — this confirms the repository was cloned correctly and Git is tracking it.
+
 ## Git Concepts
 
 Understanding these terms helps when working with Claude Code.
@@ -81,6 +94,11 @@ Claude Code handles the Git commands for you.
 **Authentication issues?**
 - Your editor may prompt you to sign into GitHub
 - Follow the browser authentication flow when prompted
+
+??? tip "Ask AI for help"
+    If you're stuck, paste this into ChatGPT, Claude, or Gemini:
+
+    > I'm trying to clone a GitHub repository in [Cursor / VS Code] on [Mac / Windows] and getting this error: [paste the error message]. I have Git installed and a GitHub account. What should I try?
 
 ## Next Steps
 

@@ -144,6 +144,15 @@ The plugin includes five skills that automate common registry tasks:
 
 See the [AI Registry plugin page](../use-the-cookbook/build/index.md#ai-registry) for full details and usage examples.
 
+## Verify Setup
+
+After duplicating and customizing the template, confirm everything is working:
+
+- [ ] You can see all **four databases** in your workspace (Business Processes, Workflows, AI Building Blocks, Apps)
+- [ ] Clicking into a sample entry shows **relations** linking to other databases (e.g., a Workflow links to its Business Process)
+- [ ] You can **create a new entry** in any database and fill in the fields
+- [ ] If you connected an AI tool (Step 7), ask it: *"Search my Notion workspace for the AI Registry"* — it should find and describe your databases
+
 ## Troubleshooting
 
 **Relations not copying correctly?**
@@ -164,6 +173,11 @@ See the [AI Registry plugin page](../use-the-cookbook/build/index.md#ai-registry
 **Need to start over?**
 
 - Delete your copy and duplicate the template again.
+
+??? tip "Ask AI for help"
+    If you're stuck, paste this into ChatGPT, Claude, or Gemini:
+
+    > I'm setting up the AI Registry in Notion and running into this issue: [describe what's happening]. I duplicated the template and can see the databases. What should I check?
 
 ## Next Steps
 

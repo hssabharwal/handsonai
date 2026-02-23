@@ -358,13 +358,13 @@ nav:
       - Resources: platforms/openai/topics/resources.md
   - Builder Stack Setup:
     - builder-setup/index.md
-    - "Step 1 — Terminal Basics": builder-setup/terminal-basics.md
-    - "Step 2 — AI Code Editor": builder-setup/editor-setup.md
-    - "Step 3 — Git": builder-setup/git-install.md
-    - "Step 4 — GitHub": builder-setup/github-setup.md
-    - "Step 5 — CLIs": builder-setup/cli.md
-    - "Step 6 — AI Registry": builder-setup/notion-registry-setup.md
-    - "Step 7 — Voice to Text": builder-setup/voice-to-text-setup.md
+    - Terminal Basics: builder-setup/terminal-basics.md
+    - AI Code Editor: builder-setup/editor-setup.md
+    - Git: builder-setup/git-install.md
+    - GitHub: builder-setup/github-setup.md
+    - CLIs: builder-setup/cli.md
+    - AI Registry: builder-setup/notion-registry-setup.md
+    - Voice to Text: builder-setup/voice-to-text-setup.md
   - Product & Engineering:
     - product-engineering/index.md
     - Software Development Lifecycle: product-engineering/sdlc.md
@@ -390,7 +390,9 @@ nav:
         - Autonomous Agents: patterns/workflow-architecture/autonomous-agents.md
   - Learn with James:
     - Overview: courses/index.md
-    - Agentic AI for Leaders: courses/leaders/index.md
+    - Agentic AI for Leaders:
+      - courses/leaders/index.md
+      - Setup Checklist: courses/leaders/setup-checklist.md
     - Claude for Builders: courses/builders/index.md
     - Questions:
       - Corporate AI Training: courses/questions/corporate-ai-training.md

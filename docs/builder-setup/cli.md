@@ -160,6 +160,11 @@ Ask Claude a question to confirm it's working:
 - Ensure you're in a directory with a project (not an empty folder)
 - Try `claude --help` to verify the CLI responds
 
+??? tip "Ask AI for help"
+    If you're stuck, paste this into ChatGPT, Claude, or Gemini:
+
+    > I'm trying to install [Claude Code / Codex CLI / Gemini CLI] on [Mac / Windows / Linux] and getting this error: [paste the error message]. I followed the installation steps. What should I try next?
+
 ### Essential Commands
 
 | Command | What it does |
