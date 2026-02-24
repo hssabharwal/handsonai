@@ -49,12 +49,12 @@ These steps install the developer tools you'll use throughout the course. Each s
 
 ### Step 2: Code Editor + Extensions
 
-**What:** Install Cursor or VS Code and add AI coding extensions.
+**What:** Install Cursor or VS Code and add AI coding extensions for the platforms you subscribe to.
 
 [:octicons-arrow-right-24: Go to Editor Setup guide](../../builder-setup/editor-setup.md)
 
-- [ ] I can open my editor and see files in the sidebar
-- [ ] At least one AI extension installed (Claude Code, Codex, or Gemini Code Assist)
+- [ ] I can open my editor and see the welcome screen or an empty workspace
+- [ ] At least one AI extension installed for a platform I have a paid subscription to (Claude Code, Codex, or Gemini Code Assist)
 
 ??? tip "Stuck? Ask AI for help"
     > I'm setting up [Cursor / VS Code] on [Mac / Windows] and running into this issue: [describe what's happening]. What should I try next?
@@ -91,15 +91,14 @@ These steps install the developer tools you'll use throughout the course. Each s
 
 ### Step 5: AI Coding CLIs
 
-**What:** Install Claude Code (required) and optionally other AI coding CLIs.
+**What:** Install an AI coding CLI for whichever platform you have a subscription to. I highly recommend Claude Code, but Codex CLI and Gemini CLI are also covered in the guide.
 
 [:octicons-arrow-right-24: Go to CLI Setup guide](../../builder-setup/cli.md)
 
-- [ ] Running `claude --version` shows a version number
-- [ ] Running `claude` starts a conversation in my terminal
+- [ ] I have at least one AI coding CLI installed and can start a conversation in my terminal
 
 ??? tip "Stuck? Ask AI for help"
-    > I'm trying to install Claude Code on [Mac / Windows] and getting this error: [paste error]. What should I try next?
+    > I'm trying to install [Claude Code / Codex CLI / Gemini CLI] on [Mac / Windows] and getting this error: [paste error]. What should I try next?
 
 ---
 

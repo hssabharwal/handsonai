@@ -39,6 +39,8 @@ Cursor is VS Code with AI capabilities built in.
 3. Run the installer
 4. Launch Cursor
 
+New to Cursor? The [Cursor Documentation](https://docs.cursor.com) covers the interface layout, settings, and keyboard shortcuts.
+
 ## Option 2: VS Code
 
 ### Install VS Code
@@ -47,6 +49,8 @@ Cursor is VS Code with AI capabilities built in.
 2. Download for your operating system
 3. Run the installer
 4. Launch VS Code
+
+New to VS Code? The [Getting Started guide](https://code.visualstudio.com/docs/getstarted/getting-started) covers the interface layout, settings, and keyboard shortcuts.
 
 ## Verify Installation
 
@@ -74,11 +78,11 @@ You can also open it from the menu: **Terminal > New Terminal**.
 
 ## Install AI Extensions
 
-After installing your editor, add the AI coding extensions for your workflow.
+After installing your editor, add AI coding extensions for the platforms you have a **paid subscription** to. You don't need all of these — just install the one(s) that match your accounts.
 
 ### Claude Code
 
-The Claude Code extension connects your editor to Claude's AI capabilities.
+Requires a **Claude Pro, Max, or Team** subscription. The Claude Code extension connects your editor to Claude's AI capabilities.
 
 1. Open the Extensions panel (**Cmd/Ctrl + Shift + X**)
 2. Search for **Claude Code**
@@ -89,25 +93,25 @@ The Claude Code extension also includes an integrated terminal panel. See the [C
 
 ### OpenAI Codex
 
-OpenAI's coding assistant extension for VS Code and Cursor.
+Requires a **ChatGPT Plus or Team** subscription. OpenAI's coding assistant extension for VS Code and Cursor.
 
 1. Open the Extensions panel (**Cmd/Ctrl + Shift + X**)
 2. Search for **Codex** (by OpenAI)
 3. Click **Install**
 4. Sign in with your OpenAI account when prompted
 
-Requires an OpenAI API account. See [OpenAI Codex documentation](https://openai.com/index/codex/) for details.
+See [OpenAI Codex documentation](https://openai.com/index/codex/) for details.
 
 ### Gemini Code Assist
 
-Google's AI coding assistant extension.
+Requires a **Gemini Advanced** (Google One AI Premium) subscription or **Google Workspace** with Gemini enabled. Google's AI coding assistant extension.
 
 1. Open the Extensions panel (**Cmd/Ctrl + Shift + X**)
 2. Search for **Gemini Code Assist**
 3. Click **Install**
 4. Sign in with your Google account when prompted
 
-Requires a Google Cloud account. See [Gemini Code Assist documentation](https://cloud.google.com/products/gemini-code-assist) for details.
+See [Gemini Code Assist documentation](https://cloud.google.com/products/gemini-code-assist) for details.
 
 ## Troubleshooting
 
