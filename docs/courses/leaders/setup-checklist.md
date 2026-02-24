@@ -155,13 +155,29 @@ These steps configure your AI accounts for the best experience in the course. Yo
 
     **Official docs:** [Claude Support — Getting started](https://support.claude.com)
 
-=== "Gemini"
+=== "Gemini (personal)"
 
-    1. Go to [gemini.google.com](https://gemini.google.com) and sign in with your Google account
+    1. Go to [gemini.google.com/subscriptions](https://gemini.google/subscriptions/) and sign in with your Google account
     2. Upgrade to **Gemini Advanced** ($20/month via Google One AI Premium) for the full feature set
     3. Confirm you can start a new conversation and get a response
 
     **Official docs:** [Gemini Help Center](https://support.google.com/gemini)
+
+=== "Gemini (Workspace)"
+
+    1. Go to [Google Workspace AI](https://workspace.google.com/solutions/ai/) to explore Gemini for your organization
+    2. Your Workspace admin enables Gemini — check with IT if you don't have access
+    3. Once enabled, access Gemini at [gemini.google.com](https://gemini.google.com) with your work account
+
+    **Official docs:** [Google Workspace AI solutions](https://workspace.google.com/solutions/ai/)
+
+=== "Gemini (Enterprise)"
+
+    1. Go to [Gemini for Google Cloud](https://cloud.google.com/gemini-enterprise) to explore enterprise options
+    2. Your Google Cloud admin provisions Gemini Enterprise — check with IT if you don't have access
+    3. Once enabled, access Gemini through Google Cloud Console and integrated Google services
+
+    **Official docs:** [Gemini Enterprise](https://cloud.google.com/gemini-enterprise)
 
 - [ ] I have a paid AI platform account and can start conversations
 
