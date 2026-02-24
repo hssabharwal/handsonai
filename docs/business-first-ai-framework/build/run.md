@@ -7,7 +7,7 @@ description: How to execute your AI workflow — choosing between normal chats, 
 
 You've worked with the model to build your building blocks — context artifacts, a prompt, maybe skills, agents, or MCP connections. Now run the workflow.
 
-**Start with your Launch Guide.** The model generates a Launch Guide (`[name]-launch-guide.md`) at the end of [Construct](index.md#32-construct) — it tells you exactly how to set up and run everything on your specific platform. If you have one, follow it.
+**Start with your Run Guide.** The model generates a Run Guide (`[name]-run-guide.md`) at the end of [Construct](index.md#32-construct) — it tells you exactly how to set up and run everything on your specific platform. If you have one, follow it.
 
 The sections below cover the general execution patterns if you need to decide independently or want to understand the options.
 
@@ -18,6 +18,9 @@ The sections below cover the general execution patterns if you need to decide in
 | Prompt + context files | **Paste and run** in a normal chat | Any AI tool (Claude, ChatGPT, Gemini, M365 Copilot) |
 | Prompt + context + project | **Run in a project** — context is pre-loaded, paste the prompt each run | Claude Projects, ChatGPT Projects, Gemini Gems, M365 Copilot Notebooks |
 | Agent + skills + MCP | **Command an agent** — give a goal, it plans and executes | Claude Code subagents, OpenAI Agents, Google Agents, M365 Copilot Agents |
+| API script + context files | **Run a script** from the terminal | Any environment with API access |
+| SDK agent app + tools | **Deploy an agent app** locally or to cloud | Local terminal, Docker, cloud service |
+| AI calls in an existing app | **Integrate into your pipeline** | CI/CD, existing application, scheduled job |
 | Any of the above + a schedule | **Automate** — recurring trigger, runs without you | Claude Code + launchd / Task Scheduler |
 
 ---
@@ -103,6 +106,39 @@ For Claude-specific agent setup, see [Agentic Building Blocks > Agents](../../ag
 
 ---
 
+## Run a Code-First Workflow
+
+When your architecture approach is **code-first**, you run your workflow from the terminal or deploy it as an application. The same four execution patterns apply, but execution happens through scripts and SDK apps rather than platform UIs.
+
+### How to run it:
+
+**API scripts (Prompt and Skill-Powered Prompt patterns):**
+
+1. **Set environment variables** — export your API key and any configuration values
+2. **Install dependencies** — `pip install -r requirements.txt` or `npm install`
+3. **Run the script** — `python main.py`, `npx tsx workflow.ts`, or equivalent
+4. **Review the output** — check the terminal output or output files
+
+**SDK agent apps (Single Agent and Multi-Agent patterns):**
+
+1. **Set environment variables** — export your API key and any configuration values
+2. **Install dependencies** — install the SDK and any tool dependencies
+3. **Run the agent** — `python agent.py`, `npx tsx agent.ts`, or use the SDK's CLI runner
+4. **Review at defined gates** — the agent pauses for human approval at configured checkpoints
+5. **Accept or redirect** — approve the output or give the agent further direction
+
+### Where to run code-first workflows
+
+| What you built | How to run | Where |
+|---|---|---|
+| API call script | Run from terminal | Local machine, CI/CD pipeline, cloud function |
+| SDK agent app | Run from terminal or deploy | Local machine, Docker container, cloud service |
+| Integration into existing app | Deploy with the app | Whatever environment hosts your application |
+
+Code-first workflows can also be scheduled (see [Automate on a Schedule](#automate-on-a-schedule) below) — the same scheduling patterns work for scripts and agent apps.
+
+---
+
 ## Automate on a Schedule
 
 When you want a workflow to run automatically — daily, weekly, or in response to triggers — without a human initiating each run. This is the highest level of the autonomy spectrum (the range from fully human-driven to fully AI-driven).
@@ -141,6 +177,16 @@ The first run is a test, not a production run. You're testing whether the buildi
 - **Generic output** — the AI doesn't have enough context. Add reference materials, examples, or style guides.
 - **Steps skipped or wrong** — the prompt instructions are too vague. Make the steps more explicit.
 - **AI asks for information it should know** — a context file is missing. Check your Context Inventory from the AI Building Block Spec.
+
+**Code-first first-run issues:**
+
+| Problem | Root cause | Fix |
+|---------|-----------|-----|
+| API authentication error | Invalid or missing API key | Check environment variables, verify key in platform dashboard |
+| SDK tool not found | Tool schema mismatch | Verify tool definition matches the expected format for your SDK |
+| Agent loop timeout | No stop condition or infinite delegation | Add max iterations, check handoff logic between agents |
+| Rate limit errors | Too many API calls too fast | Add retry logic with exponential backoff |
+| Module not found | Missing dependencies | Run `pip install -r requirements.txt` or `npm install` |
 
 ## Test, Iterate, Repeat
 

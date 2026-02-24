@@ -1,6 +1,6 @@
 ---
 title: "Step 3: Build AI-Powered Workflows"
-description: Design your AI workflow with architecture decisions, execution patterns, and building block mapping — then construct platform-appropriate artifacts and get a Launch Guide for getting it running.
+description: Design your AI workflow — choose your architecture approach (no-code or code-first), execution pattern, and building block mapping — then construct platform-appropriate artifacts and get a Run Guide for getting it running.
 ---
 
 # Step 3: Build AI-Powered Workflows
@@ -25,9 +25,11 @@ Before building anything, decide *how* the workflow should be built. The Design 
 
 Design covers:
 
-1. **Architecture decisions** — The model confirms your platform (the one thing not in the Workflow Definition), then extracts tool integrations, trigger/schedule, and browser access flags directly from the definition. It presents a single confirmation block with the platform, integration mapping, and trigger implications — you review and adjust. These gate all subsequent recommendations.
+1. **Architecture approach** — Choose between **no-code** (build in a platform UI) and **code-first** (build with APIs and SDKs). The model recommends based on signals like integration needs, deployment requirements, and technical comfort. This choice shapes which tools and building blocks are available in subsequent steps.
 
-2. **Execution pattern** — Choose from four patterns based on what your workflow needs:
+2. **Architecture decisions** — The model confirms your platform (the one thing not in the Workflow Definition), then extracts tool integrations, trigger/schedule, and browser access flags directly from the definition. It presents a single confirmation block with the platform, integration mapping, and trigger implications — you review and adjust. These gate all subsequent recommendations.
+
+3. **Execution pattern** — Choose from four patterns based on what your workflow needs:
 
     | Pattern | When to use |
     |---------|-------------|
@@ -36,15 +38,15 @@ Design covers:
     | **Single Agent** | Tool use required, autonomous decisions, multi-step reasoning |
     | **Multi-Agent** | Multiple expertise domains, parallel execution, review gates |
 
-3. **Interaction mode** — Interactive (real-time collaboration), Autonomous (unattended execution), or Hybrid (mix of both) — determined by your architecture decisions
-4. **Autonomy classification** — Classify each step (Human → Deterministic → Semi-Autonomous → Autonomous)
-5. **Building block mapping** — Map each step to AI building blocks (Prompt, Context, Skill, Agent, MCP, Project)
-6. **Skill candidates** — Tag steps that should become reusable skills, with generation-ready detail
-7. **Agent blueprints** (when applicable) — Platform-agnostic specification for each agent (name, description, instructions, model, tools, context, goal) — built into working agents by the model in 3.2
+4. **Interaction mode** — Interactive (real-time collaboration), Autonomous (unattended execution), or Hybrid (mix of both) — determined by your architecture decisions
+5. **Autonomy classification** — Classify each step (Human → Deterministic → Semi-Autonomous → Autonomous)
+6. **Building block mapping** — Map each step to AI building blocks (Prompt, Context, Skill, Agent, MCP, Project, API, SDK)
+7. **Skill candidates** — Tag steps that should become reusable skills, with generation-ready detail
+8. **Agent blueprints** (when applicable) — Platform-agnostic specification for each agent (name, description, instructions, model, tools, context, goal) — built into working agents by the model in 3.2
 
 **[Design Your AI Workflow](design.md)** — the full Design guide with execution pattern decision flow and output format
 
-**Produces:** `[name]-building-block-spec.md` — your AI Building Block Spec with architecture decisions, execution pattern with interaction mode, step classifications, skill candidates, agent blueprints (when applicable), and implementation order.
+**Produces:** `[name]-building-block-spec.md` — your AI Building Block Spec with architecture approach, architecture decisions, execution pattern with interaction mode, step classifications, skill candidates, agent blueprints (when applicable), code-first selections (when applicable), and implementation order.
 
 ## 3.2: Construct
 
@@ -55,7 +57,7 @@ The AI Building Block Spec tells you exactly what to build — and the execution
     1. **Create context** — Build the context artifacts listed in your Building Block Spec's Context Inventory
     2. **Set up project workspace** (optional) — If the Building Block Spec's Where to Run recommends a project
     3. **Generate platform artifacts** — The model generates the prompt and any configuration needed for your platform
-    4. **Launch Guide** → 3.3
+    4. **Run Guide** → 3.3
 
 === "Skill-Powered Prompt"
 
@@ -63,7 +65,7 @@ The AI Building Block Spec tells you exactly what to build — and the execution
     2. **Set up project workspace** (optional) — If the Building Block Spec's Where to Run recommends a project
     3. **Build skills** — Build skills for the steps tagged as skill candidates in your Building Block Spec. The model generates skills in the format appropriate to your platform.
     4. **Generate platform artifacts** — The model generates the prompt and skill configurations for your platform
-    5. **Launch Guide** → 3.3
+    5. **Run Guide** → 3.3
 
 === "Single Agent"
 
@@ -71,7 +73,7 @@ The AI Building Block Spec tells you exactly what to build — and the execution
     2. **Build skills** — Build skills for tagged candidates
     3. **Connect tools** — Wire external tools from the Tools and Connectors section of your Building Block Spec
     4. **Generate platform artifacts** — The model generates agent configs, skills, and connectors for your platform
-    5. **Launch Guide** → 3.3
+    5. **Run Guide** → 3.3
 
 === "Multi-Agent"
 
@@ -79,20 +81,20 @@ The AI Building Block Spec tells you exactly what to build — and the execution
     2. **Build skills** — Build skills for tagged candidates
     3. **Connect tools** — Wire external tools from the Tools and Connectors section of your Building Block Spec
     4. **Generate platform artifacts** — The model generates agent configs, orchestrator, skills, and connectors for your platform
-    5. **Launch Guide** → 3.3
+    5. **Run Guide** → 3.3
 
 The model handles each step based on your execution pattern. See [Construct](construct.md) for details on what you'll need to do yourself (gathering context, configuring MCP connections, building agents on your platform).
 
 ## 3.3: Run
 
-The final Construct deliverable is a **Launch Guide** (`[name]-launch-guide.md`) — a plain-language walkthrough tailored to your platform and technical comfort level. It tells you exactly what to do with the artifacts that were built:
+The final Construct deliverable is a **Run Guide** (`[name]-run-guide.md`) — a plain-language walkthrough tailored to your platform, architecture approach, and technical comfort level. It tells you exactly what to do with the artifacts that were built:
 
 1. **What was built** — Every artifact listed with what it does and where it lives
 2. **Setup steps** — Numbered instructions for getting each artifact into the right place on your platform (menu paths, button names, what you should see when it's working)
 3. **First run** — A guided test with sample input, expected behavior, and common first-run issues
 4. **What to do next** — How to run it again, share with teammates, and when to revisit
 
-The Launch Guide is saved to `[name]-launch-guide.md` so you can reference it later or share it with your team.
+The Run Guide is saved to `[name]-run-guide.md` so you can reference it later or share it with your team.
 
 **The first run is a test, not a final product.** Expect to run, evaluate, go back to 3.2 Construct to adjust, and run again. This cycle is normal — most workflows need 2-4 iterations before they produce reliably good output.
 
@@ -122,11 +124,11 @@ The workflow is ready when you can run it on a new scenario and trust the output
 | File | From | What it is |
 |------|------|-----------|
 | `[name]-definition.md` | Deconstruct | Your Workflow Definition — the raw decomposition |
-| `[name]-building-block-spec.md` | Build: 3.1 Design | Your AI Building Block Spec — architecture decisions, execution pattern, classifications, skill candidates, agent blueprints |
+| `[name]-building-block-spec.md` | Build: 3.1 Design | Your AI Building Block Spec — architecture approach, architecture decisions, execution pattern, classifications, skill candidates, agent blueprints, code-first selections |
 | Platform artifacts | Build: 3.2 Construct | Prompts, skills, agents, and configs generated in whatever format your platform needs |
-| `[name]-launch-guide.md` | Build: 3.3 Run | Step-by-step setup instructions, first-run test, and next steps — tailored to your platform |
+| `[name]-run-guide.md` | Build: 3.3 Run | Step-by-step setup instructions, first-run test, and next steps — tailored to your platform |
 
-The Building Block Spec is the design document — it captures *what* to build and *why*. The platform artifacts are the implementation — generated by the model using your architecture decisions and current platform knowledge. The Launch Guide bridges the gap between "artifacts exist" and "workflow is running."
+The Building Block Spec is the design document — it captures *what* to build and *why*. The platform artifacts are the implementation — generated by the model using your architecture decisions and current platform knowledge. The Run Guide bridges the gap between "artifacts exist" and "workflow is running."
 
 Plus any context artifacts and tool connections you set up along the way.
 
@@ -151,7 +153,7 @@ These aren't separate steps — they're part of the rhythm of building. Each tim
 |-------|-------|-------------|
 | 3.1 | [Design Your AI Workflow](design.md) | Always — produces your AI Building Block Spec |
 | 3.2 | [Construct](construct.md) | Always — the model builds your building blocks, with your help on context, MCP, and platform agents |
-| 3.3 | [Run](run.md) | Always — Launch Guide + iterating |
+| 3.3 | [Run](run.md) | Always — Run Guide + iterating |
 
 For deep dives on individual building blocks, see the [Agentic Building Blocks](../../agentic-building-blocks/index.md) reference pages.
 

@@ -71,7 +71,7 @@ Step 2 produces a Workflow Definition — the analysis. Step 3 is where the `bui
 
 **3.2: Construct** — The skill tells the model what to build (the specs from Design); the model researches your platform's current tools and conventions via web search and generates the actual artifacts — context, skills, prompts, agents, MCP connections — in whatever format your platform requires. Only the components your execution pattern needs are built.
 
-**3.3: Run** — The skill produces a **Launch Guide** tailored to your platform and technical comfort level: what was built and where it lives, step-by-step setup instructions, a guided first-run test with sample input, and next steps for ongoing use.
+**3.3: Run** — The skill produces a **Run Guide** tailored to your platform and technical comfort level: what was built and where it lives, step-by-step setup instructions, a guided first-run test with sample input, and next steps for ongoing use.
 
 **Facilitated by the `building-workflows` skill.** See [Build Workflows](build/index.md) for the full guide, including pattern-specific construct paths and three worked examples across the autonomy spectrum.
 

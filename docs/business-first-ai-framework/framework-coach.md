@@ -26,8 +26,8 @@ Each step produces a specific deliverable that feeds into the next:
 | **1. Analyze** | Audit workflows, identify AI opportunities | Opportunity Report + Workflow Candidates | `ai-opportunity-report.md` |
 | **2. Deconstruct** | Deep-dive a specific workflow using the 5-question framework | Workflow Definition | `[name]-definition.md` |
 | **3.1 Design** | Choose execution pattern, classify steps, map building blocks | AI Building Block Spec | `[name]-building-block-spec.md` |
-| **3.2 Construct** | Build the components your pattern requires | Platform artifacts + Launch Guide | Context, skills, agents, configs |
-| **3.3 Run** | Get the workflow running, test on a real scenario, iterate | Refined workflow | `[name]-launch-guide.md` |
+| **3.2 Construct** | Build the components your pattern requires | Platform artifacts + Run Guide | Context, skills, agents, API/SDK code, configs |
+| **3.3 Run** | Get the workflow running, test on a real scenario, iterate | Refined workflow | `[name]-run-guide.md` |
 
 ---
 
@@ -98,12 +98,13 @@ Build has three parts: **3.1 Design**, **3.2 Construct**, and **3.3 Run**.
 
 **Purpose:** Decide *how* the workflow should be built before building it.
 
-**Process:** Take the Workflow Definition and make four design decisions:
+**Process:** Take the Workflow Definition and make five design decisions:
 
-1. **Architecture decisions** — Confirm the platform, then extract tool integrations, trigger/schedule, and constraints from the Workflow Definition. One question, then a confirmation block.
-2. **Execution pattern** — How complex does the AI implementation need to be?
-3. **Autonomy classification** — How much AI assistance does each step need?
-4. **Building block mapping** — What specific AI components does each step require?
+1. **Architecture approach** — No-code (build in a platform UI) or Code-first (build with APIs and SDKs). Recommended based on integration needs, deployment requirements, and technical comfort.
+2. **Architecture decisions** — Confirm the platform, then extract tool integrations, trigger/schedule, and constraints from the Workflow Definition. One question, then a confirmation block.
+3. **Execution pattern** — How complex does the AI implementation need to be?
+4. **Autonomy classification** — How much AI assistance does each step need?
+5. **Building block mapping** — What specific AI components does each step require?
 
 **Execution Pattern Spectrum:**
 
@@ -131,7 +132,7 @@ Build has three parts: **3.1 Design**, **3.2 Construct**, and **3.3 Run**.
 | **Semi-Autonomous** | AI does most of the work; human reviews at key checkpoints |
 | **Autonomous** | AI executes end-to-end, including decisions and tool use |
 
-**Seven AI Building Blocks:**
+**Nine AI Building Blocks:**
 
 | Block | What It Is |
 |-------|-----------|
@@ -142,6 +143,8 @@ Build has three parts: **3.1 Design**, **3.2 Construct**, and **3.3 Run**.
 | **Agent** | An autonomous AI that plans, uses tools, and executes multi-step work |
 | **MCP** | A connector giving AI access to external tools, APIs, databases |
 | **Project** | A persistent workspace grouping prompts, context, skills, and agents |
+| **API** | Programmatic interfaces for accessing AI models and cloud services |
+| **SDK** | Frameworks and toolkits for building AI workflows in code |
 
 **Output:** An AI Building Block Spec with execution pattern, autonomy classifications, building block mapping, skill candidates (with generation-ready detail), agent configurations (when applicable), context inventory, and implementation order.
 
@@ -260,6 +263,6 @@ When the user needs more depth on a specific topic, fetch the raw Markdown from 
 
 | Topic | Description | Raw Markdown URL |
 |-------|-------------|-----------------|
-| Agentic Building Blocks | Definitions and cross-platform details for all seven blocks | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/agentic-building-blocks/index.md` |
+| Agentic Building Blocks | Definitions and cross-platform details for all nine blocks | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/agentic-building-blocks/index.md` |
 | AI Use Cases | Six use case primitives with examples | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/use-cases/index.md` |
 | Agents by platform | Platform-specific agent building guides | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/agentic-building-blocks/agents/index.md` |

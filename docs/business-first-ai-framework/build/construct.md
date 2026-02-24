@@ -17,7 +17,7 @@ Now the model shifts from planning to execution. **Exit plan mode** — the mode
 |---|---|
 | **What happens** | The model reads your approved AI Building Block Spec and generates your building blocks — prompts, context files, skills, agents, MCP connections, and project configurations |
 | **Your role** | Review what the model produces, provide business-specific materials when prompted, and approve each building block |
-| **What you get** | Working building blocks ready to run, plus a **Launch Guide** with setup instructions |
+| **What you get** | Working building blocks ready to run, plus a **Run Guide** with setup instructions |
 
 !!! warning "Exit plan mode before starting Construct"
     If you used plan mode during Design, switch back to normal mode now. Construct is execution — the model needs to create files, run web searches, and generate building blocks, which requires normal mode.
@@ -48,18 +48,18 @@ By the end of this step, you'll have two things:
 
 **Your building blocks** — the prompts, skills, agents, context files, and configurations your workflow needs, generated in whatever format your platform requires. The model only builds the building blocks your execution pattern calls for — a Prompt pattern doesn't get agent files, and a Single Agent pattern doesn't get multi-agent orchestration.
 
-**Launch Guide** (`[name]-launch-guide.md`) — a plain-language walkthrough tailored to your platform and technical comfort level:
+**Run Guide** (`[name]-run-guide.md`) — a plain-language walkthrough tailored to your platform and technical comfort level:
 
 1. **What was built** — every building block listed with what it does and where it lives
 2. **Setup steps** — numbered instructions for getting each artifact into the right place on your platform
 3. **First run** — a guided test with sample input, expected behavior, and common first-run issues
 4. **What to do next** — how to run it again, share with teammates, and when to revisit
 
-The Launch Guide is your bridge from Construct to [Run (3.3)](run.md) — follow it to get your workflow running.
+The Run Guide is your bridge from Construct to [Run (3.3)](run.md) — follow it to get your workflow running.
 
 ## What Gets Built
 
-The model constructs from the seven AI building blocks — but only the ones your workflow needs:
+The model constructs from the nine AI building blocks — but only the ones your workflow needs:
 
 | Building Block | What the model generates | When it's needed |
 |---|---|---|
@@ -69,6 +69,8 @@ The model constructs from the seven AI building blocks — but only the ones you
 | **[Agent](../../agentic-building-blocks/agents/index.md)** | Agent definitions with instructions, tools, and goals | Single Agent and Multi-Agent patterns |
 | **[MCP](../../agentic-building-blocks/mcp/index.md)** | Tool connections to external services, APIs, or databases | When steps need to read from or write to external systems |
 | **[Project](../../agentic-building-blocks/projects/index.md)** | Workspace configuration grouping the workflow's artifacts | When the workflow runs frequently with the same context |
+| **[API](../../agentic-building-blocks/api/index.md)** | API call scripts, authentication setup, request/response handling | When the architecture approach is code-first and steps need programmatic model access |
+| **[SDK](../../agentic-building-blocks/sdk/index.md)** | Agent project scaffolding, tool definitions, orchestration code | When the architecture approach is code-first and steps need agent frameworks |
 | **Model** | Model selection recommendations based on step requirements | When steps need specific capabilities (reasoning, speed, multimodal) |
 
 ## How the Model Builds for Your Platform
@@ -89,7 +91,7 @@ Your execution pattern (chosen in Design) determines which building blocks get b
     1. **Create context** — Build the context artifacts from your spec's Context Inventory
     2. **Set up project workspace** (optional) — If the spec recommends a project
     3. **Generate the prompt** — The model generates the workflow prompt for your platform
-    4. **Generate the Launch Guide**
+    4. **Generate the Run Guide**
 
 === "Skill-Powered Prompt"
 
@@ -97,7 +99,7 @@ Your execution pattern (chosen in Design) determines which building blocks get b
     2. **Set up project workspace** (optional) — If the spec recommends a project
     3. **Build skills** — The model generates skills for the steps tagged as skill candidates
     4. **Generate the prompt** — The model generates the workflow prompt, referencing the skills
-    5. **Generate the Launch Guide**
+    5. **Generate the Run Guide**
 
 === "Single Agent"
 
@@ -105,7 +107,7 @@ Your execution pattern (chosen in Design) determines which building blocks get b
     2. **Build skills** — The model generates skills for tagged candidates
     3. **Connect tools** — Wire external tools from the spec's Tools and Connectors section
     4. **Build the agent** — The model generates the agent definition for your platform
-    5. **Generate the Launch Guide**
+    5. **Generate the Run Guide**
 
 === "Multi-Agent"
 
@@ -114,7 +116,54 @@ Your execution pattern (chosen in Design) determines which building blocks get b
     3. **Connect tools** — Wire external tools from the spec's Tools and Connectors section
     4. **Build each specialist agent** — The model generates agent definitions for each role
     5. **Build the orchestrator** — The model generates the coordination layer
-    6. **Generate the Launch Guide**
+    6. **Generate the Run Guide**
+
+### Code-First Build Paths
+
+When your architecture approach is **code-first**, the same four execution patterns apply — but the implementation uses APIs and SDKs instead of platform UIs. The model generates code artifacts instead of platform configurations.
+
+=== "Prompt (code-first)"
+
+    1. **Create context** — Build context artifacts as files (Markdown, JSON, or data exports)
+    2. **Set up API credentials** — Configure authentication for your chosen API (API key, environment variables)
+    3. **Generate the API call script** — The model generates a script that sends the prompt with context to the API and handles the response
+    4. **Test locally** — Run the script and verify the output
+    5. **Generate the Run Guide**
+
+=== "Skill-Powered Prompt (code-first)"
+
+    1. **Create context** — Build context artifacts as files
+    2. **Set up API credentials** — Configure authentication
+    3. **Build reusable functions** — The model generates functions for each skill candidate, encapsulating the logic as callable code
+    4. **Generate the main script** — The model generates a script that composes the functions with the prompt and context
+    5. **Test locally** — Run the script and verify the output
+    6. **Generate the Run Guide**
+
+=== "Single Agent (code-first)"
+
+    1. **Create context** — Build context artifacts as files
+    2. **Initialize SDK project** — Set up the project structure for your chosen SDK (e.g., `pip install anthropic-agent-sdk`, `npm init`)
+    3. **Define tools** — The model generates tool definitions that the agent can call
+    4. **Build the agent** — The model generates the agent with instructions, tools, and orchestration logic
+    5. **Test locally** — Run the agent and verify tool use and output
+    6. **Generate the Run Guide**
+
+=== "Multi-Agent (code-first)"
+
+    1. **Create context** — Build context artifacts as files
+    2. **Initialize SDK project** — Set up the project structure for your chosen SDK
+    3. **Build specialist agents** — The model generates each specialist agent with its tools and instructions
+    4. **Define handoffs** — The model generates the handoff logic between agents (what each passes to the next)
+    5. **Build the orchestrator** — The model generates the coordination layer that routes work between agents
+    6. **Test locally** — Run the full pipeline and verify agent coordination
+    7. **Generate the Run Guide**
+
+The Run Guide for code-first workflows includes additional setup details:
+
+- **Dependency installation** — `pip install`, `npm install`, or equivalent for your SDK
+- **Environment variable setup** — API keys, configuration values, and how to set them
+- **How to run locally** — `python main.py`, `npx tsx agent.ts`, or equivalent
+- **Deployment options** — Docker, cloud services, CI/CD pipelines (when applicable)
 
 ## Your Role During Construct
 
