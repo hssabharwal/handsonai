@@ -91,15 +91,14 @@ These steps install the developer tools you'll use throughout the course. Each s
 
 ### Step 5: AI Coding CLIs
 
-**What:** Install Claude Code (required) and optionally other AI coding CLIs.
+**What:** Install an AI coding CLI for whichever platform you have a subscription to. I highly recommend Claude Code, but Codex CLI and Gemini CLI are also covered in the guide.
 
 [:octicons-arrow-right-24: Go to CLI Setup guide](../../builder-setup/cli.md)
 
-- [ ] Running `claude --version` shows a version number
-- [ ] Running `claude` starts a conversation in my terminal
+- [ ] I have at least one AI coding CLI installed and can start a conversation in my terminal
 
 ??? tip "Stuck? Ask AI for help"
-    > I'm trying to install Claude Code on [Mac / Windows] and getting this error: [paste error]. What should I try next?
+    > I'm trying to install [Claude Code / Codex CLI / Gemini CLI] on [Mac / Windows] and getting this error: [paste error]. What should I try next?
 
 ---
 
