@@ -1,9 +1,9 @@
 ---
-title: "Step 2: Deconstruct Workflows into AI Building Blocks"
+title: "Step 2: Deconstruct Workflows into Structured Specifications"
 description: Interactively break down any business workflow into discrete steps, surfacing decision points, data flows, context needs, and failure modes.
 ---
 
-# Step 2: Deconstruct Workflows into AI Building Blocks
+# Step 2: Deconstruct Workflows into Structured Specifications
 
 > **Platforms:** `claude` `openai` `gemini` `m365-copilot`
 
