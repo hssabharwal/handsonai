@@ -12,27 +12,56 @@ description: Gather architecture decisions, choose an execution pattern and inte
 
 ## What This Is
 
-The Design phase is where you decide *how* your workflow should be built — before you build it. You take the Workflow Definition from the [Deconstruct step](../deconstruct/index.md) and make four design decisions:
+The Design phase is where you decide *how* your workflow should be built — before you build it. You take the Workflow Definition from the [Deconstruct step](../deconstruct/index.md) and make five design decisions:
 
-1. **Architecture decisions** — What platform are you using, and what integrations and constraints does the Workflow Definition reveal?
-2. **Execution pattern** — How complex does the AI implementation need to be?
-3. **Autonomy classification** — How much AI assistance does each step need?
-4. **Building block mapping** — What specific AI components does each step require?
+1. **Architecture approach** — Will you build no-code (in a platform UI) or code-first (with APIs and SDKs)?
+2. **Architecture decisions** — What platform are you using, and what integrations and constraints does the Workflow Definition reveal?
+3. **Execution pattern** — How complex does the AI implementation need to be?
+4. **Autonomy classification** — How much AI assistance does each step need?
+5. **Building block mapping** — What specific AI components does each step require?
 
 !!! abstract "Framework vs. platform — by design"
     This framework guides you through *which decisions to make* and *what building blocks to design* — it is platform-agnostic. The AI model provides the platform-specific expertise: it researches your chosen platform's current tools, SDKs, and best practices at runtime via web search. This separation ensures the framework stays current as platforms evolve, without requiring documentation updates every time a platform changes its offerings.
 
 | | |
 |---|---|
-| **What you'll do** | Upload your Workflow Definition, confirm your platform, review the AI's extracted architecture analysis and execution pattern recommendation, review step classifications, and adjust anything that doesn't look right |
-| **What you'll get** | An **AI Building Block Spec** — architecture decisions, execution pattern with interaction mode, autonomy classifications, building block mapping, skill candidates, agent blueprints (when applicable), and a prioritized build sequence |
+| **What you'll do** | Upload your Workflow Definition, choose your architecture approach, confirm your platform, review the AI's extracted architecture analysis and execution pattern recommendation, review step classifications, and adjust anything that doesn't look right |
+| **What you'll get** | An **AI Building Block Spec** — architecture approach with rationale, architecture decisions, execution pattern with interaction mode, autonomy classifications, building block mapping, skill candidates, agent blueprints (when applicable), and a prioritized build sequence |
 | **Time** | ~15–25 minutes (architecture questions + reviewing the AI's analysis) |
 
 ## Why This Matters
 
 Not every workflow needs the same level of AI infrastructure. A weekly status report might need a single well-crafted prompt. A multi-department content pipeline might need specialized agents coordinating across stages. Choosing the wrong execution pattern means either over-engineering (building agents when a prompt would do) or under-building (forcing a prompt to do agent-level work).
 
-Design also maps each step to specific **AI building blocks** — Prompt, Context, Skill, Agent, MCP, or Project — so you know exactly what to build. The recommended implementation order (quick wins first, complex agent steps last) gives you a practical sequence for rolling out AI incrementally.
+Design also maps each step to specific **AI building blocks** — Prompt, Context, Skill, Agent, MCP, Project, API, or SDK — so you know exactly what to build. The recommended implementation order (quick wins first, complex agent steps last) gives you a practical sequence for rolling out AI incrementally.
+
+## Architecture Approach
+
+Before any other decisions, choose how you'll build your workflow. This is the first fork in the road — it shapes which platforms, tools, and building blocks are available to you.
+
+| Approach | What it means | Build in |
+|----------|---------------|----------|
+| **No-code** | Build entirely in a platform's UI — projects, custom GPTs, gems, notebooks | Claude Projects, ChatGPT GPTs, Gemini Gems, M365 Copilot |
+| **Code-first** | Build with APIs and SDKs — programmatic model access, code-based agents, version-controlled workflows | Claude Agent SDK, OpenAI Agents SDK, Google ADK, LangChain, etc. |
+
+### Which approach fits?
+
+The model analyzes your workflow and recommends an approach based on these signals:
+
+| Signal | Points toward |
+|--------|---------------|
+| Need to integrate into an existing application | Code-first |
+| Need CI/CD deployment or version control | Code-first |
+| Need to process high volume or run at scale | Code-first |
+| Non-developer or exploring AI for the first time | No-code |
+| Prototyping before committing to production | No-code first, then code-first |
+| Workflow runs inside a single AI platform | No-code |
+| Workflow needs to orchestrate across multiple services | Code-first |
+
+Most workflows start no-code. Code-first becomes the right choice when you need programmatic control, integration into existing systems, or production-grade deployment. The same four execution patterns (Prompt, Skill-Powered Prompt, Single Agent, Multi-Agent) apply to both approaches — the architecture approach determines *how* you implement them, not *what* you implement.
+
+!!! tip "You can switch later"
+    Many teams prototype no-code, validate the workflow works, then rebuild code-first for production. The AI Building Block Spec captures the design either way — only the Construct phase changes.
 
 ## Architecture Decisions
 
@@ -218,8 +247,10 @@ After the model produces the plan, **review and approve the AI Building Block Sp
 
 The **AI Building Block Spec** contains:
 
+- **Architecture approach** — No-code or Code-first, with rationale and recommendation signals
 - **Execution pattern** — Prompt, Skill-Powered Prompt, Single Agent, or Multi-Agent, with interaction mode and reasoning
 - **Architecture decisions** — platform, tool integrations (with connector mapping), trigger/schedule implications, and any flags (browser access, infrastructure needs) — each with rationale and a constraints summary showing how they shaped the recommendations. Deployment surface, code comfort, and shareability are resolved during Construct.
+- **Code-first selections** (when applicable) — specific API and SDK choices per step with justification (e.g., "Claude Agent SDK for the research agent because it needs tool use and multi-step orchestration")
 - **Scenario summary** — workflow metadata from the Workflow Definition
 - **Decomposition table** — every step with autonomy classification, decision points, failure modes, data flows, context needs, AI building block mapping, and skill candidate flags
 - **Autonomy spectrum summary** — steps grouped by classification level

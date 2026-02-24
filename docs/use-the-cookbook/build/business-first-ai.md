@@ -79,7 +79,7 @@ For platform-specific setup (Claude.ai ZIP upload, Cowork install, API integrati
 
 1. **Analyze** (`analyzing-workflows`) — Audit your workflows, interview you about your work, and produce an opportunity report with structured candidates. If you already know which workflow to deconstruct, this step is brief.
 2. **Deconstruct** (`deconstructing-workflows`) — Interactive deep-dive that decomposes the workflow into refined steps using the 5-question framework. Produces the Workflow Definition.
-3. **Build** (`building-workflows`) — Design phase: gather architecture decisions, choose an execution pattern and interaction mode, classify steps, map building blocks, identify skill candidates, configure agents. Construct phase: generate platform-appropriate artifacts (prompts, skills, agents, configs) and a Launch Guide tailored to your platform and technical comfort level.
+3. **Build** (`building-workflows`) — Design phase: gather architecture decisions, choose an execution pattern and interaction mode, classify steps, map building blocks, identify skill candidates, configure agents. Construct phase: generate platform-appropriate artifacts (prompts, skills, agents, configs) and a Run Guide tailored to your platform and technical comfort level.
 
 Files are saved to `outputs/` using kebab-case workflow names (e.g., `outputs/lead-qualification-definition.md`).
 
@@ -106,7 +106,7 @@ Files are saved to `outputs/` using kebab-case workflow names (e.g., `outputs/le
 2. **Workflow Definition** — `[name]-definition.md` — structured decomposition of every step
 3. **AI Building Block Spec** — `[name]-building-block-spec.md` — execution pattern, autonomy classifications, building block mapping, skill candidates, agent configs
 4. **Platform Artifacts** — prompts, skills, agents, and configs generated for your platform
-5. **Launch Guide** — `[name]-launch-guide.md` — step-by-step setup and first-run instructions
+5. **Run Guide** — `[name]-run-guide.md` — step-by-step setup and first-run instructions
 
 ---
 
@@ -203,7 +203,7 @@ Design your AI implementation and construct the workflow.
 
 **Command:** `/business-first-ai:build-workflow`
 
-**What it does:** Takes a Workflow Definition and runs the full Build process: Design (architecture decisions, execution pattern with interaction mode, autonomy classification, building block mapping, skill candidates, agent configuration) and Construct (platform-appropriate artifacts and a Launch Guide). This is the Build step.
+**What it does:** Takes a Workflow Definition and runs the full Build process: Design (architecture decisions, execution pattern with interaction mode, autonomy classification, building block mapping, skill candidates, agent configuration) and Construct (platform-appropriate artifacts and a Run Guide). This is the Build step.
 
 **When to use it:** Use this when you have a Workflow Definition (from the Deconstruct step) and want to design and build your AI workflow. The Design phase produces the AI Building Block Spec; the Construct phase generates everything you need to run the workflow.
 
@@ -224,7 +224,7 @@ Design your AI implementation and construct the workflow.
 
 9. **Pattern-specific build path** — Only the steps relevant to your chosen execution pattern
 10. **Generate platform artifacts** — Prompts, skills, agents, and configs in whatever format your platform needs (researched via web search at runtime)
-11. **Launch Guide** — Plain-language setup instructions, first-run test, and next steps tailored to your platform
+11. **Run Guide** — Plain-language setup instructions, first-run test, and next steps tailored to your platform
 
 **Example prompts:**
 
@@ -240,7 +240,7 @@ Design your AI implementation and construct the workflow.
 
 - **AI Building Block Spec** (`outputs/[name]-building-block-spec.md`) — architecture decisions, execution pattern with interaction mode, step classifications, skill candidates, agent configs, implementation order
 - **Platform Artifacts** — prompts, skills, agents, and configs in whatever format your platform needs
-- **Launch Guide** (`outputs/[name]-launch-guide.md`) — step-by-step setup, first-run test, and next steps
+- **Run Guide** (`outputs/[name]-run-guide.md`) — step-by-step setup, first-run test, and next steps
 
 **Platform compatibility:** Claude Code &#10003; | Claude.ai &#10003;
 
@@ -252,7 +252,7 @@ These skills cover the full Business-First AI Framework. Here's the recommended 
 
 1. **Analyze** — Run `analyzing-workflows` to audit your workflows and identify where AI creates the most value
 2. **Deconstruct** — Pick your highest-impact candidate and run it through the `framework-orchestrator` agent (or use the skills individually: `deconstructing-workflows` → `building-workflows`)
-3. **Build** — Follow the Launch Guide to get your workflow running, then iterate. See the [AI Workflow Examples](ai-workflow-examples.md) plugin for working examples of real AI workflows.
+3. **Build** — Follow the Run Guide to get your workflow running, then iterate. See the [AI Workflow Examples](ai-workflow-examples.md) plugin for working examples of real AI workflows.
 
 ## FAQ
 
