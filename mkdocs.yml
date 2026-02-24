@@ -277,6 +277,7 @@ nav:
         - Do plugin skills conflict with custom skills?: agentic-building-blocks/skills/questions/do-plugin-skills-conflict-with-custom-skills.md
     - Agents:
       - Overview: agentic-building-blocks/agents/index.md
+      - Programming Frameworks: agentic-building-blocks/agents/frameworks.md
       - Capability Patterns:
         - Overview: agentic-building-blocks/agents/capability-patterns/index.md
         - Reflection: agentic-building-blocks/agents/capability-patterns/reflection.md

@@ -32,6 +32,7 @@ For guidance on deciding *whether* your workflow needs an agent, see [Build Work
 
 ## Topics
 
+- [Programming Frameworks](./frameworks.md) — SDKs and frameworks for building agents programmatically across platforms
 - [Agent Capability Patterns](./capability-patterns/index.md) — Seven architectural patterns that make agents effective: Reflection, Tool Use, Planning, Multi-Agent Collaboration, Memory, Guardrails, and Human-in-the-Loop
 
 ## Key Concepts
