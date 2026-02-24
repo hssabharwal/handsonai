@@ -62,7 +62,7 @@ Read the Framework Coach Guide to understand the methodology, decision trees, an
 https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/framework-coach.md
 
 This guide contains:
-- The three-step framework (Discover → Deconstruct → Build)
+- The three-step framework (Analyze → Deconstruct → Build)
 - Decision trees for choosing execution patterns
 - Step summaries and coaching guidance
 - A URL index pointing to detailed documentation pages (raw Markdown)

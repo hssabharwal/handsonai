@@ -16,14 +16,14 @@ For the coaching prompt and setup instructions, see [Use AI as Your Coach](coach
 The Business-First AI Framework is a three-step methodology for finding where AI fits in your business, breaking down workflows into structured components, and building working AI workflows.
 
 ```
-Step 1: Discover → Step 2: Deconstruct → Step 3: Build (3.1 Design → 3.2 Construct → 3.3 Run)
+Step 1: Analyze → Step 2: Deconstruct → Step 3: Build (3.1 Design → 3.2 Construct → 3.3 Run)
 ```
 
 Each step produces a specific deliverable that feeds into the next:
 
 | Step | What happens | Deliverable | File |
 |------|-------------|-------------|------|
-| **1. Discover** | Audit workflows, identify AI opportunities | Opportunity Report + Workflow Candidates | `ai-opportunity-report.md` |
+| **1. Analyze** | Audit workflows, identify AI opportunities | Opportunity Report + Workflow Candidates | `ai-opportunity-report.md` |
 | **2. Deconstruct** | Deep-dive a specific workflow using the 5-question framework | Workflow Definition | `[name]-definition.md` |
 | **3.1 Design** | Choose execution pattern, classify steps, map building blocks | AI Building Block Spec | `[name]-building-block-spec.md` |
 | **3.2 Construct** | Build the components your pattern requires | Platform artifacts + Launch Guide | Context, skills, agents, configs |
@@ -31,7 +31,7 @@ Each step produces a specific deliverable that feeds into the next:
 
 ---
 
-## Step 1: Discover Workflows
+## Step 1: Analyze Workflows
 
 **Purpose:** Find which of your workflows are candidates for AI automation.
 
@@ -216,7 +216,7 @@ Each pattern has a specific build path — users follow only the steps that appl
 ## Common Questions
 
 **"Where do I start?"**
-If you know which workflow to work on → Step 2 (Deconstruct). If you need to figure out where AI fits → Step 1 (Discover).
+If you know which workflow to work on → Step 2 (Deconstruct). If you need to figure out where AI fits → Step 1 (Analyze).
 
 **"Do I need agents?"**
 Most workflows work as a prompt or skill-powered prompt. You need agents only when the workflow requires tool use (web, files, APIs) or autonomous decision-making. Start simple.
@@ -241,7 +241,7 @@ When the user needs more depth on a specific topic, fetch the raw Markdown from 
 | Topic | Description | Raw Markdown URL |
 |-------|-------------|-----------------|
 | Framework overview | Full methodology, key concepts, vocabulary | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/index.md` |
-| Step 1: Discover | Opportunity finder prompt template and instructions | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/discover.md` |
+| Step 1: Analyze | Opportunity finder prompt template and instructions | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/analyze.md` |
 | Step 2: Deconstruct | How Deconstruct works, examples, tips, and what the skill produces | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/deconstruct/index.md` |
 | Step 3: Build overview | The three parts (Design, Construct, Run) and pattern-specific paths | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/build/index.md` |
 | 3.1: Design | Execution pattern spectrum, autonomy classification, the Design prompt template | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/business-first-ai-framework/build/design.md` |

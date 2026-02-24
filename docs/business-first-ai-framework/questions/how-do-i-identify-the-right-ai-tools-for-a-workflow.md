@@ -37,7 +37,7 @@ Not every step needs AI. The deconstruction also classifies each step on an auto
 
 Use the [Deconstruct Workflows](../deconstruct/index.md) to run through this process interactively. Paste it into any AI tool and it will:
 
-1. **Discover your scenario** — understand the workflow objective and rough steps
+1. **Analyze your scenario** — understand the workflow objective and rough steps
 2. **Deep dive into each step** — apply the 5-question framework
 3. **Map to building blocks** — classify each step and recommend the right AI tools
 4. **Generate deliverables** — produce a workflow analysis document and an executable prompt you can save and reuse

@@ -19,14 +19,14 @@ A proactive, structured audit of your workflows will reveal opportunities you'd 
 
 The key is thinking in three categories. **Collaborative AI** covers tasks where you and AI work together in real time — drafting, brainstorming, reviewing, analyzing. **Deterministic workflows** are repeatable processes with clear inputs and outputs that AI can execute reliably with little supervision — formatting reports, processing forms, generating routine communications. **Multi-agent systems** are complex workflows where multiple AI agents coordinate across steps — research-to-report pipelines, intake-to-triage systems, monitoring-to-response workflows.
 
-To run the audit, use the [Discover AI Workflow Opportunities](../discover.md) — a meta prompt that guides an AI through a three-step process: scanning what it already knows about your work, interviewing you to fill gaps, then producing a categorized report with specific opportunities and actionable first steps.
+To run the audit, use the [Analyze AI Workflow Opportunities](../analyze.md) — a meta prompt that guides an AI through a three-step process: scanning what it already knows about your work, interviewing you to fill gaps, then producing a categorized report with specific opportunities and actionable first steps.
 
 Once you've identified opportunities, use the [Deconstruct Workflows](../deconstruct/index.md) to break individual workflows into AI building blocks and understand exactly where automation fits.
 
 ## How to Get Started
 
 1. **Enable memory** in your AI tool of choice (Claude, ChatGPT, or Gemini) so the AI can draw on what it already knows about your work
-2. **Copy the prompt** from the [Discover AI Workflow Opportunities](../discover.md)
+2. **Copy the prompt** from the [Analyze AI Workflow Opportunities](../analyze.md)
 3. **Paste it into any conversation** — the AI will scan its context, interview you, and produce a structured report
 4. **Pick 1-2 opportunities** to pilot first — don't try to pursue everything at once
 
@@ -38,7 +38,7 @@ Once you've identified opportunities, use the [Deconstruct Workflows](../deconst
 - Don't wait for problems — proactively audit your workflows to find AI opportunities
 - Think in three categories: deterministic workflows, collaborative AI, and autonomous agents
 - Use the [six use case primitives](../../use-cases/index.md) — content creation, research, coding, data analysis, ideation, and automation — to classify what type of work each opportunity involves
-- Use the [Discover AI Workflow Opportunities](../discover.md) meta prompt to run a structured audit
+- Use the [Analyze AI Workflow Opportunities](../analyze.md) meta prompt to run a structured audit
 - The richer context your AI has about your work, the better the recommendations
 - Start small — pick 1-2 opportunities and pilot them before scaling
 

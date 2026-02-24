@@ -183,7 +183,7 @@ After duplicating and customizing the template, confirm everything is working:
 
 - **Add your first process** — Start with one business domain you know well
 - **Document existing workflows** — Capture what you're already doing before adding AI
-- **Find AI opportunities** — Use the [Discover AI Workflow Opportunities](../business-first-ai-framework/discover.md) guide to identify where AI can add value
+- **Find AI opportunities** — Use the [Analyze AI Workflow Opportunities](../business-first-ai-framework/analyze.md) guide to identify where AI can add value
 - **Deconstruct workflows** — Break workflows into AI building blocks with the [Deconstruct Workflows](../business-first-ai-framework/deconstruct/index.md) guide
 - **Install the plugin** — Set up the [AI Registry plugin](../use-the-cookbook/build/index.md#ai-registry) to automate registry updates
 - **Explore other setup guides** — Continue with the [CLI Setup Guide](cli.md) if you haven't already

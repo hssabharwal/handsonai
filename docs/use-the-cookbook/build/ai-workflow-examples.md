@@ -303,7 +303,7 @@ Portable prompts that work in any AI tool — no plugin required.
 
 ## Relationship to Business-First AI
 
-These are **worked examples** built with the [Business-First AI Framework](business-first-ai.md) methodology. The framework skills teach you the Discover → Deconstruct → Build methodology. These examples show what the output of that methodology looks like in practice.
+These are **worked examples** built with the [Business-First AI Framework](business-first-ai.md) methodology. The framework skills teach you the Analyze → Deconstruct → Build methodology. These examples show what the output of that methodology looks like in practice.
 
 **Recommended path:**
 

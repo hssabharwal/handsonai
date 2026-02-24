@@ -1,9 +1,9 @@
 ---
-title: "Step 3: Build Workflows"
+title: "Step 3: Build AI-Powered Workflows"
 description: Design your AI workflow with architecture decisions, execution patterns, and building block mapping — then construct platform-appropriate artifacts and get a Launch Guide for getting it running.
 ---
 
-# Step 3: Build Workflows
+# Step 3: Build AI-Powered Workflows
 
 ## Where You Are
 
@@ -211,6 +211,6 @@ These are the working building blocks included across all three examples. Each o
 ## Related
 
 - [AI Use Cases](../../use-cases/index.md) — browse use cases by type (content creation, research, coding, data analysis, ideation, automation)
-- [Discover AI Workflow Opportunities](../discover.md) — discover which of your workflows are candidates for AI
+- [Analyze AI Workflow Opportunities](../analyze.md) — identify which of your workflows are candidates for AI
 - [Deconstruct Workflows](../deconstruct/index.md) — break down workflows into structured definitions
 - [Agents & Skills](../../use-the-cookbook/build/index.md) — browse all available agents, skills, and prompts

@@ -1,9 +1,9 @@
 ---
-title: "Step 1: Discover Workflows"
-description: Use this prompt template to discover where AI can help automate, augment, or orchestrate your workflows.
+title: "Step 1: Analyze Workflows for AI Opportunity"
+description: Use this prompt template to analyze where AI can help automate, augment, or orchestrate your workflows.
 ---
 
-# Step 1: Discover Workflows
+# Step 1: Analyze Workflows for AI Opportunity
 
 > **Platforms:** `claude` `openai` `gemini` `m365-copilot`
 
@@ -31,12 +31,12 @@ This step guides an AI through a structured analysis of your work and produces a
 
 ## How to Use This
 
-This step is facilitated by the **`discovering-workflows`** Business-First AI Framework Skill. How you get it depends on your platform — see [How to Add Skills to Your Platform](../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for installation instructions for Claude Code, Cursor, Codex CLI, Gemini CLI, and VS Code Copilot.
+This step is facilitated by the **`analyzing-workflows`** Business-First AI Framework Skill. How you get it depends on your platform — see [How to Add Skills to Your Platform](../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for installation instructions for Claude Code, Cursor, Codex CLI, Gemini CLI, and VS Code Copilot.
 
 **Start with this prompt:**
 
 ```
-I'd like to discover AI workflow opportunities. Help me audit
+I'd like to analyze my workflows for AI opportunities. Help me audit
 what I do and identify where AI could help.
 ```
 
@@ -68,7 +68,7 @@ Most people discover 5–15 opportunities across the three categories. Pick thre
 - **Move to Deterministic Workflows** once you've identified a process you repeat often — the time savings compound quickly
 - **Explore Autonomous Agents** when you have experience with the other two categories and need to automate complex, multi-step processes
 
-## What Discover Produces
+## What Analyze Produces
 
 The **AI Opportunity Report** (`ai-opportunity-report.md`) captures:
 

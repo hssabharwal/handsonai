@@ -83,7 +83,8 @@ plugins:
   - redirects:
       redirect_maps:
         # Legacy how-to redirects (unchanged destinations)
-        how-to/prompting/ai-workflow-opportunity-finder.md: business-first-ai-framework/discover.md
+        how-to/prompting/ai-workflow-opportunity-finder.md: business-first-ai-framework/analyze.md
+        business-first-ai-framework/discover.md: business-first-ai-framework/analyze.md
         how-to/prompting/workflow-deconstruction-meta-prompt.md: business-first-ai-framework/deconstruct/index.md
         how-to/prompting/workflow-deconstruction-discovery.md: business-first-ai-framework/deconstruct/index.md
         how-to/prompting/workflow-deconstruction-analysis.md: business-first-ai-framework/build/design.md
@@ -225,9 +226,9 @@ nav:
     - Use AI as Your Coach:
       - Overview: business-first-ai-framework/coach.md
       - Framework Coach Guide: business-first-ai-framework/framework-coach.md
-    - "Step 1: Discover Workflows": business-first-ai-framework/discover.md
+    - "Step 1: Analyze Workflows": business-first-ai-framework/analyze.md
     - "Step 2: Deconstruct Workflows": business-first-ai-framework/deconstruct/index.md
-    - "Step 3: Build Workflows":
+    - "Step 3: Build AI-Powered Workflows":
       - Overview: business-first-ai-framework/build/index.md
       - "3.1: Design": business-first-ai-framework/build/design.md
       - "3.2: Construct": business-first-ai-framework/build/construct.md
