@@ -95,10 +95,12 @@ Model is the foundation — the engine everything else runs on:
 - **Skills** package routines for the model — reusable workflows it executes
 - **Agents** orchestrate the model — directing it through multi-step tasks
 - **MCP** connects the model — giving it access to external tools and data
+- **APIs** expose the model — letting code call it programmatically
+- **SDKs** wrap the model — providing frameworks for agent orchestration and tool use
 
 ## Related
 
-- [Agentic Building Blocks](../index.md) — Model in the context of all seven building blocks
+- [Agentic Building Blocks](../index.md) — Model in the context of all nine building blocks
 - [AI Use Cases](../../use-cases/index.md) — what teams build with these blocks, organized by six primitives
 - [Prompts](../prompts/index.md) — the instructions that steer the model
 - [Context](../context/index.md) — the knowledge that informs the model

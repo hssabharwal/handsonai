@@ -1,6 +1,6 @@
 ---
 title: Agentic AI Building Blocks
-description: The seven components of agentic AI workflows — Model, Prompt, Context, Project, Skill, Agent, and MCP
+description: The nine components of agentic AI workflows — Model, Prompt, Context, Project, Skill, Agent, MCP, API, and SDK
 ---
 
 # Agentic AI Building Blocks
@@ -9,30 +9,30 @@ description: The seven components of agentic AI workflows — Model, Prompt, Con
 
 ## Overview
 
-The seven AI building blocks are a shared vocabulary for describing the components of any AI workflow. Whether you're writing a single prompt or orchestrating a multi-agent pipeline, every AI workflow is assembled from some combination of these seven pieces.
+The nine AI building blocks are a shared vocabulary for describing the components of any AI workflow. Whether you're writing a single prompt, calling a model from code, or orchestrating a multi-agent pipeline, every AI workflow is assembled from some combination of these nine pieces.
 
-The blocks progress from simple to complex:
+**Model** · **Prompt** · **Context** · **Project** · **Skill** · **Agent** · **MCP** · **API** · **SDK**
 
-**Model** → **Prompt** → **Context** → **Project** → **Skill** → **Agent** → **MCP**
-
-These are platform-agnostic concepts. Every major AI platform implements them, though the names and interfaces differ. Understanding the blocks gives you a mental model that transfers across tools — you can evaluate any platform by asking "how does it handle models, prompts, context, projects, skills, agents, and external connections?"
+These are platform-agnostic concepts. Every major AI platform implements them, though the names and interfaces differ. Understanding the blocks gives you a mental model that transfers across tools — you can evaluate any platform by asking "how does it handle models, prompts, context, projects, skills, agents, external connections, APIs, and development frameworks?"
 
 !!! tip "Using building blocks for workflow analysis"
-    The [Business-First AI Framework](../business-first-ai-framework/index.md) uses these seven blocks as the analysis tool in [Design Your AI Workflow](../business-first-ai-framework/build/design.md), where each step of a workflow gets mapped to the building blocks it needs.
+    The [Business-First AI Framework](../business-first-ai-framework/index.md) uses these building blocks as the analysis tool in [Design Your AI Workflow](../business-first-ai-framework/build/design.md), where each step of a workflow gets mapped to the building blocks it needs.
 
 ## Summary
 
-| Block | What It Is | Persistence | Complexity |
-|-------|-----------|-------------|------------|
-| **Model** | The AI engine that processes inputs and generates outputs | Persistent (platform-managed) | Foundation |
-| **Prompt** | A well-crafted instruction that tells the model what to do | Single use | Low |
-| **Context** | Background information, reference docs, or examples the model needs | Per conversation or persistent | Low |
-| **Project** | A persistent workspace grouping prompts, context, skills, and agents | Persistent | Medium |
-| **Skill** | A reusable routine — give it inputs, it follows a defined process, it produces consistent outputs | Persistent and reusable | Medium |
-| **Agent** | An autonomous AI that plans, uses tools, and executes multi-step work | Session-based or persistent | High |
-| **MCP** | A connector that lets AI access external tools, services, or databases | Persistent | High |
+| Block | What It Is | Persistence |
+|-------|-----------|-------------|
+| **Model** | The AI engine that processes inputs and generates outputs | Persistent (platform-managed) |
+| **Prompt** | A well-crafted instruction that tells the model what to do | Single use |
+| **Context** | Background information, reference docs, or examples the model needs | Per conversation or persistent |
+| **Project** | A persistent workspace grouping prompts, context, skills, and agents | Persistent |
+| **Skill** | A reusable routine — give it inputs, it follows a defined process, it produces consistent outputs | Persistent and reusable |
+| **Agent** | An autonomous AI that plans, uses tools, and executes multi-step work | Session-based or persistent |
+| **MCP** | A connector that lets AI access external tools, services, or databases | Persistent |
+| **API** | Programmatic interfaces for accessing AI models and cloud services | Persistent (key-based) |
+| **SDK** | Frameworks and toolkits for building AI workflows in code | Persistent |
 
-## The Seven Building Blocks
+## The Nine Building Blocks
 
 ### Model
 
@@ -57,7 +57,7 @@ The AI engine that processes inputs and generates outputs. Models are trained on
 | Gemini | Multiple model tiers (fast, balanced); select via model picker or API |
 | M365 Copilot | Models managed by Microsoft; limited user selection |
 
-**Relationship to other blocks:** Model is the engine — prompts steer it, context informs it, skills package routines for it, agents orchestrate it, and MCP connects it to external systems.
+**Relationship to other blocks:** Model is the engine — prompts steer it, context informs it, skills package routines for it, agents orchestrate it, MCP connects it to external systems, APIs expose it to code, and SDKs provide frameworks for orchestrating it.
 
 ---
 
@@ -224,9 +224,63 @@ An open standard for connecting AI assistants to external systems where data liv
 
 **Relationship to other blocks:** MCP extends what agents and skills can do by connecting them to external systems. Without MCP, the AI is limited to what's in the conversation.
 
+---
+
+### API
+
+Programmatic interfaces for accessing AI models and cloud services. The code-first way to interact with AI — send a request, get a response.
+
+**Key characteristics:**
+
+- Stateless request/response pattern — each call is independent
+- Authentication via API keys with usage-based billing
+- Platform-agnostic — any language that can make HTTP requests can call an API
+
+**When to use it:** When you need to integrate AI into an application, automate workflows programmatically, or access model capabilities beyond what the chat UI provides.
+
+**Example:** Calling the Claude API from a Python script to classify 1,000 customer support tickets overnight, or calling a search API to enrich an agent's research.
+
+**Cross-platform implementations:**
+
+| Platform | How It Works |
+|----------|-------------|
+| Claude | Anthropic REST API with Messages endpoint; Python and TypeScript SDKs |
+| OpenAI (ChatGPT) | REST API with Chat Completions endpoint; Python and TypeScript SDKs |
+| Gemini | REST API with generateContent endpoint; Python SDK; Vertex AI for enterprise |
+| M365 Copilot | Azure AI Services REST APIs; .NET, Python, Java SDKs |
+
+**Relationship to other blocks:** API is the programmatic bridge — it's how you call models from code, and SDKs abstract over it. MCP servers often wrap APIs to give agents standardized access.
+
+---
+
+### SDK
+
+Frameworks and toolkits that provide abstractions for building AI workflows in code. Where APIs give you raw access, SDKs give you patterns and structure.
+
+**Key characteristics:**
+
+- Provide higher-level abstractions for tool use, memory, and multi-agent coordination
+- Handle orchestration logic — planning, routing, error recovery
+- Opinionated about patterns — agent loops, handoffs, guardrails
+
+**When to use it:** When you're building agents or multi-step workflows in code and want established patterns for tool use, memory management, or multi-agent coordination rather than wiring everything from scratch.
+
+**Example:** Using the Claude Agent SDK to build a research agent with tool use and memory, or LangGraph to orchestrate a multi-agent pipeline with handoffs.
+
+**Cross-platform implementations:**
+
+| Platform | How It Works |
+|----------|-------------|
+| Claude | Agent SDK (Python, TypeScript) for agents with tool use, handoffs, and guardrails |
+| OpenAI (ChatGPT) | Agents SDK (Python, TypeScript) for agents with function calling, handoffs, and tracing |
+| Gemini | Agent Development Kit (ADK) for agents on Vertex AI with Google Cloud integrations |
+| M365 Copilot | M365 Agents SDK (.NET, Python, TypeScript) for agents deployed to Microsoft 365 surfaces |
+
+**Relationship to other blocks:** SDKs orchestrate models, abstract over APIs, and implement the agent concept in code. They integrate with MCP for external system access and formalize patterns like tool use and handoffs.
+
 ## How the Blocks Fit Together
 
-The building blocks build on each other. Here's how a workflow grows as you adopt more blocks:
+The building blocks are composable — combine the ones your workflow needs. Here's how a typical workflow grows as you adopt more blocks:
 
 1. **Choose a Model** — Select the right AI engine for your task (speed vs. depth, modality, cost)
 2. **Start with a Prompt** — Write clear instructions for what you want done
@@ -235,6 +289,8 @@ The building blocks build on each other. Here's how a workflow grows as you adop
 5. **Package as a Skill** — Turn the prompt + context into a reusable routine you can invoke with different inputs
 6. **Connect with MCP** — Give the skill access to external data and tools
 7. **Orchestrate with an Agent** — Let an autonomous AI run the skill, use MCP connections, and handle multi-step workflows
+8. **Call via API** — Integrate the workflow into an application or automated pipeline by calling the model programmatically
+9. **Build with an SDK** — Use a framework to orchestrate agents, manage tool use, and coordinate multi-agent pipelines in code
 
 ### Worked example: Weekly Client Status Report
 
@@ -246,12 +302,14 @@ The building blocks build on each other. Here's how a workflow grows as you adop
 | **+ Skill** | You package "generate weekly status report" as a skill — now you just invoke it with this week's updates |
 | **+ MCP** | The skill pulls this week's completed tasks from your project management tool and time entries from your time tracker |
 | **+ Agent** | An agent runs every Monday: gathers data via MCP, generates the report using the skill, drafts an email, and flags anything that needs your review |
+| **+ API** | You call the model via API from a script that runs on a schedule, processing inputs from a database and writing results back — no chat window needed |
+| **+ SDK** | You build the agent using a framework that handles tool orchestration, error recovery, and handoffs between a data-gathering agent and a report-writing agent |
 
 **Not every workflow needs every block.** Many tasks are handled perfectly well with a prompt and some context. The blocks are a menu, not a checklist — use what the workflow actually requires.
 
 ## Platform Comparison
 
-All seven building blocks across all four platforms in one view:
+All nine building blocks across all four platforms in one view:
 
 | Building Block | Claude | OpenAI (ChatGPT) | Gemini | M365 Copilot |
 |---------------|--------|-------------------|--------|--------------|
@@ -262,14 +320,19 @@ All seven building blocks across all four platforms in one view:
 | **Skill** | Claude Code Skills | Not yet available | Not yet available | Not yet available |
 | **Agent** | Claude Code agents, Cowork | Assistants API, GPTs with Actions | Extensions | Copilot agents with plugins |
 | **MCP** | MCP servers | Function calling, Actions | Extensions, function calling | Connectors, plugins |
+| **API** | Anthropic REST API (Python, TypeScript SDKs) | OpenAI REST API (Python, TypeScript SDKs) | Gemini API, Vertex AI (Python SDK) | Azure AI Services (.NET, Python, Java) |
+| **SDK** | Claude Agent SDK (Python, TypeScript) | OpenAI Agents SDK (Python, TypeScript) | Agent Development Kit (Python) | M365 Agents SDK (.NET, Python, TypeScript) |
 
 ## Common Misconceptions
 
 **"Skills and agents are the same thing."**
 Skills are routines — they do one specific thing when invoked. Agents are autonomous — they decide what to do, plan steps, and invoke skills (among other tools) to accomplish goals. A skill is a tool; an agent is the one using the toolbox.
 
-**"You need all seven blocks for every workflow."**
+**"You need all nine blocks for every workflow."**
 Most workflows need two or three blocks. A well-written prompt with good context handles many tasks. Only add blocks when the workflow genuinely requires them.
+
+**"APIs and SDKs are the same thing."**
+An API is a raw interface — you send a request, you get a response. An SDK is a framework that builds on APIs, adding patterns for orchestration, tool use, memory, and multi-agent coordination. You can use APIs without an SDK, but SDKs make complex workflows much easier to build.
 
 **"A project is just a folder."**
 A project is an active workspace — it provides standing instructions, persistent context, and conversation continuity. It shapes how the AI behaves for every conversation within it, not just where files are stored.
@@ -292,6 +355,8 @@ A project is an active workspace — it provides standing instructions, persiste
 - [Skills](skills/index.md) — reusable routines the AI invokes when relevant
 - [Agents](agents/index.md) — concepts for the Agent building block
 - [MCP](mcp/index.md) — connecting AI to external systems
+- [API](api/index.md) — programmatic interfaces for accessing AI models and services
+- [SDK](sdk/index.md) — frameworks and toolkits for building AI workflows in code
 - [AI Engineering](../ai-engineering/index.md) — practices for designing and optimizing AI systems, including context engineering
 - [Patterns](../patterns/index.md) — reusable approaches across building blocks
 

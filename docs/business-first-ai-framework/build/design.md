@@ -7,8 +7,8 @@ description: Gather architecture decisions, choose an execution pattern and inte
 
 > **Part of:** [Build Workflows](index.md)
 
-!!! tip "New to the seven building blocks?"
-    See the [Agentic Building Blocks](../../agentic-building-blocks/index.md) reference for definitions, examples, and cross-platform comparisons.
+!!! tip "New to the building blocks?"
+    See the [Agentic Building Blocks](../../agentic-building-blocks/index.md) reference for definitions, examples, and cross-platform comparisons of all nine blocks.
 
 ## What This Is
 
@@ -111,7 +111,7 @@ For each step in your Workflow Definition, classify it on the autonomy spectrum:
 
 ## Building Block Mapping
 
-Map each AI-assisted step to one or more of the seven building blocks:
+Map each AI-assisted step to one or more of the nine building blocks:
 
 | Block | What It Is | When to Use It |
 |-------|-----------|----------------|
@@ -122,6 +122,8 @@ Map each AI-assisted step to one or more of the seven building blocks:
 | **Agent** | An autonomous AI that plans, uses tools, and executes multi-step work | When a step requires tool use, adaptive reasoning, or autonomous decisions |
 | **MCP** | A connector giving the model access to external tools, APIs, databases, or services | When a step needs to read from or write to external systems |
 | **Project** | A persistent workspace grouping prompts, context, skills, and agents | When the workflow runs frequently with the same reference materials |
+| **API** | Programmatic interfaces for accessing AI models and cloud services | When a step needs to be called from code, integrated into an application, or run at scale |
+| **SDK** | Frameworks and toolkits for building AI workflows in code | When a step is implemented as a code-first agent with tool use, orchestration, or multi-agent coordination |
 
 Also identify for each step:
 

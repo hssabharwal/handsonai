@@ -1,6 +1,6 @@
 ---
 title: Business-First AI Framework
-description: A three-step methodology for finding where AI fits in your business, deconstructing workflows into building blocks, and turning those outputs into working AI workflows
+description: A three-step methodology — Analyze, Deconstruct, Build — for identifying AI opportunities in your workflows, breaking them into building blocks, and constructing working AI-powered workflows.
 ---
 
 # Business-First AI Framework

@@ -32,7 +32,7 @@ For guidance on deciding *whether* your workflow needs an agent, see [Build Work
 
 ## Topics
 
-- [Programming Frameworks](./frameworks.md) — SDKs and frameworks for building agents programmatically across platforms
+- [SDK Building Block](../sdk/index.md) — Frameworks and toolkits for building agents and AI workflows in code (Claude Agent SDK, OpenAI Agents SDK, Google ADK, LangGraph, and more)
 - [Agent Capability Patterns](./capability-patterns/index.md) — Seven architectural patterns that make agents effective: Reflection, Tool Use, Planning, Multi-Agent Collaboration, Memory, Guardrails, and Human-in-the-Loop
 
 ## Key Concepts
@@ -47,6 +47,8 @@ For guidance on deciding *whether* your workflow needs an agent, see [Build Work
 ## Related
 
 - [Agentic Building Blocks](../index.md)
+- [SDK](../sdk/index.md) — frameworks for building agents in code
+- [API](../api/index.md) — programmatic interfaces agents call under the hood
 - [AI Use Cases](../../use-cases/index.md) — what teams build with agents, organized by six primitives
 - [Automation Use Cases](../../use-cases/automation/index.md) — the highest-autonomy use cases powered by agents
 - [Workflow Architecture Patterns](../../patterns/workflow-architecture/index.md) — seven patterns from augmented LLMs to autonomous agents

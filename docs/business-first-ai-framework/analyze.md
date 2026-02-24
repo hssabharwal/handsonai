@@ -1,6 +1,6 @@
 ---
 title: "Step 1: Analyze Workflows for AI Opportunity"
-description: Use this prompt template to analyze where AI can help automate, augment, or orchestrate your workflows.
+description: Run a structured audit of your workflows to identify where AI creates the most value — produces a prioritized opportunity report with actionable first steps.
 ---
 
 # Step 1: Analyze Workflows for AI Opportunity
