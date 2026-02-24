@@ -1,7 +1,7 @@
 ---
-name: discovering-workflows
+name: analyzing-workflows
 description: >
-  This skill should be used when the user wants to discover AI workflow opportunities,
+  This skill should be used when the user wants to analyze AI workflow opportunities,
   run a workflow audit, find automation candidates, or says "where can AI help".
   Scans memory and conversation history, interviews the user about their work,
   then produces a prioritized opportunity report with structured workflow
@@ -9,9 +9,9 @@ description: >
 user_invocable: true
 ---
 
-# Discovering Workflows
+# Analyzing Workflows
 
-Discover concrete opportunities where AI can improve your workflows. Produces a categorized opportunity report with a summary table, detailed opportunity cards, and a structured workflow candidate list.
+Analyze concrete opportunities where AI can improve your workflows. Produces a categorized opportunity report with a summary table, detailed opportunity cards, and a structured workflow candidate list.
 
 ## Workflow
 

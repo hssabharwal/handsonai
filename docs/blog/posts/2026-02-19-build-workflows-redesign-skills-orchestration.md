@@ -24,9 +24,9 @@ The skill now starts each build by reading the cookbook's [curated platform docu
 
 Six individual pages (Context, Projects, Skills, Prompt, Agents, MCP) have been consolidated into a single [Construct](../../business-first-ai-framework/build/construct.md) page. The model handles most of the build process automatically, so the page now focuses on what you need to do yourself: gather business-specific context, configure external tool connections, and operationalize agents on your platform — with links to platform-specific guides for [Claude](../../platforms/claude/agents/building-agents.md), [OpenAI](../../platforms/openai/agents/building-agents.md), [Google](../../platforms/google-gemini/agents/building-agents.md), and [M365 Copilot](../../platforms/m365-copilot/agents/building-agents.md).
 
-## Discover and Deconstruct shift to skills
+## Analyze and Deconstruct shift to skills
 
-The [Discover](../../business-first-ai-framework/discover.md) and [Deconstruct](../../business-first-ai-framework/deconstruct/index.md) pages have been updated to reference skills instead of raw prompt templates. The standalone prompt page for Deconstruct has been removed — the `deconstructing-workflows` skill now drives the process directly.
+The [Analyze](../../business-first-ai-framework/analyze.md) and [Deconstruct](../../business-first-ai-framework/deconstruct/index.md) pages have been updated to reference skills instead of raw prompt templates. The standalone prompt page for Deconstruct has been removed — the `deconstructing-workflows` skill now drives the process directly.
 
 ## Cross-platform skills standard
 

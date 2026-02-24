@@ -164,7 +164,7 @@ To adapt: identify the distinct stages of your workflow and the specialist exper
 - [Content Creation Use Cases](../../use-cases/content-creation/index.md) — more examples of AI-powered content workflows
 - [Research Use Cases](../../use-cases/research/index.md) — more examples of AI-powered research workflows
 - [Automation Use Cases](../../use-cases/automation/index.md) — turning multi-agent pipelines into scheduled operations
-- [Discover AI Workflow Opportunities](../discover.md) — discover which workflows are candidates for autonomous agents
+- [Analyze AI Workflow Opportunities](../analyze.md) — identify which workflows are candidates for autonomous agents
 - [Deconstruct Workflows](../deconstruct/index.md) — break down workflows into agent-ready steps
 - [Plugin Marketplace](../../use-the-cookbook/build/index.md) — browse all agents and skills used in this pipeline
 - [Claude Code Subagents Documentation](https://code.claude.com/docs/en/sub-agents) — official guide to creating and using subagents in Claude Code

@@ -136,7 +136,7 @@ See the [Using Plugins](../use-the-cookbook/build/using-plugins.md) guide for th
 /plugin install ai-registry@handsonai
 ```
 
-The **Business-First AI** plugin is required for a guided experience on the Claude platform using skills — it includes agents and skills for discovering AI opportunities, deconstructing workflows, and building with AI. The **AI Registry** plugin is required for Claude users who want to integrate seamlessly with the Notion registry — it lets Claude name workflows, write SOPs, and register building blocks directly in your workspace.
+The **Business-First AI** plugin is required for a guided experience on the Claude platform using skills — it includes agents and skills for analyzing AI opportunities, deconstructing workflows, and building with AI. The **AI Registry** plugin is required for Claude users who want to integrate seamlessly with the Notion registry — it lets Claude name workflows, write SOPs, and register building blocks directly in your workspace.
 
 Browse all available plugins on the [Plugin Marketplace](../use-the-cookbook/build/index.md).
 

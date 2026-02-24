@@ -37,11 +37,11 @@ Most people have a sense of which workflows could benefit from AI. The hard part
 
 The [Business-First AI Framework](../../business-first-ai-framework/index.md) guides you through that entire journey:
 
-1. **[Discover](../../business-first-ai-framework/discover.md)** — Run a structured audit of your workflows to identify where AI creates the most value
+1. **[Analyze](../../business-first-ai-framework/analyze.md)** — Run a structured audit of your workflows to identify where AI creates the most value
 2. **[Deconstruct](../../business-first-ai-framework/deconstruct/index.md)** — Break those workflows into discrete steps and map each one to AI building blocks
 3. **[Build](../../business-first-ai-framework/build/index.md)** — Turn that analysis into a working AI workflow, ready for production
 
-You don't need to be technical to use any of this. The framework works on paper, in a conversation with any AI tool, or with installable plugins that walk you through it step by step. The Discover step takes 20 minutes and produces a prioritized list of AI opportunities — a tangible output in one sitting.
+You don't need to be technical to use any of this. The framework works on paper, in a conversation with any AI tool, or with installable plugins that walk you through it step by step. The Analyze step takes 20 minutes and produces a prioritized list of AI opportunities — a tangible output in one sitting.
 
 ### Layer 2: Use Cases — Where AI Creates Value
 
@@ -89,7 +89,7 @@ That's my challenge to you: start small. Build the muscle of a business-first ap
 
 The Hands-on AI Cookbook is free, open-source, and always evolving.
 
-**Start here:** Head to [Discover Workflows](../../business-first-ai-framework/discover.md) and run the audit. In 20 minutes, you'll have a prioritized list of AI opportunities.
+**Start here:** Head to [Analyze Workflows](../../business-first-ai-framework/analyze.md) and run the audit. In 20 minutes, you'll have a prioritized list of AI opportunities.
 
 Or jump to what interests you:
 

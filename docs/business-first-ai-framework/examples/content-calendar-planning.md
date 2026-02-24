@@ -84,7 +84,7 @@ A few things to take away from this example:
 
 Ready to run your own workflow through the framework?
 
-- **[Step 1 — Discover](../discover.md)**: Find which of your workflows are candidates for AI
+- **[Step 1 — Analyze](../analyze.md)**: Find which of your workflows are candidates for AI
 - **[Step 2 — Deconstruct](../deconstruct/index.md)**: Break your chosen workflow into atomic steps
 - **[Step 3 — Build](../build/index.md)**: Design the AI implementation and construct it
 

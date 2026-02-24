@@ -1,11 +1,11 @@
 ---
 title: Business-First AI Framework
-description: The Business-First AI Framework as executable skills and agents — discover opportunities, deconstruct workflows, and build working AI workflows
+description: The Business-First AI Framework as executable skills and agents — analyze opportunities, deconstruct workflows, and build working AI workflows
 ---
 
 # Business-First AI Framework
 
-Skills and an agent implementing the [Business-First AI Framework](../../business-first-ai-framework/index.md) — discover where AI fits in your workflows, deconstruct those workflows into AI building blocks, and build working AI workflows. These are plain-text Markdown files that work in any AI tool supporting skills. Download them from GitHub, install as a Claude Code plugin, or paste directly into your system prompt.
+Skills and an agent implementing the [Business-First AI Framework](../../business-first-ai-framework/index.md) — analyze where AI fits in your workflows, deconstruct those workflows into AI building blocks, and build working AI workflows. These are plain-text Markdown files that work in any AI tool supporting skills. Download them from GitHub, install as a Claude Code plugin, or paste directly into your system prompt.
 
 ## Get These Skills
 
@@ -39,13 +39,13 @@ These skills and agents are plain-text Markdown files that work in any AI tool. 
 
 | Command | Skill |
 |---------|-------|
-| `/business-first-ai:discover` | `discovering-workflows` — Step 1 |
+| `/business-first-ai:analyze` | `analyzing-workflows` — Step 1 |
 | `/business-first-ai:deconstruct` | `deconstructing-workflows` — Step 2 |
 | `/business-first-ai:build-workflow` | `building-workflows` — Step 3 |
 
 **Recommended path:**
 
-1. Run `/business-first-ai:discover` (or say *"Help me discover AI workflow opportunities"*) → Step 1
+1. Run `/business-first-ai:analyze` (or say *"Help me analyze AI workflow opportunities"*) → Step 1
 2. Run `/business-first-ai:deconstruct` (or say *"I want to deconstruct my [workflow] into AI building blocks"*) → Step 2
 3. Run `/business-first-ai:build-workflow` to design and build the AI workflow → Step 3
 4. Review your outputs in the `outputs/` folder
@@ -57,7 +57,7 @@ For platform-specific setup (Claude.ai ZIP upload, Cowork install, API integrati
 | Component | Type | Command | Claude Code | Cowork | Claude.ai |
 |-----------|------|---------|:-----------:|:------:|:---------:|
 | `framework-orchestrator` | Agent | — | Yes | Yes | No |
-| `discovering-workflows` | Skill | `/business-first-ai:discover` | Yes | Yes | Yes |
+| `analyzing-workflows` | Skill | `/business-first-ai:analyze` | Yes | Yes | Yes |
 | `deconstructing-workflows` | Skill | `/business-first-ai:deconstruct` | Yes | Yes | Yes |
 | `building-workflows` | Skill | `/business-first-ai:build-workflow` | Yes | Yes | Yes |
 
@@ -71,13 +71,13 @@ For platform-specific setup (Claude.ai ZIP upload, Cowork install, API integrati
 
 #### `framework-orchestrator`
 
-**What it does:** Orchestrates the end-to-end Discover, Deconstruct, and Build process. Runs candidate discovery, deep deconstruction, design, and build sequentially, with file-based handoffs between stages so you can also run each step individually in separate conversations.
+**What it does:** Orchestrates the end-to-end Analyze, Deconstruct, and Build process. Runs candidate discovery, deep deconstruction, design, and build sequentially, with file-based handoffs between stages so you can also run each step individually in separate conversations.
 
 **When to use it:** Use this when you want to go through the entire process in one session. The agent manages the flow between steps, saves intermediate files, and keeps you involved at each stage. If you prefer to work step-by-step across separate conversations, invoke the individual skills instead.
 
 **How it works:** The agent runs three skills in sequence:
 
-1. **Discover** (`discovering-workflows`) — Audit your workflows, interview you about your work, and produce an opportunity report with structured candidates. If you already know which workflow to deconstruct, this step is brief.
+1. **Analyze** (`analyzing-workflows`) — Audit your workflows, interview you about your work, and produce an opportunity report with structured candidates. If you already know which workflow to deconstruct, this step is brief.
 2. **Deconstruct** (`deconstructing-workflows`) — Interactive deep-dive that decomposes the workflow into refined steps using the 5-question framework. Produces the Workflow Definition.
 3. **Build** (`building-workflows`) — Design phase: gather architecture decisions, choose an execution pattern and interaction mode, classify steps, map building blocks, identify skill candidates, configure agents. Construct phase: generate platform-appropriate artifacts (prompts, skills, agents, configs) and a Launch Guide tailored to your platform and technical comfort level.
 
@@ -110,17 +110,17 @@ Files are saved to `outputs/` using kebab-case workflow names (e.g., `outputs/le
 
 ---
 
-### Step 1 — Discover Workflows
+### Step 1 — Analyze Workflows
 
 Find which workflows are candidates for AI.
 
 ---
 
-#### `discovering-workflows`
+#### `analyzing-workflows`
 
-**Command:** `/business-first-ai:discover`
+**Command:** `/business-first-ai:analyze`
 
-**What it does:** Runs a structured audit of your workflows to discover where AI can help. Scans memory and conversation history, interviews you about your work, then produces a prioritized opportunity report with structured workflow candidates ready for the Deconstruct step.
+**What it does:** Runs a structured audit of your workflows to analyze where AI can help. Scans memory and conversation history, interviews you about your work, then produces a prioritized opportunity report with structured workflow candidates ready for the Deconstruct step.
 
 **When to use it:** Use this when you want to figure out where AI fits in your work. Especially useful when you're new to AI and need a starting point, or when you want a systematic review before choosing which workflow to deconstruct.
 
@@ -133,7 +133,7 @@ Find which workflows are candidates for AI.
 
 **Example prompts:**
 
-    "Help me discover AI workflow opportunities"
+    "Help me analyze AI workflow opportunities"
     → Runs the full audit and produces a categorized opportunity
       report with structured workflow candidates
 
@@ -163,7 +163,7 @@ Break workflows into structured definitions.
 
 **How it works:**
 
-1. **Scenario discovery** — The AI determines how you're arriving: if you reference an opportunity report from the Discover step, it reads the workflow candidates and pre-populates metadata. Otherwise, it asks about the business scenario, objective, high-level steps, and ownership. If you describe a problem instead of a workflow, the AI proposes a candidate workflow for you to react to.
+1. **Scenario analysis** — The AI determines how you're arriving: if you reference an opportunity report from the Analyze step, it reads the workflow candidates and pre-populates metadata. Otherwise, it asks about the business scenario, objective, high-level steps, and ownership. If you describe a problem instead of a workflow, the AI proposes a candidate workflow for you to react to.
 2. **Scope check** — The AI assesses whether this is one workflow or multiple bundled together. If multiple, it recommends splitting and asks which to start with.
 3. **Name the workflow** — The AI presents 2-3 name options (2-4 word noun phrases, Title Case) and confirms name, description, outcome, trigger, and type.
 4. **Deep dive** — For each step, the AI probes five dimensions:
@@ -250,14 +250,14 @@ Design your AI implementation and construct the workflow.
 
 These skills cover the full Business-First AI Framework. Here's the recommended path:
 
-1. **Discover** — Run `discovering-workflows` to audit your workflows and identify where AI creates the most value
+1. **Analyze** — Run `analyzing-workflows` to audit your workflows and identify where AI creates the most value
 2. **Deconstruct** — Pick your highest-impact candidate and run it through the `framework-orchestrator` agent (or use the skills individually: `deconstructing-workflows` → `building-workflows`)
 3. **Build** — Follow the Launch Guide to get your workflow running, then iterate. See the [AI Workflow Examples](ai-workflow-examples.md) plugin for working examples of real AI workflows.
 
 ## FAQ
 
 **Which step should I start with?**
-Start with Step 1 (Discover) if you're not sure where AI fits in your work. Browse [AI Use Cases](../../use-cases/index.md) to see what types of work AI handles — content creation, research, coding, data analysis, ideation, and automation. Start with Step 2 (Deconstruct) if you already know which workflow you want to automate.
+Start with Step 1 (Analyze) if you're not sure where AI fits in your work. Browse [AI Use Cases](../../use-cases/index.md) to see what types of work AI handles — content creation, research, coding, data analysis, ideation, and automation. Start with Step 2 (Deconstruct) if you already know which workflow you want to automate.
 
 **Can I start from a problem instead of a workflow?**
 Yes. Tell the `framework-orchestrator` agent about your problem (e.g., "people keep dropping off during enrollment") and it will propose a candidate workflow for you to refine during discovery.

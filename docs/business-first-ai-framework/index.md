@@ -15,7 +15,7 @@ The framework is facilitated by **three skills** — reusable AI routines that g
 
 | Step | Skill | What it guides you through |
 |------|-------|---------------------------|
-| 1. Discover | `discovering-workflows` | Auditing your workflows and surfacing AI opportunities |
+| 1. Analyze | `analyzing-workflows` | Auditing your workflows and surfacing AI opportunities |
 | 2. Deconstruct | `deconstructing-workflows` | Breaking a workflow into steps, decisions, data flows, and failure modes |
 | 3. Build | `building-workflows` | Designing the AI implementation and constructing platform artifacts |
 
@@ -25,7 +25,7 @@ The framework is facilitated by **three skills** — reusable AI routines that g
 
 Three steps, each with a structured process:
 
-### Step 1: Discover Workflows
+### Step 1: Analyze Workflows
 
 Find which workflows are candidates for AI.
 
@@ -37,7 +37,7 @@ Before you can apply AI to anything, you need to know *where* it fits. Step 1 is
 
 The audit uses a three-step process: scan what AI already knows about your work, interview you to fill gaps, then produce a categorized report with specific opportunities and actionable first steps.
 
-**Facilitated by the `discovering-workflows` skill.** See [Discover Workflows](discover.md) for details and the [Skills building block](../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for cross-platform installation.
+**Facilitated by the `analyzing-workflows` skill.** See [Analyze Workflows](analyze.md) for details and the [Skills building block](../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for cross-platform installation.
 
 ---
 
@@ -61,7 +61,7 @@ The deliverable is a **Workflow Definition** — a structured breakdown of your 
 
 ---
 
-### Step 3: Build Workflows
+### Step 3: Build AI-Powered Workflows
 
 Design your AI implementation, construct the components, and run the workflow.
 
@@ -115,7 +115,7 @@ For detailed definitions and cross-platform examples, see [Agentic Building Bloc
 
 ### Six Use Case Primitives
 
-When classifying opportunities from Step 1, it helps to know what **type** of AI work each one involves. The [six use case primitives](../use-cases/index.md) — Content Creation, Research, Coding, Data Analysis, Ideation & Strategy, and Automation — provide a classification system for the opportunities you discover.
+When classifying opportunities from Step 1, it helps to know what **type** of AI work each one involves. The [six use case primitives](../use-cases/index.md) — Content Creation, Research, Coding, Data Analysis, Ideation & Strategy, and Automation — provide a classification system for the opportunities you identify.
 
 ### Autonomy Spectrum
 
@@ -139,7 +139,7 @@ Every AI workflow falls somewhere on this spectrum. The right pattern depends on
 
 ## Getting Started
 
-1. **[Discover Workflows](discover.md)** — identify your best AI candidates
+1. **[Analyze Workflows](analyze.md)** — identify your best AI candidates
 2. **Pick your highest-impact opportunity** — don't try to pursue everything at once
 3. **[Deconstruct the workflow](deconstruct/index.md)** — break it into discrete steps
 4. **[Design](build/design.md)** your AI workflow — choose an execution pattern, classify steps, map building blocks

@@ -97,5 +97,5 @@ Unlike the other primitives where AI executes work, ideation and strategy is abo
 - [Projects](../../agentic-building-blocks/projects/index.md) — persistent workspaces for ongoing strategic work
 - [Context](../../agentic-building-blocks/context/index.md) — providing goals, constraints, and history
 - [Prompts](../../agentic-building-blocks/prompts/index.md) — crafting effective brainstorming and evaluation prompts
-- [Discover Workflows](../../business-first-ai-framework/discover.md) — using ideation to find AI opportunities
+- [Analyze Workflows](../../business-first-ai-framework/analyze.md) — using ideation to find AI opportunities
 - [Ideation & Strategy Resources](resources.md) — curated reports, guides, and references

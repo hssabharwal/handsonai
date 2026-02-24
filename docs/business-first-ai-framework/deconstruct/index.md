@@ -1,9 +1,9 @@
 ---
-title: "Step 2: Deconstruct Workflows"
+title: "Step 2: Deconstruct Workflows into AI Building Blocks"
 description: Interactively break down any business workflow into discrete steps, surfacing decision points, data flows, context needs, and failure modes.
 ---
 
-# Step 2: Deconstruct Workflows
+# Step 2: Deconstruct Workflows into AI Building Blocks
 
 > **Platforms:** `claude` `openai` `gemini` `m365-copilot`
 
@@ -113,8 +113,8 @@ Most workflows expand from 5–8 rough steps to 12–20 refined steps after the 
 
 ## Related
 
-- **Previous step:** Not sure which workflow to deconstruct? Start with [Discover Workflows](../discover.md) (Step 1) to identify your best candidates.
-- **Next step:** Ready to build? Go to [Build Workflows](../build/index.md) (Step 3) — starting with the Design phase to choose your execution pattern and map building blocks.
+- **Previous step:** Not sure which workflow to deconstruct? Start with [Analyze Workflows](../analyze.md) (Step 1) to identify your best candidates.
+- **Next step:** Ready to build? Go to [Build AI-Powered Workflows](../build/index.md) (Step 3) — starting with the Design phase to choose your execution pattern and map building blocks.
 - [Business-First AI Framework](../index.md) — the full three-step methodology
 - [Prompts](../../agentic-building-blocks/prompts/index.md)
 - [Agents](../../agentic-building-blocks/agents/index.md)

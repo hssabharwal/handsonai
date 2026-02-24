@@ -22,7 +22,7 @@ This report is the foundation for the cookbook's [six use case primitives](../us
 
 ## How the Cookbook Uses This
 
-The six primitives from this report are the backbone of the cookbook's [Use Cases](../use-cases/index.md) section. Each primitive has its own page with platform-agnostic examples mapped to [Agentic Building Blocks](../agentic-building-blocks/index.md). The report's discovery methodology also influenced the [Discover Workflows](../business-first-ai-framework/discover.md) step of the Business-First AI Framework.
+The six primitives from this report are the backbone of the cookbook's [Use Cases](../use-cases/index.md) section. Each primitive has its own page with platform-agnostic examples mapped to [Agentic Building Blocks](../agentic-building-blocks/index.md). The report's discovery methodology also influenced the [Analyze Workflows](../business-first-ai-framework/analyze.md) step of the Business-First AI Framework.
 
 ## Access
 

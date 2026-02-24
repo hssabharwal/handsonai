@@ -13,13 +13,13 @@ Both marketplace plugins — **Business-First AI** and **AI Registry** — now s
 
 <!-- more -->
 
-All 10 skills across both plugins now include `user_invocable: true` and a `command:` field in their frontmatter. This means you can type `/business-first-ai:discover` to start a workflow audit, `/ai-registry:workflow-sop` to write an SOP, or any of the other 8 commands listed below — no prompt engineering required.
+All 10 skills across both plugins now include `user_invocable: true` and a `command:` field in their frontmatter. This means you can type `/business-first-ai:analyze` to start a workflow audit, `/ai-registry:workflow-sop` to write an SOP, or any of the other 8 commands listed below — no prompt engineering required.
 
 Slash commands work everywhere Claude Code runs: terminal, VS Code, JetBrains, the Code tab in the desktop app, and Claude Code on the web.
 
 **Business-First AI commands** (v2.1.0):
 
-- `/business-first-ai:discover` — run a workflow audit (Step 1)
+- `/business-first-ai:analyze` — run a workflow audit (Step 1)
 - `/business-first-ai:deconstruct` — break down a workflow (Step 2)
 - `/business-first-ai:build-workflow` — design and build (Step 3)
 - `/business-first-ai:edit-article` — edit to HBR quality

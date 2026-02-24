@@ -138,5 +138,5 @@ To adapt: identify the **input criteria** (the persona equivalent), the **evalua
 - [Autonomous Agent Workflow Example](./autonomous-agent.md) — when AI executes end-to-end with minimal supervision
 - [Research Use Cases](../../use-cases/research/index.md) — more examples of AI-powered research workflows
 - [Automation Use Cases](../../use-cases/automation/index.md) — turning deterministic workflows into scheduled pipelines
-- [Discover AI Workflow Opportunities](../discover.md) — discover which of your workflows are candidates for automation
+- [Analyze AI Workflow Opportunities](../analyze.md) — identify which of your workflows are candidates for automation
 - [Deconstruct Workflows](../deconstruct/index.md) — break down complex workflows into automatable steps

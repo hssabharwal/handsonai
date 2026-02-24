@@ -32,4 +32,4 @@ The most common question about the framework is "what does the output actually l
 - [Content Calendar Planning — narrative guide](../../business-first-ai-framework/examples/content-calendar-planning.md) on the cookbook
 - [Full files on GitHub](https://github.com/jamesgray-ai/handsonai/tree/main/examples/content-calendar-planning) — Workflow Definition, Building Block Spec, and workflow prompt rendered at full width
 
-Ready to try the framework on your own workflow? Start with [Discover](../../business-first-ai-framework/discover.md) or jump straight to [Deconstruct](../../business-first-ai-framework/deconstruct/index.md).
+Ready to try the framework on your own workflow? Start with [Analyze](../../business-first-ai-framework/analyze.md) or jump straight to [Deconstruct](../../business-first-ai-framework/deconstruct/index.md).

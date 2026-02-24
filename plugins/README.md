@@ -6,7 +6,7 @@ This directory contains installable [Claude Code](https://docs.anthropic.com/en/
 
 | Plugin | Description | Version | Install |
 |--------|-------------|---------|---------|
-| [business-first-ai](./business-first-ai/) | Discover AI opportunities, deconstruct workflows, and build with worked examples | 2.2.0 | `/plugin install business-first-ai@handsonai` |
+| [business-first-ai](./business-first-ai/) | Analyze AI opportunities, deconstruct workflows, and build AI-powered workflows | 4.0.0 | `/plugin install business-first-ai@handsonai` |
 | [ai-registry](./ai-registry/) | Document, name, register, and sync AI workflows and skills in Notion | 3.1.0 | `/plugin install ai-registry@handsonai` |
 
 ## Getting Started

@@ -33,7 +33,7 @@ const BUILDING_BLOCKS = [
   "mcp",
 ];
 
-const FRAMEWORK_STEPS = ["discover", "deconstruct", "build"];
+const FRAMEWORK_STEPS = ["analyze", "deconstruct", "build"];
 
 const SETUP_TOOLS: Record<string, string> = {
   terminal: "builder-setup/terminal-basics",
@@ -142,7 +142,7 @@ export const TOOL_DEFINITIONS: McpToolDefinition[] = [
   {
     name: "get_framework_step",
     description:
-      "Get detailed content for a Business-First AI Framework step and all its sub-pages. Steps are: discover, deconstruct, build.",
+      "Get detailed content for a Business-First AI Framework step and all its sub-pages. Steps are: analyze, deconstruct, build.",
     inputSchema: {
       type: "object",
       properties: {
@@ -339,9 +339,9 @@ export function handleToolCall(
         (p) =>
           p.path === prefix ||
           p.path.startsWith(`${prefix}/`) ||
-          // "discover" is a single page, not a directory
-          (step === "discover" &&
-            p.path === "business-first-ai-framework/discover")
+          // "analyze" is a single page, not a directory
+          (step === "analyze" &&
+            p.path === "business-first-ai-framework/analyze")
       );
       if (pages.length === 0) {
         return text(
