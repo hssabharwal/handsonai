@@ -49,12 +49,12 @@ These steps install the developer tools you'll use throughout the course. Each s
 
 ### Step 2: Code Editor + Extensions
 
-**What:** Install Cursor or VS Code and add AI coding extensions.
+**What:** Install Cursor or VS Code and add AI coding extensions for the platforms you subscribe to.
 
 [:octicons-arrow-right-24: Go to Editor Setup guide](../../builder-setup/editor-setup.md)
 
-- [ ] I can open my editor and see files in the sidebar
-- [ ] At least one AI extension installed (Claude Code, Codex, or Gemini Code Assist)
+- [ ] I can open my editor and see the welcome screen or an empty workspace
+- [ ] At least one AI extension installed for a platform I have a paid subscription to (Claude Code, Codex, or Gemini Code Assist)
 
 ??? tip "Stuck? Ask AI for help"
     > I'm setting up [Cursor / VS Code] on [Mac / Windows] and running into this issue: [describe what's happening]. What should I try next?
