@@ -27,7 +27,7 @@ Hands-On AI (handsonai.info) — the consolidated site for James Gray's AI cours
 - `docs/_templates/` - Content templates for contributors
 - `.claude/agents/` - Claude Code subagent definitions (local/development copies)
 - `.claude/skills/` - Claude Code skill definitions (local/development copies)
-- `.claude-plugin/marketplace.json` - Plugin marketplace manifest
+- `.claude-plugin/` - Removed — marketplace manifest now lives in `jamesgray-ai/handsonai-plugins` repo
 - `plugins/` - Distributable plugin bundles (agents + skills grouped by theme)
 - `mcp-server/migrations/` - Cloudflare D1 schema migrations
 - `mcp-server/scripts/analytics-query.ts` - CLI for querying MCP analytics via Cloudflare REST API
@@ -286,32 +286,40 @@ Skills from the `superpowers` plugin, invoked automatically based on context:
 
 ## Plugin Marketplace
 
-The `plugins/` directory contains distributable Claude Code plugins. Each plugin bundles related agents and skills into a themed toolkit that students can install via `/plugin install`.
+The `plugins/` directory contains a staging copy of Claude Code plugins. Each plugin bundles related agents and skills into a themed toolkit that students can install via `/plugin install`.
+
+The **distributable** copy lives in the separate [`jamesgray-ai/handsonai-plugins`](https://github.com/jamesgray-ai/handsonai-plugins) repo — a lightweight repo that tools like Cowork can clone quickly. The `marketplace.json` lives there, not here.
 
 ### Directory layout
 
-- `.claude-plugin/marketplace.json` — Top-level manifest listing all plugins
 - `plugins/<plugin-name>/.claude-plugin/plugin.json` — Per-plugin metadata
 - `plugins/<plugin-name>/agents/` — Agent `.md` files
 - `plugins/<plugin-name>/skills/` — Skill directories (with `SKILL.md` and optional `references/`)
 
-### Keeping `.claude/` and `plugins/` in sync
+### Keeping `.claude/`, `plugins/`, and `handsonai-plugins` in sync
 
-The `.claude/` directory is the **development/local** copy (used for repo-local scheduling, `claude --agent`, etc.). The `plugins/` directory is the **distributable** copy. When updating:
+There are three copies of plugin files:
+
+1. **`.claude/agents/` and `.claude/skills/`** — development/local copy (used for repo-local scheduling, `claude --agent`, etc.)
+2. **`plugins/`** — staging copy in this repo (for testing before publishing)
+3. **`jamesgray-ai/handsonai-plugins`** — the distributable repo that users clone via `/plugin marketplace add`
+
+When updating:
 
 1. Always edit `.claude/agents/` or `.claude/skills/` first and test locally
-2. Copy the updated file to the corresponding `plugins/<plugin-name>/` location
+2. Copy the updated file to the corresponding `plugins/<plugin-name>/` location in this repo
 3. Bump versions (see below)
+4. Copy the updated `plugins/` directory to the `handsonai-plugins` repo, bump versions in its `marketplace.json`, commit and push there
 
 ### Adding a new agent or skill to an existing plugin
 
 1. Create/edit the agent `.md` in `.claude/agents/` (or skill in `.claude/skills/`) — test locally
-2. Copy into `plugins/<plugin-name>/agents/` (or `skills/`)
+2. Copy into `plugins/<plugin-name>/agents/` (or `skills/`) in this repo
 3. Bump `version` in `plugins/<plugin-name>/.claude-plugin/plugin.json` (MINOR for new, PATCH for update)
-4. Bump `version` for that plugin in `.claude-plugin/marketplace.json`
-5. Update the plugin's section on `docs/use-the-cookbook/build/index.md` — add the agent/skill to the table with a link to the detail page anchor
-6. Update the plugin's detail page (`docs/use-the-cookbook/build/<plugin-name>.md`) — add the agent/skill section following the existing component format
-7. Commit and push
+4. Update the plugin's section on `docs/use-the-cookbook/build/index.md` — add the agent/skill to the table with a link to the detail page anchor
+5. Update the plugin's detail page (`docs/use-the-cookbook/build/<plugin-name>.md`) — add the agent/skill section following the existing component format
+6. Commit and push this repo
+7. Copy updated files to `handsonai-plugins` repo, bump version in its `marketplace.json`, commit and push there
 
 ### Creating a new plugin
 
@@ -328,11 +336,11 @@ The `.claude/` directory is the **development/local** copy (used for repo-local 
            └── SKILL.md
    ```
 3. Write `plugin.json` with name, description, version, author, keywords
-4. Add a new entry to `.claude-plugin/marketplace.json`
-5. Add a grid card + collapsible detail section to `docs/use-the-cookbook/build/index.md` — include links to the detail page anchors for every agent and skill
-6. Create a detail page at `docs/use-the-cookbook/build/<plugin-name>.md` following the template used by existing detail pages (see `docs/use-the-cookbook/build/business-first-ai.md` for reference)
-7. Add the detail page to the `nav:` section in `mkdocs.yml` under "Tools & Resources > Agents & Skills"
-8. Commit and push
+4. Add a grid card + collapsible detail section to `docs/use-the-cookbook/build/index.md` — include links to the detail page anchors for every agent and skill
+5. Create a detail page at `docs/use-the-cookbook/build/<plugin-name>.md` following the template used by existing detail pages (see `docs/use-the-cookbook/build/business-first-ai.md` for reference)
+6. Add the detail page to the `nav:` section in `mkdocs.yml` under "Tools & Resources > Agents & Skills"
+7. Commit and push this repo
+8. Copy the new plugin directory to `handsonai-plugins` repo, add entry to its `marketplace.json`, commit and push there
 
 ### Catalog page linking convention
 

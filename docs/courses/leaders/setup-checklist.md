@@ -109,7 +109,7 @@ These steps install the developer tools you'll use throughout the course. Each s
 [:octicons-arrow-right-24: Go to AI Registry Setup guide](../../builder-setup/notion-registry-setup.md)
 
 - [ ] Notion AI Registry template duplicated to my workspace
-- [ ] Plugin marketplace registered (`/plugin marketplace add jamesgray-ai/handsonai`)
+- [ ] Plugin marketplace registered (`/plugin marketplace add jamesgray-ai/handsonai-plugins`)
 - [ ] Business-First AI plugin installed (`/plugin install business-first-ai@handsonai`)
 
 ??? tip "Stuck? Ask AI for help"

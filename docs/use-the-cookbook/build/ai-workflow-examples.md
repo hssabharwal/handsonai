@@ -15,7 +15,7 @@ These skills and agents are plain-text Markdown files that work in any AI tool. 
 
     Download from GitHub and add to your platform's skill directory:
 
-    :material-github: [Browse on GitHub](https://github.com/jamesgray-ai/handsonai/tree/main/plugins/ai-workflow-examples){ .md-button }
+    :material-github: [Browse on GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins/ai-workflow-examples){ .md-button }
 
     Works with **Claude Code, Cursor, Codex CLI, Gemini CLI, VS Code Copilot**, and more. See [How to Add Skills to Your Platform](../../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for step-by-step instructions for each tool.
 
@@ -317,7 +317,7 @@ These are **worked examples** built with the [Business-First AI Framework](busin
 No. These agents, skills, and prompts work independently — start using them right away.
 
 **Can I use the prompts without installing the plugin?**
-Yes. The three prompts (`linkedin-prospect-research`, `buyer-persona-revenue-leader-rachel`, `meeting-prep-quick`) are portable Markdown files. Copy them from [GitHub](https://github.com/jamesgray-ai/handsonai/tree/main/plugins/ai-workflow-examples/prompts) and paste into any AI tool.
+Yes. The three prompts (`linkedin-prospect-research`, `buyer-persona-revenue-leader-rachel`, `meeting-prep-quick`) are portable Markdown files. Copy them from [GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins/ai-workflow-examples/prompts) and paste into any AI tool.
 
 **What's the difference between the `hbr-editor` agent and the `editing-hbr-articles` skill?**
 The agent provides a full editorial review persona with structured feedback. The skill focuses on making direct, hands-on edits to the file. The agent loads the skill automatically — use the agent for review, the skill for editing.

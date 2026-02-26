@@ -36,12 +36,12 @@ The plugins in this marketplace currently focus on **agents** and **skills**. As
 
 Plugins are plain-text Markdown files — there's no compiled code or hidden logic. Every agent and skill in this marketplace is fully readable, so you can review exactly what instructions Claude receives before you install anything.
 
-**Review the source:** All plugin files are open source in the [handsonai GitHub repository](https://github.com/jamesgray-ai/handsonai/tree/main/plugins). Each plugin's detail page (linked from the [marketplace](index.md)) includes the full list of agents and skills with descriptions of what they do.
+**Review the source:** All plugin files are open source in the [handsonai-plugins GitHub repository](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins). Each plugin's detail page (linked from the [marketplace](index.md)) includes the full list of agents and skills with descriptions of what they do.
 
 !!! warning "Anthropic's guidance on third-party plugins"
     Anthropic recommends reviewing any plugin before installing it. From the official [plugin documentation](https://code.claude.com/docs/en/discover-plugins): *"Make sure you trust a plugin before installing it. Anthropic does not control what MCP servers, files, or other software are included in plugins and cannot verify that they work as intended."*
 
-    The Hands-on AI plugins contain only Markdown instruction files — no MCP servers, no executable code, and no external network calls. You can verify this yourself by browsing the [plugin source](https://github.com/jamesgray-ai/handsonai/tree/main/plugins).
+    The Hands-on AI plugins contain only Markdown instruction files — no MCP servers, no executable code, and no external network calls. You can verify this yourself by browsing the [plugin source](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins).
 
 ## Getting Started in Claude Code
 
@@ -57,7 +57,7 @@ A marketplace is a collection of plugins hosted online. Adding it tells Claude C
 In your Claude Code session, type:
 
 ```bash
-/plugin marketplace add jamesgray-ai/handsonai
+/plugin marketplace add jamesgray-ai/handsonai-plugins
 ```
 
 This tells Claude Code where to find the Hands-on AI plugins. It does not install anything yet. For more on how marketplaces work, see the official [Discover and install plugins](https://code.claude.com/docs/en/discover-plugins) guide.
@@ -155,7 +155,7 @@ Claude.ai supports skills through a ZIP upload process. You can take any plugin 
 
 **1. Find the skill on your machine**
 
-After adding the marketplace (`/plugin marketplace add jamesgray-ai/handsonai`), all plugin skills are stored locally at:
+After adding the marketplace (`/plugin marketplace add jamesgray-ai/handsonai-plugins`), all plugin skills are stored locally at:
 
 ```
 ~/.claude/plugins/marketplaces/handsonai/plugins/<plugin-name>/skills/<skill-name>/
@@ -288,7 +288,7 @@ Both support the same plugin format and skill files. If you're not comfortable w
 
 Every file is plain-text Markdown — no compiled code, no special format. You don't need Claude Code or plugins to use them. Download skill folders from GitHub and place them in your platform's skill directory. See [How to Add Skills to Your Platform](../../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for step-by-step instructions for Claude Code, Cursor, Codex CLI, Gemini CLI, and VS Code Copilot.
 
-:material-github: [Browse all skills on GitHub](https://github.com/jamesgray-ai/handsonai/tree/main/plugins){ .md-button }
+:material-github: [Browse all skills on GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins){ .md-button }
 
 **Other ways to use them:**
 
@@ -421,7 +421,7 @@ To remove the marketplace entirely:
 Make sure you've added the marketplace first:
 
 ```bash
-/plugin marketplace add jamesgray-ai/handsonai
+/plugin marketplace add jamesgray-ai/handsonai-plugins
 ```
 
 ### "Plugin not found"
@@ -482,7 +482,7 @@ If you've added the marketplace, skill files are on your machine at:
 You can also browse skill source files on GitHub. The [Plugin Marketplace](index.md) links each skill name directly to its source folder, or use this URL pattern:
 
 ```
-https://github.com/jamesgray-ai/handsonai/tree/main/plugins/<plugin-name>/skills/<skill-name>/
+https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins/<plugin-name>/skills/<skill-name>/
 ```
 
 ## Next Steps

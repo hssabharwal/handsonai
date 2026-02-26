@@ -18,7 +18,7 @@ These skills are plain-text Markdown files that work in any AI tool. Choose how 
 
     Download from GitHub and add to your platform's skill directory:
 
-    :material-github: [Browse on GitHub](https://github.com/jamesgray-ai/handsonai/tree/main/plugins/ai-registry){ .md-button }
+    :material-github: [Browse on GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins/ai-registry){ .md-button }
 
     Works with **Claude Code, Cursor, Codex CLI, Gemini CLI, VS Code Copilot**, and more. See [How to Add Skills to Your Platform](../../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for step-by-step instructions for each tool.
 

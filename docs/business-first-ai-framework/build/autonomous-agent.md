@@ -54,11 +54,11 @@ All building blocks are already included in the `business-first-ai` plugin — n
 
 | Building Block | Type | Role in Pipeline | Source |
 |-------|------|-----------------|--------|
-| `ai-productivity-researcher` | Agent | Finds documented case studies of companies using AI with quantified outcomes | [View on GitHub](https://github.com/jamesgray-ai/handsonai/blob/main/plugins/business-first-ai/agents/ai-productivity-researcher.md) |
-| `tech-executive-writer` | Agent | Writes the article for a business leadership audience | [View on GitHub](https://github.com/jamesgray-ai/handsonai/blob/main/plugins/business-first-ai/agents/tech-executive-writer.md) |
-| `hbr-editor` | Agent | Edits the draft against HBR editorial standards | [View on GitHub](https://github.com/jamesgray-ai/handsonai/blob/main/plugins/business-first-ai/agents/hbr-editor.md) |
-| `editing-hbr-articles` | Skill | Provides editorial criteria and cut/replace patterns for the editor | [View on GitHub](https://github.com/jamesgray-ai/handsonai/tree/main/plugins/business-first-ai/skills/editing-hbr-articles/) |
-| `hbr-publisher` | Agent | Formats the approved article as PDF and markdown with SEO metadata | [View on GitHub](https://github.com/jamesgray-ai/handsonai/blob/main/plugins/business-first-ai/agents/hbr-publisher.md) |
+| `ai-productivity-researcher` | Agent | Finds documented case studies of companies using AI with quantified outcomes | [View on GitHub](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/agents/ai-productivity-researcher.md) |
+| `tech-executive-writer` | Agent | Writes the article for a business leadership audience | [View on GitHub](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/agents/tech-executive-writer.md) |
+| `hbr-editor` | Agent | Edits the draft against HBR editorial standards | [View on GitHub](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/agents/hbr-editor.md) |
+| `editing-hbr-articles` | Skill | Provides editorial criteria and cut/replace patterns for the editor | [View on GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins/business-first-ai/skills/editing-hbr-articles/) |
+| `hbr-publisher` | Agent | Formats the approved article as PDF and markdown with SEO metadata | [View on GitHub](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/agents/hbr-publisher.md) |
 
 ## How It Works
 

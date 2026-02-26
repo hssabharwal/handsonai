@@ -43,8 +43,8 @@ Use deterministic automation when you have a task that:
 
 | Building Block | Type | Description | Source |
 |-------|------|-------------|--------|
-| `linkedin-prospect-research` | Prompt | Workflow that finds and qualifies 5 LinkedIn prospects against a buyer persona | [View on GitHub](https://github.com/jamesgray-ai/handsonai/blob/main/plugins/business-first-ai/prompts/linkedin-prospect-research.md) |
-| `buyer-persona-revenue-leader-rachel` | Prompt | Example buyer persona used as input to the research workflow | [View on GitHub](https://github.com/jamesgray-ai/handsonai/blob/main/plugins/business-first-ai/prompts/buyer-persona-revenue-leader-rachel.md) |
+| `linkedin-prospect-research` | Prompt | Workflow that finds and qualifies 5 LinkedIn prospects against a buyer persona | [View on GitHub](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/prompts/linkedin-prospect-research.md) |
+| `buyer-persona-revenue-leader-rachel` | Prompt | Example buyer persona used as input to the research workflow | [View on GitHub](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/prompts/buyer-persona-revenue-leader-rachel.md) |
 
 ## How It Works
 
@@ -96,8 +96,8 @@ You can swap in any buyer persona that follows a similar structure. The workflow
 
     This example uses two **standalone prompts** — the workflow and the buyer persona. Both are plain markdown files you can use with any AI tool that has web browsing.
 
-    1. Open the [linkedin-prospect-research prompt](https://github.com/jamesgray-ai/handsonai/blob/main/plugins/business-first-ai/prompts/linkedin-prospect-research.md) on GitHub
-    2. Open the [buyer persona](https://github.com/jamesgray-ai/handsonai/blob/main/plugins/business-first-ai/prompts/buyer-persona-revenue-leader-rachel.md) on GitHub
+    1. Open the [linkedin-prospect-research prompt](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/prompts/linkedin-prospect-research.md) on GitHub
+    2. Open the [buyer persona](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/prompts/buyer-persona-revenue-leader-rachel.md) on GitHub
     3. Copy the workflow prompt into Claude, ChatGPT, or Gemini (with web browsing enabled)
     4. Paste or attach the buyer persona as context
     5. The AI executes the workflow and produces the prospect report
