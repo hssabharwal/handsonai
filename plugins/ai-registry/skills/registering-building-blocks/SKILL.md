@@ -5,8 +5,7 @@ description: >
   (Skills, Agents, Prompts, Context MDs) in the Notion AI Building Blocks database. Triggers
   after skill creation, agent creation, prompt authoring, context MD updates, or when the user
   asks to register, add, or track a building block in Notion.
-user_invocable: true
-command: register-block
+user-invocable: true
 ---
 
 # Registering AI Building Blocks

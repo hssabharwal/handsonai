@@ -6,7 +6,7 @@ description: >
   Scans memory and conversation history, interviews the user about their work,
   then produces a prioritized opportunity report with structured workflow
   candidates ready for the Deconstruct step. This is Step 1 of the Business-First AI Framework.
-user_invocable: true
+user-invocable: true
 ---
 
 # Analyzing Workflows

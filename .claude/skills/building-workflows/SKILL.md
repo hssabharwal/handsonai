@@ -7,7 +7,7 @@ description: >
   configures agents, and produces a Building Block Spec for approval. Step 3.2 (Construct) generates
   platform artifacts after approval. Step 3.3 (Run) provides a run guide for deploying, executing,
   and testing the workflow. This is Step 3 of the Business-First AI Framework.
-user_invocable: true
+user-invocable: true
 ---
 
 # Workflow Build

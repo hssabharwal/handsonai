@@ -5,7 +5,7 @@ description: >
   process, or deeply analyze a workflow's steps, decisions, data flows, and failure modes.
   Interactively decomposes a workflow into a structured Workflow Definition using the 5-question
   framework. This is Step 2 of the Business-First AI Framework.
-user_invocable: true
+user-invocable: true
 ---
 
 # Workflow Deconstruction

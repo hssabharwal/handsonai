@@ -5,8 +5,7 @@ description: >
   process end-to-end, create a playbook, or explain how multiple workflows fit together.
   Writes Business Process Guide documentation that explains when, why, and how to execute a
   complete business process with its component workflows.
-user_invocable: true
-command: process-guide
+user-invocable: true
 ---
 
 # Writing Business Process Guides
