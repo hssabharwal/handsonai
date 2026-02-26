@@ -11,59 +11,19 @@ Built for **leaders, professionals, entrepreneurs, and founders** at the interse
 
 Practical guides, patterns, ready-made tools, and direct answers to move you from experimenting with AI to getting results. Browse by topic, work through a structured course, or jump straight to the tools.
 
-<div class="grid cards grid-3col" markdown>
+!!! tip "New here? Start here"
 
--   :material-compass-outline:{ .lg .middle } **Learn the Framework**
+    Begin with the [Business-First AI Framework](business-first-ai-framework/index.md) — a 3-step method for applying AI to your work. Then explore [Building Blocks](agentic-building-blocks/index.md), [Use Cases](use-cases/index.md), or [Tools & Resources](use-the-cookbook/index.md).
 
-    ---
+    **Use the cookbook where you work** — [connect the MCP server](mcp-server/index.md) to get instant answers inside Claude, ChatGPT, Cursor, or any MCP-compatible tool.
 
-    Start with the 3-step method for applying AI to your work. No code required.
-
-    [:octicons-arrow-right-24: Get started](business-first-ai-framework/index.md)
-
--   :material-book-open-variant:{ .lg .middle } **Explore by Topic**
-
-    ---
-
-    Browse building blocks, use cases, and platform guides at your own pace.
-
-    [:octicons-arrow-right-24: Browse topics](agentic-building-blocks/index.md)
-
--   :material-toolbox-outline:{ .lg .middle } **Get the Tools**
-
-    ---
-
-    Connect the MCP server, install agents & skills, or set up your builder stack.
-
-    [:octicons-arrow-right-24: See tools](use-the-cookbook/index.md)
-
-</div>
-
-<div class="grid cards" markdown>
-
--   :material-account-group:{ .lg .middle } **Hands-on Agentic AI for Leaders**
-
-    ---
-
-    From AI user to AI builder in 30 days. For leaders and professionals — no coding experience required.
-
-    [:octicons-arrow-right-24: Learn more](courses/leaders/index.md)
-
--   :material-wrench:{ .lg .middle } **Claude for Builders**
-
-    ---
-
-    From Claude user to Claude builder in 5 weeks. Build production-grade AI systems and ship applications.
-
-    [:octicons-arrow-right-24: Learn more](courses/builders/index.md)
-
-</div>
-
-> See [what others have built](what-people-built.md) with the cookbook.
+    **Learn with James** — explore [Agentic AI for Leaders](courses/leaders/index.md) or [Claude for Builders](courses/builders/index.md) to go from curious to capable in weeks.
 
 <!-- latest-updates -->
 
 ---
+
+> See [what others have built](what-people-built.md) with the cookbook.
 
 **If something here saved you time, sparked an idea, or helped you move faster — I'd love to hear about it.**
 
