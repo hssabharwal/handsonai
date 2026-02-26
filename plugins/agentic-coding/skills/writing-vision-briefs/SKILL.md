@@ -1,7 +1,7 @@
 ---
 name: writing-vision-briefs
 description: Use when a user has a fuzzy idea they want to explore before writing a formal PRD. Captures the essence of an idea as a Vision Brief — a structured, business-focused artifact that feeds directly into the feature-prd workflow.
-user_invocable: true
+user-invocable: true
 ---
 
 # Vision Brief Workflow

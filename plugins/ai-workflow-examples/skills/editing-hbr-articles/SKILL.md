@@ -6,8 +6,7 @@ description: >
   or mentions "HBR quality" or "publication ready". Makes prescriptive edits for clarity,
   structure, evidence quality, and executive voice. Targets feature articles and thought
   leadership pieces.
-user_invocable: true
-command: edit-article
+user-invocable: true
 ---
 
 # Editing HBR Articles

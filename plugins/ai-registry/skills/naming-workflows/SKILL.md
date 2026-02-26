@@ -5,8 +5,7 @@ description: >
   standardize workflow documentation, add a workflow to Notion, or structure workflow entries.
   Generates consistent, outcome-focused names and descriptions for business workflows and creates
   entries in the Notion Workflows database.
-user_invocable: true
-command: name-workflow
+user-invocable: true
 ---
 
 # Naming Workflows

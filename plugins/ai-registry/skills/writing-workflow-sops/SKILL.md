@@ -5,8 +5,7 @@ description: >
   create operating instructions, or capture how a workflow is executed. Writes Standard Operating
   Procedure documentation for workflows and saves to Notion workflow page bodies. Adapts template
   for Manual, Augmented, and Automated workflow types.
-user_invocable: true
-command: workflow-sop
+user-invocable: true
 ---
 
 # Writing Workflow SOPs

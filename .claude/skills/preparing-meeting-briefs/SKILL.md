@@ -5,8 +5,7 @@ description: >
   or companies before a call, or needs talking points for an upcoming conversation. Produces
   a structured meeting prep brief with attendee profiles, company snapshots, talking points,
   and suggested questions.
-user_invocable: true
-command: meeting-prep
+user-invocable: true
 ---
 
 # Preparing Meeting Briefs

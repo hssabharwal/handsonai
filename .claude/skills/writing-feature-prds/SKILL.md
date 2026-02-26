@@ -1,7 +1,7 @@
 ---
 name: writing-feature-prds
 description: Use when starting a new feature, defining requirements before implementation, or when the user says "new feature", "create a spec", "create a PRD", or "feature PRD".
-user_invocable: true
+user-invocable: true
 ---
 
 # Feature PRD Workflow

@@ -5,8 +5,7 @@ description: >
   to a remote repository, or back up local skills. Syncs Claude Agent Skills from
   ~/.claude/skills/ (local) to GitHub repository using git commands. Commits changes, pushes
   to remote, and updates Notion AI Building Blocks with GitHub URLs.
-user_invocable: true
-command: sync-skills
+user-invocable: true
 ---
 
 # Syncing Skills to GitHub
