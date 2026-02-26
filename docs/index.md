@@ -13,7 +13,7 @@ Practical guides, patterns, ready-made tools, and direct answers to move you fro
 
 !!! tip "New here? Start here"
 
-    Begin with the [Business-First AI Framework](business-first-ai-framework/index.md) — a 3-step method for applying AI to your work. Then explore [Building Blocks](agentic-building-blocks/index.md), [Use Cases](use-cases/index.md), or [Tools & Resources](use-the-cookbook/index.md).
+    **Begin with the [Business-First AI Framework](business-first-ai-framework/index.md)** — a 3-step method for applying AI to your work. Then explore [Building Blocks](agentic-building-blocks/index.md), [Use Cases](use-cases/index.md), or [Tools & Resources](use-the-cookbook/index.md).
 
     **Use the cookbook where you work** — [connect the MCP server](mcp-server/index.md) to get instant answers inside Claude, ChatGPT, Cursor, or any MCP-compatible tool.
 
