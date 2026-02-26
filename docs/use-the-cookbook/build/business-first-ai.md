@@ -15,7 +15,7 @@ These skills and agents are plain-text Markdown files that work in any AI tool. 
 
     Download from GitHub and add to your platform's skill directory:
 
-    :material-github: [Browse on GitHub](https://github.com/jamesgray-ai/handsonai/tree/main/plugins/business-first-ai){ .md-button }
+    :material-github: [Browse on GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins/business-first-ai){ .md-button }
 
     Works with **Claude Code, Cursor, Codex CLI, Gemini CLI, VS Code Copilot**, and more. See [How to Add Skills to Your Platform](../../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for step-by-step instructions for each tool.
 
@@ -272,4 +272,4 @@ The categories used during analysis: Prompt (single instruction), Context (refer
 They're in the [AI Workflow Examples](ai-workflow-examples.md) collection — agents for executive writing, editorial review, research, meeting prep, and AI news.
 
 **Do I need Claude Code for all of this?**
-No. These are plain-text Markdown files — download them from [GitHub](https://github.com/jamesgray-ai/handsonai/tree/main/plugins/business-first-ai) and add them to any AI tool. See [Get These Skills](#get-these-skills) for all the options, or check the [Platform Compatibility](#platform-compatibility) table for per-component details.
+No. These are plain-text Markdown files — download them from [GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins/business-first-ai) and add them to any AI tool. See [Get These Skills](#get-these-skills) for all the options, or check the [Platform Compatibility](#platform-compatibility) table for per-component details.

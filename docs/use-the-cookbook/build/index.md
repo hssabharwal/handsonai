@@ -5,7 +5,7 @@ description: Pre-built agents, skills, and prompts you can download and use in a
 
 # Agents & Skills
 
-A growing collection of ready-to-use **agents**, **skills**, and **prompts** that give your AI tool domain expertise it doesn't have out of the box. These are plain-text Markdown files — download from [GitHub](https://github.com/jamesgray-ai/handsonai/tree/main/plugins) and add to any AI tool, or install as Claude Code plugins. See [Using Plugins](using-plugins.md) for setup details.
+A growing collection of ready-to-use **agents**, **skills**, and **prompts** that give your AI tool domain expertise it doesn't have out of the box. These are plain-text Markdown files — download from [GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins) and add to any AI tool, or install as Claude Code plugins. See [Using Plugins](using-plugins.md) for setup details.
 
 ---
 

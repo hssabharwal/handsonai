@@ -120,7 +120,7 @@ This step has three parts:
 **1. Add the plugin marketplace.** Register the Hands-on AI marketplace so Claude Code knows where to find plugins. You only need to do this once:
 
 ```bash
-/plugin marketplace add jamesgray-ai/handsonai
+/plugin marketplace add jamesgray-ai/handsonai-plugins
 ```
 
 See the [Using Plugins](../use-the-cookbook/build/using-plugins.md) guide for the full walkthrough.

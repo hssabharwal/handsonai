@@ -82,7 +82,7 @@ This installs the skills automatically into your project's `.claude/skills/` dir
 
 **Option B: Download from GitHub**
 
-Browse the [plugins directory on GitHub](https://github.com/jamesgray-ai/handsonai/tree/main/plugins), find the skill folder you want, and download it. Each skill is a folder containing a `SKILL.md` file and an optional `references/` directory.
+Browse the [plugins directory on GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins), find the skill folder you want, and download it. Each skill is a folder containing a `SKILL.md` file and an optional `references/` directory.
 
 ### Step 2: Place them in your platform's skill directory
 

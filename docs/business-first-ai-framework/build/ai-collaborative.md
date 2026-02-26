@@ -43,9 +43,9 @@ Use AI collaborative workflows when the task:
 
 | Building Block | Type | Description | Source |
 |-------|------|-------------|--------|
-| `meeting-prep-researcher` | Agent | Researches attendees and companies, produces a meeting prep brief | [View on GitHub](https://github.com/jamesgray-ai/handsonai/blob/main/plugins/business-first-ai/agents/meeting-prep-researcher.md) |
-| `preparing-meeting-briefs` | Skill | Step-by-step research workflow for the agent to follow | [View on GitHub](https://github.com/jamesgray-ai/handsonai/tree/main/plugins/business-first-ai/skills/preparing-meeting-briefs/) |
-| `meeting-prep-quick` | Prompt | Portable one-shot prompt for quick meeting prep in any AI tool | [View on GitHub](https://github.com/jamesgray-ai/handsonai/blob/main/plugins/business-first-ai/prompts/meeting-prep-quick.md) |
+| `meeting-prep-researcher` | Agent | Researches attendees and companies, produces a meeting prep brief | [View on GitHub](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/agents/meeting-prep-researcher.md) |
+| `preparing-meeting-briefs` | Skill | Step-by-step research workflow for the agent to follow | [View on GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins/business-first-ai/skills/preparing-meeting-briefs/) |
+| `meeting-prep-quick` | Prompt | Portable one-shot prompt for quick meeting prep in any AI tool | [View on GitHub](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/prompts/meeting-prep-quick.md) |
 
 ## How It Works
 
@@ -71,7 +71,7 @@ graph LR
 
     Use the **meeting-prep-quick** prompt for a lightweight, one-shot version in any AI tool.
 
-    1. Open the [meeting-prep-quick prompt](https://github.com/jamesgray-ai/handsonai/blob/main/plugins/business-first-ai/prompts/meeting-prep-quick.md) on GitHub
+    1. Open the [meeting-prep-quick prompt](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/prompts/meeting-prep-quick.md) on GitHub
     2. Copy the prompt from the code block
     3. Paste it into Claude, ChatGPT, Gemini, or M365 Copilot
     4. Fill in the meeting details and send
