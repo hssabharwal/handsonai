@@ -15,7 +15,13 @@ howto_steps:
 
 # Git Installation Guide
 
-Quick reference for installing Git on your local machine.
+## What Is Git?
+
+Git is a version control tool — it tracks every change you make to your files over time. Think of it like a detailed undo history that never expires. You can save a snapshot of your work (called a *commit*), go back to any previous version, and see exactly what changed and when.
+
+For AI development, Git is essential for two reasons. First, AI coding tools use it behind the scenes — every time an AI assistant edits a file, that change gets tracked as a commit, giving you a clear record of what the AI did and letting you undo anything you don't want. Second, the prompts, skills, and agents you create are valuable building blocks that power your AI workflows. Git ensures you never lose them — every version is saved, and you can always recover or refine what you've built.
+
+This guide installs Git on your machine and sets up your identity so your work is properly attributed.
 
 ## Check If Git Is Already Installed
 
@@ -40,7 +46,7 @@ This installs Git along with other developer tools.
 
 ### Option 2: Homebrew
 
-If you have Homebrew installed:
+Homebrew is a popular tool for installing developer software on macOS. If you don't have it, use Option 1 above.
 
 ```bash
 brew install git

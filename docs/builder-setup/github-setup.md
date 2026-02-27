@@ -11,7 +11,13 @@ howto_steps:
 
 # GitHub Setup Guide
 
-Quick reference for setting up GitHub for your projects.
+## What Is GitHub?
+
+GitHub is a website where people store and share code projects. If Git tracks your changes locally (like a save history on your computer), GitHub is where that history lives in the cloud — backed up, shareable, and accessible from anywhere.
+
+As you build with AI, you'll create prompts, skills, agents, and project files that become the foundation of your workflows. GitHub is where those files live in the cloud — backed up, versioned, and accessible from any machine. Think of it as your portfolio and safety net in one place. Your files are stored in *repositories* (project folders that Git tracks), and you work with them by *cloning* — making a local copy on your computer.
+
+This guide walks you through creating a GitHub account and cloning your first repository.
 
 ## Prerequisites
 

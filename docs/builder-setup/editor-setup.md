@@ -17,7 +17,13 @@ howto_steps:
 
 # Code Editor Setup Guide
 
-Quick reference for installing your code editor.
+## What Is a Code Editor?
+
+A code editor is a specialized text editor designed for working with code. Think of it like Microsoft Word, but built for files that contain instructions rather than documents. Your editor gives you a file browser, a place to read and write code, and a built-in terminal — all in one window.
+
+For AI development, your editor becomes your main workspace. You'll open projects, read files that AI tools create or modify, and run terminal commands without switching windows. Many editors now have AI built in or support AI extensions that let your coding assistant read and edit files alongside you.
+
+This guide covers popular options — **Cursor**, **VS Code**, **Windsurf**, and others — and walks through installing AI coding extensions for whichever platforms you use.
 
 ## Choose Your Editor
 
@@ -78,7 +84,7 @@ You can also open it from the menu: **Terminal > New Terminal**.
 
 ## Install AI Extensions
 
-After installing your editor, add AI coding extensions for the platforms you have a **paid subscription** to. You don't need all of these — just install the one(s) that match your accounts.
+After installing your editor, add AI coding extensions (small add-ons that give your editor new capabilities) for the platforms you have a **paid subscription** to. You don't need all of these — just install the one(s) that match your accounts.
 
 ### Claude Code
 

@@ -15,7 +15,13 @@ howto_steps:
 
 # Voice-to-Text Setup Guide
 
-Quick reference for setting up voice input for hands-free AI collaboration.
+## Why Voice Input?
+
+Writing good AI prompts often means describing complex ideas, explaining context, or thinking through a problem out loud. Voice input lets you speak those thoughts naturally — it's faster than typing and often more detailed, because talking feels more like having a conversation than writing a document.
+
+This is especially useful when giving an AI assistant rich context: *"I'm working on a marketing email for next week's product launch, and I need three subject line options that emphasize urgency..."* — prompts like that flow naturally from speech but take effort to type.
+
+This guide covers two options: **Wispr Flow** (dictates anywhere on your computer) and **Claude Desktop Quick Entry** (speaks directly to Claude on macOS).
 
 ## Option 1: Wispr Flow
 

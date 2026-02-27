@@ -15,7 +15,13 @@ howto_steps:
 
 # CLI Setup Guide
 
-Quick reference for setting up developer CLIs in your terminal. Each section covers one CLI — install whichever ones you need.
+## What Is a CLI?
+
+A CLI (command-line interface) is a program you control by typing commands in your terminal instead of clicking buttons. AI coding CLIs work this way because they need to read your files, write code, and run commands — things a browser tab or chatbot can't do.
+
+For example, when you type `claude` in your terminal, you start a conversation where the AI can see your actual project files, write code, and run commands directly on your computer. This is fundamentally different from using an AI chatbot in a browser — a CLI works *with* your files, not just *about* them.
+
+This guide covers Claude Code, OpenAI Codex CLI, and Gemini CLI. Install whichever ones match your subscriptions.
 
 ## Prerequisites
 
@@ -193,6 +199,8 @@ npm install -g @openai/codex
 ```
 
 ### Authenticate
+
+An API key is a private password that connects this tool to your OpenAI account. Get yours from [platform.openai.com/api-keys](https://platform.openai.com/api-keys). You'll need a paid OpenAI account.
 
 ```bash
 export OPENAI_API_KEY="your-api-key"

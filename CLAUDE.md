@@ -27,8 +27,7 @@ Hands-On AI (handsonai.info) — the consolidated site for James Gray's AI cours
 - `docs/_templates/` - Content templates for contributors
 - `.claude/agents/` - Claude Code subagent definitions (local/development copies)
 - `.claude/skills/` - Claude Code skill definitions (local/development copies)
-- `.claude-plugin/` - Removed — marketplace manifest now lives in `jamesgray-ai/handsonai-plugins` repo
-- `plugins/` - Distributable plugin bundles (agents + skills grouped by theme)
+- `plugins/` in this repo is the **staging** copy; the distributable marketplace lives in [`jamesgray-ai/handsonai-plugins`](https://github.com/jamesgray-ai/handsonai-plugins)
 - `mcp-server/migrations/` - Cloudflare D1 schema migrations
 - `mcp-server/scripts/analytics-query.ts` - CLI for querying MCP analytics via Cloudflare REST API
 - `scripts/` - Wrapper scripts for scheduled subagents

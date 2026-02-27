@@ -164,8 +164,8 @@ plugins:
         plugins/agentic-coding.md: use-the-cookbook/build/agentic-coding.md
         # AI Engineering overview → Product & Engineering
         ai-engineering/index.md: product-engineering/index.md
-        # MCP Server → current location
-        mcp-server.md: mcp-server/index.md
+        # MCP Server redirects
+        # NOTE: mcp-server.md → mcp-server/index.md would conflict (same output path), so omitted
         use-the-cookbook/ask/index.md: mcp-server/index.md
         # Course syllabus pages → consolidated course pages
         courses/builders/syllabus.md: courses/builders/index.md
@@ -377,13 +377,15 @@ nav:
       - Resources: platforms/openai/topics/resources.md
   - Builder Stack Setup:
     - builder-setup/index.md
-    - Terminal Basics: builder-setup/terminal-basics.md
-    - AI Code Editor: builder-setup/editor-setup.md
-    - Git: builder-setup/git-install.md
-    - GitHub: builder-setup/github-setup.md
-    - CLIs: builder-setup/cli.md
-    - AI Registry: builder-setup/notion-registry-setup.md
-    - Voice to Text: builder-setup/voice-to-text-setup.md
+    - Step 1 — AI Platforms: builder-setup/ai-platforms.md
+    - Steps 2-4 — Platform Config: builder-setup/ai-platform-config.md
+    - Step 5 — Terminal Basics: builder-setup/terminal-basics.md
+    - Step 6 — AI Code Editor: builder-setup/editor-setup.md
+    - Step 7 — Git: builder-setup/git-install.md
+    - Step 8 — GitHub: builder-setup/github-setup.md
+    - Step 9 — CLIs: builder-setup/cli.md
+    - Step 10 — Voice to Text: builder-setup/voice-to-text-setup.md
+    - Step 13 — AI Registry: builder-setup/notion-registry-setup.md
   - Product & Engineering:
     - product-engineering/index.md
     - Product:
