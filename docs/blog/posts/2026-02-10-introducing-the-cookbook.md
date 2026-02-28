@@ -69,7 +69,7 @@ As I learn, I codify that knowledge into AI agents and skills — pre-built tool
 
 The cookbook's [Plugin Marketplace](../../use-the-cookbook/build/index.md) is where these live. The Business-First AI plugin alone packages 8 agents, 6 skills, and 3 prompts that implement the entire [Business-First AI Framework](../../business-first-ai-framework/index.md) as executable tools. Tell it "help me find where AI can improve my workflows" and it runs a structured audit. Tell it "deconstruct my client onboarding process" and it walks you through the full analysis.
 
-There's also a [Builder Stack Setup Guide](../../builder-setup/index.md). This is where I see people get stuck — the tools that let you build and run real AI workflows are unfamiliar to most people. Terminal, Git, AI coding CLIs — many of these will be new. But they're what unlock the ability to go from idea to production. The guide walks you through 7 steps, roughly 75 minutes, with checkboxes to track your progress. One VP of Product used it to go from zero terminal experience to a fully configured AI builder stack in a single afternoon.
+There's also a [Builder Tools Setup Guide](../../builder-setup/index.md). This is where I see people get stuck — the tools that let you build and run real AI workflows are unfamiliar to most people. Terminal, Git, AI coding CLIs — many of these will be new. But they're what unlock the ability to go from idea to production. The guide walks you through each tool with checkboxes to track your progress. One VP of Product used it to go from zero terminal experience to a fully configured builder toolkit in a single afternoon.
 
 And the cookbook is full of patterns, walkthroughs, and direct answers to the questions that come up most often — from "[what is a system prompt?](../../agentic-building-blocks/prompts/questions/what-is-a-system-prompt.md)" to "[how do I schedule an AI agent to run automatically?](../../platforms/claude/subagents/scheduling-subagents.md)"
 
@@ -97,6 +97,6 @@ Or jump to what interests you:
 - [Use Cases](../../use-cases/index.md)
 - [Agentic Building Blocks](../../agentic-building-blocks/index.md)
 - [Plugin Marketplace](../../use-the-cookbook/build/index.md)
-- [Builder Stack Setup Guide](../../builder-setup/index.md)
+- [Builder Tools Setup Guide](../../builder-setup/index.md)
 
 *Originally published on [Graymatter](https://graymatter.jamesgray.ai).*

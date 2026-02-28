@@ -112,7 +112,7 @@ Use the email address you plan to use for your GitHub account (set up in the nex
 ## Next Steps
 
 - Set up your GitHub account (see [GitHub Setup Guide](github-setup.md))
-- Install AI coding CLIs (see [CLI Setup Guide](cli.md))
+- Set up your AI platform (see [Platforms](../platforms/index.md))
 
 ## Resources
 

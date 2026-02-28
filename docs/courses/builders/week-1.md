@@ -1,9 +1,9 @@
 ---
-title: Week 1 - Configure AI Builder Stack
+title: Week 1 - Configure AI Builder Tools
 description: Set up your development environment for building with Claude.
 ---
 
-# Week 1: Configure AI Builder Stack
+# Week 1: Configure AI Builder Tools
 
 Get your complete development environment set up for building with Claude.
 
@@ -23,7 +23,7 @@ Set up Claude Code for AI-assisted development in your editor and terminal.
 
 **Setup Guide:**
 
-- [CLI Setup Guide](../../builder-setup/cli.md) — Install Claude Code CLI and configure your environment
+- [Getting Started with Claude](../../platforms/claude/getting-started/index.md) — Install Claude Code CLI and configure your environment
 
 ## Lesson: Implement Voice-to-Text for Hands-Free AI Collaboration
 
@@ -56,7 +56,7 @@ Configure Claude to work effectively with your context.
 **Setup Guides:**
 
 - [Claude Projects Setup](../../platforms/claude/projects/claude-projects-setup.md) — Organize your AI work with projects
-- [Claude Personalization Setup](../../platforms/claude/getting-started/claude-personalization-setup.md) — Configure Claude to understand your context
+- [Getting Started with Claude](../../platforms/claude/getting-started/index.md) — Set up Claude, personalization, and memory
 
 ## Questions?
 

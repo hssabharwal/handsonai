@@ -13,7 +13,7 @@ Set up your Claude Code subagents to run automatically on a schedule—like a re
 
 ## Prerequisites
 
-- Claude Code installed and authenticated (see [CLI Setup Guide](../../../builder-setup/cli.md))
+- Claude Code installed and authenticated (see [Getting Started with Claude](../getting-started/index.md#3-install-claude-code))
 - **A subagent already created** with its configuration in a markdown file
 - PowerShell access (Windows)
 

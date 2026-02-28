@@ -47,7 +47,7 @@ Plugins are plain-text Markdown files — there's no compiled code or hidden log
 
 ### Prerequisites
 
-- **Claude Code** installed and working ([CLI Setup Guide](../../builder-setup/cli.md))
+- **Claude Code** installed and working ([Getting Started with Claude](../../platforms/claude/getting-started/index.md#3-install-claude-code))
 - An active **Claude Pro, Max, Team, or Enterprise** subscription (plugins are not available on the free plan)
 
 ### Step 1: Add the Marketplace

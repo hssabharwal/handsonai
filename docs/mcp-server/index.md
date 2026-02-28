@@ -22,7 +22,7 @@ The MCP server gives your AI assistant access to:
 - **Browse** sections like Building Blocks, Framework, Use Cases, and more
 - **Deep dive** into building blocks or framework steps with all sub-pages
 - **Q&A lookup** with quick answers from the cookbook's question pages
-- **Setup guides** for every tool in the Builder Stack
+- **Setup guides** for every tool in the Builder Tools
 
 ## Connect from Claude
 
@@ -163,7 +163,7 @@ Any MCP client that supports Streamable HTTP transport can connect:
 | `get_building_block` | Get a building block and all its sub-pages (prompts, agents, mcp, etc.) |
 | `get_framework_step` | Get a framework step and all its sub-pages (discover, deconstruct, build) |
 | `list_questions` | List all Q&A pages with question text and short answers |
-| `get_setup_guide` | Get a Builder Stack setup guide (terminal, editor, git, claude-code, etc.) |
+| `get_setup_guide` | Get a Builder Tools setup guide (terminal, editor, git, claude-code, etc.) |
 
 ## Example Prompts
 

@@ -106,11 +106,51 @@ Claude Code handles the Git commands for you.
 
     > I'm trying to clone a GitHub repository in [Cursor / VS Code] on [Mac / Windows] and getting this error: [paste the error message]. I have Git installed and a GitHub account. What should I try?
 
+## 3. Install GitHub CLI (Optional)
+
+The GitHub CLI (`gh`) lets you manage pull requests, issues, and repos from your terminal — no browser needed.
+
+### macOS
+
+```bash
+brew install gh
+```
+
+### Windows
+
+```powershell
+winget install --id GitHub.cli
+```
+
+### Linux (Debian/Ubuntu)
+
+```bash
+sudo apt install gh
+```
+
+For other Linux distributions, see the [official install instructions](https://github.com/cli/cli/blob/trunk/docs/install_linux.md).
+
+### Authenticate
+
+```bash
+gh auth login
+```
+
+Follow the browser prompts to connect your GitHub account.
+
+### Verify
+
+```bash
+gh --version
+```
+
+**Official docs:** [GitHub CLI manual](https://cli.github.com/manual/)
+
 ## Next Steps
 
-- Install AI coding CLIs to manage Git operations with natural language (see [CLI Setup Guide](cli.md))
 - Try cloning a public repository to practice the workflow
 
 ## Resources
 
 - [GitHub Docs](https://docs.github.com)
+- [GitHub CLI manual](https://cli.github.com/manual/)

@@ -7,14 +7,14 @@ description: Guides for Anthropic's Claude models, Claude Code, and MCP integrat
 
 Everything you need to work with Anthropic's Claude—from initial setup to advanced automation.
 
-## Getting Started
+!!! tip "New to Claude?"
+    Start with the [Getting Started with Claude](getting-started/index.md) checklist — it walks you through account setup, app installation, personalization, memory, and MCP connections.
 
-Set up your Claude environment:
+## Getting Started
 
 | Guide | Description |
 |-------|-------------|
-| [CLI Setup Guide](../../builder-setup/cli.md) | Install Claude Code CLI, Codex CLI, Gemini CLI, and GitHub CLI |
-| [Claude Personalization](getting-started/claude-personalization-setup.md) | Configure Claude to understand your context |
+| [Getting Started with Claude](getting-started/index.md) | Complete setup checklist — account, apps, personalization, memory, MCP |
 
 ## Projects
 

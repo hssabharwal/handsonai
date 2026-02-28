@@ -50,7 +50,7 @@ Sort changes into these **reader-facing sections**. Use the commit messages AND 
 
 ### Rewriting Rules
 
-- **Translate for readers**: "Add builder-setup guide" → "Added a step-by-step Builder Stack Setup guide with installation instructions for Terminal, Git, VS Code, and Claude Code"
+- **Translate for readers**: "Add builder-setup guide" → "Added a step-by-step Builder Tools Setup guide with installation instructions for Terminal, Git, VS Code, and Claude Code"
 - **Drop internal-only changes**: Skip commits that only touch CI workflows (`.github/`), scripts (`scripts/`), `.gitignore`, `.claude/agents/`, or other non-user-facing files. If ALL commits are internal-only, output "No user-facing changes since last release — skipping." and stop.
 - **Combine related commits**: If multiple commits update the same page or feature, combine them into one bullet.
 - **Omit empty sections**: Only include sections that have items.
@@ -112,7 +112,7 @@ Changelog draft: outputs/changelog-draft-YYYY-MM-DD.md
 ```markdown
 ### New Guides
 
-- Added the **Builder Stack Setup Guide** — a 7-step checklist for installing Terminal, Git, VS Code, Claude Code, and other developer tools
+- Added the **Builder Tools Setup Guide** — a 7-step checklist for installing Terminal, Git, VS Code, Claude Code, and other developer tools
 - Added **Voice-to-Text Setup** guide for hands-free AI workflows
 
 ### Updated Content
@@ -123,7 +123,7 @@ Changelog draft: outputs/changelog-draft-YYYY-MM-DD.md
 ### Site Improvements
 
 - Added styled checkboxes to setup guide checklists
-- Improved navigation with "Step N —" prefixes in the Builder Stack Setup section
+- Improved navigation with "Step N —" prefixes in the Builder Tools Setup section
 ```
 
 ## Important Notes

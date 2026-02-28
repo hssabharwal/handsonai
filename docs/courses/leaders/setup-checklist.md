@@ -16,10 +16,10 @@ Everything you need to set up before Session 1. Work through the steps in order 
 
 | Step | What | Time | Status |
 |------|------|------|--------|
-| 1 | [AI Platform Accounts + Apps](#step-1-ai-platform-accounts-apps) | ~15 min | Required |
+| 1 | [AI Platform Account + Apps](#step-1-ai-platform-account-apps) | ~15 min | Required |
 | 2 | [Personalization / Custom Instructions](#step-2-personalization-custom-instructions) | ~15 min | Recommended |
-| 3 | [Memory Systems](#step-3-memory-systems) | ~10 min | Recommended |
-| 4 | [MCP Connections](#step-4-mcp-connections) | ~15 min | Recommended |
+| 3 | [Memory](#step-3-memory) | ~10 min | Recommended |
+| 4 | [Connections (MCP / Integrations)](#step-4-connections-mcp-integrations) | ~15 min | Recommended |
 
 ### Part 2: Builder Tools (~90 min)
 
@@ -29,28 +29,34 @@ Everything you need to set up before Session 1. Work through the steps in order 
 | 6 | [Code Editor + Extensions](#step-6-code-editor-extensions) | ~15 min | Required |
 | 7 | [Git](#step-7-git) | ~10 min | Required |
 | 8 | [GitHub](#step-8-github) | ~15 min | Required |
-| 9 | [AI Coding CLIs](#step-9-ai-coding-clis) | ~15 min | Recommended |
-| 10 | [Voice to Text](#step-10-voice-to-text) | ~10 min | Recommended |
-| 11 | [Hands-on AI Skills](#step-11-hands-on-ai-skills) | ~10 min | Recommended |
-| 12 | [Hands-on AI MCP Server](#step-12-hands-on-ai-mcp-server) | ~5 min | Recommended |
+| 9 | [Voice to Text](#step-9-voice-to-text) | ~10 min | Recommended |
+| 10 | [Hands-on AI Skills](#step-10-hands-on-ai-skills) | ~10 min | Recommended |
+| 11 | [Hands-on AI MCP Server](#step-11-hands-on-ai-mcp-server) | ~5 min | Recommended |
 
 ### Part 3: AI Workflow Management (~20 min)
 
 | Step | What | Time | Status |
 |------|------|------|--------|
-| 13 | [AI Registry Setup](#step-13-ai-registry-setup) | ~20 min | Recommended |
+| 12 | [AI Registry Setup](#step-12-ai-registry-setup) | ~20 min | Recommended |
 
 ---
 
 ## Part 1 — AI Platform Setup
 
-These steps set up your AI platform accounts and configure them for the best experience in the course. You only need **one** platform set up — use whichever you prefer. Each step has a detailed guide — follow the link, complete the setup, then come back here and check the box.
+These steps set up your AI platform accounts and configure them for the best experience in the course. You only need **one** platform set up — use whichever you prefer. Each platform has a Getting Started checklist that covers all four steps below:
 
-### Step 1: AI Platform Accounts + Apps
+| Platform | Getting Started Guide |
+|----------|----------------------|
+| Claude (Anthropic) | [Getting Started with Claude](../../platforms/claude/getting-started/index.md) |
+| OpenAI (ChatGPT + Codex) | [Getting Started with OpenAI](../../platforms/openai/getting-started/index.md) |
+| Gemini (Google) | [Getting Started with Gemini](../../platforms/google-gemini/getting-started/index.md) |
+| M365 Copilot (Microsoft) | [Getting Started with M365 Copilot](../../platforms/m365-copilot/getting-started/index.md) |
 
-**What:** Create an account on at least one AI platform with a paid subscription, then install all available apps (web, desktop, mobile). Most students use multiple paid platforms to maximize their learning.
+Pick your platform(s), open the Getting Started guide, and work through the steps below. Each guide has the platform-specific instructions.
 
-[:octicons-arrow-right-24: Go to AI Platforms guide](../../builder-setup/ai-platforms.md)
+### Step 1: AI Platform Account + Apps
+
+**What:** Create an account with a paid subscription and install all available apps (web, desktop, mobile).
 
 - [ ] I have a paid AI platform account and can start conversations
 - [ ] I've installed the desktop and mobile apps for my platform(s)
@@ -62,9 +68,7 @@ These steps set up your AI platform accounts and configure them for the best exp
 
 ### Step 2: Personalization / Custom Instructions
 
-**What:** Maximize performance by telling your AI platform about yourself so every conversation starts with context about you.
-
-[:octicons-arrow-right-24: Go to Platform Configuration guide — Personalization](../../builder-setup/ai-platform-config.md#step-2-personalization-custom-instructions)
+**What:** Tell your AI platform about yourself so every conversation starts with context about your role, industry, and preferences.
 
 - [ ] I've added personalization / custom instructions to my AI platform
 
@@ -73,11 +77,9 @@ These steps set up your AI platform accounts and configure them for the best exp
 
 ---
 
-### Step 3: Memory Systems
+### Step 3: Memory
 
 **What:** Enable memory so your AI platform remembers context across conversations.
-
-[:octicons-arrow-right-24: Go to Platform Configuration guide — Memory](../../builder-setup/ai-platform-config.md#step-3-memory-systems)
 
 - [ ] Memory is enabled on my AI platform
 
@@ -86,13 +88,11 @@ These steps set up your AI platform accounts and configure them for the best exp
 
 ---
 
-### Step 4: MCP Connections
+### Step 4: Connections (MCP / Integrations)
 
-**What:** Connect your AI tool to external applications and services required for your workflows.
+**What:** Connect your AI platform to external tools and data sources — MCP servers, connectors, extensions, or connected apps.
 
-[:octicons-arrow-right-24: Go to Platform Configuration guide — MCP](../../builder-setup/ai-platform-config.md#step-4-mcp-connections-optional)
-
-- [ ] I've connected at least one external tool or MCP server
+- [ ] I've connected at least one external tool or MCP server (optional)
 
 ??? tip "Stuck? Ask AI for help"
     > I'm trying to connect [tool name] to [ChatGPT / Claude / Gemini] and running into this issue: [describe what's happening]. What should I check?
@@ -159,20 +159,7 @@ These steps install the developer tools you'll use throughout the course. Each s
 
 ---
 
-### Step 9: AI Coding CLIs
-
-**What:** Install and authenticate the CLI tool for your platform (e.g., Claude Code, Gemini CLI, or equivalent).
-
-[:octicons-arrow-right-24: Go to CLI Setup guide](../../builder-setup/cli.md)
-
-- [ ] I have at least one AI coding CLI installed and can start a conversation in my terminal
-
-??? tip "Stuck? Ask AI for help"
-    > I'm trying to install [Claude Code / Codex CLI / Gemini CLI] on [Mac / Windows] and getting this error: [paste error]. What should I try next?
-
----
-
-### Step 10: Voice to Text
+### Step 9: Voice to Text
 
 **What:** Configure system voice input or install a dedicated voice-to-text tool (Wispr Flow recommended).
 
@@ -185,11 +172,11 @@ These steps install the developer tools you'll use throughout the course. Each s
 
 ---
 
-### Step 11: Hands-on AI Skills
+### Step 10: Hands-on AI Skills
 
 **What:** Supercharge your work with agent skills that help you build faster. On Claude (Cowork and Claude Code), you can access packaged skills and agents via plugins. For other platforms (Cursor, Codex CLI, Gemini CLI, VS Code Copilot), you can download skills from the [GitHub repo](https://github.com/jamesgray-ai/handsonai-plugins) and add them manually.
 
-[:octicons-arrow-right-24: Go to Skills Setup guide](../../builder-setup/index.md#step-11-hands-on-ai-skills) · [:octicons-arrow-right-24: How to Add Skills to Your Platform](../../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform)
+[:octicons-arrow-right-24: Go to Skills Setup guide](../../builder-setup/index.md#hands-on-ai-skills) · [:octicons-arrow-right-24: How to Add Skills to Your Platform](../../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform)
 
 - [ ] Plugin marketplace registered (`/plugin marketplace add jamesgray-ai/handsonai-plugins`)
 - [ ] Business-First AI plugin installed (`/plugin install business-first-ai@handsonai`)
@@ -199,7 +186,7 @@ These steps install the developer tools you'll use throughout the course. Each s
 
 ---
 
-### Step 12: Hands-on AI MCP Server
+### Step 11: Hands-on AI MCP Server
 
 **What:** Access the Hands-on AI knowledge base where you do your work by adding a connector in your AI tool.
 
@@ -216,7 +203,7 @@ These steps install the developer tools you'll use throughout the course. Each s
 
 Keeping track of your workflows and the AI building blocks that power them is essential to change management and scaling your operations.
 
-### Step 13: AI Registry Setup
+### Step 12: AI Registry Setup
 
 **What:** Get a free Notion account (or other database system), duplicate the AI Registry template, and connect Notion to your AI tool.
 

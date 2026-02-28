@@ -145,7 +145,7 @@ As you build, two background practices keep your work organized and recoverable:
 These aren't separate steps — they're part of the rhythm of building. Each time you finish a building block in 3.2 Construct: **test it, register it, commit it.**
 
 !!! tip "Need to set up these tools?"
-    The [Builder Stack Setup](../../builder-setup/index.md) guide walks you through everything you need — an AI code editor ([Step 2](../../builder-setup/editor-setup.md)), Git ([Step 3](../../builder-setup/git-install.md)), GitHub ([Step 4](../../builder-setup/github-setup.md)), and the AI Registry ([Step 6](../../builder-setup/notion-registry-setup.md)). If you haven't set these up yet, that guide has you covered.
+    The [Builder Tools Setup](../../builder-setup/index.md) guide walks you through everything you need — an AI code editor ([Step 2](../../builder-setup/editor-setup.md)), Git ([Step 3](../../builder-setup/git-install.md)), GitHub ([Step 4](../../builder-setup/github-setup.md)), and the AI Registry ([Step 6](../../builder-setup/notion-registry-setup.md)). If you haven't set these up yet, that guide has you covered.
 
 ## Quick Reference
 

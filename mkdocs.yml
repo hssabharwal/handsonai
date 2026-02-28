@@ -123,10 +123,15 @@ plugins:
         fundamentals/agents-and-tools/resources.md: agentic-building-blocks/agents/resources.md
         fundamentals/prompt-engineering/README.md: agentic-building-blocks/prompts/prompt-engineering/index.md
         fundamentals/prompt-engineering/resources.md: agentic-building-blocks/prompts/prompt-engineering/resources.md
+        # Builder setup platform pages → Platforms section
+        builder-setup/ai-platforms.md: platforms/index.md
+        builder-setup/ai-platform-config.md: platforms/index.md
+        builder-setup/cli.md: platforms/index.md
+        platforms/claude/getting-started/claude-personalization-setup.md: platforms/claude/getting-started/index.md
         # Fundamentals builder setup → new top-level builder-setup
         fundamentals/developer-setup/terminal-basics.md: builder-setup/terminal-basics.md
-        fundamentals/developer-setup/claude-code-install.md: builder-setup/cli.md
-        builder-setup/claude-code-install.md: builder-setup/cli.md
+        fundamentals/developer-setup/claude-code-install.md: platforms/claude/getting-started/index.md
+        builder-setup/claude-code-install.md: platforms/claude/getting-started/index.md
         fundamentals/developer-setup/editor-setup.md: builder-setup/editor-setup.md
         fundamentals/developer-setup/git-install.md: builder-setup/git-install.md
         fundamentals/developer-setup/github-setup.md: builder-setup/github-setup.md
@@ -334,8 +339,7 @@ nav:
     - Overview: platforms/index.md
     - Claude:
       - Overview: platforms/claude/index.md
-      - Getting Started:
-        - Claude Personalization: platforms/claude/getting-started/claude-personalization-setup.md
+      - Getting Started: platforms/claude/getting-started/index.md
       - Projects:
         - Claude Projects: platforms/claude/projects/claude-projects-setup.md
       - Agents:
@@ -354,6 +358,7 @@ nav:
       - Resources: platforms/claude/topics/resources.md
     - Google Gemini:
       - Overview: platforms/google-gemini/index.md
+      - Getting Started: platforms/google-gemini/getting-started/index.md
       - Agents:
         - Building Agents on Google: platforms/google-gemini/agents/building-agents.md
       - Questions: platforms/google-gemini/questions/README.md
@@ -362,6 +367,7 @@ nav:
       - Resources: platforms/google-gemini/topics/resources.md
     - M365 Copilot:
       - Overview: platforms/m365-copilot/index.md
+      - Getting Started: platforms/m365-copilot/getting-started/index.md
       - Agents:
         - Building Agents on M365 Copilot: platforms/m365-copilot/agents/building-agents.md
       - Topics:
@@ -369,23 +375,21 @@ nav:
       - Resources: platforms/m365-copilot/topics/resources.md
     - OpenAI:
       - Overview: platforms/openai/index.md
+      - Getting Started: platforms/openai/getting-started/index.md
       - Agents:
         - Building Agents on OpenAI: platforms/openai/agents/building-agents.md
       - Questions: platforms/openai/questions/README.md
       - Topics:
         - Overview: platforms/openai/topics/README.md
       - Resources: platforms/openai/topics/resources.md
-  - Builder Stack Setup:
+  - Builder Tools Setup:
     - builder-setup/index.md
-    - Step 1 — AI Platforms: builder-setup/ai-platforms.md
-    - Steps 2-4 — Platform Config: builder-setup/ai-platform-config.md
-    - Step 5 — Terminal Basics: builder-setup/terminal-basics.md
-    - Step 6 — AI Code Editor: builder-setup/editor-setup.md
-    - Step 7 — Git: builder-setup/git-install.md
-    - Step 8 — GitHub: builder-setup/github-setup.md
-    - Step 9 — CLIs: builder-setup/cli.md
-    - Step 10 — Voice to Text: builder-setup/voice-to-text-setup.md
-    - Step 13 — AI Registry: builder-setup/notion-registry-setup.md
+    - Terminal Basics: builder-setup/terminal-basics.md
+    - AI Code Editor: builder-setup/editor-setup.md
+    - Git: builder-setup/git-install.md
+    - GitHub: builder-setup/github-setup.md
+    - Voice to Text: builder-setup/voice-to-text-setup.md
+    - AI Registry: builder-setup/notion-registry-setup.md
   - Product & Engineering:
     - product-engineering/index.md
     - Product:
