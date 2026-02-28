@@ -17,7 +17,7 @@ Hands-On AI (handsonai.info) — the consolidated site for James Gray's AI cours
 - `docs/use-the-cookbook/` - Three consumption modes: Ask (MCP Server), Build (Plugins), Learn (Courses)
 - `docs/mcp-server/` - MCP server connection guide (connect from Claude, ChatGPT, Cursor, VS Code, etc.)
 - `docs/use-the-cookbook/build/` - Plugin marketplace, getting started, plugin detail pages
-- `docs/builder-setup/` - Developer tool installation guides (terminal, Git, editor, Claude Code)
+- `docs/builder-setup/` - Builder Tools Setup guides (terminal, editor, Git, GitHub, voice-to-text, skills, MCP server, AI registry). Platform setup (accounts, personalization, memory, MCP connections) lives in per-platform `getting-started/` pages under `docs/platforms/`
 - `docs/patterns/` - Reusable patterns and best practices
 - `docs/courses/` - Structured course content (builders, leaders)
 - `docs/resources/` - Curated resource pages for external PDFs/reports (with local PDF copies in `docs/assets/pdfs/`)
