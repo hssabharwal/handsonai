@@ -19,6 +19,9 @@ Ten blocks across three layers:
 
 These are platform-agnostic concepts. Every major AI platform implements them, though the names and interfaces differ. Understanding the blocks gives you a mental model that transfers across tools — you can evaluate any platform by asking "how does it handle models, prompts, context, projects, memory, skills, agents, external connections, APIs, and development frameworks?"
 
+!!! abstract "Which block should I use?"
+    Not sure where to start? The [Choosing the Right Building Block](comparison.md) page has comparison tables for all ten blocks and a "I want to..." decision guide.
+
 !!! tip "Using building blocks for workflow analysis"
     The [Business-First AI Framework](../business-first-ai-framework/index.md) uses these building blocks as the analysis tool in [Design Your AI Workflow](../business-first-ai-framework/build/design.md), where each step of a workflow gets mapped to the building blocks it needs.
 
@@ -406,6 +409,10 @@ Context is knowledge you provide — files, docs, examples attached to a convers
 A project is an active workspace — it provides standing instructions, persistent context, and conversation continuity. It shapes how the AI behaves for every conversation within it, not just where files are stored.
 
 ## Related
+
+**Comparison and decision guide:**
+
+- [Choosing the Right Building Block](comparison.md) — comparison matrix and "I want to..." decision guide
 
 **Framework and courses:**
 

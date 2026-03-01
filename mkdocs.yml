@@ -249,6 +249,7 @@ nav:
       - Identify the right AI tools for a workflow: business-first-ai-framework/questions/how-do-i-identify-the-right-ai-tools-for-a-workflow.md
   - Agentic Building Blocks:
     - Overview: agentic-building-blocks/index.md
+    - Choosing the Right Building Block: agentic-building-blocks/comparison.md
     - Intelligence:
       - Model: agentic-building-blocks/models/index.md
       - Context:
