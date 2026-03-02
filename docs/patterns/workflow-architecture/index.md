@@ -90,6 +90,8 @@ The [Build > Design](../../business-first-ai-framework/build/design.md) phase of
 | Single Agent | Parallelization, Orchestrator-Workers, Evaluator-Optimizer |
 | Multi-Agent | Orchestrator-Workers (multi-agent), Autonomous Agents |
 
+The [AI Workflow Design Matrix](../../business-first-ai-framework/workflow-design-matrix.md) adds a second dimension — **human involvement** (Augmented vs. Automated) — to the autonomy spectrum. Architecture patterns map to the matrix's autonomy axis: Deterministic workflows typically use Augmented LLM or Prompt Chaining, Guided workflows use Routing or Evaluator-Optimizer, and Autonomous workflows use Orchestrator-Workers or Autonomous Agents.
+
 ## Credit
 
 *Based on [Building Effective Agents](https://www.anthropic.com/research/building-effective-agents) by Anthropic.*

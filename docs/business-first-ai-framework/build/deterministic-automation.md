@@ -12,6 +12,7 @@ description: A worked example of a fully deterministic AI workflow — fixed rul
 A deterministic automation is a workflow where AI follows a fixed sequence of steps, applies predefined evaluation criteria, and produces output in a rigid template. The rules are defined upfront (in this case, by a buyer persona), the process is linear, and the output format never changes. The same input produces the same structured output every time.
 
 !!! info "At a Glance"
+    - **Matrix classification:** Deterministic + Automated
     - **AI involvement:** Follows prescribed steps and applies predefined criteria
     - **Human oversight:** Review output only — no steering during execution
     - **Best for:** Prospecting, recurring reports, data formatting, template-driven research

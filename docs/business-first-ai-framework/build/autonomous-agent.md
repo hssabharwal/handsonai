@@ -12,6 +12,7 @@ description: A worked example of multi-agent orchestration — multiple speciali
 An autonomous agent workflow is one where AI handles the entire process — from research to final deliverable — with minimal human intervention. This example is built using [Claude Code subagents](https://code.claude.com/docs/en/sub-agents) — specialized AI assistants that each run in their own context with domain expertise, coordinated by Claude Code as the orchestrator. The human sets the goal and reviews the draft at one checkpoint. Everything else runs autonomously.
 
 !!! info "At a Glance"
+    - **Matrix classification:** Autonomous + Augmented
     - **AI involvement:** Full — multiple agents plan, research, write, edit, and publish
     - **Human oversight:** One review gate between editing and publishing
     - **Best for:** Research-driven content production, multi-step pipelines with specialist roles

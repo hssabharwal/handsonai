@@ -38,15 +38,15 @@ Design covers:
     | **Single Agent** | Tool use required, autonomous decisions, multi-step reasoning |
     | **Multi-Agent** | Multiple expertise domains, parallel execution, review gates |
 
-4. **Interaction mode** — Interactive (real-time collaboration), Autonomous (unattended execution), or Hybrid (mix of both) — determined by your architecture decisions
-5. **Autonomy classification** — Classify each step (Human → Deterministic → Semi-Autonomous → Autonomous)
+4. **Involvement mode** — Augmented (human in the loop) or Automated (AI runs solo) — determined by your architecture decisions
+5. **Autonomy classification** — Classify each step (Human → Deterministic → Guided → Autonomous)
 6. **Building block mapping** — Map each step to AI building blocks (Prompt, Context, Skill, Agent, MCP, Project, API, SDK)
 7. **Skill candidates** — Tag steps that should become reusable skills, with generation-ready detail
 8. **Agent blueprints** (when applicable) — Platform-agnostic specification for each agent (name, description, instructions, model, tools, context, goal) — built into working agents by the model in 3.2
 
 **[Design Your AI Workflow](design.md)** — the full Design guide with execution pattern decision flow and output format
 
-**Produces:** `[name]-building-block-spec.md` — your AI Building Block Spec with architecture approach, architecture decisions, execution pattern with interaction mode, step classifications, skill candidates, agent blueprints (when applicable), code-first selections (when applicable), and implementation order.
+**Produces:** `[name]-building-block-spec.md` — your AI Building Block Spec with architecture approach, architecture decisions, execution pattern with involvement mode, step classifications, skill candidates, agent blueprints (when applicable), code-first selections (when applicable), and implementation order.
 
 ## 3.2: Construct
 
@@ -159,13 +159,13 @@ For deep dives on individual building blocks, see the [Agentic Building Blocks](
 
 ## Worked Examples
 
-These three examples show complete AI-powered workflows at different levels of the autonomy spectrum — from deterministic automation to collaborative workflows to fully autonomous multi-agent pipelines. Each includes working building blocks you can install and study.
+These three examples show complete AI-powered workflows at different positions in the [AI Workflow Design Matrix](../workflow-design-matrix.md) — from deterministic automation to guided collaboration to fully autonomous multi-agent pipelines. Each includes working building blocks you can install and study.
 
-| Type | AI Involvement | When to Use | Example |
-|------|---------------|-------------|---------|
-| [Deterministic Automation](deterministic-automation.md) | AI follows fixed rules — criteria from input, output from template | Prospecting, recurring reports, template-driven research | LinkedIn prospect research |
-| [AI Collaborative](ai-collaborative.md) | AI researches and drafts; human steers and decides | Meeting prep, competitive analysis, proposal drafting | Meeting prep researcher |
-| [Autonomous Agent](autonomous-agent.md) | Multiple agents execute a full pipeline; human reviews at one gate | Research-driven content, multi-step pipelines, specialist roles | HBR article pipeline |
+| Type | Matrix Position | AI Involvement | Example |
+|------|----------------|---------------|---------|
+| [Deterministic Automation](deterministic-automation.md) | Deterministic + Automated | AI follows fixed rules — criteria from input, output from template | LinkedIn prospect research |
+| [AI Collaborative](ai-collaborative.md) | Guided + Augmented | AI researches and drafts; human steers and decides | Meeting prep researcher |
+| [Autonomous Agent](autonomous-agent.md) | Autonomous + Augmented | Multiple agents execute a full pipeline; human reviews at one gate | HBR article pipeline |
 
 ### All Building Blocks
 

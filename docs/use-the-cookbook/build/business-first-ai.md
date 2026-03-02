@@ -79,7 +79,7 @@ For platform-specific setup (Claude.ai ZIP upload, Cowork install, API integrati
 
 1. **Analyze** (`analyzing-workflows`) — Audit your workflows, interview you about your work, and produce an opportunity report with structured candidates. If you already know which workflow to deconstruct, this step is brief.
 2. **Deconstruct** (`deconstructing-workflows`) — Interactive deep-dive that decomposes the workflow into refined steps using the 5-question framework. Produces the Workflow Definition.
-3. **Build** (`building-workflows`) — Design phase: gather architecture decisions, choose an execution pattern and interaction mode, classify steps, map building blocks, identify skill candidates, configure agents. Construct phase: generate platform-appropriate artifacts (prompts, skills, agents, configs) and a Run Guide tailored to your platform and technical comfort level.
+3. **Build** (`building-workflows`) — Design phase: gather architecture decisions, choose an execution pattern and involvement mode, classify steps, map building blocks, identify skill candidates, configure agents. Construct phase: generate platform-appropriate artifacts (prompts, skills, agents, configs) and a Run Guide tailored to your platform and technical comfort level.
 
 Files are saved to `outputs/` using kebab-case workflow names (e.g., `outputs/lead-qualification-definition.md`).
 
@@ -128,7 +128,7 @@ Find which workflows are candidates for AI.
 
 1. **Memory & history scan** — The AI reviews everything it knows about you from prior conversations, memory, and project files. Presents findings for you to confirm or correct.
 2. **Targeted discovery interview** — The AI asks focused questions one at a time about your role, repetitive tasks, information synthesis, multi-step processes, quality issues, communication overhead, and decision-making. Follows up based on your answers.
-3. **Opportunity analysis & report** — Produces a summary table and detailed opportunity cards grouped by category (Deterministic Workflows, Collaborative AI, Autonomous Agents), ordered by impact.
+3. **Opportunity analysis & report** — Produces a summary table and detailed opportunity cards grouped by autonomy level (Deterministic, Guided, Autonomous) with involvement mode (Augmented, Automated), ordered by impact.
 4. **Workflow candidate summary** — You pick your top candidates, and the AI produces structured metadata for each: name, description, trigger, deliverable, category, pain point, AI opportunity, frequency, priority, and reasoning. Recommends which to deconstruct first.
 
 **Example prompts:**
@@ -203,7 +203,7 @@ Design your AI implementation and construct the workflow.
 
 **Command:** `/business-first-ai:build-workflow`
 
-**What it does:** Takes a Workflow Definition and runs the full Build process: Design (architecture decisions, execution pattern with interaction mode, autonomy classification, building block mapping, skill candidates, agent configuration) and Construct (platform-appropriate artifacts and a Run Guide). This is the Build step.
+**What it does:** Takes a Workflow Definition and runs the full Build process: Design (architecture decisions, execution pattern with involvement mode, autonomy classification, building block mapping, skill candidates, agent configuration) and Construct (platform-appropriate artifacts and a Run Guide). This is the Build step.
 
 **When to use it:** Use this when you have a Workflow Definition (from the Deconstruct step) and want to design and build your AI workflow. The Design phase produces the AI Building Block Spec; the Construct phase generates everything you need to run the workflow.
 
@@ -214,7 +214,7 @@ Design your AI implementation and construct the workflow.
 1. **Load Workflow Definition** — The AI reads the Workflow Definition from `outputs/`
 2. **Confirm understanding** — The AI summarizes the workflow and asks you to confirm
 3. **Architecture decisions** — Confirm platform (the one question), then extract tool integrations, trigger/schedule, and constraints from the Workflow Definition and present a confirmation block
-4. **Execution pattern assessment** — The AI walks you through the four execution patterns and recommends one with an interaction mode (Interactive, Autonomous, or Hybrid)
+4. **Execution pattern assessment** — The AI walks you through the four execution patterns and recommends one with an involvement mode (Augmented or Automated)
 5. **Classify each step** — Autonomy level, AI building blocks, tools, human review gates
 6. **Identify skill candidates** — Steps tagged for skill creation with generation-ready detail
 7. **Agent configuration** (when applicable) — Platform-agnostic agent blueprint
@@ -238,7 +238,7 @@ Design your AI implementation and construct the workflow.
 
 **What you'll get:**
 
-- **AI Building Block Spec** (`outputs/[name]-building-block-spec.md`) — architecture decisions, execution pattern with interaction mode, step classifications, skill candidates, agent configs, implementation order
+- **AI Building Block Spec** (`outputs/[name]-building-block-spec.md`) — architecture decisions, execution pattern with involvement mode, step classifications, skill candidates, agent configs, implementation order
 - **Platform Artifacts** — prompts, skills, agents, and configs in whatever format your platform needs
 - **Run Guide** (`outputs/[name]-run-guide.md`) — step-by-step setup, first-run test, and next steps
 

@@ -9,9 +9,9 @@ description: The ten components of agentic AI workflows — Model, Prompt, Conte
 
 ## Overview
 
-The ten AI building blocks are a shared vocabulary for describing the components of any AI workflow. Whether you're writing a single prompt, calling a model from code, or orchestrating a multi-agent pipeline, every AI workflow is assembled from some combination of these ten building blocks.
+The AI building blocks are a shared vocabulary for describing the components of any AI workflow. Whether you're writing a single prompt, calling a model from code, or orchestrating a multi-agent pipeline, every AI workflow is assembled from some combination of these building blocks.
 
-Ten blocks across three layers:
+Three layers:
 
 - **Intelligence** — Model, Context, Project, Memory
 - **Orchestration** — Prompt, Skill, Agent
@@ -20,7 +20,7 @@ Ten blocks across three layers:
 These are platform-agnostic concepts. Every major AI platform implements them, though the names and interfaces differ. Understanding the blocks gives you a mental model that transfers across tools — you can evaluate any platform by asking "how does it handle models, prompts, context, projects, memory, skills, agents, external connections, APIs, and development frameworks?"
 
 !!! abstract "Which block should I use?"
-    Not sure where to start? The [Choosing the Right Building Block](comparison.md) page has comparison tables for all ten blocks and a "I want to..." decision guide.
+    Not sure where to start? The [Choosing the Right Building Block](comparison.md) page has comparison tables for all blocks and a "I want to..." decision guide.
 
 !!! tip "Using building blocks for workflow analysis"
     The [Business-First AI Framework](../business-first-ai-framework/index.md) uses these building blocks as the analysis tool in [Design Your AI Workflow](../business-first-ai-framework/build/design.md), where each step of a workflow gets mapped to the building blocks it needs.
@@ -376,7 +376,7 @@ The building blocks are composable — combine the ones your workflow needs. Her
 
 ## Platform Comparison
 
-All ten building blocks across all four platforms in one view:
+All building blocks across all four platforms in one view:
 
 | Building Block | Claude | OpenAI (ChatGPT) | Gemini | M365 Copilot |
 |---------------|--------|-------------------|--------|--------------|
@@ -396,7 +396,7 @@ All ten building blocks across all four platforms in one view:
 **"Skills and agents are the same thing."**
 Skills are routines — they do one specific thing when invoked. Agents are autonomous — they decide what to do, plan steps, and invoke skills (among other tools) to accomplish goals. A skill is a tool; an agent is the one using the toolbox.
 
-**"You need all ten blocks for every workflow."**
+**"You need all blocks for every workflow."**
 Most workflows need two or three blocks. A well-written prompt with good context handles many tasks. Only add blocks when the workflow genuinely requires them.
 
 **"APIs and SDKs are the same thing."**

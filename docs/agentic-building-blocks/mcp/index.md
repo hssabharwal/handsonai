@@ -57,7 +57,7 @@ MCP extends what agents and skills can do by connecting them to external systems
 
 ## Related
 
-- [Agentic Building Blocks](../index.md) — MCP in the context of all seven building blocks
+- [Agentic Building Blocks](../index.md) — MCP in the context of all building blocks
 - [AI Use Cases](../../use-cases/index.md) — what teams build with MCP, organized by six primitives
 - [Automation Use Cases](../../use-cases/automation/index.md) — MCP enables the data connections that power automated workflows
 - [Agents](../agents/index.md) — autonomous systems that use MCP to interact with external tools

@@ -29,13 +29,12 @@ Three steps, each with a structured process:
 
 Find which workflows are candidates for AI.
 
-Before you can apply AI to anything, you need to know *where* it fits. Step 1 is a structured audit of your workflows that produces a prioritized list of opportunities across three categories:
+Before you can apply AI to anything, you need to know *where* it fits. Step 1 is a structured audit of your workflows that produces a prioritized list of opportunities classified on two dimensions:
 
-- **Deterministic Workflows** — Repeatable processes with clear inputs and outputs that AI can execute reliably with little supervision
-- **Collaborative AI** — Tasks where you and AI work together in real time (drafting, brainstorming, reviewing)
-- **Autonomous Agents** — Goal-driven workflows where AI plans and executes steps autonomously
+- **Autonomy** — How much decision-making does the AI have? **Deterministic** (follows fixed rules), **Guided** (makes bounded decisions within guardrails), or **Autonomous** (plans and adapts independently)
+- **Human Involvement** — Is a human in the loop during execution? **Augmented** (human reviews and steers) or **Automated** (AI runs solo)
 
-The audit uses a three-step process: scan what AI already knows about your work, interview you to fill gaps, then produce a categorized report with specific opportunities and actionable first steps.
+The audit uses a three-step process: scan what AI already knows about your work, interview you to fill gaps, then produce a classified report with specific opportunities and actionable first steps.
 
 **Facilitated by the `analyzing-workflows` skill.** See [Analyze Workflows](analyze.md) for details and the [Skills building block](../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for cross-platform installation.
 
@@ -67,7 +66,7 @@ Design your AI implementation, construct the components, and run the workflow.
 
 Step 2 produces a Workflow Definition — the analysis. Step 3 is where the `building-workflows` skill turns that analysis into a working AI workflow. The skill guides you through three parts:
 
-**3.1: Design** — The skill confirms your platform, then extracts tool integrations, trigger/schedule, and constraints directly from the Workflow Definition — presenting a single confirmation block instead of asking individual questions. Based on the confirmed analysis, it recommends an execution pattern (Prompt → Skill-Powered Prompt → Single Agent → Multi-Agent) and interaction mode, classifies each step on the autonomy spectrum, maps AI building blocks, identifies skill candidates, and documents agent blueprints when needed. Produces an **AI Building Block Spec** — a platform-agnostic blueprint that tells the model exactly what to build in 3.2.
+**3.1: Design** — The skill confirms your platform, then extracts tool integrations, trigger/schedule, and constraints directly from the Workflow Definition — presenting a single confirmation block instead of asking individual questions. Based on the confirmed analysis, it recommends an execution pattern (Prompt → Skill-Powered Prompt → Single Agent → Multi-Agent) and involvement mode, classifies each step on the autonomy spectrum, maps AI building blocks, identifies skill candidates, and documents agent blueprints when needed. Produces an **AI Building Block Spec** — a platform-agnostic blueprint that tells the model exactly what to build in 3.2.
 
 **3.2: Construct** — The skill tells the model what to build (the specs from Design); the model researches your platform's current tools and conventions via web search and generates the actual artifacts — context, skills, prompts, agents, MCP connections — in whatever format your platform requires. Only the components your execution pattern needs are built.
 
@@ -81,13 +80,20 @@ Step 2 produces a Workflow Definition — the analysis. Step 3 is where the `bui
 
 Quick reference for the framework's vocabulary:
 
-### Three Opportunity Categories
+### AI Workflow Design Matrix
 
-| Category | Description | Example |
+Every AI workflow is classified on two dimensions — autonomy and human involvement — producing six archetypes. See the [AI Workflow Design Matrix](workflow-design-matrix.md) for the full 3x2 matrix with descriptions, examples, and guidance on choosing the right archetype.
+
+| Autonomy | Description | Example |
 |----------|-------------|---------|
-| **Deterministic Workflow** | Repeatable process AI executes with minimal supervision | Formatting reports, processing forms |
-| **Collaborative AI** | Human and AI work together in real time | Co-writing, brainstorming, code review |
-| **Autonomous Agent** | AI plans and executes steps autonomously | Competitor monitoring, research → report pipelines |
+| **Deterministic** | AI follows fixed rules — no decisions, no judgment | Formatting reports, processing forms |
+| **Guided** | AI makes bounded decisions within guardrails | Co-writing, brainstorming, research summaries |
+| **Autonomous** | AI plans, decides, and adapts independently | Competitor monitoring, research → report pipelines |
+
+| Involvement | Description |
+|-------------|-------------|
+| **Augmented** | Human is in the loop — reviews, steers, or decides at key points |
+| **Automated** | AI runs solo — human reviews only the final output |
 
 ### Five-Question Framework
 
@@ -99,7 +105,7 @@ Used to decompose each workflow step:
 4. **Context needs** — What documents, files, or reference materials are required?
 5. **Failure modes** — What happens when this step fails?
 
-### Seven AI Building Blocks
+### AI Building Blocks
 
 | Block | What It Is |
 |-------|-----------|
@@ -119,12 +125,14 @@ When classifying opportunities from Step 1, it helps to know what **type** of AI
 
 ### Autonomy Spectrum
 
+Used to classify each workflow step during [Design](build/design.md):
+
 | Level | Description |
 |-------|-------------|
 | **Human** | Requires human judgment, creativity, or physical action |
-| **Deterministic** | Follows fixed rules; AI executes reliably with minimal supervision |
-| **Semi-Autonomous** | AI does most of the work; human reviews at key checkpoints |
-| **Autonomous** | AI executes end-to-end, including decisions and tool use |
+| **Deterministic** | Follows fixed rules; AI executes reliably with no decisions |
+| **Guided** | AI makes bounded decisions within guardrails; human reviews at key checkpoints |
+| **Autonomous** | AI plans and executes end-to-end, including decisions and tool use |
 
 ### Execution Pattern Spectrum
 

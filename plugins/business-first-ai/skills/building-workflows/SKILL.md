@@ -3,7 +3,7 @@ name: building-workflows
 description: >
   This skill should be used when the user has a Workflow Definition and wants to design and build
   an AI workflow. Step 3.1 (Design) gathers architecture decisions, chooses an execution pattern
-  and interaction mode, classifies steps, maps building blocks, identifies skill candidates,
+  and involvement mode, classifies steps, maps building blocks, identifies skill candidates,
   configures agents, and produces a Building Block Spec for approval. Step 3.2 (Construct) generates
   platform artifacts after approval. Step 3.3 (Run) provides a run guide for deploying, executing,
   and testing the workflow. This is Step 3 of the Business-First AI Framework.
@@ -59,7 +59,7 @@ After confirming the platform, read the Workflow Definition and extract:
 
 - **Tool integrations** — from Data In, Context Needed, and Context Shopping List across all steps. Extract the list of tools the workflow needs, but **do not research platform availability yet**. That happens in Construct (Step 13). Simply list the tools identified.
 
-- **Trigger/schedule** — from Scenario Metadata. If time-based, note as scheduled execution requirement and its implications (interaction mode, infrastructure). If manual, no action needed.
+- **Trigger/schedule** — from Scenario Metadata. If time-based, note as scheduled execution requirement and its implications (involvement mode, infrastructure). If manual, no action needed.
 
 - **Browser access** — deferred to Construct. If any step's Data In references a web portal, CRM login, or authenticated website, flag it during step classification (Step 5) as a "requires browser access" note on that step. Do not ask about it here.
 
@@ -72,7 +72,7 @@ Present a single confirmation block:
 > "Here's what I found in your Workflow Definition:
 > - **Platform:** [confirmed platform]
 > - **Tools needed:** [extracted list]
-> - **Trigger:** [extracted trigger] → [implications for interaction mode]
+> - **Trigger:** [extracted trigger] → [implications for involvement mode]
 > - [Any flags: e.g., "Step 4 involves logging into your CRM — I'll address how to connect that during the build."]
 >
 > Integration availability on [platform] will be researched during the Construct phase.
@@ -97,25 +97,24 @@ Analyze the workflow steps and architecture decisions internally, then present a
 | **Single Agent** | One agent with tool access, capable of autonomous decisions | Tool use required, autonomous decisions, multi-step reasoning |
 | **Multi-Agent** | Specialized agents coordinating in a pipeline | Multiple expertise domains, parallel execution, review gates |
 
-**Present as a confident recommendation:** "Based on your workflow, I recommend **[pattern]** with **[interaction mode]** because [2-3 sentence reasoning tying the recommendation to the workflow steps and architecture decisions]." If the user pushes back, then explain the alternatives and discuss.
+**Present as a confident recommendation:** "Based on your workflow, I recommend **[pattern]** with **[involvement mode]** because [2-3 sentence reasoning tying the recommendation to the workflow steps and architecture decisions]." If the user pushes back, then explain the alternatives and discuss.
 
-**Interaction Mode** — Determine the interaction mode from architecture decisions and include it in the recommendation:
+**Human Involvement** — Determine the involvement mode from architecture decisions and include it in the recommendation:
 
 | Mode | Description | Determined by |
 |------|-------------|---------------|
-| **Interactive** | Human and AI collaborate in real-time. AI pauses for input, review, and decisions at marked steps. | Web/desktop deployment, no scheduled execution |
-| **Autonomous** | AI executes end-to-end without human involvement during the run. | Scheduled/unattended execution, CLI |
-| **Hybrid** | Some steps run autonomously, others pause for human interaction. | Mix of automated and review steps |
+| **Augmented** | Human is in the loop — reviews, steers, or decides at key points during the run. | Web/desktop deployment, no scheduled execution |
+| **Automated** | AI runs solo — executes end-to-end without human involvement during the run. | Scheduled/unattended execution, CLI |
 
 **Platform sub-choice for agent patterns:** When the execution pattern is Single Agent or Multi-Agent, the platform choice determines the implementation path. Some platforms have multiple agent offerings (e.g., Claude Code has sub-agents via markdown files vs. Claude Agent SDK in TypeScript/Python). If the platform has multiple agent offerings, ask the user which offering they want to use — this determines whether the Construct phase generates markdown files, Python code, TypeScript code, or GUI configuration steps. For non-agent patterns (Prompt, Skill-Powered Prompt), no sub-choice is needed — artifacts are always markdown files.
 
-Ask the user to confirm the pattern, interaction mode, and platform sub-choice (if applicable).
+Ask the user to confirm the pattern, involvement mode, and platform sub-choice (if applicable).
 
 **Fast-track for complete definitions:** If the Workflow Definition + conversation context provide enough information to resolve ALL architecture dimensions AND the execution pattern is clear, present the entire Design analysis as a single confirmation block instead of stepping through questions one at a time:
 
 > "Based on your workflow definition, here's my design analysis:
 > - **Platform:** [platform] ([surface])
-> - **Execution pattern:** [pattern] ([interaction mode])
+> - **Execution pattern:** [pattern] ([involvement mode])
 > - **Tools needed:** [list — availability to be researched during Construct]
 > - **Steps classified:** [summary table]
 > - **Skill candidates:** [list]
@@ -128,7 +127,7 @@ Only drop into the question-by-question flow when genuinely missing information.
 #### Step 5 — Classify Each Step
 
 For every refined step, determine:
-- **Autonomy level**: Human / AI-Deterministic / AI-Semi-Autonomous / AI-Autonomous
+- **Autonomy level**: Human / Deterministic / Guided / Autonomous
 - **AI building block(s)**: Prompt, Context, Skill, Agent, MCP, Project
 - **Tools and connectors**: External tools, APIs, integrations needed (populated from the tool list in Architecture Decisions; integration availability is deferred to Construct)
 - **Human-in-the-loop gates**: Where human review is recommended
@@ -162,7 +161,7 @@ For multi-agent: orchestration pattern, agent handoffs, human review gates.
 #### Step 8 — Generate AI Building Block Spec
 
 Write to `outputs/[workflow-name]-building-block-spec.md`. Includes:
-- Execution pattern recommendation (with interaction mode)
+- Execution pattern recommendation (with involvement mode)
 - Architecture Decisions (with rationale and constraints summary)
 - Step-by-step decomposition table with autonomy levels and building blocks
 - Autonomy spectrum summary
@@ -185,7 +184,7 @@ Present a summary of the Building Block Spec:
 
 > "Here's the Building Block Spec summary:
 >
-> - **Pattern:** [execution pattern] ([interaction mode])
+> - **Pattern:** [execution pattern] ([involvement mode])
 > - **Steps:** [count] steps, [count] skill candidates, [count] agents
 > - **Integration research needed:** [count] tools to verify during Construct
 > - **Implementation order:** [brief summary]
@@ -354,7 +353,7 @@ Present the Run Guide directly in the conversation. Also save it to `outputs/[wo
 ### `outputs/[workflow-name]-building-block-spec.md` — AI Building Block Spec (Design)
 
 Includes:
-- Execution pattern recommendation with reasoning and interaction mode
+- Execution pattern recommendation with reasoning and involvement mode
 - Architecture Decisions (with rationale and constraints summary)
 - Scenario summary (workflow metadata)
 - Step-by-step decomposition table (autonomy level, building blocks, skill candidate flag)

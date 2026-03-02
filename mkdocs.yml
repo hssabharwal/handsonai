@@ -229,6 +229,7 @@ nav:
   - Changelog: blog/index.md
   - Business-First AI Framework:
     - Overview: business-first-ai-framework/index.md
+    - AI Workflow Design Matrix: business-first-ai-framework/workflow-design-matrix.md
     - Use AI as Your Coach:
       - Overview: business-first-ai-framework/coach.md
       - Framework Coach Guide: business-first-ai-framework/framework-coach.md
