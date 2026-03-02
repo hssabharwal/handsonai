@@ -147,6 +147,11 @@ Every AI workflow falls somewhere on this spectrum. The right pattern depends on
 
 ## Getting Started
 
+!!! tip "Get guided help"
+
+    - **MCP Server** — [Connect the MCP server](../mcp-server/index.md) and ask your AI to walk you through the framework step by step.
+    - **Plugin skills** — Install the [Business-First AI plugin](../use-the-cookbook/build/business-first-ai.md) for interactive skills that guide you through Analyze, Deconstruct, and Build.
+
 1. **[Analyze Workflows](analyze.md)** — identify your best AI candidates
 2. **Pick your highest-impact opportunity** — don't try to pursue everything at once
 3. **[Deconstruct the workflow](deconstruct/index.md)** — break it into discrete steps
