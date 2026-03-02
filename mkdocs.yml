@@ -169,6 +169,9 @@ plugins:
         plugins/agentic-coding.md: use-the-cookbook/build/agentic-coding.md
         # AI Engineering overview → Product & Engineering
         ai-engineering/index.md: product-engineering/index.md
+        # Retired coach pages → framework overview
+        business-first-ai-framework/coach.md: business-first-ai-framework/index.md
+        business-first-ai-framework/framework-coach.md: business-first-ai-framework/index.md
         # MCP Server redirects
         # NOTE: mcp-server.md → mcp-server/index.md would conflict (same output path), so omitted
         use-the-cookbook/ask/index.md: mcp-server/index.md
@@ -230,12 +233,9 @@ nav:
   - Business-First AI Framework:
     - Overview: business-first-ai-framework/index.md
     - AI Workflow Design Matrix: business-first-ai-framework/workflow-design-matrix.md
-    - Use AI as Your Coach:
-      - Overview: business-first-ai-framework/coach.md
-      - Framework Coach Guide: business-first-ai-framework/framework-coach.md
     - "Step 1: Analyze Workflows": business-first-ai-framework/analyze.md
     - "Step 2: Deconstruct Workflows": business-first-ai-framework/deconstruct/index.md
-    - "Step 3: Build AI-Powered Workflows":
+    - "Step 3: Build Workflows":
       - Overview: business-first-ai-framework/build/index.md
       - "3.1: Design": business-first-ai-framework/build/design.md
       - "3.2: Construct": business-first-ai-framework/build/construct.md
