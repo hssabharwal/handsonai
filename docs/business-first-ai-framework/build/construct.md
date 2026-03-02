@@ -9,7 +9,7 @@ description: The model executes the plan from Design to build your workflow's bu
 
 ## What This Is
 
-In [Design (3.1)](design.md), you worked with the model in two phases — first collaborating on architecture decisions and execution pattern (normal conversation), then activating plan mode so the model could plan the full AI Building Block Spec. You reviewed and approved that spec.
+In [Design (3.1)](design.md), you worked with the model in two phases — first collaborating on architecture decisions, autonomy assessment, and orchestration mechanism (normal conversation), then activating plan mode so the model could plan the full AI Building Block Spec. You reviewed and approved that spec.
 
 Now the model shifts from planning to execution. **Exit plan mode** — the model takes the approved spec and builds the actual building blocks your workflow needs, in whatever format your platform requires.
 
@@ -46,7 +46,7 @@ Upload or paste your `[workflow-name]-building-block-spec.md` file when prompted
 
 By the end of this step, you'll have two things:
 
-**Your building blocks** — the prompts, skills, agents, context files, and configurations your workflow needs, generated in whatever format your platform requires. The model only builds the building blocks your execution pattern calls for — a Prompt pattern doesn't get agent files, and a Single Agent pattern doesn't get multi-agent orchestration.
+**Your building blocks** — the prompts, skills, agents, context files, and configurations your workflow needs, generated in whatever format your platform requires. The model only builds the building blocks your orchestration mechanism calls for — a Prompt mechanism doesn't get agent files.
 
 **Run Guide** (`[name]-run-guide.md`) — a plain-language walkthrough tailored to your platform and technical comfort level:
 
@@ -66,7 +66,7 @@ The model constructs from the AI building blocks — but only the ones your work
 | **[Prompt](../../agentic-building-blocks/prompts/index.md)** | A structured prompt with step-by-step instructions, input requirements, and output format | Every pattern |
 | **[Context](../../agentic-building-blocks/context/index.md)** | Reference documents, style guides, examples, or data files the workflow needs | When steps require domain-specific knowledge |
 | **[Skill](../../agentic-building-blocks/skills/index.md)** | Reusable routines with defined inputs, process, and outputs | When the spec tags steps as skill candidates |
-| **[Agent](../../agentic-building-blocks/agents/index.md)** | Agent definitions with instructions, tools, and goals | Single Agent and Multi-Agent patterns |
+| **[Agent](../../agentic-building-blocks/agents/index.md)** | Agent definitions with instructions, tools, and goals | Agent mechanism (single or multi-agent) |
 | **[MCP](../../agentic-building-blocks/mcp/index.md)** | Tool connections to external services, APIs, or databases | When steps need to read from or write to external systems |
 | **[Project](../../agentic-building-blocks/projects/index.md)** | Workspace configuration grouping the workflow's artifacts | When the workflow runs frequently with the same context |
 | **[Memory](../../agentic-building-blocks/memory/index.md)** | Memory configuration or persistence notes (e.g., CLAUDE.md conventions, memory prompts) | When the workflow benefits from carrying preferences or decisions across runs |
@@ -83,9 +83,9 @@ The model generates building blocks in whatever format your platform requires �
 
 This hybrid approach anchors the model in authoritative sources while ensuring it stays current as platforms evolve. The model provides the implementation (how to build it on your platform); the AI Building Block Spec provides the specs (what each building block should do).
 
-## Pattern-Specific Build Paths
+## Mechanism-Specific Build Paths
 
-Your execution pattern (chosen in Design) determines which building blocks get built. The model works through only the steps that apply:
+Your orchestration mechanism (chosen in Design) determines which building blocks get built. The model works through only the steps that apply:
 
 === "Prompt"
 
@@ -102,26 +102,17 @@ Your execution pattern (chosen in Design) determines which building blocks get b
     4. **Generate the prompt** — The model generates the workflow prompt, referencing the skills
     5. **Generate the Run Guide**
 
-=== "Single Agent"
+=== "Agent"
 
     1. **Create context** — Build the context artifacts from your spec's Context Inventory
     2. **Build skills** — The model generates skills for tagged candidates
     3. **Connect tools** — Wire external tools from the spec's Tools and Connectors section
-    4. **Build the agent** — The model generates the agent definition for your platform
+    4. **Build agent(s)** — The model generates agent definitions for your platform (single agent, or specialist agents with orchestrator for multi-agent)
     5. **Generate the Run Guide**
-
-=== "Multi-Agent"
-
-    1. **Create context** — Build the context artifacts from your spec's Context Inventory
-    2. **Build skills** — The model generates skills for tagged candidates
-    3. **Connect tools** — Wire external tools from the spec's Tools and Connectors section
-    4. **Build each specialist agent** — The model generates agent definitions for each role
-    5. **Build the orchestrator** — The model generates the coordination layer
-    6. **Generate the Run Guide**
 
 ### Code-First Build Paths
 
-When your architecture approach is **code-first**, the same four execution patterns apply — but the implementation uses APIs and SDKs instead of platform UIs. The model generates code artifacts instead of platform configurations.
+When your architecture approach is **code-first**, the same three orchestration mechanisms apply — but the implementation uses APIs and SDKs instead of platform UIs. The model generates code artifacts instead of platform configurations.
 
 === "Prompt (code-first)"
 
@@ -140,24 +131,14 @@ When your architecture approach is **code-first**, the same four execution patte
     5. **Test locally** — Run the script and verify the output
     6. **Generate the Run Guide**
 
-=== "Single Agent (code-first)"
+=== "Agent (code-first)"
 
     1. **Create context** — Build context artifacts as files
     2. **Initialize SDK project** — Set up the project structure for your chosen SDK (e.g., `pip install anthropic-agent-sdk`, `npm init`)
     3. **Define tools** — The model generates tool definitions that the agent can call
-    4. **Build the agent** — The model generates the agent with instructions, tools, and orchestration logic
+    4. **Build agent(s)** — The model generates the agent with instructions, tools, and orchestration logic (for multi-agent: specialist agents, handoff logic, and coordination layer)
     5. **Test locally** — Run the agent and verify tool use and output
     6. **Generate the Run Guide**
-
-=== "Multi-Agent (code-first)"
-
-    1. **Create context** — Build context artifacts as files
-    2. **Initialize SDK project** — Set up the project structure for your chosen SDK
-    3. **Build specialist agents** — The model generates each specialist agent with its tools and instructions
-    4. **Define handoffs** — The model generates the handoff logic between agents (what each passes to the next)
-    5. **Build the orchestrator** — The model generates the coordination layer that routes work between agents
-    6. **Test locally** — Run the full pipeline and verify agent coordination
-    7. **Generate the Run Guide**
 
 The Run Guide for code-first workflows includes additional setup details:
 
@@ -202,7 +183,7 @@ How different platforms handle external connections:
 
 ### Agents — build on your platform
 
-When the model generates agent blueprints (for Single Agent and Multi-Agent patterns), how you operationalize them depends on your platform. Agent platforms fall into two categories:
+When the model generates agent blueprints (for the Agent orchestration mechanism), how you operationalize them depends on your platform. Agent platforms fall into two categories:
 
 **Builder/GUI platforms** — You take the agent details from your AI Building Block Spec (name, instructions, tools, model) and manually configure them through the platform's visual interface. This is point-and-click — paste the instructions, select the tools, and configure settings.
 

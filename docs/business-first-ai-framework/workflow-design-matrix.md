@@ -87,16 +87,15 @@ Most workflows evolve along predictable paths as you build confidence:
 
 ## How This Maps to Framework Concepts
 
-### Execution Patterns
+### Orchestration Mechanisms
 
-The [execution pattern spectrum](build/design.md#execution-pattern-spectrum) describes *what you build*. The matrix describes *how the AI and human interact*. They're complementary:
+The [orchestration mechanism](build/design.md#orchestration-mechanism) describes *who drives the workflow*. The matrix describes *how the AI and human interact*. They're complementary:
 
-| Execution Pattern | Typical Archetypes |
-|-------------------|-------------------|
+| Orchestration Mechanism | Typical Archetypes |
+|------------------------|-------------------|
 | Prompt | Deterministic + Augmented, Deterministic + Automated |
 | Skill-Powered Prompt | Deterministic or Guided, either involvement mode |
-| Single Agent | Guided or Autonomous, either involvement mode |
-| Multi-Agent | Autonomous + Augmented, Autonomous + Automated |
+| Agent | Guided or Autonomous, either involvement mode |
 
 ### Architecture Patterns
 
@@ -111,6 +110,6 @@ The seven [workflow architecture patterns](../patterns/workflow-architecture/ind
 ## Related
 
 - [Business-First AI Framework](index.md) — the full three-step methodology
-- [Design Your AI Workflow](build/design.md) — choose an execution pattern and map building blocks
+- [Design Your AI Workflow](build/design.md) — assess autonomy, choose an orchestration mechanism, and map building blocks
 - [Build Workflows](build/index.md) — worked examples across the matrix
 - [Workflow Architecture Patterns](../patterns/workflow-architecture/index.md) — implementation blueprints for each pattern

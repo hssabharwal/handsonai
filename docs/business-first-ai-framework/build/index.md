@@ -1,6 +1,6 @@
 ---
 title: "Step 3: Build AI-Powered Workflows"
-description: Design your AI workflow — choose your architecture approach (no-code or code-first), execution pattern, and building block mapping — then construct platform-appropriate artifacts and get a Run Guide for getting it running.
+description: Design your AI workflow — choose your architecture approach (no-code or code-first), assess autonomy level, choose an orchestration mechanism, and map building blocks — then construct platform-appropriate artifacts and get a Run Guide for getting it running.
 ---
 
 # Step 3: Build AI-Powered Workflows
@@ -27,30 +27,29 @@ Design covers:
 
 1. **Architecture approach** — Choose between **no-code** (build in a platform UI) and **code-first** (build with APIs and SDKs). The model recommends based on signals like integration needs, deployment requirements, and technical comfort. This choice shapes which tools and building blocks are available in subsequent steps.
 
-2. **Architecture decisions** — The model confirms your platform (the one thing not in the Workflow Definition), then extracts tool integrations, trigger/schedule, and browser access flags directly from the definition. It presents a single confirmation block with the platform, integration mapping, and trigger implications — you review and adjust. These gate all subsequent recommendations.
+2. **Architecture decisions** — The model confirms your platform (the one thing not in the Workflow Definition), then extracts tool integrations, trigger/schedule, and browser access flags directly from the definition. It presents a single confirmation block with the platform, tools needed, and trigger implications — you review and adjust. These gate all subsequent recommendations.
 
-3. **Execution pattern** — Choose from four patterns based on what your workflow needs:
+3. **Autonomy assessment** — Where does the whole workflow sit on the autonomy spectrum?
 
-    | Pattern | When to use |
-    |---------|-------------|
-    | **Prompt** | Sequential steps, human drives the process and provides all inputs |
-    | **Skill-Powered Prompt** | Steps with repeatable sub-routines or moderate complexity |
-    | **Single Agent** | Tool use required, autonomous decisions, multi-step reasoning |
-    | **Multi-Agent** | Multiple expertise domains, parallel execution, review gates |
+    | Level | Orchestration implications |
+    |-------|--------------------------|
+    | **Deterministic** | Prompt or skill-powered prompt likely sufficient |
+    | **Guided** | Skill-powered prompt or agent |
+    | **Autonomous** | Agent required |
 
-4. **Involvement mode** — Augmented (human in the loop) or Automated (AI runs solo) — determined by your architecture decisions
+4. **Orchestration mechanism** — Who drives the workflow? Prompt, Skill-Powered Prompt, or Agent — with involvement mode (Augmented or Automated) determined by your architecture decisions. Single-agent vs. multi-agent is decided during agent configuration, not here.
 5. **Autonomy classification** — Classify each step (Human → Deterministic → Guided → Autonomous)
 6. **Building block mapping** — Map each step to AI building blocks (Prompt, Context, Skill, Agent, MCP, Project, API, SDK)
 7. **Skill candidates** — Tag steps that should become reusable skills, with generation-ready detail
 8. **Agent blueprints** (when applicable) — Platform-agnostic specification for each agent (name, description, instructions, model, tools, context, goal) — built into working agents by the model in 3.2
 
-**[Design Your AI Workflow](design.md)** — the full Design guide with execution pattern decision flow and output format
+**[Design Your AI Workflow](design.md)** — the full Design guide with autonomy assessment, orchestration mechanism decision flow, and output format
 
-**Produces:** `[name]-building-block-spec.md` — your AI Building Block Spec with architecture approach, architecture decisions, execution pattern with involvement mode, step classifications, skill candidates, agent blueprints (when applicable), code-first selections (when applicable), and implementation order.
+**Produces:** `[name]-building-block-spec.md` — your AI Building Block Spec with architecture approach, architecture decisions, autonomy level assessment, orchestration mechanism with involvement mode, step classifications, skill candidates, agent blueprints (when applicable), code-first selections (when applicable), and implementation order.
 
 ## 3.2: Construct
 
-The AI Building Block Spec tells you exactly what to build — and the execution pattern determines which steps you follow. The model uses your architecture decisions (platform, integrations) and resolves deferred decisions (specific platform offering, shareability, code comfort) to generate artifacts in the right format for your specific setup. Work through **only** the steps that apply to your pattern:
+The AI Building Block Spec tells you exactly what to build — and the orchestration mechanism determines which steps you follow. The model uses your architecture decisions (platform, integrations) and resolves deferred decisions (specific platform offering, shareability, code comfort) to generate artifacts in the right format for your specific setup. Work through **only** the steps that apply to your mechanism:
 
 === "Prompt"
 
@@ -67,23 +66,15 @@ The AI Building Block Spec tells you exactly what to build — and the execution
     4. **Generate platform artifacts** — The model generates the prompt and skill configurations for your platform
     5. **Run Guide** → 3.3
 
-=== "Single Agent"
+=== "Agent"
 
     1. **Create context** — Build the context artifacts listed in your Building Block Spec's Context Inventory
     2. **Build skills** — Build skills for tagged candidates
     3. **Connect tools** — Wire external tools from the Tools and Connectors section of your Building Block Spec
-    4. **Generate platform artifacts** — The model generates agent configs, skills, and connectors for your platform
+    4. **Generate platform artifacts** — The model generates agent configs (single or multi-agent), skills, and connectors for your platform
     5. **Run Guide** → 3.3
 
-=== "Multi-Agent"
-
-    1. **Create context** — Build the context artifacts listed in your Building Block Spec's Context Inventory
-    2. **Build skills** — Build skills for tagged candidates
-    3. **Connect tools** — Wire external tools from the Tools and Connectors section of your Building Block Spec
-    4. **Generate platform artifacts** — The model generates agent configs, orchestrator, skills, and connectors for your platform
-    5. **Run Guide** → 3.3
-
-The model handles each step based on your execution pattern. See [Construct](construct.md) for details on what you'll need to do yourself (gathering context, configuring MCP connections, building agents on your platform).
+The model handles each step based on your orchestration mechanism. See [Construct](construct.md) for details on what you'll need to do yourself (gathering context, configuring MCP connections, building agents on your platform).
 
 ## 3.3: Run
 
@@ -124,7 +115,7 @@ The workflow is ready when you can run it on a new scenario and trust the output
 | File | From | What it is |
 |------|------|-----------|
 | `[name]-definition.md` | Deconstruct | Your Workflow Definition — the raw decomposition |
-| `[name]-building-block-spec.md` | Build: 3.1 Design | Your AI Building Block Spec — architecture approach, architecture decisions, execution pattern, classifications, skill candidates, agent blueprints, code-first selections |
+| `[name]-building-block-spec.md` | Build: 3.1 Design | Your AI Building Block Spec — architecture approach, architecture decisions, autonomy level, orchestration mechanism, classifications, skill candidates, agent blueprints, code-first selections |
 | Platform artifacts | Build: 3.2 Construct | Prompts, skills, agents, and configs generated in whatever format your platform needs |
 | `[name]-run-guide.md` | Build: 3.3 Run | Step-by-step setup instructions, first-run test, and next steps — tailored to your platform |
 

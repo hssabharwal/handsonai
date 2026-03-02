@@ -35,7 +35,7 @@ Agent Mode is available directly in ChatGPT. It lets ChatGPT autonomously browse
 | **Instructions** | Your message describing what you want done |
 | **Tools** | Built-in capabilities (web browsing, code interpreter, file analysis) |
 
-Agent Mode is best suited for the **Prompt** execution pattern — paste your instructions, let ChatGPT execute autonomously, review the output.
+Agent Mode is best suited for the **Prompt** orchestration mechanism — paste your instructions, let ChatGPT execute autonomously, review the output.
 
 ## AgentKit
 

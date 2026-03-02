@@ -61,7 +61,7 @@ Here's how a research analyst agent from the Design phase maps to Workspace Stud
 4. **Model** → Gemini is built-in and not configurable — Workspace Studio uses the default Gemini model
 5. **Tools** → Workspace Studio auto-connects Workspace apps. Add third-party connectors (Jira, Salesforce) from the connectors menu if your workflow needs them
 
-Workspace Studio is best suited for the **Prompt** execution pattern — describe what you want, Gemini generates the automation, and you refine it conversationally.
+Workspace Studio is best suited for the **Prompt** orchestration mechanism — describe what you want, Gemini generates the automation, and you refine it conversationally.
 
 ## Gemini Enterprise Agent Designer
 

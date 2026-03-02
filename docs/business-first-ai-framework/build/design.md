@@ -1,6 +1,6 @@
 ---
 title: Design Your AI Workflow
-description: Gather architecture decisions, choose an execution pattern and involvement mode, classify steps on the autonomy spectrum, map AI building blocks, identify skill candidates, and document agent blueprints — producing a platform-agnostic AI Building Block Spec.
+description: Gather architecture decisions, assess workflow autonomy level, choose an orchestration mechanism and involvement mode, classify steps on the autonomy spectrum, map AI building blocks, identify skill candidates, and document agent blueprints — producing a platform-agnostic AI Building Block Spec.
 ---
 
 # 3.1: Design Your AI Workflow
@@ -14,9 +14,9 @@ description: Gather architecture decisions, choose an execution pattern and invo
 
 The Design phase is where you decide *how* your workflow should be built — before you build it. You take the Workflow Definition from the [Deconstruct step](../deconstruct/index.md) and make five design decisions:
 
-1. **Architecture approach** — Will you build no-code (in a platform UI) or code-first (with APIs and SDKs)?
-2. **Architecture decisions** — What platform are you using, and what integrations and constraints does the Workflow Definition reveal?
-3. **Execution pattern** — How complex does the AI implementation need to be?
+1. **Architecture decisions** — What platform are you using, and what integrations and constraints does the Workflow Definition reveal?
+2. **Autonomy assessment** — Where does the whole workflow sit on the autonomy spectrum (Deterministic → Guided → Autonomous)?
+3. **Orchestration mechanism** — Who drives the workflow (Prompt, Skill-Powered Prompt, or Agent)?
 4. **Autonomy classification** — How much AI assistance does each step need?
 5. **Building block mapping** — What specific AI components does each step require?
 
@@ -25,13 +25,13 @@ The Design phase is where you decide *how* your workflow should be built — bef
 
 | | |
 |---|---|
-| **What you'll do** | Upload your Workflow Definition, choose your architecture approach, confirm your platform, review the AI's extracted architecture analysis and execution pattern recommendation, review step classifications, and adjust anything that doesn't look right |
-| **What you'll get** | An **AI Building Block Spec** — architecture approach with rationale, architecture decisions, execution pattern with involvement mode, autonomy classifications, building block mapping, skill candidates, agent blueprints (when applicable), and a prioritized build sequence |
+| **What you'll do** | Upload your Workflow Definition, choose your architecture approach, confirm your platform, review the AI's autonomy assessment and orchestration mechanism recommendation, review step classifications, and adjust anything that doesn't look right |
+| **What you'll get** | An **AI Building Block Spec** — architecture approach with rationale, architecture decisions, autonomy level assessment, orchestration mechanism with involvement mode, per-step autonomy classifications, building block mapping, skill candidates, agent blueprints (when applicable), and a prioritized build sequence |
 | **Time** | ~15–25 minutes (architecture questions + reviewing the AI's analysis) |
 
 ## Why This Matters
 
-Not every workflow needs the same level of AI infrastructure. A weekly status report might need a single well-crafted prompt. A multi-department content pipeline might need specialized agents coordinating across stages. Choosing the wrong execution pattern means either over-engineering (building agents when a prompt would do) or under-building (forcing a prompt to do agent-level work).
+Not every workflow needs the same level of AI infrastructure. A weekly status report might need a single well-crafted prompt. A multi-department content pipeline might need specialized agents coordinating across stages. Choosing the wrong orchestration mechanism means either over-engineering (building agents when a prompt would do) or under-building (forcing a prompt to do agent-level work).
 
 Design also maps each step to specific **AI building blocks** — Prompt, Context, Skill, Agent, MCP, Project, API, or SDK — so you know exactly what to build. The recommended implementation order (quick wins first, complex agent steps last) gives you a practical sequence for rolling out AI incrementally.
 
@@ -58,20 +58,20 @@ The model analyzes your workflow and recommends an approach based on these signa
 | Workflow runs inside a single AI platform | No-code |
 | Workflow needs to orchestrate across multiple services | Code-first |
 
-Most workflows start no-code. Code-first becomes the right choice when you need programmatic control, integration into existing systems, or production-grade deployment. The same four execution patterns (Prompt, Skill-Powered Prompt, Single Agent, Multi-Agent) apply to both approaches — the architecture approach determines *how* you implement them, not *what* you implement.
+Most workflows start no-code. Code-first becomes the right choice when you need programmatic control, integration into existing systems, or production-grade deployment. The same three orchestration mechanisms (Prompt, Skill-Powered Prompt, Agent) apply to both approaches — the architecture approach determines *how* you implement them, not *what* you implement.
 
 !!! tip "You can switch later"
     Many teams prototype no-code, validate the workflow works, then rebuild code-first for production. The AI Building Block Spec captures the design either way — only the Construct phase changes.
 
 ## Architecture Decisions
 
-Before choosing an execution pattern, the model gathers the information that shapes platform-aware recommendations. Rather than walking through a checklist, it uses an **extract-then-confirm** approach: ask one question, extract everything else from your Workflow Definition, and present the analysis for confirmation.
+Before assessing autonomy and choosing an orchestration mechanism, the model gathers the information that shapes platform-aware recommendations. Rather than walking through a checklist, it uses an **extract-then-confirm** approach: ask one question, extract everything else from your Workflow Definition, and present the analysis for confirmation.
 
 **One question: Platform.** The only thing not already in your Workflow Definition is which AI platform you'll use. If you've already mentioned it in conversation, the model confirms. If not, it asks — and accepts whatever level of specificity you provide ("Claude Code", "ChatGPT", "Google Gemini", "Claude" are all fine). The model doesn't try to disambiguate to a specific offering upfront — the ecosystem is enough for Design decisions, and the specific tool is resolved during Construct when generating artifacts.
 
 **Everything else is extracted from the Workflow Definition:**
 
-- **Tool integrations** — pulled from data flows, context needs, and step details across all steps. The model researches availability on your platform via web search and categorizes each: Built-in, Available with setup, Possible with code, or Manual.
+- **Tool integrations** — pulled from data flows, context needs, and step details across all steps. The model lists the tools identified but defers platform availability research to the Construct phase.
 - **Trigger/schedule** — pulled from your Scenario Metadata. Time-based triggers are noted as scheduled execution requirements with implications for involvement mode and infrastructure.
 - **Browser access** — if any step involves logging into a website, it's flagged during step classification rather than asked about separately. The connection details are handled during Construct.
 - **Shareability** — deferred to Construct, where it determines artifact format (file-based vs. code-based). Not asked during Design.
@@ -80,36 +80,44 @@ Code comfort and deployment surface are inferred from the platform choice when s
 
 After extracting, the model presents a single confirmation block showing the platform, extracted tool integrations with availability mapping, trigger implications, and any flags — then asks if anything was missed or needs adjustment. The confirmed decisions gate all subsequent recommendations.
 
-## Execution Pattern Spectrum
+## Autonomy Assessment
 
-Every AI workflow falls somewhere on this spectrum. The right pattern depends on what your workflow actually needs — not on how sophisticated you want it to be.
+Before choosing an orchestration mechanism, the model assesses where the *whole workflow* sits on the autonomy spectrum. This is the same spectrum used for per-step classification later — applied at the workflow level.
 
-| Pattern | Description | Signals |
-|---------|-------------|---------|
-| **Prompt** | Single structured prompt with step-by-step instructions, all logic inline | Sequential steps, human provides inputs and makes decisions |
-| **Skill-Powered Prompt** | Prompt that invokes reusable skills for complex sub-routines | Repeatable sub-routines, moderate complexity, steps that recur across workflows |
-| **Single Agent** | One agent with tool access, capable of autonomous decisions | Tool use required, autonomous decisions, multi-step reasoning |
-| **Multi-Agent** | Specialized agents coordinating in a pipeline | Multiple expertise domains, parallel execution, review gates between stages |
+```
+Deterministic ———————— Guided ———————— Autonomous
+(fixed path)       (bounded decisions)     (context-driven path)
+```
 
-### Choosing a Pattern
+| Level | Signals | Orchestration implications |
+|-------|---------|--------------------------|
+| **Deterministic** | Steps always execute in the same order, no branching on output quality, failure = stop or retry same step | Prompt or skill-powered prompt likely sufficient |
+| **Guided** | Some steps involve bounded AI judgment, human steers at checkpoints, sequence is mostly fixed but with bounded flexibility | Skill-powered prompt or agent |
+| **Autonomous** | Executor backtracks, re-invokes based on feedback, adjusts approach on failure, human checkpoints can redirect flow | Agent required |
 
-The model analyzes your workflow steps and architecture decisions, then presents a confident recommendation — for example: *"Based on your workflow, I recommend **Skill-Powered Prompt** with **Augmented** involvement because your steps are sequential with two reusable sub-routines, and you're running this from the web UI."*
+The model presents this as a confident assessment — for example: *"This workflow is **Guided** because most steps follow a fixed sequence, but the research step involves bounded judgment about which sources to pursue."* If you disagree, you discuss and adjust.
 
-The signals it reasons through internally:
+## Orchestration Mechanism
 
-- **Tool use** (web search, file access, APIs) → pushes toward agent patterns
-- **Autonomous decision-making** (AI decides what to do next) → requires at least Single Agent
-- **Reusable logic** (sub-routines across workflows) → flags skill candidates
-- **Multiple expertise domains** (research vs. writing vs. editing) → suggests Multi-Agent
-- **Parallel execution or review gates** → suggests Multi-Agent
+Based on the autonomy assessment and architecture decisions, the model recommends who drives the workflow. The orchestration mechanism answers: **who follows the steps?**
 
-If you disagree with the recommendation, the model explains the alternatives and you discuss. Most workflows start as Prompt or Skill-Powered Prompt and evolve toward agents as you add automation.
+| Mechanism | Description | Signals |
+|-----------|-------------|---------|
+| **Prompt** | Human follows structured instructions step by step, all logic inline | Sequential steps, human provides inputs and makes decisions |
+| **Skill-Powered Prompt** | Human invokes reusable skills in a defined sequence | Repeatable sub-routines, moderate complexity, steps that recur across workflows |
+| **Agent** | Agent orchestrates the flow, invoking skills and making sequencing decisions | Tool use required, autonomous decisions, multi-step reasoning |
 
-When the execution pattern is agent-based and the platform has multiple agent offerings (e.g., Claude Code sub-agents vs. Claude Agent SDK), the model asks which offering you want to use — this determines the artifact format in the Construct phase.
+Single-agent vs. multi-agent is an architecture detail decided during agent configuration (later in Design) if "Agent" is selected — not a top-level choice here.
+
+The model presents a confident recommendation — for example: *"Based on your workflow's **Guided** autonomy and the two reusable sub-routines I identified, I recommend **Skill-Powered Prompt** with **Augmented** involvement."*
+
+If you disagree, the model explains the alternatives and you discuss. Most workflows start as Prompt or Skill-Powered Prompt and evolve toward agents as you add automation.
+
+When the orchestration mechanism is Agent and the platform has multiple agent offerings (e.g., Claude Code sub-agents vs. Claude Agent SDK), the model asks which offering you want to use — this determines the artifact format in the Construct phase.
 
 ### Human Involvement
 
-After choosing an execution pattern, determine whether a human participates during the workflow run:
+The orchestration mechanism recommendation includes an involvement mode — whether a human participates during the workflow run:
 
 | Mode | Description | Determined by |
 |------|-------------|---------------|
@@ -124,7 +132,7 @@ The involvement mode is determined by your architecture decisions — platform, 
 ---
 
 !!! warning "Activate plan mode now"
-    You've made the key decisions — architecture, execution pattern, and involvement mode. This is the transition point. **Activate plan mode** on your AI tool before continuing. The model will now plan the rest of the spec (autonomy classification, building block mapping, skill candidates, agent blueprints) based on the decisions you've locked in. See [How to activate plan mode](#two-phases-two-modes) for platform-specific instructions.
+    You've made the key decisions — architecture, autonomy level, orchestration mechanism, and involvement mode. This is the transition point. **Activate plan mode** on your AI tool before continuing. The model will now plan the rest of the spec (per-step autonomy classification, building block mapping, skill candidates, agent blueprints) based on the decisions you've locked in. See [How to activate plan mode](#two-phases-two-modes) for platform-specific instructions.
 
 ## Autonomy Classification
 
@@ -181,7 +189,7 @@ This detail enables generation of skills on any platform during the Construct ph
 
 ## Agent Blueprints
 
-When the execution pattern is Single Agent or Multi-Agent, document each agent your workflow needs. These are platform-agnostic specifications — the model builds them into working agents during [Construct](index.md#32-construct).
+When the orchestration mechanism is Agent, document each agent your workflow needs. These are platform-agnostic specifications — the model builds them into working agents during [Construct](index.md#32-construct). Whether the workflow needs one agent or multiple agents is decided here based on the number of distinct roles, expertise domains, and orchestration needs.
 
 | Component | What to specify |
 |-----------|----------------|
@@ -212,7 +220,7 @@ This step is facilitated by the **`building-workflows`** Business-First AI Frame
 
 ```
 Design the AI workflow from my Workflow Definition.
-Recommend an execution pattern and map building blocks.
+Assess the autonomy level, recommend an orchestration mechanism, and map building blocks.
 ```
 
 Upload or paste your Workflow Definition file (`[workflow-name]-definition.md`) from the Deconstruct step when prompted. The skill runs the Design analysis and produces an AI Building Block Spec.
@@ -226,11 +234,11 @@ Design has two distinct phases that use different modes of interaction with the 
 
 **Phase 1: Collaborative decisions (normal conversation)**
 
-The first part of Design is a back-and-forth conversation. The model scans your Workflow Definition for known answers, confirms what it can infer, asks about anything genuinely unknown, recommends an execution pattern and involvement mode, and you discuss and confirm. This is normal conversational mode — you're making decisions together.
+The first part of Design is a back-and-forth conversation. The model scans your Workflow Definition for known answers, confirms what it can infer, asks about anything genuinely unknown, assesses the workflow's autonomy level, recommends an orchestration mechanism and involvement mode, and you discuss and confirm. This is normal conversational mode — you're making decisions together.
 
 **Phase 2: Plan the spec (plan mode)**
 
-Once the architecture decisions and execution pattern are locked in, the model has everything it needs to plan the full AI Building Block Spec. This is when you **activate plan mode** — the model shifts from asking you questions to planning: classifying each step on the autonomy spectrum, mapping building blocks, identifying skill candidates, and documenting agent blueprints.
+Once the architecture decisions, autonomy level, and orchestration mechanism are locked in, the model has everything it needs to plan the full AI Building Block Spec. This is when you **activate plan mode** — the model shifts from asking you questions to planning: classifying each step on the autonomy spectrum, mapping building blocks, identifying skill candidates, and documenting agent blueprints.
 
 **How to activate plan mode on your platform:**
 
@@ -239,7 +247,7 @@ Once the architecture decisions and execution pattern are locked in, the model h
 | **Claude Code** | Press `Shift+Tab` twice, or type `/plan` |
 | **Cursor** | Select "Plan" in the composer mode |
 | **Codex CLI** | Run with the `--plan` flag |
-| **Other AI tools** | Ask the model: *"Switch to plan mode. Based on the architecture decisions and execution pattern we've agreed on, plan the full AI Building Block Spec — classify each step, map building blocks, identify skill candidates, and document agent blueprints."* |
+| **Other AI tools** | Ask the model: *"Switch to plan mode. Based on the architecture decisions, autonomy level, and orchestration mechanism we've agreed on, plan the full AI Building Block Spec — classify each step, map building blocks, identify skill candidates, and document agent blueprints."* |
 
 After the model produces the plan, **review and approve the AI Building Block Spec** before moving on. If anything needs adjustment — a step classification, a skill candidate, an agent blueprint — now is the time. Once you approve, the model transitions to [Construct (3.2)](construct.md) and begins building.
 
@@ -248,7 +256,8 @@ After the model produces the plan, **review and approve the AI Building Block Sp
 The **AI Building Block Spec** contains:
 
 - **Architecture approach** — No-code or Code-first, with rationale and recommendation signals
-- **Execution pattern** — Prompt, Skill-Powered Prompt, Single Agent, or Multi-Agent, with involvement mode and reasoning
+- **Autonomy level assessment** — Deterministic, Guided, or Autonomous, with rationale for where the whole workflow sits on the spectrum
+- **Orchestration mechanism** — Prompt, Skill-Powered Prompt, or Agent, with involvement mode and reasoning
 - **Architecture decisions** — platform, tool integrations (with connector mapping), trigger/schedule implications, and any flags (browser access, infrastructure needs) — each with rationale and a constraints summary showing how they shaped the recommendations. Deployment surface, code comfort, and shareability are resolved during Construct.
 - **Code-first selections** (when applicable) — specific API and SDK choices per step with justification (e.g., "Claude Agent SDK for the research agent because it needs tool use and multi-step orchestration")
 - **Scenario summary** — workflow metadata from the Workflow Definition
@@ -262,4 +271,4 @@ The **AI Building Block Spec** contains:
 - **Tools and connectors** — external integrations required
 - **Implementation order** — quick wins → semi-autonomous → complex agent steps
 
-This AI Building Block Spec is the input for the [Construct phase](index.md), where the model generates platform-appropriate artifacts (prompts, skills, agents, connectors) based on your execution pattern and architecture decisions.
+This AI Building Block Spec is the input for the [Construct phase](index.md), where the model generates platform-appropriate artifacts (prompts, skills, agents, connectors) based on your orchestration mechanism and architecture decisions.
