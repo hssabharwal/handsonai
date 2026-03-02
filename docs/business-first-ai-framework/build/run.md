@@ -9,11 +9,11 @@ You've worked with the model to build your building blocks — context artifacts
 
 **Start with your Run Guide.** The model generates a Run Guide (`[name]-run-guide.md`) at the end of [Construct](index.md#32-construct) — it tells you exactly how to set up and run everything on your specific platform. If you have one, follow it.
 
-The sections below cover the general execution patterns if you need to decide independently or want to understand the options.
+The sections below cover the general run patterns if you need to decide independently or want to understand the options.
 
-## Choose Your Execution Pattern
+## Choose Your Run Pattern
 
-| What you built | Execution pattern | Where to run it |
+| What you built | Run pattern | Where to run it |
 |---|---|---|
 | Prompt + context files | **Paste and run** in a normal chat | Any AI tool (Claude, ChatGPT, Gemini, M365 Copilot) |
 | Prompt + context + project | **Run in a project** — context is pre-loaded, paste the prompt each run | Claude Projects, ChatGPT Projects, Gemini Gems, M365 Copilot Notebooks |
@@ -27,7 +27,7 @@ The sections below cover the general execution patterns if you need to decide in
 
 ## Paste and Run
 
-The simplest execution pattern. You have a prompt and maybe some context files. Open a chat, provide what the prompt needs, and get the output.
+The simplest run pattern. You have a prompt and maybe some context files. Open a chat, provide what the prompt needs, and get the output.
 
 **How to run it:**
 
@@ -108,7 +108,7 @@ For Claude-specific agent setup, see [Agentic Building Blocks > Agents](../../ag
 
 ## Run a Code-First Workflow
 
-When your architecture approach is **code-first**, you run your workflow from the terminal or deploy it as an application. The same four execution patterns apply, but execution happens through scripts and SDK apps rather than platform UIs.
+When your architecture approach is **code-first**, you run your workflow from the terminal or deploy it as an application. The same three orchestration mechanisms apply, but execution happens through scripts and SDK apps rather than platform UIs.
 
 ### How to run it:
 
@@ -119,7 +119,7 @@ When your architecture approach is **code-first**, you run your workflow from th
 3. **Run the script** — `python main.py`, `npx tsx workflow.ts`, or equivalent
 4. **Review the output** — check the terminal output or output files
 
-**SDK agent apps (Single Agent and Multi-Agent patterns):**
+**SDK agent apps (Agent mechanism):**
 
 1. **Set environment variables** — export your API key and any configuration values
 2. **Install dependencies** — install the SDK and any tool dependencies

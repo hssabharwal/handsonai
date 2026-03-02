@@ -45,16 +45,17 @@ Read the Workflow Definition and run the full Build process, which has three sub
 **3.1 — Design (collaborative planning):**
 1. Prompt the user to enter plan mode for collaborative design
 2. Gather architecture decisions (platform, tools, trigger)
-3. Assess the execution pattern (Prompt → Skill-Powered Prompt → Single Agent → Multi-Agent)
-4. Classify each step on the autonomy spectrum and map to AI building blocks
-5. Identify skill candidates with generation-ready detail
-6. Configure agents (when the pattern calls for them)
-7. Generate the AI Building Block Spec (with "Integration Research Needed" section — availability research is deferred to Construct)
-8. **Spec Approval Gate** — present the spec for explicit user approval. Do NOT proceed to Construct without approval. Loop if changes are requested. After approval, prompt the user to exit plan mode.
+3. Assess workflow autonomy level (Deterministic → Guided → Autonomous)
+4. Choose orchestration mechanism (Prompt → Skill-Powered Prompt → Agent) with human involvement mode
+5. Classify each step on the autonomy spectrum and map to AI building blocks
+6. Identify skill candidates with generation-ready detail
+7. Configure agents (when the mechanism calls for them)
+8. Generate the AI Building Block Spec (with "Integration Research Needed" section — availability research is deferred to Construct)
+9. **Spec Approval Gate** — present the spec for explicit user approval. Do NOT proceed to Construct without approval. Loop if changes are requested. After approval, prompt the user to exit plan mode.
 
 **3.2 — Construct (artifact generation, only after approval):**
 1. **Build path choice** — offer "I'll build it" (model generates artifacts) or "I'll build it myself" (spec is the deliverable, skip to Run with construction guide)
-2. Present the pattern-specific build path (only the steps that apply)
+2. Present the mechanism-specific build path (only the steps that apply)
 3. Research integration availability via web search (deferred from Design)
 4. Generate platform artifacts (prompts, skills, agents, configs) — following agentskills.io format for skills and Claude Code subagent format for agents
 5. Write SOP to Notion (if available)

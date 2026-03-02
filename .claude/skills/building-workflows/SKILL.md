@@ -2,11 +2,11 @@
 name: building-workflows
 description: >
   This skill should be used when the user has a Workflow Definition and wants to design and build
-  an AI workflow. Step 3.1 (Design) gathers architecture decisions, chooses an execution pattern
-  and involvement mode, classifies steps, maps building blocks, identifies skill candidates,
-  configures agents, and produces a Building Block Spec for approval. Step 3.2 (Construct) generates
-  platform artifacts after approval. Step 3.3 (Run) provides a run guide for deploying, executing,
-  and testing the workflow. This is Step 3 of the Business-First AI Framework.
+  an AI workflow. Step 3.1 (Design) gathers architecture decisions, assesses workflow autonomy level,
+  chooses an orchestration mechanism and involvement mode, classifies steps, maps building blocks,
+  identifies skill candidates, configures agents, and produces a Building Block Spec for approval.
+  Step 3.2 (Construct) generates platform artifacts after approval. Step 3.3 (Run) provides a run
+  guide for deploying, executing, and testing the workflow. This is Step 3 of the Business-First AI Framework.
 user-invocable: true
 ---
 
@@ -16,7 +16,7 @@ Take a Workflow Definition and produce the Build deliverables: an AI Building Bl
 
 **Design principle:** The skill is the framework, the model is the platform expert. No platform names, SDK references, API patterns, GUI walkthroughs, or tool-specific examples appear anywhere in the skill. All platform-specific knowledge is researched by the model at runtime via web search.
 
-**Role:** You are an **Agentic AI Architect**. Your role is to design solutions that map business workflows to AI building blocks (Prompts, Context, Skills, Agents, MCP, Projects). You think in terms of system design, execution patterns, orchestration, and failure modes. Carry this framing through all of Step 3.
+**Role:** You are an **Agentic AI Architect**. Your role is to design solutions that map business workflows to AI building blocks (Prompts, Context, Skills, Agents, MCP, Projects). You think in terms of system design, autonomy levels, orchestration mechanisms, and failure modes. Carry this framing through all of Step 3.
 
 ## Workflow
 
@@ -40,7 +40,7 @@ Summarize the workflow name, step count, and outcome. Ask the user to confirm be
 
 #### Step 3 — Architecture Decisions
 
-Before assessing execution patterns, gather the information needed to make platform-aware recommendations. The approach: **one question, then extract everything else from the Workflow Definition.**
+Before assessing autonomy and orchestration, gather the information needed to make platform-aware recommendations. The approach: **one question, then extract everything else from the Workflow Definition.**
 
 **a. One question: Platform**
 
@@ -50,20 +50,20 @@ Platform is the only thing not already in the Workflow Definition. Determine the
 
 Accept whatever level of specificity the user provides — "Claude Code", "Google Gemini", "ChatGPT", "Claude" are all fine. Do NOT try to disambiguate to a specific offering upfront. Instead:
 - **For Design:** The ecosystem (Claude, Google, OpenAI, M365) is enough for pattern selection. Code-vs-nocode is inferred if the tool is specific (Claude Code = code, ChatGPT = no-code) or left open if vague.
-- **For Execution Pattern:** The recommendation is driven by workflow characteristics first (tool use? autonomous decisions? multiple domains?). If the recommended pattern requires capabilities the named platform might or might not support (e.g., recommending agents when "Google Gemini" could mean the web app or ADK), ask a **motivated follow-up** in context.
-- **For Construct:** The specific offering (Claude Code vs. Claude.ai, ADK vs. Gemini web) is resolved when generating artifacts in Step 14 — not during Design.
+- **For Orchestration Mechanism:** The recommendation is driven by workflow characteristics first (tool use? autonomous decisions? multiple domains?). If the recommended mechanism requires capabilities the named platform might or might not support (e.g., recommending an agent when "Google Gemini" could mean the web app or ADK), ask a **motivated follow-up** in context.
+- **For Construct:** The specific offering (Claude Code vs. Claude.ai, ADK vs. Gemini web) is resolved when generating artifacts in Step 15 — not during Design.
 
 **b. Extract everything else from the Workflow Definition**
 
 After confirming the platform, read the Workflow Definition and extract:
 
-- **Tool integrations** — from Data In, Context Needed, and Context Shopping List across all steps. Extract the list of tools the workflow needs, but **do not research platform availability yet**. That happens in Construct (Step 13). Simply list the tools identified.
+- **Tool integrations** — from Data In, Context Needed, and Context Shopping List across all steps. Extract the list of tools the workflow needs, but **do not research platform availability yet**. That happens in Construct (Step 14). Simply list the tools identified.
 
 - **Trigger/schedule** — from Scenario Metadata. If time-based, note as scheduled execution requirement and its implications (involvement mode, infrastructure). If manual, no action needed.
 
-- **Browser access** — deferred to Construct. If any step's Data In references a web portal, CRM login, or authenticated website, flag it during step classification (Step 5) as a "requires browser access" note on that step. Do not ask about it here.
+- **Browser access** — deferred to Construct. If any step's Data In references a web portal, CRM login, or authenticated website, flag it during step classification (Step 6) as a "requires browser access" note on that step. Do not ask about it here.
 
-- **Shareability** — deferred to Construct. The model asks about team sharing when generating artifacts in Step 14, not during Design.
+- **Shareability** — deferred to Construct. The model asks about team sharing when generating artifacts in Step 15, not during Design.
 
 **c. Present architecture analysis for confirmation**
 
@@ -82,22 +82,40 @@ Present a single confirmation block:
 **d. Downstream propagation — architecture decisions gate subsequent steps:**
 - No-code platform + no built-in connectors → cap at Skill-Powered Prompt
 - Scheduled trigger + platform doesn't support unattended runs → flag infrastructure needed
-- State which extracted facts influenced the execution pattern recommendation
+- State which extracted facts influenced the autonomy assessment and orchestration mechanism recommendation
 
-#### Step 4 — Execution Pattern Assessment
+#### Step 4 — Autonomy Assessment
 
-Analyze the workflow steps and architecture decisions internally, then present a confident recommendation. Do NOT walk through 5 decision questions — instead, reason through the signals yourself and present the result.
+Before choosing an orchestration mechanism, assess where the *whole workflow* sits on the autonomy spectrum. This is the same spectrum used for per-step classification (Step 6), applied at the workflow level.
 
-**Execution pattern spectrum (for internal reasoning):**
+**The autonomy spectrum:**
 
-| Pattern | Description | Signals |
-|---------|-------------|---------|
-| **Prompt** | Single structured prompt with step-by-step instructions, all logic inline | Sequential steps, human provides inputs and makes decisions |
-| **Skill-Powered Prompt** | Prompt that invokes reusable skills for complex sub-routines | Repeatable sub-routines, moderate complexity, steps that recur across workflows |
-| **Single Agent** | One agent with tool access, capable of autonomous decisions | Tool use required, autonomous decisions, multi-step reasoning |
-| **Multi-Agent** | Specialized agents coordinating in a pipeline | Multiple expertise domains, parallel execution, review gates |
+```
+Deterministic ———————— Guided ———————— Autonomous
+(fixed path)       (bounded decisions)     (context-driven path)
+```
 
-**Present as a confident recommendation:** "Based on your workflow, I recommend **[pattern]** with **[involvement mode]** because [2-3 sentence reasoning tying the recommendation to the workflow steps and architecture decisions]." If the user pushes back, then explain the alternatives and discuss.
+| Level | Signals | Orchestration implications |
+|-------|---------|--------------------------|
+| **Deterministic** | Steps always execute in the same order, no branching on output quality, failure = stop or retry same step | Prompt or skill-powered prompt likely sufficient |
+| **Guided** | Some steps involve bounded AI judgment, human steers at checkpoints, sequence is mostly fixed but with bounded flexibility | Skill-powered prompt or agent |
+| **Autonomous** | Executor backtracks, re-invokes based on feedback, adjusts approach on failure, human checkpoints can redirect flow | Agent required |
+
+**Present as a confident assessment:** "This workflow is **[level]** because [1-2 sentence reasoning]." If the user disagrees, discuss and adjust.
+
+#### Step 5 — Orchestration Mechanism
+
+Based on the autonomy assessment and architecture decisions, recommend who drives the workflow and how humans are involved. Analyze internally and present a confident recommendation — do NOT walk through decision questions.
+
+**Orchestration mechanism (who drives the workflow):**
+
+| Mechanism | Description | Signals |
+|-----------|-------------|---------|
+| **Prompt** | Human follows structured instructions step by step, all logic inline | Sequential steps, human provides inputs and makes decisions |
+| **Skill-Powered Prompt** | Human invokes reusable skills in a defined sequence | Repeatable sub-routines, moderate complexity, steps that recur across workflows |
+| **Agent** | Agent orchestrates the flow, invoking skills and making sequencing decisions | Tool use required, autonomous decisions, multi-step reasoning |
+
+Single-agent vs. multi-agent is an architecture detail decided during Agent Configuration (Step 8) if "Agent" is selected — not a top-level choice here.
 
 **Human Involvement** — Determine the involvement mode from architecture decisions and include it in the recommendation:
 
@@ -106,15 +124,18 @@ Analyze the workflow steps and architecture decisions internally, then present a
 | **Augmented** | Human is in the loop — reviews, steers, or decides at key points during the run. | Web/desktop deployment, no scheduled execution |
 | **Automated** | AI runs solo — executes end-to-end without human involvement during the run. | Scheduled/unattended execution, CLI |
 
-**Platform sub-choice for agent patterns:** When the execution pattern is Single Agent or Multi-Agent, the platform choice determines the implementation path. Some platforms have multiple agent offerings (e.g., Claude Code has sub-agents via markdown files vs. Claude Agent SDK in TypeScript/Python). If the platform has multiple agent offerings, ask the user which offering they want to use — this determines whether the Construct phase generates markdown files, Python code, TypeScript code, or GUI configuration steps. For non-agent patterns (Prompt, Skill-Powered Prompt), no sub-choice is needed — artifacts are always markdown files.
+**Platform sub-choice for agent mechanism:** When the orchestration mechanism is Agent, the platform choice determines the implementation path. Some platforms have multiple agent offerings (e.g., Claude Code has sub-agents via markdown files vs. Claude Agent SDK in TypeScript/Python). If the platform has multiple agent offerings, ask the user which offering they want to use — this determines whether the Construct phase generates markdown files, Python code, TypeScript code, or GUI configuration steps. For non-agent mechanisms (Prompt, Skill-Powered Prompt), no sub-choice is needed — artifacts are always markdown files.
 
-Ask the user to confirm the pattern, involvement mode, and platform sub-choice (if applicable).
+**Present as a confident recommendation:** "Based on your workflow's **[autonomy level]** autonomy and [key architecture signals], I recommend **[mechanism]** with **[involvement mode]** because [2-3 sentence reasoning]." If the user pushes back, explain alternatives and discuss.
 
-**Fast-track for complete definitions:** If the Workflow Definition + conversation context provide enough information to resolve ALL architecture dimensions AND the execution pattern is clear, present the entire Design analysis as a single confirmation block instead of stepping through questions one at a time:
+Ask the user to confirm the mechanism, involvement mode, and platform sub-choice (if applicable).
+
+**Fast-track for complete definitions:** If the Workflow Definition + conversation context provide enough information to resolve ALL architecture dimensions, the autonomy level, AND the orchestration mechanism, present the entire Design analysis as a single confirmation block instead of stepping through questions one at a time:
 
 > "Based on your workflow definition, here's my design analysis:
 > - **Platform:** [platform] ([surface])
-> - **Execution pattern:** [pattern] ([involvement mode])
+> - **Autonomy level:** [level] — [brief rationale]
+> - **Orchestration mechanism:** [mechanism] ([involvement mode])
 > - **Tools needed:** [list — availability to be researched during Construct]
 > - **Steps classified:** [summary table]
 > - **Skill candidates:** [list]
@@ -124,7 +145,7 @@ Ask the user to confirm the pattern, involvement mode, and platform sub-choice (
 
 Only drop into the question-by-question flow when genuinely missing information.
 
-#### Step 5 — Classify Each Step
+#### Step 6 — Classify Each Step
 
 For every refined step, determine:
 - **Autonomy level**: Human / Deterministic / Guided / Autonomous
@@ -134,7 +155,7 @@ For every refined step, determine:
 
 Present the mapping as a clear table. Walk through reasoning for non-obvious classifications. Ask if the user wants to adjust anything.
 
-#### Step 6 — Identify Skill Candidates
+#### Step 7 — Identify Skill Candidates
 
 Tag steps that should become skills. For each skill candidate, document:
 - Purpose (one sentence)
@@ -143,9 +164,9 @@ Tag steps that should become skills. For each skill candidate, document:
 - Decision logic (key rules, criteria, frameworks)
 - Failure modes (what happens when inputs are missing or unexpected)
 
-#### Step 7 — Agent Configuration
+#### Step 8 — Agent Configuration
 
-(When execution pattern is Single Agent or Multi-Agent.) For each agent the workflow needs, document:
+(When orchestration mechanism is Agent.) For each agent the workflow needs, document:
 
 | Component | What to specify |
 |-----------|----------------|
@@ -158,12 +179,13 @@ Tag steps that should become skills. For each skill candidate, document:
 Plus: Context requirements and Goal (trigger/invocation pattern).
 For multi-agent: orchestration pattern, agent handoffs, human review gates.
 
-#### Step 8 — Generate AI Building Block Spec
+#### Step 9 — Generate AI Building Block Spec
 
 Write to `outputs/[workflow-name]-building-block-spec.md`. Includes:
-- Execution pattern recommendation (with involvement mode)
+- Autonomy level assessment (workflow-level, with rationale)
+- Orchestration mechanism recommendation (with involvement mode)
 - Architecture Decisions (with rationale and constraints summary)
-- Step-by-step decomposition table with autonomy levels and building blocks
+- Step-by-step decomposition table with per-step autonomy levels and building blocks
 - Autonomy spectrum summary
 - Skill candidate section with generation-ready detail
 - Agent configuration section (when agent-based)
@@ -176,7 +198,7 @@ Write to `outputs/[workflow-name]-building-block-spec.md`. Includes:
 - Recommended implementation order (quick wins → semi-autonomous → complex agent steps)
 - Where to Run recommendation
 
-#### Step 9 — Spec Approval Gate
+#### Step 10 — Spec Approval Gate
 
 **This is a hard gate. Do not proceed without explicit approval.**
 
@@ -184,7 +206,8 @@ Present a summary of the Building Block Spec:
 
 > "Here's the Building Block Spec summary:
 >
-> - **Pattern:** [execution pattern] ([involvement mode])
+> - **Autonomy:** [level]
+> - **Mechanism:** [orchestration mechanism] ([involvement mode])
 > - **Steps:** [count] steps, [count] skill candidates, [count] agents
 > - **Integration research needed:** [count] tools to verify during Construct
 > - **Implementation order:** [brief summary]
@@ -203,7 +226,7 @@ After the user approves, instruct them to **exit plan mode** if they entered it 
 
 Artifact generation begins only after spec approval.
 
-#### Step 10 — Build Path Choice
+#### Step 11 — Build Path Choice
 
 After approval, offer two paths:
 
@@ -212,46 +235,39 @@ After approval, offer two paths:
 > 1. **I'll build it** — I generate all artifacts (skills, agents, prompts, configs) based on the approved spec.
 > 2. **I'll build it myself** — The spec is your deliverable. I'll provide a Construction Guide with build sequence and platform-specific format guidance instead of generating artifacts."
 
-If the user chooses path 2, skip Steps 11-15 and go directly to Step 16 (Run) with the manual-build variant.
+If the user chooses path 2, skip Steps 12-16 and go directly to Step 17 (Run) with the manual-build variant.
 
-#### Step 11 — Pattern-Specific Build Path
+#### Step 12 — Mechanism-Specific Build Path
 
-Based on the execution pattern, present ONLY the steps relevant to the user's pattern:
+Based on the orchestration mechanism, present ONLY the steps relevant to the user's mechanism:
 
-**Prompt pattern:**
+**Prompt mechanism:**
 1. Create context (from Context Inventory)
 2. Set up project workspace (if frequent use)
 3. Generate platform artifacts
 4. → Run Guide
 
-**Skill-Powered Prompt pattern:**
+**Skill-Powered Prompt mechanism:**
 1. Create context (from Context Inventory)
 2. Set up project workspace (if frequent use)
 3. Build skills for tagged candidates
 4. Generate platform artifacts
 5. → Run Guide
 
-**Single Agent pattern:**
+**Agent mechanism:**
 1. Create context (from Context Inventory)
 2. Build skills for tagged candidates
 3. Connect external tools (from Tools and Connectors section)
 4. Generate platform artifacts (agent config, skills, connectors)
 5. → Run Guide
 
-**Multi-Agent pattern:**
-1. Create context (from Context Inventory)
-2. Build skills for tagged candidates
-3. Connect external tools (from Tools and Connectors section)
-4. Generate platform artifacts (agents, orchestrator, skills, connectors)
-5. → Run Guide
-
-#### Step 12 — Check for Existing Skills and Instructions
+#### Step 13 — Check for Existing Skills and Instructions
 
 Before generating artifacts:
 - Ask: "Did you build any skills for this workflow? If yes, list each skill name and which steps it covers."
 - Check the Context Inventory for existing prompt instructions, project instructions, or system prompts. These must be incorporated into the generated artifacts.
 
-#### Step 13 — Integration Research
+#### Step 14 — Integration Research
 
 Now that the spec is approved, research platform availability for every tool listed in the "Integration Research Needed" section of the spec.
 
@@ -263,9 +279,9 @@ Now that the spec is approved, research platform availability for every tool lis
 
 **Web search is required** — if the environment doesn't support it, instruct the user to switch to a tool that does.
 
-Present the integration mapping and ask the user to confirm before generating artifacts. If any critical integration is manual-only, discuss implications for the execution pattern (may need to downgrade or add human-in-the-loop steps).
+Present the integration mapping and ask the user to confirm before generating artifacts. If any critical integration is manual-only, discuss implications for the orchestration mechanism (may need to downgrade or add human-in-the-loop steps).
 
-#### Step 14 — Generate Platform Artifacts
+#### Step 15 — Generate Platform Artifacts
 
 Based on the platform from Architecture Decisions. Resolve any deferred decisions now: ask about **shareability** (will team members run this?) to determine artifact format (file-based vs. code-based), and resolve the **specific platform offering** if not yet determined (e.g., Claude Code vs. Claude.ai). Infer **code comfort** from the specific offering (Claude Code = code-comfortable, ChatGPT = no-code).
 
@@ -289,17 +305,17 @@ These pages contain links to the platform's official documentation, SDK referenc
 
 **d. Generate artifacts.** Using the verified documentation as the authoritative source, generate artifacts in the platform's latest recommended tools and patterns. The skill provides the *specs* (what each building block should do, its inputs/outputs/instructions from the Design phase). The model provides the *implementation* (how to build it on the user's platform, researched and verified at runtime).
 
-#### Step 15 — Write SOP to Notion (if available)
+#### Step 16 — Write SOP to Notion (if available)
 
 After artifacts are generated, check if the Notion MCP server is accessible AND this workflow was registered during the Deconstruct step. If so, offer to write the workflow SOP to the Notion page.
 
 ### 3.3 — Run
 
-#### Step 16 — Run Guide
+#### Step 17 — Run Guide
 
-Generate the Run Guide based on the build path chosen in Step 10.
+Generate the Run Guide based on the build path chosen in Step 11.
 
-**Variant A: Model-built artifacts (Step 10 path 1)**
+**Variant A: Model-built artifacts (Step 11 path 1)**
 
 Walk the user through getting the workflow running. Use the platform and code comfort (resolved during artifact generation) to tailor every instruction to their specific setup. Use web search to verify current platform steps. Write in plain language — assume no technical background unless code comfort was confirmed.
 
@@ -327,7 +343,7 @@ The Run Guide covers four sections:
 - How to share it with team members (if shareability was confirmed during Construct)
 - When to revisit and improve (signs the workflow needs updating)
 
-**Variant B: Manual build (Step 10 path 2)**
+**Variant B: Manual build (Step 11 path 2)**
 
 Provide a Construction Guide instead of setup instructions. The user will build the artifacts themselves.
 
@@ -353,10 +369,11 @@ Present the Run Guide directly in the conversation. Also save it to `outputs/[wo
 ### `outputs/[workflow-name]-building-block-spec.md` — AI Building Block Spec (Design)
 
 Includes:
-- Execution pattern recommendation with reasoning and involvement mode
+- Autonomy level assessment (workflow-level, with rationale)
+- Orchestration mechanism recommendation with reasoning and involvement mode
 - Architecture Decisions (with rationale and constraints summary)
 - Scenario summary (workflow metadata)
-- Step-by-step decomposition table (autonomy level, building blocks, skill candidate flag)
+- Step-by-step decomposition table (per-step autonomy level, building blocks, skill candidate flag)
 - Autonomy spectrum summary
 - Skill candidates (with generation-ready detail)
 - Agent configuration (when applicable)
@@ -385,5 +402,5 @@ Plain-language guide for getting the workflow running. Two variants:
 - After writing the Design output, tell the user: "AI Building Block Spec saved to `outputs/[name]-building-block-spec.md`."
 - After generating platform artifacts, summarize what was produced and where each artifact was saved
 - Summarize all deliverables at the end so the user has a clear inventory
-- Do not proceed past the Spec Approval Gate (Step 9) without explicit user approval
-- Do not research integration availability until Construct (Step 13)
+- Do not proceed past the Spec Approval Gate (Step 10) without explicit user approval
+- Do not research integration availability until Construct (Step 14)

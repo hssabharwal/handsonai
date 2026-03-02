@@ -79,7 +79,7 @@ For platform-specific setup (Claude.ai ZIP upload, Cowork install, API integrati
 
 1. **Analyze** (`analyzing-workflows`) — Audit your workflows, interview you about your work, and produce an opportunity report with structured candidates. If you already know which workflow to deconstruct, this step is brief.
 2. **Deconstruct** (`deconstructing-workflows`) — Interactive deep-dive that decomposes the workflow into refined steps using the 5-question framework. Produces the Workflow Definition.
-3. **Build** (`building-workflows`) — Design phase: gather architecture decisions, choose an execution pattern and involvement mode, classify steps, map building blocks, identify skill candidates, configure agents. Construct phase: generate platform-appropriate artifacts (prompts, skills, agents, configs) and a Run Guide tailored to your platform and technical comfort level.
+3. **Build** (`building-workflows`) — Design phase: gather architecture decisions, assess workflow autonomy level, choose an orchestration mechanism and involvement mode, classify steps, map building blocks, identify skill candidates, configure agents. Construct phase: generate platform-appropriate artifacts (prompts, skills, agents, configs) and a Run Guide tailored to your platform and technical comfort level.
 
 Files are saved to `outputs/` using kebab-case workflow names (e.g., `outputs/lead-qualification-definition.md`).
 
@@ -97,14 +97,15 @@ Files are saved to `outputs/` using kebab-case workflow names (e.g., `outputs/le
 
     "Help me figure out which parts of my weekly reporting process
     could be automated with AI"
-    → Decomposes the reporting process, chooses an execution pattern,
-      and identifies quick wins vs. complex automation opportunities
+    → Decomposes the reporting process, assesses autonomy, chooses an
+      orchestration mechanism, and identifies quick wins vs. complex
+      automation opportunities
 
 **What you'll get:** Multiple files in `outputs/`:
 
 1. **Opportunity Report** — `ai-opportunity-report.md` — categorized opportunities with structured workflow candidates (if generated)
 2. **Workflow Definition** — `[name]-definition.md` — structured decomposition of every step
-3. **AI Building Block Spec** — `[name]-building-block-spec.md` — execution pattern, autonomy classifications, building block mapping, skill candidates, agent configs
+3. **AI Building Block Spec** — `[name]-building-block-spec.md` — autonomy level, orchestration mechanism, per-step classifications, building block mapping, skill candidates, agent configs
 4. **Platform Artifacts** — prompts, skills, agents, and configs generated for your platform
 5. **Run Guide** — `[name]-run-guide.md` — step-by-step setup and first-run instructions
 
@@ -203,7 +204,7 @@ Design your AI implementation and construct the workflow.
 
 **Command:** `/business-first-ai:build-workflow`
 
-**What it does:** Takes a Workflow Definition and runs the full Build process: Design (architecture decisions, execution pattern with involvement mode, autonomy classification, building block mapping, skill candidates, agent configuration) and Construct (platform-appropriate artifacts and a Run Guide). This is the Build step.
+**What it does:** Takes a Workflow Definition and runs the full Build process: Design (architecture decisions, autonomy assessment, orchestration mechanism with involvement mode, per-step classification, building block mapping, skill candidates, agent configuration) and Construct (platform-appropriate artifacts and a Run Guide). This is the Build step.
 
 **When to use it:** Use this when you have a Workflow Definition (from the Deconstruct step) and want to design and build your AI workflow. The Design phase produces the AI Building Block Spec; the Construct phase generates everything you need to run the workflow.
 
@@ -214,17 +215,18 @@ Design your AI implementation and construct the workflow.
 1. **Load Workflow Definition** — The AI reads the Workflow Definition from `outputs/`
 2. **Confirm understanding** — The AI summarizes the workflow and asks you to confirm
 3. **Architecture decisions** — Confirm platform (the one question), then extract tool integrations, trigger/schedule, and constraints from the Workflow Definition and present a confirmation block
-4. **Execution pattern assessment** — The AI walks you through the four execution patterns and recommends one with an involvement mode (Augmented or Automated)
-5. **Classify each step** — Autonomy level, AI building blocks, tools, human review gates
-6. **Identify skill candidates** — Steps tagged for skill creation with generation-ready detail
-7. **Agent configuration** (when applicable) — Platform-agnostic agent blueprint
-8. **Generate AI Building Block Spec** — Complete design document
+4. **Autonomy assessment** — The AI assesses where the whole workflow sits on the autonomy spectrum (Deterministic → Guided → Autonomous)
+5. **Orchestration mechanism** — The AI recommends a mechanism (Prompt, Skill-Powered Prompt, or Agent) with an involvement mode (Augmented or Automated)
+6. **Classify each step** — Per-step autonomy level, AI building blocks, tools, human review gates
+7. **Identify skill candidates** — Steps tagged for skill creation with generation-ready detail
+8. **Agent configuration** (when applicable) — Platform-agnostic agent blueprint
+9. **Generate AI Building Block Spec** — Complete design document
 
 **Construct phase:**
 
-9. **Pattern-specific build path** — Only the steps relevant to your chosen execution pattern
-10. **Generate platform artifacts** — Prompts, skills, agents, and configs in whatever format your platform needs (researched via web search at runtime)
-11. **Run Guide** — Plain-language setup instructions, first-run test, and next steps tailored to your platform
+10. **Mechanism-specific build path** — Only the steps relevant to your chosen orchestration mechanism
+11. **Generate platform artifacts** — Prompts, skills, agents, and configs in whatever format your platform needs (researched via web search at runtime)
+12. **Run Guide** — Plain-language setup instructions, first-run test, and next steps tailored to your platform
 
 **Example prompts:**
 
@@ -234,11 +236,11 @@ Design your AI implementation and construct the workflow.
 
     "Design and build the expense-reporting workflow"
     → Reads outputs/expense-reporting-definition.md, recommends
-      an execution pattern, and generates the full build output
+      an orchestration mechanism, and generates the full build output
 
 **What you'll get:**
 
-- **AI Building Block Spec** (`outputs/[name]-building-block-spec.md`) — architecture decisions, execution pattern with involvement mode, step classifications, skill candidates, agent configs, implementation order
+- **AI Building Block Spec** (`outputs/[name]-building-block-spec.md`) — architecture decisions, autonomy level, orchestration mechanism with involvement mode, step classifications, skill candidates, agent configs, implementation order
 - **Platform Artifacts** — prompts, skills, agents, and configs in whatever format your platform needs
 - **Run Guide** (`outputs/[name]-run-guide.md`) — step-by-step setup, first-run test, and next steps
 

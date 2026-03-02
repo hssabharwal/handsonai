@@ -66,13 +66,13 @@ Design your AI implementation, construct the components, and run the workflow.
 
 Step 2 produces a Workflow Definition — the analysis. Step 3 is where the `building-workflows` skill turns that analysis into a working AI workflow. The skill guides you through three parts:
 
-**3.1: Design** — The skill confirms your platform, then extracts tool integrations, trigger/schedule, and constraints directly from the Workflow Definition — presenting a single confirmation block instead of asking individual questions. Based on the confirmed analysis, it recommends an execution pattern (Prompt → Skill-Powered Prompt → Single Agent → Multi-Agent) and involvement mode, classifies each step on the autonomy spectrum, maps AI building blocks, identifies skill candidates, and documents agent blueprints when needed. Produces an **AI Building Block Spec** — a platform-agnostic blueprint that tells the model exactly what to build in 3.2.
+**3.1: Design** — The skill confirms your platform, then extracts tool integrations, trigger/schedule, and constraints directly from the Workflow Definition — presenting a single confirmation block instead of asking individual questions. Based on the confirmed analysis, it assesses the workflow's autonomy level (Deterministic → Guided → Autonomous), recommends an orchestration mechanism (Prompt → Skill-Powered Prompt → Agent) and involvement mode, classifies each step on the autonomy spectrum, maps AI building blocks, identifies skill candidates, and documents agent blueprints when needed. Produces an **AI Building Block Spec** — a platform-agnostic blueprint that tells the model exactly what to build in 3.2.
 
-**3.2: Construct** — The skill tells the model what to build (the specs from Design); the model researches your platform's current tools and conventions via web search and generates the actual artifacts — context, skills, prompts, agents, MCP connections — in whatever format your platform requires. Only the components your execution pattern needs are built.
+**3.2: Construct** — The skill tells the model what to build (the specs from Design); the model researches your platform's current tools and conventions via web search and generates the actual artifacts — context, skills, prompts, agents, MCP connections — in whatever format your platform requires. Only the components your orchestration mechanism needs are built.
 
 **3.3: Run** — The skill produces a **Run Guide** tailored to your platform and technical comfort level: what was built and where it lives, step-by-step setup instructions, a guided first-run test with sample input, and next steps for ongoing use.
 
-**Facilitated by the `building-workflows` skill.** See [Build Workflows](build/index.md) for the full guide, including pattern-specific construct paths and three worked examples across the autonomy spectrum.
+**Facilitated by the `building-workflows` skill.** See [Build Workflows](build/index.md) for the full guide, including mechanism-specific construct paths and three worked examples across the autonomy spectrum.
 
 ---
 
@@ -134,16 +134,17 @@ Used to classify each workflow step during [Design](build/design.md):
 | **Guided** | AI makes bounded decisions within guardrails; human reviews at key checkpoints |
 | **Autonomous** | AI plans and executes end-to-end, including decisions and tool use |
 
-### Execution Pattern Spectrum
+### Orchestration Mechanism
 
-Every AI workflow falls somewhere on this spectrum. The right pattern depends on what your workflow actually needs:
+The orchestration mechanism answers: **who drives the workflow?** The right mechanism depends on the workflow's autonomy level and what it actually needs:
 
-| Pattern | Description | Signals |
-|---------|-------------|---------|
-| **Prompt** | Single self-contained prompt, all logic inline | Sequential steps, human drives the process and provides all inputs |
-| **Skill-Powered Prompt** | Prompt invoking reusable skills | Repeatable sub-routines, moderate complexity |
-| **Single Agent** | One autonomous agent with tool access | Tool use, autonomous decisions, multi-step reasoning |
-| **Multi-Agent** | Specialized agents in a pipeline | Multiple expertise domains, parallel execution, review gates |
+| Mechanism | Description | Signals |
+|-----------|-------------|---------|
+| **Prompt** | Human follows structured instructions step by step, all logic inline | Sequential steps, human provides inputs and makes decisions |
+| **Skill-Powered Prompt** | Human invokes reusable skills in a defined sequence | Repeatable sub-routines, moderate complexity |
+| **Agent** | Agent orchestrates the flow, invoking skills and making sequencing decisions | Tool use required, autonomous decisions, multi-step reasoning |
+
+Single-agent vs. multi-agent is an architecture detail decided during agent configuration — not a top-level choice.
 
 ## Getting Started
 
@@ -155,6 +156,6 @@ Every AI workflow falls somewhere on this spectrum. The right pattern depends on
 1. **[Analyze Workflows](analyze.md)** — identify your best AI candidates
 2. **Pick your highest-impact opportunity** — don't try to pursue everything at once
 3. **[Deconstruct the workflow](deconstruct/index.md)** — break it into discrete steps
-4. **[Design](build/design.md)** your AI workflow — choose an execution pattern, classify steps, map building blocks
-5. **[Build](build/index.md)** the components your execution pattern requires
+4. **[Design](build/design.md)** your AI workflow — assess autonomy, choose an orchestration mechanism, classify steps, map building blocks
+5. **[Build](build/index.md)** the components your orchestration mechanism requires
 6. **Test on a real scenario** and iterate

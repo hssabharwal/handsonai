@@ -81,14 +81,13 @@ Start here: Can you define all the steps in advance?
 
 ## How These Patterns Relate to the Framework
 
-The [Build > Design](../../business-first-ai-framework/build/design.md) phase of the Business-First AI Framework uses an Execution Pattern Spectrum (Prompt → Skill-Powered Prompt → Single Agent → Multi-Agent) to classify workflows at a higher level. These seven architecture patterns provide the detailed implementation blueprints within that spectrum:
+The [Build > Design](../../business-first-ai-framework/build/design.md) phase of the Business-First AI Framework first assesses the workflow's autonomy level (Deterministic → Guided → Autonomous), then recommends an orchestration mechanism (Prompt → Skill-Powered Prompt → Agent). These seven architecture patterns provide the detailed implementation blueprints within that spectrum:
 
-| Framework Execution Pattern | Architecture Patterns |
-|---------------------------|----------------------|
+| Orchestration Mechanism | Architecture Patterns |
+|------------------------|----------------------|
 | Prompt | Augmented LLM |
 | Skill-Powered Prompt | Prompt Chaining, Routing |
-| Single Agent | Parallelization, Orchestrator-Workers, Evaluator-Optimizer |
-| Multi-Agent | Orchestrator-Workers (multi-agent), Autonomous Agents |
+| Agent | Parallelization, Orchestrator-Workers, Evaluator-Optimizer, Autonomous Agents |
 
 The [AI Workflow Design Matrix](../../business-first-ai-framework/workflow-design-matrix.md) adds a second dimension — **human involvement** (Augmented vs. Automated) — to the autonomy spectrum. Architecture patterns map to the matrix's autonomy axis: Deterministic workflows typically use Augmented LLM or Prompt Chaining, Guided workflows use Routing or Evaluator-Optimizer, and Autonomous workflows use Orchestrator-Workers or Autonomous Agents.
 
@@ -98,7 +97,7 @@ The [AI Workflow Design Matrix](../../business-first-ai-framework/workflow-desig
 
 ## Related
 
-- [Build > Design Your AI Workflow](../../business-first-ai-framework/build/design.md) — choose an execution pattern for your workflow
+- [Build > Design Your AI Workflow](../../business-first-ai-framework/build/design.md) — assess autonomy and choose an orchestration mechanism for your workflow
 - [Agents](../../agentic-building-blocks/agents/index.md) — concepts for building AI agents
 - [Agent Capability Patterns](../../agentic-building-blocks/agents/capability-patterns/index.md) — behavioral patterns (reflection, tool use, planning, etc.)
 - [Agent Orchestration Patterns](../../agentic-building-blocks/agents/orchestration-patterns/index.md) — multi-agent coordination topologies (sequential, parallel, hierarchical, etc.)

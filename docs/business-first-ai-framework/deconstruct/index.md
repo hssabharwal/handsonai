@@ -99,7 +99,7 @@ The **Workflow Definition** captures:
 - **Step sequence and dependencies** — what's sequential, what's parallel, where the critical path is
 - **Context shopping list** — every artifact the workflow needs, with status and key contents
 
-Most workflows expand from 5–8 rough steps to 12–20 refined steps after the deep dive. This Workflow Definition is the input for the [Design phase](../build/design.md) in Step 3 — Build, where the model chooses an execution pattern, classifies each step on the autonomy spectrum, and maps it to AI building blocks.
+Most workflows expand from 5–8 rough steps to 12–20 refined steps after the deep dive. This Workflow Definition is the input for the [Design phase](../build/design.md) in Step 3 — Build, where the model assesses the workflow's autonomy level, chooses an orchestration mechanism, classifies each step on the autonomy spectrum, and maps it to AI building blocks.
 
 ## Tips for Better Results
 
@@ -114,7 +114,7 @@ Most workflows expand from 5–8 rough steps to 12–20 refined steps after the 
 ## Related
 
 - **Previous step:** Not sure which workflow to deconstruct? Start with [Analyze Workflows](../analyze.md) (Step 1) to identify your best candidates.
-- **Next step:** Ready to build? Go to [Build AI-Powered Workflows](../build/index.md) (Step 3) — starting with the Design phase to choose your execution pattern and map building blocks.
+- **Next step:** Ready to build? Go to [Build AI-Powered Workflows](../build/index.md) (Step 3) — starting with the Design phase to assess autonomy, choose an orchestration mechanism, and map building blocks.
 - [Business-First AI Framework](../index.md) — the full three-step methodology
 - [Prompts](../../agentic-building-blocks/prompts/index.md)
 - [Agents](../../agentic-building-blocks/agents/index.md)
