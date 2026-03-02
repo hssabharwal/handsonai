@@ -15,7 +15,7 @@ Interactively discover a business workflow and decompose every step into a struc
 ## Workflow
 
 1. **Scenario discovery** — Determine how the user is arriving:
-   - **From Analyze output**: If the user references an opportunity report, file path (e.g., `outputs/ai-opportunity-report.md`), or a specific workflow candidate from an Analyze session, read the Workflow Candidate Summary from the file. Present the available candidates and ask which one to deconstruct. Pre-populate scenario metadata (name, description, trigger, deliverable, category → type) from the candidate fields. Confirm the pre-populated details with the user, then proceed directly to the scope check (Step 2).
+   - **From Analyze output**: If the user references an opportunity report, file path (e.g., `outputs/ai-opportunity-report.md`), or a specific workflow candidate from an Analyze session, read the Workflow Candidate Summary from the file. Present the available candidates and ask which one to deconstruct. Pre-populate scenario metadata (name, description, trigger, deliverable, autonomy, involvement) from the candidate fields. Confirm the pre-populated details with the user, then proceed directly to the scope check (Step 2).
    - **From a workflow description**: The user describes a workflow they want to break down. Ask about the business scenario, objective, high-level steps, and ownership. One question at a time.
    - **From a problem statement**: The user describes a problem instead of a workflow. Propose a candidate workflow for them to react to.
 2. **Scope check — one trigger, one deliverable** — A workflow has exactly one trigger (what kicks it off) and one deliverable (the tangible output). Test for multiple workflows by checking:

@@ -1,6 +1,6 @@
 ---
 title: Design Your AI Workflow
-description: Gather architecture decisions, choose an execution pattern and interaction mode, classify steps on the autonomy spectrum, map AI building blocks, identify skill candidates, and document agent blueprints — producing a platform-agnostic AI Building Block Spec.
+description: Gather architecture decisions, choose an execution pattern and involvement mode, classify steps on the autonomy spectrum, map AI building blocks, identify skill candidates, and document agent blueprints — producing a platform-agnostic AI Building Block Spec.
 ---
 
 # 3.1: Design Your AI Workflow
@@ -8,7 +8,7 @@ description: Gather architecture decisions, choose an execution pattern and inte
 > **Part of:** [Build Workflows](index.md)
 
 !!! tip "New to the building blocks?"
-    See the [Agentic Building Blocks](../../agentic-building-blocks/index.md) reference for definitions, examples, and cross-platform comparisons of all ten blocks.
+    See the [Agentic Building Blocks](../../agentic-building-blocks/index.md) reference for definitions, examples, and cross-platform comparisons of all blocks.
 
 ## What This Is
 
@@ -26,7 +26,7 @@ The Design phase is where you decide *how* your workflow should be built — bef
 | | |
 |---|---|
 | **What you'll do** | Upload your Workflow Definition, choose your architecture approach, confirm your platform, review the AI's extracted architecture analysis and execution pattern recommendation, review step classifications, and adjust anything that doesn't look right |
-| **What you'll get** | An **AI Building Block Spec** — architecture approach with rationale, architecture decisions, execution pattern with interaction mode, autonomy classifications, building block mapping, skill candidates, agent blueprints (when applicable), and a prioritized build sequence |
+| **What you'll get** | An **AI Building Block Spec** — architecture approach with rationale, architecture decisions, execution pattern with involvement mode, autonomy classifications, building block mapping, skill candidates, agent blueprints (when applicable), and a prioritized build sequence |
 | **Time** | ~15–25 minutes (architecture questions + reviewing the AI's analysis) |
 
 ## Why This Matters
@@ -72,7 +72,7 @@ Before choosing an execution pattern, the model gathers the information that sha
 **Everything else is extracted from the Workflow Definition:**
 
 - **Tool integrations** — pulled from data flows, context needs, and step details across all steps. The model researches availability on your platform via web search and categorizes each: Built-in, Available with setup, Possible with code, or Manual.
-- **Trigger/schedule** — pulled from your Scenario Metadata. Time-based triggers are noted as scheduled execution requirements with implications for interaction mode and infrastructure.
+- **Trigger/schedule** — pulled from your Scenario Metadata. Time-based triggers are noted as scheduled execution requirements with implications for involvement mode and infrastructure.
 - **Browser access** — if any step involves logging into a website, it's flagged during step classification rather than asked about separately. The connection details are handled during Construct.
 - **Shareability** — deferred to Construct, where it determines artifact format (file-based vs. code-based). Not asked during Design.
 
@@ -93,7 +93,7 @@ Every AI workflow falls somewhere on this spectrum. The right pattern depends on
 
 ### Choosing a Pattern
 
-The model analyzes your workflow steps and architecture decisions, then presents a confident recommendation — for example: *"Based on your workflow, I recommend **Skill-Powered Prompt** with **Interactive** mode because your steps are sequential with two reusable sub-routines, and you're running this from the web UI."*
+The model analyzes your workflow steps and architecture decisions, then presents a confident recommendation — for example: *"Based on your workflow, I recommend **Skill-Powered Prompt** with **Augmented** involvement because your steps are sequential with two reusable sub-routines, and you're running this from the web UI."*
 
 The signals it reasons through internally:
 
@@ -107,17 +107,16 @@ If you disagree with the recommendation, the model explains the alternatives and
 
 When the execution pattern is agent-based and the platform has multiple agent offerings (e.g., Claude Code sub-agents vs. Claude Agent SDK), the model asks which offering you want to use — this determines the artifact format in the Construct phase.
 
-### Interaction Mode
+### Human Involvement
 
-After choosing an execution pattern, determine how the human and AI interact during the workflow run:
+After choosing an execution pattern, determine whether a human participates during the workflow run:
 
 | Mode | Description | Determined by |
 |------|-------------|---------------|
-| **Interactive** | Human and AI collaborate in real-time. AI pauses for input, review, and decisions at marked steps. | Web/desktop deployment, no scheduled execution |
-| **Autonomous** | AI executes end-to-end without human involvement during the run. | Scheduled/unattended execution, CLI |
-| **Hybrid** | Some steps run autonomously, others pause for human interaction. | Mix of automated and review steps |
+| **Augmented** | Human is in the loop — reviews, steers, or decides at key points during the run. | Web/desktop deployment, no scheduled execution |
+| **Automated** | AI runs solo — executes end-to-end without human involvement during the run. | Scheduled/unattended execution, CLI |
 
-The interaction mode is determined by your architecture decisions — platform, scheduled execution needs, and which steps require human review.
+The involvement mode is determined by your architecture decisions — platform, scheduled execution needs, and which steps require human review. See the [AI Workflow Design Matrix](../workflow-design-matrix.md) for how autonomy and involvement combine into six workflow archetypes.
 
 !!! info "Deeper architectural patterns"
     For detailed implementation blueprints (prompt chaining, routing, parallelization, orchestrator-workers, evaluator-optimizer, and autonomous agents), see [Workflow Architecture Patterns](../../patterns/workflow-architecture/index.md).
@@ -125,7 +124,7 @@ The interaction mode is determined by your architecture decisions — platform, 
 ---
 
 !!! warning "Activate plan mode now"
-    You've made the key decisions — architecture, execution pattern, and interaction mode. This is the transition point. **Activate plan mode** on your AI tool before continuing. The model will now plan the rest of the spec (autonomy classification, building block mapping, skill candidates, agent blueprints) based on the decisions you've locked in. See [How to activate plan mode](#two-phases-two-modes) for platform-specific instructions.
+    You've made the key decisions — architecture, execution pattern, and involvement mode. This is the transition point. **Activate plan mode** on your AI tool before continuing. The model will now plan the rest of the spec (autonomy classification, building block mapping, skill candidates, agent blueprints) based on the decisions you've locked in. See [How to activate plan mode](#two-phases-two-modes) for platform-specific instructions.
 
 ## Autonomy Classification
 
@@ -134,13 +133,13 @@ For each step in your Workflow Definition, classify it on the autonomy spectrum:
 | Level | Description | Example |
 |-------|-------------|---------|
 | **Human** | Requires human judgment, creativity, or physical action; AI cannot perform this | Final approval of a contract, in-person meeting |
-| **Deterministic** | Follows fixed rules; AI executes reliably with minimal supervision | Formatting a report, extracting data from a template |
-| **Semi-Autonomous** | AI does most of the work; human reviews at key checkpoints | Drafting an email for human review before sending |
-| **Autonomous** | AI executes end-to-end, including decisions and tool use | Research agent that finds, evaluates, and summarizes sources |
+| **Deterministic** | Follows fixed rules; AI executes reliably with no decisions | Formatting a report, extracting data from a template |
+| **Guided** | AI makes bounded decisions within guardrails; human reviews at key checkpoints | Drafting an email for human review before sending |
+| **Autonomous** | AI plans and executes end-to-end, including decisions and tool use | Research agent that finds, evaluates, and summarizes sources |
 
 ## Building Block Mapping
 
-Map each AI-assisted step to one or more of the ten building blocks:
+Map each AI-assisted step to one or more of the AI building blocks:
 
 | Block | What It Is | When to Use It |
 |-------|-----------|----------------|
@@ -227,7 +226,7 @@ Design has two distinct phases that use different modes of interaction with the 
 
 **Phase 1: Collaborative decisions (normal conversation)**
 
-The first part of Design is a back-and-forth conversation. The model scans your Workflow Definition for known answers, confirms what it can infer, asks about anything genuinely unknown, recommends an execution pattern and interaction mode, and you discuss and confirm. This is normal conversational mode — you're making decisions together.
+The first part of Design is a back-and-forth conversation. The model scans your Workflow Definition for known answers, confirms what it can infer, asks about anything genuinely unknown, recommends an execution pattern and involvement mode, and you discuss and confirm. This is normal conversational mode — you're making decisions together.
 
 **Phase 2: Plan the spec (plan mode)**
 
@@ -249,7 +248,7 @@ After the model produces the plan, **review and approve the AI Building Block Sp
 The **AI Building Block Spec** contains:
 
 - **Architecture approach** — No-code or Code-first, with rationale and recommendation signals
-- **Execution pattern** — Prompt, Skill-Powered Prompt, Single Agent, or Multi-Agent, with interaction mode and reasoning
+- **Execution pattern** — Prompt, Skill-Powered Prompt, Single Agent, or Multi-Agent, with involvement mode and reasoning
 - **Architecture decisions** — platform, tool integrations (with connector mapping), trigger/schedule implications, and any flags (browser access, infrastructure needs) — each with rationale and a constraints summary showing how they shaped the recommendations. Deployment surface, code comfort, and shareability are resolved during Construct.
 - **Code-first selections** (when applicable) — specific API and SDK choices per step with justification (e.g., "Claude Agent SDK for the research agent because it needs tool use and multi-step orchestration")
 - **Scenario summary** — workflow metadata from the Workflow Definition

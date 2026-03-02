@@ -1,6 +1,6 @@
 ---
 question: "How do I find workflows worth applying AI to?"
-short_answer: "Run a structured audit of your daily and weekly tasks across three categories — collaborative AI, deterministic workflows, and multi-agent systems — to find where AI can save time, reduce errors, or automate entire processes."
+short_answer: "Run a structured audit of your daily and weekly tasks, classifying each by autonomy level (Deterministic, Guided, Autonomous) and human involvement (Augmented, Automated) — to find where AI can save time, reduce errors, or automate entire processes."
 platforms: [openai, claude, gemini]
 topic: strategy
 date: 2026-02-02
@@ -9,7 +9,7 @@ author: James Gray
 
 # How do I find workflows worth applying AI to?
 
-**Short answer:** Run a structured audit of your daily and weekly tasks across three categories — collaborative AI, deterministic workflows, and multi-agent systems — to find where AI can save time, reduce errors, or automate entire processes.
+**Short answer:** Run a structured audit of your daily and weekly tasks, classifying each by autonomy level (Deterministic, Guided, Autonomous) and human involvement (Augmented, Automated) — to find where AI can save time, reduce errors, or automate entire processes.
 
 ## The Full Answer
 
@@ -17,7 +17,7 @@ Most people adopt AI reactively — they reach for ChatGPT when stuck on an emai
 
 A proactive, structured audit of your workflows will reveal opportunities you'd never notice in the moment: repetitive tasks that could run on autopilot, decisions that benefit from an AI collaborator, and multi-step processes that could be orchestrated end-to-end.
 
-The key is thinking in three categories. **Collaborative AI** covers tasks where you and AI work together in real time — drafting, brainstorming, reviewing, analyzing. **Deterministic workflows** are repeatable processes with clear inputs and outputs that AI can execute reliably with little supervision — formatting reports, processing forms, generating routine communications. **Multi-agent systems** are complex workflows where multiple AI agents coordinate across steps — research-to-report pipelines, intake-to-triage systems, monitoring-to-response workflows.
+The key is thinking in two dimensions. **Autonomy** describes how much decision-making the AI has: **Deterministic** (follows fixed rules — formatting reports, processing forms), **Guided** (makes bounded decisions — drafting, brainstorming, reviewing), or **Autonomous** (plans and adapts independently — research-to-report pipelines, monitoring systems). **Human involvement** describes whether a human participates during execution: **Augmented** (human reviews and steers in real time) or **Automated** (AI runs solo). These combine into the [AI Workflow Design Matrix](../workflow-design-matrix.md) — six distinct workflow archetypes.
 
 To run the audit, use the [Analyze AI Workflow Opportunities](../analyze.md) — a meta prompt that guides an AI through a three-step process: scanning what it already knows about your work, interviewing you to fill gaps, then producing a categorized report with specific opportunities and actionable first steps.
 
@@ -30,13 +30,13 @@ Once you've identified opportunities, use the [Deconstruct Workflows](../deconst
 3. **Paste it into any conversation** — the AI will scan its context, interview you, and produce a structured report
 4. **Pick 1-2 opportunities** to pilot first — don't try to pursue everything at once
 
-!!! tip "Start with Collaborative AI"
-    If you're new to AI, start with Collaborative AI opportunities — they're the easiest to try and lowest risk. Move to Deterministic Workflows once you've identified a process you repeat often. Explore Autonomous Agents when you have experience with the other two categories.
+!!! tip "Start with Deterministic + Augmented"
+    If you're new to AI, start with Deterministic + Augmented workflows — they're the easiest to try and lowest risk. Move to Deterministic + Automated once you trust the process. Explore Guided and Autonomous levels when you're ready for more AI decision-making.
 
 ## Key Takeaways
 
 - Don't wait for problems — proactively audit your workflows to find AI opportunities
-- Think in three categories: deterministic workflows, collaborative AI, and autonomous agents
+- Think in two dimensions: autonomy (Deterministic, Guided, Autonomous) and involvement (Augmented, Automated)
 - Use the [six use case primitives](../../use-cases/index.md) — content creation, research, coding, data analysis, ideation, and automation — to classify what type of work each opportunity involves
 - Use the [Analyze AI Workflow Opportunities](../analyze.md) meta prompt to run a structured audit
 - The richer context your AI has about your work, the better the recommendations

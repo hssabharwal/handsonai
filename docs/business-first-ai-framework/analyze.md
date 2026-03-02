@@ -14,7 +14,7 @@ A structured audit that helps you find where AI fits in your work. The AI scans 
 | | |
 |---|---|
 | **What you'll do** | Walk through a guided conversation covering your role, tasks, and pain points |
-| **What you'll get** | A prioritized report of AI opportunities across three levels — Deterministic Workflows, Collaborative AI, and Autonomous Agents — with concrete next steps for each |
+| **What you'll get** | A prioritized report of AI opportunities classified by autonomy (Deterministic, Guided, Autonomous) and involvement (Augmented, Automated) — with concrete next steps for each |
 | **Time** | ~20–30 minutes for the full conversation |
 
 ## Why This Matters
@@ -23,11 +23,10 @@ Most people adopt AI by reacting to problems — they reach for ChatGPT when the
 
 A proactive audit of your workflows can reveal opportunities you'd never notice in the moment: repetitive tasks that could run on autopilot, decisions that would benefit from an AI collaborator, and multi-step processes that could be orchestrated end-to-end.
 
-This step guides an AI through a structured analysis of your work and produces a categorized report of opportunities across three levels:
+This step guides an AI through a structured analysis of your work and produces a classified report of opportunities along two dimensions:
 
-- **Deterministic Workflows** — Repeatable processes that AI can execute reliably with little or no supervision
-- **Collaborative AI** — Tasks where you and AI work together in real time (drafting, brainstorming, reviewing)
-- **Autonomous Agents** — Goal-driven workflows where AI plans and executes steps autonomously, from single agents to multi-agent systems
+- **Autonomy** — How much decision-making does the AI have? **Deterministic** (follows fixed rules), **Guided** (makes bounded decisions), or **Autonomous** (plans and adapts independently)
+- **Human Involvement** — Is a human in the loop during execution? **Augmented** (human reviews and steers) or **Automated** (AI runs solo)
 
 ## How to Use This
 
@@ -60,23 +59,23 @@ Here's what typically happens:
 3. You receive a structured report with a summary table and detailed cards for each opportunity, grouped by category.
 4. You pick your top workflow candidates, and the AI formats a **Workflow Candidate Summary** with structured metadata — including trigger and deliverable — ready for the Deconstruct step.
 
-Most people discover 5–15 opportunities across the three categories. Pick three to start with — one from each category.
+Most people discover 5–15 opportunities across different autonomy levels. Pick three to start with.
 
 ### How to Prioritize
 
-- **Start with Collaborative AI** opportunities if you're new to AI — they're the easiest to try and lowest risk
-- **Move to Deterministic Workflows** once you've identified a process you repeat often — the time savings compound quickly
-- **Explore Autonomous Agents** when you have experience with the other two categories and need to automate complex, multi-step processes
+- **Start with Deterministic + Augmented** if you're new to AI — lowest risk, easiest to try
+- **Move to Deterministic + Automated** once you trust the process — the time savings compound quickly
+- **Explore Guided and Autonomous** when you're ready for more AI decision-making
 
 ## What Analyze Produces
 
 The **AI Opportunity Report** (`ai-opportunity-report.md`) captures:
 
 - **Report header** — your name, role, date, opportunity count, and top recommendation
-- **Summary table** — every opportunity listed with its category and impact level
+- **Summary table** — every opportunity listed with its autonomy level, involvement mode, and impact level
 - **Top recommendations** — the 3 highest-priority opportunities with one-sentence rationales
-- **Detailed opportunity cards** — grouped by category (Deterministic Workflow, Collaborative AI, Autonomous Agent), each with: why it's a good candidate, current pain point, how AI helps, and a practical first step
-- **Workflow Candidate Summary** — structured metadata for the workflows you choose to pursue: name, description, trigger, deliverable, category, pain point, AI opportunity, frequency, priority, and reasoning
+- **Detailed opportunity cards** — grouped by autonomy level (Deterministic → Guided → Autonomous), each with: why it's a good candidate, current pain point, how AI helps, and a practical first step
+- **Workflow Candidate Summary** — structured metadata for the workflows you choose to pursue: name, description, trigger, deliverable, autonomy, involvement, pain point, AI opportunity, frequency, priority, and reasoning
 
 The Workflow Candidate Summary is the input for [Deconstruct Workflows](deconstruct/index.md) (Step 2) — the trigger and deliverable fields map directly to the scope check that starts the deconstruction.
 

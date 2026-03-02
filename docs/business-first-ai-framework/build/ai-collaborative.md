@@ -12,6 +12,7 @@ description: A worked example of a human-AI collaborative workflow — AI resear
 An AI collaborative workflow is one where the human and AI work together — the AI performs tasks like research, analysis, or drafting, and the human provides judgment, context, and final decisions. Neither operates alone. The human sets the direction; the AI handles the legwork.
 
 !!! info "At a Glance"
+    - **Matrix classification:** Guided + Augmented
     - **AI involvement:** Researches, drafts, and analyzes — but defers to human judgment
     - **Human oversight:** Active — reviews output, provides direction, makes decisions
     - **Best for:** Meeting prep, competitive analysis, draft creation, exploratory research

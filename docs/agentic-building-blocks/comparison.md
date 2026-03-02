@@ -1,20 +1,20 @@
 ---
 title: Choosing the Right Building Block
-description: Comparison matrix for all ten AI building blocks — quick reference tables by layer and a decision guide to help you pick the right block for your situation.
+description: Comparison matrix for the AI building blocks — quick reference tables by layer and a decision guide to help you pick the right block for your situation.
 ---
 
 # Choosing the Right Building Block
 
-Ten building blocks, three layers — but which ones does your workflow actually need? This page gives you comparison tables to quickly differentiate the blocks and a decision guide to match your situation to the right starting point.
+Multiple building blocks, three layers — but which ones does your workflow actually need? This page gives you comparison tables to quickly differentiate the blocks and a decision guide to match your situation to the right starting point.
 
-Most workflows need just two or three blocks. The goal isn't to use all ten — it's to pick the right ones for the job.
+Most workflows need just two or three blocks. The goal isn't to use them all — it's to pick the right ones for the job.
 
 !!! tip "Start simple"
     Begin with a **Prompt** and add blocks only when you hit a real limitation. If you're re-typing the same instructions, add a **Skill**. If you need external data, add **MCP**. If you need multi-step autonomy, add an **Agent**. Don't over-engineer — let the workflow tell you what it needs.
 
 ## At a Glance
 
-All ten blocks in one view — use this to quickly orient yourself, then drill into the layer tables below for full details.
+All blocks in one view — use this to quickly orient yourself, then drill into the layer tables below for full details.
 
 | Block | Primary Job | Best For | Typical User |
 |-------|------------|----------|--------------|

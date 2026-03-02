@@ -19,7 +19,7 @@ Most people jump straight to tool selection — "Should I use an agent? Do I nee
 
 The right approach is to **deconstruct first, then map**. Start by breaking your workflow into discrete steps using the 5-question framework: What are the individual steps? Where are the decision points? What data flows in and out? What context does each step need? What happens when this step fails? That last question surfaces the exception paths where the most important logic often lives.
 
-Once you have the refined step-by-step breakdown, map each step to one or more of the seven AI building blocks:
+Once you have the refined step-by-step breakdown, map each step to one or more of the AI building blocks:
 
 | Building Block | What It Is | When to Use It |
 |---------------|------------|----------------|
@@ -49,7 +49,7 @@ Use the [Deconstruct Workflows](../deconstruct/index.md) to run through this pro
 
 - Deconstruct the workflow before choosing tools — you can't pick the right AI building blocks for a process you don't fully understand
 - Use the 5-question framework: discrete steps, decision points, data flows, context needs, and failure modes
-- Map each step to one or more of the seven building blocks: Model, Prompt, Context, Skill, Agent, MCP, or Project
+- Map each step to one or more of the AI building blocks: Model, Prompt, Context, Skill, Agent, MCP, Project, Memory, API, or SDK
 - Not every step needs AI — the autonomy classification helps you see which steps are candidates and which should stay manual
 - Use the [Deconstruct Workflows](../deconstruct/index.md) to run through this process interactively
 

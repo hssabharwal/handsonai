@@ -75,7 +75,8 @@ For each candidate:
 | **Description** | One sentence describing what this workflow does |
 | **Trigger** | What kicks off this workflow — an event, schedule, or request |
 | **Deliverable** | The tangible output — what gets produced, sent, or decided |
-| **Category** | Deterministic Workflow / Collaborative AI / Autonomous Agent |
+| **Autonomy** | Deterministic / Guided / Autonomous |
+| **Involvement** | Augmented / Automated |
 | **Pain point** | What's slow, error-prone, or manual today |
 | **AI opportunity** | Specific description of what AI would do |
 | **Frequency** | Daily / Weekly / Monthly / Ad-hoc |
@@ -102,9 +103,9 @@ The report must include (in this order):
 
 ### Summary Table
 
-| # | Opportunity | Category | Impact |
-|---|------------|----------|--------|
-| 1 | [Name] | Deterministic Workflow / Collaborative AI / Autonomous Agent | High / Medium / Low |
+| # | Opportunity | Autonomy | Involvement | Impact |
+|---|------------|----------|-------------|--------|
+| 1 | [Name] | Deterministic / Guided / Autonomous | Augmented / Automated | High / Medium / Low |
 
 ### Top Recommendations
 
@@ -112,7 +113,7 @@ List the top 3 opportunities in priority order with a one-sentence rationale for
 
 ### Detailed Opportunity Cards
 
-Group cards by category. Within each category, order from highest to lowest impact.
+Group cards by autonomy level (Deterministic → Guided → Autonomous). Within each group, order from highest to lowest impact.
 
 For each opportunity:
 
@@ -120,7 +121,8 @@ For each opportunity:
 
 **[#] [Opportunity Name]**
 
-**Category:** Deterministic Workflow | Collaborative AI | Autonomous Agent
+**Autonomy:** Deterministic | Guided | Autonomous
+**Involvement:** Augmented | Automated
 
 **Why it's a good candidate:**
 [What characteristics make this well-suited for AI — repetitive, pattern-based, language-heavy, clear inputs/outputs, etc.]
@@ -140,13 +142,20 @@ For each opportunity:
 
 (Appended after user selects candidates — see Step 4 format above)
 
-### Appendix: Category Definitions
+### Appendix: Classification Definitions
 
-Use these definitions when categorizing:
+Use these definitions when classifying opportunities:
 
-- **Deterministic Workflow**: A repeatable process with clear inputs, rules, and outputs that AI can execute reliably with minimal supervision. Examples: formatting reports, processing forms, generating routine communications, data transformation.
-- **Collaborative AI**: Human and AI work together in real time. The human drives the process; AI contributes suggestions, drafts, analysis, or feedback. Examples: co-writing, brainstorming, code review, data analysis.
-- **Autonomous Agent**: A goal-driven workflow where AI plans and executes steps autonomously. The agent reasons about what to do, calls tools as needed, and adapts its approach. Ranges from a single agent handling a complex task to multi-agent systems where specialized agents coordinate across steps. Examples: competitor monitoring and alerting, research → analysis → report pipelines, intake → triage → routing systems.
+**Autonomy — How much decision-making does the AI have?**
+
+- **Deterministic**: AI follows fixed rules — no decisions, no judgment. Same input produces same output every time. Examples: formatting reports, processing forms, data extraction, template-driven research.
+- **Guided**: AI makes bounded decisions within guardrails. The human sets direction; AI chooses how to accomplish the task within those bounds. Examples: drafting emails, researching a topic, brainstorming, co-writing, data analysis.
+- **Autonomous**: AI plans, decides, and adapts independently. It determines what to do, uses tools, and adjusts its approach based on what it finds. Examples: competitor monitoring, research → analysis → report pipelines, intake → triage → routing systems.
+
+**Human Involvement — Is a human in the loop during execution?**
+
+- **Augmented**: Human participates during the workflow run — reviews, steers, or decides at key points. AI and human collaborate in real time.
+- **Automated**: AI runs solo — executes end-to-end without human intervention during the run. Human reviews only the final output.
 
 ## Guidelines
 

@@ -11,7 +11,7 @@ Thank you for contributing to Hands-On AI! This guide explains how to add new co
 
 | Section | Location | Purpose |
 |---------|----------|---------|
-| Agentic Building Blocks | `agentic-building-blocks/` | The seven AI building blocks (Model, Prompts, Context, Projects, Skills, Agents, MCP) |
+| Agentic Building Blocks | `agentic-building-blocks/` | The AI building blocks (Model, Prompts, Context, Projects, Skills, Agents, MCP, Memory, API, SDK) |
 | Business-First AI Framework | `business-first-ai-framework/` | Three-phase methodology (Analyze, Deconstruct, Build) |
 | Use Cases | `use-cases/` | Six use case primitives (Content Creation, Research, Coding, Data Analysis, Ideation & Strategy, Automation) |
 | Platforms | `platforms/` | Platform-specific content (Claude, OpenAI, Gemini, M365 Copilot) |

@@ -59,7 +59,7 @@ The Run Guide is your bridge from Construct to [Run (3.3)](run.md) — follow it
 
 ## What Gets Built
 
-The model constructs from the ten AI building blocks — but only the ones your workflow needs:
+The model constructs from the AI building blocks — but only the ones your workflow needs:
 
 | Building Block | What the model generates | When it's needed |
 |---|---|---|

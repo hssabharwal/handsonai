@@ -37,22 +37,21 @@ Each step produces a specific deliverable that feeds into the next:
 
 **Process:** The AI scans what it knows about the user, interviews them about their work (role, repetitive tasks, pain points, multi-step processes), then produces a categorized opportunity report.
 
-**Three opportunity categories:**
+**Two classification dimensions:**
 
-| Category | Description | Example |
-|----------|-------------|---------|
-| **Deterministic Workflow** | Repeatable process AI executes with minimal supervision | Formatting reports, processing forms |
-| **Collaborative AI** | Human and AI work together in real time | Co-writing, brainstorming, code review |
-| **Autonomous Agent** | AI plans and executes steps autonomously | Research pipelines, monitoring systems |
+| Dimension | Options | Description |
+|-----------|---------|-------------|
+| **Autonomy** | Deterministic / Guided / Autonomous | How much decision-making the AI has |
+| **Involvement** | Augmented / Automated | Whether a human participates during execution |
 
-**Output:** An opportunity report with a report header, summary table, top recommendations, detailed cards for each opportunity, and a workflow candidate summary with structured metadata (name, description, trigger, deliverable, category, priority, reasoning).
+**Output:** An opportunity report with a report header, summary table, top recommendations, detailed cards for each opportunity, and a workflow candidate summary with structured metadata (name, description, trigger, deliverable, autonomy, involvement, priority, reasoning).
 
 **Coaching guidance:**
 
 - If the user doesn't know where to start, run Step 1 first
 - If they already know which workflow to work on, skip to Step 2
-- Encourage them to pick one workflow from each category to start
-- Start with Collaborative AI if they're new to AI (lowest risk, easiest to try)
+- Encourage them to pick workflows at different autonomy levels to start
+- Start with Deterministic + Augmented if they're new to AI (lowest risk, easiest to try)
 
 ---
 
@@ -128,11 +127,11 @@ Build has three parts: **3.1 Design**, **3.2 Construct**, and **3.3 Run**.
 | Level | Description |
 |-------|-------------|
 | **Human** | Requires human judgment, creativity, or physical action |
-| **Deterministic** | Follows fixed rules; AI executes reliably with minimal supervision |
-| **Semi-Autonomous** | AI does most of the work; human reviews at key checkpoints |
-| **Autonomous** | AI executes end-to-end, including decisions and tool use |
+| **Deterministic** | Follows fixed rules; AI executes reliably with no decisions |
+| **Guided** | AI makes bounded decisions within guardrails; human reviews at key checkpoints |
+| **Autonomous** | AI plans and executes end-to-end, including decisions and tool use |
 
-**Ten AI Building Blocks:**
+**AI Building Blocks:**
 
 | Block | What It Is |
 |-------|-----------|
@@ -151,7 +150,7 @@ Build has three parts: **3.1 Design**, **3.2 Construct**, and **3.3 Run**.
 
 **Two phases, two modes:** Design has two distinct phases:
 
-1. **Collaborative decisions (normal conversation)** — The model confirms the platform, extracts architecture decisions from the Workflow Definition, presents a confirmation block, then recommends an execution pattern and interaction mode. This is back-and-forth.
+1. **Collaborative decisions (normal conversation)** — The model confirms the platform, extracts architecture decisions from the Workflow Definition, presents a confirmation block, then recommends an execution pattern and involvement mode. This is back-and-forth.
 2. **Plan the spec (plan mode)** — Once architecture decisions and execution pattern are locked in, the user activates plan mode. The model then plans the full AI Building Block Spec — classifying steps, mapping building blocks, identifying skill candidates, and documenting agent blueprints.
 
 After the model produces the spec, the user reviews and approves the AI Building Block Spec before moving to Construct.
@@ -264,6 +263,6 @@ When the user needs more depth on a specific topic, fetch the raw Markdown from 
 
 | Topic | Description | Raw Markdown URL |
 |-------|-------------|-----------------|
-| Agentic Building Blocks | Definitions and cross-platform details for all ten blocks | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/agentic-building-blocks/index.md` |
+| Agentic Building Blocks | Definitions and cross-platform details for all blocks | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/agentic-building-blocks/index.md` |
 | AI Use Cases | Six use case primitives with examples | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/use-cases/index.md` |
 | Agents by platform | Platform-specific agent building guides | `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/docs/agentic-building-blocks/agents/index.md` |

@@ -117,7 +117,7 @@ Invoke the skill by name in your AI tool. For example, in Claude Code: `/busines
 
 ## Related
 
-- [Agentic Building Blocks](../index.md) — Skills in the context of all seven building blocks
+- [Agentic Building Blocks](../index.md) — Skills in the context of all building blocks
 - [AI Use Cases](../../use-cases/index.md) — what teams build with skills, organized by six primitives
 - [Prompts](../prompts/index.md) — the foundation that skills build on
 - [Agents](../agents/index.md) — autonomous systems that invoke skills as part of multi-step workflows
