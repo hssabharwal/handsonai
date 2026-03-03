@@ -72,7 +72,7 @@ When you're ready, delete the sample entries and start adding your own.
 Tailor the registry to your business. Each database comes with sensible defaults, but you'll want to adjust them:
 
 - **Business Processes** — Edit the **Domain** select field to match your business areas (Sales, Marketing, Product, Operations, etc.)
-- **Workflows** — Update **Status** and **Type** options to fit your workflow categories
+- **Workflows** — Update **Status**, **Execution Mode** (Augmented, Automated, Manual), and **Autonomy Level** (Deterministic, Guided, Autonomous, N/A) options to fit your workflow categories
 - **AI Building Blocks** — Customize **Asset Type** options (Skill, Prompt, Agent, Project, Context MD, etc.)
 - **Apps** — Configure **Type** options for your integration patterns (API, MCP Server, Native Integration, Webhook, etc.)
 
@@ -99,7 +99,7 @@ Once connected, your AI tool can search, read, and update your registry database
 | Database | Purpose | Key Fields |
 |----------|---------|------------|
 | **Business Processes** | High-level business functions and their domains | Domain, LOB, Description |
-| **Workflows** | Specific workflows within each process | Status, Type, Trigger, Process Outcome |
+| **Workflows** | Specific workflows within each process | Status, Execution Mode, Autonomy Level, Trigger, Process Outcome |
 | **AI Building Blocks** | Skills, prompts, agents, and other AI components | Asset Type, Platform, Status, Dependencies |
 | **Apps** | Connected applications and integrations | Type, Auth Type, Connection Status |
 
