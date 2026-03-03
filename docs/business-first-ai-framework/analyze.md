@@ -42,7 +42,7 @@ what I do and identify where AI could help.
 The skill runs a structured audit and produces a categorized opportunity report.
 
 !!! tip "If your AI tool doesn't support skills"
-    Use this page as a conversation guide — walk through each section in order with your AI tool. The methodology works the same way whether or not a skill is driving the process.
+    Use the [Analyze Prompt — Portable Version](analyze-prompt.md) instead. It's a single copy-paste prompt that runs the full Analyze process in any AI chat tool — ChatGPT, Gemini, Claude, or any LLM. Same methodology, same output format, no skill installation required.
 
 !!! tip "Classify opportunities with the six primitives"
     Once you've identified opportunities, use the [six use case primitives](../use-cases/index.md) — Content Creation, Research, Coding, Data Analysis, Ideation & Strategy, and Automation — to classify what type of AI work each one involves. This makes it easier to find examples and choose the right building blocks.
