@@ -233,8 +233,9 @@ nav:
   - Business-First AI Framework:
     - Overview: business-first-ai-framework/index.md
     - AI Workflow Design Matrix: business-first-ai-framework/workflow-design-matrix.md
-    - "Step 1: Analyze Workflows": business-first-ai-framework/analyze.md
-    - "Analyze Prompt (Portable)": business-first-ai-framework/analyze-prompt.md
+    - "Step 1: Analyze Workflows":
+      - Overview: business-first-ai-framework/analyze.md
+      - "Analyze Prompt (Portable)": business-first-ai-framework/analyze-prompt.md
     - "Step 2: Deconstruct Workflows": business-first-ai-framework/deconstruct/index.md
     - "Step 3: Build Workflows":
       - Overview: business-first-ai-framework/build/index.md
