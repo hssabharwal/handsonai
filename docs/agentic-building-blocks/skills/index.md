@@ -5,7 +5,7 @@ description: The Skill building block — reusable routines the AI discovers and
 
 # Skills
 
-> **Platforms:** `claude` `openai` `gemini` `m365-copilot`
+> **Platforms:** `claude` `openai` (via Codex CLI) · `gemini` (via Gemini CLI) · `m365-copilot` (via VS Code Copilot)
 
 ## What Skills Are
 
@@ -41,7 +41,9 @@ Agent Skills are an **open standard** — the same `SKILL.md` format works acros
 
 | Platform | Skill Directory | Notes |
 |----------|----------------|-------|
+| **[Cowork](https://support.claude.com/en/articles/13345190-getting-started-with-cowork)** | Managed by plugin system | Install via **+** > **Add plugins** — no file placement needed |
 | **[Claude Code](https://code.claude.com/docs/en/skills)** | `.claude/skills/` | Also installable via plugins (`/plugin install`) |
+| **[Claude.ai (web)](https://support.claude.com)** | Uploaded via Settings | ZIP upload under **Settings > Capabilities > Upload skill** |
 | **[Cursor](https://cursor.com/docs/context/skills)** | `.cursor/skills/`, `.claude/skills/`, `.codex/skills/`, or `.agents/skills/` | Reads from Claude and Codex directories too — no need to move files |
 | **[Codex CLI](https://developers.openai.com/codex/skills)** | `.agents/skills/` | Same SKILL.md format |
 | **[Gemini CLI](https://geminicli.com/docs/cli/skills/)** | `.gemini/skills/` or `.agents/skills/` | Same SKILL.md format |
@@ -68,38 +70,104 @@ On Claude Code, skills with `user_invocable: true` and a `command:` field in the
 
 ## How to Add Skills to Your Platform
 
-Skills are plain-text Markdown — no compiled code, no special format. Getting them into your platform takes two steps: get the files, then place them where your platform looks.
+Without a skill, you write a detailed prompt every time you want consistent output. With a skill installed, you just say "edit this article" and the AI applies your editorial standards automatically — same quality, every time, no re-explaining.
 
-### Step 1: Get the skill files
+Skills are plain-text Markdown — no compiled code, no special format. A **plugin** is a bundle that may contain multiple skills. On platforms that support plugins (Cowork, Claude Code), you install the whole plugin. On other platforms, you download and place individual skill folders.
 
-**Option A: Install a plugin (Claude Code)**
+Pick your platform below for the complete install steps.
 
-```bash
-/plugin install business-first-ai@handsonai
-```
+!!! note "Not all platforms support skills"
+    Skills require a tool with skill directory support. ChatGPT (web/mobile), the Gemini app, and M365 Copilot (web/desktop) do not currently support skills — use their developer tools (Codex CLI, Gemini CLI, VS Code Copilot) instead.
 
-This installs the skills automatically into your project's `.claude/skills/` directory.
+### Quick reference
 
-**Option B: Download from GitHub**
+| Method | Platforms | Terminal required? |
+|--------|-----------|-------------------|
+| Claude Cowork UI (+ button) | Claude Desktop | No |
+| `/plugin install` | Claude Code | Yes |
+| Upload a compressed skill folder (ZIP) | Claude.ai (web) | No (Finder method available) |
+| Download + copy | Cursor, Codex CLI, Gemini CLI, VS Code Copilot | Recommended but not required |
 
-Browse the [plugins directory on GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins), find the skill folder you want, and download it. Each skill is a folder containing a `SKILL.md` file and an optional `references/` directory.
+### Install steps by platform
 
-### Step 2: Place them in your platform's skill directory
+=== "Cowork"
 
-| Platform | Where to put skills |
-|----------|-------------------|
-| **Claude Code** | `.claude/skills/` in your project root (or use plugin install) |
-| **Cursor** | `.cursor/skills/` in your project root — but also reads from `.claude/skills/`, `.codex/skills/`, and `.agents/skills/` automatically |
-| **Codex CLI** | `.agents/skills/` in your project root |
-| **Gemini CLI** | `.gemini/skills/` or `.agents/skills/` in your project root |
-| **VS Code Copilot** | `.github/skills/` or `.agents/skills/` in your project root |
+    The simplest path — no terminal needed.
 
-!!! tip "Already using Claude Code or Codex?"
-    If you already have skills installed for Claude Code (`.claude/skills/`) or Codex (`.codex/skills/`), **Cursor picks them up automatically** — no copying or moving required. This means installing a plugin in Claude Code makes those skills available in Cursor too.
+    1. Open **Claude Desktop** and click **Cowork** in the sidebar
+    2. Click the **+** button at the bottom of the screen
+    3. Select **Add plugins...** and browse or search for a plugin
 
-### Step 3: Verify
+    Skills from the plugin are available immediately in Cowork.
 
-Invoke the skill by name in your AI tool. For example, in Claude Code: `/business-first-ai:discover`. In other platforms, reference the skill name in your prompt — the platform discovers it automatically from the skill directory.
+    [:octicons-arrow-right-24: Full Cowork plugin guide](../../use-the-cookbook/build/using-plugins.md#using-plugins-in-claude-cowork)
+
+=== "Claude Code"
+
+    One command installs everything.
+
+    ```bash
+    /plugin install business-first-ai@handsonai
+    ```
+
+    First time? Add the marketplace first (one-time setup):
+
+    ```bash
+    /plugin marketplace add jamesgray-ai/handsonai-plugins
+    ```
+
+    [:octicons-arrow-right-24: Full Claude Code plugin guide](../../use-the-cookbook/build/using-plugins.md#getting-started-in-claude-code)
+
+=== "Claude.ai (Web)"
+
+    Upload skills as ZIP files — no terminal required.
+
+    1. Go to the [GitHub plugins page](https://github.com/jamesgray-ai/handsonai-plugins). Click the green **Code** button > **Download ZIP**. Extract the ZIP, then navigate to `plugins/<plugin-name>/skills/<skill-name>/` to find the skill folder you need.
+    2. Compress the skill folder into a `.zip` file (right-click > **Compress** in Finder)
+    3. Go to **Settings > Capabilities > Upload skill** and select the ZIP
+
+    [:octicons-arrow-right-24: Detailed ZIP upload walkthrough](../../use-the-cookbook/build/using-plugins.md#using-skills-in-claudeai-web)
+
+=== "Cursor"
+
+    Download skill folders and place them in your project. Your **project root** is the top-level folder you opened in your editor.
+
+    1. Go to the [GitHub plugins page](https://github.com/jamesgray-ai/handsonai-plugins). Click the green **Code** button > **Download ZIP**. Extract the ZIP, then navigate to `plugins/<plugin-name>/skills/<skill-name>/` to find the skill folder you need.
+    2. Copy the skill folder into `.cursor/skills/` in your project root
+
+    Cursor also reads from `.claude/skills/`, `.codex/skills/`, and `.agents/skills/` — so if you already have skills installed for Claude Code, **Cursor picks them up automatically**.
+
+=== "Codex CLI"
+
+    Download skill folders and place them in your project. Your **project root** is the top-level folder you opened in your editor or terminal.
+
+    1. Go to the [GitHub plugins page](https://github.com/jamesgray-ai/handsonai-plugins). Click the green **Code** button > **Download ZIP**. Extract the ZIP, then navigate to `plugins/<plugin-name>/skills/<skill-name>/` to find the skill folder you need.
+    2. Copy the skill folder into `.agents/skills/` in your project root
+
+=== "Gemini CLI"
+
+    Download skill folders and place them in your project. Your **project root** is the top-level folder you opened in your editor or terminal.
+
+    1. Go to the [GitHub plugins page](https://github.com/jamesgray-ai/handsonai-plugins). Click the green **Code** button > **Download ZIP**. Extract the ZIP, then navigate to `plugins/<plugin-name>/skills/<skill-name>/` to find the skill folder you need.
+    2. Copy the skill folder into `.gemini/skills/` or `.agents/skills/` in your project root
+
+=== "VS Code Copilot"
+
+    Download skill folders and place them in your project. Your **project root** is the top-level folder you opened in your editor.
+
+    1. Go to the [GitHub plugins page](https://github.com/jamesgray-ai/handsonai-plugins). Click the green **Code** button > **Download ZIP**. Extract the ZIP, then navigate to `plugins/<plugin-name>/skills/<skill-name>/` to find the skill folder you need.
+    2. Copy the skill folder into `.github/skills/` or `.agents/skills/` in your project root
+
+!!! info "Cross-platform convention"
+    `.agents/skills/` is a shared convention recognized by Cursor, Codex CLI, Gemini CLI, and VS Code Copilot. Place your skills there to make them available across multiple platforms from one location.
+
+### Verify
+
+Test that your platform picks up the skill by asking it to perform a task the skill handles:
+
+- **Cowork or Claude.ai:** Start a new conversation and say "Edit this paragraph for HBR quality" — Claude should apply editorial criteria from the skill
+- **Claude Code:** Type `/business-first-ai:discover` to invoke the skill directly
+- **Cursor, Codex CLI, Gemini CLI, VS Code Copilot:** Ask "Use the editing-hbr-articles skill to review this paragraph" — the AI should reference the skill's instructions in its response
 
 ## Skill, Project, or Prompt?
 
