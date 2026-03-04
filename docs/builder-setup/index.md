@@ -119,38 +119,21 @@ Voice input can speed up how you write prompts, notes, and messages. This is rec
 
 ## Hands-on AI Skills
 
-**What:** Supercharge your work with agent skills that help you build faster.
+**What:** Skills teach your AI tool specific tasks — like editing to publication standards, naming workflows consistently, or generating meeting briefs — so you describe your goal and the AI follows your standards automatically.
 **Time:** ~10 minutes
-**Requires:** AI Coding CLIs — plugin commands run inside Claude Code
+**Requires:** At least one AI platform set up
 
-On Claude (Cowork and Claude Code), you can access packaged skills and agents via plugins. For other platforms (Cursor, Codex CLI, Gemini CLI, VS Code Copilot), you can download skills from the [GitHub repo](https://github.com/jamesgray-ai/handsonai-plugins) and add them manually — see [How to Add Skills to Your Platform](../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for step-by-step instructions for each tool.
+Skills work across platforms — Claude Code, Claude.ai, Cowork, Cursor, Codex CLI, Gemini CLI, VS Code Copilot, and any tool that supports the skill format.
 
-!!! tip "These commands run inside Claude Code"
-    The `/plugin` commands below are typed inside a Claude Code session, not in a regular terminal. Start Claude Code first by typing `claude` in your terminal, then run the `/plugin` commands.
+For step-by-step install instructions for your platform:
 
-**1. Add the plugin marketplace.** Register the Hands-on AI marketplace so Claude Code knows where to find plugins. You only need to do this once:
+[:octicons-arrow-right-24: How to Add Skills to Your Platform](../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform)
 
-```bash
-/plugin marketplace add jamesgray-ai/handsonai-plugins
-```
+Browse all available plugins on the [Agents & Skills Marketplace](../use-the-cookbook/build/index.md).
 
-**2. Install plugins.** With the marketplace added, install plugins to give Claude domain expertise:
+**You're done when:** At least one skill is installed or added to your platform.
 
-```bash
-/plugin install business-first-ai@handsonai
-```
-
-The **Business-First AI** plugin includes agents and skills for analyzing AI opportunities, deconstructing workflows, and building with AI. Browse all available plugins on the [Plugin Marketplace](../use-the-cookbook/build/index.md).
-
-See the [Using Plugins](../use-the-cookbook/build/using-plugins.md) guide for the full walkthrough.
-
-!!! info "Using skills in Claude.ai (web)"
-    After installing plugins, agents and skills work automatically in **Claude Code** and **Cowork**. However, if you want to use skills in **Claude.ai** (the web interface), there's an extra step: you need to zip each skill folder and upload it manually through Settings > Capabilities > Upload skill. See the [Using Skills in Claude.ai](../use-the-cookbook/build/using-plugins.md#using-skills-in-claudeai-web) guide for step-by-step instructions.
-
-**You're done when:** You've installed at least one plugin.
-
-- [ ] Plugin marketplace — registered
-- [ ] Business-First AI plugin — installed
+- [ ] At least one skill — installed or added to your platform
 
 ---
 

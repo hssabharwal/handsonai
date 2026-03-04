@@ -174,15 +174,15 @@ These steps install the developer tools you'll use throughout the course. Each s
 
 ### Step 10: Hands-on AI Skills
 
-**What:** Supercharge your work with agent skills that help you build faster. On Claude (Cowork and Claude Code), you can access packaged skills and agents via plugins. For other platforms (Cursor, Codex CLI, Gemini CLI, VS Code Copilot), you can download skills from the [GitHub repo](https://github.com/jamesgray-ai/handsonai-plugins) and add them manually.
+**What:** Skills teach your AI tool specific tasks — like editing to publication standards, naming workflows consistently, or generating meeting briefs — so you describe your goal and the AI follows your standards automatically. Skills work across platforms including Claude Code, Cowork, Claude.ai, Cursor, Codex CLI, Gemini CLI, and VS Code Copilot.
 
-[:octicons-arrow-right-24: Go to Skills Setup guide](../../builder-setup/index.md#hands-on-ai-skills) · [:octicons-arrow-right-24: How to Add Skills to Your Platform](../../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform)
+[:octicons-arrow-right-24: How to Add Skills to Your Platform](../../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform)
 
-- [ ] Plugin marketplace registered (`/plugin marketplace add jamesgray-ai/handsonai-plugins`)
-- [ ] Business-First AI plugin installed (`/plugin install business-first-ai@handsonai`)
+- [ ] At least one skill installed or added to your platform
+- [ ] Skill verified — invoked it in your AI tool and got a response
 
 ??? tip "Stuck? Ask AI for help"
-    > I'm trying to install a plugin in Claude Code and getting this error: [paste error]. What should I check?
+    > I'm trying to add a skill to [your platform] and it's not working. What should I check?
 
 ---
 

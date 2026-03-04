@@ -11,6 +11,11 @@ Out of the box, Claude is a generalist. It can write, research, and analyze — 
 
 **The result:** Instead of writing long prompts to explain what you want, you describe your goal in plain language and Claude applies the right expertise automatically.
 
+!!! tip "Looking for non-Claude platforms?"
+    This page covers the Claude ecosystem (Claude Code, Claude.ai, Cowork, API).
+    For Cursor, Codex CLI, Gemini CLI, VS Code Copilot, or any LLM, see
+    [How to Add Skills to Your Platform](../../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform).
+
 ## What's Inside a Plugin
 
 The [plugin format](https://code.claude.com/docs/en/plugins#plugin-structure-overview) supports agents, skills, commands, hooks, and MCP server connections. The Hands-on AI plugins currently provide:
@@ -29,7 +34,7 @@ The plugins in this marketplace currently focus on **agents** and **skills**. As
 |---|--------|--------|
 | What they are | Expert personalities (writing style, domain knowledge, process) | Step-by-step workflows with instructions + reference material |
 | How they activate | Claude automatically picks the right one based on your request | Automatically when relevant, or type `/plugin-name:skill-name` |
-| Where they work | Claude Code only | Claude Code, Claude.ai (upload as ZIP), and Claude Cowork |
+| Where they work | Claude Code and Cowork | Claude Code, Claude.ai (upload as ZIP), and Cowork |
 | Example | "Write a LinkedIn post about RAG" activates `tech-executive-writer` | "Name a workflow for drafting email responses" loads `naming-workflows` naming conventions |
 
 ## Transparency & Security
@@ -155,7 +160,7 @@ Claude.ai supports skills through a ZIP upload process. You can take any plugin 
 
 **1. Find the skill on your machine**
 
-After adding the marketplace (`/plugin marketplace add jamesgray-ai/handsonai-plugins`), all plugin skills are stored locally at:
+If you use Claude Code and have already added the marketplace, all plugin skills are stored locally at:
 
 ```
 ~/.claude/plugins/marketplaces/handsonai/plugins/<plugin-name>/skills/<skill-name>/
@@ -163,11 +168,14 @@ After adding the marketplace (`/plugin marketplace add jamesgray-ai/handsonai-pl
 
 Each skill is a folder containing `SKILL.md` and optional reference files.
 
+!!! tip "Don't use Claude Code?"
+    Download the skill folder directly from [GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins) instead — click the plugin folder, then `skills`, then the skill you want.
+
 **2. Zip the skill folder**
 
-=== "Terminal command (quick)"
+=== "Terminal command (optional — faster)"
 
-    Open Terminal and paste this command, replacing `<plugin-name>` and `<skill-name>` with the actual names:
+    If you're comfortable with Terminal, this is faster. Otherwise, use the Finder method. Open Terminal and paste this command, replacing `<plugin-name>` and `<skill-name>` with the actual names:
 
     ```bash
     cd ~/.claude/plugins/marketplaces/handsonai/plugins/<plugin-name>/skills && \
@@ -292,7 +300,6 @@ Every file is plain-text Markdown — no compiled code, no special format. You d
 
 **Other ways to use them:**
 
-- **Paste into a system prompt** — copy an agent or skill file and use it as instructions in ChatGPT, Gemini, Copilot, or any LLM
 - **Upload to Claude.ai** — zip a skill folder and upload it under Settings > Capabilities > Upload skill ([detailed instructions](#upload-a-plugin-skill-to-claudeai))
 - **Use via the Claude API** — embed skill content in the `system` parameter ([code example](#using-skills-via-the-claude-api))
 

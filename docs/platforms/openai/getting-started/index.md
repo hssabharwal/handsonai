@@ -79,6 +79,8 @@ ChatGPT connects to external tools through Connected Apps.
 
 ---
 
+---
+
 ## Part 2 — OpenAI Platform
 
 Codex is OpenAI's AI agent that works directly with your files — useful for coding, file operations, research, and automation. Codex is included with ChatGPT Plus, Pro, Business, Enterprise, and Edu plans.
@@ -129,7 +131,17 @@ There are three ways to use Codex — pick whichever fits your workflow:
 
 ---
 
-### 2. Create a Platform Account (Optional)
+### 2. Add Skills (Codex CLI)
+
+After adding skills, you can say "edit this article for HBR quality" and Codex applies professional editorial standards automatically — no re-explaining your requirements each time.
+
+Download skill folders from [GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins) and place them in `.agents/skills/` in your project root. Codex CLI discovers them automatically.
+
+[:octicons-arrow-right-24: How to Add Skills to Your Platform](../../../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform)
+
+---
+
+### 3. Create a Platform Account (Optional)
 
 The OpenAI Platform ([platform.openai.com](https://platform.openai.com)) is where you manage API keys, monitor usage, and access developer tools. You need this if you want to authenticate Codex CLI with an API key instead of your ChatGPT account, or if you're building applications with the OpenAI API.
 
@@ -156,4 +168,5 @@ Most people don't need this — Codex authenticates directly through your ChatGP
 **Part 2 — OpenAI Platform:**
 
 - [ ] Codex installed — desktop app, CLI, or IDE extension (optional)
+- [ ] At least one skill installed or added via Codex CLI (optional)
 - [ ] Platform account created at platform.openai.com (optional)

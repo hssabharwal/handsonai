@@ -250,7 +250,17 @@ gemini --version
 
 ---
 
-### 4. Google Cloud & Vertex AI (Optional)
+### 4. Add Skills (Gemini CLI)
+
+After adding skills, you can say "edit this article for HBR quality" and Gemini CLI applies professional editorial standards automatically — no re-explaining your requirements each time.
+
+Download skill folders from [GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins) and place them in `.gemini/skills/` or `.agents/skills/` in your project root. Gemini CLI discovers them automatically.
+
+[:octicons-arrow-right-24: How to Add Skills to Your Platform](../../../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform)
+
+---
+
+### 5. Google Cloud & Vertex AI (Optional)
 
 [Google Cloud](https://cloud.google.com/) is the platform for deploying Gemini models at scale. [Vertex AI](https://cloud.google.com/vertex-ai) is the ML platform within Google Cloud for training, tuning, and serving Gemini models via API — used for production workloads, custom model tuning, and enterprise integrations.
 
@@ -271,4 +281,5 @@ Most people don't need this — Antigravity and Gemini CLI authenticate directly
 - [ ] Antigravity IDE installed and signed in (optional)
 - [ ] Gemini Code Assist IDE extension installed in VS Code or Cursor (optional)
 - [ ] Gemini CLI installed — `gemini --version` prints a version number (optional)
+- [ ] At least one skill installed or added via Gemini CLI (optional)
 - [ ] Google Cloud project created with Vertex AI API enabled (optional — for cloud workloads)

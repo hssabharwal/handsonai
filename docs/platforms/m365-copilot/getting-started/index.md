@@ -49,9 +49,20 @@ Copilot uses your Microsoft Graph data (emails, files, calendar, chats) to provi
 
 ---
 
+## 4. Add Skills (VS Code Copilot)
+
+After adding skills, you can say "edit this article for HBR quality" and VS Code Copilot applies professional editorial standards automatically — no re-explaining your requirements each time.
+
+Download skill folders from [GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins) and place them in `.github/skills/` or `.agents/skills/` in your project root. VS Code Copilot discovers them automatically.
+
+[:octicons-arrow-right-24: How to Add Skills to Your Platform](../../../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform)
+
+---
+
 ## You're Done When
 
 - [ ] Microsoft 365 subscription with Copilot enabled
 - [ ] Microsoft 365 desktop apps updated to latest version
 - [ ] Mobile app installed on at least one device
 - [ ] Copilot icon visible in at least one Microsoft 365 app (Word, Excel, Teams, etc.)
+- [ ] At least one skill installed or added via VS Code Copilot (optional)
