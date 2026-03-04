@@ -19,7 +19,7 @@ The framework is facilitated by **three skills** — reusable AI routines that g
 | 2. Deconstruct | `deconstructing-workflows` | Breaking a workflow into steps, decisions, data flows, and failure modes |
 | 3. Build | `building-workflows` | Designing the AI implementation and constructing platform artifacts |
 
-**Get the skills:** Install the Business-First AI plugin in Claude Code (`/plugin install business-first-ai@handsonai`) or download the skill folders from [GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins/business-first-ai/skills). See [How to Add Skills to Your Platform](../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for Claude Code, Cursor, Codex CLI, Gemini CLI, and VS Code Copilot.
+**Get the skills:** See [How to Add Skills to Your Platform](../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for step-by-step install instructions for Cowork, Claude Code, Claude.ai, Cursor, Codex CLI, Gemini CLI, and VS Code Copilot. The plugin name is `business-first-ai`.
 
 ## The Framework
 
@@ -36,7 +36,7 @@ Before you can apply AI to anything, you need to know *where* it fits. Step 1 is
 
 The audit uses a three-step process: scan what AI already knows about your work, interview you to fill gaps, then produce a classified report with specific opportunities and actionable first steps.
 
-**Facilitated by the `analyzing-workflows` skill.** See [Analyze Workflows](analyze.md) for details and the [Skills building block](../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for cross-platform installation.
+**Facilitated by the `analyzing-workflows` skill.** See [Analyze Workflows](analyze.md) for details and [How to Add Skills to Your Platform](../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for installation on any supported platform.
 
 ---
 
@@ -56,7 +56,7 @@ The deconstruction uses the **five-question framework** to break down each step:
 
 The deliverable is a **Workflow Definition** — a structured breakdown of your workflow into refined steps, with decision points, data flows, context needs, and failure modes captured for every step. The context needs and failure modes captured here directly inform design decisions in Step 3.
 
-**Facilitated by the `deconstructing-workflows` skill.** See [Deconstruct Workflows](deconstruct/index.md) for details and the [Skills building block](../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for cross-platform installation.
+**Facilitated by the `deconstructing-workflows` skill.** See [Deconstruct Workflows](deconstruct/index.md) for details and [How to Add Skills to Your Platform](../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for installation on any supported platform.
 
 ---
 
