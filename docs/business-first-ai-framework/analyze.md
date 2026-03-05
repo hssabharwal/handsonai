@@ -79,6 +79,8 @@ The **AI Opportunity Report** (`ai-opportunity-report.md`) captures:
 
 The Workflow Candidate Summary is the input for [Deconstruct Workflows](deconstruct/index.md) (Step 2) — the trigger and deliverable fields map directly to the scope check that starts the deconstruction.
 
+See two complete [example reports](analyze-examples.md) to get a feel for the format and level of detail.
+
 ## Tips for Better Results
 
 - **Use a tool with memory or projects enabled.** The richer the AI's context about your actual work, the more specific and useful the recommendations will be.
@@ -88,6 +90,7 @@ The Workflow Candidate Summary is the input for [Deconstruct Workflows](deconstr
 
 ## Related
 
+- [Example Reports](analyze-examples.md) — two complete AI Opportunity Reports (Marketing Ops Manager + AI Instructor) showing what the finished deliverable looks like
 - **Next step:** Ready to act on an opportunity? Use the [Deconstruct Workflows guide](deconstruct/index.md) (Step 2) to break it into discrete steps.
 - [Business-First AI Framework](index.md) — the full three-step methodology
 - [Prompts](../agentic-building-blocks/prompts/index.md)
