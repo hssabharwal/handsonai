@@ -135,6 +135,9 @@ Use these definitions when classifying opportunities:
 Begin with Step 1 now.
 ````
 
+!!! example "See what the finished report looks like"
+    Before you start, check out the [Example Reports](analyze-examples.md) — two complete AI Opportunity Reports showing the exact format and level of detail you'll get.
+
 ## What to Expect
 
 After pasting the prompt:
