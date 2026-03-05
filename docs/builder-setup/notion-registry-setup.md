@@ -98,8 +98,8 @@ Once connected, your AI tool can search, read, and update your registry database
 
 | Database | Purpose | Key Fields |
 |----------|---------|------------|
-| **Business Processes** | High-level business functions and their domains | Domain, LOB, Description |
-| **Workflows** | Specific workflows within each process | Status, Execution Mode, Autonomy Level, Trigger, Process Outcome |
+| **Business Processes** | High-level business functions and their domains | Domain, LOB, Description, Guide (URL) |
+| **Workflows** | Specific workflows within each process | Status, Execution Mode, Autonomy Level, Trigger, Process Outcome, SOP (URL), Workflow Definition (URL), Building Block Spec (URL) |
 | **AI Building Blocks** | Skills, prompts, agents, and other AI components | Asset Type, Platform, Status, Dependencies |
 | **Apps** | Connected applications and integrations | Type, Auth Type, Connection Status |
 
@@ -129,8 +129,8 @@ The plugin includes five skills that automate common registry tasks:
 | Skill | What it does |
 |-------|-------------|
 | `naming-workflows` | Generates consistent, outcome-focused workflow names and creates entries in the Workflows database |
-| `writing-workflow-sops` | Writes Standard Operating Procedure documentation for each workflow |
-| `writing-process-guides` | Documents how workflows fit together within a business process |
+| `writing-workflow-sops` | Writes SOP markdown files for workflows and optionally links them from your tracker's SOP URL property |
+| `writing-process-guides` | Writes process guide markdown files and optionally links them from your tracker's Guide URL property |
 | `registering-building-blocks` | Registers AI building blocks (Skills, Agents, Prompts, Context MDs) in the AI Building Blocks database |
 | `syncing-skills-to-github` | Commits skills to GitHub and updates Notion with repository URLs |
 

@@ -205,7 +205,9 @@ When user provides a workflow description:
 | Type | select | Augmented, Automated, Manual |
 | Trigger | text | e.g., "Weekly (Sunday)", "On email arrival", "Manual" |
 | Apps | multi-select | Notion, Web Search, Gmail, Slack, GitHub, etc. |
-| SOP Doc | url | Link to documentation (optional) |
+| SOP | url | Link to SOP markdown file (populated by `writing-workflow-sops`) |
+| Workflow Definition | url | Link to workflow definition markdown file (populated by framework Deconstruct phase) |
+| Building Block Spec | url | Link to building block spec markdown file (populated by framework Build phase) |
 | Assets Used | relation | Link to Assets database (optional) |
 
 ### Business Processes Database

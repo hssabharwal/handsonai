@@ -102,21 +102,21 @@ Names are always 2-4 words, noun phrases (not verb phrases), in Title Case.
 
 **Command:** `/ai-registry:workflow-sop`
 
-**What it does:** Writes Standard Operating Procedure documentation for workflows and saves it directly to the Notion workflow page body. Adapts the SOP template based on whether the workflow is Manual, Augmented, or Automated.
+**What it does:** Writes Standard Operating Procedure documentation for workflows and saves as markdown files, with optional linking to your workflow tracker (Notion, Airtable, etc.). Selects full or lightweight SOP template based on autonomy level (deterministic vs. guided/autonomous), then adapts for workflow type (Manual, Augmented, Automated).
 
-**When to use it:** Use this when you have a workflow entry in Notion and need to document how it's actually executed — step-by-step procedures, prerequisites, quality checks, and troubleshooting guidance.
+**When to use it:** Use this when you need to document how a workflow is executed — step-by-step procedures, prerequisites, quality checks, and troubleshooting guidance. Works with framework artifacts, Notion entries, or from scratch.
 
 **How it works:**
 
-1. Claude fetches the workflow from Notion to get context (name, description, type, trigger, apps, assets used)
-2. Claude asks clarifying questions about the procedure details
-3. Claude writes the SOP using a template adapted for the workflow type:
-    - **Manual**: Detailed human steps with time estimates and exact UI paths
-    - **Augmented**: Steps marked as (AI) or (Human) with clear handoff points
-    - **Automated**: Focus on monitoring, intervention points, and error handling
-4. After your review and approval, Claude updates the workflow page body in Notion
+1. Claude loads workflow context — from framework artifacts (Workflow Definition and Building Block Spec), from Notion, or from conversation
+2. Claude classifies the workflow on two axes: execution mode (Manual/Augmented/Automated) and autonomy level (Deterministic/Guided/Autonomous)
+3. Claude selects the appropriate template:
+    - **Full SOP** (deterministic): Step-by-step procedure with all sections
+    - **Lightweight SOP** (guided/autonomous): Human interface to the agent — checkpoints, inputs/outputs, invocation
+4. Claude adapts the template for the workflow type (Manual/Augmented/Automated)
+5. After your review, Claude writes the SOP as a markdown file and optionally updates your workflow tracker's SOP link
 
-**SOP sections:**
+**Full SOP sections** (deterministic workflows):
 
 | Section | Purpose |
 |---------|---------|
@@ -129,19 +129,31 @@ Names are always 2-4 words, noun phrases (not verb phrases), in Title Case.
 | Troubleshooting | Common problems and fixes |
 | Automation Notes | For Augmented/Automated types only |
 
+**Lightweight SOP sections** (guided/autonomous workflows):
+
+| Section | Purpose |
+|---------|---------|
+| Overview | 1-2 sentence summary + key principle |
+| Execution Pattern | Names the agent + division of labor |
+| How to Start | Invocation command + what to have ready |
+| Your Role at Each Checkpoint | Human decision points only |
+| Outputs | Deliverables with destinations |
+| When to Skip the Agent | When to run individual skills directly |
+| Related | Links to agent file, upstream/downstream workflows |
+
 **Example prompts:**
 
     "Write an SOP for the Email Response Drafting workflow"
-    → Fetches the workflow from Notion, asks about procedure details,
-      produces a complete SOP, and saves it to the workflow page
+    → Loads workflow context, classifies on both axes, writes a
+      full or lightweight SOP as a markdown file
 
     "Document how the Student Onboarding workflow works"
-    → Walks through the SOP writing process, produces Manual-type
-      documentation with detailed steps and time estimates
+    → Gathers procedure details, produces a Manual-type full SOP
+      with detailed steps and time estimates, saves as markdown
 
-**What you'll get:** A complete SOP saved directly to your Notion workflow page body, with all sections filled in and adapted for the workflow type.
+**What you'll get:** A complete SOP saved as a markdown file in your repo, with YAML frontmatter (title, execution_mode, autonomy_level) and all sections adapted for the workflow type. Optionally, your workflow tracker's SOP URL property is updated to link to the file.
 
-**Platform compatibility:** Claude Code &#10003; | Claude.ai &#10003; (Notion MCP required)
+**Platform compatibility:** Claude Code &#10003; | Claude.ai &#10003; (Notion MCP optional — enhances but not required)
 
 ---
 
@@ -149,17 +161,17 @@ Names are always 2-4 words, noun phrases (not verb phrases), in Title Case.
 
 **Command:** `/ai-registry:process-guide`
 
-**What it does:** Writes Business Process Guide documentation that explains the strategic context and rhythm of a complete business process — when to execute it, why it matters, and how its component workflows fit together. This is the strategic companion to the tactical SOPs.
+**What it does:** Writes Business Process Guide documentation as markdown files that explain the strategic context and rhythm of a complete business process — when to execute it, why it matters, and how its component workflows fit together. Optionally links the guide from your process tracker. This is the strategic companion to the tactical SOPs.
 
 **When to use it:** Use this when you need to document how multiple workflows connect into a larger business process. Process guides answer "when, why, and what order" while SOPs answer "how."
 
 **How it works:**
 
-1. Claude fetches the business process from Notion to get context and linked workflows
-2. Claude fetches each linked workflow for sequence and trigger details
-3. Claude asks clarifying questions about timing and decision points
-4. Claude writes the Process Guide using a structured template
-5. After your review, Claude updates the business process page body in Notion
+1. Claude loads process context — from framework artifacts (Workflow Definitions, Building Block Specs, SOPs), from Notion, or from conversation
+2. Claude gathers workflow details for sequencing: trigger, duration, output, autonomy level
+3. Claude asks clarifying questions about timing, decision points, and success criteria
+4. Claude writes the Process Guide using a structured template with SOP cross-references using relative paths
+5. After your review, Claude writes the guide as a markdown file and optionally updates your process tracker's guide link
 
 **Process Guide sections:**
 
@@ -168,25 +180,26 @@ Names are always 2-4 words, noun phrases (not verb phrases), in Title Case.
 | Purpose | Why this process exists and its business impact |
 | When to Execute | Triggers, frequency, timing |
 | Process Overview | Visual flow of workflows in sequence |
-| Workflow Sequence | Each workflow with trigger, duration, and output |
+| Workflow Sequence | Each workflow with trigger, duration, output, and SOP link |
 | Decision Points | Key choices during the process |
 | Success Criteria | How to know the process worked |
 | Common Pitfalls | What typically goes wrong |
+| Orchestrator Agent (optional) | If an agent runs this process end-to-end, how to invoke it |
 
 **Example prompts:**
 
     "Write a process guide for the Email Management business process"
-    → Fetches the process and its workflows from Notion, documents
-      the end-to-end flow, decision points, and success criteria
+    → Loads process context and workflow details, documents the
+      end-to-end flow, decision points, and success criteria as markdown
 
     "How do the Student Enrollment and Student Onboarding workflows
     connect? Document the full process."
     → Creates a process guide showing the workflow sequence,
       handoffs, and timing
 
-**What you'll get:** A complete Business Process Guide saved to your Notion business process page body. Scannable in 2 minutes, focused on the strategic "when/why/what order" rather than tactical how-to details.
+**What you'll get:** A complete Business Process Guide saved as a markdown file in your repo, with YAML frontmatter and SOP cross-references using relative paths. Scannable in 2 minutes, focused on the strategic "when/why/what order" rather than tactical how-to details. Optionally, your process tracker's Guide URL property is updated to link to the file.
 
-**Platform compatibility:** Claude Code &#10003; | Claude.ai &#10003; (Notion MCP required)
+**Platform compatibility:** Claude Code &#10003; | Claude.ai &#10003; (Notion MCP optional — enhances but not required)
 
 ---
 

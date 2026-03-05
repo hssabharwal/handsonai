@@ -37,7 +37,7 @@
 **Output:** [What gets produced]
 **Next:** [What happens after / triggers next workflow]
 
-> 📋 **SOP:** [Link to workflow page with SOP]
+> 📋 **SOP:** [<Workflow Name> SOP](../sops/<workflow-name>-sop.md)
 
 ### 2. [Workflow Name]
 **Trigger:** [What kicks off this workflow]
@@ -45,7 +45,7 @@
 **Output:** [What gets produced]
 **Next:** [What happens after / triggers next workflow]
 
-> 📋 **SOP:** [Link to workflow page with SOP]
+> 📋 **SOP:** [<Workflow Name> SOP](../sops/<workflow-name>-sop.md)
 
 ### 3. [Workflow Name]
 [Continue pattern...]
@@ -85,6 +85,15 @@ After completing this process, you should have:
 
 ---
 
+## Orchestrator Agent (Optional)
+
+**Agent:** [`<agent-name>`](path/to/agent.md)
+**Invocation:** `Use the <agent-name> agent to [action]`
+
+This agent handles sequencing, progress tracking, and skill invocation for the end-to-end process. See the agent file for configuration and capabilities.
+
+---
+
 ## Related Processes
 
 - **Upstream:** [Process that feeds into this one]
@@ -112,7 +121,7 @@ After completing this process, you should have:
 ### Workflow Sequence
 - One entry per workflow in execution order
 - Include trigger (what starts it), duration, and output
-- Link to the workflow page (which has the SOP)
+- Link to the SOP markdown file using relative paths
 - Note handoffs between workflows
 
 ### Decision Points
