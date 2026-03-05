@@ -1,6 +1,6 @@
 # Business-First AI
 
-The Business-First AI Framework as executable Claude Code skills. Analyze AI workflow opportunities, deconstruct workflows into building blocks, and build AI-powered workflows.
+The Business-First AI Framework as executable Claude Code skills. Analyze AI workflow opportunities using individual or organizational lenses, deconstruct workflows into building blocks, and build AI-powered workflows.
 
 ## Install
 
@@ -20,7 +20,7 @@ The Business-First AI Framework as executable Claude Code skills. Analyze AI wor
 
 | Skill | Description |
 |-------|-------------|
-| `analyzing-workflows` | Audit your workflows to find where AI creates the most value |
+| `analyzing-workflows` | Audit your workflows (individual or organizational lens) to find where AI creates the most value |
 | `deconstructing-workflows` | Break a workflow into structured steps using the 5-question framework |
 | `building-workflows` | Design execution patterns and generate prompts, skills, and agents |
 

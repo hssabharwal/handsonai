@@ -18,7 +18,7 @@ You run three skills sequentially, using files as handoffs between stages:
 ### Step 1 — Analyze
 **Skill:** `analyzing-workflows`
 
-Help the user analyze where AI fits in their workflows. If the user already knows which workflow they want to deconstruct, this step can be brief — confirm the candidate and move to Step 2. If they need help choosing, run the full analysis process: scan memory for context, interview them about their work, produce an opportunity report, then have them pick candidates.
+Help the user analyze where AI fits in their workflows. The analysis starts by determining which lens to use — **Individual** (personal workflows the user performs) or **Organizational** (value chain processes that deliver on business objectives). If the user already knows which workflow they want to deconstruct, this step can be brief — confirm the candidate and lens, then move to Step 2. If they need help choosing, run the full analysis process: scan memory for context, select a lens, interview them about their work using lens-appropriate discovery questions, produce an opportunity report, then have them pick candidates.
 
 **Produces:** `outputs/ai-opportunity-report.md` (or skip if user has a specific workflow)
 
@@ -101,7 +101,7 @@ After all three steps, present a summary:
 
 > **Analyze + Deconstruct + Build complete.** Here are your deliverables:
 >
-> **Analyze (Step 1):**
+> **Analyze (Step 1):** [Lens: Individual / Organizational / Individual + Organizational]
 >
 > 1. **Opportunity Report** — `outputs/ai-opportunity-report.md` (if generated)
 >

@@ -121,16 +121,18 @@ Find which workflows are candidates for AI.
 
 **Command:** `/business-first-ai:analyze`
 
-**What it does:** Runs a structured audit of your workflows to analyze where AI can help. Scans memory and conversation history, interviews you about your work, then produces a prioritized opportunity report with structured workflow candidates ready for the Deconstruct step.
+**What it does:** Runs a structured audit of your workflows to analyze where AI can help. Supports two lenses: **Individual** (your personal workflows) and **Organizational** (your business's value chain processes). Scans memory and conversation history, asks which lens to use, interviews you with lens-specific questions, then produces a prioritized opportunity report with structured workflow candidates ready for the Deconstruct step.
 
 **When to use it:** Use this when you want to figure out where AI fits in your work. Especially useful when you're new to AI and need a starting point, or when you want a systematic review before choosing which workflow to deconstruct.
 
 **How it works:**
 
 1. **Memory & history scan** — The AI reviews everything it knows about you from prior conversations, memory, and project files. Presents findings for you to confirm or correct.
-2. **Targeted discovery interview** — The AI asks focused questions one at a time about your role, repetitive tasks, information synthesis, multi-step processes, quality issues, communication overhead, and decision-making. Follows up based on your answers.
-3. **Opportunity analysis & report** — Produces a summary table and detailed opportunity cards grouped by autonomy level (Deterministic, Guided, Autonomous) with involvement mode (Augmented, Automated), ordered by impact.
-4. **Workflow candidate summary** — You pick your top candidates, and the AI produces structured metadata for each: name, description, trigger, deliverable, category, pain point, AI opportunity, frequency, priority, and reasoning. Recommends which to deconstruct first.
+2. **Lens selection** — The AI asks which lens to use: Individual (your personal workflows) or Organizational (your business's value chain). Infers if obvious from context.
+3. **Targeted discovery interview** — The AI asks focused, lens-specific questions one at a time. Individual lens: role, repetitive tasks, information synthesis, multi-step processes, quality issues, communication overhead, decision-making. Organizational lens: business objectives, value chain processes, cross-functional handoffs, bottlenecks, consistency risks, measurement gaps, scale constraints. Follows up based on your answers.
+4. **Opportunity analysis & report** — Produces a summary table and detailed opportunity cards grouped by autonomy level (Deterministic, Guided, Autonomous) with involvement mode (Augmented, Automated), ordered by impact.
+5. **Workflow candidate summary** — You pick your top candidates, and the AI produces structured metadata for each: name, description, trigger, deliverable, autonomy, involvement, pain point, AI opportunity, frequency, priority, reasoning, and lens. Organizational candidates also include business objective, stakeholders, and success metrics. Recommends which to deconstruct first.
+6. **Second lens follow-up** — The AI offers to explore the other lens for a more complete picture.
 
 **Example prompts:**
 
@@ -142,7 +144,7 @@ Find which workflows are candidates for AI.
     → Interactive discovery session followed by a structured report
       with specific, actionable recommendations
 
-**What you'll get:** An opportunity report (`outputs/ai-opportunity-report.md`) with a report header, summary table, top 3 recommendations, detailed cards for each opportunity, and a structured workflow candidate summary with metadata for each candidate you select.
+**What you'll get:** An opportunity report (`outputs/ai-opportunity-report.md`) with a report header (including lens), summary table, top 3 recommendations, detailed cards for each opportunity (with organizational fields for org-lens candidates), and a structured workflow candidate summary with metadata for each candidate you select.
 
 **Platform compatibility:** Claude Code &#10003; | Claude.ai &#10003;
 

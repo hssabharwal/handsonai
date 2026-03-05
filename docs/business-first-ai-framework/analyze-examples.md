@@ -5,12 +5,13 @@ description: Two complete AI Opportunity Report examples showing what the Analyz
 
 # Analyze Examples
 
-These are two synthetic AI Opportunity Reports showing what the Analyze step produces. Use them as a reference for format, level of detail, and how opportunities are classified on the [AI Workflow Design Matrix](workflow-design-matrix.md).
+These are three synthetic AI Opportunity Reports showing what the Analyze step produces. Use them as a reference for format, level of detail, and how opportunities are classified on the [AI Workflow Design Matrix](workflow-design-matrix.md).
 
-- **Example 1** — Marketing Operations Manager at a B2B SaaS company (7 opportunities)
-- **Example 2** — AI Instructor running courses and maintaining a knowledge base (7 opportunities)
+- **Example 1** — Marketing Operations Manager at a B2B SaaS company (Individual lens, 7 opportunities)
+- **Example 2** — AI Instructor running courses and maintaining a knowledge base (Individual lens, 7 opportunities)
+- **Example 3** — VP of Operations at a logistics company (Organizational lens, 5 opportunities)
 
-Both examples include every section the Analyze step produces: report header, summary table, top 3 recommendations, detailed opportunity cards grouped by autonomy level, workflow candidate summary, and classification definitions.
+Examples 1 and 2 use the **individual lens** — analyzing one person's workflows. Example 3 uses the **organizational lens** — analyzing value chain processes tied to business objectives. All three include every section the Analyze step produces: report header, summary table, top 3 recommendations, detailed opportunity cards grouped by autonomy level, workflow candidate summary, and classification definitions. Organizational-lens cards include three additional fields: Business Objective, Stakeholders, and Success Metrics.
 
 ---
 
@@ -483,6 +484,235 @@ Based on impact, frequency, and feasibility, the following three candidates are 
 | **Reasoning**      | High frequency and fully automatable — moderate impact per meeting but compounds across 5-8 weekly meetings; also a good proof-of-concept for autonomous workflows |
 
 **Recommendation:** Start with **Student Q&A Research**. It's the highest-frequency opportunity, directly improves the core teaching experience, and produces a tangible artifact (the answer) that compounds in value as it builds the cookbook's knowledge base. It's also a natural fit for the tools already in place (MCP server, web search, markdown output).
+
+---
+
+## Example 3: VP of Operations (Organizational Lens)
+
+??? info "About this persona"
+    Maria Torres is VP of Operations at a 200-person logistics company. She oversees warehouse operations, fleet management, and customer fulfillment. She's looking at AI from an organizational perspective — identifying value chain processes where AI can improve outcomes tied to business objectives. This example demonstrates the **organizational lens**.
+
+### Report Header
+
+|                              |                                                                                                    |
+| ---------------------------- | -------------------------------------------------------------------------------------------------- |
+| **Name**                     | Maria Torres                                                                                       |
+| **Role**                     | VP of Operations, mid-size logistics company                                                       |
+| **Date**                     | 2026-03-05                                                                                         |
+| **Lens**                     | Organizational                                                                                     |
+| **Opportunities identified** | 5                                                                                                  |
+| **Top recommendation**       | Customer Onboarding — highest impact on customer retention, the company's top strategic objective   |
+
+### Summary Table
+
+| # | Opportunity | Autonomy | Involvement | Impact |
+|---|------------|----------|-------------|--------|
+| 1 | Customer Onboarding | Guided | Augmented | High |
+| 2 | Order Fulfillment Tracking | Deterministic | Automated | High |
+| 3 | Carrier Rate Negotiation Prep | Guided | Augmented | Medium |
+| 4 | Fleet Maintenance Scheduling | Autonomous | Automated | Medium |
+| 5 | Demand Forecasting | Autonomous | Augmented | Medium |
+
+### Top Recommendations
+
+1. **Customer Onboarding** — A cross-functional process spanning sales, ops, and account management that directly impacts customer retention (the #1 business objective). Inconsistent execution leads to early churn.
+2. **Order Fulfillment Tracking** — End-to-end visibility from order receipt through delivery confirmation. Currently manual status checks create delays in exception handling.
+3. **Carrier Rate Negotiation Prep** — Quarterly process that requires synthesizing shipment volume data, carrier performance metrics, and market rate benchmarks — highly data-intensive research that AI can accelerate.
+
+### Detailed Opportunity Cards
+
+#### Guided
+
+---
+
+**#1 Customer Onboarding**
+
+**Autonomy:** Guided
+**Involvement:** Augmented
+
+**Why it's a good candidate:**
+Onboarding follows a structured sequence (account setup, system configuration, initial shipment planning, training) but requires judgment at multiple points — which service tier, which warehouse assignment, which carrier mix. AI can handle research, drafting, and coordination; humans make the key decisions.
+
+**Current pain point:**
+New customer onboarding takes 2-3 weeks and involves sales, operations, and account management. Each team owns different steps, and handoffs are where things break — incomplete information passes between teams, setup tasks get missed, and the customer's first shipment experience sets the tone for the relationship. There's no single owner for the end-to-end outcome.
+
+**How AI helps:**
+AI orchestrates the onboarding sequence: pre-populates account configuration from the signed contract, drafts a warehouse assignment recommendation based on the customer's shipping patterns, generates a carrier mix proposal, creates a personalized training schedule, and tracks completion across all teams. Account manager reviews and approves key decisions.
+
+**Getting started:**
+Map the current onboarding process across all three teams. Identify which handoff points have the highest failure rate and start by automating status tracking and notifications at those points.
+
+**Business Objective:** Improve customer retention rate from 85% to 92%
+**Stakeholders:** Sales (handoff), Operations (setup), Account Management (relationship owner)
+**Success Metrics:** Time-to-first-shipment, onboarding completion rate, 90-day customer satisfaction score
+
+---
+
+**#3 Carrier Rate Negotiation Prep**
+
+**Autonomy:** Guided
+**Involvement:** Augmented
+
+**Why it's a good candidate:**
+Rate negotiation prep is research-heavy: gathering shipment volumes by lane, analyzing carrier on-time performance, benchmarking against market rates, and preparing a negotiation brief. AI excels at data synthesis; the negotiation strategy requires human judgment.
+
+**Current pain point:**
+Quarterly carrier negotiations require 2-3 days of prep. The logistics manager pulls shipment data from the TMS, calculates lane-by-lane volumes, reviews carrier scorecards, researches competitor rate benchmarks, and assembles a briefing document. By the time the brief is ready, some of the market data is already stale.
+
+**How AI helps:**
+AI pulls shipment volume data and carrier performance metrics from the TMS, benchmarks against published rate indices, identifies lanes where current rates are above market, and produces a negotiation brief with recommended rate targets and supporting evidence. Logistics manager reviews the brief, adjusts strategy based on relationship factors, and enters negotiations prepared.
+
+**Getting started:**
+Export last quarter's shipment data by carrier and lane. Have AI analyze the top 10 lanes by volume and compare current rates to published benchmarks. Evaluate whether the analysis matches the logistics manager's intuition.
+
+**Business Objective:** Reduce transportation costs by 8% through better carrier rate management
+**Stakeholders:** Logistics Manager (prep + negotiation), VP Operations (approval), Finance (budget impact)
+**Success Metrics:** Average rate reduction per lane, negotiation prep time, rate variance vs. market benchmark
+
+---
+
+#### Deterministic
+
+---
+
+**#2 Order Fulfillment Tracking**
+
+**Autonomy:** Deterministic
+**Involvement:** Automated
+
+**Why it's a good candidate:**
+Status tracking follows fixed rules: order received → picked → packed → shipped → delivered. Each stage transition is a data event from the WMS or TMS. No judgment needed — just monitoring, matching, and alerting.
+
+**Current pain point:**
+Customer service reps manually check order status across the WMS and TMS when customers call. Exception detection (delayed shipments, partial picks, missed delivery windows) relies on someone noticing — there's no proactive alerting. The team spends 3-4 hours daily on reactive status checks, and customers often know about problems before the ops team does.
+
+**How AI helps:**
+A deterministic workflow monitors order lifecycle events from the WMS and TMS, updates a real-time status dashboard, and triggers automated alerts when orders deviate from expected timelines (e.g., pick not started within 2 hours of order receipt, shipment not scanned within delivery window). No decisions needed — fixed rules, fixed thresholds, fixed notifications.
+
+**Getting started:**
+Define the 5 most common exception scenarios and their alert thresholds. Build a simple status check for one exception type (e.g., "shipment not departed within 4 hours of scheduled pickup") and validate against historical data.
+
+**Business Objective:** Achieve 98% on-time delivery rate (currently 94%)
+**Stakeholders:** Warehouse Manager (pick/pack), Logistics Coordinator (shipping), Customer Service (communication)
+**Success Metrics:** Exception detection time, proactive alert rate, customer inquiry volume reduction
+
+---
+
+#### Autonomous
+
+---
+
+**#4 Fleet Maintenance Scheduling**
+
+**Autonomy:** Autonomous
+**Involvement:** Automated
+
+**Why it's a good candidate:**
+Maintenance scheduling requires analyzing multiple data streams (mileage, engine hours, maintenance history, upcoming delivery commitments) and making independent scheduling decisions that balance vehicle uptime with maintenance needs. The AI can plan autonomously because the constraints are clear and the decisions are bounded.
+
+**Current pain point:**
+Fleet maintenance is tracked in a spreadsheet. The fleet manager checks mileage and schedules services based on manufacturer intervals, but competing delivery commitments mean vehicles often run past due. Unplanned breakdowns cost 3-5x more than scheduled maintenance and disrupt delivery schedules.
+
+**How AI helps:**
+An autonomous agent continuously monitors vehicle telemetry (mileage, engine hours, diagnostic codes), cross-references against maintenance schedules and upcoming delivery commitments, and automatically schedules maintenance during low-utilization windows. Generates work orders for the maintenance shop and adjusts the delivery schedule around planned downtime.
+
+**Getting started:**
+Export the current fleet roster with last maintenance dates and mileage. Have AI identify the 5 vehicles most overdue for service and propose a maintenance schedule that minimizes delivery disruption for the next 30 days.
+
+**Business Objective:** Reduce unplanned vehicle downtime by 50%
+**Stakeholders:** Fleet Manager (scheduling), Maintenance Shop (execution), Dispatch (route adjustment)
+**Success Metrics:** Planned vs. unplanned maintenance ratio, average vehicle uptime %, maintenance cost per mile
+
+---
+
+**#5 Demand Forecasting**
+
+**Autonomy:** Autonomous
+**Involvement:** Augmented
+
+**Why it's a good candidate:**
+Demand forecasting requires analyzing historical shipment patterns, seasonal trends, customer growth trajectories, and external signals (economic indicators, industry events). AI can independently model scenarios and generate forecasts; human review adds market intuition and customer-specific knowledge.
+
+**Current pain point:**
+Monthly capacity planning relies on the VP's experience and a basic spreadsheet model. Seasonal demand shifts, new customer ramp-ups, and one-time events aren't systematically factored in. Over-forecasting wastes warehouse labor; under-forecasting creates overtime costs and missed SLAs.
+
+**How AI helps:**
+An autonomous agent analyzes 24 months of shipment history, identifies seasonal patterns and growth trends per customer, incorporates known upcoming events (new customer launches, holiday peaks), and generates a 90-day demand forecast with confidence intervals. Maria reviews the forecast, adjusts for factors the model can't see (a large customer hinted at a contract change), and approves the capacity plan.
+
+**Getting started:**
+Export 12 months of daily shipment volumes by customer. Have AI identify the top 3 seasonal patterns and compare its next-month forecast against actual volumes from a previous period to calibrate accuracy.
+
+**Business Objective:** Optimize warehouse labor costs while maintaining SLA compliance
+**Stakeholders:** VP Operations (approval), Warehouse Manager (staffing), Finance (labor budget)
+**Success Metrics:** Forecast accuracy (MAPE), labor cost variance, SLA compliance rate
+
+---
+
+### Workflow Candidate Summary
+
+Based on strategic impact, cross-functional complexity, and feasibility, the following three candidates are recommended for the Deconstruct step:
+
+#### Candidate 1: Customer Onboarding
+
+| Field | Content |
+|-------|---------|
+| **Workflow** | Customer Onboarding |
+| **Description** | Orchestrates the end-to-end process of setting up new customers from signed contract through first successful shipment |
+| **Trigger** | Event — new customer contract signed in CRM |
+| **Deliverable** | Fully configured customer account with completed first shipment and satisfaction survey |
+| **Autonomy** | Guided |
+| **Involvement** | Augmented |
+| **Pain point** | 2-3 week onboarding with frequent handoff failures between sales, ops, and account management — leading to poor first impressions and early churn |
+| **AI opportunity** | AI orchestrates the sequence, pre-populates configurations, recommends warehouse and carrier assignments, tracks cross-team completion, and alerts on delays |
+| **Frequency** | Weekly (3-5 new customers per month) |
+| **Priority** | High |
+| **Reasoning** | Directly addresses the #1 business objective (customer retention), involves the most painful cross-functional handoffs, and improvements compound across every new customer |
+| **Lens** | Organizational |
+| **Business Objective** | Improve customer retention rate from 85% to 92% |
+| **Stakeholders** | Sales, Operations, Account Management |
+| **Success Metrics** | Time-to-first-shipment, onboarding completion rate, 90-day CSAT |
+
+#### Candidate 2: Order Fulfillment Tracking
+
+| Field | Content |
+|-------|---------|
+| **Workflow** | Order Fulfillment Tracking |
+| **Description** | Monitors order lifecycle from receipt through delivery and proactively alerts on exceptions |
+| **Trigger** | Event — new order created in WMS |
+| **Deliverable** | Real-time order status dashboard + automated exception alerts |
+| **Autonomy** | Deterministic |
+| **Involvement** | Automated |
+| **Pain point** | 3-4 hours daily of reactive status checks; customers learn about problems before the ops team |
+| **AI opportunity** | Automated monitoring of WMS/TMS events with rule-based exception detection and proactive alerting — no human involvement during execution |
+| **Frequency** | Continuous (hundreds of orders daily) |
+| **Priority** | High |
+| **Reasoning** | Highest volume, directly impacts on-time delivery (key SLA metric), and deterministic nature makes it straightforward to implement |
+| **Lens** | Organizational |
+| **Business Objective** | Achieve 98% on-time delivery rate |
+| **Stakeholders** | Warehouse, Logistics, Customer Service |
+| **Success Metrics** | Exception detection time, proactive alert rate, customer inquiry volume |
+
+#### Candidate 3: Carrier Rate Negotiation Prep
+
+| Field | Content |
+|-------|---------|
+| **Workflow** | Carrier Rate Negotiation Prep |
+| **Description** | Synthesizes shipment data, carrier performance, and market rates into a negotiation-ready brief |
+| **Trigger** | Scheduled — 3 weeks before quarterly carrier review |
+| **Deliverable** | Negotiation brief with lane-by-lane analysis, rate benchmarks, and recommended targets |
+| **Autonomy** | Guided |
+| **Involvement** | Augmented |
+| **Pain point** | 2-3 days of manual data gathering and analysis per quarter; market data goes stale during prep |
+| **AI opportunity** | AI pulls and analyzes shipment/carrier data, benchmarks against market rates, and produces a draft brief — logistics manager refines strategy and enters negotiations prepared |
+| **Frequency** | Quarterly |
+| **Priority** | Medium |
+| **Reasoning** | High financial impact per occurrence (rate negotiations affect millions in annual spend) but lower frequency; good candidate once higher-frequency workflows are running |
+| **Lens** | Organizational |
+| **Business Objective** | Reduce transportation costs by 8% |
+| **Stakeholders** | Logistics Manager, VP Operations, Finance |
+| **Success Metrics** | Average rate reduction, prep time, rate vs. market benchmark |
+
+**Recommendation:** Start with **Customer Onboarding**. It's the highest-impact opportunity tied directly to the company's top strategic objective (customer retention). While it's more complex than Order Fulfillment Tracking, the cross-functional visibility and structured handoffs it creates will improve operations far beyond the onboarding process itself. Order Fulfillment Tracking is the natural second candidate — deterministic and automated, it provides quick wins while the onboarding workflow is being developed.
 
 ---
 

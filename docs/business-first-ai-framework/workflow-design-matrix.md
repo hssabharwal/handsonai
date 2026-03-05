@@ -7,6 +7,13 @@ description: A 3x2 matrix combining autonomy level (Deterministic, Guided, Auton
 
 Every AI workflow can be described by two dimensions: **how much decision-making the AI has** and **whether a human is in the loop during execution**. These two dimensions combine into a 3x2 matrix of six workflow archetypes — a shared vocabulary for classifying, comparing, and designing AI workflows.
 
+A third dimension — **Lens** — determines the scope of your analysis:
+
+- **Individual** — Workflows scoped to one person's trigger-to-deliverable flow. Focus: personal productivity, task automation, quality improvement.
+- **Organizational** — Workflows scoped to an end-to-end business process, potentially spanning multiple roles. Focus: value chain optimization, cross-functional efficiency, strategic outcomes.
+
+The lens doesn't change the matrix — it changes what you're analyzing. An individual-lens audit surfaces your personal pain points; an organizational-lens audit surfaces value chain processes tied to business objectives. Both produce candidates classified on the same Autonomy x Involvement matrix.
+
 ## Two Dimensions Define Every AI Workflow
 
 ### Dimension 1: Autonomy — How Much Decision-Making Does the AI Have?
