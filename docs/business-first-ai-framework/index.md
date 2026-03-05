@@ -34,7 +34,7 @@ Before you can apply AI to anything, you need to know *where* it fits. Step 1 is
 - **Autonomy** — How much decision-making does the AI have? **Deterministic** (follows fixed rules), **Guided** (makes bounded decisions within guardrails), or **Autonomous** (plans and adapts independently)
 - **Human Involvement** — Is a human in the loop during execution? **Augmented** (human reviews and steers) or **Automated** (AI runs solo)
 
-The audit uses a three-step process: scan what AI already knows about your work, interview you to fill gaps, then produce a classified report with specific opportunities and actionable first steps.
+The audit starts by determining which lens to use — individual or organizational — then scans what AI already knows about your work, interviews you with lens-specific questions to fill gaps, and produces a classified report with specific opportunities and actionable first steps.
 
 **Facilitated by the `analyzing-workflows` skill.** See [Analyze Workflows](analyze.md) for details and [How to Add Skills to Your Platform](../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for installation on any supported platform.
 

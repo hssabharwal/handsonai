@@ -23,8 +23,8 @@ Determine how I'm arriving at this conversation. Ask me: "Are you coming from an
 
 Based on my answer:
 
-- **From Analyze output**: Ask me to paste the Workflow Candidate Summary. Pre-populate the scenario metadata (name, description, trigger, deliverable, autonomy, involvement) from the candidate fields. Present it back to me for confirmation, then proceed to Step 2.
-- **From a workflow description**: Ask about the business scenario, objective, high-level steps, and ownership. Ask these ONE AT A TIME — not as a list.
+- **From Analyze output**: Ask me to paste the Workflow Candidate Summary. Pre-populate the scenario metadata (name, description, trigger, deliverable, autonomy, involvement) from the candidate fields. If the candidate includes Lens, Business Objective, Stakeholders, or Success Metrics fields, carry those forward too. Present it back to me for confirmation, then proceed to Step 2.
+- **From a workflow description**: Ask about the business scenario, objective, high-level steps, and ownership. Ask these ONE AT A TIME — not as a list. If no lens was established, determine it: individual tasks (one person's repetitive work) = Individual lens; multi-role or business-objective processes = Organizational lens. If not obvious, ask.
 - **From a problem statement**: I'll describe a problem instead of a workflow. Propose a candidate workflow for me to react to, then continue.
 
 ## Step 2 — Scope Check: One Trigger, One Deliverable
@@ -35,6 +35,7 @@ A workflow has exactly one trigger (what kicks it off) and one deliverable (the 
 - **Deliverables**: Are there distinct outputs at different points? If someone receives a deliverable midway and the process continues toward a different output, that's a workflow boundary.
 - **Timeframes**: Do parts run on different schedules (daily vs. weekly), or are there significant waits between phases? Likely separate workflows.
 - **Step count**: Would this expand to 15+ refined steps? May be multiple workflows.
+- **Ownership boundary** (organizational lens): Does this process have a single accountable owner for the end-to-end outcome? If different people own different segments with no single owner, it may be multiple workflows.
 
 If multiple workflows are detected: map out each one (working name, trigger, deliverable), present the breakdown, confirm boundaries with me, and ask which to deconstruct first. Proceed with only the chosen workflow.
 
@@ -55,6 +56,7 @@ Now break down the workflow step by step. Start with the first 3 steps I describ
 3. **Data flows** — What are the inputs and outputs? Where does data come from and go?
 4. **Context needs** — What specific documents, files, templates, databases, or reference materials does this step need? Push beyond vague answers like "domain knowledge" — identify the specific artifact.
 5. **Failure modes** — What happens when this step fails? What does "bad output" look like?
+6. **Role transitions** (organizational lens with multiple stakeholders only) — Who performs this step? Does ownership change between steps? Are there handoff points?
 
 Ask these questions ONE AT A TIME for each step. Probe for missing sub-steps — most people undercount by 30-50%. Surface hidden assumptions ("How do you decide when X is good enough?").
 
@@ -62,7 +64,7 @@ For any step where AI is already being used, ask specifically for existing promp
 
 ## Step 5 — Propose and React (Remaining Steps)
 
-For steps 4 and beyond, switch to a "propose and react" pattern: propose a hypothesis across all 5 dimensions (discrete steps, decision points, data flows, context needs, failure modes) and ask me: "What's right, what's wrong, what am I missing?"
+For steps 4 and beyond, switch to a "propose and react" pattern: propose a hypothesis across all dimensions (discrete steps, decision points, data flows, context needs, failure modes, and role transitions for organizational workflows) and ask me: "What's right, what's wrong, what am I missing?"
 
 This is faster than asking each question individually once we've established the pattern.
 
@@ -114,6 +116,9 @@ Produce the complete Workflow Definition with these sections:
 | **Deliverable** | [Tangible output] |
 | **Business objective** | [Why this matters] |
 | **Current owner(s)** | [Who does this today] |
+| **Lens** | Individual / Organizational |
+| **Stakeholders** | [Organizational only — roles/teams involved] |
+| **Success Metrics** | [Organizational only — KPIs for measuring improvement] |
 
 ### Refined Steps
 
@@ -134,12 +139,15 @@ For each step, use this format:
 - Sequential steps: [list]
 - Parallel steps: [list]
 - Critical path: [sequence]
+- Role swimlane (organizational lens with multiple roles): a view showing which role owns each step
 
 ### Context Shopping List
 
 | Artifact | Description | Used By | Status | Key Contents |
 |----------|-------------|---------|--------|-------------|
 | [Name] | [Description] | Steps [#, #] | Exists / Needs Creation | [What the workflow needs from it] |
+
+For organizational workflows, also prompt for existing process documentation: SOPs, training guides, compliance requirements, SLAs.
 
 ---
 

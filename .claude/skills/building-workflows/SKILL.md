@@ -74,6 +74,7 @@ Present a single confirmation block:
 > - **Tools needed:** [extracted list]
 > - **Trigger:** [extracted trigger] → [implications for involvement mode]
 > - [Any flags: e.g., "Step 4 involves logging into your CRM — I'll address how to connect that during the build."]
+> - [Organizational lens: stakeholder implications — different platform access levels, notification needs for handoffs, shareability defaults to "yes"]
 >
 > Integration availability on [platform] will be researched during the Construct phase.
 >
@@ -152,6 +153,7 @@ For every refined step, determine:
 - **AI building block(s)**: Prompt, Context, Skill, Agent, MCP, Project
 - **Tools and connectors**: External tools, APIs, integrations needed (populated from the tool list in Architecture Decisions; integration availability is deferred to Construct)
 - **Human-in-the-loop gates**: Where human review is recommended
+- **Role** (organizational lens): Who performs this step — which role owns it
 
 Present the mapping as a clear table. Walk through reasoning for non-obvious classifications. Ask if the user wants to adjust anything.
 
@@ -182,6 +184,7 @@ For multi-agent: orchestration pattern, agent handoffs, human review gates.
 #### Step 9 — Generate AI Building Block Spec
 
 Write to `outputs/[workflow-name]-building-block-spec.md`. Includes:
+- Lens (Individual / Organizational)
 - Autonomy level assessment (workflow-level, with rationale)
 - Orchestration mechanism recommendation (with involvement mode)
 - Architecture Decisions (with rationale and constraints summary)
@@ -197,6 +200,7 @@ Write to `outputs/[workflow-name]-building-block-spec.md`. Includes:
 - **Model recommendation** — Recommend the model class best suited for this workflow. Consider the complexity of reasoning required, whether speed or depth matters more, and cost sensitivity. Present as a recommendation with rationale (e.g., "A reasoning-heavy model for the research steps, a fast model for the formatting steps"). This applies to all patterns, not just agent-based ones — even a Prompt pattern benefits from knowing whether to use a reasoning model or a fast one.
 - Recommended implementation order (quick wins → semi-autonomous → complex agent steps)
 - Where to Run recommendation
+- For organizational scope: stakeholders section and role swimlane diagram
 
 #### Step 10 — Spec Approval Gate
 
@@ -342,6 +346,7 @@ The Run Guide covers four sections:
 - How to run the workflow again in the future (the repeatable trigger)
 - How to share it with team members (if shareability was confirmed during Construct)
 - When to revisit and improve (signs the workflow needs updating)
+- For organizational workflows: **Change management** — who needs training, what communication is needed, and **Rollout plan** — pilot first or full rollout?
 
 **Variant B: Manual build (Step 11 path 2)**
 

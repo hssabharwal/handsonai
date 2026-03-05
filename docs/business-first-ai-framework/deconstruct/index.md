@@ -9,7 +9,7 @@ description: Interactively break down any business workflow into discrete steps,
 
 ## What This Is
 
-An interactive deep-dive that breaks down a business workflow into discrete steps — surfacing every hidden sub-step, decision point, data handoff, context requirement, and failure mode.
+An interactive deep-dive that breaks down a business workflow into discrete steps — surfacing every hidden sub-step, decision point, data handoff, context requirement, and failure mode. Works with both individual workflows (one person's tasks) and organizational workflows (multi-role value chain processes), adding role transitions as an additional dimension for organizational workflows.
 
 | | |
 |---|---|
