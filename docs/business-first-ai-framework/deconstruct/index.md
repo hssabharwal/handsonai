@@ -42,7 +42,7 @@ I need to deconstruct my [workflow name] workflow.
 The skill runs an interactive deep dive — interviewing you about your scenario, refining your steps, then probing each step for sub-steps, decisions, data flows, context needs, and failure modes. It produces a structured Workflow Definition file.
 
 !!! tip "If your AI tool doesn't support skills"
-    Use this page as a conversation guide — walk through each section in order with your AI tool. The methodology works the same way whether or not a skill is driving the process.
+    Use the [Deconstruct Prompt (Portable)](../deconstruct-prompt.md) — a copy-paste prompt that runs the full Deconstruct process in any AI chat tool (ChatGPT, Gemini, Claude, etc.). No skill installation required.
 
 ### Example: What the first exchange looks like
 
