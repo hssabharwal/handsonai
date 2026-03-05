@@ -237,7 +237,9 @@ nav:
       - Overview: business-first-ai-framework/analyze.md
       - "Analyze Prompt (Portable)": business-first-ai-framework/analyze-prompt.md
       - "Example Reports": business-first-ai-framework/analyze-examples.md
-    - "Step 2: Deconstruct Workflows": business-first-ai-framework/deconstruct/index.md
+    - "Step 2: Deconstruct Workflows":
+      - Overview: business-first-ai-framework/deconstruct/index.md
+      - "Deconstruct Prompt (Portable)": business-first-ai-framework/deconstruct-prompt.md
     - "Step 3: Build Workflows":
       - Overview: business-first-ai-framework/build/index.md
       - "3.1: Design": business-first-ai-framework/build/design.md
