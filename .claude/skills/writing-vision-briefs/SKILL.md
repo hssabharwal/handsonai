@@ -21,6 +21,7 @@ Guide the user through capturing a fuzzy idea as a structured Vision Brief — a
 |-------|------|
 | 1. Discover | Ask questions one at a time to understand the idea |
 | 2. Refine | Present the draft Vision Brief, iterate until solid |
+| 2.5 Evaluate | Go/no-go decision gate — assess and recommend next action |
 | 3. Scope | Assess the size — is this one feature or multiple? Break it down |
 | 4. Handoff | Save everything and guide the user to their first feature PRD |
 
@@ -35,6 +36,11 @@ Ask the user questions **one at a time**. Use multiple-choice options when possi
 **Question 1 — The Problem:**
 > "What's the pain point or missed opportunity you're trying to address? In a sentence or two, what frustrates you (or your users) today?"
 
+**Follow-up probe — Quantify the problem:**
+> "Can you put rough numbers on it? How often does this happen, how many people are affected, what does it cost in time or money?"
+
+If they can't quantify, that's fine — note it in the brief as a validation signal (e.g., "Impact not yet quantified — consider validating before building"). Don't push hard, but do flag it.
+
 **Question 2 — Who Feels It:**
 > "Who specifically experiences this problem? What's their role or situation?"
 
@@ -44,20 +50,35 @@ Offer multiple-choice options based on common user types if the context suggests
 - (c) Administrators / managers
 - (d) Someone else — describe them
 
-**Question 3 — Current State:**
+**Question 3 — Stakeholders & Decision-Makers:**
+> "Who else cares about this? Who needs to approve it, who's affected by the change, and who should review the solution before it ships?"
+
+Help the user think broadly:
+- Decision maker (who says yes/no to building this?)
+- Reviewers (who should weigh in on the approach?)
+- Affected parties (who's impacted even if they're not the primary user?)
+
+If the user says "just me," that's a valid answer — note it and move on.
+
+**Question 4 — Current State:**
 > "How are you handling this today? Any workarounds, tools, or manual processes — even ugly ones?"
 
 This reveals the severity of the pain (hacking together workarounds = high urgency), what "good enough" looks like (the bar to clear), and implicit requirements (what they like or hate about current approaches).
 
-**Question 4 — Strategic Context:**
+**Follow-up — Alternatives considered:**
+> "Have you looked at existing solutions — tools, services, or approaches that already exist? What's missing from them, or why won't they work?"
+
+If they haven't explored alternatives, note that as a signal. If they have, capture what they tried and why it fell short.
+
+**Question 5 — Strategic Context:**
 > "Why is now the right time to solve this? What's changed — or what will happen if you don't act?"
 
 This separates "nice to have" ideas from urgent, high-value ones. If the user says "nothing specific," that's a useful signal too — note it and move on.
 
-**Question 5 — The Vision:**
+**Question 6 — The Vision:**
 > "Imagine this problem is solved. What does the ideal outcome look like? Don't describe a solution — describe the result."
 
-**Question 6 — Key Capabilities:**
+**Question 7 — Key Capabilities:**
 > "What 3-5 things must the solution be able to do? Write them from the user's perspective — 'I can...' or 'Users can...'"
 
 If the user gives a vague answer, help them break it down:
@@ -68,12 +89,14 @@ If the user gives a vague answer, help them break it down:
 
 Categorize each capability as **Must have** or **Nice to have** based on their answer.
 
-**Question 7 — Inspiration (optional):**
+**Question 8 — Inspiration (optional):**
 > "Is there a product, feature, or experience — even in a different domain — that does something close to what you're imagining? This helps me understand the vibe you're going for."
+>
+> "And on the flip side — is there a product that does this badly? What specifically would you want to avoid?"
 
-If the user says "nothing comes to mind," skip this section in the brief. Don't push — this is a bonus question.
+If the user says "nothing comes to mind" for either direction, skip those parts in the brief. Don't push — this is a bonus question.
 
-**Question 8 — Success Criteria:**
+**Question 9 — Success Criteria:**
 > "Let's define success in two timeframes:
 > - **Early signal** (first 1-2 weeks): What's the first sign this is working?
 > - **Real outcome** (1-3 months): What measurable result tells you this was worth building?"
@@ -81,13 +104,19 @@ If the user says "nothing comes to mind," skip this section in the brief. Don't 
 If the user struggles, offer concrete examples:
 > "For instance, an early signal might be 'setup completion goes from 60% to 85%' and a real outcome might be 'support tickets drop by half.' What would yours be?"
 
-**Question 9 — Risks & Assumptions:**
+**Question 10 — Risks & Assumptions:**
 > "What's the biggest risk or assumption here? What would need to be true for this to work — and what could derail it?"
 
 If the user says "I'm not sure," help them surface it:
 > "Every idea has a hidden bet. Yours might be something like 'users will actually use this if we build it' or 'the data we need already exists.' What's the bet you're making?"
 
-**Question 10 — Constraints:**
+**Question 11 — Dependencies:**
+> "What needs to exist before you can build this? Any tools, data, infrastructure, decisions, or other features that must be in place first?"
+
+If the user says "nothing" or "not sure," probe gently:
+> "Think about it from two angles: technical prerequisites (data sources, APIs, platforms) and organizational ones (approvals, budget, team availability)."
+
+**Question 12 — Constraints:**
 > "What's already in place? Any boundaries I should know about — budget, timeline, existing tools, audience size?"
 
 If the user says "none" or "not sure," that's fine — note it in the brief and move on.
@@ -118,6 +147,56 @@ Iterate until the user is satisfied. Common refinements:
 - Clarifying who the users really are
 - Sharpening the success criteria
 - Surfacing risks the user hadn't considered
+
+### Stakeholder review prompt
+
+Before moving to the next phase, ask:
+
+> "Should anyone else review this brief before we proceed? Sometimes a quick sanity check from a stakeholder or subject-matter expert saves rework later."
+
+If they want a review, pause here and let them share the brief. If not, proceed.
+
+---
+
+## Phase 2.5: Evaluate
+
+Before investing time in scoping and breaking down features, present a quick assessment to help the user decide whether to proceed.
+
+### Present the assessment
+
+> "Before we dive into scoping, let me give you a quick read on this idea:"
+>
+> | Dimension | Assessment |
+> |-----------|------------|
+> | **Problem severity** | [Low / Medium / High — based on frequency, people affected, cost] |
+> | **Strategic alignment** | [Low / Medium / High — based on urgency, competitive pressure, growth impact] |
+> | **Confidence level** | [Low / Medium / High — based on whether the problem is quantified, assumptions are validated, alternatives are explored] |
+> | **Rough effort** | [Small / Medium / Large — based on capabilities count, dependencies, constraints] |
+>
+> **Recommendation:** [One of the three options below]
+
+### Decision gate
+
+Ask the user explicitly:
+
+> "Based on this assessment, I'd recommend: **[recommendation]**. What do you want to do?
+>
+> 1. **Proceed** — The idea is clear and worth building. Let's scope it out.
+> 2. **Validate first** — There are open questions or unvalidated assumptions. Let's identify what to test before committing to build.
+> 3. **Park it** — This isn't the right time. I'll save what we have so you can revisit later."
+
+**Guidelines for recommendations:**
+- Recommend **Proceed** when problem severity is medium-high, confidence is medium-high, and the idea aligns strategically
+- Recommend **Validate first** when confidence is low (unquantified problem, untested assumptions, no alternatives explored) or when the biggest risk hasn't been addressed
+- Recommend **Park it** when strategic alignment is low, the problem is mild, or the user themselves seem lukewarm
+
+**If the user chooses "Validate first":**
+> "Let's identify the top 1-3 things you'd want to validate. For each one, what's the cheapest way to test it?"
+
+Help them define lightweight validation steps (e.g., "interview 3 users," "run a time study for one week," "prototype just the core interaction"). Add these to the Open Questions section of the brief with a "Validation needed" tag.
+
+**If the user chooses "Park it":**
+Save the Vision Brief as-is with `**Status:** Parked` and move to Phase 4 (Handoff) — skip Phase 3 (Scope).
 
 ---
 
@@ -197,7 +276,16 @@ Fill in the specific feature names and reasoning based on the user's capabilitie
 
 ### Create epic issues
 
-For each epic in the breakdown, create a GitHub issue to track it:
+Before creating any issues, present the proposed issues for approval:
+
+> "I'm ready to create these GitHub issues to track your epics:
+>
+> 1. **[Epic] Epic Name 1** — [one-line summary of what this epic covers]
+> 2. **[Epic] Epic Name 2** — [one-line summary of what this epic covers]
+>
+> Each issue will link to the Vision Brief and list the features as a checklist. Want me to go ahead, or adjust any names first?"
+
+Wait for the user to approve before creating. Then, for each epic:
 
 ```bash
 gh issue create --title "[Epic] Epic Name" --label "type:epic" --body "..."
@@ -220,7 +308,7 @@ Choose the output location based on what exists in the repo:
 3. If the repo's CLAUDE.md specifies a spec output location, use that (with `-vision` suffix)
 4. Otherwise, create `specs/[name]-vision.md`
 
-**Include the feature breakdown in the Vision Brief.** After the Open Questions section, add:
+**Include the feature breakdown in the Vision Brief.** After the Future Considerations section, add:
 
 ```markdown
 ## Feature Breakdown
@@ -270,10 +358,11 @@ See [vision-brief-template.md](references/vision-brief-template.md) for the temp
 
 ```
 Vision Brief
-  → Scope assessment
-    → Epic(s) — tracked as GitHub issues with type:epic
-      → Feature(s) — each one gets its own PRD in Step 1
-        → PRD → Plan → Implement → Ship
+  → Evaluate (go/no-go decision gate)
+    → Scope assessment
+      → Epic(s) — tracked as GitHub issues with type:epic
+        → Feature(s) — each one gets its own PRD in Step 1
+          → PRD → Plan → Implement → Ship
 ```
 
 ### Vision Brief → PRD mapping
@@ -282,13 +371,17 @@ When writing a PRD for a single feature from a Vision Brief, these sections map 
 
 | Vision Brief Section | Maps to PRD Input |
 |---------------------|-------------------|
-| The Problem | "What problem does it solve?" |
-| Who Feels It | "Who are the users?" |
+| The Problem | Motivation + problem quantification |
+| Who Feels It | User type for user stories |
+| Stakeholders | PRD stakeholder context + review assignments |
 | Current State | Context for problem severity and implicit requirements |
+| Alternatives Considered | Approach context — what was ruled out and why |
 | Strategic Context | Urgency and prioritization signal |
-| The Vision | "What feature are you building?" |
-| Key Capabilities | "What should happen?" (scoped to this feature) |
+| The Vision | Summary — scoped to this feature |
+| Key Capabilities | User stories and acceptance criteria (scoped to this feature) |
 | Inspiration | Reference points for design and UX decisions |
-| What Success Looks Like | Acceptance criteria seed |
+| What Success Looks Like | Success Metrics & Instrumentation |
 | Risks & Assumptions | Open questions and validation needs |
-| Constraints & Context | Scope boundaries and technical constraints |
+| Dependencies | Dependencies & Prerequisites section |
+| Constraints & Context | Scope boundaries, non-functional requirements, and design constraints |
+| Future Considerations | PRD's Future Considerations section |

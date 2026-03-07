@@ -1,7 +1,7 @@
 {
   "name": "agentic-coding",
   "description": "Skills for AI-assisted coding workflows — feature PRDs, specs, and implementation planning. Define requirements before you build.",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "author": { "name": "James Gray" },
   "homepage": "https://handsonai.info/use-the-cookbook/build/agentic-coding/",
   "license": "MIT",
