@@ -1,49 +1,40 @@
 ---
 title: Agentic Coding
-description: Skills for AI-assisted coding workflows — feature PRDs, specs, and implementation planning
+description: A complete feature development lifecycle — go from idea to shipped code in 7 steps using AI coding agents, skills, and structured workflows
 ---
 
 # Agentic Coding
 
-Skills for AI-assisted coding workflows — go from idea to spec before you build. Start with a **Vision Brief** to capture a fuzzy idea in plain language, then turn it into a structured **PRD** (Product Requirements Document) with user stories, acceptance criteria, and GitHub issue tracking. The two skills flow together — the Vision Brief feeds directly into the PRD — but each works standalone too. Download them from GitHub or install as a Claude Code plugin.
+A complete methodology for AI-assisted feature development — go from fuzzy idea to shipped code in 7 structured steps. Each step has a specific tool (skill, agent, or command) that powers it, and the artifacts flow forward: a Vision Brief feeds a PRD, which feeds a plan, which guides implementation.
 
-!!! note "Platform note"
-    These skills are designed for **Claude Code** — they create local files in `specs/`, use the GitHub CLI to open issues, and integrate with plan mode. The skill files can be downloaded and adapted for other platforms, but you'll get the best experience in Claude Code or tools with file system and GitHub CLI access.
+You don't need every step for every task. Skip Step 0 if you already know what you want to build. Skip to Step 3 for small edits. Use only the steps that fit your situation.
 
-## Get These Skills
+## Feature Development Lifecycle
 
-These skills are plain-text Markdown files. Choose how you want to get them:
+This table shows the complete lifecycle — from early idea through to shipped code. Each step lists the command or skill that powers it and which plugin provides it.
 
-=== "Any Platform"
+| Step | What happens | Command / Skill / Agent | Plugin |
+|------|-------------|------------------------|--------|
+| **0. Discover** | Capture a fuzzy idea as a Vision Brief, then break it into epics and features you can build one at a time | `/agentic-coding:writing-vision-briefs` | `agentic-coding` (Hands-on AI) |
+| **1. Define** | Turn the Vision Brief (or a new idea) into a PRD with user stories, acceptance criteria, and a GitHub issue to track the feature | `/agentic-coding:writing-feature-prds` | `agentic-coding` (Hands-on AI) |
+| **2. Plan** | Enter **plan mode** — Claude explores the codebase, designs the architecture, and converts the PRD into bite-sized implementation tasks for your approval | `code-explorer` agent, `code-architect` agent, `writing-plans` skill | `feature-dev` + `superpowers` (Anthropic) |
+| **3. Implement** | Build the feature with codebase-aware guidance, test-driven development, and automatic security warnings on unsafe patterns | `/feature-dev` command + `test-driven-development` skill + `security-guidance` hook | `feature-dev` + `superpowers` + `security-guidance` (Anthropic) |
+| **4. Verify** | Prove it works with actual passing build/test output | `verification-before-completion` skill | `superpowers` (Anthropic) |
+| **5. Review** | Automated code review + specialized review agents (test coverage, code simplification, silent failures, security, type design) | `requesting-code-review` skill + `code-reviewer` agent + `pr-review-toolkit` agents | `superpowers` + `feature-dev` + `pr-review-toolkit` (Anthropic) |
+| **6. Ship** | Commit, push, and open a PR that references the issue | `/commit-push-pr` command | `commit-commands` (Anthropic) |
 
-    Download from GitHub and add to your platform's skill directory:
+!!! info "How plugins work together"
+    Steps 0-1 come from the **Agentic Coding** plugin (this page) — [install it below](#get-these-skills). Steps 2-6 come from Anthropic's official plugins, which you install in Claude Code with `/install-plugin` (e.g., `/install-plugin feature-dev`). Install only the plugins you need — each step works independently.
 
-    :material-github: [Browse on GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins/agentic-coding){ .md-button }
+    The key handoff: Step 0 produces a Vision Brief and breaks it into features → Step 1 takes one feature and writes a PRD for it → Step 2 reads the PRD and generates the implementation plan. Each artifact feeds the next. You repeat Steps 1-6 for each feature in the breakdown.
 
-    Works with **Claude Code, Cursor, Codex CLI, Gemini CLI, VS Code Copilot**, and more. See [How to Add Skills to Your Platform](../../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for step-by-step instructions for each tool.
-
-    You can also paste any skill file directly into your system prompt, project instructions, or custom GPT.
-
-=== "Claude Code Plugin"
-
-    One-command install with automatic slash commands:
-
-    ```bash
-    /plugin install agentic-coding@handsonai
-    ```
-
-    See [Using Plugins](using-plugins.md) for setup details, including [Claude.ai upload](using-plugins.md#using-skills-in-claudeai-web), [Cowork](using-plugins.md#using-plugins-in-claude-cowork), and [API usage](using-plugins.md#using-skills-via-the-claude-api).
-
-## Slash Commands
-
-| Command | Skill |
-|---------|-------|
-| `/agentic-coding:writing-vision-briefs` | `writing-vision-briefs` |
-| `/agentic-coding:writing-feature-prds` | `writing-feature-prds` |
+    **Agents vs. skills vs. hooks:** Skills are step-by-step workflows Claude follows. Agents are specialists Claude delegates to via the Task tool. Hooks run automatically in the background (like `security-guidance` warning about unsafe code patterns as you edit files).
 
 ## Components
 
 ### Skills
+
+Steps 0 and 1 of the lifecycle are powered by two skills from the Agentic Coding plugin.
 
 ---
 
@@ -134,28 +125,32 @@ Each **feature** becomes its own PRD in Step 1. You build and ship one feature a
 
 ---
 
-## Feature Development Lifecycle
+## Get These Skills
 
-This table shows how the Agentic Coding plugin fits into a complete feature development lifecycle — from early idea through to shipped code. Each step lists the command or skill that powers it and which plugin provides it.
+These skills are plain-text Markdown files. Choose how you want to get them:
 
-You don't need every step for every task. Skip Step 0 if you already know what you want to build. Skip to Step 3 for small edits. Use only the steps that fit your situation.
+=== "Any Platform"
 
-| Step | What happens | Command / Skill / Agent | Plugin |
-|------|-------------|------------------------|--------|
-| **0. Discover** | Capture a fuzzy idea as a Vision Brief, then break it into epics and features you can build one at a time | `/agentic-coding:writing-vision-briefs` | `agentic-coding` (Hands-on AI) |
-| **1. Define** | Turn the Vision Brief (or a new idea) into a PRD with user stories, acceptance criteria, and a GitHub issue to track the feature | `/agentic-coding:writing-feature-prds` | `agentic-coding` (Hands-on AI) |
-| **2. Plan** | Enter **plan mode** — Claude explores the codebase, designs the architecture, and converts the PRD into bite-sized implementation tasks for your approval | `code-explorer` agent, `code-architect` agent, `writing-plans` skill | `feature-dev` + `superpowers` (Anthropic) |
-| **3. Implement** | Build the feature with codebase-aware guidance, test-driven development, and automatic security warnings on unsafe patterns | `/feature-dev` command + `test-driven-development` skill + `security-guidance` hook | `feature-dev` + `superpowers` + `security-guidance` (Anthropic) |
-| **4. Verify** | Prove it works with actual passing build/test output | `verification-before-completion` skill | `superpowers` (Anthropic) |
-| **5. Review** | Automated code review + specialized review agents (test coverage, code simplification, silent failures, security, type design) | `requesting-code-review` skill + `code-reviewer` agent + `pr-review-toolkit` agents | `superpowers` + `feature-dev` + `pr-review-toolkit` (Anthropic) |
-| **6. Ship** | Commit, push, and open a PR that references the issue | `/commit-push-pr` command | `commit-commands` (Anthropic) |
+    Download from GitHub and add to your platform's skill directory:
 
-!!! info "How plugins work together"
-    Steps 0-1 come from the **Agentic Coding** plugin (this page). Steps 2-6 come from Anthropic's official plugins that ship with Claude Code. Install only the plugins you need — each step works independently.
+    :material-github: [Browse on GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins/agentic-coding){ .md-button }
 
-    The key handoff: Step 0 produces a Vision Brief and breaks it into features → Step 1 takes one feature and writes a PRD for it → Step 2 reads the PRD and generates the implementation plan. Each artifact feeds the next. You repeat Steps 1-6 for each feature in the breakdown.
+    Works with **Claude Code, Cursor, Codex CLI, Gemini CLI, VS Code Copilot**, and more. See [How to Add Skills to Your Platform](../../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for step-by-step instructions for each tool.
 
-    **Agents vs. skills vs. hooks:** Skills are step-by-step workflows Claude follows. Agents are specialists Claude delegates to via the Task tool. Hooks run automatically in the background (like `security-guidance` warning about unsafe code patterns as you edit files).
+    You can also paste any skill file directly into your system prompt, project instructions, or custom GPT.
+
+=== "Claude Code Plugin"
+
+    One-command install with automatic slash commands:
+
+    ```bash
+    /plugin install agentic-coding@handsonai
+    ```
+
+    See [Using Plugins](../../use-the-cookbook/build/using-plugins.md) for setup details, including [Claude.ai upload](../../use-the-cookbook/build/using-plugins.md#using-skills-in-claudeai-web), [Cowork](../../use-the-cookbook/build/using-plugins.md#using-plugins-in-claude-cowork), and [API usage](../../use-the-cookbook/build/using-plugins.md#using-skills-via-the-claude-api).
+
+!!! note "Platform note"
+    These skills are designed for **Claude Code** — they create local files in `specs/`, use the GitHub CLI to open issues, and integrate with plan mode. The skill files can be downloaded and adapted for other platforms, but you'll get the best experience in Claude Code or tools with file system and GitHub CLI access.
 
 ## Feature Development Workflow Template
 
@@ -317,10 +312,30 @@ Which option and why.
 ## Consequences
 What changes as a result — both positive and negative.
 ```
+````
 
-## Slash Commands
+!!! tip "Plugins used in this workflow"
+    This template references commands from these plugins:
 
-### Core Workflow
+    **Hands-on AI plugin** (install via `/plugin install`):
+
+    - **`agentic-coding@handsonai`** — `/agentic-coding:writing-vision-briefs` (step 0), `/agentic-coding:writing-feature-prds` (step 1). [Install instructions above](#get-these-skills).
+
+    **Anthropic plugins** (install via `/install-plugin`):
+
+    - **`feature-dev`** — `/feature-dev` (step 3), `code-explorer` and `code-architect` agents (step 2), `code-reviewer` agent (step 5)
+    - **`superpowers`** — `brainstorming`, `writing-plans`, `test-driven-development`, `systematic-debugging`, `verification-before-completion`, `requesting-code-review`, `receiving-code-review`, `finishing-a-development-branch`
+    - **`pr-review-toolkit`** — review agents (step 5)
+    - **`commit-commands`** — `/commit`, `/commit-push-pr` (step 6)
+    - **`claude-md-management`** — `/revise-claude-md` (step 6)
+
+## Reference: Anthropic Plugin Commands
+
+The commands, skills, and agents below come from Anthropic's official plugins for Claude Code. Install them with `/install-plugin <name>` (e.g., `/install-plugin feature-dev`). They power Steps 2-6 of the lifecycle.
+
+### Slash Commands
+
+#### Core Workflow
 
 | Command | Description |
 |---------|-------------|
@@ -331,7 +346,7 @@ What changes as a result — both positive and negative.
 | `/commit-push-pr` | Commit, push, and open a PR |
 | `/revise-claude-md` | Capture session learnings back into CLAUDE.md |
 
-### Review & Quality
+#### Review & Quality
 
 | Command | Description |
 |---------|-------------|
@@ -373,31 +388,6 @@ Skills from the `superpowers` plugin, invoked automatically based on context:
 |-------|-----------|---------|
 | Code Explorer | `feature-dev:code-explorer` | Trace execution paths, map architecture, document dependencies |
 | Code Architect | `feature-dev:code-architect` | Design feature architecture with implementation blueprints |
-
-## Quick Reference
-
-| Step | Action | Tools |
-|------|--------|-------|
-| 0. Discover | Capture idea as Vision Brief, break into epics + features | `/agentic-coding:writing-vision-briefs` (skip if single feature is clear) |
-| 1. Define | Create PRD + issue for one feature | `/agentic-coding:writing-feature-prds` (use `brainstorming` for early ideas) |
-| 2. Plan | Enter plan mode, explore codebase, create plan | `code-explorer` + `code-architect` agents, `writing-plans` skill |
-| 3. Implement | Build with TDD | `/feature-dev` + `test-driven-development` + `security-guidance` hook |
-| 4. Verify | Prove it works | `verification-before-completion` |
-| 5. Review | Quality gate | `requesting-code-review` + `code-reviewer` + review agents |
-| 6. Ship | Commit, push, PR | `/commit-push-pr` + `/revise-claude-md` |
-````
-
-!!! tip "Plugins used in this workflow"
-    This template references commands from these plugins:
-
-    - **`agentic-coding@handsonai`** — `/agentic-coding:writing-vision-briefs` (step 0), `/agentic-coding:writing-feature-prds` (step 1)
-    - **`feature-dev`** (Anthropic official) — `/feature-dev` (step 3)
-    - **`superpowers`** (Anthropic official) — `brainstorming`, `writing-plans`, `test-driven-development`, `systematic-debugging`, `verification-before-completion`, `requesting-code-review`, `receiving-code-review`, `finishing-a-development-branch`
-    - **`pr-review-toolkit`** (Anthropic official) — review agents (step 5)
-    - **`commit-commands`** (Anthropic official) — `/commit`, `/commit-push-pr` (step 6)
-    - **`claude-md-management`** (Anthropic official) — `/revise-claude-md` (step 6)
-
-    Each step works independently — install only the plugins you need.
 
 ## See It in Action
 

@@ -166,7 +166,8 @@ plugins:
         plugins/using-plugins.md: use-the-cookbook/build/using-plugins.md
         plugins/business-first-ai.md: use-the-cookbook/build/business-first-ai.md
         plugins/ai-registry.md: use-the-cookbook/build/ai-registry.md
-        plugins/agentic-coding.md: use-the-cookbook/build/agentic-coding.md
+        plugins/agentic-coding.md: use-cases/coding/agentic-coding.md
+        use-the-cookbook/build/agentic-coding.md: use-cases/coding/agentic-coding.md
         # AI Engineering overview → Product & Engineering
         ai-engineering/index.md: product-engineering/index.md
         # Retired coach pages → framework overview
@@ -221,7 +222,6 @@ nav:
       - Business-First AI Framework: use-the-cookbook/build/business-first-ai.md
       - AI Workflow Examples: use-the-cookbook/build/ai-workflow-examples.md
       - AI Registry: use-the-cookbook/build/ai-registry.md
-      - Agentic Coding: use-the-cookbook/build/agentic-coding.md
     - Resources:
       - resources/index.md
       - resources/openai-use-cases-report.md
@@ -332,6 +332,7 @@ nav:
       - Resources: use-cases/research/resources.md
     - Coding:
       - use-cases/coding/index.md
+      - Agentic Coding: use-cases/coding/agentic-coding.md
       - Resources: use-cases/coding/resources.md
     - Data Analysis:
       - use-cases/data-analysis/index.md
