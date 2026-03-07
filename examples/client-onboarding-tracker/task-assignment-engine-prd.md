@@ -1,0 +1,192 @@
+# Feature: Task Assignment Engine
+
+**Date:** 2026-03-07
+**Author:** James Gray
+**Status:** Draft
+**Vision Brief:** [Client Onboarding Tracker](./vision-brief.md)
+**Epic:** [Client Onboarding](https://github.com/jamesgray-ai/handsonai/issues/132)
+
+## Summary
+
+Automatically assign onboarding tasks to the right team members when a client completes intake, with clear ownership and deadlines based on role and availability.
+
+## Motivation
+
+When a new client completes the guided intake flow, someone has to figure out what happens next — and right now, that someone is an account manager working from memory and a spreadsheet. They manually create tasks, guess who's available, and hope nothing slips through the cracks. At 80 new clients per month, that's 80 rounds of "who should handle the welcome call?" and "is the implementation specialist free this week?"
+
+The result: tasks get assigned unevenly (one person drowns while another has capacity), deadlines are inconsistent or missing entirely, and when someone is out sick, their tasks just... don't happen until someone notices. New account managers are especially vulnerable — they don't yet know who does what or what the standard task list even looks like.
+
+This feature eliminates the guesswork. When a client completes intake, the system automatically creates all onboarding tasks, assigns each to the right person based on their role and current workload, and sets deadlines based on configurable SLAs. Every task has a clear owner and a deadline from the moment it's created.
+
+## User Stories & Acceptance Criteria
+
+### Story 1: Automatic task creation on intake completion
+
+**As an** account manager, **I want** onboarding tasks to be automatically created when a client completes intake **so that** I don't have to manually set up a task list for every new client.
+
+**Acceptance Criteria:**
+1. `[MUST]` When a client submits the final step of the intake flow, the system creates all onboarding tasks defined in the active task template
+2. `[MUST]` Each created task has a title, description, assigned team member, and deadline
+3. `[MUST]` Tasks are created within 30 seconds of intake completion
+4. `[MUST]` The account manager who owns the client relationship is notified that tasks have been created
+5. `[SHOULD]` Task creation is idempotent — if the intake completion event fires twice, duplicate tasks are not created
+
+### Story 2: Role-based task routing
+
+**As a** team member, **I want** tasks to be assigned to me based on my role **so that** I only receive tasks I'm qualified to handle.
+
+**Acceptance Criteria:**
+1. `[MUST]` Each task type is mapped to a specific role (e.g., "welcome call" routes to account manager, "technical setup" routes to implementation specialist)
+2. `[MUST]` Tasks are only assigned to team members with the matching role
+3. `[SHOULD]` The role-to-task mapping is configurable by an admin without code changes
+4. `[COULD]` A task type can be mapped to multiple roles (e.g., either an account manager or a senior CSM can handle a welcome call)
+
+### Story 3: Availability-based assignment
+
+**As a** team lead, **I want** tasks to be distributed based on team members' current workload **so that** no one person is overwhelmed while others sit idle.
+
+**Acceptance Criteria:**
+1. `[MUST]` When multiple team members share the same role, the system assigns the task to the team member with the fewest open onboarding tasks
+2. `[MUST]` A team member can be marked as "unavailable" (e.g., out of office), and the system skips them during assignment
+3. `[SHOULD]` If two team members have equal workload, either may be assigned (no specific tiebreaker required for MVP)
+4. `[COULD]` Team members can set a maximum concurrent task limit
+
+### Story 4: Deadline assignment
+
+**As an** account manager, **I want** each task to have an automatic deadline **so that** the team knows when each step needs to be completed and clients aren't left waiting.
+
+**Acceptance Criteria:**
+1. `[MUST]` Each task type has a configurable SLA (e.g., "welcome call" = 24 hours, "account configuration" = 48 hours)
+2. `[MUST]` Deadlines are calculated from the time of intake completion
+3. `[MUST]` Deadlines are visible on each task to the assigned team member
+4. `[SHOULD]` SLA durations are configurable per task template by an admin
+
+### Global Acceptance Criteria
+1. `[MUST]` All task assignments are logged with timestamp, assigned team member, and reason for assignment (role match + workload)
+2. `[MUST]` If no team member is available for a given role, the task is assigned to the team lead for that role and flagged for attention
+3. `[SHOULD]` Assignment logic is deterministic — same inputs produce the same assignment (for debugging and audit)
+
+## Scope
+
+### In Scope
+- Automatic task creation triggered by intake completion event from Feature 1
+- Task template system (define which tasks are created, their role mapping, and SLA)
+- Role-based routing of tasks to qualified team members
+- Workload-based distribution within a role (least-loaded assignment)
+- Configurable SLA deadlines per task type
+- Unavailability marking for team members
+- Fallback assignment to team lead when no one is available
+- Assignment audit log
+
+### Out of Scope
+- Manual task reassignment UI (future feature — for now, reassignment is a database update)
+- Escalation workflows for overdue tasks (covered by Feature 4: Automated Reminders)
+- Client-facing task visibility (clients see their intake flow, not internal tasks)
+- Calendar or schedule integration for availability (using open task count instead)
+- Reporting or analytics on task assignment patterns
+- Notification delivery mechanism (uses existing notification infrastructure)
+
+## Approach
+
+The task assignment engine has three components:
+
+1. **Task templates** — A database table defining task types, their required role, SLA duration, and description. Seeded with default onboarding tasks, configurable via an admin interface.
+
+2. **Assignment logic** — A service that listens for the intake completion event (emitted by Feature 1), generates tasks from templates, and assigns each to the least-loaded team member with the correct role. Runs server-side in the Node.js backend.
+
+3. **Team member registry** — Extends the existing user model with role and availability status fields. Used by the assignment logic to determine eligible assignees.
+
+The engine is event-driven: Feature 1's intake completion triggers task creation. Tasks are stored in a `tasks` table with foreign keys to the client and assigned team member.
+
+## Non-Functional Requirements
+
+- **Performance:** All tasks for a single intake completion are created and assigned within 30 seconds. The assignment logic itself should complete in under 2 seconds — the remainder is event propagation and database writes.
+- **Reliability:** Task creation must be transactional — either all tasks for an intake are created, or none are. Partial task creation is not acceptable.
+- **Scalability:** Must handle concurrent intake completions without race conditions in workload-based assignment (use row-level locking or optimistic concurrency on the task count query).
+
+## Error States
+
+| Scenario | Expected Behavior |
+|----------|-------------------|
+| No available team member for a role | Task is assigned to the team lead for that role. Task is flagged with a "needs attention" indicator. |
+| Intake completion event fires twice (duplicate) | Second event is ignored — task creation is idempotent based on client ID + intake submission timestamp. |
+| Invalid role mapping (task template references a role with no team members) | Task is created but left unassigned. Admin is notified via system alert. Assignment retries when a team member with that role is added. |
+| Database transaction fails during task creation | All tasks for that intake are rolled back. Event is re-queued for retry (max 3 attempts). Account manager is notified if all retries fail. |
+
+## Success Metrics & Instrumentation
+
+- **Primary metric:** Percentage of onboarding tasks with a clear owner within 1 minute of intake completion — target 100% (current: 0%, all manual)
+- **Secondary metrics:**
+  - Average time from intake completion to all tasks assigned — target under 30 seconds
+  - Task workload variance across team members with the same role — target <20% deviation from mean
+  - Percentage of tasks requiring manual reassignment within 24 hours — target under 5%
+- **Events to track:**
+  - `tasks.created` — batch of tasks created for a client (includes count, client ID)
+  - `task.assigned` — individual task assigned (includes role, assignee, workload at time of assignment)
+  - `task.fallback_assigned` — task assigned to team lead due to no availability
+  - `task.assignment_failed` — task could not be assigned (includes reason)
+- **Evaluation timeline:** 2 weeks post-launch for assignment accuracy and speed; 4 weeks for workload distribution and reassignment rates
+
+## Dependencies & Prerequisites
+
+- **Feature 1 (Guided Intake Flow):** Must be complete and emitting the intake completion event that triggers task creation
+- **User model updates:** The existing user model needs role and availability fields — coordinate with the team to avoid migration conflicts
+- **Task template seed data:** The initial set of onboarding tasks, their role mappings, and SLA durations must be defined with the CS team before development
+
+## UI/UX Requirements
+
+- **Admin template UI:** Simple CRUD interface for managing task templates — add/edit/remove task types, set role mappings, configure SLA durations. Table layout with inline editing.
+- **Availability toggle:** Team members can toggle their availability status from their profile or a team settings page. Clear visual indicator (green/gray dot) of current status.
+- **Task list view:** Assigned team members see their tasks with client name, task description, deadline, and status. Sortable by deadline. (Minimal for MVP — the full task management UI comes later.)
+
+## Design Constraints
+
+- Must use the existing user model — extend with new fields rather than creating a separate team member table
+- Must be event-driven — triggered by Feature 1's completion event, not by polling or a cron job
+- Must use the existing Node.js backend and PostgreSQL database — no new infrastructure
+- Admin UI must use the existing React component library and design system
+- Assignment logic must be stateless and deterministic — all state comes from the database at query time
+
+## Verification
+
+### Happy path
+1. Configure task templates: "Welcome call" (account manager role, 24h SLA), "Technical setup" (implementation specialist, 48h SLA)
+2. Mark at least two account managers as available, with different open task counts
+3. Complete a client intake flow (Feature 1)
+4. Verify tasks are created within 30 seconds
+5. Verify "Welcome call" is assigned to the account manager with fewer open tasks
+6. Verify "Technical setup" is assigned to an implementation specialist
+7. Verify deadlines match the configured SLAs calculated from intake completion time
+8. Verify assignment audit log contains entries for each task with role, assignee, and workload reason
+
+### Edge case: No available team member
+1. Mark all implementation specialists as unavailable
+2. Complete a client intake flow
+3. Verify "Technical setup" is assigned to the team lead and flagged for attention
+4. Verify a `task.fallback_assigned` event is logged
+
+### Edge case: Duplicate intake completion event
+1. Complete a client intake flow
+2. Manually re-fire the intake completion event for the same client
+3. Verify no duplicate tasks are created
+
+## Open Questions
+
+- Should task templates vary by client type (e.g., enterprise vs. SMB), or is one template set sufficient for MVP?
+- What roles exist on the team today, and what tasks map to each role?
+- Should the admin UI for task templates be part of this feature, or can templates be seeded via database migration for MVP?
+- How should the system handle intake re-submission (e.g., client completes intake twice) — create duplicate tasks or skip?
+
+## Future Considerations
+
+- Calendar integration — using Google Calendar or Outlook availability instead of manual toggle for smarter assignment
+- Reassignment UI — allowing team leads to drag-and-drop reassign tasks when workload shifts
+- Workload analytics — dashboard showing assignment patterns, SLA adherence rates, and team capacity utilization
+- Client-type templates — different task sets for enterprise vs. SMB onboarding once we have data on divergent needs
+- Task dependencies — sequential task ordering (e.g., "technical setup" can't start until "welcome call" is complete)
+
+## Revision History
+
+| Date | Change | Author |
+|------|--------|--------|
+| 2026-03-07 | Initial draft | James Gray |
