@@ -35,6 +35,6 @@ Name, document, register, and sync your AI workflows and skills — naming conve
 
 ## :material-code-tags: Agentic Coding
 
-Define requirements before you build — structured Vision Briefs and PRDs with user stories, acceptance criteria, and GitHub issue tracking. 2 skills.
+A complete feature development methodology — from fuzzy idea to shipped code in 7 steps. Includes structured Vision Briefs and PRDs with user stories, acceptance criteria, and GitHub issue tracking. 2 skills.
 
-[:octicons-arrow-right-24: Agentic Coding](agentic-coding.md){ .md-button }
+[:octicons-arrow-right-24: Agentic Coding](../../use-cases/coding/agentic-coding.md){ .md-button }
