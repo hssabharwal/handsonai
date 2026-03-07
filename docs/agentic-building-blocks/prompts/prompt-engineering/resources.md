@@ -15,6 +15,7 @@ These official guides are maintained by the AI platform teams and reflect curren
 |----------|-------|-------|
 | Anthropic (Claude) | [Prompt Engineering Guide](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview) | Comprehensive guide covering all major techniques |
 | OpenAI (ChatGPT) | [Prompt Engineering Best Practices](https://platform.openai.com/docs/guides/prompt-engineering) | Strategies and tactics for better results |
+| OpenAI (GPT-5.4) | [Prompt Guidance for GPT-5.4](https://developers.openai.com/api/docs/guides/prompt-guidance) | Model-specific guidance for long-running tasks, tool use, and reliable execution |
 | Google Cloud | [Prompt Engineering Overview and Guide](https://cloud.google.com/discover/what-is-prompt-engineering#prompt-engineering-overview-and-guide) | Overview of prompt engineering concepts and techniques |
 
 ## Courses and Learning Resources

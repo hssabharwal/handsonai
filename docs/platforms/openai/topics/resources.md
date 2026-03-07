@@ -33,6 +33,7 @@ Recommended articles, docs, and courses for OpenAI and GPT models.
 | [Help Center](https://help.openai.com/) | FAQs, account help, and support |
 | [ChatGPT Release Notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) | Product updates and changelog |
 | [Developer Changelog](https://developers.openai.com/changelog/) | API and platform updates |
+| [Prompt Guidance for GPT-5.4](https://developers.openai.com/api/docs/guides/prompt-guidance) | Model-specific prompting patterns for agentic workflows and tool use |
 
 ## Developer Tools
 
