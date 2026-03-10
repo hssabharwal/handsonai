@@ -5,7 +5,7 @@ description: A copy-paste prompt that runs the Design phase (Step 3.1) of the Bu
 
 # Design Prompt — Portable Version
 
-> **Use this when:** You don't have the `building-workflows` skill installed, or you're using a chat tool (ChatGPT, Gemini, etc.) that doesn't support skills. Copy the prompt below, paste it into a new conversation, and the AI will guide you through the full Design process.
+> **Use this when:** You don't have the `designing-workflows` skill installed, or you're using a chat tool (ChatGPT, Gemini, etc.) that doesn't support skills. Copy the prompt below, paste it into a new conversation, and the AI will guide you through the full Design process.
 
 !!! warning "You need a Workflow Definition to start"
     This prompt requires the **Workflow Definition** from [Step 2: Deconstruct](../deconstruct/index.md) — the structured breakdown of your workflow's steps, decision points, data flows, and context needs. If you don't have one yet, complete [Step 2](../deconstruct/index.md) first (or use the [Deconstruct Prompt](../deconstruct-prompt.md)). The AI will ask you to paste it as the first thing you do.
@@ -287,7 +287,7 @@ The whole process takes ~15-25 minutes depending on workflow complexity.
 
 Copy your **AI Building Block Spec** — the full spec the AI produced, which you approved in the final step. That's your deliverable.
 
-Your spec is now ready for [3.2: Construct](construct.md), where you'll build the actual skills, agents, prompts, and platform configurations that the spec calls for. If your AI tool supports the `building-workflows` skill, it handles Construct automatically. If not, use the [Construct page](construct.md) as a conversation guide — it includes platform-agnostic instructions for each orchestration mechanism.
+Your spec is now ready for [3.2: Construct](construct.md), where you'll build the actual skills, agents, prompts, and platform configurations that the spec calls for. If your AI tool supports the `constructing-workflows` skill, it handles Construct automatically. If not, use the [Construct page](construct.md) as a conversation guide — it includes platform-agnostic instructions for each orchestration mechanism.
 
 ## Related
 

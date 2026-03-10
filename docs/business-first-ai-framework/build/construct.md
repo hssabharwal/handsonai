@@ -29,7 +29,7 @@ Now the model shifts from planning to execution. **Exit plan mode** — the mode
     | **Codex CLI** | Run without the `--plan` flag |
     | **Other AI tools** | Simply continue the conversation — tell the model to start building |
 
-This step is facilitated by the **`building-workflows`** Business-First AI Framework Skill — the same skill that ran Design. After you approve the AI Building Block Spec, the model transitions into Construct and begins generating building blocks.
+This step is facilitated by the **`constructing-workflows`** Business-First AI Framework Skill. After you approve the AI Building Block Spec in the Design phase, invoke this skill to begin generating building blocks.
 
 If you're starting Construct separately (e.g., in a new conversation), provide the AI Building Block Spec:
 
@@ -160,7 +160,7 @@ The model generates prompts, skills, and agents, but it can't create *your* busi
 3. **Start with rules and criteria** — scoring rubrics, qualification criteria, and decision logic are often required for the workflow to function correctly. Without them, the model guesses instead of following your standards.
 4. **Use the "Key Contents" column as your drafting checklist** — the spec already identified what each artifact should contain
 5. **Create each artifact** as a standalone Markdown file or data export (e.g., `buyer-persona.md`, `scoring-rubric.md`)
-6. **The model will tell you what it needs and when** — if you're using the `building-workflows` skill, it prompts you for each context artifact at the right point in the build
+6. **The model will tell you what it needs and when** — if you're using the `constructing-workflows` skill, it prompts you for each context artifact at the right point in the build
 
 ### MCP — configure external tool connections
 

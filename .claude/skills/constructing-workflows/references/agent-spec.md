@@ -12,7 +12,7 @@ A single markdown file: `agent-name.md`
 ---
 name: agent-name
 description: "Use this agent when [trigger description]. This includes [additional trigger conditions].\n\nExamples:\n\n<example>\nContext: [scenario]\nuser: \"[user message]\"\nassistant: \"[how the assistant introduces the agent]\"\n<Task tool call to agent-name agent>\n</example>\n\n<example>\nContext: [another scenario]\nuser: \"[user message]\"\nassistant: \"[assistant response]\"\n<Task tool call to agent-name agent>\n</example>"
-model: sonnet          # Required. One of: opus, sonnet, haiku
+model: sonnet          # Optional. One of: opus, sonnet, haiku, inherit. Defaults to inherit.
 color: blue            # Optional. Agent color in UI.
 tools:                 # Optional. Restrict which tools the agent can use.
   - WebSearch
@@ -20,21 +20,31 @@ tools:                 # Optional. Restrict which tools the agent can use.
   - Read
   - Glob
   - Grep
-skills:                # Optional. Skills the agent can invoke.
+skills:                # Optional. Skills to preload into the agent's context.
   - skill-name
 ---
 ```
 
 ### Field Rules
 
+The authoritative reference is the [Claude Code subagents documentation](https://code.claude.com/docs/en/sub-agents). Only `name` and `description` are required.
+
 | Field | Required | Rules |
 |-------|----------|-------|
 | `name` | Yes | Lowercase, hyphens. Must match the filename (without `.md`). |
-| `description` | Yes | Starts with "Use this agent when...". Must include 2-3 `<example>` blocks showing user message → assistant response → Task tool call. Examples are how the host model decides when to launch this agent. |
-| `model` | Yes | `opus`, `sonnet`, or `haiku`. Choose based on task complexity. |
-| `color` | No | UI color. Options: `red`, `blue`, `green`, `purple`, `yellow`, `orange`. |
-| `tools` | No | Whitelist of tools. Omit to allow all tools. |
-| `skills` | No | Skills the agent can invoke during execution. |
+| `description` | Yes | Starts with "Use this agent when...". Should include 2-3 `<example>` blocks showing user message → assistant response → Task tool call. Examples help the host model decide when to launch this agent. |
+| `model` | No | `opus`, `sonnet`, `haiku`, or `inherit`. Defaults to `inherit` (uses the parent conversation's model). Choose based on task complexity. |
+| `color` | No | UI color for identifying the agent. |
+| `tools` | No | Allowlist of tools. Omit to inherit all tools from the parent conversation. |
+| `disallowedTools` | No | Denylist of tools, removed from inherited or specified list. |
+| `skills` | No | Skills to preload into the agent's context at startup. Full skill content is injected, not just made available for invocation. |
+| `permissionMode` | No | One of: `default`, `acceptEdits`, `dontAsk`, `bypassPermissions`, `plan`. Controls how the agent handles permission prompts. |
+| `maxTurns` | No | Maximum number of agentic turns before the agent stops. |
+| `mcpServers` | No | MCP servers available to this agent. Each entry is a server name referencing an already-configured server or an inline definition. |
+| `hooks` | No | Lifecycle hooks scoped to this agent (e.g., `PreToolUse`, `PostToolUse`, `Stop`). |
+| `memory` | No | Persistent memory scope: `user`, `project`, or `local`. Enables cross-session learning. |
+| `background` | No | Set to `true` to always run as a background task. Default: `false`. |
+| `isolation` | No | Set to `worktree` to run in a temporary git worktree for repository isolation. |
 
 ### Description Format
 

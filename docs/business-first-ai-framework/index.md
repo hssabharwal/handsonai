@@ -11,13 +11,15 @@ Most AI adoption starts with the technology — "we have ChatGPT, where should w
 
 ## How It Works
 
-The framework is facilitated by **three skills** — reusable AI routines that guide you through each step interactively. You don't need to figure out the right questions to ask or remember the methodology — the skill drives the conversation, probes for details, and produces structured outputs you carry to the next step. You bring the domain knowledge about your work; the AI handles the process.
+The framework is facilitated by **five skills** — reusable AI routines that guide you through each step interactively. You don't need to figure out the right questions to ask or remember the methodology — the skill drives the conversation, probes for details, and produces structured outputs you carry to the next step. You bring the domain knowledge about your work; the AI handles the process.
 
 | Step | Skill | What it guides you through |
 |------|-------|---------------------------|
 | 1. Analyze | `analyzing-workflows` | Auditing your workflows and surfacing AI opportunities |
 | 2. Deconstruct | `deconstructing-workflows` | Breaking a workflow into steps, decisions, data flows, and failure modes |
-| 3. Build | `building-workflows` | Designing the AI implementation and constructing platform artifacts |
+| 3.1 Design | `designing-workflows` | Designing the AI implementation architecture |
+| 3.2 Construct | `constructing-workflows` | Generating platform-appropriate artifacts |
+| 3.3 Run | `running-workflows` | Deploying, testing, and iterating on the workflow |
 
 **Get the skills:** See [How to Add Skills to Your Platform](../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for step-by-step install instructions for Cowork, Claude Code, Claude.ai, Cursor, Codex CLI, Gemini CLI, and VS Code Copilot. The plugin name is `business-first-ai`.
 
@@ -64,15 +66,15 @@ The deliverable is a **Workflow Definition** — a structured breakdown of your 
 
 Design your AI implementation, construct the components, and run the workflow.
 
-Step 2 produces a Workflow Definition — the analysis. Step 3 is where the `building-workflows` skill turns that analysis into a working AI workflow. The skill guides you through three parts:
+Step 2 produces a Workflow Definition — the analysis. Step 3 turns that analysis into a working AI workflow through three sub-steps, each with its own skill:
 
-**3.1: Design** — The skill confirms your platform, then extracts tool integrations, trigger/schedule, and constraints directly from the Workflow Definition — presenting a single confirmation block instead of asking individual questions. Based on the confirmed analysis, it assesses the workflow's autonomy level (Deterministic → Guided → Autonomous), recommends an orchestration mechanism (Prompt → Skill-Powered Prompt → Agent) and involvement mode, classifies each step on the autonomy spectrum, maps AI building blocks, identifies skill candidates, and documents agent blueprints when needed. Produces an **AI Building Block Spec** — a platform-agnostic blueprint that tells the model exactly what to build in 3.2.
+**3.1: Design** (`designing-workflows`) — The skill confirms your platform, then extracts tool integrations, trigger/schedule, and constraints directly from the Workflow Definition — presenting a single confirmation block instead of asking individual questions. Based on the confirmed analysis, it assesses the workflow's autonomy level (Deterministic → Guided → Autonomous), recommends an orchestration mechanism (Prompt → Skill-Powered Prompt → Agent) and involvement mode, classifies each step on the autonomy spectrum, maps AI building blocks, identifies skill candidates, and documents agent blueprints when needed. Produces an **AI Building Block Spec** — a platform-agnostic blueprint that tells the model exactly what to build in 3.2.
 
-**3.2: Construct** — The skill tells the model what to build (the specs from Design); the model researches your platform's current tools and conventions via web search and generates the actual artifacts — context, skills, prompts, agents, MCP connections — in whatever format your platform requires. Only the components your orchestration mechanism needs are built.
+**3.2: Construct** (`constructing-workflows`) — The skill tells the model what to build (the specs from Design); the model researches your platform's current tools and conventions via web search and generates the actual artifacts — context, skills, prompts, agents, MCP connections — in whatever format your platform requires. Only the components your orchestration mechanism needs are built.
 
-**3.3: Run** — The skill produces a **Run Guide** tailored to your platform and technical comfort level: what was built and where it lives, step-by-step setup instructions, a guided first-run test with sample input, and next steps for ongoing use.
+**3.3: Run** (`running-workflows`) — The skill produces a **Run Guide** tailored to your platform and technical comfort level: what was built and where it lives, step-by-step setup instructions, a guided first-run test with sample input, and next steps for ongoing use.
 
-**Facilitated by the `building-workflows` skill.** See [Build Workflows](build/index.md) for the full guide, including mechanism-specific construct paths and three worked examples across the autonomy spectrum.
+**Facilitated by the `designing-workflows`, `constructing-workflows`, and `running-workflows` skills.** See [Build Workflows](build/index.md) for the full guide, including mechanism-specific construct paths and three worked examples across the autonomy spectrum.
 
 ---
 
