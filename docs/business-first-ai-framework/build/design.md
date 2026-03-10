@@ -226,7 +226,7 @@ Assess the autonomy level, recommend an orchestration mechanism, and map buildin
 Upload or paste your Workflow Definition file (`[workflow-name]-definition.md`) from the Deconstruct step when prompted. The skill runs the Design analysis and produces an AI Building Block Spec.
 
 !!! tip "If your AI tool doesn't support skills"
-    Use this page as a conversation guide — walk through each section in order with your AI tool. The methodology works the same way whether or not a skill is driving the process.
+    Use the **[Design Prompt — Portable Version](design-prompt.md)** — a single copy-paste prompt that replicates this entire Design process in any AI chat tool (ChatGPT, Gemini, Claude, or any LLM). Or use this page as a conversation guide — walk through each section in order with your AI tool.
 
 ### Two phases, two modes
 

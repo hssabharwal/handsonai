@@ -43,7 +43,7 @@ Design covers:
 7. **Skill candidates** — Tag steps that should become reusable skills, with generation-ready detail
 8. **Agent blueprints** (when applicable) — Platform-agnostic specification for each agent (name, description, instructions, model, tools, context, goal) — built into working agents by the model in 3.2
 
-**[Design Your AI Workflow](design.md)** — the full Design guide with autonomy assessment, orchestration mechanism decision flow, and output format
+**[Design Your AI Workflow](design.md)** — the full Design guide with autonomy assessment, orchestration mechanism decision flow, and output format | **[Design Prompt (Portable)](design-prompt.md)** — copy-paste version for any AI chat tool
 
 **Produces:** `[name]-building-block-spec.md` — your AI Building Block Spec with architecture approach, architecture decisions, autonomy level assessment, orchestration mechanism with involvement mode, step classifications, skill candidates, agent blueprints (when applicable), code-first selections (when applicable), and implementation order.
 
