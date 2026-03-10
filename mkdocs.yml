@@ -242,8 +242,9 @@ nav:
       - "Deconstruct Prompt (Portable)": business-first-ai-framework/deconstruct-prompt.md
     - "Step 3: Build Workflows":
       - Overview: business-first-ai-framework/build/index.md
-      - "3.1: Design": business-first-ai-framework/build/design.md
-      - "Design Prompt (Portable)": business-first-ai-framework/build/design-prompt.md
+      - "3.1: Design":
+        - Overview: business-first-ai-framework/build/design.md
+        - "Design Prompt (Portable)": business-first-ai-framework/build/design-prompt.md
       - "3.2: Construct": business-first-ai-framework/build/construct.md
       - "3.3: Run": business-first-ai-framework/build/run.md
       - "Worked Examples":
