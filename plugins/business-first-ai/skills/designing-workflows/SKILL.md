@@ -1,26 +1,23 @@
 ---
-name: building-workflows
+name: designing-workflows
 description: >
-  This skill should be used when the user has a Workflow Definition and wants to design and build
-  an AI workflow. Step 3.1 (Design) gathers architecture decisions, assesses workflow autonomy level,
+  This skill should be used when the user has a Workflow Definition and wants to design
+  an AI workflow. It gathers architecture decisions, assesses workflow autonomy level,
   chooses an orchestration mechanism and involvement mode, classifies steps, maps building blocks,
   identifies skill candidates, configures agents, and produces a Building Block Spec for approval.
-  Step 3.2 (Construct) generates platform artifacts after approval. Step 3.3 (Run) provides a run
-  guide for deploying, executing, and testing the workflow. This is Step 3 of the Business-First AI Framework.
+  This is Step 3.1 (Design) of the Business-First AI Framework.
 user-invocable: true
 ---
 
-# Workflow Build
+# Workflow Design
 
-Take a Workflow Definition and produce the Build deliverables: an AI Building Block Spec (Design), platform artifacts (Construct), and a Run Guide for deployment and testing.
+Take a Workflow Definition and produce the Design deliverable: an AI Building Block Spec that captures architecture decisions, autonomy assessment, orchestration mechanism, per-step classifications, skill candidates, and agent blueprints.
 
 **Design principle:** The skill is the framework, the model is the platform expert. No platform names, SDK references, API patterns, GUI walkthroughs, or tool-specific examples appear anywhere in the skill. All platform-specific knowledge is researched by the model at runtime via web search.
 
-**Role:** You are an **Agentic AI Architect**. Your role is to design solutions that map business workflows to AI building blocks (Prompts, Context, Skills, Agents, MCP, Projects). You think in terms of system design, autonomy levels, orchestration mechanisms, and failure modes. Carry this framing through all of Step 3.
+**Role:** You are an **Agentic AI Architect**. Your role is to design solutions that map business workflows to AI building blocks (Prompts, Context, Skills, Agents, MCP, Projects). You think in terms of system design, autonomy levels, orchestration mechanisms, and failure modes. Carry this framing through all of Design.
 
 ## Workflow
-
-### 3.1 — Design
 
 The Design phase is collaborative — you plan the architecture together with the user before anything gets built.
 
@@ -51,19 +48,19 @@ Platform is the only thing not already in the Workflow Definition. Determine the
 Accept whatever level of specificity the user provides — "Claude Code", "Google Gemini", "ChatGPT", "Claude" are all fine. Do NOT try to disambiguate to a specific offering upfront. Instead:
 - **For Design:** The ecosystem (Claude, Google, OpenAI, M365) is enough for pattern selection. Code-vs-nocode is inferred if the tool is specific (Claude Code = code, ChatGPT = no-code) or left open if vague.
 - **For Orchestration Mechanism:** The recommendation is driven by workflow characteristics first (tool use? autonomous decisions? multiple domains?). If the recommended mechanism requires capabilities the named platform might or might not support (e.g., recommending an agent when "Google Gemini" could mean the web app or ADK), ask a **motivated follow-up** in context.
-- **For Construct:** The specific offering (Claude Code vs. Claude.ai, ADK vs. Gemini web) is resolved when generating artifacts in Step 15 — not during Design.
+- **For Construct:** The specific offering (Claude Code vs. Claude.ai, ADK vs. Gemini web) is resolved when generating artifacts in the Construct phase — not during Design.
 
 **b. Extract everything else from the Workflow Definition**
 
 After confirming the platform, read the Workflow Definition and extract:
 
-- **Tool integrations** — from Data In, Context Needed, and Context Shopping List across all steps. Extract the list of tools the workflow needs, but **do not research platform availability yet**. That happens in Construct (Step 14). Simply list the tools identified.
+- **Tool integrations** — from Data In, Context Needed, and Context Shopping List across all steps. Extract the list of tools the workflow needs, but **do not research platform availability yet**. That happens in Construct. Simply list the tools identified.
 
 - **Trigger/schedule** — from Scenario Metadata. If time-based, note as scheduled execution requirement and its implications (involvement mode, infrastructure). If manual, no action needed.
 
 - **Browser access** — deferred to Construct. If any step's Data In references a web portal, CRM login, or authenticated website, flag it during step classification (Step 6) as a "requires browser access" note on that step. Do not ask about it here.
 
-- **Shareability** — deferred to Construct. The model asks about team sharing when generating artifacts in Step 15, not during Design.
+- **Shareability** — deferred to Construct. The model asks about team sharing when generating artifacts in the Construct phase, not during Design.
 
 **c. Present architecture analysis for confirmation**
 
@@ -224,154 +221,13 @@ Loop if the user requests changes — revise the spec and re-present for approva
 
 After the user approves, instruct them to **exit plan mode** if they entered it at the start of Design:
 
-> "Spec approved. **Exit plan mode now** (in Claude Code: `shift+tab` or `/plan`) so I can generate artifacts in the Construct phase."
-
-### 3.2 — Construct
-
-Artifact generation begins only after spec approval.
-
-#### Step 11 — Build Path Choice
-
-After approval, offer two paths:
-
-> "How would you like to proceed?
+> "Spec approved. **Exit plan mode now** (in Claude Code: `shift+tab` or `/plan`) so artifacts can be generated in the Construct phase."
 >
-> 1. **I'll build it** — I generate all artifacts (skills, agents, prompts, configs) based on the approved spec.
-> 2. **I'll build it myself** — The spec is your deliverable. I'll provide a Construction Guide with build sequence and platform-specific format guidance instead of generating artifacts."
-
-If the user chooses path 2, skip Steps 12-16 and go directly to Step 17 (Run) with the manual-build variant.
-
-#### Step 12 — Mechanism-Specific Build Path
-
-Based on the orchestration mechanism, present ONLY the steps relevant to the user's mechanism:
-
-**Prompt mechanism:**
-1. Create context (from Context Inventory)
-2. Set up project workspace (if frequent use)
-3. Generate platform artifacts
-4. → Run Guide
-
-**Skill-Powered Prompt mechanism:**
-1. Create context (from Context Inventory)
-2. Set up project workspace (if frequent use)
-3. Build skills for tagged candidates
-4. Generate platform artifacts
-5. → Run Guide
-
-**Agent mechanism:**
-1. Create context (from Context Inventory)
-2. Build skills for tagged candidates
-3. Connect external tools (from Tools and Connectors section)
-4. Generate platform artifacts (agent config, skills, connectors)
-5. → Run Guide
-
-#### Step 13 — Check for Existing Skills and Instructions
-
-Before generating artifacts:
-- Ask: "Did you build any skills for this workflow? If yes, list each skill name and which steps it covers."
-- Check the Context Inventory for existing prompt instructions, project instructions, or system prompts. These must be incorporated into the generated artifacts.
-
-#### Step 14 — Integration Research
-
-Now that the spec is approved, research platform availability for every tool listed in the "Integration Research Needed" section of the spec.
-
-**Use web search** to determine availability on the user's platform. Categorize in plain language:
-- Built-in (works out of the box)
-- Available with setup (MCP server, connector, or plugin exists)
-- Possible with code (API integration required)
-- Manual (copy-paste between tools)
-
-**Web search is required** — if the environment doesn't support it, instruct the user to switch to a tool that does.
-
-Present the integration mapping and ask the user to confirm before generating artifacts. If any critical integration is manual-only, discuss implications for the orchestration mechanism (may need to downgrade or add human-in-the-loop steps).
-
-#### Step 15 — Generate Platform Artifacts
-
-Based on the platform from Architecture Decisions. Resolve any deferred decisions now: ask about **shareability** (will team members run this?) to determine artifact format (file-based vs. code-based), and resolve the **specific platform offering** if not yet determined (e.g., Claude Code vs. Claude.ai). Infer **code comfort** from the specific offering (Claude Code = code-comfortable, ChatGPT = no-code).
-
-**a. Start with the cookbook's platform reference.** Read the Hands-on AI Cookbook platform guide for the user's platform to find curated links to official documentation:
-
-| User's platform | Cookbook reference page |
-|---|---|
-| Claude | `docs/platforms/claude/index.md` (and `docs/platforms/claude/agents/building-agents.md` for agents) |
-| OpenAI | `docs/platforms/openai/index.md` (and `docs/platforms/openai/agents/building-agents.md` for agents) |
-| Google Gemini | `docs/platforms/google-gemini/index.md` (and `docs/platforms/google-gemini/agents/building-agents.md` for agents) |
-| M365 Copilot | `docs/platforms/m365-copilot/index.md` (and `docs/platforms/m365-copilot/agents/building-agents.md` for agents) |
-
-These pages contain links to the platform's official documentation, SDK references, and setup guides — maintained as part of the cookbook.
-
-**b. Verify currency via web search.** Use web search to confirm the documentation links are still current and to find any newer resources. Verify what's current vs. deprecated.
-
-**c. Follow reference specs for artifact format.** When generating artifacts, use the correct format for the target platform:
-
-- **When generating skills:** Read `references/skill-spec.md` and follow the agentskills.io format — proper YAML frontmatter with `name` and `description`, structured markdown body with Workflow, Outputs, and Guidelines sections.
-- **When generating agents for Claude Code:** Read `references/agent-spec.md` and follow the Claude Code subagent format — YAML frontmatter with `name`, `description` (including examples), `model`, and markdown body with role statement, process, and constraints.
-
-**d. Generate artifacts.** Using the verified documentation as the authoritative source, generate artifacts in the platform's latest recommended tools and patterns. The skill provides the *specs* (what each building block should do, its inputs/outputs/instructions from the Design phase). The model provides the *implementation* (how to build it on the user's platform, researched and verified at runtime).
-
-#### Step 16 — Write SOP to Notion (if available)
-
-After artifacts are generated, check if the Notion MCP server is accessible AND this workflow was registered during the Deconstruct step. If so, offer to write the workflow SOP to the Notion page.
-
-### 3.3 — Run
-
-#### Step 17 — Run Guide
-
-Generate the Run Guide based on the build path chosen in Step 11.
-
-**Variant A: Model-built artifacts (Step 11 path 1)**
-
-Walk the user through getting the workflow running. Use the platform and code comfort (resolved during artifact generation) to tailor every instruction to their specific setup. Use web search to verify current platform steps. Write in plain language — assume no technical background unless code comfort was confirmed.
-
-The Run Guide covers four sections:
-
-**A. What was built** — List every artifact produced, what it does, and where it was saved. Use a simple table:
-
-| Artifact | What it does | Location |
-|----------|-------------|----------|
-
-**B. Setup steps** — Numbered, platform-specific instructions for getting each artifact into the right place. Research the platform's current UI/workflow via web search. For each step:
-- Tell the user exactly where to go (menu paths, button names, URLs)
-- Tell them exactly what to do (paste, upload, configure, connect)
-- Tell them what they should see when it's working (confirmation messages, visual indicators)
-- If a step requires technical knowledge beyond the user's code comfort level, flag it and offer to walk through it interactively
-
-**C. First run** — A guided test run:
-- Provide a sample input the user can try (based on the workflow's Input Requirements from the spec)
-- Walk through what should happen at each step
-- Explain what good output looks like
-- List common first-run issues and how to fix them
-
-**D. What to do next** — Brief guidance on:
-- How to run the workflow again in the future (the repeatable trigger)
-- How to share it with team members (if shareability was confirmed during Construct)
-- When to revisit and improve (signs the workflow needs updating)
-- For organizational workflows: **Change management** — who needs training, what communication is needed, and **Rollout plan** — pilot first or full rollout?
-
-**Variant B: Manual build (Step 11 path 2)**
-
-Provide a Construction Guide instead of setup instructions. The user will build the artifacts themselves.
-
-**A. What to build** — List every artifact from the spec, what it does, and the recommended file format for the user's platform. Use a table:
-
-| Artifact | Purpose | Format | Priority |
-|----------|---------|--------|----------|
-
-**B. Build sequence** — Ordered implementation steps following the spec's recommended implementation order. For each artifact:
-- What to create (from the spec's generation-ready detail)
-- Platform-specific format guidance (file type, frontmatter requirements, directory conventions)
-- Key content to include (inputs, outputs, decision logic from the spec)
-- How to test it in isolation before connecting to other artifacts
-
-**C. First run** — Same as Variant A: guided test run with sample input.
-
-**D. What to do next** — Same as Variant A: repeatable trigger, sharing, iteration guidance.
-
-Present the Run Guide directly in the conversation. Also save it to `outputs/[workflow-name]-run-guide.md` so the user has a reference they can follow later or share with teammates.
+> "To construct the workflow, run `/business-first-ai:construct-workflow` (or say *'Construct the workflow from my Building Block Spec'*)."
 
 ## Outputs
 
-### `outputs/[workflow-name]-building-block-spec.md` — AI Building Block Spec (Design)
+### `outputs/[workflow-name]-building-block-spec.md` — AI Building Block Spec
 
 Includes:
 - Autonomy level assessment (workflow-level, with rationale)
@@ -391,21 +247,10 @@ Includes:
 - Recommended implementation order
 - Where to Run recommendation
 
-### Platform Artifacts (Construct)
-
-Prompts, skills, agents, orchestration configs, and connector setups in whatever format is appropriate to the user's chosen platform. Generated by the model based on the Building Block Spec and Architecture Decisions, using web search to determine the current recommended approach. Skills follow the agentskills.io format (see `references/skill-spec.md`). Agents for Claude Code follow the subagent format (see `references/agent-spec.md`).
-
-### `outputs/[workflow-name]-run-guide.md` — Run Guide
-
-Plain-language guide for getting the workflow running. Two variants:
-- **Model-built:** Artifact inventory, step-by-step setup instructions tailored to the user's platform, a guided first-run test with sample input, and next steps for ongoing use and team sharing.
-- **Manual build:** Construction Guide with artifact list, build sequence with platform-specific format guidance, first-run test, and next steps.
-
 ## Guidelines
 
 - Use plain language; avoid jargon unless the user introduced it
-- After writing the Design output, tell the user: "AI Building Block Spec saved to `outputs/[name]-building-block-spec.md`."
-- After generating platform artifacts, summarize what was produced and where each artifact was saved
-- Summarize all deliverables at the end so the user has a clear inventory
+- After writing the spec, tell the user: "AI Building Block Spec saved to `outputs/[name]-building-block-spec.md`."
 - Do not proceed past the Spec Approval Gate (Step 10) without explicit user approval
-- Do not research integration availability until Construct (Step 14)
+- Do not research integration availability — that happens in the Construct phase
+- Do not generate platform artifacts — that happens in the Construct phase
