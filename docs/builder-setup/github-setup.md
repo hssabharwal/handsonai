@@ -1,10 +1,12 @@
 ---
 title: GitHub Setup Guide
-description: Create a GitHub account, clone repositories, and learn core Git concepts for AI development
+description: Create a GitHub account, create your first repository, clone it, and learn core Git concepts for AI development
 schema_type: HowTo
 howto_steps:
   - name: Create a GitHub account
     text: Go to github.com, click Sign up, follow the prompts, and verify your email address.
+  - name: Create a repository
+    text: Click the + menu, select New repository, name it, add a README, and click Create repository.
   - name: Clone a repository
     text: Open the Command Palette (Cmd/Ctrl + Shift + P), type Git Clone, paste the repository URL, and choose a local folder.
 ---
@@ -17,7 +19,7 @@ GitHub is a website where people store and share code projects. If Git tracks yo
 
 As you build with AI, you'll create prompts, skills, agents, and project files that become the foundation of your workflows. GitHub is where those files live in the cloud — backed up, versioned, and accessible from any machine. Think of it as your portfolio and safety net in one place. Your files are stored in *repositories* (project folders that Git tracks), and you work with them by *cloning* — making a local copy on your computer.
 
-This guide walks you through creating a GitHub account and cloning your first repository.
+This guide walks you through creating a GitHub account, creating your first repository, and cloning it to your computer.
 
 ## Prerequisites
 
@@ -32,9 +34,20 @@ This guide walks you through creating a GitHub account and cloning your first re
 3. Follow the prompts to create your account
 4. Verify your email address
 
-**Already have an account?** Skip to step 2.
+**Already have an account and a repository?** Skip to step 3.
 
-## 2. Clone a Repository
+## 2. Create a Repository
+
+1. From GitHub, click the **+** button (top-right corner) → **New repository**
+2. Enter a repository name (e.g., `my-ai-projects`)
+3. Add an optional description
+4. Select **Private** (recommended for personal work)
+5. Check **Add a README file**
+6. Click **Create repository**
+
+You'll land on your new repository's page with a README file. The URL in your browser (e.g., `https://github.com/your-username/my-ai-projects`) is what you'll use to clone it in the next step.
+
+## 3. Clone a Repository
 
 Use your code editor to download (clone) repositories from GitHub.
 
@@ -106,7 +119,7 @@ Claude Code handles the Git commands for you.
 
     > I'm trying to clone a GitHub repository in [Cursor / VS Code] on [Mac / Windows] and getting this error: [paste the error message]. I have Git installed and a GitHub account. What should I try?
 
-## 3. Install GitHub CLI (Optional)
+## 4. Install GitHub CLI (Optional)
 
 The GitHub CLI (`gh`) lets you manage pull requests, issues, and repos from your terminal — no browser needed.
 
