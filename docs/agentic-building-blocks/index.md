@@ -1,6 +1,6 @@
 ---
 title: Agentic AI Building Blocks
-description: The ten components of agentic AI workflows — Model, Prompt, Context, Project, Memory, Skill, Agent, MCP, API, and SDK
+description: The eleven components of agentic AI workflows — Model, Prompt, Context, Project, Memory, Skill, Agent, MCP, API, SDK, and CLI
 ---
 
 # Agentic AI Building Blocks
@@ -15,9 +15,9 @@ Three layers:
 
 - **Intelligence** — Model, Context, Project, Memory
 - **Orchestration** — Prompt, Skill, Agent
-- **Integration** — MCP, API, SDK
+- **Integration** — MCP, API, SDK, CLI
 
-These are platform-agnostic concepts. Every major AI platform implements them, though the names and interfaces differ. Understanding the blocks gives you a mental model that transfers across tools — you can evaluate any platform by asking "how does it handle models, prompts, context, projects, memory, skills, agents, external connections, APIs, and development frameworks?"
+These are platform-agnostic concepts. Every major AI platform implements them, though the names and interfaces differ. Understanding the blocks gives you a mental model that transfers across tools — you can evaluate any platform by asking "how does it handle models, prompts, context, projects, memory, skills, agents, external connections, APIs, development frameworks, and command-line interfaces?"
 
 !!! abstract "Which block should I use?"
     Not sure where to start? The [Choosing the Right Building Block](comparison.md) page has comparison tables for all blocks and a "I want to..." decision guide.
@@ -57,6 +57,7 @@ These are platform-agnostic concepts. Every major AI platform implements them, t
     - **[MCP](mcp/index.md)** — Connector to external tools, services, and databases
     - **[API](api/index.md)** — Programmatic interface for accessing AI models
     - **[SDK](sdk/index.md)** — Frameworks and toolkits for building AI workflows in code
+    - **[CLI](cli/index.md)** — Terminal-native interface for interacting with AI
 
 </div>
 
@@ -343,6 +344,33 @@ Frameworks and toolkits that provide abstractions for building AI workflows in c
 
 **Relationship to other blocks:** SDKs orchestrate models, abstract over APIs, and implement the agent concept in code. They integrate with MCP for external system access and formalize patterns like tool use and handoffs.
 
+---
+
+### CLI
+
+Terminal-native interfaces for interacting with AI. Instead of using a browser-based chat or calling an API from code, you work with AI directly from the command line — the same environment where you run commands, manage files, and write code.
+
+**Key characteristics:**
+
+- Terminal-native — runs where you already work, with full file-system access
+- Scriptable — supports headless mode for automation, CI/CD, and scheduled tasks
+- Extensible — supports plugins, skills, hooks, and MCP server connections
+
+**When to use it:** When you're working with AI in the terminal — coding, debugging, automating tasks via shell scripts or CI pipelines, or running scheduled AI jobs without a chat window.
+
+**Example:** Using Claude Code to refactor a module — it reads the code, proposes changes, runs tests, and commits the result. Or running a CLI in headless mode in CI to generate release notes from git history on every push.
+
+**Cross-platform implementations:**
+
+| Platform | How It Works |
+|----------|-------------|
+| Claude | Claude Code — interactive + headless modes, tool use, skills, plugins, MCP integration |
+| OpenAI (ChatGPT) | Codex CLI — interactive + headless modes, file editing, sandboxed execution |
+| Gemini | Gemini CLI — interactive mode, Google Cloud integrations, MCP support |
+| M365 Copilot | GitHub Copilot CLI — command suggestions, shell integration |
+
+**Relationship to other blocks:** CLIs are the terminal-native interaction layer — they abstract over APIs to give humans (and scripts) a conversational interface to AI, with file-system awareness, tool use, and MCP integration built in.
+
 ## How the Blocks Fit Together
 
 The building blocks are composable — combine the ones your workflow needs. Here's how a typical workflow grows as you adopt more blocks:
@@ -355,8 +383,9 @@ The building blocks are composable — combine the ones your workflow needs. Her
 6. **Package as a Skill** — Turn the prompt + context into a reusable routine you can invoke with different inputs
 7. **Connect with MCP** — Give the skill access to external data and tools
 8. **Orchestrate with an Agent** — Let an autonomous AI run the skill, use MCP connections, and handle multi-step workflows
-9. **Call via API** — Integrate the workflow into an application or automated pipeline by calling the model programmatically
-10. **Build with an SDK** — Use a framework to orchestrate agents, manage tool use, and coordinate multi-agent pipelines in code
+9. **Interact via CLI** — Use a terminal-native AI tool to work with code, automate tasks, and run headless AI jobs from the command line
+10. **Call via API** — Integrate the workflow into an application or automated pipeline by calling the model programmatically
+11. **Build with an SDK** — Use a framework to orchestrate agents, manage tool use, and coordinate multi-agent pipelines in code
 
 ### Worked example: Weekly Client Status Report
 
@@ -369,6 +398,7 @@ The building blocks are composable — combine the ones your workflow needs. Her
 | **+ Skill** | You package "generate weekly status report" as a skill — now you just invoke it with this week's updates |
 | **+ MCP** | The skill pulls this week's completed tasks from your project management tool and time entries from your time tracker |
 | **+ Agent** | An agent runs every Monday: gathers data via MCP, generates the report using the skill, drafts an email, and flags anything that needs your review |
+| **+ CLI** | You use a terminal-native AI tool to run the report workflow from the command line — interactively while refining, or headless on a schedule via cron |
 | **+ API** | You call the model via API from a script that runs on a schedule, processing inputs from a database and writing results back — no chat window needed |
 | **+ SDK** | You build the agent using a framework that handles tool orchestration, error recovery, and handoffs between a data-gathering agent and a report-writing agent |
 
@@ -390,6 +420,7 @@ All building blocks across all four platforms in one view:
 | **MCP** | MCP servers | Function calling, Actions | Extensions, function calling | Connectors, plugins |
 | **API** | Anthropic REST API (Python, TypeScript SDKs) | OpenAI REST API (Python, TypeScript SDKs) | Gemini API, Vertex AI (Python SDK) | Azure AI Services (.NET, Python, Java) |
 | **SDK** | Claude Agent SDK (Python, TypeScript) | OpenAI Agents SDK (Python, TypeScript) | Agent Development Kit (Python) | M365 Agents SDK (.NET, Python, TypeScript) |
+| **CLI** | Claude Code | Codex CLI | Gemini CLI | GitHub Copilot CLI |
 
 ## Common Misconceptions
 
@@ -433,6 +464,7 @@ A project is an active workspace — it provides standing instructions, persiste
 - [MCP](mcp/index.md) — connecting AI to external systems
 - [API](api/index.md) — programmatic interfaces for accessing AI models and services
 - [SDK](sdk/index.md) — frameworks and toolkits for building AI workflows in code
+- [CLI](cli/index.md) — terminal-native interfaces for interacting with AI
 - [AI Engineering](../ai-engineering/index.md) — practices for designing and optimizing AI systems, including context engineering
 - [Patterns](../patterns/index.md) — reusable approaches across building blocks
 

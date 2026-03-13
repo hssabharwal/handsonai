@@ -8,7 +8,7 @@ Hands-On AI (handsonai.info) — the consolidated site for James Gray's AI cours
 
 ## Repository Structure
 
-- `docs/agentic-building-blocks/` - The nine AI building blocks (Model, Prompt, Context, Project, Skill, Agent, MCP, API, SDK)
+- `docs/agentic-building-blocks/` - The AI building blocks (Model, Prompt, Context, Project, Memory, Skill, Agent, MCP, API, SDK, CLI)
 - `docs/business-first-ai-framework/` - Three-phase methodology (Analyze, Deconstruct, Build)
 - `docs/use-cases/` - Six use case primitives (Content Creation, Research, Coding, Data Analysis, Ideation & Strategy, Automation)
 - `docs/product-engineering/` - Product management and software engineering concepts (SDLC, PRDs, user stories, roadmapping, stakeholder management, project tracking)

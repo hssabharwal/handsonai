@@ -90,6 +90,7 @@ SDK is the code-first orchestration layer:
 - **Skills** are conceptually similar to SDK tool definitions — both package capabilities for the agent to invoke
 - **Agents** are what SDKs build — the agent concept comes to life through SDK code
 - **MCP** servers are a common tool type in SDKs — agents use MCP to connect to external systems
+- **CLI** tools like Claude Code are built on SDKs and use them to power agent capabilities in the terminal
 
 ## Related
 
@@ -102,4 +103,5 @@ SDK is the code-first orchestration layer:
 - [AI Use Cases](../../use-cases/index.md) — what teams build with these blocks
 - [Coding Use Cases](../../use-cases/coding/index.md) — code-first AI workflows
 - [Workflow Architecture Patterns](../../patterns/workflow-architecture/index.md) — architectural patterns from augmented LLMs to autonomous agents
+- [CLI](../cli/index.md) — terminal-native interfaces that use SDKs under the hood
 - [Platforms](../../platforms/index.md) — platform-specific SDK guides

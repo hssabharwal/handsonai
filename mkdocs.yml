@@ -324,6 +324,7 @@ nav:
           - How do I connect an MCP server to Claude Code: agentic-building-blocks/mcp/questions/how-do-i-connect-an-mcp-server-to-claude-code.md
       - API: agentic-building-blocks/api/index.md
       - SDK: agentic-building-blocks/sdk/index.md
+      - CLI: agentic-building-blocks/cli/index.md
   - Use Cases:
     - Overview: use-cases/index.md
     - Content Creation:

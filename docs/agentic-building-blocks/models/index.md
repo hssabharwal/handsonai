@@ -97,6 +97,7 @@ Model is the foundation — the engine everything else runs on:
 - **MCP** connects the model — giving it access to external tools and data
 - **APIs** expose the model — letting code call it programmatically
 - **SDKs** wrap the model — providing frameworks for agent orchestration and tool use
+- **CLIs** give humans terminal access to the model — conversational AI from the command line
 
 ## Related
 
