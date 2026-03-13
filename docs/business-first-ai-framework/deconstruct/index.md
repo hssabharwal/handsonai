@@ -21,13 +21,13 @@ An interactive deep-dive that breaks down a business workflow into discrete step
 
 You can't operationalize AI on a process you don't understand. Before you can build an AI-powered workflow, you need to break it down into discrete steps, identify the decision points and data flows, and understand what context each step needs and what happens when things go wrong.
 
-The skill walks you through that deconstruction interactively. You provide the business scenario and rough steps — the model handles the structured analysis, applying the 5-question framework (discrete steps, decision points, data flows, context needs, failure modes) to every step. The deliverable:
+The skill walks you through that deconstruction interactively. You provide the business scenario and rough steps — the model handles the structured analysis, applying the 6-question framework (discrete steps, decision points, data flows, context needs, failure modes, data readiness) to every step. The deliverable:
 
 - A **Workflow Definition** — the structured breakdown of your workflow into refined steps, with decision points, data flows, context needs, and failure modes captured for every step
 
 The context needs and failure modes captured here directly inform design decisions in the next step — they tell you what context to create, what tools to connect, and where human review gates are needed.
 
-This builds directly on the concepts of workflow deconstruction. If terms like the "5-question framework" or "AI building blocks" are new to you, review the [Key Concepts section of the Business-First AI Framework](../index.md#key-concepts) for quick definitions before starting.
+This builds directly on the concepts of workflow deconstruction. If terms like the "6-question framework" or "AI building blocks" are new to you, review the [Key Concepts section of the Business-First AI Framework](../index.md#key-concepts) for quick definitions before starting.
 
 ## How to Use This
 
@@ -97,7 +97,7 @@ The **Workflow Definition** captures:
 - **Scenario metadata** — name, description, outcome, trigger, type, objective, owners
 - **Refined step-by-step breakdown** — each step with action, sub-steps, decision points, data in/out, context needs, failure modes
 - **Step sequence and dependencies** — what's sequential, what's parallel, where the critical path is
-- **Context shopping list** — every artifact the workflow needs, with status and key contents
+- **Context shopping list** — every artifact the workflow needs, with status, key contents, AI accessibility, and readiness notes
 
 Most workflows expand from 5–8 rough steps to 12–20 refined steps after the deep dive. This Workflow Definition is the input for the [Design phase](../build/design.md) in Step 3 — Build, where the model assesses the workflow's autonomy level, chooses an orchestration mechanism, classifies each step on the autonomy spectrum, and maps it to AI building blocks.
 

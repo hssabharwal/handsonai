@@ -49,14 +49,19 @@ Confirm the name, one-sentence description, trigger, and deliverable with me bef
 
 ## Step 4 — Deep Dive (First 3 Steps)
 
-Now break down the workflow step by step. Start with the first 3 steps I described (or that we identified). For each step, work through the 5-question framework:
+Now break down the workflow step by step. Start with the first 3 steps I described (or that we identified). For each step, work through the 6-question framework:
 
 1. **Discrete steps** — Is this actually multiple steps? Break it down further if so.
 2. **Decision points** — Are there if/then branches, quality gates, or judgment calls?
 3. **Data flows** — What are the inputs and outputs? Where does data come from and go?
 4. **Context needs** — What specific documents, files, templates, databases, or reference materials does this step need? Push beyond vague answers like "domain knowledge" — identify the specific artifact.
 5. **Failure modes** — What happens when this step fails? What does "bad output" look like?
-6. **Role transitions** (organizational lens with multiple stakeholders only) — Who performs this step? Does ownership change between steps? Are there handoff points?
+6. **Data readiness** — For each input this step needs, assess:
+   - **Access**: How is this data accessed today? Can an AI tool reach it directly (via API, file system, integration), or does it require human intervention (manual login, copy-paste, screen reading)?
+   - **Interpretability**: Is the data in a format AI can process? (Structured: database tables, spreadsheets, JSON. Semi-structured: emails, documents with consistent formatting. Unstructured: handwritten notes, images, proprietary formats.)
+   - **Persistence**: Does this context need to exist as a durable artifact? If it's currently "in someone's head" or communicated verbally, flag that it needs to be written down and stored somewhere AI-accessible.
+   - If access, interpretability, or persistence is limited, flag that the data may need to be reorganized, reformatted, or migrated before AI can use it.
+7. **Role transitions** (organizational lens with multiple stakeholders only) — Who performs this step? Does ownership change between steps? Are there handoff points?
 
 Ask these questions ONE AT A TIME for each step. Probe for missing sub-steps — most people undercount by 30-50%. Surface hidden assumptions ("How do you decide when X is good enough?").
 
@@ -64,7 +69,7 @@ For any step where AI is already being used, ask specifically for existing promp
 
 ## Step 5 — Propose and React (Remaining Steps)
 
-For steps 4 and beyond, switch to a "propose and react" pattern: propose a hypothesis across all dimensions (discrete steps, decision points, data flows, context needs, failure modes, and role transitions for organizational workflows) and ask me: "What's right, what's wrong, what am I missing?"
+For steps 4 and beyond, switch to a "propose and react" pattern: propose a hypothesis across all dimensions (discrete steps, decision points, data flows, context needs, failure modes, data readiness, and role transitions for organizational workflows) and ask me: "What's right, what's wrong, what am I missing?" Include a data readiness hypothesis: "I think AI could access this directly via [mechanism], and the data is in [format] which AI can interpret. Is that right?"
 
 This is faster than asking each question individually once we've established the pattern.
 
@@ -77,7 +82,7 @@ Before moving on, review the full step list and ask:
 - "What happens right after [last step]? Is there any follow-up, notification, or cleanup?"
 - "Are there any steps you sometimes skip, or steps that only happen in certain cases?"
 
-Add any missing steps and run them through the 5-question framework.
+Add any missing steps and run them through the 6-question framework.
 
 ## Step 7 — Map Sequence
 
@@ -143,9 +148,9 @@ For each step, use this format:
 
 ### Context Shopping List
 
-| Artifact | Description | Used By | Status | Key Contents |
-|----------|-------------|---------|--------|-------------|
-| [Name] | [Description] | Steps [#, #] | Exists / Needs Creation | [What the workflow needs from it] |
+| Artifact | Description | Used By | Status | Key Contents | AI Accessible? | Readiness Notes |
+|----------|-------------|---------|--------|-------------|----------------|-----------------|
+| [Name] | [Description] | Steps [#, #] | Exists / Needs Creation | [What the workflow needs from it] | Yes / Partial / No | [Any access, format, or persistence issues] |
 
 For organizational workflows, also prompt for existing process documentation: SOPs, training guides, compliance requirements, SLAs.
 
@@ -160,6 +165,7 @@ After producing the Workflow Definition, tell me: "Workflow Definition complete.
 - Surface hidden assumptions ("How do you decide when X is good enough?")
 - Use plain language; avoid jargon unless I introduced it
 - Push beyond vague context answers like "domain knowledge" — identify the specific artifact
+- Surface the assumption that existing data storage and formats will "just work" for AI — push beyond "it's in the CRM" and ask how AI would actually access it
 
 ---
 
@@ -172,7 +178,7 @@ After pasting the prompt:
 
 1. The AI asks how you're arriving — from an Analyze report, a workflow description, or a problem statement.
 2. It checks scope (one trigger, one deliverable) and helps you name the workflow.
-3. It walks through each step using the 5-question framework (discrete steps, decision points, data flows, context needs, failure modes) — one question at a time for the first few steps, then switching to "propose and react" to move faster.
+3. It walks through each step using the 6-question framework (discrete steps, decision points, data flows, context needs, failure modes, data readiness) — one question at a time for the first few steps, then switching to "propose and react" to move faster.
 4. It maps step sequence, consolidates context needs, and produces a structured **Workflow Definition**.
 
 The whole process takes ~15-25 minutes depending on workflow complexity.

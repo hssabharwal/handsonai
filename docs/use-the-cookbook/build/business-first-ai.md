@@ -84,7 +84,7 @@ For platform-specific setup (Claude.ai ZIP upload, Cowork install, API integrati
 **How it works:** The agent runs five skills across three stages:
 
 1. **Analyze** (`analyzing-workflows`) — Audit your workflows, interview you about your work, and produce an opportunity report with structured candidates. If you already know which workflow to deconstruct, this step is brief.
-2. **Deconstruct** (`deconstructing-workflows`) — Interactive deep-dive that decomposes the workflow into refined steps using the 5-question framework. Produces the Workflow Definition.
+2. **Deconstruct** (`deconstructing-workflows`) — Interactive deep-dive that decomposes the workflow into refined steps using the 6-question framework. Produces the Workflow Definition.
 3. **Build** — Three sub-phases, each with its own skill:
     - **Design** (`designing-workflows`) — Gather architecture decisions, assess workflow autonomy level, choose an orchestration mechanism and involvement mode, classify steps, map building blocks, identify skill candidates, configure agents, and produce the AI Building Block Spec.
     - **Construct** (`constructing-workflows`) — Generate platform-appropriate artifacts (prompts, skills, agents, configs) based on the approved spec.
@@ -169,7 +169,7 @@ Break workflows into structured definitions.
 
 **Command:** `/business-first-ai:deconstruct`
 
-**What it does:** Interactively deconstructs a business workflow into a structured Workflow Definition using the 5-question framework. This is the Deconstruct step.
+**What it does:** Interactively deconstructs a business workflow into a structured Workflow Definition using the 6-question framework. This is the Deconstruct step.
 
 **When to use it:** Use this when you want to thoroughly document a workflow's steps, decisions, data flows, and failure modes. Also useful standalone when you just need a structured breakdown of a complex process — even without planning to automate it.
 
@@ -178,13 +178,14 @@ Break workflows into structured definitions.
 1. **Scenario analysis** — The AI determines how you're arriving: if you reference an opportunity report from the Analyze step, it reads the workflow candidates and pre-populates metadata. Otherwise, it asks about the business scenario, objective, high-level steps, and ownership. If you describe a problem instead of a workflow, the AI proposes a candidate workflow for you to react to.
 2. **Scope check** — The AI assesses whether this is one workflow or multiple bundled together. If multiple, it recommends splitting and asks which to start with.
 3. **Name the workflow** — The AI presents 2-3 name options (2-4 word noun phrases, Title Case) and confirms name, description, outcome, trigger, and type.
-4. **Deep dive** — For each step, the AI probes five dimensions:
+4. **Deep dive** — For each step, the AI probes six dimensions:
     - Discrete steps (is this actually multiple steps?)
     - Decision points (if/then branches, quality gates)
     - Data flows (inputs, outputs, sources, destinations)
     - Context needs (specific documents, files, reference materials)
     - Failure modes (what happens when this step fails)
-5. **Propose and react** — From step 4 onward, the AI proposes a hypothesis across all five dimensions and asks "What's right, what's wrong, what am I missing?"
+    - Data readiness (can AI access, interpret, and persist the data this step needs?)
+5. **Propose and react** — From step 4 onward, the AI proposes a hypothesis across all six dimensions and asks "What's right, what's wrong, what am I missing?"
 6. **Map sequence** — The AI identifies sequential vs. parallel steps and the critical path
 7. **Consolidate context** — The AI presents a rolled-up "context shopping list" of every artifact the workflow needs
 8. **Generate Workflow Definition** — The AI writes the structured Workflow Definition to the output file
@@ -349,7 +350,7 @@ Yes. Tell the `framework-orchestrator` agent about your problem (e.g., "people k
 The file-based handoffs mean you can continue in a new conversation. Just invoke the next skill and point it at the file from the previous step (e.g., "Use deconstructing-workflows on outputs/lead-qualification-definition.md").
 
 **What are AI building blocks?**
-The categories used during analysis: Prompt (single instruction), Context (reference material), Skill (multi-step workflow), Agent (autonomous personality), MCP (external tool connection), and Project (workspace configuration). Each step gets mapped to one or more of these.
+The 11 building blocks across three layers: **Intelligence** — Model (AI engine), Context (reference material), Memory (persistent knowledge), Project (workspace configuration). **Orchestration** — Prompt (single instruction), Skill (reusable routine), Agent (autonomous executor). **Integration** — MCP (tool connector protocol), API (programmatic interface), SDK (development framework), CLI (command-line interface). Each workflow step gets mapped to one or more of these.
 
 **Where are the example agents and prompts?**
 They're in the [AI Workflow Examples](ai-workflow-examples.md) collection — agents for executive writing, editorial review, research, meeting prep, and AI news.

@@ -29,7 +29,7 @@ After the candidate is chosen, tell the user you're moving to Step 2 and proceed
 ### Step 2 — Deconstruct
 **Skill:** `deconstructing-workflows`
 
-Interactively analyze and decompose the user's chosen workflow. This is the longest step — you'll ask about the business scenario, help refine steps, then systematically probe each step using the 5-question framework.
+Interactively analyze and decompose the user's chosen workflow. This is the longest step — you'll ask about the business scenario, help refine steps, then systematically probe each step using the 6-question framework.
 
 During context probing, push beyond vague answers — identify the specific artifact. For any step where AI is already being used, ask specifically for existing prompt instructions or system prompts — these contain workflow logic that must be included in the Baseline Prompt.
 

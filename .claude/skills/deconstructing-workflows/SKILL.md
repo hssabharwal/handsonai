@@ -3,14 +3,14 @@ name: deconstructing-workflows
 description: >
   This skill should be used when the user wants to deconstruct a workflow, break down a business
   process, or deeply analyze a workflow's steps, decisions, data flows, and failure modes.
-  Interactively decomposes a workflow into a structured Workflow Definition using the 5-question
+  Interactively decomposes a workflow into a structured Workflow Definition using the 6-question
   framework. This is Step 2 of the Business-First AI Framework.
 user-invocable: true
 ---
 
 # Workflow Deconstruction
 
-Interactively discover a business workflow and decompose every step into a structured Workflow Definition using the 5-question framework.
+Interactively discover a business workflow and decompose every step into a structured Workflow Definition using the 6-question framework.
 
 ## Workflow
 
@@ -27,15 +27,20 @@ Interactively discover a business workflow and decompose every step into a struc
    If multiple workflows are detected: map out each one (working name, trigger, deliverable), present the breakdown, confirm boundaries with the user, and ask which to deconstruct first. Proceed with only the chosen workflow.
 3. **Name the workflow** — Present 2-3 name options following naming conventions (2-4 word noun phrase, Title Case). Confirm name, description, outcome, trigger, and type.
 4. **Register to Workflows database (if Notion is available)** — After naming is confirmed, check if the Notion MCP server is accessible. If so, create a row in the Workflows database with: Name, Description, Process Outcome, Type, Trigger, Status = "Under Development". Ask the user which Business Process domain this belongs to (or leave blank). If Notion is not available, skip this step silently and continue to the deep dive.
-5. **Deep dive** — Work through each step using the 5-question framework:
+5. **Deep dive** — Work through each step using the 6-question framework:
    - Discrete steps (is this actually multiple steps?)
    - Decision points (if/then branches, quality gates)
    - Data flows (inputs, outputs, sources, destinations)
    - Context needs (specific documents, files, reference materials)
    - Failure modes (what happens when this step fails)
+   - Data readiness (adopt a data strategist lens for each step's inputs):
+     - Access: How is this data accessed today? Can an AI tool reach it directly (via MCP connection, API, file system), or does it require human intervention (manual login, copy-paste, screen reading)?
+     - Interpretability: Is the data in a format AI can process? (Structured: database tables, spreadsheets, JSON. Semi-structured: emails, documents with consistent formatting. Unstructured: handwritten notes, images, proprietary formats.)
+     - Persistence: Does this context need to exist as a durable artifact that AI can access across workflow runs? If it's currently "in someone's head" or communicated verbally, flag that it needs to be externalized and stored somewhere AI-accessible.
+     - Reorganization signal: If access, interpretability, or persistence is limited, flag that the data may need to be reorganized, reformatted, or migrated before AI can reliably use it in this step.
    - Role transitions (organizational lens with multiple stakeholders only) — Who performs this step? Does ownership change between steps? Are there handoff points?
    When probing context needs, push beyond vague answers — identify the specific artifact. For any step where AI is already being used, ask specifically for existing prompt instructions, project instructions, or system prompts — these contain workflow logic that must be included in the Baseline Prompt.
-6. **Propose and react** — For steps 4+, propose a hypothesis across all dimensions (including role transitions for organizational workflows) and ask "What's right, what's wrong, what am I missing?" instead of asking each question individually.
+6. **Propose and react** — For steps 4+, propose a hypothesis across all dimensions (including data readiness and role transitions for organizational workflows) and ask "What's right, what's wrong, what am I missing?" instead of asking each question individually. Include a data readiness hypothesis: "I think AI could access this directly via [mechanism], and the data is in [format] which AI can interpret. Is that right?"
 7. **Map sequence** — After all steps, identify sequential vs. parallel steps and the critical path.
 8. **Consolidate context** — Present a rolled-up "context shopping list" of every piece of context the workflow needs — documents, data, rules, examples, and any other knowledge from the user's domain that the model doesn't have.
 9. **Generate Workflow Definition** — Produce the structured Workflow Definition and write it to the output file.
@@ -58,7 +63,9 @@ For each step: number, name, action, sub-steps, decision points, data in/out, co
 - Role swimlane (organizational lens with multiple roles) — a view showing which role owns each step
 
 ### Context Shopping List
-For each artifact: name, description, used by steps, status (Exists/Needs Creation), key contents
+For each artifact: name, description, used by steps, status (Exists/Needs Creation), key contents, AI Accessible? (Yes/Partial/No), readiness notes
+
+For items with `Status: Needs Creation`, the readiness notes should also capture where the artifact should be persisted — not just that it needs to be created, but that it needs a home AI can reach.
 
 For organizational workflows, also prompt for existing process documentation: SOPs, training guides, compliance requirements, SLAs.
 
@@ -69,5 +76,6 @@ For organizational workflows, also prompt for existing process documentation: SO
 - Surface hidden assumptions ("How do you decide when X is good enough?")
 - Use plain language; avoid jargon unless the user introduced it
 - Push beyond vague context answers like "domain knowledge" — identify the specific artifact
+- Surface the assumption that existing data storage and formats will "just work" for AI. Most people underestimate the work required to make data AI-accessible. Adopt a data strategist lens — help the user see where data reorganization, reformatting, or migration is needed before they commit to a workflow design that depends on inaccessible data. Push beyond "it's in the CRM" — ask how AI would access it.
 - After writing the Workflow Definition file, tell the user: "Workflow Definition saved to `outputs/[name]-definition.md`. Ready for Step 3 — Build."
 - If entering deconstruction without a prior analysis (direct workflow description), determine the lens by asking if not obvious from context.
