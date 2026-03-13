@@ -81,6 +81,7 @@ API is the programmatic bridge between your code and AI capabilities:
 - **Agents** use APIs to call models, tools, and services as part of their autonomous execution
 - **MCP** servers often wrap APIs — providing a standard interface for agents to call external services
 - **SDKs** provide higher-level abstractions over raw API calls, handling orchestration, retries, and tool use patterns
+- **CLI** tools abstract over APIs to give humans a conversational terminal interface to AI models
 
 ## Related
 
@@ -91,4 +92,5 @@ API is the programmatic bridge between your code and AI capabilities:
 - [AI Use Cases](../../use-cases/index.md) — what teams build with these blocks
 - [Coding Use Cases](../../use-cases/coding/index.md) — code-first AI workflows that rely on APIs
 - [Automation Use Cases](../../use-cases/automation/index.md) — automated pipelines built on API calls
+- [CLI](../cli/index.md) — terminal-native interfaces that abstract over APIs
 - [Platforms](../../platforms/index.md) — platform-specific API guides

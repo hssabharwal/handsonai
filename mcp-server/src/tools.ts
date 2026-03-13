@@ -28,9 +28,13 @@ const BUILDING_BLOCKS = [
   "prompts",
   "context",
   "projects",
+  "memory",
   "skills",
   "agents",
   "mcp",
+  "api",
+  "sdk",
+  "cli",
 ];
 
 const FRAMEWORK_STEPS = ["analyze", "deconstruct", "build"];
@@ -120,7 +124,7 @@ export const TOOL_DEFINITIONS: McpToolDefinition[] = [
   {
     name: "get_building_block",
     description:
-      "Get detailed content for an agentic building block and all its sub-pages. Building blocks are: model, prompts, context, projects, skills, agents, mcp.",
+      "Get detailed content for an agentic building block and all its sub-pages. Building blocks are: model, prompts, context, projects, memory, skills, agents, mcp, api, sdk, cli.",
     inputSchema: {
       type: "object",
       properties: {

@@ -28,6 +28,7 @@ All blocks in one view — use this to quickly orient yourself, then drill into 
 | **[MCP](mcp/index.md)** | Connect | Bridging AI to external tools, data, and services | Power user |
 | **[API](api/index.md)** | Integrate programmatically | Embedding AI in applications and automated pipelines | Developer |
 | **[SDK](sdk/index.md)** | Orchestrate in code | Building agent systems with tool use, memory, and handoffs | Developer |
+| **[CLI](cli/index.md)** | Interact from terminal | Working with AI in the terminal, scripting, and headless automation | Power user / Developer |
 
 ---
 
@@ -73,18 +74,18 @@ All blocks in one view — use this to quickly orient yourself, then drill into 
 
 *The connection layer: protocols, interfaces, and frameworks that bridge AI to external systems and code.*
 
-|  | **MCP** | **API** | **SDK** |
-|--|--------|--------|--------|
-| **What it provides** | Connector to external tools, services, and databases | Programmatic interface for accessing AI models | Frameworks for building AI workflows in code |
-| **Primary job** | Connect | Integrate programmatically | Orchestrate in code |
-| **Persistence** | Persistent (configured once, available across conversations) | Stateless (each call is independent) | Persistent (code you deploy and maintain) |
-| **Contains** | Server configs, tool definitions, authentication | API keys, endpoint URLs, request/response schemas | Libraries, agent loops, tool abstractions, patterns |
-| **When it loads** | Connected at startup or configured in settings | Called on demand from code | Imported into your application code |
-| **Can include code** | Yes (server implementations) | Yes (code making HTTP requests) | Yes (the primary interface is code) |
-| **Best for** | Bridging AI to external tools, data, and services | Embedding AI in applications and automated pipelines | Building agent systems with tool use, memory, and handoffs |
-| **Who manages it** | User-configured or developer-built | Developer-owned | Developer-owned |
-| **Requires external access** | Yes (bridges to external systems) | Yes (calls external APIs) | Yes (wraps APIs and external services) |
-| **Typical user** | Power user | Developer | Developer |
+|  | **MCP** | **API** | **SDK** | **CLI** |
+|--|--------|--------|--------|--------|
+| **What it provides** | Connector to external tools, services, and databases | Programmatic interface for accessing AI models | Frameworks for building AI workflows in code | Terminal-native interface for interacting with AI |
+| **Primary job** | Connect | Integrate programmatically | Orchestrate in code | Interact from terminal |
+| **Persistence** | Persistent (configured once, available across conversations) | Stateless (each call is independent) | Persistent (code you deploy and maintain) | Persistent (project memory files, settings) |
+| **Contains** | Server configs, tool definitions, authentication | API keys, endpoint URLs, request/response schemas | Libraries, agent loops, tool abstractions, patterns | Skills, plugins, hooks, MCP connections, project memory |
+| **When it loads** | Connected at startup or configured in settings | Called on demand from code | Imported into your application code | Launched from the terminal interactively or via script |
+| **Can include code** | Yes (server implementations) | Yes (code making HTTP requests) | Yes (the primary interface is code) | Yes (reads, writes, and runs code) |
+| **Best for** | Bridging AI to external tools, data, and services | Embedding AI in applications and automated pipelines | Building agent systems with tool use, memory, and handoffs | Working with AI in the terminal, scripting, headless automation |
+| **Who manages it** | User-configured or developer-built | Developer-owned | Developer-owned | User-launched or script-driven |
+| **Requires external access** | Yes (bridges to external systems) | Yes (calls external APIs) | Yes (wraps APIs and external services) | Yes (calls APIs under the hood) |
+| **Typical user** | Power user | Developer | Developer | Power user / Developer |
 
 ---
 
@@ -103,6 +104,9 @@ Use this table to find your starting point. Most real workflows combine several 
 | Automate a multi-step research task | **Agent** | + **MCP** for external sources, + **Skill** for sub-routines |
 | Build AI into my app | **API** | + **SDK** for complex orchestration |
 | Coordinate multiple agents in code | **SDK** | + **MCP** for external tool access |
+| Work with AI in my terminal | **CLI** | + **Skills** for reusable routines, + **MCP** for external data |
+| Automate AI in shell scripts or CI | **CLI** (headless mode) | + **MCP** for external system access |
+| Get AI help while coding | **CLI** | + **Project** memory for persistent conventions |
 | Choose between fast and deep AI | **Model** (select the right tier) | All other blocks work with any model |
 
 ---
