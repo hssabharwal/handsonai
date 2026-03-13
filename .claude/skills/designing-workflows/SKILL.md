@@ -15,7 +15,7 @@ Take a Workflow Definition and produce the Design deliverable: an AI Building Bl
 
 **Design principle:** The skill is the framework, the model is the platform expert. No platform names, SDK references, API patterns, GUI walkthroughs, or tool-specific examples appear anywhere in the skill. All platform-specific knowledge is researched by the model at runtime via web search.
 
-**Role:** You are an **Agentic AI Architect**. Your role is to design solutions that map business workflows to AI building blocks (Prompts, Context, Skills, Agents, MCP, Projects). You think in terms of system design, autonomy levels, orchestration mechanisms, and failure modes. Carry this framing through all of Design.
+**Role:** You are an **Agentic AI Architect**. Your role is to design solutions that map business workflows to AI building blocks across three layers — Intelligence (Model, Context, Memory, Project), Orchestration (Prompt, Skill, Agent), and Integration (MCP, API, SDK, CLI). You think in terms of system design, autonomy levels, orchestration mechanisms, and failure modes. Carry this framing through all of Design.
 
 ## Workflow
 
@@ -58,6 +58,11 @@ After confirming the platform, read the Workflow Definition and extract:
 
 - **Trigger/schedule** — from Scenario Metadata. If time-based, note as scheduled execution requirement and its implications (involvement mode, infrastructure). If manual, no action needed.
 
+- **Data readiness flags** — from the Context Shopping List's AI Accessible? and Readiness Notes columns. Summarize items flagged as "Partial" or "No". These inform step classification — a step that depends on inaccessible data may need:
+  - A prerequisite human step prepended (e.g., "Export CRM data to CSV")
+  - A different autonomy classification (Autonomous → Guided or Human, because a human must bridge the data gap)
+  - An integration research priority flag for the Construct phase (this tool connection is critical, not just nice-to-have)
+
 - **Browser access** — deferred to Construct. If any step's Data In references a web portal, CRM login, or authenticated website, flag it during step classification (Step 6) as a "requires browser access" note on that step. Do not ask about it here.
 
 - **Shareability** — deferred to Construct. The model asks about team sharing when generating artifacts in the Construct phase, not during Design.
@@ -71,6 +76,7 @@ Present a single confirmation block:
 > - **Tools needed:** [extracted list]
 > - **Trigger:** [extracted trigger] → [implications for involvement mode]
 > - [Any flags: e.g., "Step 4 involves logging into your CRM — I'll address how to connect that during the build."]
+> - **Data readiness:** [count] of [total] context items are not directly AI-accessible. [Brief summary of gaps]. These gaps may affect step autonomy and will need resolution before or during Construct.
 > - [Organizational lens: stakeholder implications — different platform access levels, notification needs for handoffs, shareability defaults to "yes"]
 >
 > Integration availability on [platform] will be researched during the Construct phase.
@@ -147,10 +153,12 @@ Only drop into the question-by-question flow when genuinely missing information.
 
 For every refined step, determine:
 - **Autonomy level**: Human / Deterministic / Guided / Autonomous
-- **AI building block(s)**: Prompt, Context, Skill, Agent, MCP, Project
+- **AI building block(s)**: From three layers — Intelligence (Model, Context, Memory, Project), Orchestration (Prompt, Skill, Agent), Integration (MCP, API, SDK, CLI). Each step may use one or more blocks from any layer.
 - **Tools and connectors**: External tools, APIs, integrations needed (populated from the tool list in Architecture Decisions; integration availability is deferred to Construct)
 - **Human-in-the-loop gates**: Where human review is recommended
 - **Role** (organizational lens): Who performs this step — which role owns it
+
+If a step's inputs include items flagged as "No" or "Partial" in the Context Shopping List, note this in the classification. A step classified as Autonomous but dependent on inaccessible data should be flagged: "Autonomy contingent on resolving data access for [item]."
 
 Present the mapping as a clear table. Walk through reasoning for non-obvious classifications. Ask if the user wants to adjust anything.
 
@@ -193,6 +201,9 @@ Write to `outputs/[workflow-name]-building-block-spec.md`. Includes:
 - Prerequisites
 - Context inventory
 - Tools and connectors required (list only — availability deferred)
+- **Data Readiness Summary** — items requiring action before the workflow can run as designed:
+  | Context Item | Current State | Required Action | Affects Steps |
+  |---|---|---|---|
 - **Integration Research Needed** — a section listing every tool/integration that requires platform availability research during Construct. For each: tool name, what it's used for, which steps depend on it.
 - **Model recommendation** — Recommend the model class best suited for this workflow. Consider the complexity of reasoning required, whether speed or depth matters more, and cost sensitivity. Present as a recommendation with rationale (e.g., "A reasoning-heavy model for the research steps, a fast model for the formatting steps"). This applies to all patterns, not just agent-based ones — even a Prompt pattern benefits from knowing whether to use a reasoning model or a fast one.
 - Recommended implementation order (quick wins → semi-autonomous → complex agent steps)
@@ -242,6 +253,7 @@ Includes:
 - Prerequisites
 - Context inventory
 - Tools and connectors required (list only)
+- Data Readiness Summary (items requiring action before the workflow can run as designed)
 - Integration Research Needed (tools requiring platform availability verification)
 - Model recommendation (reasoning-heavy vs fast, with rationale)
 - Recommended implementation order
