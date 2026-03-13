@@ -391,6 +391,18 @@ Skills from the `superpowers` plugin, invoked automatically based on context:
 
 ## See It in Action
 
+### Example artifacts
+
+Want to see what these skills actually produce? We built a complete set of example artifacts from a single rough idea — "a tool that walks new clients through setup, collects their information, assigns tasks, and makes sure nothing falls through the cracks." The result:
+
+- **Vision Brief** — problem quantification, stakeholders, alternatives considered, 5 prioritized capabilities, and a feature breakdown into epics
+- **Feature PRD #1** (Guided Intake Flow) — user stories with `[MUST]`/`[SHOULD]`/`[COULD]` acceptance criteria, error states, success metrics, UI/UX requirements
+- **Feature PRD #2** (Task Assignment Engine) — shows how a second feature references its dependency on the first
+
+:material-github: [View the example artifacts on GitHub](https://github.com/jamesgray-ai/handsonai/tree/main/examples/client-onboarding-tracker){ .md-button }
+
+### Live usage
+
 This workflow is how we build the Hands-on AI Cookbook. Our `CLAUDE.md` is a filled-in version of the template above, with project-specific verify commands (`mkdocs build --strict`), implementation guidelines, and content conventions.
 
 :material-github: [View our CLAUDE.md on GitHub](https://github.com/jamesgray-ai/handsonai/blob/main/CLAUDE.md#feature-development-workflow){ .md-button }
