@@ -102,7 +102,7 @@ export const TOOL_DEFINITIONS: McpToolDefinition[] = [
   {
     name: "list_section",
     description:
-      "List all pages in a cookbook section. Returns titles, descriptions, and paths for browsing.",
+      "List all pages in a cookbook section. Returns titles, descriptions, and paths for browsing. Set overview_only to true to get just the main topic pages without sub-pages.",
     inputSchema: {
       type: "object",
       properties: {
@@ -110,6 +110,11 @@ export const TOOL_DEFINITIONS: McpToolDefinition[] = [
           type: "string",
           description: `Section to browse: ${VALID_SECTIONS.join(", ")}`,
           enum: VALID_SECTIONS,
+        },
+        overview_only: {
+          type: "boolean",
+          description:
+            "When true, returns only top-level topic pages (not sub-pages). Useful for getting an overview of what a section covers.",
         },
       },
       required: ["section"],
@@ -304,14 +309,22 @@ export function handleToolCall(
     case "list_section": {
       const section = requireString(args, "section");
       if (typeof section !== "string") return section;
-      const pages = index.pages.filter((p) => p.section === section);
+      const overviewOnly = args.overview_only === true;
+      let pages = index.pages.filter((p) => p.section === section);
+      if (overviewOnly) {
+        // Keep only top-level topic pages (path depth ≤ 2 segments).
+        // e.g. "agentic-building-blocks" (1) and "agentic-building-blocks/models" (2)
+        // but not "agentic-building-blocks/prompts/prompt-engineering/cot" (4)
+        pages = pages.filter((p) => p.path.split("/").length <= 2);
+      }
       if (pages.length === 0) {
         return text(
           `No pages found in section "${section}". Valid sections: ${VALID_SECTIONS.join(", ")}`
         );
       }
       const sectionInfo = index.sections[section];
-      const header = `# ${sectionInfo?.label ?? section} (${pages.length} pages)\n`;
+      const suffix = overviewOnly ? ", overview only" : "";
+      const header = `# ${sectionInfo?.label ?? section} (${pages.length} pages${suffix})\n`;
       const lines = pages.map((p) => `- ${formatPageSummary(p)}`);
       return text(`${header}\n${lines.join("\n\n")}`);
     }
