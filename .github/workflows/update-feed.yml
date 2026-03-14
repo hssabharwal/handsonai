@@ -10,6 +10,7 @@ permissions:
 
 jobs:
   update-feed:
+    if: false  # Disabled — curated feed removed from site nav
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
