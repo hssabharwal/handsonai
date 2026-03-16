@@ -182,6 +182,7 @@ Test that your platform picks up the skill by asking it to perform a task the sk
 | Guide | Description |
 |-------|-------------|
 | [Discover Your Best Claude Skills](../../platforms/claude/skills/skills-discovery-meta-prompt.md) | Guided process to identify your highest-value skill candidates |
+| [The Complete Guide to Building Skills for Claude](https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf) | Anthropic's official guide covering skill structure, best practices, and advanced patterns |
 
 ## Related
 
