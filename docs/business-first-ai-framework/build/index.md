@@ -49,7 +49,11 @@ Design covers:
 
 ## 3.2: Construct
 
-The AI Building Block Spec tells you exactly what to build — and the orchestration mechanism determines which steps you follow. The model uses your architecture decisions (platform, integrations) and resolves deferred decisions (specific platform offering, shareability, code comfort) to generate artifacts in the right format for your specific setup. Work through **only** the steps that apply to your mechanism:
+The AI Building Block Spec tells you exactly what to build — and the orchestration mechanism determines which steps you follow. The model uses your architecture decisions (platform, integrations) and resolves deferred decisions (specific platform offering, shareability, code comfort) to generate artifacts in the right format for your specific setup.
+
+Before generating artifacts, the model [discovers what creation tools are available](construct.md#how-creation-tools-are-discovered) in your environment. If you have specialized skills installed (like a skill-creator or agent-development skill), the model delegates to them for higher-quality output. Otherwise, it generates everything inline. This happens automatically — you just confirm the plan.
+
+Work through **only** the steps that apply to your mechanism:
 
 === "Prompt"
 

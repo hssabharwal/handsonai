@@ -83,6 +83,51 @@ The model generates building blocks in whatever format your platform requires �
 
 This hybrid approach anchors the model in authoritative sources while ensuring it stays current as platforms evolve. The model provides the implementation (how to build it on your platform); the AI Building Block Spec provides the specs (what each building block should do).
 
+## How Creation Tools Are Discovered
+
+Before generating any building blocks, the model checks whether you have specialized **creation skills** available — skills that know how to create other skills, agents, or building blocks. If you do, the model delegates to them for higher-quality output (e.g., a skill-creator skill that includes eval, benchmarking, and optimization). If you don't, the model generates everything inline using format specifications.
+
+This discovery happens automatically. You don't need to tell the model what tools you have — it figures it out.
+
+### How discovery works
+
+The model uses a two-tier approach:
+
+1. **System-level scan** — The model checks whether the environment provides a list of available skills (most AI coding tools do). It scans skill names and descriptions for any that indicate the ability to *create* one of the needed building block types — matching semantically, not by hardcoded name.
+
+2. **Filesystem scan (fallback)** — If the system-level list isn't available or may be incomplete, the model scans the platform-appropriate skill directories. Skills follow the same format everywhere — the model reads each skill's metadata to find creation-capable ones.
+
+    | Platform | Where the model looks |
+    |----------|----------------------|
+    | Claude Code | `.claude/skills/` |
+    | Cursor | `.cursor/skills/`, `.claude/skills/`, `.codex/skills/`, `.agents/skills/` |
+    | Codex CLI | `.agents/skills/` |
+    | Gemini CLI | `.gemini/skills/`, `.agents/skills/` |
+    | VS Code Copilot | `.github/skills/`, `.agents/skills/` |
+    | Cowork / Claude.ai | System-managed (system-level scan only) |
+
+    For the full, up-to-date directory listing per platform, see [Skills > Platform Implementations](../../agentic-building-blocks/skills/index.md).
+
+### What you'll see
+
+After discovery, the model presents a **Creation Tools Map** — a table showing each building block type your workflow needs, whether a creation skill was found for it, and whether the model will delegate or generate inline:
+
+| Building Block Type | Count | Matched Creation Skill | Method |
+|---|---|---|---|
+| Skill | 3 | *(your matched skill)* | Delegate |
+| Agent | 1 | *none* | Inline |
+| Prompt | 1 | *none* | Inline |
+
+You confirm this map before the model starts building. If a match looks wrong, you can override it.
+
+**When a creation skill is matched**, the model invokes it and passes the building block's full spec as starting context. The creation skill runs its complete workflow — you get the same quality as if you'd invoked it directly.
+
+**When no creation skill is matched**, the model generates the building block inline using the authoritative format specification for that type (e.g., the [agentskills.io specification](https://agentskills.io/specification) for skills, platform-specific agent formats via web search).
+
+### Environments without skills
+
+Some AI tools don't support skills yet (e.g., ChatGPT web, Gemini app). In those environments, discovery finds nothing and all building blocks are generated inline. The workflow still works — you just don't get the benefit of specialized creation tools.
+
 ## Mechanism-Specific Build Paths
 
 Your orchestration mechanism (chosen in Design) determines which building blocks get built. The model works through only the steps that apply:

@@ -268,11 +268,12 @@ Generate platform artifacts from your approved spec.
 **How it works:**
 
 1. **Load Building Block Spec** — The AI reads the approved spec from `outputs/`
-2. **Build path choice** — Choose "I'll build it" (model generates artifacts) or "I'll build it myself" (spec is the deliverable, skip to Run)
+2. **Build path choice** — Choose "I'll build it" (model generates artifacts) or "I'll build it myself" (get a Construction Guide with build sequence and creation skill recommendations)
 3. **Mechanism-specific build path** — Only the steps relevant to your chosen orchestration mechanism
-4. **Integration research** — Web search to verify platform availability for every tool in the spec
-5. **Generate platform artifacts** — Prompts, skills, agents, and configs in whatever format your platform needs (researched via web search at runtime)
-6. **Write SOP to Notion** (if available)
+4. **Discover creation tools** — The AI [scans your environment](../../business-first-ai-framework/build/construct.md#how-creation-tools-are-discovered) for skills that can create other building blocks (e.g., skill-creator, agent-development). Presents a Creation Tools Map for confirmation — matched skills get delegated to, unmatched types are generated inline.
+5. **Integration research** — Web search to verify platform availability for every tool in the spec
+6. **Generate platform artifacts** — For each building block, either delegates to the matched creation skill or generates inline using format specifications
+7. **Write SOP to Notion** (if available)
 
 **Example prompts:**
 
