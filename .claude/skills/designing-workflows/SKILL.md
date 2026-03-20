@@ -151,12 +151,47 @@ Only drop into the question-by-question flow when genuinely missing information.
 
 #### Step 6 — Classify Each Step
 
-For every refined step, determine:
+For every refined step, classify across all three building-block layers plus autonomy and role.
+
+**Per-step classification dimensions:**
 - **Autonomy level**: Human / Deterministic / Guided / Autonomous
-- **AI building block(s)**: From three layers — Intelligence (Model, Context, Memory, Project), Orchestration (Prompt, Skill, Agent), Integration (MCP, API, SDK, CLI). Each step may use one or more blocks from any layer.
-- **Tools and connectors**: External tools, APIs, integrations needed (populated from the tool list in Architecture Decisions; integration availability is deferred to Construct)
+- **Orchestration layer**: Prompt / Skill / Agent
+- **Integration layer**: Which integration block(s) apply, with use/build tags
+- **Intelligence layer**: Model capability, context sources, memory needs, project scope
 - **Human-in-the-loop gates**: Where human review is recommended
 - **Role** (organizational lens): Who performs this step — which role owns it
+
+**Integration layer blocks:**
+
+| Block | Description | Tag |
+|-------|-------------|-----|
+| **MCP** | Model Context Protocol server | Use existing / Build new |
+| **API** | REST, GraphQL, or other web API | Use existing |
+| **SDK** | Client library / framework | Use existing / Build new (rare) |
+| **CLI** | Command-line tool | Use existing |
+
+Most integration blocks are "use existing." "Build new" applies primarily to MCP (custom data sources) and rarely to SDKs.
+
+**Intelligence layer blocks:**
+
+| Block | Description | Per-step classification |
+|-------|-------------|----------------------|
+| **Model** | Which model capability | Reasoning-heavy / Fast / Vision |
+| **Context** | Files, docs, libraries needed | List specific sources |
+| **Memory** | Persistent state across runs | Yes / No + what's stored |
+| **Project** | Workspace or project scope | Yes / No |
+
+**Per-step classification table format:**
+
+| Step | Orchestration | Integration (use/build) | Intelligence | Human Gate |
+|------|--------------|------------------------|--------------|------------|
+| Pull calendar events | Skill | MCP: Google Calendar (use) | Model: fast | No |
+| Generate coaching questions | Agent | — | Model: reasoning; Context: powerful-questions.md | Yes |
+| Save prep notes | Skill | CLI: git (use) | Model: fast | No |
+
+Each row captures one step. The Orchestration column shows the block from that layer. The Integration column lists block(s) with use/build tags, or "—" if the step needs no external tool access. The Intelligence column lists applicable blocks with their per-step classification values.
+
+Additionally, for each step record the **autonomy level** and **role** (these appear in the full spec output but are omitted from the compact table above for readability).
 
 If a step's inputs include items flagged as "No" or "Partial" in the Context Shopping List, note this in the classification. A step classified as Autonomous but dependent on inaccessible data should be flagged: "Autonomy contingent on resolving data access for [item]."
 
@@ -192,19 +227,19 @@ Write to `outputs/[workflow-name]-building-block-spec.md`. Includes:
 - Lens (Individual / Organizational)
 - Autonomy level assessment (workflow-level, with rationale)
 - Orchestration mechanism recommendation (with involvement mode)
+- Platform mode (carried forward from Architecture Decisions)
 - Architecture Decisions (with rationale and constraints summary)
-- Step-by-step decomposition table with per-step autonomy levels and building blocks
+- **3-layer per-step classification table** — the full classification from Step 6 with Orchestration, Integration (use/build), Intelligence, and Human Gate columns, plus per-step autonomy level and role
 - Autonomy spectrum summary
 - Skill candidate section with generation-ready detail
 - Agent configuration section (when agent-based)
 - Step sequence and dependencies
 - Prerequisites
 - Context inventory
-- Tools and connectors required (list only — availability deferred)
 - **Data Readiness Summary** — items requiring action before the workflow can run as designed:
   | Context Item | Current State | Required Action | Affects Steps |
   |---|---|---|---|
-- **Integration Research Needed** — a section listing every tool/integration that requires platform availability research during Construct. For each: tool name, what it's used for, which steps depend on it.
+- **Integration Options** — for each tool/integration need identified in the Integration layer classification, list discovered options with recommendations. For each: tool name, what it's used for, which steps depend on it, and available integration approaches (MCP server, API, SDK, CLI) with a recommended option.
 - **Model recommendation** — Recommend the model class best suited for this workflow. Consider the complexity of reasoning required, whether speed or depth matters more, and cost sensitivity. Present as a recommendation with rationale (e.g., "A reasoning-heavy model for the research steps, a fast model for the formatting steps"). This applies to all patterns, not just agent-based ones — even a Prompt pattern benefits from knowing whether to use a reasoning model or a fast one.
 - Recommended implementation order (quick wins → semi-autonomous → complex agent steps)
 - Where to Run recommendation
@@ -221,7 +256,7 @@ Present a summary of the Building Block Spec:
 > - **Autonomy:** [level]
 > - **Mechanism:** [orchestration mechanism] ([involvement mode])
 > - **Steps:** [count] steps, [count] skill candidates, [count] agents
-> - **Integration research needed:** [count] tools to verify during Construct
+> - **Integration options:** [count] tools with recommended integration approaches
 > - **Implementation order:** [brief summary]
 >
 > The full spec is saved to `outputs/[workflow-name]-building-block-spec.md`.
@@ -243,18 +278,18 @@ After the user approves, instruct them to **exit plan mode** if they entered it 
 Includes:
 - Autonomy level assessment (workflow-level, with rationale)
 - Orchestration mechanism recommendation with reasoning and involvement mode
+- Platform mode (carried forward from Architecture Decisions)
 - Architecture Decisions (with rationale and constraints summary)
 - Scenario summary (workflow metadata)
-- Step-by-step decomposition table (per-step autonomy level, building blocks, skill candidate flag)
+- 3-layer per-step classification table (Orchestration, Integration with use/build tags, Intelligence, Human Gate, plus autonomy level and role per step)
 - Autonomy spectrum summary
 - Skill candidates (with generation-ready detail)
 - Agent configuration (when applicable)
 - Step sequence and dependencies
 - Prerequisites
 - Context inventory
-- Tools and connectors required (list only)
 - Data Readiness Summary (items requiring action before the workflow can run as designed)
-- Integration Research Needed (tools requiring platform availability verification)
+- Integration Options (per tool need: available integration approaches with recommendations)
 - Model recommendation (reasoning-heavy vs fast, with rationale)
 - Recommended implementation order
 - Where to Run recommendation
