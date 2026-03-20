@@ -1,5 +1,5 @@
 ---
-name: analyzing-workflows
+name: analyze
 description: >
   This skill should be used when the user wants to analyze AI workflow opportunities,
   run a workflow audit, find automation candidates, or says "where can AI help".
@@ -9,7 +9,7 @@ description: >
 user-invocable: true
 ---
 
-# Analyzing Workflows
+# Analyze Workflows
 
 Analyze concrete opportunities where AI can improve your workflows. Produces a categorized opportunity report with a summary table, detailed opportunity cards, and a structured workflow candidate list.
 

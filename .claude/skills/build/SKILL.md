@@ -1,14 +1,14 @@
 ---
-name: constructing-workflows
+name: build
 description: >
   This skill should be used when the user has an approved AI Building Block Spec and wants to
-  construct platform artifacts for their AI workflow. It offers a build path choice, researches
+  build platform artifacts for their AI workflow. It offers a build path choice, researches
   integration availability, generates platform-appropriate artifacts (prompts, skills, agents, configs),
-  and optionally writes the SOP to Notion. This is Step 3.2 (Construct) of the Business-First AI Framework.
+  This is Step 4 (Build) of the Business-First AI Framework.
 user-invocable: true
 ---
 
-# Workflow Construct
+# Workflow Build
 
 Take an approved AI Building Block Spec and generate platform-appropriate artifacts: prompts, skills, agents, configs, and connectors.
 
@@ -47,7 +47,7 @@ If the user chooses path 2:
      - The format specification to follow
      - **If a creation skill was matched:** "You have `[skill-name]` available. Invoke it (e.g., `/[skill-name]`) and pass the spec below as your starting context."
      - **If no creation skill matched:** The format reference and key requirements for manual creation
-3. After presenting the Construction Guide, tell the user: "To generate the Run Guide, run `/business-first-ai:run-workflow`."
+3. After presenting the Construction Guide, tell the user: "To generate the Run Guide, run `/business-first-ai:run`."
 
 #### Step 3 — Mechanism-Specific Build Path
 
@@ -216,7 +216,7 @@ If cookbook platform guides are available locally (e.g., `docs/platforms/claude/
      - The building block's full spec from the Building Block Spec (name, purpose, inputs, outputs, decision logic, failure modes, which workflow steps it covers)
      - The artifact format requirements resolved in Step 3.6 (or the fallback reference if Step 3.6 did not resolve a format)
      - Whether platform-specific extensions should be applied (based on Architecture Decisions)
-     - This context: "This building block spec comes from an approved AI Building Block Spec (Business-First AI Framework, Step 3.1 Design). The intent, inputs, outputs, decision logic, and failure modes are already defined. Use this as your starting context."
+     - This context: "This building block spec comes from an approved AI Building Block Spec (Business-First AI Framework, Step 3 Design). The intent, inputs, outputs, decision logic, and failure modes are already defined. Use this as your starting context."
   2. Let the creation skill run its full workflow. Do not skip or abbreviate any stage.
   3. After completion, move to the next building block. Later blocks may reference earlier ones.
 
@@ -228,11 +228,7 @@ If cookbook platform guides are available locally (e.g., `docs/platforms/claude/
 
 **f. Generate artifacts.** The skill provides the *specs* (what each building block should do, its inputs/outputs/instructions from the Design phase). The model provides the *implementation* (how to build it on the user's platform, using the verified specification and platform documentation as authoritative sources).
 
-#### Step 7 — Write SOP to Notion (if available)
-
-After artifacts are generated, check if the Notion MCP server is accessible AND this workflow was registered during the Deconstruct step. If so, offer to write the workflow SOP to the Notion page.
-
-After completing Construct, tell the user: "To generate the Run Guide, run `/business-first-ai:run-workflow` (or say *'Generate the Run Guide for my workflow'*)."
+After completing Build, tell the user: "To generate the Run Guide, run `/business-first-ai:run` (or say *'Generate the Run Guide for my workflow'*)."
 
 ## Outputs
 
@@ -244,5 +240,5 @@ Prompts, skills, agents, orchestration configs, and connector setups in whatever
 
 - Use plain language; avoid jargon unless the user introduced it
 - After generating platform artifacts, summarize what was produced and where each artifact was saved
-- Do not start Construct without a loaded and approved Building Block Spec
+- Do not start Build without a loaded and approved Building Block Spec
 - Web search is required for integration research and platform documentation verification

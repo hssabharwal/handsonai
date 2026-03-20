@@ -31,7 +31,7 @@ This builds directly on the concepts of workflow deconstruction. If terms like t
 
 ## How to Use This
 
-This step is facilitated by the **`deconstructing-workflows`** Business-First AI Framework Skill. How you get it depends on your platform — see [How to Add Skills to Your Platform](../../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for installation instructions for Cowork, Claude Code, Claude.ai, Cursor, Codex CLI, Gemini CLI, and VS Code Copilot.
+This step is facilitated by the **`deconstruct`** Business-First AI Framework Skill. How you get it depends on your platform — see [Get the Skills](../skills.md) for installation instructions.
 
 **Start with this prompt:**
 
@@ -42,7 +42,7 @@ I need to deconstruct my [workflow name] workflow.
 The skill runs an interactive deep dive — interviewing you about your scenario, refining your steps, then probing each step for sub-steps, decisions, data flows, context needs, and failure modes. It produces a structured Workflow Definition file.
 
 !!! tip "If your AI tool doesn't support skills"
-    Use the [Deconstruct Prompt (Portable)](../deconstruct-prompt.md) — a copy-paste prompt that runs the full Deconstruct process in any AI chat tool (ChatGPT, Gemini, Claude, etc.). No skill installation required.
+    Download the skill file from [GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins/business-first-ai/skills/deconstruct) and paste it into your system prompt or project instructions.
 
 ### Example: What the first exchange looks like
 
@@ -99,7 +99,7 @@ The **Workflow Definition** captures:
 - **Step sequence and dependencies** — what's sequential, what's parallel, where the critical path is
 - **Context shopping list** — every artifact the workflow needs, with status, key contents, AI accessibility, and readiness notes
 
-Most workflows expand from 5–8 rough steps to 12–20 refined steps after the deep dive. This Workflow Definition is the input for the [Design phase](../build/design.md) in Step 3 — Build, where the model assesses the workflow's autonomy level, chooses an orchestration mechanism, classifies each step on the autonomy spectrum, and maps it to AI building blocks.
+Most workflows expand from 5–8 rough steps to 12–20 refined steps after the deep dive. This Workflow Definition is the input for the [Design phase](../design.md) in Step 3 — Design, where the model assesses the workflow's autonomy level, chooses an orchestration mechanism, classifies each step on the autonomy spectrum, and maps it to AI building blocks.
 
 ## Tips for Better Results
 
@@ -114,7 +114,7 @@ Most workflows expand from 5–8 rough steps to 12–20 refined steps after the 
 ## Related
 
 - **Previous step:** Not sure which workflow to deconstruct? Start with [Analyze Workflows](../analyze.md) (Step 1) to identify your best candidates.
-- **Next step:** Ready to build? Go to [Build AI-Powered Workflows](../build/index.md) (Step 3) — starting with the Design phase to assess autonomy, choose an orchestration mechanism, and map building blocks.
-- [Business-First AI Framework](../index.md) — the full three-step methodology
+- **Next step:** Ready to design? Go to [Design Your AI Workflow](../design.md) (Step 3) — assess autonomy, choose an orchestration mechanism, and map building blocks.
+- [Business-First AI Framework](../index.md) — the full seven-step methodology
 - [Prompts](../../agentic-building-blocks/prompts/index.md)
 - [Agents](../../agentic-building-blocks/agents/index.md)

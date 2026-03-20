@@ -16,7 +16,7 @@ Step 2 of the framework gets the same portable treatment as Step 1, and the AI R
 
 ## Deconstruct Prompt — Portable Version
 
-Following the same pattern as the Analyze prompt, the new [Deconstruct Prompt — Portable Version](../../business-first-ai-framework/deconstruct-prompt.md) is a single copy-paste prompt that runs the full Step 2 Deconstruct process in any AI chat tool. It encodes all nine steps of the methodology — scenario discovery, scope checking, the 5-question deep dive, propose-and-react, sequence mapping, context consolidation, and structured Workflow Definition output. Works in ChatGPT, Gemini, Claude, or any LLM.
+Following the same pattern as the Analyze prompt, the new [Deconstruct](../../business-first-ai-framework/deconstruct/index.md) is a single copy-paste prompt that runs the full Step 2 Deconstruct process in any AI chat tool. It encodes all nine steps of the methodology — scenario discovery, scope checking, the 5-question deep dive, propose-and-react, sequence mapping, context consolidation, and structured Workflow Definition output. Works in ChatGPT, Gemini, Claude, or any LLM.
 
 ## AI Registry Skills — Markdown First
 

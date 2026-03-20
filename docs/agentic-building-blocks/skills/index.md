@@ -166,7 +166,7 @@ Pick your platform below for the complete install steps.
 Test that your platform picks up the skill by asking it to perform a task the skill handles:
 
 - **Cowork or Claude.ai:** Start a new conversation and say "Edit this paragraph for HBR quality" — Claude should apply editorial criteria from the skill
-- **Claude Code:** Type `/business-first-ai:discover` to invoke the skill directly
+- **Claude Code:** Type `/business-first-ai:analyze` to invoke the skill directly
 - **Cursor, Codex CLI, Gemini CLI, VS Code Copilot:** Ask "Use the editing-hbr-articles skill to review this paragraph" — the AI should reference the skill's instructions in its response
 
 ## Skill, Project, or Prompt?

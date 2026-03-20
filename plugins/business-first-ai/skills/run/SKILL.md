@@ -1,10 +1,10 @@
 ---
-name: running-workflows
+name: run
 description: >
-  This skill should be used when the user has constructed workflow artifacts and wants a Run Guide
-  for deploying, executing, and testing their AI workflow. It generates a plain-language guide
-  with setup steps, a first-run test, and next steps — tailored to the user's platform and
-  build path. This is Step 3.3 (Run) of the Business-First AI Framework.
+  This skill should be used when the user has built and tested workflow artifacts and wants a Run Guide
+  for deploying and operating their AI workflow. It generates a plain-language guide
+  with setup steps, deployment patterns, and sharing instructions — tailored to the user's platform and
+  build path. This is Step 6 (Run) of the Business-First AI Framework.
 user-invocable: true
 ---
 
@@ -22,9 +22,9 @@ Generate a Run Guide for deploying, executing, and testing an AI workflow. The R
 
 Determine which build path the user followed:
 
-- **Path 1 (Model-built):** The model generated platform artifacts during the Construct phase. Look for generated artifacts in the working directory and load the Building Block Spec from `outputs/[workflow-name]-building-block-spec.md`.
+- **Path 1 (Model-built):** The model generated platform artifacts during the Build phase. Look for generated artifacts in the working directory and load the Building Block Spec from `outputs/[workflow-name]-building-block-spec.md`.
 - **Path 2 (Manual build):** The user chose to build artifacts themselves using the spec as a guide. Load the Building Block Spec from `outputs/[workflow-name]-building-block-spec.md`.
-- **Path 3 (Guided-mode):** The model generated GUI instruction documents during the Construct phase (for guided-mode platforms like Copilot Studio, Workspace Studio, ChatGPT Agent Mode). The `mode` field in the Building Block Spec indicates `guided`.
+- **Path 3 (Guided-mode):** The model generated GUI instruction documents during the Build phase (for guided-mode platforms like Copilot Studio, Workspace Studio, ChatGPT Agent Mode). The `mode` field in the Building Block Spec indicates `guided`.
 
 If the user specifies a file path, use that. Otherwise, look for the most recent Building Block Spec in `outputs/` and check conversation context for which path was chosen.
 
@@ -59,7 +59,7 @@ The Run Guide covers four sections:
 
 **D. What to do next** — Brief guidance on:
 - How to run the workflow again in the future (the repeatable trigger)
-- How to share it with team members (if shareability was confirmed during Construct)
+- How to share it with team members (if shareability was confirmed during Build)
 - When to revisit and improve (signs the workflow needs updating)
 - For organizational workflows: **Change management** — who needs training, what communication is needed, and **Rollout plan** — pilot first or full rollout?
 
@@ -84,7 +84,7 @@ Provide a Construction Guide instead of setup instructions. The user will build 
 
 **Variant C: Guided-mode platforms (Path 3)**
 
-The Construct phase produced GUI instruction documents rather than deployable code artifacts. The Run Guide walks the user through following these instructions.
+The Build phase produced GUI instruction documents rather than deployable code artifacts. The Run Guide walks the user through following these instructions.
 
 **A. What was built** — List the instruction documents produced, what each covers, and which platform screens they reference. Use a table:
 
@@ -116,5 +116,6 @@ Plain-language guide for getting the workflow running. Three variants:
 
 - Use plain language; avoid jargon unless the user introduced it
 - After writing the Run Guide, tell the user: "Run Guide saved to `outputs/[name]-run-guide.md`."
-- Summarize all deliverables at the end so the user has a clear inventory of everything produced across the Build phase (Design, Construct, and Run)
+- Summarize all deliverables at the end so the user has a clear inventory of everything produced across Steps 3-6 (Design, Build, Test, and Run)
+- After the summary, prompt for SOP creation: "To document this workflow as a Standard Operating Procedure (SOP) for your team, run `/ai-registry:writing-sops`. The SOP captures what the workflow does, when to trigger it, what inputs it needs, and who's responsible — useful for onboarding teammates and maintaining the workflow over time."
 - Use web search to verify current platform setup steps — platform UIs change frequently

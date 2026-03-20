@@ -16,7 +16,7 @@ Two updates to make the Business-First AI Framework more accessible, regardless 
 
 ## Analyze Prompt — Portable Version
 
-Not everyone uses a platform that supports skills. The new [Analyze Prompt — Portable Version](../../business-first-ai-framework/analyze-prompt.md) is a single copy-paste prompt that runs the full Step 1 Analyze process in any AI chat tool — ChatGPT, Gemini, Claude, or any LLM. Same methodology, same output format, no skill installation required.
+Not everyone uses a platform that supports skills. The new [Analyze](../../business-first-ai-framework/analyze.md) is a single copy-paste prompt that runs the full Step 1 Analyze process in any AI chat tool — ChatGPT, Gemini, Claude, or any LLM. Same methodology, same output format, no skill installation required.
 
 ## Framework Pages Updated for All Platforms
 

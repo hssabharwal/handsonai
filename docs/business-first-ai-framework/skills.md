@@ -1,0 +1,444 @@
+---
+title: Get the Skills
+description: The Business-First AI Framework as executable skills and agents — seven skills covering the full lifecycle from analyzing opportunities to improving running workflows
+---
+
+# Get the Skills
+
+Skills and an agent implementing the [Business-First AI Framework](index.md) — seven steps from analyzing where AI fits in your workflows through building, testing, running, and improving working AI workflows. These are plain-text Markdown files that work in any AI tool supporting skills. Download them from GitHub, install as a Claude Code plugin, or paste directly into your system prompt.
+
+## Get These Skills
+
+These skills and agents are plain-text Markdown files that work in any AI tool. Choose how you want to get them:
+
+=== "Any Platform"
+
+    Download from GitHub and add to your platform's skill directory:
+
+    :material-github: [Browse on GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins/business-first-ai){ .md-button }
+
+    Works with **Claude Code, Cursor, Codex CLI, Gemini CLI, VS Code Copilot**, and more. See [How to Add Skills to Your Platform](../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for step-by-step instructions for each tool.
+
+    You can also paste any skill or agent file directly into your system prompt, project instructions, or custom GPT.
+
+=== "Claude Code Plugin"
+
+    One-command install with automatic agent routing and slash commands:
+
+    ```bash
+    /plugin install business-first-ai@handsonai
+    ```
+
+    See [Using Plugins](../use-the-cookbook/build/using-plugins.md) for setup details, including [Claude.ai upload](../use-the-cookbook/build/using-plugins.md#using-skills-in-claudeai-web), [Cowork](../use-the-cookbook/build/using-plugins.md#using-plugins-in-claude-cowork), and [API usage](../use-the-cookbook/build/using-plugins.md#using-skills-via-the-claude-api).
+
+## Using These Skills
+
+**Agents** activate automatically in Claude Code and Cowork — describe what you need and Claude picks the right one. In other platforms, paste the agent's Markdown file into your system prompt or project instructions.
+
+**Skills** trigger automatically when relevant, or invoke them directly:
+
+| Command | Skill |
+|---------|-------|
+| `/business-first-ai:analyze` | `analyze` — Step 1 |
+| `/business-first-ai:deconstruct` | `deconstruct` — Step 2 |
+| `/business-first-ai:design` | `design` — Step 3: Design |
+| `/business-first-ai:build` | `build` — Step 4: Build |
+| `/business-first-ai:test` | `test` — Step 5: Test |
+| `/business-first-ai:run` | `run` — Step 6: Run |
+| `/business-first-ai:improve` | `improve` — Step 7: Improve |
+
+**Recommended path:**
+
+1. Run `/business-first-ai:analyze` (or say *"Help me analyze AI workflow opportunities"*) — Step 1
+2. Run `/business-first-ai:deconstruct` (or say *"I want to deconstruct my [workflow] into AI building blocks"*) — Step 2
+3. Run `/business-first-ai:design` to design the AI workflow architecture — Step 3
+4. Run `/business-first-ai:build` to generate platform artifacts — Step 4
+5. Run `/business-first-ai:test` to evaluate and establish a quality baseline — Step 5
+6. Run `/business-first-ai:run` to deploy and operationalize — Step 6
+7. Run `/business-first-ai:improve` to evaluate and evolve running workflows — Step 7
+8. Review your outputs in the `outputs/` folder
+
+For platform-specific setup (Claude.ai ZIP upload, Cowork install, API integration), see [Using Plugins](../use-the-cookbook/build/using-plugins.md).
+
+### Platform Compatibility
+
+These are plain-text Markdown files — they work on **any platform that supports skills or agents**. See [How to Add Skills to Your Platform](../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for setup instructions for Claude Code, Cowork, Claude.ai, ChatGPT, Codex CLI, Gemini CLI, Cursor, and VS Code Copilot.
+
+## Components
+
+---
+
+### Step 1-7 — Full Orchestration
+
+---
+
+#### `framework-orchestrator`
+
+**What it does:** Orchestrates the end-to-end framework process across all seven steps. Runs candidate discovery, deep deconstruction, design, build, test, run, and improve sequentially, with file-based handoffs between stages so you can also run each step individually in separate conversations.
+
+**When to use it:** Use this when you want to go through the entire process in one session. The agent manages the flow between steps, saves intermediate files, and keeps you involved at each stage. If you prefer to work step-by-step across separate conversations, invoke the individual skills instead.
+
+**How it works:** The agent runs seven skills across the full lifecycle:
+
+1. **Analyze** (`analyze`) — Audit your workflows, interview you about your work, and produce an opportunity report with structured candidates. If you already know which workflow to deconstruct, this step is brief.
+2. **Deconstruct** (`deconstruct`) — Interactive deep-dive that decomposes the workflow into refined steps using the 6-question framework. Produces the Workflow Definition.
+3. **Design** (`design`) — Gather architecture decisions, assess workflow autonomy level, choose an orchestration mechanism and involvement mode, classify steps, map building blocks, identify skill candidates, configure agents, and produce the AI Building Block Spec.
+4. **Build** (`build`) — Resolve context needs and generate platform-appropriate artifacts (prompts, skills, agents, configs) based on the approved spec.
+5. **Test** (`test`) — Run structured evaluations against the criteria from Design, establish a quality baseline, and iterate with Build until the workflow is ready.
+6. **Run** (`run`) — Generate a Run Guide tailored to your platform and technical comfort level, choose a run pattern, and deploy.
+7. **Improve** (`improve`) — Evaluate a running workflow for quality signals, regression, and graduation opportunities.
+
+Files are saved to `outputs/` using kebab-case workflow names (e.g., `outputs/lead-qualification-definition.md`).
+
+**Example prompts:**
+
+    "I want to deconstruct my client onboarding workflow"
+    → Walks you through all seven steps, asking questions during
+      discovery, presenting the analysis for review, and generating
+      the build deliverables
+
+    "People keep dropping off during enrollment. Help me build
+    a workflow for that."
+    → Starts from a problem description, proposes a candidate
+      workflow, then deconstructs and designs it
+
+    "Help me figure out which parts of my weekly reporting process
+    could be automated with AI"
+    → Decomposes the reporting process, assesses autonomy, chooses an
+      orchestration mechanism, and identifies quick wins vs. complex
+      automation opportunities
+
+**What you'll get:** Multiple files in `outputs/`:
+
+1. **Opportunity Report** — `ai-opportunity-report.md` — categorized opportunities with structured workflow candidates (if generated)
+2. **Workflow Definition** — `[name]-definition.md` — structured decomposition of every step
+3. **AI Building Block Spec** — `[name]-building-block-spec.md` — autonomy level, orchestration mechanism, per-step classifications, building block mapping, skill candidates, agent configs
+4. **Platform Artifacts** — prompts, skills, agents, and configs generated for your platform
+5. **Run Guide** — `[name]-run-guide.md` — step-by-step setup and first-run instructions
+6. **Improvement Plan** — `[name]-improvement-plan.md` — eval results, quality signals, and recommended actions (when running Improve)
+
+---
+
+### Step 1 — Analyze Workflows
+
+Find which workflows are candidates for AI.
+
+---
+
+#### `analyze`
+
+**Command:** `/business-first-ai:analyze`
+
+**What it does:** Runs a structured audit of your workflows to analyze where AI can help. Supports two lenses: **Individual** (your personal workflows) and **Organizational** (your business's value chain processes). Scans memory and conversation history, asks which lens to use, interviews you with lens-specific questions, then produces a prioritized opportunity report with structured workflow candidates ready for the Deconstruct step.
+
+**When to use it:** Use this when you want to figure out where AI fits in your work. Especially useful when you're new to AI and need a starting point, or when you want a systematic review before choosing which workflow to deconstruct.
+
+**How it works:**
+
+1. **Memory & history scan** — The AI reviews everything it knows about you from prior conversations, memory, and project files. Presents findings for you to confirm or correct.
+2. **Lens selection** — The AI asks which lens to use: Individual (your personal workflows) or Organizational (your business's value chain). Infers if obvious from context.
+3. **Targeted discovery interview** — The AI asks focused, lens-specific questions one at a time. Individual lens: role, repetitive tasks, information synthesis, multi-step processes, quality issues, communication overhead, decision-making. Organizational lens: business objectives, value chain processes, cross-functional handoffs, bottlenecks, consistency risks, measurement gaps, scale constraints. Follows up based on your answers.
+4. **Opportunity analysis & report** — Produces a summary table and detailed opportunity cards grouped by autonomy level (Deterministic, Guided, Autonomous) with involvement mode (Augmented, Automated), ordered by impact.
+5. **Workflow candidate summary** — You pick your top candidates, and the AI produces structured metadata for each: name, description, trigger, deliverable, autonomy, involvement, pain point, AI opportunity, frequency, priority, reasoning, and lens. Organizational candidates also include business objective, stakeholders, and success metrics. Recommends which to deconstruct first.
+6. **Second lens follow-up** — The AI offers to explore the other lens for a more complete picture.
+
+**Example prompts:**
+
+    "Help me analyze AI workflow opportunities"
+    → Runs the full audit and produces a categorized opportunity
+      report with structured workflow candidates
+
+    "I want to figure out which parts of my job could benefit from AI"
+    → Interactive discovery session followed by a structured report
+      with specific, actionable recommendations
+
+**What you'll get:** An opportunity report (`outputs/ai-opportunity-report.md`) with a report header (including lens), summary table, top 3 recommendations, detailed cards for each opportunity (with organizational fields for org-lens candidates), and a structured workflow candidate summary with metadata for each candidate you select.
+
+**Platform compatibility:** Claude Code &#10003; | Claude.ai &#10003;
+
+---
+
+### Step 2 — Deconstruct Workflows
+
+Break workflows into structured definitions.
+
+---
+
+#### `deconstruct`
+
+**Command:** `/business-first-ai:deconstruct`
+
+**What it does:** Interactively deconstructs a business workflow into a structured Workflow Definition using the 6-question framework. This is the Deconstruct step.
+
+**When to use it:** Use this when you want to thoroughly document a workflow's steps, decisions, data flows, and failure modes. Also useful standalone when you just need a structured breakdown of a complex process — even without planning to automate it.
+
+**How it works:**
+
+1. **Scenario analysis** — The AI determines how you're arriving: if you reference an opportunity report from the Analyze step, it reads the workflow candidates and pre-populates metadata. Otherwise, it asks about the business scenario, objective, high-level steps, and ownership. If you describe a problem instead of a workflow, the AI proposes a candidate workflow for you to react to.
+2. **Scope check** — The AI assesses whether this is one workflow or multiple bundled together. If multiple, it recommends splitting and asks which to start with.
+3. **Name the workflow** — The AI presents 2-3 name options (2-4 word noun phrases, Title Case) and confirms name, description, outcome, trigger, and type.
+4. **Deep dive** — For each step, the AI probes six dimensions:
+    - Discrete steps (is this actually multiple steps?)
+    - Decision points (if/then branches, quality gates)
+    - Data flows (inputs, outputs, sources, destinations)
+    - Context needs (specific documents, files, reference materials)
+    - Failure modes (what happens when this step fails)
+    - Data readiness (can AI access, interpret, and persist the data this step needs?)
+5. **Propose and react** — From step 4 onward, the AI proposes a hypothesis across all six dimensions and asks "What's right, what's wrong, what am I missing?"
+6. **Map sequence** — The AI identifies sequential vs. parallel steps and the critical path
+7. **Consolidate context** — The AI presents a rolled-up "context shopping list" of every artifact the workflow needs
+8. **Generate Workflow Definition** — The AI writes the structured Workflow Definition to the output file
+
+**Example prompts:**
+
+    "Use deconstruct to break down my expense reporting process"
+    → Interactive discovery session producing
+      outputs/expense-reporting-definition.md
+
+    "I need to document how our team handles customer escalations"
+    → Walks through the discovery process, probing for hidden steps
+      and decision points
+
+**What you'll get:** A Workflow Definition file (`outputs/[name]-definition.md`) containing: scenario metadata, refined steps (with sub-steps, decision points, data flows, context needs, and failure modes for each), step sequence and dependencies, and a context shopping list.
+
+**Platform compatibility:** Claude Code &#10003; | Claude.ai &#10003;
+
+---
+
+### Step 3 — Design Workflows
+
+Design your AI implementation architecture.
+
+---
+
+#### `design`
+
+**Command:** `/business-first-ai:design`
+
+**What it does:** Takes a Workflow Definition and runs the Design phase: architecture decisions, autonomy assessment, orchestration mechanism with involvement mode, per-step classification, building block mapping, skill candidates, agent configuration. Produces an AI Building Block Spec for approval.
+
+**When to use it:** Use this when you have a Workflow Definition (from the Deconstruct step) and want to design your AI workflow's architecture. The spec must be approved before moving to Build.
+
+**How it works:**
+
+1. **Load Workflow Definition** — The AI reads the Workflow Definition from `outputs/`
+2. **Confirm understanding** — The AI summarizes the workflow and asks you to confirm
+3. **Architecture decisions** — Confirm platform (the one question), then extract tool integrations, trigger/schedule, and constraints from the Workflow Definition and present a confirmation block
+4. **Autonomy assessment** — The AI assesses where the whole workflow sits on the autonomy spectrum (Deterministic, Guided, Autonomous)
+5. **Orchestration mechanism** — The AI recommends a mechanism (Prompt, Skill-Powered Prompt, or Agent) with an involvement mode (Augmented or Automated)
+6. **Classify each step** — Per-step autonomy level, AI building blocks, tools, human review gates
+7. **Identify skill candidates** — Steps tagged for skill creation with generation-ready detail
+8. **Agent configuration** (when applicable) — Platform-agnostic agent blueprint
+9. **Generate AI Building Block Spec** — Complete design document
+10. **Spec Approval Gate** — Present the spec for approval. No artifacts are generated until you confirm.
+
+**Example prompts:**
+
+    "Design the AI workflow from my Workflow Definition"
+    → Reads the most recent Workflow Definition, runs Design,
+      produces the AI Building Block Spec for approval
+
+    "Design the expense-reporting workflow"
+    → Reads outputs/expense-reporting-definition.md, recommends
+      an orchestration mechanism, and generates the spec
+
+**What you'll get:**
+
+- **AI Building Block Spec** (`outputs/[name]-building-block-spec.md`) — architecture decisions, autonomy level, orchestration mechanism with involvement mode, step classifications, skill candidates, agent configs, implementation order
+
+**Platform compatibility:** Claude Code &#10003; | Claude.ai &#10003;
+
+---
+
+### Step 4 — Build Workflows
+
+Generate platform artifacts from your approved spec.
+
+---
+
+#### `build`
+
+**Command:** `/business-first-ai:build`
+
+**What it does:** Takes an approved AI Building Block Spec and generates platform-appropriate artifacts: prompts, skills, agents, configs, and connectors. Starts with a Prepare Context phase to resolve the context needs identified during Deconstruct and Design. Researches integration availability and resolves deferred platform decisions.
+
+**When to use it:** Use this when you have an approved AI Building Block Spec (from the Design step) and want to generate the actual building blocks for your platform. Also useful when re-platforming — run Build again with the same spec but a different platform target. If returning from Test with issues, Build helps you fix the specific building blocks that need adjustment.
+
+**How it works:**
+
+1. **Load Building Block Spec** — The AI reads the approved spec from `outputs/`
+2. **Prepare Context** — Resolve the Context Shopping List and Data Readiness Summary — find existing documents, create missing materials, format for AI consumption
+3. **Build path choice** — Choose "I'll build it" (model generates artifacts) or "I'll build it myself" (get a Construction Guide with build sequence and creation skill recommendations)
+4. **Mechanism-specific build path** — Only the steps relevant to your chosen orchestration mechanism
+5. **Discover creation tools** — The AI scans your environment for skills that can create other building blocks (e.g., skill-creator, agent-development). Presents a Creation Tools Map for confirmation — matched skills get delegated to, unmatched types are generated inline.
+6. **Integration research** — Web search to verify platform availability for every tool in the spec
+7. **Generate platform artifacts** — For each building block, either delegates to the matched creation skill or generates inline using format specifications
+
+**Example prompts:**
+
+    "Build the workflow from my Building Block Spec"
+    → Reads the most recent spec, researches integrations,
+      generates all platform artifacts
+
+    "Build the expense-reporting workflow for Claude Code"
+    → Reads the spec, generates Claude Code-specific artifacts
+
+**What you'll get:**
+
+- **Platform Artifacts** — prompts, skills, agents, and configs in whatever format your platform needs
+
+**Platform compatibility:** Claude Code &#10003; | Claude.ai &#10003;
+
+---
+
+### Step 5 — Test Workflows
+
+Structured testing and quality evaluation.
+
+---
+
+#### `test`
+
+**Command:** `/business-first-ai:test`
+
+**What it does:** Guides you through structured testing of your AI workflow artifacts — smoke test, full eval suite, building block evals, baseline establishment, and diagnosis. Uses the evaluation criteria and test scenarios defined during Design to measure output quality on a consistent scale.
+
+**When to use it:** Use this after Build to verify that your workflow produces good output before deploying it. Also use it during Improve to re-run evals and detect regression on running workflows.
+
+**How it works:**
+
+1. **Load artifacts and spec** — The AI reads your Building Block Spec (for evaluation criteria and test scenarios) and locates your platform artifacts
+2. **Smoke test** — Run the workflow once with a realistic scenario. Check: does it run, does it produce output, is the output in the right format?
+3. **Full eval suite** — Run each test scenario from the Building Block Spec. Score each output on a 1-5 scale across the evaluation dimensions defined during Design.
+4. **Building block evals** — Test individual components (skills, context, agents) in isolation to pinpoint weak links
+5. **Establish baseline** — Calculate average scores across all scenarios and dimensions. Record for future comparison.
+6. **Diagnose and fix** — Map problems to building blocks (generic output = context issue, skipped steps = prompt issue, etc.) and identify what to fix in Build
+7. **Readiness decision** — Ready for deployment? Move to Run. Not ready? Return to Build with specific targets.
+
+**Example prompts:**
+
+    "Test my workflow against the evaluation criteria"
+    → Guides you through the smoke test, eval suite, and baseline
+
+    "My workflow output is too generic — help me diagnose"
+    → Runs targeted building block evals to find the weak link
+
+**What you'll get:**
+
+- **Test Results** — Eval scores per scenario and dimension, baseline averages, and a diagnosis of issues with recommended fixes
+
+**Platform compatibility:** Claude Code &#10003; | Claude.ai &#10003;
+
+---
+
+### Step 6 — Run Workflows
+
+Deploy and operate your tested workflow.
+
+---
+
+#### `run`
+
+**Command:** `/business-first-ai:run`
+
+**What it does:** Generates a plain-language Run Guide for deploying and operating your AI workflow. Covers artifact inventory, setup steps, first production run, run pattern selection, and operationalization guidance — tailored to your platform and build path.
+
+**When to use it:** Use this after Test to deploy your workflow into production. Also useful independently to regenerate the Run Guide (e.g., for a teammate or after changing platforms).
+
+**How it works:**
+
+1. **Load spec and artifacts** — The AI reads your Building Block Spec and locates platform artifacts
+2. **Generate Run Guide** — Artifact inventory, setup steps, first production run instructions, and next steps
+3. **Run pattern selection** — Choose the right pattern: paste and run, run in a project, command an agent, code-first, or automate on schedule
+4. **Operationalization** (for organizational workflows) — Sharing, training, governance, and adoption monitoring guidance
+
+**Example prompts:**
+
+    "Generate the Run Guide for my workflow"
+    → Reads the spec and artifacts, produces a deployment guide
+
+    "Help me set up my workflow to run on a weekly schedule"
+    → Generates scheduling instructions for your platform
+
+**What you'll get:**
+
+- **Run Guide** (`outputs/[name]-run-guide.md`) — step-by-step setup, first production run, run pattern, and operationalization guidance
+
+**Platform compatibility:** Claude Code &#10003; | Claude.ai &#10003;
+
+---
+
+### Step 7 — Improve Workflows
+
+Evaluate and evolve running workflows.
+
+---
+
+#### `improve`
+
+**Command:** `/business-first-ai:improve`
+
+**What it does:** Guides a structured improvement cycle for a running AI workflow — identify quality signals, re-run the eval suite for regression detection, assess whether the workflow should graduate to a more capable orchestration mechanism, and produce an Improvement Plan with specific actions.
+
+**When to use it:** Use this when quality signals suggest a running workflow needs attention — increasing manual edits, changed business context, new tools available, or a scheduled review date. Also useful proactively on a regular cadence (monthly or quarterly) to catch issues before they affect output.
+
+**How it works:**
+
+1. **Load history** — The AI reads the Building Block Spec, previous test results, and baseline scores
+2. **Quality signal review** — Discuss what prompted this improvement cycle. Which signals are you seeing?
+3. **Regression evaluation** — Re-run the eval suite from Test. Compare current scores to baseline. Identify dimensions where quality has degraded or improved.
+4. **Graduation assessment** — Should the orchestration mechanism evolve? Prompt to Skill-Powered Prompt, Skill-Powered Prompt to Agent, single agent to multi-agent? The AI assesses based on current pain points and workflow complexity.
+5. **Decision framework** — Four outcomes: no changes needed, tune (fix specific building blocks), redesign (rework the architecture), or evolve (graduate the mechanism). Each outcome maps to a specific next step.
+6. **Generate Improvement Plan** — Current scores, comparison to baseline, findings, decision, and specific actions
+
+**Example prompts:**
+
+    "Evaluate my running workflow and help me decide what to improve"
+    → Full improvement cycle with regression eval and decision
+
+    "My content workflow output quality has been dropping — help me figure out why"
+    → Targeted regression evaluation focused on the quality dimensions
+      that are degrading
+
+**What you'll get:**
+
+- **Improvement Plan** (`outputs/[name]-improvement-plan.md`) — eval scores vs. baseline, quality signals, findings, graduation assessment, decision outcome, specific actions, and next review date
+
+**Platform compatibility:** Claude Code &#10003; | Claude.ai &#10003;
+
+---
+
+## Recommended Workflow
+
+These skills cover the full Business-First AI Framework. Here's the recommended path:
+
+1. **Analyze** — Run `analyze` to audit your workflows and identify where AI creates the most value
+2. **Deconstruct** — Pick your highest-impact candidate and run `deconstruct` (or use the `framework-orchestrator` agent for the full end-to-end process)
+3. **Design** — Run `design` to produce your AI Building Block Spec
+4. **Build** — Run `build` to resolve context needs and generate platform artifacts from the approved spec
+5. **Test** — Run `test` to evaluate output quality, establish a baseline, and iterate with Build until the workflow is ready
+6. **Run** — Run `run` to get a Run Guide, choose a run pattern, and deploy. See the [AI Workflow Examples](../use-the-cookbook/build/ai-workflow-examples.md) plugin for working examples of real AI workflows.
+7. **Improve** — Run `improve` periodically to catch regressions, evaluate quality signals, and evolve the workflow
+
+## FAQ
+
+**Which step should I start with?**
+Start with Step 1 (Analyze) if you're not sure where AI fits in your work. Browse [AI Use Cases](../use-cases/index.md) to see what types of work AI handles — content creation, research, coding, data analysis, ideation, and automation. Start with Step 2 (Deconstruct) if you already know which workflow you want to automate.
+
+**Can I start from a problem instead of a workflow?**
+Yes. Tell the `framework-orchestrator` agent about your problem (e.g., "people keep dropping off during enrollment") and it will propose a candidate workflow for you to refine during discovery.
+
+**What if I lose context mid-conversation?**
+The file-based handoffs mean you can continue in a new conversation. Just invoke the next skill and point it at the file from the previous step (e.g., "Use `deconstruct` on outputs/lead-qualification-definition.md").
+
+**What are AI building blocks?**
+The 11 building blocks across three layers: **Intelligence** — Model (AI engine), Context (reference material), Memory (persistent knowledge), Project (workspace configuration). **Orchestration** — Prompt (single instruction), Skill (reusable routine), Agent (autonomous executor). **Integration** — MCP (tool connector protocol), API (programmatic interface), SDK (development framework), CLI (command-line interface). Each workflow step gets mapped to one or more of these.
+
+**How many iterations of Build-Test should I expect?**
+Most workflows need 2-4 rounds of Build and Test before they produce reliably good output. Each iteration should be targeted — fix a specific building block, re-test, and measure improvement.
+
+**Where are the example agents and prompts?**
+They're in the [AI Workflow Examples](../use-the-cookbook/build/ai-workflow-examples.md) collection — agents for executive writing, editorial review, research, meeting prep, and AI news.
+
+**Do I need Claude Code for all of this?**
+No. These are plain-text Markdown files — download them from [GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins/business-first-ai) and add them to any AI tool. See [Get These Skills](#get-these-skills) for all the options, or check the [Platform Compatibility](#platform-compatibility) table for per-component details.

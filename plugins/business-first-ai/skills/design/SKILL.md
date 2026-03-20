@@ -1,11 +1,11 @@
 ---
-name: designing-workflows
+name: design
 description: >
   This skill should be used when the user has a Workflow Definition and wants to design
   an AI workflow. It gathers architecture decisions, assesses workflow autonomy level,
   chooses an orchestration mechanism and involvement mode, classifies steps, maps building blocks,
   identifies skill candidates, configures agents, and produces a Building Block Spec for approval.
-  This is Step 3.1 (Design) of the Business-First AI Framework.
+  This is Step 3 (Design) of the Business-First AI Framework.
 user-invocable: true
 ---
 
@@ -48,24 +48,24 @@ Platform is the only thing not already in the Workflow Definition. Determine the
 Accept whatever level of specificity the user provides — "Claude Code", "Google Gemini", "ChatGPT", "Claude" are all fine. Do NOT try to disambiguate to a specific offering upfront. Instead:
 - **For Design:** The ecosystem (Claude, Google, OpenAI, M365) is enough for pattern selection. Code-vs-nocode is inferred if the tool is specific (Claude Code = code, ChatGPT = no-code) or left open if vague.
 - **For Orchestration Mechanism:** The recommendation is driven by workflow characteristics first (tool use? autonomous decisions? multiple domains?). If the recommended mechanism requires capabilities the named platform might or might not support (e.g., recommending an agent when "Google Gemini" could mean the web app or ADK), ask a **motivated follow-up** in context.
-- **For Construct:** The specific offering (Claude Code vs. Claude.ai, ADK vs. Gemini web) is resolved when generating artifacts in the Construct phase — not during Design.
+- **For Build:** The specific offering (Claude Code vs. Claude.ai, ADK vs. Gemini web) is resolved when generating artifacts in the Build phase — not during Design.
 
 **b. Extract everything else from the Workflow Definition**
 
 After confirming the platform, read the Workflow Definition and extract:
 
-- **Tool integrations** — from Data In, Context Needed, and Context Shopping List across all steps. Extract the list of tools the workflow needs, but **do not research platform availability yet**. That happens in Construct. Simply list the tools identified.
+- **Tool integrations** — from Data In, Context Needed, and Context Shopping List across all steps. Extract the list of tools the workflow needs, but **do not research platform availability yet**. That happens in Build. Simply list the tools identified.
 
 - **Trigger/schedule** — from Scenario Metadata. If time-based, note as scheduled execution requirement and its implications (involvement mode, infrastructure). If manual, no action needed.
 
 - **Data readiness flags** — from the Context Shopping List's AI Accessible? and Readiness Notes columns. Summarize items flagged as "Partial" or "No". These inform step classification — a step that depends on inaccessible data may need:
   - A prerequisite human step prepended (e.g., "Export CRM data to CSV")
   - A different autonomy classification (Autonomous → Guided or Human, because a human must bridge the data gap)
-  - An integration research priority flag for the Construct phase (this tool connection is critical, not just nice-to-have)
+  - An integration research priority flag for the Build phase (this tool connection is critical, not just nice-to-have)
 
-- **Browser access** — deferred to Construct. If any step's Data In references a web portal, CRM login, or authenticated website, flag it during step classification (Step 6) as a "requires browser access" note on that step. Do not ask about it here.
+- **Browser access** — deferred to Build. If any step's Data In references a web portal, CRM login, or authenticated website, flag it during step classification (Step 6) as a "requires browser access" note on that step. Do not ask about it here.
 
-- **Shareability** — deferred to Construct. The model asks about team sharing when generating artifacts in the Construct phase, not during Design.
+- **Shareability** — deferred to Build. The model asks about team sharing when generating artifacts in the Build phase, not during Design.
 
 **c. Present architecture analysis for confirmation**
 
@@ -76,10 +76,10 @@ Present a single confirmation block:
 > - **Tools needed:** [extracted list]
 > - **Trigger:** [extracted trigger] → [implications for involvement mode]
 > - [Any flags: e.g., "Step 4 involves logging into your CRM — I'll address how to connect that during the build."]
-> - **Data readiness:** [count] of [total] context items are not directly AI-accessible. [Brief summary of gaps]. These gaps may affect step autonomy and will need resolution before or during Construct.
+> - **Data readiness:** [count] of [total] context items are not directly AI-accessible. [Brief summary of gaps]. These gaps may affect step autonomy and will need resolution before or during Build.
 > - [Organizational lens: stakeholder implications — different platform access levels, notification needs for handoffs, shareability defaults to "yes"]
 >
-> Integration availability on [platform] will be researched during the Construct phase.
+> Integration availability on [platform] will be researched during the Build phase.
 >
 > Anything I missed or got wrong?"
 
@@ -128,7 +128,7 @@ Single-agent vs. multi-agent is an architecture detail decided during Agent Conf
 | **Augmented** | Human is in the loop — reviews, steers, or decides at key points during the run. | Web/desktop deployment, no scheduled execution |
 | **Automated** | AI runs solo — executes end-to-end without human involvement during the run. | Scheduled/unattended execution, CLI |
 
-**Platform sub-choice for agent mechanism:** When the orchestration mechanism is Agent, the platform choice determines the implementation path. Some platforms have multiple agent offerings (e.g., Claude Code has sub-agents via markdown files vs. Claude Agent SDK in TypeScript/Python). If the platform has multiple agent offerings, ask the user which offering they want to use — this determines whether the Construct phase generates markdown files, Python code, TypeScript code, or GUI configuration steps. For non-agent mechanisms (Prompt, Skill-Powered Prompt), no sub-choice is needed — artifacts are always markdown files.
+**Platform sub-choice for agent mechanism:** When the orchestration mechanism is Agent, the platform choice determines the implementation path. Some platforms have multiple agent offerings (e.g., Claude Code has sub-agents via markdown files vs. Claude Agent SDK in TypeScript/Python). If the platform has multiple agent offerings, ask the user which offering they want to use — this determines whether the Build phase generates markdown files, Python code, TypeScript code, or GUI configuration steps. For non-agent mechanisms (Prompt, Skill-Powered Prompt), no sub-choice is needed — artifacts are always markdown files.
 
 **Present as a confident recommendation:** "Based on your workflow's **[autonomy level]** autonomy and [key architecture signals], I recommend **[mechanism]** with **[involvement mode]** because [2-3 sentence reasoning]." If the user pushes back, explain alternatives and discuss.
 
@@ -140,7 +140,7 @@ Ask the user to confirm the mechanism, involvement mode, and platform sub-choice
 > - **Platform:** [platform] ([surface])
 > - **Autonomy level:** [level] — [brief rationale]
 > - **Orchestration mechanism:** [mechanism] ([involvement mode])
-> - **Tools needed:** [list — availability to be researched during Construct]
+> - **Tools needed:** [list — availability to be researched during Build]
 > - **Steps classified:** [summary table]
 > - **Skill candidates:** [list]
 > - **Agent blueprints:** [summary]
@@ -349,15 +349,32 @@ This step only applies to steps tagged **"build new"** in Step 6b. Tag those ste
 | **Skills** | Which skill candidates this agent should have access to |
 | **Trigger Examples** | 2-3 example scenarios showing when/how the agent is invoked |
 
-The constructing skill maps these to platform-specific fields at runtime (e.g., "reasoning-heavy" → `opus` on Claude Code, trigger examples → `<example>` blocks).
+The build skill maps these to platform-specific fields at runtime (e.g., "reasoning-heavy" → `opus` on Claude Code, trigger examples → `<example>` blocks).
 
 For multi-agent: orchestration pattern, agent handoffs, human review gates.
+
+#### Step 8b — Evaluation Criteria
+
+Before generating the spec, gather evaluation criteria from the user. These feed directly into Step 5 (Test) where the workflow is evaluated against them, and Step 7 (Improve) where iteration decisions reference the quality bar established here.
+
+Prompt the user:
+
+> "Before generating the spec, I need to understand what good output looks like for this workflow. This feeds directly into Step 5 (Test) where you'll evaluate the workflow against these criteria."
+
+Then ask these four questions, one at a time:
+
+1. "Describe what a great output from this workflow looks like — not format, but quality. What would make you say 'this is exactly right'?"
+2. "Which dimensions matter most? For example: accuracy, completeness, tone, specificity, timeliness, format consistency."
+3. "Give me 3-5 real or realistic scenarios you'd run this on — different enough to test the workflow's range. For each, briefly describe the input and what you'd look for in the output."
+4. "What's your minimum bar? What quality level is acceptable vs. needs more work?"
+
+Capture the answers for the Evaluation Criteria section of the spec.
 
 #### Step 9 — Generate AI Building Block Spec
 
 Write to `outputs/[workflow-name]-building-block-spec.md` using the template below. Every section is mandatory unless marked (optional). Do not add, remove, rename, or reorder sections.
 
-**Before writing, run the Constructing Skill Needs Checklist** (at the end of this step) to verify all required data has been captured.
+**Before writing, run the Build Skill Needs Checklist** (at the end of this step) to verify all required data has been captured.
 
 ---
 
@@ -519,6 +536,23 @@ For each tool identified in the Integration column of the Step-by-Step Decomposi
 
 **[Platform]** with [setup requirements]. [Recommendation for frequent use.]
 
+## Evaluation Criteria
+
+### What good output looks like
+[Concrete description in plain language — what would make you say "this is exactly right"?]
+
+### Quality dimensions
+[Which dimensions matter for this workflow — e.g., accuracy, completeness, tone, format, timeliness, specificity]
+
+### Test scenarios
+[3-5 representative inputs that exercise the workflow's range — real or realistic examples]
+
+| # | Scenario | Input description | What to look for |
+|---|----------|-------------------|------------------|
+
+### Minimum quality bar
+[What's acceptable vs. what needs iteration — in plain terms, not a numeric threshold]
+
 ## Stakeholders (optional — only for Organizational lens)
 
 [Role swimlane diagram and stakeholder details]
@@ -526,7 +560,7 @@ For each tool identified in the Integration column of the Step-by-Step Decomposi
 
 ---
 
-**Constructing Skill Needs Checklist**
+**Build Skill Needs Checklist**
 
 Before saving the spec, verify every item. If any is missing, go back and add it:
 
@@ -540,6 +574,7 @@ Before saving the spec, verify every item. If any is missing, go back and add it
 - [ ] Model Recommendation section is present with a default class
 - [ ] Data Readiness Summary is present (even if "all accessible")
 - [ ] Agent Configuration is present if orchestration = Agent (with Skills and Trigger Examples fields)
+- [ ] Evaluation Criteria section is present with at least 3 test scenarios
 
 #### Step 10 — Spec Approval Gate
 
@@ -563,20 +598,20 @@ Loop if the user requests changes — revise the spec and re-present for approva
 
 After the user approves, instruct them to **exit plan mode** if they entered it at the start of Design:
 
-> "Spec approved. **Exit plan mode now** (in Claude Code: `shift+tab` or `/plan`) so artifacts can be generated in the Construct phase."
+> "Spec approved. **Exit plan mode now** (in Claude Code: `shift+tab` or `/plan`) so artifacts can be generated in the Build phase."
 >
-> "To construct the workflow, run `/business-first-ai:construct-workflow` (or say *'Construct the workflow from my Building Block Spec'*)."
+> "To build the workflow, run `/business-first-ai:build` (or say *'Build the workflow from my Building Block Spec'*)."
 
 ## Outputs
 
 ### `outputs/[workflow-name]-building-block-spec.md` — AI Building Block Spec
 
-Uses the mandatory template defined in Step 9. Sections: Execution Pattern, Architecture Decisions, Scenario Summary, Step-by-Step Decomposition (with separate Orchestration/Integration/Intelligence columns), Autonomy Spectrum Summary, Skill Candidates (8 fields each), Agent Configuration (optional, with Skills and Trigger Examples), Step Sequence and Dependencies, Prerequisites, Context Inventory (with Location column), Data Readiness Summary, Integration Options (with Source URLs), Model Recommendation, Recommended Implementation Order, Where to Run, Stakeholders (optional).
+Uses the mandatory template defined in Step 9. Sections: Execution Pattern, Architecture Decisions, Scenario Summary, Step-by-Step Decomposition (with separate Orchestration/Integration/Intelligence columns), Autonomy Spectrum Summary, Skill Candidates (8 fields each), Agent Configuration (optional, with Skills and Trigger Examples), Step Sequence and Dependencies, Prerequisites, Context Inventory (with Location column), Data Readiness Summary, Integration Options (with Source URLs), Model Recommendation, Recommended Implementation Order, Where to Run, Evaluation Criteria (with test scenarios), Stakeholders (optional).
 
 ## Guidelines
 
 - Use plain language; avoid jargon unless the user introduced it
 - After writing the spec, tell the user: "AI Building Block Spec saved to `outputs/[name]-building-block-spec.md`."
 - Do not proceed past the Spec Approval Gate (Step 10) without explicit user approval
-- Do not research integration availability — that happens in the Construct phase
-- Do not generate platform artifacts — that happens in the Construct phase
+- Do not research integration availability — that happens in the Build phase
+- Do not generate platform artifacts — that happens in the Build phase

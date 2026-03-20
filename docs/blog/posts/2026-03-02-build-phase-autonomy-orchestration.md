@@ -13,10 +13,10 @@ The Business-First AI Framework's Build phase got a significant terminology and 
 
 <!-- more -->
 
-**New two-step design model.** Instead of picking from four execution patterns, Design now walks through two distinct decisions: first, [assess the workflow's autonomy level](../../business-first-ai-framework/build/design.md#autonomy-assessment) (Deterministic → Guided → Autonomous), then [choose an orchestration mechanism](../../business-first-ai-framework/build/design.md#orchestration-mechanism) (Prompt → Skill-Powered Prompt → Agent). This separates *how much independence the AI needs* from *who drives the workflow* — making each decision simpler and more deliberate.
+**New two-step design model.** Instead of picking from four execution patterns, Design now walks through two distinct decisions: first, [assess the workflow's autonomy level](../../business-first-ai-framework/design.md#autonomy-assessment) (Deterministic → Guided → Autonomous), then [choose an orchestration mechanism](../../business-first-ai-framework/design.md#orchestration-mechanism) (Prompt → Skill-Powered Prompt → Agent). This separates *how much independence the AI needs* from *who drives the workflow* — making each decision simpler and more deliberate.
 
 **Single Agent and Multi-Agent collapsed into "Agent."** Whether a workflow needs one agent or multiple is now an architecture detail decided during agent configuration — not a top-level pattern choice. This removes a premature decision point that often confused students.
 
-**Coach pages retired.** The "Use AI as Your Coach" pages have been removed. The [MCP server](../../mcp-server/index.md) and [Business-First AI plugin](../../use-the-cookbook/build/business-first-ai.md) now provide better guided experiences — the framework overview page links directly to them.
+**Coach pages retired.** The "Use AI as Your Coach" pages have been removed. The [MCP server](../../mcp-server/index.md) and [Business-First AI plugin](../../business-first-ai-framework/skills.md) now provide better guided experiences — the framework overview page links directly to them.
 
 These changes are live across all [Build documentation](../../business-first-ai-framework/build/index.md), the `framework-orchestrator` agent, and the `building-workflows` skill (Business-First AI plugin v5.0.1).

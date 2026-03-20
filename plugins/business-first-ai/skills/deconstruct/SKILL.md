@@ -1,5 +1,5 @@
 ---
-name: deconstructing-workflows
+name: deconstruct
 description: >
   This skill should be used when the user wants to deconstruct a workflow, break down a business
   process, or deeply analyze a workflow's steps, decisions, data flows, and failure modes.
@@ -26,8 +26,7 @@ Interactively discover a business workflow and decompose every step into a struc
    - **Ownership boundary** (organizational lens): Does this process have a single accountable owner for the end-to-end outcome? If different people own different segments with no single owner, it may be multiple workflows.
    If multiple workflows are detected: map out each one (working name, trigger, deliverable), present the breakdown, confirm boundaries with the user, and ask which to deconstruct first. Proceed with only the chosen workflow.
 3. **Name the workflow** — Present 2-3 name options following naming conventions (2-4 word noun phrase, Title Case). Confirm name, description, outcome, trigger, and type.
-4. **Register to Workflows database (if Notion is available)** — After naming is confirmed, check if the Notion MCP server is accessible. If so, create a row in the Workflows database with: Name, Description, Process Outcome, Type, Trigger, Status = "Under Development". Ask the user which Business Process domain this belongs to (or leave blank). If Notion is not available, skip this step silently and continue to the deep dive.
-5. **Deep dive** — Work through each step using the 6-question framework:
+4. **Deep dive** — Work through each step using the 6-question framework:
    - Discrete steps (is this actually multiple steps?)
    - Decision points (if/then branches, quality gates)
    - Data flows (inputs, outputs, sources, destinations)
@@ -77,5 +76,5 @@ For organizational workflows, also prompt for existing process documentation: SO
 - Use plain language; avoid jargon unless the user introduced it
 - Push beyond vague context answers like "domain knowledge" — identify the specific artifact
 - Surface the assumption that existing data storage and formats will "just work" for AI. Most people underestimate the work required to make data AI-accessible. Adopt a data strategist lens — help the user see where data reorganization, reformatting, or migration is needed before they commit to a workflow design that depends on inaccessible data. Push beyond "it's in the CRM" — ask how AI would access it.
-- After writing the Workflow Definition file, tell the user: "Workflow Definition saved to `outputs/[name]-definition.md`. Ready for Step 3 — Build."
+- After writing the Workflow Definition file, tell the user: "Workflow Definition saved to `outputs/[name]-definition.md`. Ready for Step 3 — Design."
 - If entering deconstruction without a prior analysis (direct workflow description), determine the lens by asking if not obvious from context.

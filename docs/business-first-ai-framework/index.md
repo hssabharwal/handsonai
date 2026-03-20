@@ -1,31 +1,37 @@
 ---
 title: Business-First AI Framework
-description: A three-step methodology — Analyze, Deconstruct, Build — for identifying AI opportunities in your workflows, breaking them into building blocks, and constructing working AI-powered workflows.
+description: A seven-step methodology — Analyze, Deconstruct, Design, Build, Test, Run, Improve — for identifying AI opportunities in your workflows, breaking them into building blocks, and constructing working AI-powered workflows.
 ---
 
 # Business-First AI Framework
 
 ## The Problem
 
-Most AI adoption starts with the technology — "we have ChatGPT, where should we use it?" This leads to shallow adoption and misses the workflows where AI creates real leverage. And even when people identify the right workflow, there's a gap between the idea and making it real — without a repeatable process to follow, they get stuck and stop. The Business-First AI Framework closes that gap: audit your workflows, identify where AI creates the most value, deconstruct those workflows into building blocks, then build.
+Most AI adoption starts with the technology — "we have ChatGPT, where should we use it?" This leads to shallow adoption and misses the workflows where AI creates real leverage. And even when people identify the right workflow, there's a gap between the idea and making it real — without a repeatable process to follow, they get stuck and stop. The Business-First AI Framework closes that gap: audit your workflows, identify where AI creates the most value, deconstruct those workflows into building blocks, design the architecture, build the components, test them, deploy, and improve over time.
 
 ## How It Works
 
-The framework is facilitated by **five skills** — reusable AI routines that guide you through each step interactively. You don't need to figure out the right questions to ask or remember the methodology — the skill drives the conversation, probes for details, and produces structured outputs you carry to the next step. You bring the domain knowledge about your work; the AI handles the process.
+The framework is facilitated by **seven skills** — reusable AI routines that guide you through each step interactively. You don't need to figure out the right questions to ask or remember the methodology — the skill drives the conversation, probes for details, and produces structured outputs you carry to the next step. You bring the domain knowledge about your work; the AI handles the process.
+
+<div class="framework-steps" markdown>
 
 | Step | Skill | What it guides you through |
 |------|-------|---------------------------|
-| 1. Analyze | `analyzing-workflows` | Auditing your workflows and surfacing AI opportunities |
-| 2. Deconstruct | `deconstructing-workflows` | Breaking a workflow into steps, decisions, data flows, and failure modes |
-| 3.1 Design | `designing-workflows` | Designing the AI implementation architecture |
-| 3.2 Construct | `constructing-workflows` | Generating platform-appropriate artifacts |
-| 3.3 Run | `running-workflows` | Deploying, testing, and iterating on the workflow |
+| 1. Analyze | `analyze` | Auditing your workflows and surfacing AI opportunities |
+| 2. Deconstruct | `deconstruct` | Breaking a workflow into steps, decisions, data flows, and failure modes |
+| 3. Design | `design` | Designing the AI implementation architecture |
+| 4. Build | `build` | Generating platform-appropriate artifacts |
+| 5. Test | `test` | Structured testing and quality evaluation |
+| 6. Run | `run` | Deploying and operating the workflow |
+| 7. Improve | `improve` | Evaluating and evolving running workflows |
 
-**Get the skills:** See [How to Add Skills to Your Platform](../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for step-by-step install instructions for Cowork, Claude Code, Claude.ai, Cursor, Codex CLI, Gemini CLI, and VS Code Copilot. The plugin name is `business-first-ai`.
+</div>
+
+**Get the skills:** See [Get the Skills](skills.md) for installation instructions across Claude Code, Cowork, Claude.ai, Cursor, Codex CLI, Gemini CLI, and VS Code Copilot. The plugin name is `business-first-ai`.
 
 ## The Framework
 
-Three steps, each with a structured process:
+Seven steps, each building on the last:
 
 ### Step 1: Analyze Workflows
 
@@ -38,43 +44,97 @@ Before you can apply AI to anything, you need to know *where* it fits. Step 1 is
 
 The audit starts by determining which lens to use — individual or organizational — then scans what AI already knows about your work, interviews you with lens-specific questions to fill gaps, and produces a classified report with specific opportunities and actionable first steps.
 
-**Facilitated by the `analyzing-workflows` skill.** See [Analyze Workflows](analyze.md) for details and [How to Add Skills to Your Platform](../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for installation on any supported platform.
+**Deliverable:** **Opportunity Report** (`outputs/ai-opportunity-report.md`) — prioritized opportunities with a Workflow Candidate Summary listing the workflows you've chosen to pursue.
+
+**Facilitated by the `analyze` skill.** See [Analyze Workflows](analyze.md) for details and [Get the Skills](skills.md) for installation on any supported platform.
 
 ---
 
 ### Step 2: Deconstruct Workflows
 
-Give your workflow clear structure through deep decomposition.
+Define *what* the business process does — every step, decision, and handoff — before deciding *how* to implement it with AI.
 
-Once you've identified a workflow worth automating, Step 2 deconstructs it so you understand every step, decision point, and dependency. You describe your workflow — rough and incomplete is fine — and the model interviews you to surface every hidden step, data handoff, and failure mode.
+How you enter depends on what you're starting with:
 
-The deconstruction uses the **five-question framework** to break down each step:
+- **You know the process.** You can describe the steps, decisions, and handoffs — the model interviews you to surface hidden details and capture it all in a structured format. This is the most common path for workflows you already do manually.
+- **You have a problem, not a process.** You know what's broken or slow, but there's no defined workflow yet. The model proposes a candidate workflow for you to react to, then decomposes it collaboratively.
+
+The model uses the **six-question framework** to break down each step:
 
 1. Is this step actually multiple steps bundled together?
 2. Are there decision points, branches, or quality gates?
 3. What data flows in and out?
 4. What context, documents, or reference materials does this step need?
 5. What happens when this step fails?
+6. Can the AI access, interpret, and persist the data this step needs?
 
-The deliverable is a **Workflow Definition** — a structured breakdown of your workflow into refined steps, with decision points, data flows, context needs, and failure modes captured for every step. The context needs and failure modes captured here directly inform design decisions in Step 3.
+This is purely the *what* — it captures the process without prescribing how AI will handle it. The *how* comes in Step 3 (Design), where the Workflow Definition becomes the input for architecture decisions.
 
-**Facilitated by the `deconstructing-workflows` skill.** See [Deconstruct Workflows](deconstruct/index.md) for details and [How to Add Skills to Your Platform](../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for installation on any supported platform.
+**Deliverable:** **Workflow Definition** (`outputs/[name]-definition.md`) — refined steps with decision points, data flows, context needs, failure modes, and a context shopping list.
+
+**Facilitated by the `deconstruct` skill.** See [Deconstruct Workflows](deconstruct/index.md) for details and [Get the Skills](skills.md) for installation on any supported platform.
 
 ---
 
-### Step 3: Build AI-Powered Workflows
+### Step 3: Design Your AI Workflow
 
-Design your AI implementation, construct the components, and run the workflow.
+Decide *how* the workflow should be built — before you build it.
 
-Step 2 produces a Workflow Definition — the analysis. Step 3 turns that analysis into a working AI workflow through three sub-steps, each with its own skill:
+The Design step takes your Workflow Definition and produces a complete blueprint for your AI workflow. The skill confirms your platform, extracts tool integrations and constraints from your Workflow Definition, assesses the workflow's autonomy level (Deterministic, Guided, or Autonomous), recommends an orchestration mechanism (Prompt, Skill-Powered Prompt, or Agent) and involvement mode, classifies each step on the autonomy spectrum, maps AI building blocks, identifies skill candidates, and documents agent blueprints when needed. The spec must be approved before moving to Build.
 
-**3.1: Design** (`designing-workflows`) — The skill confirms your platform, then extracts tool integrations, trigger/schedule, and constraints directly from the Workflow Definition — presenting a single confirmation block instead of asking individual questions. Based on the confirmed analysis, it assesses the workflow's autonomy level (Deterministic → Guided → Autonomous), recommends an orchestration mechanism (Prompt → Skill-Powered Prompt → Agent) and involvement mode, classifies each step on the autonomy spectrum, maps AI building blocks, identifies skill candidates, and documents agent blueprints when needed. Produces an **AI Building Block Spec** — a platform-agnostic blueprint that tells the model exactly what to build in 3.2.
+**Deliverable:** **AI Building Block Spec** (`outputs/[name]-building-block-spec.md`) — architecture decisions, autonomy assessment, orchestration mechanism, per-step classifications, skill candidates, agent blueprints, context inventory, and implementation order.
 
-**3.2: Construct** (`constructing-workflows`) — The skill tells the model what to build (the specs from Design); the model researches your platform's current tools and conventions via web search and generates the actual artifacts — context, skills, prompts, agents, MCP connections — in whatever format your platform requires. Only the components your orchestration mechanism needs are built.
+**Facilitated by the `design` skill.** See [Design Your AI Workflow](design.md) for the full guide with autonomy assessment, orchestration mechanism decision flow, and output format.
 
-**3.3: Run** (`running-workflows`) — The skill produces a **Run Guide** tailored to your platform and technical comfort level: what was built and where it lives, step-by-step setup instructions, a guided first-run test with sample input, and next steps for ongoing use.
+---
 
-**Facilitated by the `designing-workflows`, `constructing-workflows`, and `running-workflows` skills.** See [Build Workflows](build/index.md) for the full guide, including mechanism-specific construct paths and three worked examples across the autonomy spectrum.
+### Step 4: Build the Components
+
+Generate platform-appropriate artifacts from the approved spec.
+
+The Build step starts with a **Prepare Context** phase — systematically resolving the context needs identified during Deconstruct and Design. Then the model researches your platform using a curated platform registry, integration registries, and web search to generate the actual artifacts — context, skills, prompts, agents, MCP connections — in whatever format your platform requires. Only the components your orchestration mechanism needs are built.
+
+**Deliverable:** **Platform artifacts** — prompts, skills, agents, and configs generated for your specific platform, plus resolved context artifacts (style guides, reference materials, examples).
+
+**Facilitated by the `build` skill.** See [Build](build/index.md) for mechanism-specific build paths and platform research details.
+
+---
+
+### Step 5: Test the Workflow
+
+Structured testing against the evaluation criteria from Design.
+
+Your first run is a test, not a deployment. The Test step walks you through a quick smoke test (does it run at all?), then a full eval suite where you run each test scenario from the Building Block Spec and score the output on the quality dimensions defined during Design. You also test individual building blocks in isolation and establish a baseline for future comparison.
+
+Most workflows need 2-4 iterations between Build and Test before they produce reliably good output. When something is off, the skill helps you diagnose which building block to fix and sends you back to Build with a clear target.
+
+**Deliverable:** **Test Results** (`outputs/[name]-test-results.md`) — eval scorecard with scores per scenario and dimension, baseline averages, diagnosed issues, and a readiness assessment.
+
+**Facilitated by the `test` skill.** See [Test](test.md) for the full evaluation process and troubleshooting guide.
+
+---
+
+### Step 6: Run the Workflow
+
+Deploy and operate your tested workflow.
+
+Once your workflow passes testing, Run helps you put it into production. The skill produces a Run Guide tailored to your platform and technical comfort level, then helps you choose the right run pattern — from simple paste-and-run to fully automated schedules. For organizational workflows, Run also covers sharing with your team and setting up ongoing operations.
+
+**Deliverable:** **Run Guide** (`outputs/[name]-run-guide.md`) — artifact inventory, setup steps, first production run instructions, run pattern, and operationalization guidance.
+
+**Facilitated by the `run` skill.** See [Run](run.md) for run patterns, deployment options, and operationalization guidance.
+
+---
+
+### Step 7: Improve Over Time
+
+Evaluate and evolve running workflows.
+
+Workflows are not set-and-forget. Over time, business context changes, new tools become available, and quality can drift. The Improve step teaches you when and how to revisit a running workflow — watch for quality signals, re-run your eval suite to catch regressions, and assess whether the workflow should graduate to a more capable orchestration mechanism. Four outcomes: no changes needed, tune it, redesign it, or evolve it.
+
+**Deliverable:** **Improvement Plan** (`outputs/[name]-improvement-plan.md`) — current vs. baseline scores, quality signals, graduation assessment, decision outcome, and specific next actions.
+
+**Facilitated by the `improve` skill.** See [Improve](improve.md) for the full evaluation and graduation framework.
 
 ---
 
@@ -127,7 +187,7 @@ When classifying opportunities from Step 1, it helps to know what **type** of AI
 
 ### Autonomy Spectrum
 
-Used to classify each workflow step during [Design](build/design.md):
+Used to classify each workflow step during [Design](design.md):
 
 | Level | Description |
 |-------|-------------|
@@ -153,11 +213,12 @@ Single-agent vs. multi-agent is an architecture detail decided during agent conf
 !!! tip "Get guided help"
 
     - **MCP Server** — [Connect the MCP server](../mcp-server/index.md) and ask your AI to walk you through the framework step by step.
-    - **Plugin skills** — Install the [Business-First AI plugin](../use-the-cookbook/build/business-first-ai.md) for interactive skills that guide you through Analyze, Deconstruct, and Build.
+    - **Skills** — Install the [Business-First AI skills](skills.md) for interactive guidance through all seven steps.
 
 1. **[Analyze Workflows](analyze.md)** — identify your best AI candidates
-2. **Pick your highest-impact opportunity** — don't try to pursue everything at once
-3. **[Deconstruct the workflow](deconstruct/index.md)** — break it into discrete steps
-4. **[Design](build/design.md)** your AI workflow — assess autonomy, choose an orchestration mechanism, classify steps, map building blocks
-5. **[Build](build/index.md)** the components your orchestration mechanism requires
-6. **Test on a real scenario** and iterate
+2. **[Deconstruct the workflow](deconstruct/index.md)** — break it into discrete steps
+3. **[Design](design.md)** your AI workflow — assess autonomy, choose an orchestration mechanism, classify steps, map building blocks
+4. **[Build](build/index.md)** the components your orchestration mechanism requires
+5. **[Test](test.md)** your workflow against evaluation criteria and establish a quality baseline
+6. **[Run](run.md)** — deploy, choose a run pattern, and operationalize
+7. **[Improve](improve.md)** — periodically evaluate, catch regressions, and evolve

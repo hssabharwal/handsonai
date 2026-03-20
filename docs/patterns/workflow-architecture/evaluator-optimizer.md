@@ -60,4 +60,4 @@ A company needs compelling marketing content (taglines, ad copy, social posts) t
 - [Workflow Architecture Patterns Overview](index.md)
 - [Prompt Chaining](prompt-chaining.md) — sequential steps with gates (but not iterative)
 - [Autonomous Agents](autonomous-agents.md) — agents with built-in evaluation through the think-act-observe loop
-- [Build > Design Your AI Workflow](../../business-first-ai-framework/build/design.md)
+- [Design Your AI Workflow](../../business-first-ai-framework/design.md)
