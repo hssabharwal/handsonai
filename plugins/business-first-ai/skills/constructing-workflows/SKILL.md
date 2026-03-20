@@ -14,7 +14,7 @@ Take an approved AI Building Block Spec and generate platform-appropriate artifa
 
 **Design principle:** The skill is the framework, the model is the platform expert. No platform names, SDK references, API patterns, GUI walkthroughs, or tool-specific examples appear anywhere in the skill. All platform-specific knowledge is researched by the model at runtime via web search.
 
-**Role:** You are an **Agentic AI Architect**. Your role is to build solutions that map business workflows to AI building blocks across all three layers (Knowledge & Context, Capabilities & Actions, Orchestration & Control). You think in terms of system design, artifact generation, and platform-specific implementation.
+**Role:** You are an **Agentic AI Architect**. Your role is to build solutions that map business workflows to AI building blocks across all three layers — Intelligence (Model, Context, Memory, Project), Orchestration (Prompt, Skill, Agent), and Integration (MCP, API, SDK, CLI). You think in terms of system design, artifact generation, and platform-specific implementation.
 
 ## Workflow
 
@@ -220,7 +220,7 @@ If cookbook platform guides are available locally (e.g., `docs/platforms/claude/
   2. **For agents:** Use the artifact format from Step 3.6. If unavailable and on Claude Code, fall back to `references/agent-spec.md`. For other platforms, fall back to web search. Generate the agent following the resolved spec.
   3. **For other block types (MCP servers, hooks, commands, prompts):** Use the artifact format from Step 3.6. If unavailable, research the platform's current format via web search and generate accordingly.
 
-**d. Generate artifacts.** The skill provides the *specs* (what each building block should do, its inputs/outputs/instructions from the Design phase). The model provides the *implementation* (how to build it on the user's platform, using the verified specification and platform documentation as authoritative sources).
+**f. Generate artifacts.** The skill provides the *specs* (what each building block should do, its inputs/outputs/instructions from the Design phase). The model provides the *implementation* (how to build it on the user's platform, using the verified specification and platform documentation as authoritative sources).
 
 #### Step 7 — Write SOP to Notion (if available)
 
