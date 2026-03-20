@@ -1,0 +1,115 @@
+{
+  "version": "1.0",
+  "platforms": {
+    "claude-code": {
+      "mode": "code",
+      "language": "markdown",
+      "agent": "https://code.claude.com/docs/en/sub-agents",
+      "skill": "https://code.claude.com/docs/en/skills",
+      "memory": "https://code.claude.com/docs/en/memory",
+      "project": "https://code.claude.com/docs/en/projects",
+      "mcp-build": "https://modelcontextprotocol.io/quickstart"
+    },
+    "claude-agents-sdk": {
+      "mode": "code",
+      "language": "python",
+      "agent": "https://docs.anthropic.com/en/docs/agents-sdk"
+    },
+    "openai-agents-sdk": {
+      "mode": "code",
+      "language": "python",
+      "agent": "https://openai.github.io/openai-agents-python/agents/"
+    },
+    "openai-codex": {
+      "mode": "code",
+      "language": "markdown",
+      "agent": "https://developers.openai.com/codex/subagents"
+    },
+    "gemini-cli": {
+      "mode": "code",
+      "language": "markdown",
+      "agent": "https://geminicli.com/docs/core/subagents"
+    },
+    "vertex-ai-adk": {
+      "mode": "code",
+      "language": "python",
+      "agent": "https://google.github.io/adk-docs/"
+    },
+    "copilot-studio": {
+      "mode": "guided",
+      "agent": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/"
+    },
+    "workspace-studio": {
+      "mode": "guided",
+      "agent": "https://workspace.google.com/products/workspace-studio/"
+    },
+    "chatgpt-agent-mode": {
+      "mode": "guided",
+      "agent": "https://help.openai.com/en/articles/agent-mode"
+    }
+  },
+  "curated-tools": [
+    {
+      "name": "Google Workspace CLI",
+      "type": "cli",
+      "url": "https://github.com/googleworkspace/cli",
+      "integrations": ["google-calendar", "gmail", "drive", "sheets", "docs"],
+      "notes": "Official Google CLI for workspace automation"
+    },
+    {
+      "name": "GitHub CLI",
+      "type": "cli",
+      "url": "https://cli.github.com",
+      "integrations": ["github"],
+      "notes": "Official GitHub CLI for repos, PRs, issues, actions"
+    },
+    {
+      "name": "Slack CLI",
+      "type": "cli",
+      "url": "https://api.slack.com/automation/cli",
+      "integrations": ["slack"],
+      "notes": "Official Slack CLI for workflow automation"
+    },
+    {
+      "name": "Google Calendar MCP",
+      "type": "mcp",
+      "url": "https://github.com/anthropics/google-calendar-mcp",
+      "integrations": ["google-calendar"],
+      "notes": "MCP server for Google Calendar access"
+    }
+  ],
+  "skill-registries": [
+    {
+      "name": "skills.sh",
+      "type": "web-search",
+      "url": "https://skills.sh",
+      "notes": "Community skill marketplace"
+    },
+    {
+      "name": "Context7",
+      "type": "mcp",
+      "tool": "query-docs",
+      "notes": "Library docs and skills via MCP"
+    }
+  ],
+  "integration-registries": [
+    {
+      "name": "Context7",
+      "type": "mcp",
+      "tool": "query-docs",
+      "notes": "Library docs, API references, SDK docs via MCP"
+    },
+    {
+      "name": "context-hub",
+      "type": "local",
+      "check": "context-hub --version",
+      "notes": "Community-maintained integration registry (CLI)"
+    },
+    {
+      "name": "MCP Registry",
+      "type": "web-search",
+      "url": "https://mcpregistry.dev",
+      "notes": "MCP server directory"
+    }
+  ]
+}
