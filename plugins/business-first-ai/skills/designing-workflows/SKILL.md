@@ -197,6 +197,71 @@ If a step's inputs include items flagged as "No" or "Partial" in the Context Sho
 
 Present the mapping as a clear table. Walk through reasoning for non-obvious classifications. Ask if the user wants to adjust anything.
 
+**Integration Discovery**
+
+After classifying every step, recommend available integration options for each tool need identified in the Integration layer. This helps students who don't know what CLIs, APIs, MCP servers, or SDKs exist for a given tool.
+
+**Discovery process (4-part chain):**
+
+1. **Curated tool catalog** — Fetch the `curated-tools` section from the remote platform registry JSON (`https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/plugins/business-first-ai/registries/platform-registry.json`). Match workflow tool needs against each entry's `integrations` field. Curated tools are instructor-vetted recommendations — present them first, marked as recommended.
+
+2. **Model knowledge** — Supplement with additional integration options the model knows about. For well-known integrations (Google Calendar, Gmail, Slack, GitHub, etc.), skip web search — model knowledge is sufficient.
+
+3. **Integration registries** — Fetch the `integration-registries` list from the same remote registry JSON. For each cataloged source, search for integrations matching the tool need:
+
+   ```json
+   {
+     "integration-registries": [
+       {
+         "name": "Context7",
+         "type": "mcp",
+         "tool": "query-docs",
+         "notes": "Library docs, API references, SDK docs via MCP"
+       },
+       {
+         "name": "context-hub",
+         "type": "local",
+         "check": "context-hub --version",
+         "notes": "Community-maintained integration registry (CLI)"
+       },
+       {
+         "name": "MCP Registry",
+         "type": "web-search",
+         "url": "https://mcpregistry.dev",
+         "notes": "MCP server directory"
+       }
+     ]
+   }
+   ```
+
+   **MCP tool availability:** Before querying an MCP-type registry source (e.g., Context7), check the user's configured MCP servers. If the required MCP server is not configured, skip it and proceed to the next source in the chain.
+
+4. **Web search (validation + fallback)** — For less common tools, when uncertain, or when no match is found in prior steps, search the web to verify existence and find current docs. Catches new releases and uncataloged tools. Batch searches when multiple tool needs are identified to avoid latency.
+
+   **Latency management:** Use judgment about when web search adds value. Well-known integrations (Google Calendar, Gmail, Slack, GitHub) don't need validation searches. Reserve web search for new or niche tools.
+
+   **Precedence rule:** When web search results contradict model knowledge (e.g., model proposes an MCP server that web search reveals was deprecated), web search takes precedence. Flag the discrepancy and present only verified options.
+
+**Matching semantics:** Matching is model-driven, not exact string matching. The model reads the workflow's tool needs (e.g., "Google Calendar access" from the step classification) and matches them against the `integrations` array values (e.g., `"google-calendar"`) using semantic understanding. This allows natural language tool needs to match standardized integration tags without requiring exact normalization.
+
+**Presentation format:**
+
+> **[Tool] access needed (Steps N, M):**
+>
+> **Curated (recommended):**
+> | Block | Option | Trade-off |
+> |-------|--------|-----------|
+> | MCP | [Name] MCP | Easiest — plug-and-play |
+> | CLI | [Name] CLI | Good for automation/scripting |
+>
+> **Also available:**
+> | Block | Option | Trade-off |
+> |-------|--------|-----------|
+> | API | [Name] REST API | Most flexible, more code |
+> | SDK | [Name] Client Library | Best DX for code-heavy builds |
+>
+> *Recommendation: [block] for [rationale]*
+
 #### Step 6b — Skill Discovery
 
 For every step classified as needing a **Skill** in Step 6, search for existing skills before assuming one needs to be built.
@@ -208,6 +273,8 @@ For every step classified as needing a **Skill** in Step 6, search for existing 
 2. **External registries** — Fetch the `skill-registries` list from the remote platform registry:
 
    `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/plugins/business-first-ai/registries/platform-registry.json`
+
+   The registry JSON is fetched once per session and cached. Both Skill Discovery (Step 6b) and Integration Discovery use the same cached copy.
 
    This provides a curated, always-current list of sites to search. For each registry, search for skills matching the step's requirements.
 
