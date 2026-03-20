@@ -24,10 +24,11 @@ Determine which build path the user followed:
 
 - **Path 1 (Model-built):** The model generated platform artifacts during the Construct phase. Look for generated artifacts in the working directory and load the Building Block Spec from `outputs/[workflow-name]-building-block-spec.md`.
 - **Path 2 (Manual build):** The user chose to build artifacts themselves using the spec as a guide. Load the Building Block Spec from `outputs/[workflow-name]-building-block-spec.md`.
+- **Path 3 (Guided-mode):** The model generated GUI instruction documents during the Construct phase (for guided-mode platforms like Copilot Studio, Workspace Studio, ChatGPT Agent Mode). The `mode` field in the Building Block Spec indicates `guided`.
 
 If the user specifies a file path, use that. Otherwise, look for the most recent Building Block Spec in `outputs/` and check conversation context for which path was chosen.
 
-If unclear, ask: "Did the model generate your workflow artifacts, or are you building them yourself from the spec?"
+If unclear, ask: "Did the model generate your workflow artifacts (Path 1), are you building them yourself from the spec (Path 2), or did the model produce GUI instruction documents for a guided-mode platform (Path 3)?"
 
 #### Step 2 — Generate Run Guide
 
@@ -81,15 +82,35 @@ Provide a Construction Guide instead of setup instructions. The user will build 
 
 **D. What to do next** — Same as Variant A: repeatable trigger, sharing, iteration guidance.
 
+**Variant C: Guided-mode platforms (Path 3)**
+
+The Construct phase produced GUI instruction documents rather than deployable code artifacts. The Run Guide walks the user through following these instructions.
+
+**A. What was built** — List the instruction documents produced, what each covers, and which platform screens they reference. Use a table:
+
+| Document | What it covers | Platform area |
+|----------|---------------|---------------|
+
+**B. Setup steps** — Walk through following the GUI instructions in order:
+- Which platform screen to open first
+- What to configure at each step (referencing the instruction document)
+- What to verify after each configuration step (confirmation messages, visual indicators)
+- If a step requires permissions or admin access the user may not have, flag it
+
+**C. First run** — Same as Variant A: guided test with sample input, expected behavior at each step, what good output looks like, common first-run issues.
+
+**D. What to do next** — How to modify the configuration later, share with team members (if the platform supports it), when to revisit and update, change management notes for organizational workflows.
+
 Present the Run Guide directly in the conversation. Also save it to `outputs/[workflow-name]-run-guide.md` so the user has a reference they can follow later or share with teammates.
 
 ## Outputs
 
 ### `outputs/[workflow-name]-run-guide.md` — Run Guide
 
-Plain-language guide for getting the workflow running. Two variants:
+Plain-language guide for getting the workflow running. Three variants:
 - **Model-built:** Artifact inventory, step-by-step setup instructions tailored to the user's platform, a guided first-run test with sample input, and next steps for ongoing use and team sharing.
 - **Manual build:** Construction Guide with artifact list, build sequence with platform-specific format guidance, first-run test, and next steps.
+- **Guided-mode:** Instruction walkthrough, step-by-step GUI setup guide, first-run test, and next steps.
 
 ## Guidelines
 
