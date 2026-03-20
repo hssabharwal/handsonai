@@ -23,7 +23,7 @@ These are platform-agnostic concepts. Every major AI platform implements them, t
     Not sure where to start? The [Choosing the Right Building Block](comparison.md) page has comparison tables for all blocks and a "I want to..." decision guide.
 
 !!! tip "Using building blocks for workflow analysis"
-    The [Business-First AI Framework](../business-first-ai-framework/index.md) uses these building blocks as the analysis tool in [Design Your AI Workflow](../business-first-ai-framework/build/design.md), where each step of a workflow gets mapped to the building blocks it needs.
+    The [Business-First AI Framework](../business-first-ai-framework/index.md) uses these building blocks as the analysis tool in [Design Your AI Workflow](../business-first-ai-framework/design.md), where each step of a workflow gets mapped to the building blocks it needs.
 
 <div class="grid cards single-column" markdown>
 
@@ -448,7 +448,7 @@ A project is an active workspace — it provides standing instructions, persiste
 **Framework and courses:**
 
 - [Business-First AI Framework](../business-first-ai-framework/index.md) — applies building blocks to workflow analysis
-- [Design Your AI Workflow](../business-first-ai-framework/build/design.md) — mapping workflow steps to building blocks
+- [Design Your AI Workflow](../business-first-ai-framework/design.md) — mapping workflow steps to building blocks
 - [Agentic AI for Leaders](../courses/leaders/index.md) — course covering AI strategy and building blocks
 - [Claude for Builders](../courses/builders/index.md) — hands-on course building with these blocks
 

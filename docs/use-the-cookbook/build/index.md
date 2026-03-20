@@ -11,9 +11,9 @@ A growing collection of ready-to-use **agents**, **skills**, and **prompts** tha
 
 ## :material-rocket-launch: Business-First AI Framework
 
-The [Business-First AI Framework](../../business-first-ai-framework/index.md) as executable skills. Analyze AI workflow opportunities, deconstruct workflows into AI building blocks, and build working AI workflows. 1 agent, 5 skills.
+The [Business-First AI Framework](../../business-first-ai-framework/index.md) as executable skills. A seven-step methodology: Analyze, Deconstruct, Design, Build, Test, Run, Improve. 1 agent, 7 skills.
 
-[:octicons-arrow-right-24: Business-First AI Framework](business-first-ai.md){ .md-button }
+[:octicons-arrow-right-24: Business-First AI Framework](../../business-first-ai-framework/skills.md){ .md-button }
 
 ---
 

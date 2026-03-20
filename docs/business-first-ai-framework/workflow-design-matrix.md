@@ -70,9 +70,9 @@ These three worked examples from the [Build](build/index.md) section illustrate 
 
 | Example | Archetype | Why |
 |---------|-----------|-----|
-| [Deterministic Automation](build/deterministic-automation.md) | **Deterministic + Automated** | Fixed rules, structured input/output, runs the same way every time with no human steering |
-| [AI Collaborative](build/ai-collaborative.md) | **Guided + Augmented** | AI researches and drafts; human reviews, refines, and decides what to use |
-| [Autonomous Agent](build/autonomous-agent.md) | **Autonomous + Augmented** | Multi-agent pipeline executes autonomously with one human review gate before publishing |
+| [Deterministic Automation](examples/deterministic-automation.md) | **Deterministic + Automated** | Fixed rules, structured input/output, runs the same way every time with no human steering |
+| [AI Collaborative](examples/ai-collaborative.md) | **Guided + Augmented** | AI researches and drafts; human reviews, refines, and decides what to use |
+| [Autonomous Agent](examples/autonomous-agent.md) | **Autonomous + Augmented** | Multi-agent pipeline executes autonomously with one human review gate before publishing |
 
 ## Choosing Your Archetype
 
@@ -96,7 +96,7 @@ Most workflows evolve along predictable paths as you build confidence:
 
 ### Orchestration Mechanisms
 
-The [orchestration mechanism](build/design.md#orchestration-mechanism) describes *who drives the workflow*. The matrix describes *how the AI and human interact*. They're complementary:
+The [orchestration mechanism](design.md#orchestration-mechanism) describes *who drives the workflow*. The matrix describes *how the AI and human interact*. They're complementary:
 
 | Orchestration Mechanism | Typical Archetypes |
 |------------------------|-------------------|
@@ -116,7 +116,7 @@ The seven [workflow architecture patterns](../patterns/workflow-architecture/ind
 
 ## Related
 
-- [Business-First AI Framework](index.md) — the full three-step methodology
-- [Design Your AI Workflow](build/design.md) — assess autonomy, choose an orchestration mechanism, and map building blocks
+- [Business-First AI Framework](index.md) — the full seven-step methodology
+- [Design Your AI Workflow](design.md) — assess autonomy, choose an orchestration mechanism, and map building blocks
 - [Build Workflows](build/index.md) — worked examples across the matrix
 - [Workflow Architecture Patterns](../patterns/workflow-architecture/index.md) — implementation blueprints for each pattern

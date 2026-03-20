@@ -1,66 +1,51 @@
 ---
-title: "Step 3: Build AI-Powered Workflows"
-description: Design your AI workflow — choose your architecture approach (no-code or code-first), assess autonomy level, choose an orchestration mechanism, and map building blocks — then construct platform-appropriate artifacts and get a Run Guide for getting it running.
+title: "Step 4: Build"
+description: Generate platform-appropriate artifacts from your approved AI Building Block Spec — resolve context needs, build mechanism-specific components, and prepare your workflow for testing.
 ---
 
-# Step 3: Build AI-Powered Workflows
+# Step 4: Build
+
+> **Part of:** [Business-First AI Framework](../index.md)
 
 ## Where You Are
 
-You've just finished [Deconstructing](../deconstruct/index.md) your workflow. You should have:
+You've just finished [Design (Step 3)](../design.md). You should have:
 
-- **Workflow Definition** (`[name]-definition.md`) — every step in your workflow broken down with decision points, data flows, context needs, and failure modes
+- **AI Building Block Spec** (`[name]-building-block-spec.md`) — your approved blueprint with architecture approach, autonomy level, orchestration mechanism, step classifications, skill candidates, agent blueprints, and implementation order
 
-This file is your input. Build has three parts:
+If you're returning from [Test (Step 5)](../test.md) to fix issues, you may also have test results telling you which building block needs adjustment.
 
-- **3.1: Design** — decide how the workflow should be built
-- **3.2: Construct** — build the components
-- **3.3: Run** — launch and operate the workflow
+## Prepare Context
 
-![Step 3: Build Workflow — Design, Construct, and Run phases showing the flow from Workflow Definition through plan mode collaboration, AI Building Block Spec approval, two Construct paths (you build or model builds), and Run/Test via the launch guide](../../assets/images/ai-workflow-build-design-construct-run-steps.jpg)
+Before the model generates any artifacts, you need to resolve the context your workflow depends on. The **Context Shopping List** (from [Deconstruct](../deconstruct/index.md)) and the **Data Readiness Summary** (from Design) identify every document, file, and reference material the workflow needs — and flag which ones are available, which need to be created, and which need formatting.
 
-## 3.1: Design
+Build begins by working through this list:
 
-Before building anything, decide *how* the workflow should be built. The Design phase takes your Workflow Definition and produces an **AI Building Block Spec** — a complete blueprint that tells you exactly what to build.
+- **Find existing documents** — Locate the style guides, templates, reference materials, and example files your workflow needs. These may live in shared drives, Notion databases, or on your local machine.
+- **Create missing materials** — Some context does not exist yet. A workflow that standardizes writing needs a style guide. A workflow that evaluates proposals needs scoring criteria. Create these now.
+- **Format for AI consumption** — AI works best with clearly structured text. Convert complex spreadsheets into Markdown tables. Extract relevant sections from long PDFs. Add headers and labels so the model can navigate reference materials efficiently.
 
-Design covers:
+!!! tip "Context is the highest-leverage building block"
+    When a workflow produces generic or off-brand output, the fix is almost always better context — not a more complex prompt. Invest time here. The quality of your context directly determines the quality of your workflow's output.
 
-1. **Architecture approach** — Choose between **no-code** (build in a platform UI) and **code-first** (build with APIs and SDKs). The model recommends based on signals like integration needs, deployment requirements, and technical comfort. This choice shapes which tools and building blocks are available in subsequent steps.
+## Choose Your Build Path
 
-2. **Architecture decisions** — The model confirms your platform (the one thing not in the Workflow Definition), then extracts tool integrations, trigger/schedule, and browser access flags directly from the definition. It presents a single confirmation block with the platform, tools needed, and trigger implications — you review and adjust. These gate all subsequent recommendations.
+The model offers two paths:
 
-3. **Autonomy assessment** — Where does the whole workflow sit on the autonomy spectrum?
+1. **"I'll build it"** — The model generates all artifacts (skills, agents, prompts, configs) based on the approved spec. This is the default.
+2. **"I'll build it myself"** — The model provides a Construction Guide with build sequence, format references, and pointers to creation skills you can invoke — but you do the building.
 
-    | Level | Orchestration implications |
-    |-------|--------------------------|
-    | **Deterministic** | Prompt or skill-powered prompt likely sufficient |
-    | **Guided** | Skill-powered prompt or agent |
-    | **Autonomous** | Agent required |
+Either way, the model starts by checking the **Data Readiness Summary** from your spec. Items flagged as "Partial" or "No" for AI accessibility are gated — they must be resolved (exporting data, granting access, reformatting files) before dependent steps can proceed.
 
-4. **Orchestration mechanism** — Who drives the workflow? Prompt, Skill-Powered Prompt, or Agent — with involvement mode (Augmented or Automated) determined by your architecture decisions. Single-agent vs. multi-agent is decided during agent configuration, not here.
-5. **Autonomy classification** — Classify each step (Human → Deterministic → Guided → Autonomous)
-6. **Building block mapping** — Map each step to AI building blocks (Prompt, Context, Skill, Agent, MCP, Project, API, SDK)
-7. **Skill candidates** — Tag steps that should become reusable skills, with generation-ready detail
-8. **Agent blueprints** (when applicable) — Platform-agnostic specification for each agent (name, description, instructions, model, tools, context, goal) — built into working agents by the model in 3.2
+## Mechanism-Specific Build Paths
 
-**[Design Your AI Workflow](design.md)** — the full Design guide with autonomy assessment, orchestration mechanism decision flow, and output format | **[Design Prompt (Portable)](design-prompt.md)** — copy-paste version for any AI chat tool
-
-**Produces:** `[name]-building-block-spec.md` — your AI Building Block Spec with architecture approach, architecture decisions, autonomy level assessment, orchestration mechanism with involvement mode, step classifications, skill candidates, agent blueprints (when applicable), code-first selections (when applicable), and implementation order.
-
-## 3.2: Construct
-
-The AI Building Block Spec tells you exactly what to build — and the orchestration mechanism determines which steps you follow. The model uses your architecture decisions (platform, integrations) and resolves deferred decisions (specific platform offering, shareability, code comfort) to generate artifacts in the right format for your specific setup.
-
-Before generating artifacts, the model [discovers what creation tools are available](construct.md#how-creation-tools-are-discovered) in your environment. If you have specialized skills installed (like a skill-creator or agent-development skill), the model delegates to them for higher-quality output. Otherwise, it generates everything inline. This happens automatically — you just confirm the plan.
-
-Work through **only** the steps that apply to your mechanism:
+The orchestration mechanism determines which steps you follow. Work through **only** the steps that apply:
 
 === "Prompt"
 
     1. **Create context** — Build the context artifacts listed in your Building Block Spec's Context Inventory
     2. **Set up project workspace** (optional) — If the Building Block Spec's Where to Run recommends a project
     3. **Generate platform artifacts** — The model generates the prompt and any configuration needed for your platform
-    4. **Run Guide** → 3.3
 
 === "Skill-Powered Prompt"
 
@@ -68,7 +53,6 @@ Work through **only** the steps that apply to your mechanism:
     2. **Set up project workspace** (optional) — If the Building Block Spec's Where to Run recommends a project
     3. **Build skills** — Build skills for the steps tagged as skill candidates in your Building Block Spec. The model generates skills in the format appropriate to your platform.
     4. **Generate platform artifacts** — The model generates the prompt and skill configurations for your platform
-    5. **Run Guide** → 3.3
 
 === "Agent"
 
@@ -76,58 +60,47 @@ Work through **only** the steps that apply to your mechanism:
     2. **Build skills** — Build skills for tagged candidates
     3. **Connect tools** — Wire external tools from the Tools and Connectors section of your Building Block Spec
     4. **Generate platform artifacts** — The model generates agent configs (single or multi-agent), skills, and connectors for your platform
-    5. **Run Guide** → 3.3
 
-The model handles each step based on your orchestration mechanism. See [Construct](construct.md) for details on what you'll need to do yourself (gathering context, configuring MCP connections, building agents on your platform).
+## How the Model Builds for Your Platform
 
-## 3.3: Run
+The model doesn't guess your platform's artifact format or available integrations. It uses a tiered research approach that starts with curated sources and supplements with web search:
 
-The final Construct deliverable is a **Run Guide** (`[name]-run-guide.md`) — a plain-language walkthrough tailored to your platform, architecture approach, and technical comfort level. It tells you exactly what to do with the artifacts that were built:
+**Platform research:**
 
-1. **What was built** — Every artifact listed with what it does and where it lives
-2. **Setup steps** — Numbered instructions for getting each artifact into the right place on your platform (menu paths, button names, what you should see when it's working)
-3. **First run** — A guided test with sample input, expected behavior, and common first-run issues
-4. **What to do next** — How to run it again, share with teammates, and when to revisit
+1. **Curated platform registry** — The framework maintains a [platform registry](https://github.com/jamesgray-ai/handsonai/blob/main/plugins/business-first-ai/registries/platform-registry.json) with documentation links, artifact format specs, platform mode (code vs. guided), and language for each supported platform. The model fetches this first to get authoritative format requirements.
+2. **Platform documentation** — Using the doc URLs from the registry, the model reads the current artifact specifications for your platform — frontmatter schemas, file structure, naming conventions, and platform-specific extensions.
+3. **Web search (verification and fallback)** — The model searches the web to verify that documentation is current and to find resources for platforms or features not yet in the registry.
 
-The Run Guide is saved to `[name]-run-guide.md` so you can reference it later or share it with your team.
+**Integration research:**
 
-**The first run is a test, not a final product.** Expect to run, evaluate, go back to 3.2 Construct to adjust, and run again. This cycle is normal — most workflows need 2-4 iterations before they produce reliably good output.
+1. **Integration Options from Design** — The Building Block Spec already identifies which integrations you need and includes source URLs discovered during Design's Integration Discovery (which itself used the curated tool catalog, integration registries, and web search).
+2. **Platform-specific setup** — For each integration, the model researches how to connect it on your specific platform: installation steps, configuration, authentication, and prerequisites.
+3. **Integration registries** — The platform registry catalogs known sources for integration documentation (MCP registries, platform marketplaces, connector catalogs). The model checks these before falling back to web search.
 
-You're evaluating: Did the output match what you expected? Were any steps skipped? Was the output specific to your business, or generic?
+**Code vs. guided mode:**
 
-**[Run guide](run.md)** — how to choose between a normal chat and a project, and how to troubleshoot first-run issues
+The platform's mode (from the registry) determines what gets generated:
 
-### Test, iterate, repeat
+- **Code mode** (Claude Code, Cursor, Codex CLI, etc.) — Source files: markdown skills, agent definitions, prompt files, MCP configurations
+- **Guided mode** (Copilot Studio, ChatGPT agent builder, etc.) — Step-by-step GUI instruction documents that walk you through configuring each building block in the platform's visual interface
 
-Each time you run, you're testing. When something is off, go back to 3.2 Construct, adjust the relevant building block, and run again:
+## How Creation Tools Are Discovered
 
-| What went wrong | Go back to 3.2 and... |
-|---|---|
-| Output is generic or off-brand | Add more **context** — examples, style guides, reference materials |
-| Steps were skipped or misunderstood | Refine the **prompt** — make the instructions more explicit |
-| A step needs expertise the AI doesn't have | Build a **skill** for that step — codify the expertise |
-| The AI needs to make decisions you can't predict | Convert from prompt to **agent** — let the AI plan its approach |
+Before generating any artifacts, the model scans your environment for skills that can create other building blocks — a skill-creator, an agent-development skill, a prompt-engineering skill. It checks both the system-level skill list and platform-specific skill directories.
 
-The workflow is ready when you can run it on a new scenario and trust the output without heavy editing. Until then, keep iterating.
+The model presents a **Creation Tools Map** showing which skills it found and which building block types they cover. When a creation skill is matched, the model delegates to it for higher-quality output (e.g., a skill-creator skill that includes eval, benchmarking, and optimization). When no match is found, the model generates inline using the format specifications from the platform registry.
 
-**[Run guide > Iterating](run.md#test-iterate-repeat)** — detailed troubleshooting for common first-run issues
+You confirm the map before generation begins. If you have no specialized creation tools installed, everything still works — the model generates directly.
 
----
+## Your Role During Build
 
-**Your deliverables across Build:**
+The model handles artifact generation, but several things require your involvement:
 
-| File | From | What it is |
-|------|------|-----------|
-| `[name]-definition.md` | Deconstruct | Your Workflow Definition — the raw decomposition |
-| `[name]-building-block-spec.md` | Build: 3.1 Design | Your AI Building Block Spec — architecture approach, architecture decisions, autonomy level, orchestration mechanism, classifications, skill candidates, agent blueprints, code-first selections |
-| Platform artifacts | Build: 3.2 Construct | Prompts, skills, agents, and configs generated in whatever format your platform needs |
-| `[name]-run-guide.md` | Build: 3.3 Run | Step-by-step setup instructions, first-run test, and next steps — tailored to your platform |
+**Context gathering.** You know where your documents live, what your style guide says, and which examples best represent your standards. The model tells you what it needs; you provide it.
 
-The Building Block Spec is the design document — it captures *what* to build and *why*. The platform artifacts are the implementation — generated by the model using your architecture decisions and current platform knowledge. The Run Guide bridges the gap between "artifacts exist" and "workflow is running."
+**MCP connections.** If your workflow uses external tools (CRM, calendar, databases), you configure the MCP connections that give the model access. The model tells you which connections are needed and provides setup instructions, but the actual configuration happens on your machine.
 
-Plus any context artifacts and tool connections you set up along the way.
-
-Many workflows stay at the prompt-plus-context level permanently — pasted into a chat whenever you need it. That's a feature, not a limitation.
+**Agent platform setup.** For agent-based workflows, you may need to create agents in your platform's UI — uploading the agent definition the model generates. The model provides the configuration; you create the agent.
 
 ## Track and Version Your Work
 
@@ -137,77 +110,42 @@ As you build, two background practices keep your work organized and recoverable:
 
 **Commit source files to GitHub.** The `.md` files for your skills, agents, and prompts are source code — they should live in version control, not just on your local machine. After creating or updating a building block, commit it to your GitHub repository. This gives you a history of changes, makes it easy to share with collaborators, and protects against losing work.
 
-These aren't separate steps — they're part of the rhythm of building. Each time you finish a building block in 3.2 Construct: **test it, register it, commit it.**
+These aren't separate steps — they're part of the rhythm of building. Each time you finish a building block: **register it, commit it.**
 
 !!! tip "Need to set up these tools?"
     The [Builder Tools Setup](../../builder-setup/index.md) guide walks you through everything you need — an AI code editor ([Step 2](../../builder-setup/editor-setup.md)), Git ([Step 3](../../builder-setup/git-install.md)), GitHub ([Step 4](../../builder-setup/github-setup.md)), and the AI Registry ([Step 6](../../builder-setup/notion-registry-setup.md)). If you haven't set these up yet, that guide has you covered.
 
-## Quick Reference
+## What This Produces
 
-| | Guide | When to use |
-|-------|-------|-------------|
-| 3.1 | [Design Your AI Workflow](design.md) | Always — produces your AI Building Block Spec |
-| 3.2 | [Construct](construct.md) | Always — the model builds your building blocks, with your help on context, MCP, and platform agents |
-| 3.3 | [Run](run.md) | Always — Run Guide + iterating |
+| File | What it is |
+|------|-----------|
+| Platform artifacts | Prompts, skills, agents, and configs generated in whatever format your platform needs |
+| Context artifacts | Style guides, reference materials, and examples — formatted for AI consumption |
+| Tool connections | MCP connections and integrations configured on your platform |
 
-For deep dives on individual building blocks, see the [Agentic Building Blocks](../../agentic-building-blocks/index.md) reference pages.
+The Building Block Spec from Design is the design document — it captures *what* to build and *why*. The platform artifacts from Build are the implementation — generated by the model using your architecture decisions and current platform knowledge.
 
-## Worked Examples
+Many workflows stay at the prompt-plus-context level permanently — pasted into a chat whenever you need it. That's a feature, not a limitation.
 
-These three examples show complete AI-powered workflows at different positions in the [AI Workflow Design Matrix](../workflow-design-matrix.md) — from deterministic automation to guided collaboration to fully autonomous multi-agent pipelines. Each includes working building blocks you can install and study.
+## How to Use This
 
-| Type | Matrix Position | AI Involvement | Example |
-|------|----------------|---------------|---------|
-| [Deterministic Automation](deterministic-automation.md) | Deterministic + Automated | AI follows fixed rules — criteria from input, output from template | LinkedIn prospect research |
-| [AI Collaborative](ai-collaborative.md) | Guided + Augmented | AI researches and drafts; human steers and decides | Meeting prep researcher |
-| [Autonomous Agent](autonomous-agent.md) | Autonomous + Augmented | Multiple agents execute a full pipeline; human reviews at one gate | HBR article pipeline |
+This step is facilitated by the **`build`** Business-First AI Framework skill. See [Get the Skills](../skills.md) for installation instructions across all supported platforms.
 
-### All Building Blocks
+**Start with this prompt:**
 
-These are the working building blocks included across all three examples. Each one links to its source on GitHub — read the full definition, understand how it works, and adapt it for your own workflows.
+```
+Build the workflow from my approved AI Building Block Spec.
+```
 
-| Building Block | Type | Workflow | Description | Source |
-|-------|------|----------|-------------|--------|
-| `linkedin-prospect-research` | Prompt | Deterministic | Finds and qualifies 5 LinkedIn prospects against a buyer persona | [View](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/prompts/linkedin-prospect-research.md) |
-| `buyer-persona-revenue-leader-rachel` | Prompt | Deterministic | Example buyer persona used as input to the research workflow | [View](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/prompts/buyer-persona-revenue-leader-rachel.md) |
-| `meeting-prep-researcher` | Agent | Collaborative | Researches attendees and companies for meeting prep | [View](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/agents/meeting-prep-researcher.md) |
-| `preparing-meeting-briefs` | Skill | Collaborative | Step-by-step research workflow for the agent | [View](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins/business-first-ai/skills/preparing-meeting-briefs/) |
-| `meeting-prep-quick` | Prompt | Collaborative | Portable one-shot meeting prep prompt | [View](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/prompts/meeting-prep-quick.md) |
-| `ai-productivity-researcher` | Agent | Autonomous | Finds case studies of companies using AI with quantified outcomes | [View](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/agents/ai-productivity-researcher.md) |
-| `tech-executive-writer` | Agent | Autonomous | Writes articles for business leadership audiences | [View](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/agents/tech-executive-writer.md) |
-| `hbr-editor` | Agent | Autonomous | Edits drafts against HBR editorial standards | [View](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/agents/hbr-editor.md) |
-| `editing-hbr-articles` | Skill | Autonomous | Editorial criteria and cut/replace patterns for the editor | [View](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins/business-first-ai/skills/editing-hbr-articles/) |
-| `hbr-publisher` | Agent | Autonomous | Formats approved articles as PDF + markdown with SEO metadata | [View](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/agents/hbr-publisher.md) |
+Upload or reference your Building Block Spec file (`[workflow-name]-building-block-spec.md`) from the Design step when prompted. The skill resolves context needs, generates platform artifacts, and prepares the workflow for testing.
 
-## How to Use These Examples
+## Next Step
 
-=== "Any AI Tool"
-
-    Every example includes at least one **standalone prompt** — a text template you can copy and paste into Claude, ChatGPT, Gemini, M365 Copilot, or any other AI tool. Click the "View" links in the table above to read the prompt source on GitHub.
-
-    Prompts are the most portable building block type. They work everywhere, require no setup, and can be shared with anyone on your team.
-
-=== "Claude Code"
-
-    All building blocks — agents, skills, and prompts — are bundled in the `business-first-ai` plugin. Install it once and the agents activate automatically when you describe a matching task.
-
-    ```bash
-    # Add the Hands-on AI marketplace (one time)
-    /plugin marketplace add jamesgray-ai/handsonai-plugins
-
-    # Install the business-first-ai plugin
-    /plugin install business-first-ai@handsonai
-    ```
-
-    Then describe what you need in natural language:
-
-    - *"Run the LinkedIn prospect research workflow using the Revenue Leader Rachel persona"* — executes the deterministic prospecting workflow
-    - *"Prepare me for my meeting with Sarah Chen at Acme Corp"* — activates the meeting prep researcher agent
-    - *"Write an HBR-style article about companies successfully using AI agents"* — triggers the full multi-agent research → write → edit → publish pipeline
+Once your artifacts are built, move to **[Step 5: Test](../test.md)** to run structured evaluations before deploying.
 
 ## Related
 
-- [AI Use Cases](../../use-cases/index.md) — browse use cases by type (content creation, research, coding, data analysis, ideation, automation)
-- [Analyze AI Workflow Opportunities](../analyze.md) — identify which of your workflows are candidates for AI
-- [Deconstruct Workflows](../deconstruct/index.md) — break down workflows into structured definitions
+- [Design Your AI Workflow](../design.md) — the step before Build
+- [Test](../test.md) — the step after Build
+- [Agentic Building Blocks](../../agentic-building-blocks/index.md) — deep dives on individual building blocks
 - [Agents & Skills](../../use-the-cookbook/build/index.md) — browse all available agents, skills, and prompts

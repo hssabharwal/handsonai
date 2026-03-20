@@ -114,5 +114,5 @@ Use this table to find your starting point. Most real workflows combine several 
 ## Related
 
 - [Building Blocks Overview](index.md) — what each block is, with cross-platform implementations
-- [Design Your AI Workflow](../business-first-ai-framework/build/design.md) — mapping workflow steps to building blocks
+- [Design Your AI Workflow](../business-first-ai-framework/design.md) — mapping workflow steps to building blocks
 - [Business-First AI Framework](../business-first-ai-framework/index.md) — the full Analyze → Deconstruct → Build methodology

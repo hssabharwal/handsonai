@@ -9,7 +9,7 @@ Hands-On AI (handsonai.info) — the consolidated site for James Gray's AI cours
 ## Repository Structure
 
 - `docs/agentic-building-blocks/` - The AI building blocks (Model, Prompt, Context, Project, Memory, Skill, Agent, MCP, API, SDK, CLI)
-- `docs/business-first-ai-framework/` - Three-phase methodology (Analyze, Deconstruct, Build)
+- `docs/business-first-ai-framework/` - Seven-step methodology (Analyze, Deconstruct, Design, Build, Test, Run, Improve)
 - `docs/use-cases/` - Six use case primitives (Content Creation, Research, Coding, Data Analysis, Ideation & Strategy, Automation)
 - `docs/product-engineering/` - Product management and software engineering concepts (SDLC, PRDs, user stories, roadmapping, stakeholder management, project tracking)
 - `docs/ai-engineering/` - AI engineering concepts (context engineering) — nested under Product & Engineering in nav
@@ -232,6 +232,18 @@ What changes as a result — both positive and negative.
 | `/review-pr` | Comprehensive PR review using specialized agents |
 | `/code-review` | Code review a pull request |
 
+### Business-First AI Framework
+
+| Command | Description |
+|---------|-------------|
+| `/business-first-ai:analyze` | `analyze` — Step 1 |
+| `/business-first-ai:deconstruct` | `deconstruct` — Step 2 |
+| `/business-first-ai:design` | `design` — Step 3 |
+| `/business-first-ai:build` | `build` — Step 4 |
+| `/business-first-ai:test` | `test` — Step 5 |
+| `/business-first-ai:run` | `run` — Step 6 |
+| `/business-first-ai:improve` | `improve` — Step 7 |
+
 ### Superpowers Skills
 
 Skills from the `superpowers` plugin, invoked automatically based on context:
@@ -338,7 +350,7 @@ When updating:
    ```
 3. Write `plugin.json` with name, description, version, author, keywords
 4. Add a grid card + collapsible detail section to `docs/use-the-cookbook/build/index.md` — include links to the detail page anchors for every agent and skill
-5. Create a detail page at `docs/use-the-cookbook/build/<plugin-name>.md` following the template used by existing detail pages (see `docs/use-the-cookbook/build/business-first-ai.md` for reference)
+5. Create a detail page at `docs/use-the-cookbook/build/<plugin-name>.md` following the template used by existing detail pages (see `docs/use-the-cookbook/build/ai-registry.md` for reference)
 6. Add the detail page to the `nav:` section in `mkdocs.yml` under "Tools & Resources > Agents & Skills"
 7. Commit and push this repo
 8. Copy the new plugin directory to `handsonai-plugins` repo, add entry to its `marketplace.json`, commit and push there

@@ -5,7 +5,7 @@ description: Working examples of AI workflows built with the Business-First AI F
 
 # AI Workflow Examples
 
-Working examples of AI workflows built with the [Business-First AI Framework](business-first-ai.md) methodology. These agents, skills, and prompts show what real AI workflows look like in practice — from executive writing and editorial review to research, meeting prep, and AI news monitoring. Use them as-is, adapt them to your needs, or study them as reference implementations before building your own. They're plain-text Markdown files that work in any AI tool — download from GitHub or install as a Claude Code plugin.
+Working examples of AI workflows built with the [Business-First AI Framework](../../business-first-ai-framework/skills.md) methodology. These agents, skills, and prompts show what real AI workflows look like in practice — from executive writing and editorial review to research, meeting prep, and AI news monitoring. Use them as-is, adapt them to your needs, or study them as reference implementations before building your own. They're plain-text Markdown files that work in any AI tool — download from GitHub or install as a Claude Code plugin.
 
 ## Get These Skills
 
@@ -303,11 +303,11 @@ Portable prompts that work in any AI tool — no plugin required.
 
 ## Relationship to Business-First AI
 
-These are **worked examples** built with the [Business-First AI Framework](business-first-ai.md) methodology. The framework skills teach you the Analyze → Deconstruct → Build methodology. These examples show what the output of that methodology looks like in practice.
+These are **worked examples** built with the [Business-First AI Framework](../../business-first-ai-framework/skills.md) methodology. The framework skills guide you through the full seven-step methodology — Analyze, Deconstruct, Design, Build, Test, Run, Improve. These examples show what the output of that methodology looks like in practice.
 
 **Recommended path:**
 
-1. Get the [Business-First AI Framework](business-first-ai.md) skills to learn the methodology
+1. Get the [Business-First AI Framework](../../business-first-ai-framework/skills.md) skills to learn the methodology
 2. Study these examples to see real AI workflows in action
 3. Use the framework to build your own workflows
 

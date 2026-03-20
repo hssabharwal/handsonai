@@ -5,7 +5,7 @@ description: How to build agents on the Claude platform — subagents, agent tea
 
 # Building Agents on Claude
 
-> **Part of:** [Build Workflows > Agents](../../../business-first-ai-framework/build/construct.md)
+> **Part of:** [Build Workflows > Agents](../../../business-first-ai-framework/build/index.md)
 
 Claude provides three approaches to building agents, each suited to different workflow patterns.
 
@@ -109,7 +109,7 @@ Agents can run in the foreground (you see their work in real-time) or in the bac
 
 ### Mapping your Design blueprint
 
-Your [Design phase](../../../business-first-ai-framework/build/design.md) produced a platform-agnostic agent blueprint. Here's how each component maps to a Claude Code agent file:
+Your [Design phase](../../../business-first-ai-framework/design.md) produced a platform-agnostic agent blueprint. Here's how each component maps to a Claude Code agent file:
 
 | Design blueprint | Claude Code agent file |
 |-----------------|----------------------|
@@ -316,7 +316,7 @@ Define custom subagents programmatically — useful when you need multiple speci
 
 ### Mapping your Design blueprint
 
-Your [Design phase](../../../business-first-ai-framework/build/design.md) produced a platform-agnostic agent blueprint. Here's how each component maps to the Agent SDK:
+Your [Design phase](../../../business-first-ai-framework/design.md) produced a platform-agnostic agent blueprint. Here's how each component maps to the Agent SDK:
 
 | Design blueprint | Agent SDK |
 |-----------------|-----------|
@@ -330,8 +330,8 @@ Your [Design phase](../../../business-first-ai-framework/build/design.md) produc
 
 ## What's Next
 
-- [Agents overview](../../../business-first-ai-framework/build/construct.md) — the platform-agnostic agent decision framework
-- [Design Your AI Workflow](../../../business-first-ai-framework/build/design.md) — produce the agent blueprint that feeds into these implementations
+- [Agents overview](../../../business-first-ai-framework/build/index.md) — the platform-agnostic agent decision framework
+- [Design Your AI Workflow](../../../business-first-ai-framework/design.md) — produce the agent blueprint that feeds into these implementations
 - [Scheduling Subagents](../subagents/scheduling-subagents.md) — run agents automatically on a schedule
 - [Agent SDK Quickstart](https://platform.claude.com/docs/en/agent-sdk/quickstart) — build a bug-fixing agent in minutes
 - [Agent SDK Example Agents](https://github.com/anthropics/claude-agent-sdk-demos) — email assistant, research agent, and more

@@ -30,7 +30,7 @@ This step guides an AI through a structured analysis of your work — from eithe
 
 ## How to Use This
 
-This step is facilitated by the **`analyzing-workflows`** Business-First AI Framework Skill. How you get it depends on your platform — see [How to Add Skills to Your Platform](../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for installation instructions for Cowork, Claude Code, Claude.ai, Cursor, Codex CLI, Gemini CLI, and VS Code Copilot.
+This step is facilitated by the **`analyze`** Business-First AI Framework Skill. How you get it depends on your platform — see [Get the Skills](skills.md) for installation instructions.
 
 **Start with this prompt:**
 
@@ -42,7 +42,7 @@ what I do and identify where AI could help.
 The skill runs a structured audit and produces a categorized opportunity report.
 
 !!! tip "If your AI tool doesn't support skills"
-    Use the [Analyze Prompt — Portable Version](analyze-prompt.md) instead. It's a single copy-paste prompt that runs the full Analyze process in any AI chat tool — ChatGPT, Gemini, Claude, or any LLM. Same methodology, same output format, no skill installation required.
+    Download the skill file from [GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins/business-first-ai/skills/analyze) and paste it into your system prompt or project instructions. Same methodology, same output format.
 
 !!! tip "Classify opportunities with the six primitives"
     Once you've identified opportunities, use the [six use case primitives](../use-cases/index.md) — Content Creation, Research, Coding, Data Analysis, Ideation & Strategy, and Automation — to classify what type of AI work each one involves. This makes it easier to find examples and choose the right building blocks.
@@ -95,6 +95,6 @@ See three complete [example reports](analyze-examples.md) to get a feel for the 
 
 - [Example Reports](analyze-examples.md) — three complete AI Opportunity Reports (Marketing Ops Manager, AI Instructor, and VP of Operations using the organizational lens) showing what the finished deliverable looks like
 - **Next step:** Ready to act on an opportunity? Use the [Deconstruct Workflows guide](deconstruct/index.md) (Step 2) to break it into discrete steps.
-- [Business-First AI Framework](index.md) — the full three-step methodology
+- [Business-First AI Framework](index.md) — the full seven-step methodology
 - [Prompts](../agentic-building-blocks/prompts/index.md)
 - [Agents](../agentic-building-blocks/agents/index.md)

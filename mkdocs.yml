@@ -82,25 +82,25 @@ plugins:
         business-first-ai-framework/discover.md: business-first-ai-framework/analyze.md
         how-to/prompting/workflow-deconstruction-meta-prompt.md: business-first-ai-framework/deconstruct/index.md
         how-to/prompting/workflow-deconstruction-discovery.md: business-first-ai-framework/deconstruct/index.md
-        how-to/prompting/workflow-deconstruction-analysis.md: business-first-ai-framework/build/design.md
-        how-to/prompting/workflow-deconstruction-outputs.md: business-first-ai-framework/build/construct.md
+        how-to/prompting/workflow-deconstruction-analysis.md: business-first-ai-framework/design.md
+        how-to/prompting/workflow-deconstruction-outputs.md: business-first-ai-framework/build/index.md
         business-first-ai-framework/deconstruct/discovery.md: business-first-ai-framework/deconstruct/index.md
         business-first-ai-framework/deconstruct/workflow-definition.md: business-first-ai-framework/deconstruct/index.md
-        business-first-ai-framework/deconstruct/analysis.md: business-first-ai-framework/build/design.md
-        business-first-ai-framework/deconstruct/building-blocks.md: business-first-ai-framework/build/design.md
-        business-first-ai-framework/deconstruct/outputs.md: business-first-ai-framework/build/construct.md
-        business-first-ai-framework/deconstruct/prompt-skill-specs.md: business-first-ai-framework/build/construct.md
-        # 3.2 Construct consolidation — individual pages merged into construct.md
-        business-first-ai-framework/build/context.md: business-first-ai-framework/build/construct.md
-        business-first-ai-framework/build/projects.md: business-first-ai-framework/build/construct.md
-        business-first-ai-framework/build/skills.md: business-first-ai-framework/build/construct.md
-        business-first-ai-framework/build/prompt.md: business-first-ai-framework/build/construct.md
-        business-first-ai-framework/build/agents.md: business-first-ai-framework/build/construct.md
-        business-first-ai-framework/build/mcp.md: business-first-ai-framework/build/construct.md
+        business-first-ai-framework/deconstruct/analysis.md: business-first-ai-framework/design.md
+        business-first-ai-framework/deconstruct/building-blocks.md: business-first-ai-framework/design.md
+        business-first-ai-framework/deconstruct/outputs.md: business-first-ai-framework/build/index.md
+        business-first-ai-framework/deconstruct/prompt-skill-specs.md: business-first-ai-framework/build/index.md
+        # 3.2 Construct consolidation — individual pages merged into build/index.md
+        business-first-ai-framework/build/context.md: business-first-ai-framework/build/index.md
+        business-first-ai-framework/build/projects.md: business-first-ai-framework/build/index.md
+        business-first-ai-framework/build/skills.md: business-first-ai-framework/build/index.md
+        business-first-ai-framework/build/prompt.md: business-first-ai-framework/build/index.md
+        business-first-ai-framework/build/agents.md: business-first-ai-framework/build/index.md
+        business-first-ai-framework/build/mcp.md: business-first-ai-framework/build/index.md
         how-to/workflow-examples/README.md: business-first-ai-framework/build/index.md
-        how-to/workflow-examples/deterministic-automation.md: business-first-ai-framework/build/deterministic-automation.md
-        how-to/workflow-examples/ai-collaborative.md: business-first-ai-framework/build/ai-collaborative.md
-        how-to/workflow-examples/autonomous-agent.md: business-first-ai-framework/build/autonomous-agent.md
+        how-to/workflow-examples/deterministic-automation.md: business-first-ai-framework/examples/deterministic-automation.md
+        how-to/workflow-examples/ai-collaborative.md: business-first-ai-framework/examples/ai-collaborative.md
+        how-to/workflow-examples/autonomous-agent.md: business-first-ai-framework/examples/autonomous-agent.md
         # Legacy how-to workspace instructions → new location
         how-to/prompting/workspace-instructions-meta-prompt.md: agentic-building-blocks/projects/workspace-instructions-meta-prompt.md
         # Fundamentals building blocks → new top-level locations
@@ -160,12 +160,25 @@ plugins:
         plugins/getting-started.md: use-the-cookbook/build/using-plugins.md
         use-the-cookbook/build/getting-started.md: use-the-cookbook/build/using-plugins.md
         plugins/using-plugins.md: use-the-cookbook/build/using-plugins.md
-        plugins/business-first-ai.md: use-the-cookbook/build/business-first-ai.md
+        plugins/business-first-ai.md: business-first-ai-framework/skills.md
         plugins/ai-registry.md: use-the-cookbook/build/ai-registry.md
         plugins/agentic-coding.md: use-cases/coding/agentic-coding.md
         use-the-cookbook/build/agentic-coding.md: use-cases/coding/agentic-coding.md
         # AI Engineering overview → Product & Engineering
         ai-engineering/index.md: product-engineering/index.md
+        # Portable prompts removed (skills-based approach)
+        business-first-ai-framework/analyze-prompt.md: business-first-ai-framework/analyze.md
+        business-first-ai-framework/deconstruct-prompt.md: business-first-ai-framework/deconstruct/index.md
+        business-first-ai-framework/design-prompt.md: business-first-ai-framework/design.md
+        # Framework restructuring (3-step → 7-step)
+        business-first-ai-framework/build/design.md: business-first-ai-framework/design.md
+        business-first-ai-framework/build/design-prompt.md: business-first-ai-framework/design.md
+        business-first-ai-framework/build/construct.md: business-first-ai-framework/build/index.md
+        business-first-ai-framework/build/run.md: business-first-ai-framework/run.md
+        business-first-ai-framework/build/deterministic-automation.md: business-first-ai-framework/examples/deterministic-automation.md
+        business-first-ai-framework/build/ai-collaborative.md: business-first-ai-framework/examples/ai-collaborative.md
+        business-first-ai-framework/build/autonomous-agent.md: business-first-ai-framework/examples/autonomous-agent.md
+        use-the-cookbook/build/business-first-ai.md: business-first-ai-framework/skills.md
         # Retired coach pages → framework overview
         business-first-ai-framework/coach.md: business-first-ai-framework/index.md
         business-first-ai-framework/framework-coach.md: business-first-ai-framework/index.md
@@ -215,7 +228,6 @@ nav:
     - Agents & Skills:
       - Browse Agents & Skills: use-the-cookbook/build/index.md
       - Using Plugins: use-the-cookbook/build/using-plugins.md
-      - Business-First AI Framework: use-the-cookbook/build/business-first-ai.md
       - AI Workflow Examples: use-the-cookbook/build/ai-workflow-examples.md
       - AI Registry: use-the-cookbook/build/ai-registry.md
     - Resources:
@@ -226,27 +238,22 @@ nav:
     - Learn (Learn with James): courses/index.md
   - Changelog: blog/index.md
   - Business-First AI Framework:
-    - Overview: business-first-ai-framework/index.md
+    - business-first-ai-framework/index.md
     - AI Workflow Design Matrix: business-first-ai-framework/workflow-design-matrix.md
-    - "Step 1: Analyze Workflows":
-      - Overview: business-first-ai-framework/analyze.md
-      - "Analyze Prompt (Portable)": business-first-ai-framework/analyze-prompt.md
-      - "Example Reports": business-first-ai-framework/analyze-examples.md
-    - "Step 2: Deconstruct Workflows":
-      - Overview: business-first-ai-framework/deconstruct/index.md
-      - "Deconstruct Prompt (Portable)": business-first-ai-framework/deconstruct-prompt.md
-    - "Step 3: Build Workflows":
-      - Overview: business-first-ai-framework/build/index.md
-      - "3.1: Design":
-        - Overview: business-first-ai-framework/build/design.md
-        - "Design Prompt (Portable)": business-first-ai-framework/build/design-prompt.md
-      - "3.2: Construct": business-first-ai-framework/build/construct.md
-      - "3.3: Run": business-first-ai-framework/build/run.md
-      - "Worked Examples":
-        - Deterministic Automation: business-first-ai-framework/build/deterministic-automation.md
-        - AI Collaborative: business-first-ai-framework/build/ai-collaborative.md
-        - Autonomous Agent: business-first-ai-framework/build/autonomous-agent.md
-        - "Full Example: Content Calendar Planning": business-first-ai-framework/examples/content-calendar-planning.md
+    - "Step 1: Analyze": business-first-ai-framework/analyze.md
+    - "Step 2: Deconstruct": business-first-ai-framework/deconstruct/index.md
+    - "Step 3: Design": business-first-ai-framework/design.md
+    - "Step 4: Build": business-first-ai-framework/build/index.md
+    - "Step 5: Test": business-first-ai-framework/test.md
+    - "Step 6: Run": business-first-ai-framework/run.md
+    - "Step 7: Improve": business-first-ai-framework/improve.md
+    - Get the Skills: business-first-ai-framework/skills.md
+    - Worked Examples:
+      - "Analyze: Example Reports": business-first-ai-framework/analyze-examples.md
+      - Deterministic Automation: business-first-ai-framework/examples/deterministic-automation.md
+      - AI Collaborative: business-first-ai-framework/examples/ai-collaborative.md
+      - Autonomous Agent: business-first-ai-framework/examples/autonomous-agent.md
+      - "Full Example: Content Calendar Planning": business-first-ai-framework/examples/content-calendar-planning.md
     - Questions:
       - Find workflows worth applying AI to: business-first-ai-framework/questions/how-do-i-find-workflows-worth-applying-ai-to.md
       - Identify the right AI tools for a workflow: business-first-ai-framework/questions/how-do-i-identify-the-right-ai-tools-for-a-workflow.md

@@ -3,16 +3,16 @@ title: Design Your AI Workflow
 description: Gather architecture decisions, assess workflow autonomy level, choose an orchestration mechanism and involvement mode, classify steps on the autonomy spectrum, map AI building blocks, identify skill candidates, and document agent blueprints — producing a platform-agnostic AI Building Block Spec.
 ---
 
-# 3.1: Design Your AI Workflow
+# Step 3: Design Your AI Workflow
 
-> **Part of:** [Build Workflows](index.md)
+> **Part of:** [Business-First AI Framework](index.md)
 
 !!! tip "New to the building blocks?"
-    See the [Agentic Building Blocks](../../agentic-building-blocks/index.md) reference for definitions, examples, and cross-platform comparisons of all blocks.
+    See the [Agentic Building Blocks](../agentic-building-blocks/index.md) reference for definitions, examples, and cross-platform comparisons of all blocks.
 
 ## What This Is
 
-The Design phase is where you decide *how* your workflow should be built — before you build it. You take the Workflow Definition from the [Deconstruct step](../deconstruct/index.md) and make five design decisions:
+The Design phase is where you decide *how* your workflow should be built — before you build it. You take the Workflow Definition from the [Deconstruct step](deconstruct/index.md) and make five design decisions:
 
 1. **Architecture decisions** — What platform are you using, and what integrations and constraints does the Workflow Definition reveal?
 2. **Autonomy assessment** — Where does the whole workflow sit on the autonomy spectrum (Deterministic → Guided → Autonomous)?
@@ -61,22 +61,22 @@ The model analyzes your workflow and recommends an approach based on these signa
 Most workflows start no-code. Code-first becomes the right choice when you need programmatic control, integration into existing systems, or production-grade deployment. The same three orchestration mechanisms (Prompt, Skill-Powered Prompt, Agent) apply to both approaches — the architecture approach determines *how* you implement them, not *what* you implement.
 
 !!! tip "You can switch later"
-    Many teams prototype no-code, validate the workflow works, then rebuild code-first for production. The AI Building Block Spec captures the design either way — only the Construct phase changes.
+    Many teams prototype no-code, validate the workflow works, then rebuild code-first for production. The AI Building Block Spec captures the design either way — only the Build step changes.
 
 ## Architecture Decisions
 
 Before assessing autonomy and choosing an orchestration mechanism, the model gathers the information that shapes platform-aware recommendations. Rather than walking through a checklist, it uses an **extract-then-confirm** approach: ask one question, extract everything else from your Workflow Definition, and present the analysis for confirmation.
 
-**One question: Platform.** The only thing not already in your Workflow Definition is which AI platform you'll use. If you've already mentioned it in conversation, the model confirms. If not, it asks — and accepts whatever level of specificity you provide ("Claude Code", "ChatGPT", "Google Gemini", "Claude" are all fine). The model doesn't try to disambiguate to a specific offering upfront — the ecosystem is enough for Design decisions, and the specific tool is resolved during Construct when generating artifacts.
+**One question: Platform.** The only thing not already in your Workflow Definition is which AI platform you'll use. If you've already mentioned it in conversation, the model confirms. If not, it asks — and accepts whatever level of specificity you provide ("Claude Code", "ChatGPT", "Google Gemini", "Claude" are all fine). The model doesn't try to disambiguate to a specific offering upfront — the ecosystem is enough for Design decisions, and the specific tool is resolved during Build when generating artifacts.
 
 **Everything else is extracted from the Workflow Definition:**
 
-- **Tool integrations** — pulled from data flows, context needs, and step details across all steps. The model lists the tools identified but defers platform availability research to the Construct phase.
+- **Tool integrations** — pulled from data flows, context needs, and step details across all steps. The model lists the tools identified but defers platform availability research to the Build step.
 - **Trigger/schedule** — pulled from your Scenario Metadata. Time-based triggers are noted as scheduled execution requirements with implications for involvement mode and infrastructure.
-- **Browser access** — if any step involves logging into a website, it's flagged during step classification rather than asked about separately. The connection details are handled during Construct.
-- **Shareability** — deferred to Construct, where it determines artifact format (file-based vs. code-based). Not asked during Design.
+- **Browser access** — if any step involves logging into a website, it's flagged during step classification rather than asked about separately. The connection details are handled during Build.
+- **Shareability** — deferred to Build, where it determines artifact format (file-based vs. code-based). Not asked during Design.
 
-Code comfort and deployment surface are inferred from the platform choice when specific (Claude Code = CLI + code-comfortable, ChatGPT = web + no-code) or resolved during Construct when vague.
+Code comfort and deployment surface are inferred from the platform choice when specific (Claude Code = CLI + code-comfortable, ChatGPT = web + no-code) or resolved during Build when vague.
 
 After extracting, the model presents a single confirmation block showing the platform, extracted tool integrations with availability mapping, trigger implications, and any flags — then asks if anything was missed or needs adjustment. The confirmed decisions gate all subsequent recommendations.
 
@@ -113,7 +113,7 @@ The model presents a confident recommendation — for example: *"Based on your w
 
 If you disagree, the model explains the alternatives and you discuss. Most workflows start as Prompt or Skill-Powered Prompt and evolve toward agents as you add automation.
 
-When the orchestration mechanism is Agent and the platform has multiple agent offerings (e.g., Claude Code sub-agents vs. Claude Agent SDK), the model asks which offering you want to use — this determines the artifact format in the Construct phase.
+When the orchestration mechanism is Agent and the platform has multiple agent offerings (e.g., Claude Code sub-agents vs. Claude Agent SDK), the model asks which offering you want to use — this determines the artifact format in the Build step.
 
 ### Human Involvement
 
@@ -124,10 +124,10 @@ The orchestration mechanism recommendation includes an involvement mode — whet
 | **Augmented** | Human is in the loop — reviews, steers, or decides at key points during the run. | Web/desktop deployment, no scheduled execution |
 | **Automated** | AI runs solo — executes end-to-end without human involvement during the run. | Scheduled/unattended execution, CLI |
 
-The involvement mode is determined by your architecture decisions — platform, scheduled execution needs, and which steps require human review. See the [AI Workflow Design Matrix](../workflow-design-matrix.md) for how autonomy and involvement combine into six workflow archetypes.
+The involvement mode is determined by your architecture decisions — platform, scheduled execution needs, and which steps require human review. See the [AI Workflow Design Matrix](workflow-design-matrix.md) for how autonomy and involvement combine into six workflow archetypes.
 
 !!! info "Deeper architectural patterns"
-    For detailed implementation blueprints (prompt chaining, routing, parallelization, orchestrator-workers, evaluator-optimizer, and autonomous agents), see [Workflow Architecture Patterns](../../patterns/workflow-architecture/index.md).
+    For detailed implementation blueprints (prompt chaining, routing, parallelization, orchestrator-workers, evaluator-optimizer, and autonomous agents), see [Workflow Architecture Patterns](../patterns/workflow-architecture/index.md).
 
 ---
 
@@ -185,11 +185,11 @@ For each skill candidate, document enough detail for generation:
 | **Decision logic** | Key rules, criteria, or evaluation frameworks |
 | **Failure modes** | What happens when inputs are missing or unexpected |
 
-This detail enables generation of skills on any platform during the Construct phase.
+This detail enables generation of skills on any platform during the Build step.
 
 ## Agent Blueprints
 
-When the orchestration mechanism is Agent, document each agent your workflow needs. These are platform-agnostic specifications — the model builds them into working agents during [Construct](index.md#32-construct). Whether the workflow needs one agent or multiple agents is decided here based on the number of distinct roles, expertise domains, and orchestration needs.
+When the orchestration mechanism is Agent, document each agent your workflow needs. These are platform-agnostic specifications — the model builds them into working agents during [Build](build/index.md). Whether the workflow needs one agent or multiple agents is decided here based on the number of distinct roles, expertise domains, and orchestration needs.
 
 | Component | What to specify |
 |-----------|----------------|
@@ -210,11 +210,11 @@ For **multi-agent** workflows, also document:
 - **Agent handoffs** — What does each agent pass to the next? What format?
 - **Human review gates** — Where does a human review output before the pipeline continues?
 
-This agent configuration is **platform-agnostic** — it serves as a blueprint. During the Construct phase, the model researches your chosen platform's current tools and generates platform-appropriate agent implementations.
+This agent configuration is **platform-agnostic** — it serves as a blueprint. During the Build step, the model researches your chosen platform's current tools and generates platform-appropriate agent implementations.
 
 ## How to Use This
 
-This step is facilitated by the **`designing-workflows`** Business-First AI Framework Skill. How you get it depends on your platform — see [How to Add Skills to Your Platform](../../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) for installation instructions for Cowork, Claude Code, Claude.ai, Cursor, Codex CLI, Gemini CLI, and VS Code Copilot.
+This step is facilitated by the **`design`** Business-First AI Framework Skill. How you get it depends on your platform — see [Get the Skills](skills.md) for installation instructions.
 
 **Start with this prompt:**
 
@@ -226,7 +226,7 @@ Assess the autonomy level, recommend an orchestration mechanism, and map buildin
 Upload or paste your Workflow Definition file (`[workflow-name]-definition.md`) from the Deconstruct step when prompted. The skill runs the Design analysis and produces an AI Building Block Spec.
 
 !!! tip "If your AI tool doesn't support skills"
-    Use the **[Design Prompt — Portable Version](design-prompt.md)** — a single copy-paste prompt that replicates this entire Design process in any AI chat tool (ChatGPT, Gemini, Claude, or any LLM). Or use this page as a conversation guide — walk through each section in order with your AI tool.
+    Download the skill file from [GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins/business-first-ai/skills/design) and paste it into your system prompt or project instructions. Or use this page as a conversation guide — walk through each section in order with your AI tool.
 
 ### Two phases, two modes
 
@@ -249,7 +249,7 @@ Once the architecture decisions, autonomy level, and orchestration mechanism are
 | **Codex CLI** | Run with the `--plan` flag |
 | **Other AI tools** | Ask the model: *"Switch to plan mode. Based on the architecture decisions, autonomy level, and orchestration mechanism we've agreed on, plan the full AI Building Block Spec — classify each step, map building blocks, identify skill candidates, and document agent blueprints."* |
 
-After the model produces the plan, **review and approve the AI Building Block Spec** before moving on. If anything needs adjustment — a step classification, a skill candidate, an agent blueprint — now is the time. Once you approve, the model transitions to [Construct (3.2)](construct.md) and begins building.
+After the model produces the plan, **review and approve the AI Building Block Spec** before moving on. If anything needs adjustment — a step classification, a skill candidate, an agent blueprint — now is the time. Once you approve, the model transitions to [Build (Step 4)](build/index.md) and begins building.
 
 ## What This Produces
 
@@ -258,7 +258,7 @@ The **AI Building Block Spec** contains:
 - **Architecture approach** — No-code or Code-first, with rationale and recommendation signals
 - **Autonomy level assessment** — Deterministic, Guided, or Autonomous, with rationale for where the whole workflow sits on the spectrum
 - **Orchestration mechanism** — Prompt, Skill-Powered Prompt, or Agent, with involvement mode and reasoning
-- **Architecture decisions** — platform, tool integrations (with connector mapping), trigger/schedule implications, and any flags (browser access, infrastructure needs) — each with rationale and a constraints summary showing how they shaped the recommendations. Deployment surface, code comfort, and shareability are resolved during Construct.
+- **Architecture decisions** — platform, tool integrations (with connector mapping), trigger/schedule implications, and any flags (browser access, infrastructure needs) — each with rationale and a constraints summary showing how they shaped the recommendations. Deployment surface, code comfort, and shareability are resolved during Build.
 - **Code-first selections** (when applicable) — specific API and SDK choices per step with justification (e.g., "Claude Agent SDK for the research agent because it needs tool use and multi-step orchestration")
 - **Scenario summary** — workflow metadata from the Workflow Definition
 - **Decomposition table** — every step with autonomy classification, decision points, failure modes, data flows, context needs, AI building block mapping, and skill candidate flags
@@ -271,4 +271,4 @@ The **AI Building Block Spec** contains:
 - **Tools and connectors** — external integrations required
 - **Implementation order** — quick wins → semi-autonomous → complex agent steps
 
-This AI Building Block Spec is the input for the [Construct phase](index.md), where the model generates platform-appropriate artifacts (prompts, skills, agents, connectors) based on your orchestration mechanism and architecture decisions.
+This AI Building Block Spec is the input for [Step 4: Build](build/index.md), where the model generates platform-appropriate artifacts (prompts, skills, agents, connectors) based on your orchestration mechanism and architecture decisions.
