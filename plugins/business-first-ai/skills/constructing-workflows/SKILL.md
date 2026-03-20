@@ -109,6 +109,52 @@ Before generating artifacts, discover what creation tools are available in this 
 
    Wait for user confirmation before proceeding.
 
+#### Step 3.6 — Platform Research
+
+Before generating artifacts, resolve platform-specific format requirements and integration documentation so that artifact generation (Step 6) produces correctly formatted output on the first pass.
+
+> **Caching note:** The registry JSON is fetched once per session. If the Design phase already fetched it, use the cached copy.
+
+**Tier 1 — Platform Doc Resolution**
+
+1. **Fetch the platform registry** (or use session cache):
+   `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/plugins/business-first-ai/registries/platform-registry.json`
+
+2. **Look up the user's platform** in the `platforms` section of the registry JSON.
+
+3. **Determine mode and language:**
+   - Read the `mode` field (`code` or `guided`) for the matched platform.
+   - For `code` mode: read the `language` field (e.g., `markdown`, `python`, `yaml`).
+   - For `guided` mode: note that artifacts will be GUI workflow steps and configuration options rather than files.
+
+4. **If platform not found:** Fall back to model knowledge combined with web search to determine the platform's artifact format. Log a warning: "Platform not found in registry — using model knowledge and web search for format requirements."
+
+5. **For each building block needing an artifact**, fetch the corresponding doc URL from the registry:
+   - Look up the building block type in the platform's `docs` section (e.g., `skills`, `agents`, `mcp`, `hooks`, `prompts`).
+   - Fetch the linked documentation to extract artifact format requirements.
+
+6. **Extract artifact format requirements:**
+   - **Code mode:** frontmatter schema, file structure, naming conventions, language, and any platform-specific extensions.
+   - **Guided mode:** GUI workflow steps, configuration options, and setup sequences.
+
+7. **Pass format requirements forward.** Store the resolved format requirements so Step 6 (Generate Platform Artifacts) can use them directly instead of re-researching.
+
+**Tier 2 — Integration Doc Resolver**
+
+For each integration listed in the Building Block Spec's "Integration Research Needed" section, resolve platform-specific integration documentation:
+
+1. **Read `integration-registries`** from the cached registry JSON. This section catalogs known sources for integration documentation (e.g., MCP registry, platform marketplaces, connector catalogs).
+
+2. **Search each cataloged source.** For each integration needing research:
+   - Check MCP availability first — if an MCP tool for searching a cataloged source is available in the current session (e.g., `mcp-registry` search), use it.
+   - If the MCP tool is available, query it for the integration name and platform.
+
+3. **WebFetch fallback for uncataloged sources.** If the integration is not found in any cataloged source, or the cataloged source has no MCP tool available:
+   - Use WebFetch to retrieve the integration's documentation directly from its known URL or official site.
+   - If no URL is known, fall back to web search to locate the integration's documentation.
+
+Present a summary of resolved platform format requirements and integration docs to the user before proceeding.
+
 #### Step 4 — Check for Existing Skills and Instructions
 
 This is separate from Step 3.5's creation tool discovery — here you're checking for workflow skills that have already been built and should be incorporated, not for skills that create other skills.
