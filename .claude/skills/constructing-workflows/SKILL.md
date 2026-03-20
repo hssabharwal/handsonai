@@ -14,7 +14,7 @@ Take an approved AI Building Block Spec and generate platform-appropriate artifa
 
 **Design principle:** The skill is the framework, the model is the platform expert. No platform names, SDK references, API patterns, GUI walkthroughs, or tool-specific examples appear anywhere in the skill. All platform-specific knowledge is researched by the model at runtime via web search.
 
-**Role:** You are an **Agentic AI Architect**. Your role is to build solutions that map business workflows to AI building blocks (Prompts, Context, Skills, Agents, MCP, Projects). You think in terms of system design, artifact generation, and platform-specific implementation.
+**Role:** You are an **Agentic AI Architect**. Your role is to build solutions that map business workflows to AI building blocks across all three layers (Knowledge & Context, Capabilities & Actions, Orchestration & Control). You think in terms of system design, artifact generation, and platform-specific implementation.
 
 ## Workflow
 
@@ -186,28 +186,29 @@ Present the integration mapping and ask the user to confirm before generating ar
 
 Based on the platform from Architecture Decisions. Resolve any deferred decisions now: ask about **shareability** (will team members run this?) to determine artifact format (file-based vs. code-based), and resolve the **specific platform offering** if not yet determined (e.g., Claude Code vs. Claude.ai, ADK vs. Gemini web). Infer **code comfort** from the specific offering (Claude Code = code-comfortable, ChatGPT = no-code).
 
-**a. Start with the cookbook's platform reference.** Read the Hands-on AI Cookbook platform guide for the user's platform to find curated links to official documentation:
+**a. Resolve platform documentation from the registry.** Use the platform doc URLs fetched in Platform Research (Step 3.6) from the registry's `platforms` section. These provide current, authoritative documentation for each building block's artifact format.
 
-| User's platform | Cookbook reference page |
-|---|---|
-| Claude | `docs/platforms/claude/index.md` (and `docs/platforms/claude/agents/building-agents.md` for agents) |
-| OpenAI | `docs/platforms/openai/index.md` (and `docs/platforms/openai/agents/building-agents.md` for agents) |
-| Google Gemini | `docs/platforms/google-gemini/index.md` (and `docs/platforms/google-gemini/agents/building-agents.md` for agents) |
-| M365 Copilot | `docs/platforms/m365-copilot/index.md` (and `docs/platforms/m365-copilot/agents/building-agents.md` for agents) |
+If cookbook platform guides are available locally (e.g., `docs/platforms/claude/index.md`), use them as supplementary context — not as the primary source.
 
-These pages contain links to the platform's official documentation, SDK references, and setup guides — maintained as part of the cookbook.
+**b. Verify currency (if needed).** The registry provides current doc URLs maintained by the framework author. Use web search only if the fetched docs appear outdated or if the registry was unavailable in Step 3.6.
 
-**b. Verify currency via web search.** Use web search to confirm the documentation links are still current and to find any newer resources. Verify what's current vs. deprecated.
+**c. Follow the resolved artifact format specifications.** For each building block in the spec, use the artifact format extracted during Platform Research (Step 3.6). If Platform Research did not resolve a format (registry unavailable, platform not found), fall back to:
+- Skills: `references/skill-spec.md`
+- Agents (Claude Code): `references/agent-spec.md`
+- Other platforms: web search
 
-**c. Follow the current artifact format specifications.** When generating skills or agents, use the authoritative specification for the artifact type — fetched live when possible, with a bundled reference as fallback.
+**d. Apply code vs guided mode branching.** Based on the platform's `mode` from the registry (determined in Step 3.6):
 
-- **For each building block in the spec**, follow the Creation Tools Map from Step 3.5:
+- **Code mode:** Generate source files in the platform's `language` (Python, TypeScript, markdown). This is the standard behavior — proceed with artifact generation as described below.
+- **Guided mode:** Generate step-by-step GUI instruction documents. For each building block, produce a document that walks the user through configuring it in the platform's interface, using the GUI documentation fetched from the registry. Include: which screens to navigate to, what fields to fill in, what settings to configure, and what to verify after each step.
+
+**e. Generate each building block.** For each building block in the spec, follow the Creation Tools Map from Step 3.5:
 
   **If a creation skill was matched for this block type:**
 
   1. Invoke it via the Skill tool, passing:
      - The building block's full spec from the Building Block Spec (name, purpose, inputs, outputs, decision logic, failure modes, which workflow steps it covers)
-     - The relevant format reference (e.g., the fetched agentskills.io specification for skills, `references/agent-spec.md` for Claude Code agents)
+     - The artifact format requirements resolved in Step 3.6 (or the fallback reference if Step 3.6 did not resolve a format)
      - Whether platform-specific extensions should be applied (based on Architecture Decisions)
      - This context: "This building block spec comes from an approved AI Building Block Spec (Business-First AI Framework, Step 3.1 Design). The intent, inputs, outputs, decision logic, and failure modes are already defined. Use this as your starting context."
   2. Let the creation skill run its full workflow. Do not skip or abbreviate any stage.
@@ -215,10 +216,9 @@ These pages contain links to the platform's official documentation, SDK referenc
 
   **If no creation skill was matched (inline generation):**
 
-  1. **For skills:** Fetch the agentskills.io specification (live from `https://agentskills.io/specification`, fallback to `references/skill-spec.md`). Generate the skill following that spec. Apply platform-specific extensions as documented for the target platform.
-  2. **For agents (Claude Code):** Read `references/agent-spec.md` for the subagent format. Generate the agent following that spec.
-  3. **For agents (non-Claude):** Research the platform's current agent format via web search. Generate accordingly.
-  4. **For other block types (MCP servers, hooks, commands, prompts):** Research the platform's current format via web search and generate accordingly.
+  1. **For skills:** Use the artifact format from Step 3.6. If unavailable, fetch the agentskills.io specification (live from `https://agentskills.io/specification`, fallback to `references/skill-spec.md`). Generate the skill following that spec. Apply platform-specific extensions as documented for the target platform.
+  2. **For agents:** Use the artifact format from Step 3.6. If unavailable and on Claude Code, fall back to `references/agent-spec.md`. For other platforms, fall back to web search. Generate the agent following the resolved spec.
+  3. **For other block types (MCP servers, hooks, commands, prompts):** Use the artifact format from Step 3.6. If unavailable, research the platform's current format via web search and generate accordingly.
 
 **d. Generate artifacts.** The skill provides the *specs* (what each building block should do, its inputs/outputs/instructions from the Design phase). The model provides the *implementation* (how to build it on the user's platform, using the verified specification and platform documentation as authoritative sources).
 
@@ -232,7 +232,7 @@ After completing Construct, tell the user: "To generate the Run Guide, run `/bus
 
 ### Platform Artifacts
 
-Prompts, skills, agents, orchestration configs, and connector setups in whatever format is appropriate to the user's chosen platform. Generated by the model based on the Building Block Spec and Architecture Decisions. For building blocks with a matched creation skill (discovered at runtime in Step 3.5), artifacts are built by delegating to that skill's full workflow. For building blocks without a matched creation skill, artifacts are generated inline following the relevant format specification (agentskills.io for skills, `references/agent-spec.md` for Claude Code agents, platform-specific formats via web search for others).
+Prompts, skills, agents, orchestration configs, and connector setups in whatever format is appropriate to the user's chosen platform. Generated by the model based on the Building Block Spec and Architecture Decisions. For code-mode platforms, these are source files; for guided-mode platforms, these are step-by-step GUI instruction documents. For building blocks with a matched creation skill (discovered at runtime in Step 3.5), artifacts are built by delegating to that skill's full workflow. For building blocks without a matched creation skill, artifacts are generated inline using the format resolved from the platform registry in Step 3.6 (falling back to `references/skill-spec.md` for skills, `references/agent-spec.md` for Claude Code agents, or web search for other platforms).
 
 ## Guidelines
 
