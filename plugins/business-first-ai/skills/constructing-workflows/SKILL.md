@@ -141,7 +141,7 @@ Before generating artifacts, resolve platform-specific format requirements and i
 
 **Tier 2 — Integration Doc Resolver**
 
-For each integration listed in the Building Block Spec's "Integration Research Needed" section, resolve platform-specific integration documentation:
+For each integration listed in the Building Block Spec's "Integration Options" section, resolve platform-specific integration documentation:
 
 1. **Read `integration-registries`** from the cached registry JSON. This section catalogs known sources for integration documentation (e.g., MCP registry, platform marketplaces, connector catalogs).
 
@@ -165,15 +165,20 @@ Before generating artifacts:
 
 #### Step 5 — Integration Research
 
-Now that the spec is approved, research platform availability for every tool listed in the "Integration Research Needed" section of the spec.
+Read the "Integration Options" section from the loaded Building Block Spec. This section already identifies each integration, its category (built-in, available with setup, possible with code, manual), and source URLs discovered during the Design phase.
 
-**Use web search** to determine availability on the user's platform. Categorize in plain language:
-- Built-in (works out of the box)
-- Available with setup (MCP server, connector, or plugin exists)
-- Possible with code (API integration required)
-- Manual (copy-paste between tools)
+**Use the carried-forward URLs as starting points.** The Design phase's Integration Discovery already answered "what's available?" — the focus here is "how do I connect it on the user's platform?"
 
-**Web search is required** — if the environment doesn't support it, instruct the user to switch to a tool that does.
+For each integration listed in the spec:
+1. Start from the source URL provided in the "Integration Options" section
+2. Research platform-specific setup: installation steps, configuration, authentication, and any prerequisites for the user's platform
+3. Confirm the integration category still applies on this platform. Recategorize if needed:
+   - Built-in (works out of the box)
+   - Available with setup (MCP server, connector, or plugin exists)
+   - Possible with code (API integration required)
+   - Manual (copy-paste between tools)
+
+**Web search is used for platform availability research** — verifying setup steps, finding platform-specific guides, and confirming compatibility. Discovery of integrations themselves is already done. If the environment doesn't support web search, instruct the user to switch to a tool that does.
 
 Present the integration mapping and ask the user to confirm before generating artifacts. If any critical integration is manual-only, discuss implications for the orchestration mechanism (may need to downgrade or add human-in-the-loop steps).
 
