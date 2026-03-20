@@ -197,9 +197,68 @@ If a step's inputs include items flagged as "No" or "Partial" in the Context Sho
 
 Present the mapping as a clear table. Walk through reasoning for non-obvious classifications. Ask if the user wants to adjust anything.
 
+#### Step 6b — Skill Discovery
+
+For every step classified as needing a **Skill** in Step 6, search for existing skills before assuming one needs to be built.
+
+**Search order:**
+
+1. **Local skills** — Search the user's own `.claude/skills/`, plugin skills directories, and any project-level skill directories. These are pre-vetted and can be recommended directly.
+
+2. **External registries** — Fetch the `skill-registries` list from the remote platform registry:
+
+   `https://raw.githubusercontent.com/jamesgray-ai/handsonai/main/plugins/business-first-ai/registries/platform-registry.json`
+
+   This provides a curated, always-current list of sites to search. For each registry, search for skills matching the step's requirements.
+
+   ```json
+   {
+     "skill-registries": [
+       {
+         "name": "skills.sh",
+         "type": "web-search",
+         "url": "https://skills.sh",
+         "notes": "Community skill marketplace"
+       },
+       {
+         "name": "Context7",
+         "type": "mcp",
+         "tool": "query-docs",
+         "notes": "Library docs and skills via MCP"
+       }
+     ]
+   }
+   ```
+
+   New registries are added by pushing to the JSON file — all users get them immediately, no plugin upgrade needed.
+
+3. **Web search fallback** — If no match found in cataloged registries, or if the registry fetch fails, search the web for community skills that could fulfill the step. This also catches new skill registries not yet in the catalog.
+
+4. **User approval gate** — Present all discovered skills as **candidates**, clearly separated into:
+   - **Local (pre-vetted):** Skills the user already has installed. Can be included in the spec with a confirmation.
+   - **External (requires vetting):** Community skills from registries or web search. Flag security implications — these run with the model's permissions and should be reviewed before adoption. User must explicitly approve each external skill candidate before it's included.
+
+**Presentation format:**
+
+For each step that needs a skill, present candidates in a table:
+
+> **Step 3 needs a skill: "Format coaching prep notes"**
+> | Source | Skill | Status |
+> |--------|-------|--------|
+> | Local | `coaching-prep-notes-assembly` (your plugin) | Pre-vetted — include? |
+> | skills.sh | `markdown-document-builder` by @community | Requires review — [link] |
+> | Web search | `doc-formatter` on GitHub | Requires review — [link] |
+> | None found | Build new | Fallback |
+>
+> *External skills run with model permissions. Review source code before approving.*
+
+If no suitable existing skill is found for a step, tag that step as **"build new"** — it flows into Step 7 (Identify Skill Candidates).
+
 #### Step 7 — Identify Skill Candidates
 
-Tag steps that should become skills. For each skill candidate, document:
+For steps where Skill Discovery (Step 6b) found an existing skill, skip to the next step.
+
+This step only applies to steps tagged **"build new"** in Step 6b. Tag those steps that should become skills. For each skill candidate, document:
 - Purpose (one sentence)
 - Inputs (what data the skill receives)
 - Outputs (what the skill produces)
