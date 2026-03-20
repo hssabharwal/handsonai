@@ -310,6 +310,8 @@ When updating:
 3. Bump versions (see below)
 4. Copy the updated `plugins/` directory to the `handsonai-plugins` repo, bump versions in its `marketplace.json`, commit and push there
 
+**Critical:** Step 4 is not optional. The `handsonai-plugins` repo is what users actually install from — if it's not updated, no one gets the changes. Always push to `handsonai-plugins` in the same session as the main repo commit. The repo is cloned locally at `~/code/handsonai-plugins`.
+
 ### Adding a new agent or skill to an existing plugin
 
 1. Create/edit the agent `.md` in `.claude/agents/` (or skill in `.claude/skills/`) — test locally
