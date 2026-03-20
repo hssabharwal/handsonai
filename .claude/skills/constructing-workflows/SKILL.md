@@ -26,6 +26,8 @@ Read the AI Building Block Spec from `outputs/[workflow-name]-building-block-spe
 
 Confirm you've loaded the spec by summarizing: workflow name, orchestration mechanism, involvement mode, number of steps, number of skill candidates, and number of agents.
 
+Verify the spec contains an Architecture Decisions section and Integration Options section. If either is missing, inform the user: "This spec appears to predate the current format. Some sections are missing. I can either (a) proceed with what's available and ask questions as needed, or (b) you can regenerate the spec by running the Design skill again."
+
 #### Step 2 — Build Path Choice
 
 Offer two paths:
@@ -51,6 +53,8 @@ If the user chooses path 2:
 
 Based on the orchestration mechanism, present ONLY the steps relevant to the user's mechanism:
 
+**Before starting any mechanism path:** Check the Data Readiness Summary. For items with state "Partial" or "No", resolve required actions first — these gate dependent steps. If resolution requires user action (e.g., exporting data, granting access), present the action list and wait for confirmation before proceeding.
+
 **Prompt mechanism:**
 1. Create context (from Context Inventory)
 2. Set up project workspace (if frequent use)
@@ -67,7 +71,7 @@ Based on the orchestration mechanism, present ONLY the steps relevant to the use
 **Agent mechanism:**
 1. Create context (from Context Inventory)
 2. Build skills for tagged candidates
-3. Connect external tools (from Tools and Connectors section)
+3. Connect external tools (from Integration Options section)
 4. Generate platform artifacts (agent config, skills, connectors)
 5. → Run Guide
 
@@ -181,6 +185,8 @@ For each integration listed in the spec:
 **Web search is used for platform availability research** — verifying setup steps, finding platform-specific guides, and confirming compatibility. Discovery of integrations themselves is already done. If the environment doesn't support web search, instruct the user to switch to a tool that does.
 
 Present the integration mapping and ask the user to confirm before generating artifacts. If any critical integration is manual-only, discuss implications for the orchestration mechanism (may need to downgrade or add human-in-the-loop steps).
+
+If the Integration Options section is missing from the spec (older format), inform the user and offer two paths: (a) Run Integration Discovery now — research available integration approaches for each tool identified in the spec's Integration Options or Step-by-Step Decomposition tables, or (b) proceed with web-search-only research for each integration need as it arises during artifact generation.
 
 #### Step 6 — Generate Platform Artifacts
 
