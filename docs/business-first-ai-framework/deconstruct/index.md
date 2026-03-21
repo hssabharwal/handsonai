@@ -21,7 +21,7 @@ An interactive deep-dive that breaks down a business workflow into discrete step
 
 You can't operationalize AI on a process you don't understand. Before you can build an AI-powered workflow, you need to break it down into discrete steps, identify the decision points and data flows, and understand what context each step needs and what happens when things go wrong.
 
-The skill walks you through that deconstruction interactively. You provide the business scenario and rough steps — the model handles the structured analysis, applying the 6-question framework (discrete steps, decision points, data flows, context needs, failure modes, data readiness) to every step. The deliverable:
+The skill walks you through that deconstruction interactively. You provide the business scenario and rough steps — and the model either applies the 6-question framework to every step (step-decomposed path) or captures your goal, constraints, quality criteria, and capability domains (outcome-driven path). The deliverable:
 
 - A **Workflow Definition** — the structured breakdown of your workflow into refined steps, with decision points, data flows, context needs, and failure modes captured for every step
 
@@ -74,6 +74,27 @@ You don't need an existing process. If you have a gap or pain point, describe th
 
 From there, the model proposes a step-by-step workflow to address the problem, asks you to react and refine, and then continues into the deep dive just like any other workflow.
 
+### Example: Defining an outcome for an agent system
+
+When you know what you want produced but don't want to prescribe how the AI gets there, choose the outcome-driven path:
+
+> **Model:** How would you like to approach this?
+> (a) Deconstruct a known process — you can describe the steps and I'll interview you to surface hidden details
+> (b) Start from a problem — you know what's broken; I'll propose a workflow and we refine it together
+> (c) Define an outcome — you know what you want produced but want an agent system to figure out the approach
+>
+> **You:** (c) — I want a competitive analysis report produced weekly, but I don't want to prescribe how the agent researches or structures it.
+>
+> **Model:** Got it — outcome-driven. Let's define what the agent system needs to know. First: what does a successful run produce? Describe the deliverable.
+>
+> **You:** A 2-3 page report covering our top 5 competitors — what they shipped, pricing changes, new messaging, and any strategic moves. Formatted as a markdown doc with an executive summary at the top.
+>
+> **Model:** Clear. Now, what does the agent system receive to start? What triggers the work, and what materials does it have access to?
+>
+> **You:** It runs every Monday morning. It has access to our competitor list (a shared doc with URLs), our product positioning doc, and the web.
+
+From there, the model continues through constraints, quality criteria, capability domains, tools/data, and human gates — building an outcome-driven Workflow Definition without decomposing into fixed steps.
+
 ### Not sure which workflow to try?
 
 Browse the [AI Use Cases](../../use-cases/index.md) section for inspiration — it organizes examples by type (content creation, research, coding, data analysis, ideation, and automation) with department-specific scenarios.
@@ -87,19 +108,41 @@ Or pick something you do regularly and could describe to a colleague over coffee
 - **Candidate screening** — reviewing applications, initial outreach, scheduling interviews, and tracking status
 - **Vendor evaluation** — gathering proposals, comparing against criteria, scoring, and recommending a decision
 - **Course enrollment follow-up** — people start signing up but don't finish, and there's no process to detect drop-offs or send reminders
+- **Competitive analysis pipeline** (outcome-driven) — you know what the deliverable looks like but want an agent system to determine the research approach
 
 You don't need to know all the steps before you start — that's what the skill helps you figure out. Even "I onboard new clients and it takes forever" is enough to begin. You can also start with a problem instead of a workflow — "People drop off during enrollment and I have no way to follow up" is a perfectly valid starting point.
 
 ## What the Skill Produces
 
-The **Workflow Definition** captures:
+The **Workflow Definition** captures one of two formats, depending on the path you chose:
 
-- **Scenario metadata** — name, description, outcome, trigger, type, objective, owners
+**Step-decomposed** (paths a and b):
+
+- **Scenario metadata** — name, description, outcome, trigger, type, objective, owners, definition type
 - **Refined step-by-step breakdown** — each step with action, sub-steps, decision points, data in/out, context needs, failure modes
 - **Step sequence and dependencies** — what's sequential, what's parallel, where the critical path is
 - **Context shopping list** — every artifact the workflow needs, with status, key contents, AI accessibility, and readiness notes
+- **Optimization summary** (if optimizations were applied) — what changed from the original process and why, including any optimizations declined and the reasoning
 
-Most workflows expand from 5–8 rough steps to 12–20 refined steps after the deep dive. This Workflow Definition is the input for the [Design phase](../design.md) in Step 3 — Design, where the model assesses the workflow's autonomy level, chooses an orchestration mechanism, classifies each step on the autonomy spectrum, and maps it to AI building blocks.
+Most workflows expand from 5-8 rough steps to 12-20 refined steps after the deep dive.
+
+**Outcome-driven** (path c):
+
+- **Scenario metadata** — name, description, outcome, trigger, type, objective, owners, definition type
+- **Goal** — what a successful run produces
+- **Inputs** — what the agent system receives to start
+- **Expected outputs** — format, structure, and quality expectations
+- **Constraints** — boundaries and guardrails
+- **Quality criteria** — evaluation dimensions (feeds directly into Test)
+- **Capability domains** — what the agent system needs to be good at (research, analysis, writing, etc.)
+- **Tools and data sources** — external systems with data readiness assessment
+- **Human gates** — where human review is expected
+
+Both formats are the input for the [Design phase](../design.md) in Step 3 — Design. Step-decomposed definitions go through per-step classification and building block mapping. Outcome-driven definitions go through capability domain mapping with pre-determined Autonomous autonomy and Agent orchestration.
+
+### Process optimization
+
+For step-decomposed workflows, the skill includes an **Optimize for AI** pass after the deep dive. Once the full process is mapped, the model steps back and challenges it — looking for steps that exist only because a human was doing the work (an integration eliminates the manual transfer), steps that can be collapsed (AI drafts and formats in one pass), steps that can be parallelized (no data dependency), handoffs that can be simplified, and new steps needed for the AI version. These are presented as recommendations for you to accept or reject — you may have good reasons to keep steps as-is (compliance, audit trail, stakeholder expectations). The Workflow Definition records what changed and why.
 
 ## Tips for Better Results
 

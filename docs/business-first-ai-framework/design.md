@@ -12,13 +12,23 @@ description: Gather architecture decisions, assess workflow autonomy level, choo
 
 ## What This Is
 
-The Design phase is where you decide *how* your workflow should be built — before you build it. You take the Workflow Definition from the [Deconstruct step](deconstruct/index.md) and make five design decisions:
+The Design phase is where you decide *how* your workflow should be built — before you build it. You take the Workflow Definition from the [Deconstruct step](deconstruct/index.md) and make design decisions. The Design skill supports both **step-decomposed** and **outcome-driven** Workflow Definitions:
+
+**For step-decomposed definitions**, you make five design decisions:
 
 1. **Architecture decisions** — What platform are you using, and what integrations and constraints does the Workflow Definition reveal?
 2. **Autonomy assessment** — Where does the whole workflow sit on the autonomy spectrum (Deterministic → Guided → Autonomous)?
 3. **Orchestration mechanism** — Who drives the workflow (Prompt, Skill-Powered Prompt, or Agent)?
 4. **Autonomy classification** — How much AI assistance does each step need?
 5. **Building block mapping** — What specific AI components does each step require?
+
+**For outcome-driven definitions**, the flow is streamlined — autonomy (Autonomous) and orchestration (Agent) are pre-determined by definition. The Design phase focuses on:
+
+1. **Architecture decisions** — Platform and tool integrations extracted from capability domains
+2. **Involvement mode** — Augmented or Automated, determined from the definition's human gates and trigger type
+3. **Capability domain mapping** — What integrations, intelligence, and reusable skills does each capability domain need?
+4. **Agent configuration** — The primary design artifact: agent blueprints drawn from the definition's goal, constraints, and expected outputs
+5. **Evaluation criteria** — Carried forward from the definition's quality criteria, with supplementary questions as needed
 
 !!! abstract "Framework vs. platform — by design"
     This framework guides you through *which decisions to make* and *what building blocks to design* — it is platform-agnostic. The AI model provides the platform-specific expertise: it researches your chosen platform's current tools, SDKs, and best practices at runtime via web search. This separation ensures the framework stays current as platforms evolve, without requiring documentation updates every time a platform changes its offerings.
@@ -211,6 +221,19 @@ For **multi-agent** workflows, also document:
 - **Human review gates** — Where does a human review output before the pipeline continues?
 
 This agent configuration is **platform-agnostic** — it serves as a blueprint. During the Build step, the model researches your chosen platform's current tools and generates platform-appropriate agent implementations.
+
+## Outcome-Driven Design Flow
+
+When your Workflow Definition has `Definition Type: Outcome-Driven`, the Design phase takes a streamlined path:
+
+- **Autonomy** is Autonomous by definition — the agent system determines its own execution path
+- **Involvement mode** (Augmented vs. Automated) is still determined from the definition's Human Gates section and trigger type
+- **Orchestration** is Agent — the primary design artifact is the agent configuration
+- **Capability domain mapping** replaces per-step classification — for each domain (research, analysis, writing, etc.), the model maps integration needs, intelligence requirements, and whether the domain should become a reusable skill
+- **Evaluation criteria** are carried forward from the definition's Quality Criteria section rather than gathered from scratch
+- **Agent Configuration** becomes the primary section of the spec, with instructions drawn from the definition's Goal, Constraints, and Expected Outputs
+
+The output is the same AI Building Block Spec format, with Capability Domain Mapping replacing the Step-by-Step Decomposition table, and an Autonomy Statement replacing the Autonomy Spectrum Summary.
 
 ## How to Use This
 

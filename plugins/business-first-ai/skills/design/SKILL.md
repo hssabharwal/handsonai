@@ -5,13 +5,14 @@ description: >
   an AI workflow. It gathers architecture decisions, assesses workflow autonomy level,
   chooses an orchestration mechanism and involvement mode, classifies steps, maps building blocks,
   identifies skill candidates, configures agents, and produces a Building Block Spec for approval.
+  Supports both step-decomposed and outcome-driven Workflow Definitions.
   This is Step 3 (Design) of the Business-First AI Framework.
 user-invocable: true
 ---
 
 # Workflow Design
 
-Take a Workflow Definition and produce the Design deliverable: an AI Building Block Spec that captures architecture decisions, autonomy assessment, orchestration mechanism, per-step classifications, skill candidates, and agent blueprints.
+Take a Workflow Definition and produce the Design deliverable: an AI Building Block Spec that captures architecture decisions, autonomy assessment, orchestration mechanism, per-step classifications (step-decomposed) or capability domain mapping (outcome-driven), skill candidates, and agent blueprints.
 
 **Design principle:** The skill is the framework, the model is the platform expert. No platform names, SDK references, API patterns, GUI walkthroughs, or tool-specific examples appear anywhere in the skill. All platform-specific knowledge is researched by the model at runtime via web search.
 
@@ -31,9 +32,13 @@ This is directive, not optional — plan mode is the preferred path for design c
 
 Read the Workflow Definition from `outputs/[workflow-name]-definition.md`. If the user specifies a file path, use that. Otherwise, look for the most recent Workflow Definition in `outputs/`.
 
+Read the `Definition Type` field from the Scenario Metadata. If `Outcome-Driven`, use the outcome-driven processing path for all subsequent steps (see **Outcome-Driven Processing Path** below). If `Step-Decomposed` (or no Definition Type field is present), use the standard step-decomposed path.
+
 #### Step 2 — Confirm Understanding
 
-Summarize the workflow name, step count, and outcome. Ask the user to confirm before proceeding.
+For step-decomposed definitions: Summarize the workflow name, step count, and outcome. Ask the user to confirm before proceeding.
+
+For outcome-driven definitions: Summarize the workflow name, goal, capability domains, and constraints. Ask the user to confirm before proceeding.
 
 #### Step 3 — Architecture Decisions
 
@@ -134,7 +139,9 @@ Single-agent vs. multi-agent is an architecture detail decided during Agent Conf
 
 Ask the user to confirm the mechanism, involvement mode, and platform sub-choice (if applicable).
 
-**Fast-track for complete definitions:** If the Workflow Definition + conversation context provide enough information to resolve ALL architecture dimensions, the autonomy level, AND the orchestration mechanism, present the entire Design analysis as a single confirmation block instead of stepping through questions one at a time:
+**Fast-track for complete definitions:** If the Workflow Definition + conversation context provide enough information to resolve ALL architecture dimensions, the autonomy level, AND the orchestration mechanism, present the entire Design analysis as a single confirmation block instead of stepping through questions one at a time.
+
+For step-decomposed definitions:
 
 > "Based on your workflow definition, here's my design analysis:
 > - **Platform:** [platform] ([surface])
@@ -144,6 +151,19 @@ Ask the user to confirm the mechanism, involvement mode, and platform sub-choice
 > - **Steps classified:** [summary table]
 > - **Skill candidates:** [list]
 > - **Agent blueprints:** [summary]
+>
+> Does this look right, or would you like to adjust anything?"
+
+For outcome-driven definitions:
+
+> "Based on your outcome-driven workflow definition, here's my design analysis:
+> - **Platform:** [platform] ([surface])
+> - **Autonomy level:** Autonomous (by definition — agent determines its own execution path)
+> - **Orchestration mechanism:** Agent ([involvement mode])
+> - **Tools needed:** [list — availability to be researched during Build]
+> - **Capability domains mapped:** [summary table]
+> - **Skill candidates:** [list]
+> - **Agent blueprint:** [summary]
 >
 > Does this look right, or would you like to adjust anything?"
 
@@ -246,7 +266,10 @@ After classifying every step, recommend available integration options for each t
 
 **Presentation format:**
 
-> **[Tool] access needed (Steps N, M):**
+For step-decomposed: `**[Tool] access needed (Steps N, M):**`
+For outcome-driven: `**[Tool] access needed (Domains: X, Y):**`
+
+> **[Tool] access needed ([Steps N, M / Domains: X, Y]):**
 >
 > **Curated (recommended):**
 > | Block | Option | Trade-off |
@@ -307,9 +330,9 @@ For every step classified as needing a **Skill** in Step 6, search for existing 
 
 **Presentation format:**
 
-For each step that needs a skill, present candidates in a table:
+For each step (or capability domain, for outcome-driven definitions) that needs a skill, present candidates in a table:
 
-> **Step 3 needs a skill: "Format coaching prep notes"**
+> **[Step 3 / Domain: Research] needs a skill: "Format coaching prep notes"**
 > | Source | Skill | Status |
 > |--------|-------|--------|
 > | Local | `coaching-prep-notes-assembly` (your plugin) | Pre-vetted — include? |
@@ -327,7 +350,7 @@ For steps where Skill Discovery (Step 6b) found an existing skill, skip to the n
 
 This step only applies to steps tagged **"build new"** in Step 6b. Tag those steps that should become skills. For each skill candidate, document:
 - Purpose (one sentence)
-- Covers steps (which step numbers this skill spans)
+- Covers steps / domains (which step numbers or capability domains this skill spans)
 - Inputs (what data the skill receives)
 - Outputs (what the skill produces)
 - Decision logic (key rules, criteria, frameworks)
@@ -357,6 +380,8 @@ For multi-agent: orchestration pattern, agent handoffs, human review gates.
 
 Before generating the spec, gather evaluation criteria from the user. These feed directly into Step 5 (Test) where the workflow is evaluated against them, and Step 7 (Improve) where iteration decisions reference the quality bar established here.
 
+**For step-decomposed definitions:**
+
 Prompt the user:
 
 > "Before generating the spec, I need to understand what good output looks like for this workflow. This feeds directly into Step 5 (Test) where you'll evaluate the workflow against these criteria."
@@ -369,6 +394,16 @@ Then ask these four questions, one at a time:
 4. "What's your minimum bar? What quality level is acceptable vs. needs more work?"
 
 Capture the answers for the Evaluation Criteria section of the spec.
+
+**For outcome-driven definitions:**
+
+The Workflow Definition already includes Quality Criteria from the Deconstruct interview. Carry these forward rather than asking from scratch:
+
+> "Your Workflow Definition includes these quality criteria: [list from definition]. These feed directly into Step 5 (Test). Anything to add or adjust?"
+
+Then ask only the supplementary questions not already covered:
+- If test scenarios are missing: "Give me 3-5 real or realistic scenarios you'd run this on."
+- If minimum bar is missing: "What's your minimum bar? What quality level is acceptable vs. needs more work?"
 
 #### Step 9 — Generate AI Building Block Spec
 
@@ -436,7 +471,7 @@ For each skill candidate (steps tagged with a new skill name above):
 | Dimension | Detail |
 |---|---|
 | **Purpose** | [one sentence] |
-| **Covers Steps** | [list of step numbers] |
+| **Covers Steps / Domains** | [list of step numbers, or capability domain names for outcome-driven] |
 | **Inputs** | [name (type, default)] |
 | **Outputs** | [what the skill produces] |
 | **Decision Logic** | [key rules, criteria, evaluation frameworks — multiline OK] |
@@ -496,9 +531,9 @@ Items NOT fully AI-accessible. If all items are accessible, state: "All context 
 
 ## Integration Options
 
-For each tool identified in the Integration column of the Step-by-Step Decomposition:
+For each tool identified in the Integration column of the Step-by-Step Decomposition (or Capability Domain Mapping for outcome-driven):
 
-### [Tool Name] (Steps N, M)
+### [Tool Name] (Steps N, M / Domains: X, Y)
 
 **Curated (recommended):**
 
@@ -584,9 +619,9 @@ Present a summary of the Building Block Spec:
 
 > "Here's the Building Block Spec summary:
 >
-> - **Autonomy:** [level]
+> - **Autonomy:** [level] (for outcome-driven: Autonomous)
 > - **Mechanism:** [orchestration mechanism] ([involvement mode])
-> - **Steps:** [count] steps, [count] skill candidates, [count] agents
+> - **Structure:** [count] steps, [count] skill candidates, [count] agents (for outcome-driven: [count] capability domains, [count] skill candidates, [count] agents)
 > - **Integration options:** [count] tools with recommended integration approaches
 > - **Implementation order:** [brief summary]
 >
@@ -602,11 +637,73 @@ After the user approves, instruct them to **exit plan mode** if they entered it 
 >
 > "To build the workflow, run `/business-first-ai:build` (or say *'Build the workflow from my Building Block Spec'*)."
 
+### Outcome-Driven Processing Path
+
+When the Workflow Definition has `Definition Type: Outcome-Driven`, the following modifications apply to the standard workflow:
+
+**Step 3 (Architecture Decisions):** Same as standard — extract tools from the Capability Domains and Tools/Data sections instead of from step data flows.
+
+**Step 4 (Autonomy Assessment):** State as fact: "This is an outcome-driven workflow — autonomy is **Autonomous** by definition. The agent system determines its own execution path."
+
+**Step 5 (Orchestration Mechanism):** State as fact: "Orchestration is **Agent**." Still determine the involvement mode (Augmented/Automated) from the definition's Human Gates section and trigger type. Still ask the platform sub-choice if the platform has multiple agent offerings.
+
+**Step 6 (Classify Each Step) → Capability Domain Mapping:** Replace per-step classification with capability domain mapping. For each capability domain from the definition:
+
+| Domain | Integration Needs | Intelligence Requirements | Reusable Skill? |
+|--------|-------------------|--------------------------|-----------------|
+| [domain] | Tools/connectors needed | Model class, context sources | Yes/No + rationale |
+
+Same Integration Discovery and Skill Discovery processes apply, operating on capability domains instead of steps.
+
+**Step 7 (Skill Candidates):** Same — identify which capability domains should become skills.
+
+**Step 8 (Agent Configuration):** This becomes the primary section. Agent Configuration is mandatory for outcome-driven definitions. Document the agent(s) with all standard fields, drawing instructions from the definition's Goal, Constraints, and Expected Outputs.
+
+**Step 8b (Evaluation Criteria):** Carry forward from the definition's Quality Criteria — see above.
+
+**Step 9 (Generate Spec):** Use the modified template sections below. The spec uses the same filename pattern. Conditional sections replace Step-by-Step Decomposition with Capability Domain Mapping, and Autonomy Spectrum Summary with a brief Autonomous statement.
+
+**Outcome-driven spec template modifications:**
+
+Replace the `## Step-by-Step Decomposition` section with:
+
+```markdown
+## Capability Domain Mapping
+
+| Domain | Description | Integration (use/build) | Intelligence | Reusable Skill? |
+|--------|-------------|------------------------|--------------|-----------------|
+
+### Autonomy Statement
+
+This is an outcome-driven workflow. Autonomy is Autonomous — the agent system determines its own execution path based on the goal, inputs, and constraints.
+```
+
+Replace the `## Skill Candidates` section header with capability-domain-based skill candidates (same field structure, keyed by domain instead of step number).
+
+The `## Agent Configuration` section is **mandatory** (not optional) for outcome-driven specs.
+
+All other spec sections remain the same, except **Step Sequence and Dependencies** is omitted for outcome-driven specs — the agent determines its own execution path, so there is no fixed step sequence to document.
+
+**Build Skill Needs Checklist modifications for outcome-driven:**
+- [ ] `Architecture Decisions` table has Platform, Platform Mode, Orchestration (Agent), and Involvement rows
+- [ ] Capability Domain Mapping table is present with Integration and Intelligence columns
+- [ ] Every Integration column entry includes block type, tool name, and use/build tag
+- [ ] Every skill candidate has all 8 fields: Purpose, Covers Steps / Domains, Inputs, Outputs, Decision Logic, Failure Modes, Required Tools, Depends On
+- [ ] Every "Exists" item in Context Inventory has a Location value
+- [ ] Every tool in the Integration column has a matching entry in Integration Options with at least one Source URL
+- [ ] Model Recommendation section is present with a default class
+- [ ] Data Readiness Summary is present (even if "all accessible")
+- [ ] Agent Configuration is present with Skills and Trigger Examples fields
+- [ ] Evaluation Criteria section is present with at least 3 test scenarios
+- [ ] Quality criteria carried forward from Workflow Definition
+
 ## Outputs
 
 ### `outputs/[workflow-name]-building-block-spec.md` — AI Building Block Spec
 
-Uses the mandatory template defined in Step 9. Sections: Execution Pattern, Architecture Decisions, Scenario Summary, Step-by-Step Decomposition (with separate Orchestration/Integration/Intelligence columns), Autonomy Spectrum Summary, Skill Candidates (8 fields each), Agent Configuration (optional, with Skills and Trigger Examples), Step Sequence and Dependencies, Prerequisites, Context Inventory (with Location column), Data Readiness Summary, Integration Options (with Source URLs), Model Recommendation, Recommended Implementation Order, Where to Run, Evaluation Criteria (with test scenarios), Stakeholders (optional).
+Uses the mandatory template defined in Step 9. For step-decomposed definitions: Execution Pattern, Architecture Decisions, Scenario Summary, Step-by-Step Decomposition (with separate Orchestration/Integration/Intelligence columns), Autonomy Spectrum Summary, Skill Candidates (8 fields each), Agent Configuration (optional, with Skills and Trigger Examples), Step Sequence and Dependencies, Prerequisites, Context Inventory (with Location column), Data Readiness Summary, Integration Options (with Source URLs), Model Recommendation, Recommended Implementation Order, Where to Run, Evaluation Criteria (with test scenarios), Stakeholders (optional).
+
+For outcome-driven definitions: Execution Pattern, Architecture Decisions, Scenario Summary, Capability Domain Mapping (with Integration/Intelligence columns), Autonomy Statement, Skill Candidates (8 fields each, keyed by domain), Agent Configuration (mandatory, with Skills and Trigger Examples), Prerequisites, Context Inventory, Data Readiness Summary, Integration Options, Model Recommendation, Recommended Implementation Order, Where to Run, Evaluation Criteria (with test scenarios carried forward from definition), Stakeholders (optional).
 
 ## Guidelines
 
