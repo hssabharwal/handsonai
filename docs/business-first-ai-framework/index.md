@@ -58,8 +58,9 @@ How you enter depends on what you're starting with:
 
 - **You know the process.** You can describe the steps, decisions, and handoffs — the model interviews you to surface hidden details and capture it all in a structured format. This is the most common path for workflows you already do manually.
 - **You have a problem, not a process.** You know what's broken or slow, but there's no defined workflow yet. The model proposes a candidate workflow for you to react to, then decomposes it collaboratively.
+- **You know the outcome, not the process.** You know what you want produced but don't want to prescribe how — the model captures your goal, constraints, quality criteria, and what the agent system needs to be good at, producing an outcome-driven definition that feeds into agent-oriented design.
 
-The model uses the **six-question framework** to break down each step:
+For the first two paths, the model uses the **six-question framework** to break down each step:
 
 1. Is this step actually multiple steps bundled together?
 2. Are there decision points, branches, or quality gates?
@@ -70,7 +71,7 @@ The model uses the **six-question framework** to break down each step:
 
 This is purely the *what* — it captures the process without prescribing how AI will handle it. The *how* comes in Step 3 (Design), where the Workflow Definition becomes the input for architecture decisions.
 
-**Deliverable:** **Workflow Definition** (`outputs/[name]-definition.md`) — refined steps with decision points, data flows, context needs, failure modes, and a context shopping list.
+**Deliverable:** **Workflow Definition** (`outputs/[name]-definition.md`) — either a step-decomposed breakdown (refined steps with decision points, data flows, context needs, failure modes, and a context shopping list) or an outcome-driven definition (goal, inputs, outputs, constraints, quality criteria, capability domains, and human gates).
 
 **Facilitated by the `deconstruct` skill.** See [Deconstruct Workflows](deconstruct/index.md) for details and [Get the Skills](skills.md) for installation on any supported platform.
 
@@ -157,15 +158,16 @@ Every AI workflow is classified on two dimensions — autonomy and human involve
 | **Augmented** | Human is in the loop — reviews, steers, or decides at key points |
 | **Automated** | AI runs solo — human reviews only the final output |
 
-### Five-Question Framework
+### Six-Question Framework
 
-Used to decompose each workflow step:
+Used to decompose each step in a step-decomposed workflow:
 
 1. **Discrete steps** — Is this one step or multiple bundled together?
 2. **Decision points** — Any if/then branches, quality gates, or judgment calls?
 3. **Data flows** — What goes in? What comes out? Where from and where to?
 4. **Context needs** — What documents, files, or reference materials are required?
 5. **Failure modes** — What happens when this step fails?
+6. **Data readiness** — Can the AI access, interpret, and persist the data this step needs?
 
 ### AI Building Blocks
 
