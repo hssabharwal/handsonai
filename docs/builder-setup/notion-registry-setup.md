@@ -47,7 +47,7 @@ A free Notion account is all you need to use the registry.
 
 Click this link to view the AI Registry template:
 
-**[AI Registry - Template](https://jamesgray007.notion.site/AI-Operations-Registry-Template-2f3edcfdb924813f86f3eacca6b836bb)**
+**[AI Registry - Template](https://jamesgray007.notion.site/AI-Operations-Registry-Template-2f3edcfdb924813f86f3eacca6b836bb){:target="_blank"}**
 
 ### Step 3: Click Duplicate
 
