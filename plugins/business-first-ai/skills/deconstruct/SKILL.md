@@ -17,23 +17,19 @@ Interactively discover a business workflow and produce a structured Workflow Def
 
 1. **Scenario discovery** — Determine how the user is arriving and which path to take:
 
-   **First, establish the scenario** using one of these entry points:
-   - **From Analyze output**: If the user references an opportunity report, file path (e.g., `outputs/ai-opportunity-report.md`), or a specific workflow candidate from an Analyze session, read the Workflow Candidate Summary from the file. Present the available candidates and ask which one to deconstruct. Pre-populate scenario metadata (name, description, trigger, deliverable, autonomy, involvement) from the candidate fields. If the candidate includes a `Lens` field, carry it forward along with any `Business Objective`, `Stakeholders`, and `Success Metrics` fields. Confirm the pre-populated details with the user.
-   - **From a workflow description**: The user describes a workflow they want to break down. Ask about the business scenario, objective, high-level steps, and ownership. One question at a time. If no lens was established, determine it: individual tasks (one person's repetitive work) = Individual lens; multi-role or business-objective processes = Organizational lens. If not obvious from context, ask.
-   - **From a problem statement**: The user describes a problem instead of a workflow. Propose a candidate workflow for them to react to.
+   **From Analyze output**: If the user references an opportunity report, file path (e.g., `outputs/ai-opportunity-report.md`), or a specific workflow candidate from an Analyze session, read the Workflow Candidate Summary from the file. Present the available candidates and ask which one to deconstruct. Pre-populate scenario metadata (name, description, trigger, deliverable, autonomy, involvement) from the candidate fields. If the candidate includes a `Lens` field, carry it forward along with any `Business Objective`, `Stakeholders`, and `Success Metrics` fields. Confirm the pre-populated details with the user. Then choose the path: if the candidate's autonomy = Autonomous, suggest option (c) but still confirm. Otherwise present the three choices below.
 
-   **Then, choose the deconstruction path.** After identifying the scenario (or on fresh entry), present three choices:
+   **Cold entry (no Analyze output)**: Present three choices as the **first question**:
 
    > "How would you like to approach this?
    > (a) **Deconstruct a known process** — You can describe the steps and I'll interview you to surface hidden details
    > (b) **Start from a problem** — You know what's broken; I'll propose a workflow and we refine it together
    > (c) **Define an outcome** — You know what you want produced but want an agent system to figure out the approach"
 
-   **Path routing guidance:**
-   - **From Analyze output**: If the candidate's autonomy = Autonomous, suggest option (c) but still confirm.
-   - **Option (a)**: Proceed to Step 2 (scope check) → Step 4 (deep dive with 6-question framework).
-   - **Option (b)**: After proposing a candidate solution, recommend whether step-decomposed or outcome-driven fits better, with reasoning. User confirms or overrides — honor their choice either way. If step-decomposed, proceed to Step 2 → Step 4. If outcome-driven, proceed to Step 2 → Step 4-OD.
-   - **Option (c)**: Proceed to Step 2 (scope check) → Step 4-OD (outcome-driven interview).
+   **After the user chooses, gather scenario details based on their path:**
+   - **Option (a)**: Ask about the business scenario, objective, high-level steps, and ownership. One question at a time. If no lens was established, determine it: individual tasks (one person's repetitive work) = Individual lens; multi-role or business-objective processes = Organizational lens. If not obvious from context, ask. Proceed to Step 2 (scope check) → Step 4 (deep dive with 6-question framework).
+   - **Option (b)**: Ask the user to describe what's broken. Propose a candidate workflow for them to react to. Then recommend whether step-decomposed or outcome-driven fits better, with reasoning. User confirms or overrides — honor their choice either way. If step-decomposed, proceed to Step 2 → Step 4. If outcome-driven, proceed to Step 2 → Step 4-OD.
+   - **Option (c)**: Ask the user to describe the outcome they want — what should the agent system produce, what triggers the need, and who consumes the output. One question at a time. Proceed to Step 2 (scope check) → Step 4-OD (outcome-driven interview).
 
 2. **Scope check — one trigger, one deliverable** — A workflow has exactly one trigger (what kicks it off) and one deliverable (the tangible output). Test for multiple workflows by checking:
    - **Triggers**: Multiple independent starting points? (e.g., "when a lead comes in" vs. "end of each week") → separate workflows
