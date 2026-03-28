@@ -20,9 +20,9 @@ Skills are one of the most powerful ways to customize Claude. Instead of re-expl
 - **Distribution scales from personal to organizational.** Skills work identically across Claude.ai, Claude Code, and the API. Share via file sharing, Git repositories, or plugin marketplaces.
 - **Patterns cover common use cases.** The guide includes patterns for content generation, code review, data analysis, research workflows, and multi-step processes — each with structural guidance and troubleshooting tips.
 
-## How the Cookbook Uses This
+## How the Playbook Uses This
 
-This guide is the primary reference for the [Skills](../agentic-building-blocks/skills/index.md) building block and directly informs the cookbook's [Agents & Skills](../use-the-cookbook/build/index.md) section. The skill structure and progressive disclosure concepts appear throughout the cookbook's plugin development guides.
+This guide is the primary reference for the [Skills](../agentic-building-blocks/skills/index.md) building block and directly informs the playbook's [Agents & Skills](../use-the-playbook/build/index.md) section. The skill structure and progressive disclosure concepts appear throughout the playbook's plugin development guides.
 
 ## Access
 

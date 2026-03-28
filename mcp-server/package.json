@@ -1,7 +1,7 @@
 {
   "name": "handsonai-mcp-server",
   "version": "1.0.0",
-  "description": "MCP server for the Hands-on AI Cookbook",
+  "description": "MCP server for the Hands-on AI Playbook",
   "type": "module",
   "scripts": {
     "build:index": "tsx scripts/build-index.ts",

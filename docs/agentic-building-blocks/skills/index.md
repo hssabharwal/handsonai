@@ -100,7 +100,7 @@ Pick your platform below for the complete install steps.
 
     Skills from the plugin are available immediately in Cowork.
 
-    [:octicons-arrow-right-24: Full Cowork plugin guide](../../use-the-cookbook/build/using-plugins.md#using-plugins-in-claude-cowork)
+    [:octicons-arrow-right-24: Full Cowork plugin guide](../../use-the-playbook/build/using-plugins.md#using-plugins-in-claude-cowork)
 
 === "Claude Code"
 
@@ -116,7 +116,7 @@ Pick your platform below for the complete install steps.
     /plugin marketplace add jamesgray-ai/handsonai-plugins
     ```
 
-    [:octicons-arrow-right-24: Full Claude Code plugin guide](../../use-the-cookbook/build/using-plugins.md#getting-started-in-claude-code)
+    [:octicons-arrow-right-24: Full Claude Code plugin guide](../../use-the-playbook/build/using-plugins.md#getting-started-in-claude-code)
 
 === "Claude.ai (Web)"
 
@@ -126,7 +126,7 @@ Pick your platform below for the complete install steps.
     2. Compress the skill folder into a `.zip` file (right-click > **Compress** in Finder)
     3. Go to **Settings > Capabilities > Upload skill** and select the ZIP
 
-    [:octicons-arrow-right-24: Detailed ZIP upload walkthrough](../../use-the-cookbook/build/using-plugins.md#using-skills-in-claudeai-web)
+    [:octicons-arrow-right-24: Detailed ZIP upload walkthrough](../../use-the-playbook/build/using-plugins.md#using-skills-in-claudeai-web)
 
 === "Cursor"
 
@@ -191,4 +191,4 @@ Test that your platform picks up the skill by asking it to perform a task the sk
 - [AI Use Cases](../../use-cases/index.md) — what teams build with skills, organized by six primitives
 - [Prompts](../prompts/index.md) — the foundation that skills build on
 - [Agents](../agents/index.md) — autonomous systems that invoke skills as part of multi-step workflows
-- [Agents & Skills](../../use-the-cookbook/build/index.md) — pre-built skills you can download or install
+- [Agents & Skills](../../use-the-playbook/build/index.md) — pre-built skills you can download or install

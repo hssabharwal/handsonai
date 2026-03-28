@@ -147,7 +147,7 @@ These skills are plain-text Markdown files. Choose how you want to get them:
     /plugin install agentic-coding@handsonai
     ```
 
-    See [Using Plugins](../../use-the-cookbook/build/using-plugins.md) for setup details, including [Claude.ai upload](../../use-the-cookbook/build/using-plugins.md#using-skills-in-claudeai-web), [Cowork](../../use-the-cookbook/build/using-plugins.md#using-plugins-in-claude-cowork), and [API usage](../../use-the-cookbook/build/using-plugins.md#using-skills-via-the-claude-api).
+    See [Using Plugins](../../use-the-playbook/build/using-plugins.md) for setup details, including [Claude.ai upload](../../use-the-playbook/build/using-plugins.md#using-skills-in-claudeai-web), [Cowork](../../use-the-playbook/build/using-plugins.md#using-plugins-in-claude-cowork), and [API usage](../../use-the-playbook/build/using-plugins.md#using-skills-via-the-claude-api).
 
 !!! note "Platform note"
     These skills are designed for **Claude Code** — they create local files in `specs/`, use the GitHub CLI to open issues, and integrate with plan mode. The skill files can be downloaded and adapted for other platforms, but you'll get the best experience in Claude Code or tools with file system and GitHub CLI access.
@@ -403,7 +403,7 @@ Want to see what these skills actually produce? We built a complete set of examp
 
 ### Live usage
 
-This workflow is how we build the Hands-on AI Cookbook. Our `CLAUDE.md` is a filled-in version of the template above, with project-specific verify commands (`mkdocs build --strict`), implementation guidelines, and content conventions.
+This workflow is how we build the Hands-on AI Playbook. Our `CLAUDE.md` is a filled-in version of the template above, with project-specific verify commands (`mkdocs build --strict`), implementation guidelines, and content conventions.
 
 :material-github: [View our CLAUDE.md on GitHub](https://github.com/jamesgray-ai/handsonai/blob/main/CLAUDE.md#feature-development-workflow){ .md-button }
 

@@ -20,9 +20,9 @@ This report captures the shift from AI as a coding assistant to AI as a collabor
 - **Agentic coding expands beyond engineering.** Non-technical roles (product managers, designers, marketers) increasingly use coding agents for prototyping, data analysis, and workflow automation — extending productivity gains across the organization.
 - **Security becomes a first-class concern.** Dual-use risk (agents that can build can also introduce vulnerabilities) requires security-first architecture, automated code review, and oversight systems designed for agent-generated code at scale.
 
-## How the Cookbook Uses This
+## How the Playbook Uses This
 
-This report provides context for the [Coding](../use-cases/coding/index.md) use case primitive and the [Agents](../agentic-building-blocks/agents/index.md) building block. The multi-agent and orchestrator-workers trends connect directly to the cookbook's [workflow architecture patterns](../patterns/workflow-architecture/index.md), particularly [Orchestrator-Workers](../patterns/workflow-architecture/orchestrator-workers.md) and [Autonomous Agents](../patterns/workflow-architecture/autonomous-agents.md).
+This report provides context for the [Coding](../use-cases/coding/index.md) use case primitive and the [Agents](../agentic-building-blocks/agents/index.md) building block. The multi-agent and orchestrator-workers trends connect directly to the playbook's [workflow architecture patterns](../patterns/workflow-architecture/index.md), particularly [Orchestrator-Workers](../patterns/workflow-architecture/orchestrator-workers.md) and [Autonomous Agents](../patterns/workflow-architecture/autonomous-agents.md).
 
 ## Access
 

@@ -40,7 +40,7 @@ The desktop app gives you quick access to Claude outside the browser, plus suppo
 
 ### 3. Install Claude Code
 
-Claude Code is Anthropic's AI coding CLI — it works directly with your files and terminal. This is the primary development tool used throughout the cookbook.
+Claude Code is Anthropic's AI coding CLI — it works directly with your files and terminal. This is the primary development tool used throughout the playbook.
 
 1. **macOS / Linux:**
     ```bash
@@ -129,7 +129,7 @@ MCP (Model Context Protocol) lets Claude read from and write to external tools �
 
 **Cowork:** Accesses your connectors, local MCP servers, and file system automatically — no extra setup needed.
 
-Connect the Hands-on AI Cookbook MCP server for reference material:
+Connect the Hands-on AI Playbook MCP server for reference material:
 
 [:octicons-arrow-right-24: MCP Server Connection Guide](../../../mcp-server/index.md)
 

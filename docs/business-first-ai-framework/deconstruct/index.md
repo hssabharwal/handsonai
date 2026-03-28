@@ -152,7 +152,7 @@ For step-decomposed workflows, the skill includes an **Optimize for AI** pass af
 - **Gather your context resources early.** The model will identify specific resources the workflow needs — documents like buyer personas and style guides, but also spreadsheets, databases, CRM access, application credentials, and sample data. If you already have these, have them ready. If you don't, the analysis will tell you exactly what to create or set up and what each resource should contain.
 
 !!! tip "Register your workflow in the AI Registry"
-    If you're using the [AI Registry](../../use-the-cookbook/build/ai-registry.md) Notion database, register your workflow as soon as naming is confirmed — the skill walks you through it. This creates a record of the workflow with its name, description, trigger, outcome, and type. You'll update this entry as you move through Build. Even if you're not using Notion, save the metadata somewhere — it's the first entry in your workflow inventory. See [Builder Tools Setup](../../builder-setup/notion-registry-setup.md) if you haven't set up the AI Registry yet.
+    If you're using the [AI Registry](../../use-the-playbook/build/ai-registry.md) Notion database, register your workflow as soon as naming is confirmed — the skill walks you through it. This creates a record of the workflow with its name, description, trigger, outcome, and type. You'll update this entry as you move through Build. Even if you're not using Notion, save the metadata somewhere — it's the first entry in your workflow inventory. See [Builder Tools Setup](../../builder-setup/notion-registry-setup.md) if you haven't set up the AI Registry yet.
 
 ## Related
 

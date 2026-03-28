@@ -40,12 +40,12 @@ Or using LangGraph to orchestrate a content pipeline where a research agent hand
 
 | Framework | Provider | Languages | Links |
 |-----------|----------|-----------|-------|
-| **Claude Agent SDK** | Anthropic | Python, TypeScript | [Cookbook guide](../../platforms/claude/agents/building-agents.md) · <a href="https://platform.claude.com/docs/en/agent-sdk/overview" target="_blank">Docs</a> |
-| **OpenAI Agents SDK** | OpenAI | Python, TypeScript | [Cookbook guide](../../platforms/openai/agents/building-agents.md) · <a href="https://developers.openai.com/api/docs/guides/agents-sdk" target="_blank">Docs</a> |
-| **Google Agent Development Kit (ADK)** | Google | Python | [Cookbook guide](../../platforms/google-gemini/agents/building-agents.md) · <a href="https://docs.cloud.google.com/agent-builder/agent-development-kit/overview" target="_blank">Docs</a> |
+| **Claude Agent SDK** | Anthropic | Python, TypeScript | [Playbook guide](../../platforms/claude/agents/building-agents.md) · <a href="https://platform.claude.com/docs/en/agent-sdk/overview" target="_blank">Docs</a> |
+| **OpenAI Agents SDK** | OpenAI | Python, TypeScript | [Playbook guide](../../platforms/openai/agents/building-agents.md) · <a href="https://developers.openai.com/api/docs/guides/agents-sdk" target="_blank">Docs</a> |
+| **Google Agent Development Kit (ADK)** | Google | Python | [Playbook guide](../../platforms/google-gemini/agents/building-agents.md) · <a href="https://docs.cloud.google.com/agent-builder/agent-development-kit/overview" target="_blank">Docs</a> |
 | **LangGraph** | LangChain | Python, JavaScript | <a href="https://www.langchain.com/langgraph" target="_blank">langchain.com/langgraph</a> |
 | **Microsoft Agent Framework** | Microsoft | Python, .NET (C#) | <a href="https://github.com/microsoft/agent-framework" target="_blank">GitHub</a> |
-| **Microsoft 365 Agents SDK** | Microsoft | .NET, Python, TypeScript | [Cookbook guide](../../platforms/m365-copilot/agents/building-agents.md) · <a href="https://github.com/microsoft/Agents" target="_blank">GitHub</a> · <a href="https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/m365-agents-sdk" target="_blank">Docs</a> |
+| **Microsoft 365 Agents SDK** | Microsoft | .NET, Python, TypeScript | [Playbook guide](../../platforms/m365-copilot/agents/building-agents.md) · <a href="https://github.com/microsoft/Agents" target="_blank">GitHub</a> · <a href="https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/m365-agents-sdk" target="_blank">Docs</a> |
 | **CrewAI** | CrewAI | Python | <a href="https://www.crewai.com/" target="_blank">crewai.com</a> |
 
 ## Agent-to-Agent (A2A) Protocol

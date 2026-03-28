@@ -1,5 +1,5 @@
 #!/bin/bash
-# Post a cookbook changelog update to Slack via incoming webhooks.
+# Post a playbook changelog update to Slack via incoming webhooks.
 #
 # Usage:
 #   ./scripts/notify-slack.sh "Entry Title" "One-line summary" "https://handsonai.info/blog/2026/02/14/slug/"
@@ -28,7 +28,7 @@ PAYLOAD=$(jq -n \
   --arg title "$TITLE" \
   --arg summary "$SUMMARY" \
   --arg url "$URL" \
-  '{blocks: [{type: "section", text: {type: "mrkdwn", text: (":book: *Cookbook Update: <" + $url + "|" + $title + ">*\n" + $summary)}}]}')
+  '{blocks: [{type: "section", text: {type: "mrkdwn", text: (":book: *Playbook Update: <" + $url + "|" + $title + ">*\n" + $summary)}}]}')
 
 post_to_webhook() {
   local webhook_url="$1"

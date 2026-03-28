@@ -1,8 +1,8 @@
 /**
- * Hands-on AI Cookbook MCP Server — Cloudflare Worker
+ * Hands-on AI Playbook MCP Server — Cloudflare Worker
  *
  * Implements the MCP protocol over Streamable HTTP (stateless JSON mode).
- * Serves cookbook content via 7 tools and 1 resource.
+ * Serves playbook content via 7 tools and 1 resource.
  */
 
 import type { ContentIndex, Env, JsonRpcRequest, JsonRpcResponse } from "./types.js";

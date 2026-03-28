@@ -194,7 +194,7 @@ Based on the platform from Architecture Decisions. Resolve any deferred decision
 
 **a. Resolve platform documentation from the registry.** Use the platform doc URLs fetched in Platform Research (Step 3.6) from the registry's `platforms` section. These provide current, authoritative documentation for each building block's artifact format.
 
-If cookbook platform guides are available locally (e.g., `docs/platforms/claude/index.md`), use them as supplementary context — not as the primary source.
+If playbook platform guides are available locally (e.g., `docs/platforms/claude/index.md`), use them as supplementary context — not as the primary source.
 
 **b. Verify currency (if needed).** The registry provides current doc URLs maintained by the framework author. Use web search only if the fetched docs appear outdated or if the registry was unavailable in Step 3.6.
 

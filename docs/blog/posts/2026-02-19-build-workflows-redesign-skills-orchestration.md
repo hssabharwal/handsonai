@@ -18,7 +18,7 @@ The Build Workflows step has been redesigned around a core idea: the model and u
 
 The [Build Workflows](../../business-first-ai-framework/build/index.md) step now works through the `building-workflows` skill, which orchestrates the full Design and Construct phases. In Design, the model collaborates with you on architecture decisions, execution patterns, and building block mapping — producing an AI Building Block Spec. In Construct, the model executes against that spec to generate your platform's building blocks, then delivers a **Launch Guide** with step-by-step setup instructions, a guided first run, and next steps.
 
-The skill now starts each build by reading the cookbook's [curated platform documentation](../../business-first-ai-framework/build/index.md) for your specific platform, then verifies currency via web search — so recommendations stay current without relying on stale static mappings.
+The skill now starts each build by reading the playbook's [curated platform documentation](../../business-first-ai-framework/build/index.md) for your specific platform, then verifies currency via web search — so recommendations stay current without relying on stale static mappings.
 
 ## New Construct page replaces six building block pages
 
@@ -30,4 +30,4 @@ The [Analyze](../../business-first-ai-framework/analyze.md) and [Deconstruct](..
 
 ## Cross-platform skills standard
 
-The [Skills](../../agentic-building-blocks/skills/index.md) building block page now documents the Agent Skills open standard across five platforms — Claude Code, Cursor, Codex CLI, Gemini CLI, and VS Code Copilot — with a new [How to Add Skills to Your Platform](../../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) installation guide. The [Agents & Skills](../../use-the-cookbook/build/index.md) section (formerly "Marketplace") now leads with GitHub download as the primary access method, reflecting the cross-platform positioning.
+The [Skills](../../agentic-building-blocks/skills/index.md) building block page now documents the Agent Skills open standard across five platforms — Claude Code, Cursor, Codex CLI, Gemini CLI, and VS Code Copilot — with a new [How to Add Skills to Your Platform](../../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform) installation guide. The [Agents & Skills](../../use-the-playbook/build/index.md) section (formerly "Marketplace") now leads with GitHub download as the primary access method, reflecting the cross-platform positioning.

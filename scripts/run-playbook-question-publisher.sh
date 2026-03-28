@@ -1,5 +1,5 @@
 #!/bin/bash
-# Wrapper script for cookbook-question-publisher subagent
+# Wrapper script for playbook-question-publisher subagent
 # Publishes approved question drafts to the live site
 # Can be scheduled via launchd for nightly publishing or run on-demand
 
@@ -8,9 +8,9 @@ LOG_DIR="$PROJECT_DIR/logs/scheduled"
 mkdir -p "$LOG_DIR"
 
 TIMESTAMP=$(date +%Y-%m-%d_%H-%M-%S)
-LOG_FILE="$LOG_DIR/cookbook-question-publisher_$TIMESTAMP.log"
+LOG_FILE="$LOG_DIR/playbook-question-publisher_$TIMESTAMP.log"
 
-echo "=== Cookbook Question Publisher ===" >> "$LOG_FILE"
+echo "=== Playbook Question Publisher ===" >> "$LOG_FILE"
 echo "Started: $(date)" >> "$LOG_FILE"
 echo "" >> "$LOG_FILE"
 
@@ -19,7 +19,7 @@ cd "$PROJECT_DIR"
 
 # Run the subagent (using full path for launchd compatibility)
 # --dangerously-skip-permissions allows headless operation with tool use
-/Users/jamesgray/.local/bin/claude --agent cookbook-question-publisher -p "Publish all approved questions from the Notion Questions database" --dangerously-skip-permissions --verbose >> "$LOG_FILE" 2>&1
+/Users/jamesgray/.local/bin/claude --agent playbook-question-publisher -p "Publish all approved questions from the Notion Questions database" --dangerously-skip-permissions --verbose >> "$LOG_FILE" 2>&1
 
 echo "" >> "$LOG_FILE"
 echo "Finished: $(date)" >> "$LOG_FILE"

@@ -42,7 +42,7 @@ Skills for documenting, naming, registering, and syncing AI operational workflow
 
 ## Full Documentation
 
-[handsonai.info/use-the-cookbook/build/ai-registry/](https://handsonai.info/use-the-cookbook/build/ai-registry/)
+[handsonai.info/use-the-playbook/build/ai-registry/](https://handsonai.info/use-the-playbook/build/ai-registry/)
 
 ## License
 

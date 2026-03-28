@@ -28,4 +28,4 @@ The Design phase's architecture checklist has been replaced with an **extract-th
 
 ## Skills & Agents pages repositioned as platform-agnostic
 
-The [Agents & Skills](../../use-the-cookbook/build/index.md) section now leads with GitHub download as the primary access method across all four detail pages, with Claude Code plugin install as a secondary option. Verbose platform tabs replaced with concise "Using These Skills" sections.
+The [Agents & Skills](../../use-the-playbook/build/index.md) section now leads with GitHub download as the primary access method across all four detail pages, with Claude Code plugin install as a secondary option. Verbose platform tabs replaced with concise "Using These Skills" sections.

@@ -1,14 +1,14 @@
 ---
-name: publishing-cookbook-updates
+name: publishing-playbook-updates
 description: >
-  Draft and publish curated changelog entries for the Hands-on AI Cookbook. Scans
+  Draft and publish curated changelog entries for the Hands-on AI Playbook. Scans
   git history for meaningful changes, drafts a short blog post, presents it for
   review, writes the file, and notifies Slack. Use when: (1) James wants to post
-  a cookbook update, (2) user says "publish update" or "changelog entry", or
-  (3) user runs /publishing-cookbook-updates.
+  a playbook update, (2) user says "publish update" or "changelog entry", or
+  (3) user runs /publishing-playbook-updates.
 ---
 
-# Publishing Cookbook Updates
+# Publishing Playbook Updates
 
 Draft a curated changelog entry from recent git history, get approval, publish it, and notify Slack.
 
@@ -77,7 +77,7 @@ Draft a curated changelog entry from recent git history, get approval, publish i
    - Filename format: `docs/blog/posts/YYYY-MM-DD-<slug>.md`
    - Use today's date
    - Keep it short and scannable — this is a changelog, not a blog post
-   - Link to the actual cookbook pages using relative paths (e.g., `../../agentic-building-blocks/agents/index.md`)
+   - Link to the actual playbook pages using relative paths (e.g., `../../agentic-building-blocks/agents/index.md`)
    - If a related Substack article was published, cross-reference it
    - Categories: `New Content`, `Plugins`, `Platform Updates`, `Builder Setup`, `Courses`, `Announcements`
    - Multiple categories can be listed if the update spans areas

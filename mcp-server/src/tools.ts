@@ -52,9 +52,9 @@ const SETUP_TOOLS: Record<string, string> = {
 /** All tool definitions exposed via tools/list. */
 export const TOOL_DEFINITIONS: McpToolDefinition[] = [
   {
-    name: "search_cookbook",
+    name: "search_playbook",
     description:
-      "Search the Hands-on AI Cookbook for pages matching a keyword query. Returns matching pages ranked by relevance with title, description, URL, and section.",
+      "Search the Hands-on AI Playbook for pages matching a keyword query. Returns matching pages ranked by relevance with title, description, URL, and section.",
     inputSchema: {
       type: "object",
       properties: {
@@ -80,7 +80,7 @@ export const TOOL_DEFINITIONS: McpToolDefinition[] = [
   {
     name: "get_page",
     description:
-      "Get the full markdown content of a specific cookbook page by its path. Use search_cookbook first to find the right path.",
+      "Get the full markdown content of a specific playbook page by its path. Use search_playbook first to find the right path.",
     inputSchema: {
       type: "object",
       properties: {
@@ -102,7 +102,7 @@ export const TOOL_DEFINITIONS: McpToolDefinition[] = [
   {
     name: "list_section",
     description:
-      "List all pages in a cookbook section. Returns titles, descriptions, and paths for browsing. Set overview_only to true to get just the main topic pages without sub-pages.",
+      "List all pages in a playbook section. Returns titles, descriptions, and paths for browsing. Set overview_only to true to get just the main topic pages without sub-pages.",
     inputSchema: {
       type: "object",
       properties: {
@@ -173,7 +173,7 @@ export const TOOL_DEFINITIONS: McpToolDefinition[] = [
   {
     name: "list_questions",
     description:
-      "List all Q&A pages in the cookbook. Each entry includes the question, short answer, section, and URL. Useful for quick answers.",
+      "List all Q&A pages in the playbook. Each entry includes the question, short answer, section, and URL. Useful for quick answers.",
     inputSchema: {
       type: "object",
       properties: {
@@ -215,12 +215,12 @@ export const TOOL_DEFINITIONS: McpToolDefinition[] = [
   },
 ];
 
-/** The cookbook://index resource definition. */
+/** The playbook://index resource definition. */
 export const RESOURCE_DEFINITION: McpResourceDefinition = {
-  uri: "cookbook://index",
-  name: "Cookbook Site Index",
+  uri: "playbook://index",
+  name: "Playbook Site Index",
   description:
-    "Full site map of the Hands-on AI Cookbook with title, description, path, and section for every page",
+    "Full site map of the Hands-on AI Playbook with title, description, path, and section for every page",
   mimeType: "application/json",
 };
 
@@ -271,7 +271,7 @@ export function handleToolCall(
   index: ContentIndex
 ): ToolResult {
   switch (toolName) {
-    case "search_cookbook": {
+    case "search_playbook": {
       const query = requireString(args, "query");
       if (typeof query !== "string") return query;
       const section = optionalString(args, "section");
@@ -300,7 +300,7 @@ export function handleToolCall(
           .slice(0, 5);
         const hint = suggestions.length
           ? `\n\nDid you mean:\n${suggestions.map((s) => `- ${s.path}`).join("\n")}`
-          : "\n\nUse search_cookbook to find the correct path.";
+          : "\n\nUse search_playbook to find the correct path.";
         return text(`Page not found: "${pagePath}".${hint}`);
       }
       return text(formatPageFull(page));
@@ -385,7 +385,7 @@ export function handleToolCall(
           `**Q: ${q.question}**\nA: ${q.short_answer || "(see full page)"}\nSection: ${q.section} | Path: \`${q.path}\`\n${q.url}`
       );
       return text(
-        `# Cookbook Q&A (${questions.length} questions)\n\n${lines.join("\n\n---\n\n")}`
+        `# Playbook Q&A (${questions.length} questions)\n\n${lines.join("\n\n---\n\n")}`
       );
     }
 
@@ -418,7 +418,7 @@ export function handleResourceRead(
   uri: string,
   index: ContentIndex
 ): { contents: Array<{ uri: string; mimeType: string; text: string }> } {
-  if (uri === "cookbook://index") {
+  if (uri === "playbook://index") {
     const siteMap = index.pages.map((p) => ({
       path: p.path,
       title: p.title,
