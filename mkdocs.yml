@@ -261,14 +261,16 @@ nav:
     - Overview: agentic-building-blocks/index.md
     - Choosing the Right Building Block: agentic-building-blocks/comparison.md
     - Intelligence:
-      - Model: agentic-building-blocks/models/index.md
+      - Model:
+        - agentic-building-blocks/models/index.md
       - Context:
-        - Overview: agentic-building-blocks/context/index.md
+        - agentic-building-blocks/context/index.md
         - Context Graphs: agentic-building-blocks/context/context-graphs.md
       - Projects:
-        - Overview: agentic-building-blocks/projects/index.md
+        - agentic-building-blocks/projects/index.md
         - Project Instructions: agentic-building-blocks/projects/workspace-instructions-meta-prompt.md
-      - Memory: agentic-building-blocks/memory/index.md
+      - Memory:
+        - agentic-building-blocks/memory/index.md
     - Orchestration:
       - Prompts:
         - Overview: agentic-building-blocks/prompts/index.md
@@ -321,12 +323,15 @@ nav:
         - Resources: agentic-building-blocks/agents/resources.md
     - Integration:
       - MCP:
-        - Overview: agentic-building-blocks/mcp/index.md
+        - agentic-building-blocks/mcp/index.md
         - Questions:
           - How do I connect an MCP server to Claude Code: agentic-building-blocks/mcp/questions/how-do-i-connect-an-mcp-server-to-claude-code.md
-      - API: agentic-building-blocks/api/index.md
-      - SDK: agentic-building-blocks/sdk/index.md
-      - CLI: agentic-building-blocks/cli/index.md
+      - API:
+        - agentic-building-blocks/api/index.md
+      - SDK:
+        - agentic-building-blocks/sdk/index.md
+      - CLI:
+        - agentic-building-blocks/cli/index.md
   - Use Cases:
     - Overview: use-cases/index.md
     - Content Creation:
