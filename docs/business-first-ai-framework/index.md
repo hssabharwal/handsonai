@@ -17,13 +17,13 @@ The framework is facilitated by **seven skills** — reusable AI routines that g
 
 | Step | Skill | What it guides you through |
 |------|-------|---------------------------|
-| 1. Analyze | `analyze` | Auditing your workflows and surfacing AI opportunities |
-| 2. Deconstruct | `deconstruct` | Breaking a workflow into steps, decisions, data flows, and failure modes |
-| 3. Design | `design` | Designing the AI implementation architecture |
-| 4. Build | `build` | Generating platform-appropriate artifacts |
-| 5. Test | `test` | Structured testing and quality evaluation |
-| 6. Run | `run` | Deploying and operating the workflow |
-| 7. Improve | `improve` | Evaluating and evolving running workflows |
+| 1. Analyze | `analyze` | Identify and prioritize the workflows worth reimagining with AI |
+| 2. Deconstruct | `deconstruct` | Map the workflow's process — or define the outcome it should produce |
+| 3. Design | `design` | Architect how AI building blocks will power your workflow |
+| 4. Build | `build` | Build the AI building blocks your design specifies |
+| 5. Test | `test` | Test your workflow's output quality and fix what's not working |
+| 6. Run | `run` | Deploy and operationalize your workflow |
+| 7. Improve | `improve` | Monitor quality and innovate your workflow over time |
 
 </div>
 
