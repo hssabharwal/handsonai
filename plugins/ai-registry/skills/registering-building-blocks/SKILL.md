@@ -74,7 +74,7 @@ Create a single, copy-paste-ready prompt that demonstrates the building block's 
 |------|------|--------------------|
 | Skill | reviewing-student-goals | "Navigate to my Maven course Reflect: Goals page and extract all student learning goals. Update each student's record in Notion and give me a cohort theme analysis." |
 | Skill | writing-linkedin-posts | "Write a LinkedIn post about [topic] using my brand voice." |
-| Agent | cookbook-question-answerer | "Answer the question 'What are the six AI building blocks?' using the Hands-on AI site content." |
+| Agent | playbook-question-answerer | "Answer the question 'What are the six AI building blocks?' using the Hands-on AI site content." |
 | Agent | hbr-editor | "Review this article for HBR publication quality and give me prescriptive feedback." |
 | Prompt | meeting-prep-quick | "Prepare me for my meeting with [name] at [company] tomorrow." |
 

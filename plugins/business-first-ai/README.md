@@ -54,7 +54,7 @@ Outputs are saved to the `outputs/` folder.
 
 ## Worked Examples
 
-The example agents, skills, and prompts (executive writing, editorial review, research, meeting prep, AI news) have moved to the [AI Workflow Examples](https://handsonai.info/use-the-cookbook/build/ai-workflow-examples/) plugin. Install with `/plugin install ai-workflow-examples@handsonai`.
+The example agents, skills, and prompts (executive writing, editorial review, research, meeting prep, AI news) have moved to the [AI Workflow Examples](https://handsonai.info/use-the-playbook/build/ai-workflow-examples/) plugin. Install with `/plugin install ai-workflow-examples@handsonai`.
 
 ## Full Documentation
 

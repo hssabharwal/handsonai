@@ -1,11 +1,11 @@
 ---
 title: Changelog
-description: Recent updates to the Hands-on AI Cookbook — new content, plugins, and platform guides.
+description: Recent updates to the Hands-on AI Playbook — new content, plugins, and platform guides.
 ---
 
 # Changelog
 
-Recent updates to the Hands-on AI Cookbook. Subscribe via RSS to stay current.
+Recent updates to the Hands-on AI Playbook. Subscribe via RSS to stay current.
 
 [:material-rss: Subscribe via RSS](/rss.xml){ .md-button }
 

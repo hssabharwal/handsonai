@@ -1,6 +1,6 @@
 ---
 title: "Identifying and Scaling AI Use Cases"
-description: "OpenAI's guide to finding and prioritizing enterprise AI use cases — the source of the six use case primitives used throughout this cookbook"
+description: "OpenAI's guide to finding and prioritizing enterprise AI use cases — the source of the six use case primitives used throughout this playbook"
 ---
 
 # Identifying and Scaling AI Use Cases
@@ -9,7 +9,7 @@ description: "OpenAI's guide to finding and prioritizing enterprise AI use cases
 
 ## Why This Matters
 
-This report is the foundation for the cookbook's [six use case primitives](../use-cases/index.md). OpenAI analyzed over 600 enterprise AI deployments and found that nearly all use cases fall into six categories — Content Creation, Research, Coding, Data Analysis, Ideation & Strategy, and Automation. Understanding these primitives helps you classify your own workflows and find the right building blocks faster.
+This report is the foundation for the playbook's [six use case primitives](../use-cases/index.md). OpenAI analyzed over 600 enterprise AI deployments and found that nearly all use cases fall into six categories — Content Creation, Research, Coding, Data Analysis, Ideation & Strategy, and Automation. Understanding these primitives helps you classify your own workflows and find the right building blocks faster.
 
 ## Key Takeaways
 
@@ -20,9 +20,9 @@ This report is the foundation for the cookbook's [six use case primitives](../us
 - **Prioritize by impact and feasibility.** The report provides a framework for gathering use case ideas from across the organization and ranking them by business value, data readiness, and implementation effort.
 - **Department workflow mapping accelerates discovery.** Beyond individual use cases, the report recommends mapping entire department workflows to surface systemic AI opportunities.
 
-## How the Cookbook Uses This
+## How the Playbook Uses This
 
-The six primitives from this report are the backbone of the cookbook's [Use Cases](../use-cases/index.md) section. Each primitive has its own page with platform-agnostic examples mapped to [Agentic Building Blocks](../agentic-building-blocks/index.md). The report's discovery methodology also influenced the [Analyze Workflows](../business-first-ai-framework/analyze.md) step of the Business-First AI Framework.
+The six primitives from this report are the backbone of the playbook's [Use Cases](../use-cases/index.md) section. Each primitive has its own page with platform-agnostic examples mapped to [Agentic Building Blocks](../agentic-building-blocks/index.md). The report's discovery methodology also influenced the [Analyze Workflows](../business-first-ai-framework/analyze.md) step of the Business-First AI Framework.
 
 ## Access
 

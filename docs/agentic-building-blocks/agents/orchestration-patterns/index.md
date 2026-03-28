@@ -11,7 +11,7 @@ These eight patterns are drawn from research and production systems across Anthr
 
 !!! info "How This Section Relates to Others"
 
-    Three sections in the Cookbook cover different lenses on agent systems:
+    Three sections in the Playbook cover different lenses on agent systems:
 
     | Section | Lens | Question It Answers |
     |---------|------|---------------------|

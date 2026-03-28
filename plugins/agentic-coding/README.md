@@ -36,7 +36,7 @@ Skills for AI-assisted coding workflows — feature PRDs, specs, and implementat
 
 ## Full Documentation
 
-[handsonai.info/use-the-cookbook/build/agentic-coding/](https://handsonai.info/use-the-cookbook/build/agentic-coding/)
+[handsonai.info/use-the-playbook/build/agentic-coding/](https://handsonai.info/use-the-playbook/build/agentic-coding/)
 
 ## License
 

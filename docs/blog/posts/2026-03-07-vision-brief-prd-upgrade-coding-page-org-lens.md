@@ -9,7 +9,7 @@ description: "Upgraded Vision Brief and Feature PRD skills with deeper PM rigor,
 
 # Stronger product specs, restructured coding page, and organizational workflows
 
-Three updates that sharpen how the cookbook helps you define, plan, and build.
+Three updates that sharpen how the playbook helps you define, plan, and build.
 
 <!-- more -->
 

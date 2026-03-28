@@ -31,7 +31,7 @@ The [Design step](../../business-first-ai-framework/design.md) is now available 
 
 ## Content Repurposing Demo Skills
 
-The [AI Workflow Examples plugin](../../use-the-cookbook/build/ai-workflow-examples.md) (v1.1.0) adds two demo skills for the Agentic AI course: **extracting-article-insights** and **drafting-linkedin-posts** — a two-step content repurposing pipeline that extracts key points from a source article and drafts a LinkedIn post from the results.
+The [AI Workflow Examples plugin](../../use-the-playbook/build/ai-workflow-examples.md) (v1.1.0) adds two demo skills for the Agentic AI course: **extracting-article-insights** and **drafting-linkedin-posts** — a two-step content repurposing pipeline that extracts key points from a source article and drafts a LinkedIn post from the results.
 
 ## GitHub Setup: Create a Repository
 

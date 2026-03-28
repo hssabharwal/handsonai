@@ -29,7 +29,7 @@ These skills and agents are plain-text Markdown files that work in any AI tool. 
     /plugin install business-first-ai@handsonai
     ```
 
-    See [Using Plugins](../use-the-cookbook/build/using-plugins.md) for setup details, including [Claude.ai upload](../use-the-cookbook/build/using-plugins.md#using-skills-in-claudeai-web), [Cowork](../use-the-cookbook/build/using-plugins.md#using-plugins-in-claude-cowork), and [API usage](../use-the-cookbook/build/using-plugins.md#using-skills-via-the-claude-api).
+    See [Using Plugins](../use-the-playbook/build/using-plugins.md) for setup details, including [Claude.ai upload](../use-the-playbook/build/using-plugins.md#using-skills-in-claudeai-web), [Cowork](../use-the-playbook/build/using-plugins.md#using-plugins-in-claude-cowork), and [API usage](../use-the-playbook/build/using-plugins.md#using-skills-via-the-claude-api).
 
 ## Using These Skills
 
@@ -58,7 +58,7 @@ These skills and agents are plain-text Markdown files that work in any AI tool. 
 7. Run `/business-first-ai:improve` to evaluate and evolve running workflows — Step 7
 8. Review your outputs in the `outputs/` folder
 
-For platform-specific setup (Claude.ai ZIP upload, Cowork install, API integration), see [Using Plugins](../use-the-cookbook/build/using-plugins.md).
+For platform-specific setup (Claude.ai ZIP upload, Cowork install, API integration), see [Using Plugins](../use-the-playbook/build/using-plugins.md).
 
 ### Platform Compatibility
 
@@ -417,7 +417,7 @@ These skills cover the full Business-First AI Framework. Here's the recommended 
 3. **Design** — Run `design` to produce your AI Building Block Spec
 4. **Build** — Run `build` to resolve context needs and generate platform artifacts from the approved spec
 5. **Test** — Run `test` to evaluate output quality, establish a baseline, and iterate with Build until the workflow is ready
-6. **Run** — Run `run` to get a Run Guide, choose a run pattern, and deploy. See the [AI Workflow Examples](../use-the-cookbook/build/ai-workflow-examples.md) plugin for working examples of real AI workflows.
+6. **Run** — Run `run` to get a Run Guide, choose a run pattern, and deploy. See the [AI Workflow Examples](../use-the-playbook/build/ai-workflow-examples.md) plugin for working examples of real AI workflows.
 7. **Improve** — Run `improve` periodically to catch regressions, evaluate quality signals, and evolve the workflow
 
 ## FAQ
@@ -438,7 +438,7 @@ The 11 building blocks across three layers: **Intelligence** — Model (AI engin
 Most workflows need 2-4 rounds of Build and Test before they produce reliably good output. Each iteration should be targeted — fix a specific building block, re-test, and measure improvement.
 
 **Where are the example agents and prompts?**
-They're in the [AI Workflow Examples](../use-the-cookbook/build/ai-workflow-examples.md) collection — agents for executive writing, editorial review, research, meeting prep, and AI news.
+They're in the [AI Workflow Examples](../use-the-playbook/build/ai-workflow-examples.md) collection — agents for executive writing, editorial review, research, meeting prep, and AI news.
 
 **Do I need Claude Code for all of this?**
 No. These are plain-text Markdown files — download them from [GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins/business-first-ai) and add them to any AI tool. See [Get These Skills](#get-these-skills) for all the options, or check the [Platform Compatibility](#platform-compatibility) table for per-component details.

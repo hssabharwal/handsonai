@@ -1,6 +1,6 @@
 ---
 title: Contributing to Hands-on AI
-description: How to add content — questions, how-to guides, topics, and patterns — to the AI Cookbook
+description: How to add content — questions, how-to guides, topics, and patterns — to the AI Playbook
 ---
 
 # Contributing to Hands-On AI

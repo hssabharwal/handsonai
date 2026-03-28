@@ -9,7 +9,7 @@ description: "Agent orchestration patterns, expanded building blocks, agent prog
 
 # Orchestration patterns, new building blocks, and framework refinements
 
-The cookbook got a wave of new content this week — a patterns section on agent orchestration, two new building blocks, a frameworks reference page, and refinements across the framework and setup guides.
+The playbook got a wave of new content this week — a patterns section on agent orchestration, two new building blocks, a frameworks reference page, and refinements across the framework and setup guides.
 
 <!-- more -->
 

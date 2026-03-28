@@ -254,14 +254,14 @@ Based on impact, frequency, and feasibility, the following three candidates are 
 ## Example 2: AI Instructor
 
 ??? info "About this persona"
-    James Gray is an AI Instructor who runs live cohort courses and maintains the Hands-on AI Cookbook — a documentation site with setup guides, framework content, and an MCP server. His work spans teaching, content creation, student support, and meeting with prospective clients and partners.
+    James Gray is an AI Instructor who runs live cohort courses and maintains the Hands-on AI Playbook — a documentation site with setup guides, framework content, and an MCP server. His work spans teaching, content creation, student support, and meeting with prospective clients and partners.
 
 ### Report Header
 
 |                              |                                                                                                          |
 | ---------------------------- | -------------------------------------------------------------------------------------------------------- |
 | **Name**                     | James Gray                                                                                               |
-| **Role**                     | AI Instructor and course creator, Hands-on AI Cookbook                                                   |
+| **Role**                     | AI Instructor and course creator, Hands-on AI Playbook                                                   |
 | **Date**                     | 2026-03-05                                                                                               |
 | **Opportunities identified** | 7                                                                                                        |
 | **Top recommendation**       | Student Q&A Research — directly improves the core teaching experience while saving significant prep time |
@@ -280,7 +280,7 @@ Based on impact, frequency, and feasibility, the following three candidates are 
 
 ### Top Recommendations
 
-1. **Student Q&A Research** — Turns ad-hoc student questions into well-sourced, reusable answers, building the cookbook's knowledge base while improving response quality and speed.
+1. **Student Q&A Research** — Turns ad-hoc student questions into well-sourced, reusable answers, building the playbook's knowledge base while improving response quality and speed.
 2. **Assignment Feedback Drafting** — Scales personalized, actionable feedback across cohorts without sacrificing quality — the highest-leverage activity for student outcomes.
 3. **Lesson Slide Formatting** — Eliminates the tedious formatting step between content creation and delivery, freeing time for higher-value lesson design.
 
@@ -344,7 +344,7 @@ Student questions often require researching current documentation, comparing pla
 Students ask questions via Slack, email, and in class that go beyond the prepared material — "How does this work in Gemini?", "What's the difference between X and Y?", "Can you show an example of Z?" James spends 15-30 minutes per question researching current docs, testing examples, and crafting a thoughtful answer. With 10-15 questions per week across cohorts, this is 3-5 hours of reactive work.
 
 **How AI helps:**
-Given a student question, AI researches current documentation (via MCP server and web search), finds relevant examples, drafts an answer at the appropriate level for the course, and cites sources. James reviews the draft, adjusts the pedagogical framing, and posts the response. The answer is also saved to the cookbook for future reference.
+Given a student question, AI researches current documentation (via MCP server and web search), finds relevant examples, drafts an answer at the appropriate level for the course, and cites sources. James reviews the draft, adjusts the pedagogical framing, and posts the response. The answer is also saved to the playbook for future reference.
 
 **Getting started:**
 Collect the last 10 student questions from Slack. Run three of them through AI with the prompt: "Research this question for a student in an introductory AI course. Provide a clear answer with sources and a practical example." Evaluate whether the answers are accurate and at the right level.
@@ -449,7 +449,7 @@ Based on impact, frequency, and feasibility, the following three candidates are 
 | **AI opportunity** | AI researches docs, finds examples, and drafts an answer at the right course level; instructor reviews and adjusts before posting |
 | **Frequency**      | Daily                                                                                                                             |
 | **Priority**       | High                                                                                                                              |
-| **Reasoning**      | Highest frequency, directly improves the student experience, and each answer becomes reusable content in the cookbook             |
+| **Reasoning**      | Highest frequency, directly improves the student experience, and each answer becomes reusable content in the playbook             |
 
 #### Candidate 2: Assignment Feedback Drafting
 
@@ -483,7 +483,7 @@ Based on impact, frequency, and feasibility, the following three candidates are 
 | **Priority**       | Medium                                                                                                                                                             |
 | **Reasoning**      | High frequency and fully automatable — moderate impact per meeting but compounds across 5-8 weekly meetings; also a good proof-of-concept for autonomous workflows |
 
-**Recommendation:** Start with **Student Q&A Research**. It's the highest-frequency opportunity, directly improves the core teaching experience, and produces a tangible artifact (the answer) that compounds in value as it builds the cookbook's knowledge base. It's also a natural fit for the tools already in place (MCP server, web search, markdown output).
+**Recommendation:** Start with **Student Q&A Research**. It's the highest-frequency opportunity, directly improves the core teaching experience, and produces a tangible artifact (the answer) that compounds in value as it builds the playbook's knowledge base. It's also a natural fit for the tools already in place (MCP server, web search, markdown output).
 
 ---
 

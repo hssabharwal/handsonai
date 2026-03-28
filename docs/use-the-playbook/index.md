@@ -1,11 +1,11 @@
 ---
 title: Tools & Resources
-description: Four ways to use the Hands-on AI Cookbook — connect the MCP server for instant answers, download agents and skills, browse curated resources, or take a structured course
+description: Four ways to use the Hands-on AI Playbook — connect the MCP server for instant answers, download agents and skills, browse curated resources, or take a structured course
 ---
 
 # Tools & Resources
 
-The Hands-on AI Cookbook isn't just a reference site — it's a toolkit you can use directly inside your AI tools. Get instant answers via MCP, install pre-built agents and skills, browse curated resources, or learn in a live cohort course.
+The Hands-on AI Playbook isn't just a reference site — it's a toolkit you can use directly inside your AI tools. Get instant answers via MCP, install pre-built agents and skills, browse curated resources, or learn in a live cohort course.
 
 <div class="grid cards" markdown>
 
@@ -13,7 +13,7 @@ The Hands-on AI Cookbook isn't just a reference site — it's a toolkit you can 
 
     ---
 
-    Get instant answers from the cookbook inside Claude, ChatGPT, Claude Code, or any MCP-compatible tool. Connect once, ask anytime.
+    Get instant answers from the playbook inside Claude, ChatGPT, Claude Code, or any MCP-compatible tool. Connect once, ask anytime.
 
     [:octicons-arrow-right-24: Connect now](../mcp-server/index.md)
 
@@ -29,7 +29,7 @@ The Hands-on AI Cookbook isn't just a reference site — it's a toolkit you can 
 
     ---
 
-    Curated reports, guides, and reference materials from Anthropic, OpenAI, and other sources — with key takeaways and cookbook cross-links.
+    Curated reports, guides, and reference materials from Anthropic, OpenAI, and other sources — with key takeaways and playbook cross-links.
 
     [:octicons-arrow-right-24: Browse resources](../resources/index.md)
 

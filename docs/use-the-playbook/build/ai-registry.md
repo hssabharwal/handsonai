@@ -231,7 +231,7 @@ For batch registration, Claude searches for each building block individually fir
     → Reads the SKILL.md, generates a Quick Start Prompt, checks for
       duplicates, and creates or updates the AI Building Blocks entry
 
-    "Register the cookbook-question-answerer agent in Notion"
+    "Register the playbook-question-answerer agent in Notion"
     → Reads the agent .md file, generates a Quick Start Prompt, and
       creates an entry with Asset Type = "Agent"
 

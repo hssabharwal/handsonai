@@ -14,9 +14,9 @@ Hands-On AI (handsonai.info) — the consolidated site for James Gray's AI cours
 - `docs/product-engineering/` - Product management and software engineering concepts (SDLC, PRDs, user stories, roadmapping, stakeholder management, project tracking)
 - `docs/ai-engineering/` - AI engineering concepts (context engineering) — nested under Product & Engineering in nav
 - `docs/platforms/` - Platform-specific content (Claude, OpenAI, Gemini, M365 Copilot)
-- `docs/use-the-cookbook/` - Three consumption modes: Ask (MCP Server), Build (Plugins), Learn (Courses)
+- `docs/use-the-playbook/` - Three consumption modes: Ask (MCP Server), Build (Plugins), Learn (Courses)
 - `docs/mcp-server/` - MCP server connection guide (connect from Claude, ChatGPT, Cursor, VS Code, etc.)
-- `docs/use-the-cookbook/build/` - Plugin marketplace, getting started, plugin detail pages
+- `docs/use-the-playbook/build/` - Plugin marketplace, getting started, plugin detail pages
 - `docs/builder-setup/` - Builder Tools Setup guides (terminal, editor, Git, GitHub, voice-to-text, skills, MCP server, AI registry). Platform setup (accounts, personalization, memory, MCP connections) lives in per-platform `getting-started/` pages under `docs/platforms/`
 - `docs/patterns/` - Reusable patterns and best practices
 - `docs/courses/` - Structured course content (builders, leaders)
@@ -293,7 +293,7 @@ Skills from the `superpowers` plugin, invoked automatically based on context:
 | 6. Ship | Commit, push, PR | `/commit-push-pr` + `/revise-claude-md` |
 
 !!! note "Keeping the website template in sync"
-    The Feature Development Workflow above is the source of truth for this repo. A generic (repo-agnostic) version lives on the [Agentic Coding plugin page](docs/use-the-cookbook/build/agentic-coding.md) as a copyable template for students. **When you change the workflow structure** (add/remove steps, change which skills or agents are referenced), also update the template on that page. Repo-specific changes (verify commands, implementation details) don't need to be synced — the template uses placeholders for those.
+    The Feature Development Workflow above is the source of truth for this repo. A generic (repo-agnostic) version lives on the [Agentic Coding plugin page](docs/use-the-playbook/build/agentic-coding.md) as a copyable template for students. **When you change the workflow structure** (add/remove steps, change which skills or agents are referenced), also update the template on that page. Repo-specific changes (verify commands, implementation details) don't need to be synced — the template uses placeholders for those.
 
 ## Plugin Marketplace
 
@@ -329,8 +329,8 @@ When updating:
 1. Create/edit the agent `.md` in `.claude/agents/` (or skill in `.claude/skills/`) — test locally
 2. Copy into `plugins/<plugin-name>/agents/` (or `skills/`) in this repo
 3. Bump `version` in `plugins/<plugin-name>/.claude-plugin/plugin.json` (MINOR for new, PATCH for update)
-4. Update the plugin's section on `docs/use-the-cookbook/build/index.md` — add the agent/skill to the table with a link to the detail page anchor
-5. Update the plugin's detail page (`docs/use-the-cookbook/build/<plugin-name>.md`) — add the agent/skill section following the existing component format
+4. Update the plugin's section on `docs/use-the-playbook/build/index.md` — add the agent/skill to the table with a link to the detail page anchor
+5. Update the plugin's detail page (`docs/use-the-playbook/build/<plugin-name>.md`) — add the agent/skill section following the existing component format
 6. Commit and push this repo
 7. Copy updated files to `handsonai-plugins` repo, bump version in its `marketplace.json`, commit and push there
 
@@ -349,15 +349,15 @@ When updating:
            └── SKILL.md
    ```
 3. Write `plugin.json` with name, description, version, author, keywords
-4. Add a grid card + collapsible detail section to `docs/use-the-cookbook/build/index.md` — include links to the detail page anchors for every agent and skill
-5. Create a detail page at `docs/use-the-cookbook/build/<plugin-name>.md` following the template used by existing detail pages (see `docs/use-the-cookbook/build/ai-registry.md` for reference)
+4. Add a grid card + collapsible detail section to `docs/use-the-playbook/build/index.md` — include links to the detail page anchors for every agent and skill
+5. Create a detail page at `docs/use-the-playbook/build/<plugin-name>.md` following the template used by existing detail pages (see `docs/use-the-playbook/build/ai-registry.md` for reference)
 6. Add the detail page to the `nav:` section in `mkdocs.yml` under "Tools & Resources > Agents & Skills"
 7. Commit and push this repo
 8. Copy the new plugin directory to `handsonai-plugins` repo, add entry to its `marketplace.json`, commit and push there
 
 ### Catalog page linking convention
 
-Every agent and skill name in the `docs/use-the-cookbook/build/index.md` tables **must** link to the corresponding section on the plugin's detail page:
+Every agent and skill name in the `docs/use-the-playbook/build/index.md` tables **must** link to the corresponding section on the plugin's detail page:
 
 - **Agents** → link to the detail page anchor: `[`agent-name`](<plugin-name>.md#<agent-name>)`
 - **Skills** → link to the detail page anchor: `[`skill-name`](<plugin-name>.md#<skill-name>)`
@@ -378,7 +378,7 @@ The `docs/resources/` section hosts curated resource pages for external PDFs and
 ### Adding a new resource
 
 1. Download the PDF to `docs/assets/pdfs/<descriptive-filename>.pdf`
-2. Create a resource page at `docs/resources/<slug>.md` with frontmatter (`title`, `description`), source attribution, "Why This Matters" section, "Key Takeaways" bullets, "How the Cookbook Uses This" cross-links, and a download button linking to `../assets/pdfs/<filename>.pdf`
+2. Create a resource page at `docs/resources/<slug>.md` with frontmatter (`title`, `description`), source attribution, "Why This Matters" section, "Key Takeaways" bullets, "How the Playbook Uses This" cross-links, and a download button linking to `../assets/pdfs/<filename>.pdf`
 3. Add the page to `docs/resources/index.md` catalog table
 4. Add the page to the `nav:` section in `mkdocs.yml` under "Tools & Resources > Resources"
 5. Update any existing pages that linked to the external PDF URL to point to the new resource page instead

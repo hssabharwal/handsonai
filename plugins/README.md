@@ -15,6 +15,6 @@ This directory contains installable [Claude Code](https://docs.anthropic.com/en/
 2. Run the install command for the plugin you want
 3. Start using agents and skills immediately — agents activate automatically, skills can be invoked as slash commands
 
-For full documentation, visit [Agents & Skills](https://handsonai.info/use-the-cookbook/build/).
+For full documentation, visit [Agents & Skills](https://handsonai.info/use-the-playbook/build/).
 
-For a step-by-step guide, see [Getting Started with Plugins](https://handsonai.info/use-the-cookbook/build/getting-started/).
+For a step-by-step guide, see [Getting Started with Plugins](https://handsonai.info/use-the-playbook/build/getting-started/).

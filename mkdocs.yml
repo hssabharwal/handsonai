@@ -1,4 +1,4 @@
-site_name: Hands-on AI Cookbook
+site_name: Hands-on AI Playbook
 site_url: https://handsonai.info/
 site_description: Curated AI knowledge for builders. Apply AI faster. Accelerate business impact.
 site_author: James Gray
@@ -65,8 +65,8 @@ plugins:
         as_creation: date
       categories:
         - categories
-      feed_title: "Hands-on AI Cookbook Changelog"
-      feed_description: "Latest updates from the Hands-on AI Cookbook — new content, plugins, and platform guides."
+      feed_title: "Hands-on AI Playbook Changelog"
+      feed_description: "Latest updates from the Hands-on AI Playbook — new content, plugins, and platform guides."
       abstract_chars_count: 150
       abstract_delimiter: "<!-- more -->"
       use_material_blog: true
@@ -155,15 +155,23 @@ plugins:
         troubleshooting/README.md: platforms/claude/subagents/scheduling-subagent-issues.md
         ask.md: index.md
         wall-of-love.md: what-people-built.md
-        # Plugins → Use the Cookbook / Build
-        plugins/index.md: use-the-cookbook/build/index.md
-        plugins/getting-started.md: use-the-cookbook/build/using-plugins.md
-        use-the-cookbook/build/getting-started.md: use-the-cookbook/build/using-plugins.md
-        plugins/using-plugins.md: use-the-cookbook/build/using-plugins.md
-        plugins/business-first-ai.md: business-first-ai-framework/skills.md
-        plugins/ai-registry.md: use-the-cookbook/build/ai-registry.md
-        plugins/agentic-coding.md: use-cases/coding/agentic-coding.md
+        # Cookbook → Playbook rename redirects
+        use-the-cookbook/index.md: use-the-playbook/index.md
+        use-the-cookbook/build/index.md: use-the-playbook/build/index.md
+        use-the-cookbook/build/using-plugins.md: use-the-playbook/build/using-plugins.md
+        use-the-cookbook/build/ai-workflow-examples.md: use-the-playbook/build/ai-workflow-examples.md
+        use-the-cookbook/build/ai-registry.md: use-the-playbook/build/ai-registry.md
         use-the-cookbook/build/agentic-coding.md: use-cases/coding/agentic-coding.md
+        use-the-cookbook/build/business-first-ai.md: business-first-ai-framework/skills.md
+        use-the-cookbook/ask/index.md: mcp-server/index.md
+        # Plugins → Use the Playbook / Build
+        plugins/index.md: use-the-playbook/build/index.md
+        plugins/getting-started.md: use-the-playbook/build/using-plugins.md
+        use-the-playbook/build/getting-started.md: use-the-playbook/build/using-plugins.md
+        plugins/using-plugins.md: use-the-playbook/build/using-plugins.md
+        plugins/business-first-ai.md: business-first-ai-framework/skills.md
+        plugins/ai-registry.md: use-the-playbook/build/ai-registry.md
+        plugins/agentic-coding.md: use-cases/coding/agentic-coding.md
         # AI Engineering overview → Product & Engineering
         ai-engineering/index.md: product-engineering/index.md
         # Portable prompts removed (skills-based approach)
@@ -178,13 +186,12 @@ plugins:
         business-first-ai-framework/build/deterministic-automation.md: business-first-ai-framework/examples/deterministic-automation.md
         business-first-ai-framework/build/ai-collaborative.md: business-first-ai-framework/examples/ai-collaborative.md
         business-first-ai-framework/build/autonomous-agent.md: business-first-ai-framework/examples/autonomous-agent.md
-        use-the-cookbook/build/business-first-ai.md: business-first-ai-framework/skills.md
         # Retired coach pages → framework overview
         business-first-ai-framework/coach.md: business-first-ai-framework/index.md
         business-first-ai-framework/framework-coach.md: business-first-ai-framework/index.md
         # MCP Server redirects
         # NOTE: mcp-server.md → mcp-server/index.md would conflict (same output path), so omitted
-        use-the-cookbook/ask/index.md: mcp-server/index.md
+        use-the-playbook/ask/index.md: mcp-server/index.md
         # Course syllabus pages → consolidated course pages
         courses/builders/syllabus.md: courses/builders/index.md
         courses/leaders/syllabus.md: courses/leaders/index.md
@@ -223,13 +230,13 @@ nav:
   - Home: index.md
   - About: about.md
   - Tools & Resources:
-    - Overview: use-the-cookbook/index.md
+    - Overview: use-the-playbook/index.md
     - MCP Server: mcp-server/index.md
     - Agents & Skills:
-      - Browse Agents & Skills: use-the-cookbook/build/index.md
-      - Using Plugins: use-the-cookbook/build/using-plugins.md
-      - AI Workflow Examples: use-the-cookbook/build/ai-workflow-examples.md
-      - AI Registry: use-the-cookbook/build/ai-registry.md
+      - Browse Agents & Skills: use-the-playbook/build/index.md
+      - Using Plugins: use-the-playbook/build/using-plugins.md
+      - AI Workflow Examples: use-the-playbook/build/ai-workflow-examples.md
+      - AI Registry: use-the-playbook/build/ai-registry.md
     - Resources:
       - resources/index.md
       - resources/openai-use-cases-report.md

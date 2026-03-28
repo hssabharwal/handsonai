@@ -106,7 +106,7 @@ The model handles artifact generation, but several things require your involveme
 
 As you build, two background practices keep your work organized and recoverable:
 
-**Register building blocks in your AI Registry.** Each time you create a skill, prompt, or agent, register it in your [AI Registry](../../use-the-cookbook/build/ai-registry.md) Notion database — name, type, description, and which workflow it belongs to. If you registered the workflow during Deconstruct, these building blocks link back to it. This gives you a searchable inventory of everything you've built, and makes it easy for your team to discover and reuse building blocks across workflows.
+**Register building blocks in your AI Registry.** Each time you create a skill, prompt, or agent, register it in your [AI Registry](../../use-the-playbook/build/ai-registry.md) Notion database — name, type, description, and which workflow it belongs to. If you registered the workflow during Deconstruct, these building blocks link back to it. This gives you a searchable inventory of everything you've built, and makes it easy for your team to discover and reuse building blocks across workflows.
 
 **Commit source files to GitHub.** The `.md` files for your skills, agents, and prompts are source code — they should live in version control, not just on your local machine. After creating or updating a building block, commit it to your GitHub repository. This gives you a history of changes, makes it easy to share with collaborators, and protects against losing work.
 
@@ -148,4 +148,4 @@ Once your artifacts are built, move to **[Step 5: Test](../test.md)** to run str
 - [Design Your AI Workflow](../design.md) — the step before Build
 - [Test](../test.md) — the step after Build
 - [Agentic Building Blocks](../../agentic-building-blocks/index.md) — deep dives on individual building blocks
-- [Agents & Skills](../../use-the-cookbook/build/index.md) — browse all available agents, skills, and prompts
+- [Agents & Skills](../../use-the-playbook/build/index.md) — browse all available agents, skills, and prompts

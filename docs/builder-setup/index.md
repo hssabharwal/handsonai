@@ -129,7 +129,7 @@ For step-by-step install instructions for your platform:
 
 [:octicons-arrow-right-24: How to Add Skills to Your Platform](../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform)
 
-Browse all available plugins on the [Agents & Skills Marketplace](../use-the-cookbook/build/index.md).
+Browse all available plugins on the [Agents & Skills Marketplace](../use-the-playbook/build/index.md).
 
 **You're done when:** At least one skill is installed or added to your platform.
 
@@ -143,11 +143,11 @@ Browse all available plugins on the [Agents & Skills Marketplace](../use-the-coo
 **Time:** ~5 minutes
 **Requires:** An AI platform account
 
-The Hands-on AI MCP server gives your AI platform access to the cookbook's reference material — building blocks, patterns, use cases, and more — right inside your conversations.
+The Hands-on AI MCP server gives your AI platform access to the playbook's reference material — building blocks, patterns, use cases, and more — right inside your conversations.
 
 [:octicons-arrow-right-24: Go to MCP Server Connection Guide](../mcp-server/index.md)
 
-**You're done when:** You can ask your AI platform a question about the cookbook and get an answer from the MCP server.
+**You're done when:** You can ask your AI platform a question about the playbook and get an answer from the MCP server.
 
 - [ ] Hands-on AI MCP server — connected
 
@@ -200,7 +200,7 @@ With your builder tools in place, you're ready to start building with AI.
 
     Pre-built Claude Code agents and skills you can install in one command.
 
-    [:octicons-arrow-right-24: Plugin Marketplace](../use-the-cookbook/build/index.md)
+    [:octicons-arrow-right-24: Plugin Marketplace](../use-the-playbook/build/index.md)
 
 -   :material-school:{ .lg .middle } **Take a Course**
 

@@ -1,5 +1,5 @@
 /**
- * Hands-on AI Cookbook — MCP Analytics Dashboard — API handlers + HTML UI.
+ * Hands-on AI Playbook — MCP Analytics Dashboard — API handlers + HTML UI.
  *
  * All dashboard logic lives in this single file:
  * - Cookie-based authentication
@@ -91,7 +91,7 @@ const QUERIES: Record<string, (db: D1Database, days: number) => Promise<QueryRes
       db,
       `SELECT json_extract(params, '$.query') AS query, COUNT(*) AS count
        FROM mcp_events
-       WHERE tool_name = 'search_cookbook'
+       WHERE tool_name IN ('search_cookbook', 'search_playbook')
          AND params IS NOT NULL
          AND timestamp >= datetime('now', ?)
        GROUP BY query
@@ -159,7 +159,7 @@ const QUERIES: Record<string, (db: D1Database, days: number) => Promise<QueryRes
       db,
       `SELECT json_extract(params, '$.query') AS query, COUNT(*) AS count
        FROM mcp_events
-       WHERE tool_name = 'search_cookbook'
+       WHERE tool_name IN ('search_cookbook', 'search_playbook')
          AND params IS NOT NULL
          AND result_size IS NOT NULL
          AND result_size < 100
@@ -200,7 +200,7 @@ const QUERIES: Record<string, (db: D1Database, days: number) => Promise<QueryRes
       db,
       `SELECT json_extract(params, '$.section') AS section, COUNT(*) AS count
        FROM mcp_events
-       WHERE tool_name = 'search_cookbook'
+       WHERE tool_name IN ('search_cookbook', 'search_playbook')
          AND params IS NOT NULL
          AND json_extract(params, '$.section') IS NOT NULL
          AND timestamp >= datetime('now', ?)
@@ -273,7 +273,7 @@ export function getDashboardHTML(): string {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hands-on AI Cookbook — MCP Analytics Dashboard</title>
+  <title>Hands-on AI Playbook — MCP Analytics Dashboard</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
   <style>
     :root {
@@ -393,7 +393,7 @@ export function getDashboardHTML(): string {
 </head>
 <body>
   <header>
-    <h1>Hands-on AI Cookbook — MCP Analytics</h1>
+    <h1>Hands-on AI Playbook — MCP Analytics</h1>
     <div class="controls">
       <button class="time-btn" data-days="7">7d</button>
       <button class="time-btn active" data-days="30">30d</button>

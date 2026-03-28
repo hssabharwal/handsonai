@@ -19,7 +19,7 @@ Every corporate engagement is tailored from the ground up:
 - **Hands-on format** — Participants build real workflows and systems during the training, not just watch slides
 - **Platform coverage** — Training across major AI platforms (Claude, ChatGPT, Gemini, Copilot) so your team isn't locked into a single vendor
 - **AI-first process design** — Applying the [Business-First AI Framework](../../business-first-ai-framework/index.md) to your actual business processes
-- **Follow-up resources** — Access to the [Hands-on AI Cookbook](../../index.md) for continued learning after the engagement
+- **Follow-up resources** — Access to the [Hands-on AI Playbook](../../index.md) for continued learning after the engagement
 
 ## Who It's For
 

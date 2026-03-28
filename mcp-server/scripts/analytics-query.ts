@@ -94,7 +94,7 @@ const QUERIES: Record<string, (args: string[]) => Promise<void>> = {
     const rows = await queryD1(
       `SELECT json_extract(params, '$.query') AS query, COUNT(*) AS count
        FROM mcp_events
-       WHERE tool_name = 'search_cookbook'
+       WHERE tool_name IN ('search_cookbook', 'search_playbook')
          AND params IS NOT NULL
          AND timestamp >= datetime('now', ?)
        GROUP BY query
@@ -177,7 +177,7 @@ const QUERIES: Record<string, (args: string[]) => Promise<void>> = {
     const rows = await queryD1(
       `SELECT json_extract(params, '$.query') AS query, COUNT(*) AS count
        FROM mcp_events
-       WHERE tool_name = 'search_cookbook'
+       WHERE tool_name IN ('search_cookbook', 'search_playbook')
          AND params IS NOT NULL
          AND result_size IS NOT NULL
          AND result_size < 100
