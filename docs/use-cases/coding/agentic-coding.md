@@ -9,6 +9,71 @@ A complete methodology for AI-assisted feature development — go from fuzzy ide
 
 You don't need every step for every task. Skip Step 0 if you already know what you want to build. Skip to Step 3 for small edits. Use only the steps that fit your situation.
 
+## Prerequisites
+
+Before using the lifecycle, install these tools and plugins.
+
+### External tools
+
+| Tool | Why you need it | Verify with |
+|------|----------------|-------------|
+| [Claude Code](../../platforms/claude/getting-started/index.md) | AI coding agent that runs the workflow | `claude --version` |
+| [Git](../../builder-setup/git-install.md) | Version control for commits, branches, and worktrees | `git --version` |
+| [GitHub CLI](https://cli.github.com/) (`gh`) | Creates issues (step 1) and opens PRs (step 6) | `gh --version` |
+| A cloned repo with a GitHub remote | Where your code lives | `git remote -v` shows a `github.com` URL |
+
+### Plugins
+
+Install the Hands-on AI community plugin, then the Anthropic official plugins. The two groups use different install commands.
+
+**Hands-on AI plugin** (install via `/plugin install` — requires [marketplace setup](../../use-the-playbook/build/using-plugins.md)):
+
+| Plugin | What it provides |
+|--------|-----------------|
+| `agentic-coding@handsonai` | Vision Brief and PRD skills (steps 0-1) |
+
+```bash
+/plugin install agentic-coding@handsonai
+```
+
+**Anthropic official plugins** (install via `/install-plugin`):
+
+| Plugin | What it provides |
+|--------|-----------------|
+| `superpowers` | Foundation skills — brainstorming, planning, TDD, debugging, verification, code review |
+| `feature-dev` | `/feature-dev` command, codebase exploration and architecture agents |
+| `pr-review-toolkit` | Specialized review agents (test coverage, silent failures, types, comments) |
+| `commit-commands` | `/commit` and `/commit-push-pr` commands |
+| `security-guidance` | Hook that warns about unsafe code patterns during implementation |
+| `claude-md-management` | `/revise-claude-md` to capture session learnings |
+| `frontend-design` | Production-grade frontend interface generation |
+| `code-review` | `/code-review` standalone code review command |
+| `code-simplifier` | Code simplification and cleanup for clarity and maintainability |
+| `skill-creator` | Creating, modifying, and evaluating custom skills |
+| `claude-code-setup` | Setup automation recommendations for Claude Code projects |
+| `playwright` | Browser testing and automation |
+
+```bash
+/install-plugin superpowers
+/install-plugin feature-dev
+/install-plugin pr-review-toolkit
+/install-plugin commit-commands
+/install-plugin security-guidance
+/install-plugin claude-md-management
+/install-plugin frontend-design
+/install-plugin code-review
+/install-plugin code-simplifier
+/install-plugin skill-creator
+/install-plugin claude-code-setup
+/install-plugin playwright
+```
+
+### MCP server
+
+| Server | What it provides | How to configure |
+|--------|-----------------|-----------------|
+| [context7](https://github.com/upstash/context7) | Up-to-date documentation context for libraries and frameworks | Add to your project's `.mcp.json` — see the [context7 README](https://github.com/upstash/context7) for setup |
+
 ## Feature Development Lifecycle
 
 This table shows the complete lifecycle — from early idea through to shipped code. Each step lists the command or skill that powers it and which plugin provides it.
@@ -21,10 +86,10 @@ This table shows the complete lifecycle — from early idea through to shipped c
 | **3. Implement** | Build the feature with codebase-aware guidance, test-driven development, and automatic security warnings on unsafe patterns | `/feature-dev` command + `test-driven-development` skill + `security-guidance` hook | `feature-dev` + `superpowers` + `security-guidance` (Anthropic) |
 | **4. Verify** | Prove it works with actual passing build/test output | `verification-before-completion` skill | `superpowers` (Anthropic) |
 | **5. Review** | Automated code review + specialized review agents (test coverage, code simplification, silent failures, security, type design) | `requesting-code-review` skill + `code-reviewer` agent + `pr-review-toolkit` agents | `superpowers` + `feature-dev` + `pr-review-toolkit` (Anthropic) |
-| **6. Ship** | Commit, push, and open a PR that references the issue | `/commit-push-pr` command | `commit-commands` (Anthropic) |
+| **6. Ship** | Commit, push, open a PR that references the issue, and capture learnings | `/commit-push-pr` + `/revise-claude-md` | `commit-commands` + `claude-md-management` (Anthropic) |
 
 !!! info "How plugins work together"
-    Steps 0-1 come from the **Agentic Coding** plugin (this page) — [install it below](#get-these-skills). Steps 2-6 come from Anthropic's official plugins, which you install in Claude Code with `/install-plugin` (e.g., `/install-plugin feature-dev`). Install only the plugins you need — each step works independently.
+    Steps 0-1 come from the **Agentic Coding** plugin. Steps 2-6 come from Anthropic's official plugins. See [Prerequisites](#prerequisites) for the complete install list.
 
     The key handoff: Step 0 produces a Vision Brief and breaks it into features → Step 1 takes one feature and writes a PRD for it → Step 2 reads the PRD and generates the implementation plan. Each artifact feeds the next. You repeat Steps 1-6 for each feature in the breakdown.
 
@@ -327,19 +392,7 @@ What changes as a result — both positive and negative.
 ````
 
 !!! tip "Plugins used in this workflow"
-    This template references commands from these plugins:
-
-    **Hands-on AI plugin** (install via `/plugin install`):
-
-    - **`agentic-coding@handsonai`** — `/agentic-coding:writing-vision-briefs` (step 0), `/agentic-coding:writing-feature-prds` (step 1). [Install instructions above](#get-these-skills).
-
-    **Anthropic plugins** (install via `/install-plugin`):
-
-    - **`feature-dev`** — `/feature-dev` (step 3), `code-explorer` and `code-architect` agents (step 2), `code-reviewer` agent (step 5)
-    - **`superpowers`** — `brainstorming`, `writing-plans`, `test-driven-development`, `systematic-debugging`, `verification-before-completion`, `requesting-code-review`, `receiving-code-review`, `finishing-a-development-branch`
-    - **`pr-review-toolkit`** — review agents (step 5)
-    - **`commit-commands`** — `/commit`, `/commit-push-pr` (step 6)
-    - **`claude-md-management`** — `/revise-claude-md` (step 6)
+    This template uses commands from multiple plugins. See [Prerequisites](#prerequisites) for the complete install list.
 
 ## Reference: Anthropic Plugin Commands
 
@@ -425,7 +478,7 @@ This workflow is how we build the Hands-on AI Playbook. Our `CLAUDE.md` is a fil
 A PRD forces you to think through requirements, edge cases, and acceptance criteria *before* writing code. This prevents scope creep, reduces rework, and gives you a reference document during implementation and review.
 
 **Do I need all the plugins referenced in the template?**
-No. The `/agentic-coding:writing-feature-prds` skill works standalone. The template shows how it fits into a full development lifecycle with Anthropic's official plugins, but you can use any combination — or just the steps that apply to your project.
+No. The lifecycle steps each work independently — install only the plugins for the steps you use. See [Prerequisites](#prerequisites) for the full list and what each plugin provides.
 
 **Where do PRDs get saved?**
 By default, `specs/[feature-name]-prd.md`. The skill respects your repo conventions — if your `CLAUDE.md` specifies a different spec location, or if `docs/specs/` exists, it adapts automatically.
