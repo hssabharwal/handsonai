@@ -192,7 +192,7 @@ Record scope and design decisions (see [Architecture Decision Records](#architec
 
 **Skip specs for:** Bug fixes, trivial changes, urgent hotfixes.
 
-### 2. Plan (plan mode)
+### 2. Plan — plan mode
 
 After the PRD is approved, **enter plan mode** to design the implementation before writing any code. In plan mode, Claude explores your codebase, designs the approach, and presents a plan for your approval — no code is written until you say go.
 
@@ -221,7 +221,7 @@ Use the `/feature-dev` slash command, referencing the spec and issue:
 **When things break:**
 - Use `systematic-debugging` for any test failure or unexpected behavior — 4-phase structured debugging instead of guessing. Stops after 3 failed fixes to rethink the approach.
 
-### 4. Verify
+### 4. Verify — `verification-before-completion`
 
 Before claiming work is complete, use the `verification-before-completion` superpowers skill. It enforces evidence-based completion — must show actual passing output from:
 
@@ -312,6 +312,18 @@ Which option and why.
 ## Consequences
 What changes as a result — both positive and negative.
 ```
+
+## Quick Reference
+
+| Step | Action | Tools |
+|------|--------|-------|
+| 0. Discover | Capture idea as Vision Brief, break into epics + features | `/agentic-coding:writing-vision-briefs` (skip if single feature is clear) |
+| 1. Define | Create PRD + issue for one feature | `/agentic-coding:writing-feature-prds` (use `brainstorming` for early ideas) |
+| 2. Plan | Enter plan mode, explore codebase, create plan | plan mode + `code-explorer` + `code-architect` agents, `writing-plans` skill |
+| 3. Implement | Build with TDD | `/feature-dev` + `test-driven-development` + `security-guidance` hook |
+| 4. Verify | Prove it works | `verification-before-completion` |
+| 5. Review | Quality gate | `requesting-code-review` + `code-reviewer` + review agents |
+| 6. Ship | Commit, push, PR | `/commit-push-pr` + `/revise-claude-md` |
 ````
 
 !!! tip "Plugins used in this workflow"
