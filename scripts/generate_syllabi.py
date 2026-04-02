@@ -6,7 +6,7 @@ Queries the Notion API to fetch the full course hierarchy
 syllabus files for each published course.
 
 For local preview:
-    NOTION_TOKEN=secret_xxx python scripts/generate_syllabi.py && mkdocs serve
+    NOTION_TOKEN=secret_xxx python scripts/generate_syllabi.py && npm run dev
 
 Set NOTION_TOKEN to your Notion integration token.  All course databases
 must be shared with the integration.
@@ -48,7 +48,7 @@ COURSE_CONFIG = {
     },
 }
 
-OUTPUT_DIR = Path(__file__).resolve().parent.parent / "docs" / "courses"
+OUTPUT_DIR = Path(__file__).resolve().parent.parent / "src" / "content" / "docs" / "courses"
 
 LESSON_TYPE_ICONS = {
     "Live": ":material-video-outline:",

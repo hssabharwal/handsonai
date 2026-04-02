@@ -9,7 +9,7 @@ import { glob } from "glob";
 import matter from "gray-matter";
 import type { Page } from "../src/types.js";
 
-const DOCS_DIR = path.resolve(import.meta.dirname, "../../docs");
+const DOCS_DIR = path.resolve(import.meta.dirname, "../../src/content/docs");
 const OUTPUT_FILE = path.resolve(import.meta.dirname, "../content-index.json");
 const SITE_URL = "https://handsonai.info";
 
