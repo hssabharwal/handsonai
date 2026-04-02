@@ -24,22 +24,11 @@ Before using the lifecycle, install these tools and plugins.
 
 ### Plugins
 
-Install the Hands-on AI community plugin, then the Anthropic official plugins. The two groups use different install commands.
-
-**Hands-on AI plugin** (install via `/plugin install` — requires [marketplace setup](../../use-the-playbook/build/using-plugins.md)):
+Install all plugins with `/plugin install <name>` in Claude Code. The Hands-on AI community plugin requires [marketplace setup](../../use-the-playbook/build/using-plugins.md).
 
 | Plugin | What it provides |
 |--------|-----------------|
 | `agentic-coding@handsonai` | Vision Brief and PRD skills (steps 0-1) |
-
-```bash
-/plugin install agentic-coding@handsonai
-```
-
-**Anthropic official plugins** (install via `/install-plugin`):
-
-| Plugin | What it provides |
-|--------|-----------------|
 | `superpowers` | Foundation skills — brainstorming, planning, TDD, debugging, verification, code review |
 | `feature-dev` | `/feature-dev` command, codebase exploration and architecture agents |
 | `pr-review-toolkit` | Specialized review agents (test coverage, silent failures, types, comments) |
@@ -54,18 +43,19 @@ Install the Hands-on AI community plugin, then the Anthropic official plugins. T
 | `playwright` | Browser testing and automation |
 
 ```bash
-/install-plugin superpowers
-/install-plugin feature-dev
-/install-plugin pr-review-toolkit
-/install-plugin commit-commands
-/install-plugin security-guidance
-/install-plugin claude-md-management
-/install-plugin frontend-design
-/install-plugin code-review
-/install-plugin code-simplifier
-/install-plugin skill-creator
-/install-plugin claude-code-setup
-/install-plugin playwright
+/plugin install agentic-coding@handsonai
+/plugin install superpowers
+/plugin install feature-dev
+/plugin install pr-review-toolkit
+/plugin install commit-commands
+/plugin install security-guidance
+/plugin install claude-md-management
+/plugin install frontend-design
+/plugin install code-review
+/plugin install code-simplifier
+/plugin install skill-creator
+/plugin install claude-code-setup
+/plugin install playwright
 ```
 
 ### MCP server
@@ -396,7 +386,7 @@ What changes as a result — both positive and negative.
 
 ## Reference: Anthropic Plugin Commands
 
-The commands, skills, and agents below come from Anthropic's official plugins for Claude Code. Install them with `/install-plugin <name>` (e.g., `/install-plugin feature-dev`). They power Steps 2-6 of the lifecycle.
+The commands, skills, and agents below come from Anthropic's official plugins for Claude Code. Install them with `/plugin install <name>` (e.g., `/plugin install feature-dev`). They power Steps 2-6 of the lifecycle.
 
 ### Slash Commands
 
