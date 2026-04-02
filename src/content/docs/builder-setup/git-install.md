@@ -1,0 +1,119 @@
+---
+title: Git Installation Guide
+description: Install Git on macOS or Windows, configure your identity, and verify installation
+schema_type: HowTo
+howto_steps:
+  - name: Check if Git is already installed
+    text: Open your terminal and run 'git --version'. If you see a version number, Git is already installed.
+  - name: Install Git on your operating system
+    text: "macOS: Run 'xcode-select --install' or use Homebrew. Windows: Download from git-scm.com and run the installer."
+  - name: Verify installation
+    text: Open a new terminal window and run 'git --version' to confirm Git is installed.
+  - name: Configure your identity
+    text: Set your name and email for Git commits using 'git config --global user.name' and 'git config --global user.email'.
+---## What Is Git?
+
+Git is a version control tool — it tracks every change you make to your files over time. Think of it like a detailed undo history that never expires. You can save a snapshot of your work (called a *commit*), go back to any previous version, and see exactly what changed and when.
+
+For AI development, Git is essential for two reasons. First, AI coding tools use it behind the scenes — every time an AI assistant edits a file, that change gets tracked as a commit, giving you a clear record of what the AI did and letting you undo anything you don't want. Second, the prompts, skills, and agents you create are valuable building blocks that power your AI workflows. Git ensures you never lose them — every version is saved, and you can always recover or refine what you've built.
+
+This guide installs Git on your machine and sets up your identity so your work is properly attributed.
+
+## Check If Git Is Already Installed
+
+Open your terminal and run:
+
+```bash
+git --version
+```
+
+If you see a version number (e.g., `git version 2.39.0`), Git is already installed. You can skip to verification.
+
+## macOS
+
+### Option 1: Xcode Command Line Tools (Recommended)
+
+1. Open Terminal
+2. Run: `xcode-select --install`
+3. Click **Install** in the popup dialog
+4. Wait for installation to complete
+
+This installs Git along with other developer tools.
+
+### Option 2: Homebrew
+
+Homebrew is a popular tool for installing developer software on macOS. If you don't have it, use Option 1 above.
+
+```bash
+brew install git
+```
+
+## Windows
+
+### Download and Install
+
+1. Go to [git-scm.com](https://git-scm.com)
+2. Click **Download for Windows**
+3. Run the installer
+4. Use the default settings (click Next through the prompts)
+5. Complete the installation
+
+### Important Settings During Install
+
+- **Default editor**: Select **VS Code** or **Cursor** if listed — avoid the default (Vim) unless you're familiar with it
+- **PATH environment**: Select "Git from the command line and also from 3rd-party software" (recommended)
+- **Line endings**: Select "Checkout Windows-style, commit Unix-style line endings" (recommended)
+
+## Verify Installation
+
+After installing, open a new terminal window and run:
+
+```bash
+git --version
+```
+
+You should see a version number confirming Git is installed.
+
+## Configure Your Identity
+
+Set your name and email for Git commits:
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+```
+
+Use the email address you plan to use for your GitHub account (set up in the next step).
+
+## Troubleshooting
+
+**Command not found (Mac)?**
+- Close and reopen Terminal after installation
+- Try running `xcode-select --install` again
+
+**Command not found (Windows)?**
+- Close and reopen your terminal
+- Make sure you selected the PATH option during installation
+- Reinstall and select "Git from the command line and also from 3rd-party software"
+
+**Permission errors?**
+- On Mac, you may need to enter your password during Xcode tools installation
+- On Windows, run the installer as Administrator
+
+<details>
+<summary>Ask AI for help</summary>
+
+If you're stuck, paste this into ChatGPT, Claude, or Gemini:
+
+> I'm trying to install Git on [Mac / Windows] and getting this error: [paste the error message]. I followed the steps from the official guide. What should I try next?
+
+</details>
+## Next Steps
+
+- Set up your GitHub account (see [GitHub Setup Guide](github-setup.md))
+- Set up your AI platform (see [Platforms](../platforms/index.md))
+
+## Resources
+
+- [Git Downloads](https://git-scm.com/downloads)
+- [Git Documentation](https://git-scm.com/doc)

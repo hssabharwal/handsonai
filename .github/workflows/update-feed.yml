@@ -34,7 +34,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/assets/data/feed.json
+          git add public/assets/data/feed.json
           if ! git diff --cached --quiet; then
             git commit -m "chore: update curated feed data"
             git push

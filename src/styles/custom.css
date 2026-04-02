@@ -1,0 +1,206 @@
+/* ═══════════════════════════════════════════════════════════
+   Hands-on AI Playbook — Brand Theme
+   Charcoal (#282828) + Lime (#DDF222)
+
+   Color roles:
+   - Lime = interaction (links, hover, active nav, feedback)
+   - Charcoal/white = structure (headings, body, site title)
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Fonts ── */
+:root {
+  --sl-font: 'Inter', sans-serif;
+  --sl-font-mono: 'Roboto Mono', monospace;
+}
+
+/* ── Dark mode palette ──
+   Charcoal backgrounds, white/gray text for structure.
+   Lime reserved for interactive elements only. */
+:root {
+  /* accent-high drives site title + heading accent text — use white, not lime */
+  --sl-color-accent-low: #333318;
+  --sl-color-accent: #DDF222;
+  --sl-color-accent-high: #f0f0ee;
+
+  --sl-color-white: #f0f0ee;
+  --sl-color-gray-1: #d4d4d0;
+  --sl-color-gray-2: #a8a8a4;
+  --sl-color-gray-3: #737370;
+  --sl-color-gray-4: #4a4a48;
+  --sl-color-gray-5: #333331;
+  --sl-color-gray-6: #282828;
+  --sl-color-black: #1a1a18;
+}
+
+/* ── Light mode palette ──
+   Warm gray background, charcoal text for structure.
+   Lime appears only on hover as interaction feedback. */
+:root[data-theme='light'] {
+  --sl-color-accent-low: #ededeb;
+  --sl-color-accent: #282828;
+  --sl-color-accent-high: #1a1a18;
+
+  /* Starlight light mode: white = darkest, black = lightest */
+  --sl-color-white: #1a1a18;
+  --sl-color-gray-1: #2e2e2c;
+  --sl-color-gray-2: #484846;
+  --sl-color-gray-3: #6e6e6c;
+  --sl-color-gray-4: #a0a09e;
+  --sl-color-gray-5: #d4d4d0;
+  --sl-color-gray-6: #eaeae6;
+  --sl-color-black: #f5f5f2;
+}
+
+/* ── Typography ── */
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+/* ── Links ──
+   Dark: lime text + underline. Lime glow on hover.
+   Light: charcoal text + underline. Lime highlight bg on hover. */
+.sl-markdown-content a {
+  text-decoration: underline;
+  text-decoration-color: var(--sl-color-gray-4);
+  text-underline-offset: 2px;
+  transition: text-decoration-color 0.15s ease, background-color 0.15s ease;
+}
+
+.sl-markdown-content a:hover {
+  text-decoration-color: currentColor;
+}
+
+:root[data-theme='light'] .sl-markdown-content a:hover {
+  background-color: rgba(221, 242, 34, 0.22);
+  border-radius: 3px;
+  padding: 1px 3px;
+  margin: -1px -3px;
+}
+
+:root[data-theme='dark'] .sl-markdown-content a:hover {
+  background-color: rgba(221, 242, 34, 0.1);
+  border-radius: 3px;
+  padding: 1px 3px;
+  margin: -1px -3px;
+}
+
+/* Don't underline nav, header, or sidebar links */
+nav a,
+header a,
+.sidebar-content a {
+  text-decoration: none !important;
+}
+
+/* ── Sidebar active + hover ── */
+
+/* Dark mode: active nav — white text on subtle gray, bold weight */
+[data-theme='dark'] [aria-current="page"] {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #f0f0ee !important;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+/* Light mode: active nav — charcoal text on subtle gray */
+[data-theme='light'] [aria-current="page"] {
+  background-color: rgba(40, 40, 40, 0.08) !important;
+  color: #1a1a18 !important;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+/* ── Cards ── */
+.sl-link-card {
+  border-left: 3px solid rgba(221, 242, 34, 0.5);
+  transition: border-left-color 0.15s ease;
+}
+
+.sl-link-card:hover {
+  border-left-color: #DDF222;
+}
+
+:root[data-theme='light'] .sl-link-card {
+  border-left-color: rgba(40, 40, 40, 0.2);
+}
+
+:root[data-theme='light'] .sl-link-card:hover {
+  border-left-color: #282828;
+}
+
+/* ── Asides/admonitions ──
+   Override Starlight defaults with brand colors.
+   No purple, no blue — charcoal + lime palette throughout. */
+
+/* Dark mode: charcoal bg, lime border/icon, WHITE title text */
+:root {
+  --sl-color-purple-low: #2a2a28;
+  --sl-color-purple: #DDF222;
+  --sl-color-purple-high: #f0f0ee;
+  --sl-color-blue-low: #2a2a28;
+  --sl-color-blue: #DDF222;
+  --sl-color-blue-high: #f0f0ee;
+  --sl-color-green-low: #2a2a28;
+  --sl-color-green: #DDF222;
+  --sl-color-green-high: #f0f0ee;
+  --sl-color-orange-low: #2e2a28;
+  --sl-color-orange: #d4a84a;
+  --sl-color-orange-high: #f0f0ee;
+  --sl-color-red-low: #2e2828;
+  --sl-color-red: #d45050;
+  --sl-color-red-high: #f0f0ee;
+}
+
+/* Light mode: warm gray bg, charcoal border/icon */
+:root[data-theme='light'] {
+  --sl-color-purple-low: #e8e8e4;
+  --sl-color-purple: #484846;
+  --sl-color-purple-high: #282828;
+  --sl-color-blue-low: #e8e8e4;
+  --sl-color-blue: #484846;
+  --sl-color-blue-high: #282828;
+  --sl-color-green-low: #e8e8e4;
+  --sl-color-green: #484846;
+  --sl-color-green-high: #282828;
+  --sl-color-orange-low: #ece6de;
+  --sl-color-orange: #8a6a20;
+  --sl-color-orange-high: #6a5010;
+  --sl-color-red-low: #ece0e0;
+  --sl-color-red: #8a3030;
+  --sl-color-red-high: #6a2020;
+}
+
+/* ── Inline code ── */
+:root[data-theme='light'] .sl-markdown-content code:not(pre code) {
+  background-color: #e2e2de;
+}
+
+:root[data-theme='dark'] .sl-markdown-content code:not(pre code) {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+/* ── Charcoal header in light mode ──
+   Consistent across themes. White logo + text on charcoal. */
+:root[data-theme='light'] header.header {
+  background-color: #282828;
+  color: #f0f0ee;
+  border-bottom: none;
+}
+
+:root[data-theme='light'] header.header a,
+:root[data-theme='light'] header.header button {
+  color: #f0f0ee;
+}
+
+:root[data-theme='light'] header.header a:hover {
+  color: #DDF222;
+}
+
+/* ── Light mode sidebar contrast ──
+   Slightly darker than content area for visual separation. */
+:root[data-theme='light'] {
+  --sl-color-bg-sidebar: #e2e2de;
+}
+
+:root[data-theme='light'] nav.sidebar {
+  border-right: 1px solid #d4d4d0;
+}

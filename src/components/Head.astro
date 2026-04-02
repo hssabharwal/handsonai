@@ -1,0 +1,178 @@
+---
+import Default from '@astrojs/starlight/components/Head.astro';
+
+const siteUrl = 'https://handsonai.info/';
+const siteName = 'Hands-on AI Playbook';
+const siteDescription = 'Curated AI knowledge for builders. Apply AI faster. Accelerate business impact.';
+const ogImage = `${siteUrl}assets/images/og-default.png`;
+
+const pathname = Astro.url.pathname;
+const isHomepage = pathname === '/' || pathname === '';
+const pageUrl = new URL(pathname, siteUrl).href;
+
+// Access frontmatter from Starlight route data
+const { entry } = Astro.props;
+const frontmatter = entry?.data || {};
+const pageTitle = frontmatter.title || siteName;
+const pageDesc = frontmatter.description || siteDescription;
+
+// Build breadcrumb from URL path
+const pathParts = pathname.split('/').filter(Boolean);
+
+// Schema type helpers
+const schemaType = frontmatter.schema_type;
+const hasQuestion = frontmatter.question && frontmatter.short_answer;
+const hasArticle = frontmatter.date && frontmatter.author && !hasQuestion && schemaType !== 'Course' && schemaType !== 'HowTo';
+
+// Homepage schema
+const homepageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}#website`,
+      "name": siteName,
+      "url": siteUrl,
+      "description": siteDescription,
+      "publisher": { "@id": `${siteUrl}#organization` },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": { "@type": "EntryPoint", "urlTemplate": `${siteUrl}?q={search_term_string}` },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}#organization`,
+      "name": "JamesGray.AI",
+      "url": "https://jamesgray.ai",
+      "logo": { "@type": "ImageObject", "url": `${siteUrl}assets/logo-horizontal.png` },
+      "founder": { "@id": `${siteUrl}#person` },
+      "sameAs": [
+        "https://www.linkedin.com/in/jamesgray/",
+        "https://github.com/jamesgray-ai",
+        "https://jamesgray.ai",
+        "https://graymatter.jamesgray.ai",
+        "https://maven.com/james-gray"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": `${siteUrl}#person`,
+      "name": "James Gray",
+      "url": "https://jamesgray.ai",
+      "jobTitle": "Founder & AI Instructor",
+      "affiliation": { "@type": "Organization", "name": "JamesGray.AI", "url": "https://jamesgray.ai" },
+      "sameAs": [
+        "https://www.linkedin.com/in/jamesgray/",
+        "https://github.com/jamesgray-ai",
+        "https://jamesgray.ai",
+        "https://graymatter.jamesgray.ai",
+        "https://maven.com/james-gray"
+      ]
+    }
+  ]
+};
+
+// Course schema
+const courseSchema = schemaType === 'Course' ? {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": pageTitle,
+  "description": pageDesc,
+  "url": pageUrl,
+  "provider": {
+    "@type": "Organization",
+    "name": frontmatter.course_provider || "Maven",
+    "url": frontmatter.course_url || "https://maven.com/james-gray"
+  },
+  "inLanguage": frontmatter.course_language || "en",
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": frontmatter.course_mode || "Blended",
+    "duration": frontmatter.course_duration || "P5W",
+    "instructor": {
+      "@type": "Person",
+      "name": "James Gray",
+      "url": "https://maven.com/james-gray",
+      "jobTitle": "Founder & AI Instructor"
+    }
+  }
+} : null;
+
+// HowTo schema
+const howToSchema = schemaType === 'HowTo' ? {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": pageTitle,
+  "description": pageDesc,
+  "url": pageUrl,
+  ...(frontmatter.howto_steps ? {
+    "step": frontmatter.howto_steps.map((step: any, i: number) => ({
+      "@type": "HowToStep",
+      "position": i + 1,
+      "name": step.name,
+      "text": step.text,
+      ...(step.url ? { "url": step.url } : {})
+    }))
+  } : {})
+} : null;
+
+// FAQPage schema
+const faqSchema = hasQuestion ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  ...(frontmatter.date ? { "dateCreated": String(frontmatter.date) } : {}),
+  ...(frontmatter.author ? { "author": { "@type": "Person", "name": frontmatter.author, "url": "https://jamesgray.ai" } } : {}),
+  "mainEntity": [{
+    "@type": "Question",
+    "name": frontmatter.question,
+    "acceptedAnswer": { "@type": "Answer", "text": frontmatter.short_answer }
+  }]
+} : null;
+
+// Article schema
+const articleSchema = hasArticle ? {
+  "@context": "https://schema.org",
+  "@type": schemaType === 'TechArticle' ? 'TechArticle' : 'Article',
+  "headline": pageTitle,
+  "description": pageDesc,
+  "url": pageUrl,
+  "datePublished": String(frontmatter.date),
+  "author": { "@type": "Person", "name": frontmatter.author, "url": "https://jamesgray.ai" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "JamesGray.AI",
+    "url": "https://jamesgray.ai",
+    "logo": { "@type": "ImageObject", "url": `${siteUrl}assets/logo-horizontal.png` }
+  }
+} : null;
+
+// Breadcrumb schema
+const breadcrumbSchema = !isHomepage && pathParts.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl },
+    ...pathParts.map((part, i) => ({
+      "@type": "ListItem",
+      "position": i + 2,
+      "name": i === pathParts.length - 1 ? pageTitle : part.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase()),
+      "item": `${siteUrl}${pathParts.slice(0, i + 1).join('/')}/`
+    }))
+  ]
+} : null;
+---
+
+<Default {...Astro.props}><slot /></Default>
+
+{/* OG + Twitter meta */}
+<meta property="og:image" content={ogImage} />
+
+{/* Structured data */}
+{isHomepage && <script type="application/ld+json" set:html={JSON.stringify(homepageSchema)} />}
+{courseSchema && <script type="application/ld+json" set:html={JSON.stringify(courseSchema)} />}
+{howToSchema && <script type="application/ld+json" set:html={JSON.stringify(howToSchema)} />}
+{faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+{articleSchema && <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />}
+{breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
