@@ -180,30 +180,51 @@ After setting up the registry, install the AI Registry plugin so Claude can read
 
 With your builder tools in place, you're ready to start building with AI.
 
-<div class="grid cards" markdown>
+<style>
+.next-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 8px;
+  overflow: hidden;
+}
+:root[data-theme='light'] .next-steps-list { border-color: #d4d4d0; }
+.next-step-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--sl-color-gray-5);
+  background: var(--sl-color-gray-6);
+}
+.next-step-row:last-child { border-bottom: none; }
+:root[data-theme='light'] .next-step-row { background: #fff; border-bottom-color: #eaeae6; }
+.next-step-row strong { flex-shrink: 0; min-width: 11rem; font-size: 0.95rem; }
+.next-step-row span { flex: 1; font-size: 0.88rem; color: var(--sl-color-gray-2); line-height: 1.5; }
+.next-step-row a { flex-shrink: 0; font-size: 0.85rem; font-weight: 600; color: var(--sl-color-accent) !important; text-decoration: none !important; white-space: nowrap; }
+.next-step-row a:hover { text-decoration: underline !important; }
+:root[data-theme='light'] .next-step-row a { color: #282828 !important; }
+@media (max-width: 600px) {
+  .next-step-row { flex-direction: column; gap: 0.25rem; }
+  .next-step-row strong { min-width: unset; }
+}
+</style>
 
--   💡 **Learn the Building Blocks**
-
-    ---
-
-    Understand the seven components of every AI workflow — models, prompts, context, projects, skills, agents, and MCP (connections to external tools).
-
-    [→ Agentic Building Blocks](../agentic-building-blocks/index.md)
-
--   🧩 **Install Plugins**
-
-    ---
-
-    Pre-built Claude Code agents and skills you can install in one command.
-
-    [→ Plugin Marketplace](../use-the-playbook/build/index.md)
-
--   🎓 **Take a Course**
-
-    ---
-
-    Structured learning that walks you through building with AI step by step.
-
-    [→ Learn with James](../courses/index.md)
-
+<div class="next-steps-list">
+  <div class="next-step-row">
+    <strong>Learn the Building Blocks</strong>
+    <span>The eleven components of every AI workflow — models, prompts, context, projects, skills, agents, and more</span>
+    <a href="../agentic-building-blocks/">Building Blocks →</a>
+  </div>
+  <div class="next-step-row">
+    <strong>Install Plugins</strong>
+    <span>Pre-built Claude Code agents and skills you can install in one command</span>
+    <a href="../use-the-playbook/build/">Marketplace →</a>
+  </div>
+  <div class="next-step-row">
+    <strong>Take a Course</strong>
+    <span>Structured learning that walks you through building with AI step by step</span>
+    <a href="../courses/">Learn with James →</a>
+  </div>
 </div>

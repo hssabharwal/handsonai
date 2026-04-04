@@ -21,40 +21,66 @@ Not sure where to start? The [Choosing the Right Building Block](comparison.md) 
 :::tip[Using building blocks for workflow analysis]
 The [Business-First AI Framework](../business-first-ai-framework/index.md) uses these building blocks as the analysis tool in [Design Your AI Workflow](../business-first-ai-framework/design.md), where each step of a workflow gets mapped to the building blocks it needs.
 :::
-<div class="grid cards single-column" markdown>
+<style>
+.blocks-section {
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+}
+:root[data-theme='light'] .blocks-section { border-color: #d4d4d0; }
+.blocks-header {
+  padding: 0.75rem 1.5rem;
+  background: var(--sl-color-gray-5);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+:root[data-theme='light'] .blocks-header { background: #e2e2de; }
+.blocks-header small {
+  display: block;
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: var(--sl-color-gray-3);
+  margin-top: 0.15rem;
+  font-style: italic;
+}
+.block-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.65rem 1.5rem;
+  border-bottom: 1px solid var(--sl-color-gray-5);
+  background: var(--sl-color-gray-6);
+}
+.block-row:last-child { border-bottom: none; }
+:root[data-theme='light'] .block-row { background: #fff; border-bottom-color: #eaeae6; }
+.block-row a { flex-shrink: 0; min-width: 5rem; font-size: 0.9rem; font-weight: 600; color: var(--sl-color-accent) !important; text-decoration: none !important; }
+.block-row a:hover { text-decoration: underline !important; }
+:root[data-theme='light'] .block-row a { color: #282828 !important; }
+.block-row span { font-size: 0.85rem; color: var(--sl-color-gray-2); }
+</style>
 
--   🧠 **Intelligence**
+<div class="blocks-section">
+  <div class="blocks-header">Intelligence<small>The persistent foundation: engine, knowledge, and workspace powering every interaction.</small></div>
+  <div class="block-row"><a href="models/">Model</a><span>The AI engine that processes inputs and generates outputs</span></div>
+  <div class="block-row"><a href="context/">Context</a><span>Background information and reference material</span></div>
+  <div class="block-row"><a href="projects/">Project</a><span>Persistent workspace grouping prompts, context, and skills</span></div>
+  <div class="block-row"><a href="memory/">Memory</a><span>Accumulated knowledge from past interactions</span></div>
+</div>
 
-    ---
+<div class="blocks-section">
+  <div class="blocks-header">Orchestration<small>The execution layer: instructions, routines, and autonomous agents that direct and do the work.</small></div>
+  <div class="block-row"><a href="prompts/">Prompt</a><span>Natural language instructions to the model</span></div>
+  <div class="block-row"><a href="skills/">Skill</a><span>Reusable routine with defined inputs and outputs</span></div>
+  <div class="block-row"><a href="agents/">Agent</a><span>Autonomous AI that plans, uses tools, and executes multi-step work</span></div>
+</div>
 
-    *The persistent foundation: engine, knowledge, and workspace powering every interaction.*
-
-    - **[Model](models/index.md)** — The AI engine that processes inputs and generates outputs
-    - **[Context](context/index.md)** — Background information and reference material
-    - **[Project](projects/index.md)** — Persistent workspace grouping prompts, context, and skills
-    - **[Memory](memory/index.md)** — Accumulated knowledge from past interactions
-
--    **Orchestration**
-
-    ---
-
-    *The execution layer: instructions, routines, and autonomous agents that direct and do the work.*
-
-    - **[Prompt](prompts/index.md)** — Natural language instructions to the model
-    - **[Skill](skills/index.mdx)** — Reusable routine with defined inputs and outputs
-    - **[Agent](agents/index.md)** — Autonomous AI that plans, uses tools, and executes multi-step work
-
--    **Integration**
-
-    ---
-
-    *The connection layer: protocols, interfaces, and frameworks that bridge AI to external systems and code.*
-
-    - **[MCP](mcp/index.md)** — Connector to external tools, services, and databases
-    - **[API](api/index.md)** — Programmatic interface for accessing AI models
-    - **[SDK](sdk/index.md)** — Frameworks and toolkits for building AI workflows in code
-    - **[CLI](cli/index.md)** — Terminal-native interface for interacting with AI
-
+<div class="blocks-section">
+  <div class="blocks-header">Integration<small>The connection layer: protocols, interfaces, and frameworks that bridge AI to external systems and code.</small></div>
+  <div class="block-row"><a href="mcp/">MCP</a><span>Connector to external tools, services, and databases</span></div>
+  <div class="block-row"><a href="api/">API</a><span>Programmatic interface for accessing AI models</span></div>
+  <div class="block-row"><a href="sdk/">SDK</a><span>Frameworks and toolkits for building AI workflows in code</span></div>
+  <div class="block-row"><a href="cli/">CLI</a><span>Terminal-native interface for interacting with AI</span></div>
 </div>
 
 ## Intelligence
