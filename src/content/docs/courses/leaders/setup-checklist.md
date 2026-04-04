@@ -14,17 +14,17 @@ The checkboxes below are visual markers — they won't save on the web. Use **Cm
 
 | Step | What | Time | Status |
 |------|------|------|--------|
-| 1 | [AI Platform Account + Apps](#step-1-ai-platform-account-apps) | ~15 min | Required |
-| 2 | [Personalization / Custom Instructions](#step-2-personalization-custom-instructions) | ~15 min | Recommended |
+| 1 | [AI Platform Account + Apps](#step-1-ai-platform-account--apps) | ~15 min | Required |
+| 2 | [Personalization / Custom Instructions](#step-2-personalization--custom-instructions) | ~15 min | Recommended |
 | 3 | [Memory](#step-3-memory) | ~10 min | Recommended |
-| 4 | [Connections (MCP / Integrations)](#step-4-connections-mcp-integrations) | ~15 min | Recommended |
+| 4 | [Connections (MCP / Integrations)](#step-4-connections-mcp--integrations) | ~15 min | Recommended |
 
 ### Part 2: Builder Tools (~90 min)
 
 | Step | What | Time | Status |
 |------|------|------|--------|
 | 5 | [Terminal Basics](#step-5-terminal-basics) | ~15 min | Required |
-| 6 | [Code Editor + Extensions](#step-6-code-editor-extensions) | ~15 min | Required |
+| 6 | [Code Editor + Extensions](#step-6-code-editor--extensions) | ~15 min | Required |
 | 7 | [Git](#step-7-git) | ~10 min | Required |
 | 8 | [GitHub](#step-8-github) | ~15 min | Required |
 | 9 | [Voice to Text](#step-9-voice-to-text) | ~10 min | Recommended |
@@ -45,10 +45,10 @@ These steps set up your AI platform accounts and configure them for the best exp
 
 | Platform | Getting Started Guide |
 |----------|----------------------|
-| Claude (Anthropic) | [Getting Started with Claude](../../platforms/claude/getting-started/index.md) |
-| OpenAI (ChatGPT + Codex) | [Getting Started with OpenAI](../../platforms/openai/getting-started/index.md) |
-| Gemini (Google) | [Getting Started with Gemini](../../platforms/google-gemini/getting-started/index.md) |
-| M365 Copilot (Microsoft) | [Getting Started with M365 Copilot](../../platforms/m365-copilot/getting-started/index.md) |
+| Claude (Anthropic) | [Getting Started with Claude](/platforms/claude/getting-started/) |
+| OpenAI (ChatGPT + Codex) | [Getting Started with OpenAI](/platforms/openai/getting-started/) |
+| Gemini (Google) | [Getting Started with Gemini](/platforms/google-gemini/getting-started/) |
+| M365 Copilot (Microsoft) | [Getting Started with M365 Copilot](/platforms/m365-copilot/getting-started/) |
 
 Pick your platform(s), open the Getting Started guide, and work through the steps below. Each guide has the platform-specific instructions.
 
@@ -129,7 +129,7 @@ These steps install the developer tools you'll use throughout the course. Each s
 
 **What:** Familiarize yourself with the basics of the terminal on Mac and PowerShell on Windows.
 
-[→ Go to Terminal Basics guide](../../builder-setup/terminal-basics.md)
+[→ Go to Terminal Basics guide](/builder-setup/terminal-basics/)
 
 - [ ] I can open a terminal and see a prompt (`$`, `%`, or `>`)
 - [ ] Running `pwd` (Mac) or `Get-Location` (Windows) shows my current directory
@@ -146,7 +146,7 @@ These steps install the developer tools you'll use throughout the course. Each s
 
 **What:** Install and configure Cursor or VS Code with AI model integration (Claude, ChatGPT Codex, Gemini Code Assist, or similar).
 
-[→ Go to Editor Setup guide](../../builder-setup/editor-setup.md)
+[→ Go to Editor Setup guide](/builder-setup/editor-setup/)
 
 - [ ] I can open my editor and see the welcome screen or an empty workspace
 - [ ] At least one AI extension installed for a platform I have a paid subscription to
@@ -163,7 +163,7 @@ These steps install the developer tools you'll use throughout the course. Each s
 
 **What:** Install Git — a version control tool that tracks the changes you make to your AI building blocks. Git ensures you never lose them — every version is saved, and you can always recover or refine what you've built.
 
-[→ Go to Git Installation guide](../../builder-setup/git-install.md)
+[→ Go to Git Installation guide](/builder-setup/git-install/)
 
 - [ ] Running `git --version` in my terminal shows a version number
 
@@ -179,7 +179,7 @@ These steps install the developer tools you'll use throughout the course. Each s
 
 **What:** Create an account, enable 2FA, and create a repository for your coursework. GitHub is where your files live in the cloud — backed up, versioned, and accessible from any machine.
 
-[→ Go to GitHub Setup guide](../../builder-setup/github-setup.md)
+[→ Go to GitHub Setup guide](/builder-setup/github-setup/)
 
 - [ ] I have a GitHub account
 - [ ] I can clone a repository and see the files in my editor
@@ -197,7 +197,7 @@ These steps install the developer tools you'll use throughout the course. Each s
 
 **What:** Configure system voice input or install a dedicated voice-to-text tool (Wispr Flow recommended).
 
-[→ Go to Voice to Text Setup guide](../../builder-setup/voice-to-text-setup.md)
+[→ Go to Voice to Text Setup guide](/builder-setup/voice-to-text-setup/)
 
 - [ ] I can dictate text into any input field on my computer
 
@@ -213,7 +213,7 @@ These steps install the developer tools you'll use throughout the course. Each s
 
 **What:** Skills are reusable instructions that teach your AI tool how to do specific tasks your way — like editing to publication standards or generating meeting briefs. You'll use these throughout the course.
 
-[→ How to Add Skills to Your Platform](../../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform)
+[→ How to Add Skills to Your Platform](/agentic-building-blocks/skills/#how-to-add-skills-to-your-platform)
 
 - [ ] At least one skill installed or added to your platform
 - [ ] Skill verified — invoked it in your AI tool and got a response
@@ -230,7 +230,7 @@ These steps install the developer tools you'll use throughout the course. Each s
 
 **What:** Connect the Hands-on AI knowledge base to your AI tool so you can search course content, building blocks, and reference material right where you work.
 
-[→ Go to MCP Server Connection Guide](../../mcp-server/index.md)
+[→ Go to MCP Server Connection Guide](/mcp-server/)
 
 - [ ] Hands-on AI MCP server connected to my AI platform
 
@@ -252,7 +252,7 @@ Keeping track of your workflows and the AI building blocks that power them is es
 
 **What:** Get a free Notion account, duplicate the AI Registry template, and connect Notion to your AI tool.
 
-[→ Go to AI Registry Setup guide](../../builder-setup/notion-registry-setup.md)
+[→ Go to AI Registry Setup guide](/builder-setup/notion-registry-setup/)
 
 - [ ] Notion AI Registry template duplicated to my workspace
 - [ ] AI Registry plugin installed (`/plugin install ai-registry@handsonai`)
@@ -275,4 +275,4 @@ You're all set for the course — nice work getting through the setup!
 
 Having trouble with any step? Bring your questions to the first session — we'll troubleshoot together.
 
-[→ Back to course overview](index.md)
+[→ Back to course overview](/courses/leaders/)
