@@ -6,6 +6,8 @@ description: >
   a complete post with hook, body, CTA, and suggested hashtags. Works well when chained
   after extracting-article-insights for content repurposing workflows.
 user-invocable: true
+model: sonnet
+effort: medium
 ---
 
 # Drafting LinkedIn Posts

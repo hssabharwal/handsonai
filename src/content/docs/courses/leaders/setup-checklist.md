@@ -1,10 +1,12 @@
 ---
 title: Setup Checklist — Agentic AI for Leaders
 description: Complete setup guide for the Agentic AI for Leaders course — AI platform accounts, developer tools, and workflow management
----Everything you need to set up before Session 1. Work through the steps in order — later steps build on earlier ones. Budget **2–3 hours** total, split across two sittings if you prefer.
+---
 
-:::tip[Want a printable copy?]
-Use **Cmd + P** (Mac) or **Ctrl + P** (Windows) to print or save this page as a PDF.
+Everything you need to set up before Session 1. Work through the steps in order — later steps build on earlier ones. Budget **2–3 hours** total, split across two sittings if you prefer. Times are estimates — it's normal for some steps to take longer, especially if the tools are new to you.
+
+:::tip[Track your progress]
+The checkboxes below are visual markers — they won't save on the web. Use **Cmd + P** (Mac) or **Ctrl + P** (Windows) to print this page and check off steps by hand, or track progress in a notes app.
 :::
 ## At a Glance
 
@@ -27,7 +29,7 @@ Use **Cmd + P** (Mac) or **Ctrl + P** (Windows) to print or save this page as a 
 | 8 | [GitHub](#step-8-github) | ~15 min | Required |
 | 9 | [Voice to Text](#step-9-voice-to-text) | ~10 min | Recommended |
 | 10 | [Hands-on AI Skills](#step-10-hands-on-ai-skills) | ~10 min | Recommended |
-| 11 | [Hands-on AI MCP Server](#step-11-hands-on-ai-mcp-server) | ~5 min | Recommended |
+| 11 | [Connect the Course Knowledge Base](#step-11-connect-the-course-knowledge-base) | ~5 min | Recommended |
 
 ### Part 3: AI Workflow Management (~20 min)
 
@@ -52,7 +54,7 @@ Pick your platform(s), open the Getting Started guide, and work through the step
 
 ### Step 1: AI Platform Account + Apps
 
-**What:** Create an account with a paid subscription and install all available apps (web, desktop, mobile).
+**What:** Create an account with a paid subscription and install all available apps (web, desktop, mobile). The course requires a paid plan (e.g., ChatGPT Plus, Claude Pro, Gemini Advanced) — free tiers don't support features you'll need. Your Getting Started guide has pricing details.
 
 - [ ] I have a paid AI platform account and can start conversations
 - [ ] I've installed the desktop and mobile apps for my platform(s)
@@ -61,6 +63,8 @@ Pick your platform(s), open the Getting Started guide, and work through the step
 <summary>Stuck? Ask AI for help</summary>
 
 > I'm trying to sign up for [Claude / ChatGPT / Gemini / Copilot] and running into this issue: [describe what's happening]. What should I try?
+
+Still stuck? Check your platform's [Getting Started guide](#part-1--ai-platform-setup) or bring your question to Session 1.
 
 </details>
 ---
@@ -76,6 +80,8 @@ Pick your platform(s), open the Getting Started guide, and work through the step
 
 > I'm trying to set up custom instructions in [ChatGPT / Claude / Gemini] and can't find the setting. I'm on [web / desktop / mobile]. Where do I go?
 
+Still stuck? Check your platform's [Getting Started guide](#part-1--ai-platform-setup) or bring your question to Session 1.
+
 </details>
 ---
 
@@ -90,24 +96,32 @@ Pick your platform(s), open the Getting Started guide, and work through the step
 
 > I'm trying to enable memory in [ChatGPT / Claude / Gemini] but can't find the toggle. I'm on [web / desktop / mobile] with a [Free / Plus / Pro] plan. Where do I look?
 
+Still stuck? Check your platform's [Getting Started guide](#part-1--ai-platform-setup) or bring your question to Session 1.
+
 </details>
 ---
 
 ### Step 4: Connections (MCP / Integrations)
 
-**What:** Connect your AI platform to external tools and data sources — MCP servers, connectors, extensions, or connected apps.
+**What:** Connect your AI platform to external tools and data sources so it can read from and write to apps you already use — like Google Docs, Slack, or your company's knowledge base. Each platform calls these something different (MCP servers, connectors, extensions, or connected apps).
 
-- [ ] I've connected at least one external tool or MCP server (optional)
+You can skip this for now — you'll set up specific connections later in the course when you need them.
+
+- [ ] I've connected at least one external tool or data source (optional — can do later)
 
 <details>
 <summary>Stuck? Ask AI for help</summary>
 
 > I'm trying to connect [tool name] to [ChatGPT / Claude / Gemini] and running into this issue: [describe what's happening]. What should I check?
 
+Still stuck? Check your platform's [Getting Started guide](#part-1--ai-platform-setup) or bring your question to Session 1.
+
 </details>
 ---
 
 ## Part 2 — Builder Tools
+
+Your AI platform is ready. Next, you'll set up the developer tools that let you build with AI.
 
 These steps install the developer tools you'll use throughout the course. Each step has a detailed guide — follow the link, complete the setup, then come back here and check the box.
 
@@ -169,7 +183,7 @@ These steps install the developer tools you'll use throughout the course. Each s
 
 - [ ] I have a GitHub account
 - [ ] I can clone a repository and see the files in my editor
-- [ ] Running `git status` in the cloned repo shows `On branch main`
+- [ ] In my terminal, I can navigate to the cloned folder (`cd my-repo-name`) and run `git status` — it shows `On branch main`
 
 <details>
 <summary>Stuck? Ask AI for help</summary>
@@ -197,7 +211,7 @@ These steps install the developer tools you'll use throughout the course. Each s
 
 ### Step 10: Hands-on AI Skills
 
-**What:** Skills teach your AI tool specific tasks — like editing to publication standards, naming workflows consistently, or generating meeting briefs — so you describe your goal and the AI follows your standards automatically. Skills work across platforms including Claude Code, Cowork, Claude.ai, Cursor, Codex CLI, Gemini CLI, and VS Code Copilot.
+**What:** Skills are reusable instructions that teach your AI tool how to do specific tasks your way — like editing to publication standards or generating meeting briefs. You'll use these throughout the course.
 
 [→ How to Add Skills to Your Platform](../../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform)
 
@@ -212,9 +226,9 @@ These steps install the developer tools you'll use throughout the course. Each s
 </details>
 ---
 
-### Step 11: Hands-on AI MCP Server
+### Step 11: Connect the Course Knowledge Base
 
-**What:** Access the Hands-on AI knowledge base where you do your work by adding a connector in your AI tool.
+**What:** Connect the Hands-on AI knowledge base to your AI tool so you can search course content, building blocks, and reference material right where you work.
 
 [→ Go to MCP Server Connection Guide](../../mcp-server/index.md)
 
@@ -230,11 +244,13 @@ These steps install the developer tools you'll use throughout the course. Each s
 
 ## Part 3 — AI Workflow Management
 
+Your toolkit is complete. One last step to set up your workflow management system.
+
 Keeping track of your workflows and the AI building blocks that power them is essential to change management and scaling your operations.
 
 ### Step 12: AI Registry Setup
 
-**What:** Get a free Notion account (or other database system), duplicate the AI Registry template, and connect Notion to your AI tool.
+**What:** Get a free Notion account, duplicate the AI Registry template, and connect Notion to your AI tool.
 
 [→ Go to AI Registry Setup guide](../../builder-setup/notion-registry-setup.md)
 
@@ -251,10 +267,11 @@ Keeping track of your workflows and the AI building blocks that power them is es
 
 ## What's Next?
 
-You're all set for the course. Here's what to do next:
+You're all set for the course — nice work getting through the setup!
 
-- **Bookmark this page** — come back to check off steps as you complete them
-- **Start Session 1** — you'll use these tools right away
+- **Quick test:** Open your AI tool and ask: "What tools and connections do I have set up?" — this confirms everything is working together
+- **Bookmark this page** — come back to finish any steps you skipped
+- **Start Session 1** — you'll put these tools to work right away
 
 Having trouble with any step? Bring your questions to the first session — we'll troubleshoot together.
 
