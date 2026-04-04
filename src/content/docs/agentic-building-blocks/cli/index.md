@@ -41,7 +41,8 @@ Or running a CLI in headless mode as part of a CI pipeline — on every push, it
 | **Codex CLI** | OpenAI | macOS, Linux, Windows (WSL) | <a href="https://github.com/openai/codex" target="_blank">GitHub</a> |
 | **Gemini CLI** | Google | macOS, Linux, Windows | <a href="https://github.com/google-gemini/gemini-cli" target="_blank">GitHub</a> |
 | **GitHub Copilot CLI** | Microsoft | macOS, Linux, Windows | <a href="https://docs.github.com/en/copilot/github-copilot-in-the-cli" target="_blank">Docs</a> |
-| **gws** | Google Workspace | macOS, Linux, Windows | <a href="https://github.com/googleworkspace/cli" target="_blank">GitHub</a> |
+| **GitHub CLI** | GitHub | macOS, Linux, Windows | <a href="https://github.com/cli/cli#installation" target="_blank">GitHub</a> · <a href="https://cli.github.com/manual/" target="_blank">Docs</a> |
+| **Google Workspace CLI** (`gws`) | Google | macOS, Linux, Windows | <a href="https://github.com/googleworkspace/cli" target="_blank">GitHub</a> |
 
 ## Key Concepts
 
