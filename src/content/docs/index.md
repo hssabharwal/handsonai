@@ -1,6 +1,13 @@
 ---
 title: The Hands-on AI Playbook
 description: Curated AI knowledge for builders. Apply AI faster. Accelerate business impact.
+# ── Announcement Banner ──
+# Uncomment the two lines below and edit the content to show a banner.
+# Comment them out again (or delete) to hide it.
+# Format: HTML is supported. Use <strong> for bold, <a href="..."> for links.
+#
+# banner:
+#   content: '⚡ <strong>Agentic AI for Leaders</strong> — next cohort starts Monday. <a href="/courses/leaders/">Reserve your spot &rarr;</a>'
 ---*Curated by [James Gray](about.md)*
 
 Built for **leaders, professionals, entrepreneurs, and founders** at the intersection of people, business, and technology. No technical background required — just a willingness to get hands-on with AI and start creating real impact.

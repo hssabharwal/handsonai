@@ -204,3 +204,20 @@ header a,
 :root[data-theme='light'] nav.sidebar {
   border-right: 1px solid #d4d4d0;
 }
+
+/* ── Announcement Banner ──
+   Override Starlight's Banner component colors with brand palette.
+   Banner renders inside <main> above page content when
+   `banner.content` is set in page frontmatter. */
+
+/* Dark mode: lime background, charcoal text */
+:root {
+  --sl-color-banner-bg: #DDF222;
+  --sl-color-banner-text: #282828;
+}
+
+/* Light mode: charcoal background (matches header), off-white text */
+:root[data-theme='light'] {
+  --sl-color-banner-bg: #282828;
+  --sl-color-banner-text: #f0f0ee;
+}
