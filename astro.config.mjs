@@ -43,6 +43,7 @@ export default defineConfig({
             { label: 'MCP Server', link: '/mcp-server/' },
             {
               label: 'Agents & Skills',
+              collapsed: true,
               items: [
                 { label: 'Browse Agents & Skills', link: '/use-the-playbook/build/' },
                 { label: 'Using Plugins', link: '/use-the-playbook/build/using-plugins/' },
@@ -52,6 +53,7 @@ export default defineConfig({
             },
             {
               label: 'Resources',
+              collapsed: true,
               items: [
                 { label: 'Overview', link: '/resources/' },
                 { label: 'OpenAI Use Cases Report', link: '/resources/openai-use-cases-report/' },
@@ -79,6 +81,7 @@ export default defineConfig({
             { label: 'Get the Skills', link: '/business-first-ai-framework/skills/' },
             {
               label: 'Worked Examples',
+              collapsed: true,
               items: [
                 { label: 'Analyze: Example Reports', link: '/business-first-ai-framework/analyze-examples/' },
                 { label: 'Deterministic Automation', link: '/business-first-ai-framework/examples/deterministic-automation/' },
@@ -89,6 +92,7 @@ export default defineConfig({
             },
             {
               label: 'Questions',
+              collapsed: true,
               items: [
                 { label: 'Find workflows worth applying AI to', link: '/business-first-ai-framework/questions/how-do-i-find-workflows-worth-applying-ai-to/' },
                 { label: 'Identify the right AI tools for a workflow', link: '/business-first-ai-framework/questions/how-do-i-identify-the-right-ai-tools-for-a-workflow/' },
@@ -104,10 +108,12 @@ export default defineConfig({
             { label: 'Choosing the Right Building Block', link: '/agentic-building-blocks/comparison/' },
             {
               label: 'Intelligence',
+              collapsed: true,
               items: [
                 { label: 'Model', link: '/agentic-building-blocks/models/' },
                 {
                   label: 'Context',
+                  collapsed: true,
                   items: [
                     { label: 'Overview', link: '/agentic-building-blocks/context/' },
                     { label: 'Context Graphs', link: '/agentic-building-blocks/context/context-graphs/' },
@@ -115,6 +121,7 @@ export default defineConfig({
                 },
                 {
                   label: 'Projects',
+                  collapsed: true,
                   items: [
                     { label: 'Overview', link: '/agentic-building-blocks/projects/' },
                     { label: 'Project Instructions', link: '/agentic-building-blocks/projects/workspace-instructions-meta-prompt/' },
@@ -125,13 +132,16 @@ export default defineConfig({
             },
             {
               label: 'Orchestration',
+              collapsed: true,
               items: [
                 {
                   label: 'Prompts',
+                  collapsed: true,
                   items: [
                     { label: 'Overview', link: '/agentic-building-blocks/prompts/' },
                     {
                       label: 'Prompt Engineering',
+                      collapsed: true,
                       items: [
                         { label: 'Overview', link: '/agentic-building-blocks/prompts/prompt-engineering/' },
                         { label: 'Zero-Shot Prompting', link: '/agentic-building-blocks/prompts/prompt-engineering/zero-shot-prompting/' },
@@ -153,6 +163,7 @@ export default defineConfig({
                     },
                     {
                       label: 'Questions',
+                      collapsed: true,
                       items: [
                         { label: 'What is a system prompt?', link: '/agentic-building-blocks/prompts/questions/what-is-a-system-prompt/' },
                       ],
@@ -161,10 +172,12 @@ export default defineConfig({
                 },
                 {
                   label: 'Skills',
+                  collapsed: true,
                   items: [
                     { label: 'Overview', link: '/agentic-building-blocks/skills/' },
                     {
                       label: 'Questions',
+                      collapsed: true,
                       items: [
                         { label: 'Difference between a skill and an agent', link: '/agentic-building-blocks/skills/questions/what-is-the-difference-between-a-skill-and-an-agent-in-claude-code/' },
                         { label: 'Do plugin skills conflict with custom skills?', link: '/agentic-building-blocks/skills/questions/do-plugin-skills-conflict-with-custom-skills/' },
@@ -174,11 +187,13 @@ export default defineConfig({
                 },
                 {
                   label: 'Agents',
+                  collapsed: true,
                   items: [
                     { label: 'Overview', link: '/agentic-building-blocks/agents/' },
                     { label: 'Programming Frameworks', link: '/agentic-building-blocks/agents/frameworks/' },
                     {
                       label: 'Capability Patterns',
+                      collapsed: true,
                       items: [
                         { label: 'Overview', link: '/agentic-building-blocks/agents/capability-patterns/' },
                         { label: 'Reflection', link: '/agentic-building-blocks/agents/capability-patterns/reflection/' },
@@ -192,6 +207,7 @@ export default defineConfig({
                     },
                     {
                       label: 'Orchestration Patterns',
+                      collapsed: true,
                       items: [
                         { label: 'Overview', link: '/agentic-building-blocks/agents/orchestration-patterns/' },
                         { label: 'Sequential', link: '/agentic-building-blocks/agents/orchestration-patterns/sequential/' },
@@ -211,13 +227,16 @@ export default defineConfig({
             },
             {
               label: 'Integration',
+              collapsed: true,
               items: [
                 {
                   label: 'MCP',
+                  collapsed: true,
                   items: [
                     { label: 'Overview', link: '/agentic-building-blocks/mcp/' },
                     {
                       label: 'Questions',
+                      collapsed: true,
                       items: [
                         { label: 'How do I connect an MCP server to Claude Code', link: '/agentic-building-blocks/mcp/questions/how-do-i-connect-an-mcp-server-to-claude-code/' },
                       ],
@@ -238,6 +257,7 @@ export default defineConfig({
             { label: 'Overview', link: '/use-cases/' },
             {
               label: 'Content Creation',
+              collapsed: true,
               items: [
                 { label: 'Overview', link: '/use-cases/content-creation/' },
                 { label: 'Resources', link: '/use-cases/content-creation/resources/' },
@@ -245,6 +265,7 @@ export default defineConfig({
             },
             {
               label: 'Research',
+              collapsed: true,
               items: [
                 { label: 'Overview', link: '/use-cases/research/' },
                 { label: 'Resources', link: '/use-cases/research/resources/' },
@@ -252,6 +273,7 @@ export default defineConfig({
             },
             {
               label: 'Coding',
+              collapsed: true,
               items: [
                 { label: 'Overview', link: '/use-cases/coding/' },
                 { label: 'Agentic Coding', link: '/use-cases/coding/agentic-coding/' },
@@ -260,6 +282,7 @@ export default defineConfig({
             },
             {
               label: 'Data Analysis',
+              collapsed: true,
               items: [
                 { label: 'Overview', link: '/use-cases/data-analysis/' },
                 { label: 'Resources', link: '/use-cases/data-analysis/resources/' },
@@ -267,6 +290,7 @@ export default defineConfig({
             },
             {
               label: 'Ideation & Strategy',
+              collapsed: true,
               items: [
                 { label: 'Overview', link: '/use-cases/ideation-and-strategy/' },
                 { label: 'Resources', link: '/use-cases/ideation-and-strategy/resources/' },
@@ -274,6 +298,7 @@ export default defineConfig({
             },
             {
               label: 'Automation',
+              collapsed: true,
               items: [
                 { label: 'Overview', link: '/use-cases/automation/' },
                 { label: 'Resources', link: '/use-cases/automation/resources/' },
@@ -288,12 +313,14 @@ export default defineConfig({
             { label: 'Overview', link: '/platforms/' },
             {
               label: 'Claude',
+              collapsed: true,
               items: [
                 { label: 'Overview', link: '/platforms/claude/' },
                 { label: 'Getting Started', link: '/platforms/claude/getting-started/' },
                 { label: 'Claude Projects', link: '/platforms/claude/projects/claude-projects-setup/' },
                 {
                   label: 'Agents',
+                  collapsed: true,
                   items: [
                     { label: 'Building Agents on Claude', link: '/platforms/claude/agents/building-agents/' },
                     { label: 'Scheduling Subagents', link: '/platforms/claude/subagents/scheduling-subagents/' },
@@ -302,6 +329,7 @@ export default defineConfig({
                 },
                 {
                   label: 'Skills',
+                  collapsed: true,
                   items: [
                     { label: 'Discover Your Best Claude Skills', link: '/platforms/claude/skills/skills-discovery-meta-prompt/' },
                     { label: 'Resources', link: '/platforms/claude/skills/resources/' },
@@ -309,6 +337,7 @@ export default defineConfig({
                 },
                 {
                   label: 'Questions',
+                  collapsed: true,
                   items: [
                     { label: 'Overview', link: '/platforms/claude/questions/' },
                     { label: 'Best way to name agent skills?', link: '/platforms/claude/questions/what-is-the-best-way-to-name-claude-agent-skills/' },
@@ -321,6 +350,7 @@ export default defineConfig({
             },
             {
               label: 'Google Gemini',
+              collapsed: true,
               items: [
                 { label: 'Overview', link: '/platforms/google-gemini/' },
                 { label: 'Getting Started', link: '/platforms/google-gemini/getting-started/' },
@@ -332,6 +362,7 @@ export default defineConfig({
             },
             {
               label: 'M365 Copilot',
+              collapsed: true,
               items: [
                 { label: 'Overview', link: '/platforms/m365-copilot/' },
                 { label: 'Getting Started', link: '/platforms/m365-copilot/getting-started/' },
@@ -342,6 +373,7 @@ export default defineConfig({
             },
             {
               label: 'OpenAI',
+              collapsed: true,
               items: [
                 { label: 'Overview', link: '/platforms/openai/' },
                 { label: 'Getting Started', link: '/platforms/openai/getting-started/' },
@@ -373,6 +405,7 @@ export default defineConfig({
             { label: 'Overview', link: '/product-engineering/' },
             {
               label: 'Product',
+              collapsed: true,
               items: [
                 { label: 'Product Requirements', link: '/product-engineering/requirements/' },
                 { label: 'User Stories & Acceptance Criteria', link: '/product-engineering/user-stories/' },
@@ -382,6 +415,7 @@ export default defineConfig({
             },
             {
               label: 'Engineering',
+              collapsed: true,
               items: [
                 { label: 'Software Development Lifecycle', link: '/product-engineering/sdlc/' },
                 { label: 'Project Tracking with GitHub', link: '/product-engineering/tracking/' },
@@ -399,6 +433,7 @@ export default defineConfig({
             { label: 'Overview', link: '/patterns/' },
             {
               label: 'Workflow Architecture Patterns',
+              collapsed: true,
               items: [
                 { label: 'Overview', link: '/patterns/workflow-architecture/' },
                 { label: 'Augmented LLM', link: '/patterns/workflow-architecture/augmented-llm/' },
@@ -419,6 +454,7 @@ export default defineConfig({
             { label: 'Overview', link: '/courses/' },
             {
               label: 'Agentic AI for Leaders',
+              collapsed: true,
               items: [
                 { label: 'Overview', link: '/courses/leaders/' },
                 { label: 'Setup Checklist', link: '/courses/leaders/setup-checklist/' },
@@ -427,6 +463,7 @@ export default defineConfig({
             { label: 'Claude for Builders', link: '/courses/builders/' },
             {
               label: 'Questions',
+              collapsed: true,
               items: [
                 { label: 'Corporate AI Training', link: '/courses/questions/corporate-ai-training/' },
               ],
