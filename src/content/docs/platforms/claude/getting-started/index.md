@@ -137,20 +137,6 @@ Connect the Hands-on AI Playbook MCP server for reference material:
 
 ---
 
-### 9. Add Skills
-
-After adding skills, you can say "edit this article for HBR quality" and your AI tool applies professional editorial standards automatically — no re-explaining your requirements each time.
-
-Claude supports three ways to install skills:
-
-- **Cowork** — click **+** > **Add plugins** (no terminal needed)
-- **Claude Code** — `/plugin install business-first-ai@handsonai`
-- **Claude.ai (web)** — download a skill folder, zip it, and upload via **Settings > Capabilities > Upload skill**
-
-[→ How to Add Skills to Your Platform](../../../agentic-building-blocks/skills/index.md#how-to-add-skills-to-your-platform)
-
----
-
 ## Part 2 — Anthropic Developer Platform
 
 The Claude Developer Platform is where you manage API keys, monitor usage, and access developer documentation. You need this if you're building applications with the Anthropic API or want to manage API-based access to Claude models.
@@ -186,7 +172,6 @@ Most people don't need this — Claude Code and Claude Desktop authenticate dire
 - [ ] Personalization configured with your role and preferences
 - [ ] Memory enabled in Settings → Capabilities
 - [ ] At least one MCP connector or server connected (optional)
-- [ ] At least one skill installed or added (optional)
 
 **Part 2 — Developer Platform:**
 
