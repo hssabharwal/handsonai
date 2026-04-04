@@ -37,11 +37,11 @@ Draft a curated changelog entry from recent git history, get approval, publish i
 
    Ignore:
    - Typo fixes, formatting tweaks, whitespace changes
-   - Nav-only changes in `mkdocs.yml`
+   - Sidebar-only changes in `astro.config.mjs`
    - CI/CD config changes (`.github/`)
    - Script changes (`scripts/`)
    - CSS-only changes
-   - Changes to `docs/overrides/`
+   - Changes to `src/components/` (layout-only)
 
    Surface:
    - New documentation pages

@@ -187,12 +187,5 @@
       });
   }
 
-  // MkDocs Material instant navigation: re-run on every page change
-  if (typeof document$ !== "undefined") {
-    document$.subscribe(function () {
-      init();
-    });
-  } else {
-    init();
-  }
+  init();
 })();

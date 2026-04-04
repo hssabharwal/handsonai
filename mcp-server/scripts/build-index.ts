@@ -82,7 +82,7 @@ function extractTitle(data: Record<string, unknown>, content: string): string {
   return match ? match[1] : "Untitled";
 }
 
-function stripMkDocsSyntax(content: string): string {
+function stripAdmonitionSyntax(content: string): string {
   let result = content;
 
   // Strip admonitions: !!! type "title" or ??? type "title"
@@ -145,7 +145,7 @@ async function main() {
       const title = extractTitle(data, content);
       const description =
         typeof data.description === "string" ? data.description : "";
-      const cleanContent = stripMkDocsSyntax(content);
+      const cleanContent = stripAdmonitionSyntax(content);
 
       const page: Page = {
         path: getPagePath(file),

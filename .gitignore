@@ -23,7 +23,7 @@ dist/
 .env.local
 *.log
 
-# MkDocs
+# Build cache
 .cache/
 
 # Astro
