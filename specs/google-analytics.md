@@ -1,5 +1,7 @@
 # Feature Spec: Google Analytics 4 (GA4) Integration
 
+> **Superseded:** This spec was written for MkDocs Material. GA4 is now configured in `astro.config.mjs` via a custom `Head.astro` component. Kept for historical reference.
+
 ## Summary
 
 Add GA4 tracking across all pages of handsonai.info using MkDocs Material's built-in analytics support.

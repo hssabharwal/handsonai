@@ -1,6 +1,6 @@
 ---
 name: playbook-question-publisher
-description: "Publishes approved question drafts from outputs/questions/ to the live site. Moves files to the correct docs/ directory, updates mkdocs.yml nav and docs/ask.md, commits and pushes to main, and updates Notion status to Published. Run nightly at 9 PM or on-demand after reviewing drafts.\n\nExamples:\n\n<example>\nContext: Scheduled nightly run to publish approved questions\nuser: \"Publish all approved questions from the Notion Questions database\"\nassistant: \"I'll check for approved questions and publish any that are ready.\"\n<Task tool call to playbook-question-publisher agent>\n</example>\n\n<example>\nContext: User approved a question and wants it published immediately\nuser: \"I just approved the MCP question in Notion, publish it now\"\nassistant: \"Let me publish the approved question to the live site.\"\n<Task tool call to playbook-question-publisher agent>\n</example>"
+description: "Publishes approved question drafts from outputs/questions/ to the live site. Moves files to the correct src/content/docs/ directory, updates astro.config.mjs sidebar, commits and pushes to main, and updates Notion status to Published. Run nightly at 9 PM or on-demand after reviewing drafts.\n\nExamples:\n\n<example>\nContext: Scheduled nightly run to publish approved questions\nuser: \"Publish all approved questions from the Notion Questions database\"\nassistant: \"I'll check for approved questions and publish any that are ready.\"\n<Task tool call to playbook-question-publisher agent>\n</example>\n\n<example>\nContext: User approved a question and wants it published immediately\nuser: \"I just approved the MCP question in Notion, publish it now\"\nassistant: \"Let me publish the approved question to the live site.\"\n<Task tool call to playbook-question-publisher agent>\n</example>"
 model: sonnet
 color: green
 ---
@@ -55,23 +55,23 @@ Use the **Notion Topic value** (not the draft frontmatter) to pick the target di
 
 | Topic | Target Directory |
 |-------|-----------------|
-| Prompts | `docs/agentic-building-blocks/prompts/questions/` |
-| Context | `docs/agentic-building-blocks/context/questions/` |
-| Projects | `docs/agentic-building-blocks/projects/questions/` |
-| Skills | `docs/agentic-building-blocks/skills/questions/` |
-| Agents | `docs/agentic-building-blocks/agents/questions/` |
-| MCP | `docs/agentic-building-blocks/mcp/questions/` |
+| Prompts | `src/content/docs/agentic-building-blocks/prompts/questions/` |
+| Context | `src/content/docs/agentic-building-blocks/context/questions/` |
+| Projects | `src/content/docs/agentic-building-blocks/projects/questions/` |
+| Skills | `src/content/docs/agentic-building-blocks/skills/questions/` |
+| Agents | `src/content/docs/agentic-building-blocks/agents/questions/` |
+| MCP | `src/content/docs/agentic-building-blocks/mcp/questions/` |
 | Platforms | Route to specific platform subdirectory based on Platform field — see Platform Routing below |
-| Use Cases | `docs/use-cases/questions/` |
-| Builder Setup | `docs/builder-setup/questions/` |
-| Other | `docs/questions/` |
+| Use Cases | `src/content/docs/use-cases/questions/` |
+| Builder Setup | `src/content/docs/builder-setup/questions/` |
+| Other | `src/content/docs/questions/` |
 
 **Platform Routing** (when Topic = "Platforms"):
-- If Platform includes "Claude" → `docs/platforms/claude/questions/`
-- If Platform includes "ChatGPT/OpenAI" → `docs/platforms/openai/questions/`
-- If Platform includes "Gemini" → `docs/platforms/google-gemini/questions/`
-- If Platform includes "M365 Copilot" → `docs/platforms/m365-copilot/questions/`
-- If Platform includes "General" or multiple platforms → `docs/platforms/questions/`
+- If Platform includes "Claude" → `src/content/docs/platforms/claude/questions/`
+- If Platform includes "ChatGPT/OpenAI" → `src/content/docs/platforms/openai/questions/`
+- If Platform includes "Gemini" → `src/content/docs/platforms/google-gemini/questions/`
+- If Platform includes "M365 Copilot" → `src/content/docs/platforms/m365-copilot/questions/`
+- If Platform includes "General" or multiple platforms → `src/content/docs/platforms/questions/`
 
 #### e. Create target directory if needed
 
@@ -81,45 +81,41 @@ Use `mkdir -p` via Bash to create the target directory if it doesn't exist.
 
 Copy the file from `outputs/questions/{filename}.md` to the target directory, then delete the original. Use the Write tool to write the (possibly updated) content to the target path, then use Bash `rm` to remove the original.
 
-#### g. Update `mkdocs.yml` nav
+#### g. Update `astro.config.mjs` sidebar
 
-Read `mkdocs.yml` and add the question under the correct section's "Questions" subsection. The nav entry format is:
+Read `astro.config.mjs` and add the question under the correct section's "Questions" group in the sidebar. The sidebar entry format is:
 
-```yaml
-- Question text without trailing question mark: path/to/file.md
+```js
+{ label: 'Question text without trailing question mark', link: '/path/to/question-slug/' },
 ```
 
 **Where to insert:**
 
-Find the correct top-level nav section based on Topic:
+Find the correct sidebar section based on Topic and look for the `label: 'Questions'` group within it:
 - **Prompts** → Under "Agentic Building Blocks" > "Prompts" > "Questions"
-- **Context** → Under "Agentic Building Blocks" > "Context" — add a "Questions" subsection if one doesn't exist
-- **Projects** → Under "Agentic Building Blocks" > "Projects" — add a "Questions" subsection if one doesn't exist
-- **Skills** → Under "Agentic Building Blocks" > "Skills" — add a "Questions" subsection if one doesn't exist
-- **Agents** → Under "Agentic Building Blocks" > "Agents" — add a "Questions" subsection if one doesn't exist
-- **MCP** → Under "Agentic Building Blocks" > "MCP" — add a "Questions" subsection if one doesn't exist
+- **Context** → Under "Agentic Building Blocks" > "Context" — add a "Questions" group if one doesn't exist
+- **Projects** → Under "Agentic Building Blocks" > "Projects" — add a "Questions" group if one doesn't exist
+- **Skills** → Under "Agentic Building Blocks" > "Skills" > "Questions"
+- **Agents** → Under "Agentic Building Blocks" > "Agents" — add a "Questions" group if one doesn't exist
+- **MCP** → Under "Agentic Building Blocks" > "MCP" > "Questions"
 - **Platforms** → Under "Platforms" > specific platform > "Questions"
-- **Use Cases** → Under "Use Cases" — add a "Questions" subsection if one doesn't exist
-- **Builder Setup** → Under "Builder Setup" — add a "Questions" subsection if one doesn't exist
+- **Use Cases** → Under "Use Cases" — add a "Questions" group if one doesn't exist
+- **Builder Setup** → Under "Builder Setup" — add a "Questions" group if one doesn't exist
 - **Other** → Under a top-level "Questions" section (create if needed)
 - **Strategy / Framework** → Under "Business-First AI Framework" > "Questions"
 
-For sections that currently have a single-line nav entry (e.g., `- Skills: agentic-building-blocks/skills/index.md`), you'll need to expand it to a nested structure with an Overview entry and a Questions subsection. For example:
+For sections that don't yet have a "Questions" group, add one as a nested `items` array. For example:
 
-Before:
-```yaml
-    - Skills: agentic-building-blocks/skills/index.md
+```js
+{
+  label: 'Questions',
+  items: [
+    { label: 'Difference between a skill and an agent', link: '/agentic-building-blocks/skills/questions/what-is-the-difference-between-a-skill-and-an-agent-in-claude-code/' },
+  ],
+},
 ```
 
-After:
-```yaml
-    - Skills:
-      - Overview: agentic-building-blocks/skills/index.md
-      - Questions:
-        - Difference between a skill and an agent: agentic-building-blocks/skills/questions/what-is-the-difference-between-a-skill-and-an-agent-in-claude-code.md
-```
-
-Use the Edit tool to make surgical edits to `mkdocs.yml`. Be very careful with YAML indentation — use 2-space indentation consistently, matching the existing file format.
+Use the Edit tool to make surgical edits to `astro.config.mjs`. Match the existing indentation and formatting style.
 
 #### h. Update Notion
 
@@ -127,8 +123,8 @@ For each published question, update the Notion row:
 - Set **Status** to "Published"
 - Set **Answer Page** to the published URL: `https://handsonai.info/{path}/`
 
-The path is derived from the file location relative to `docs/`, without the `.md` extension. For example:
-- `docs/agentic-building-blocks/mcp/questions/how-do-i-connect-an-mcp-server-to-claude-code.md`
+The path is derived from the file location relative to `src/content/docs/`, without the `.md` extension. For example:
+- `src/content/docs/agentic-building-blocks/mcp/questions/how-do-i-connect-an-mcp-server-to-claude-code.md`
 - → `https://handsonai.info/agentic-building-blocks/mcp/questions/how-do-i-connect-an-mcp-server-to-claude-code/`
 
 Use `notion-update-page` with the page ID to update properties:
@@ -146,7 +142,7 @@ Use `notion-update-page` with the page ID to update properties:
 
 After processing all questions:
 
-1. Stage all changed files: the new question files in `docs/` and the updated `mkdocs.yml`
+1. Stage all changed files: the new question files in `src/content/docs/` and the updated `astro.config.mjs`
 2. Commit with message: `Publish answer: {question title}` (or `Publish answers: {count} questions` if multiple)
 3. Push to `main`
 
@@ -163,9 +159,8 @@ Output a summary of all actions taken:
 ## Important Notes
 
 - **Notion is the source of truth** for Topic and Platform — always use Notion values over draft frontmatter
-- **YAML indentation matters** — use 2 spaces consistently in `mkdocs.yml`, matching the existing style
-- **Relative paths in ask.md** — paths must be relative from `docs/` since `ask.md` lives there
+- **Indentation matters** — match the existing style in `astro.config.mjs`
 - **Don't modify the draft content** beyond frontmatter syncing — James has already reviewed and edited it
 - **Create directories as needed** — some `questions/` subdirectories may not exist yet
-- The `footnotes` extension is NOT enabled — don't add footnote syntax
+- Don't use footnote syntax — it's not supported
 - Use `git add` with specific file paths, never `git add -A`

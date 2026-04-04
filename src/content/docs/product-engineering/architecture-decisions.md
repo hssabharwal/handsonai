@@ -31,7 +31,7 @@ That's it. If you can answer those four questions in a few sentences each, you h
 Not every choice needs an ADR. You don't need one for:
 
 - Routine implementation details ("I used a `for` loop instead of `.map()`")
-- Choices with only one viable option ("We used MkDocs because the whole site is built on it")
+- Choices with only one viable option ("We used Starlight because the whole site is built on it")
 - Temporary decisions that won't outlast the current session
 
 Write an ADR when there's a **real fork in the road** — when you considered two or more reasonable approaches, weighed trade-offs, and made a judgment call. If someone could reasonably have chosen differently, it's worth recording why you didn't.
