@@ -20,7 +20,7 @@ You manage scheduled subagents entirely through Claude Code — pausing, resumin
 
 ## How to Get Started
 
-Follow the step-by-step guide: **[Scheduling Claude Code Subagents](../subagents/scheduling-subagents.md)**
+Follow the step-by-step guide: **[Scheduling Claude Code Subagents](../subagents/scheduling-subagents.mdx)**
 
 The guide covers:
 
