@@ -3,7 +3,7 @@ title: Orchestrator-Workers
 description: A central orchestrator dynamically breaks down tasks and delegates to specialized workers for flexible handling of complex, unpredictable problems
 ---The **orchestrator-workers** pattern handles complex tasks where subtasks can't be defined in advance. A central orchestrator dynamically breaks down a task, delegates subtasks to specialized workers, and synthesizes their outputs into a final result.
 
-This pattern differs from [parallelization](parallelization.md) because it emphasizes **flexibility and adaptability** — the orchestrator determines what needs to be done at runtime rather than following a predefined plan.
+This pattern differs from [parallelization](../parallelization/) because it emphasizes **flexibility and adaptability** — the orchestrator determines what needs to be done at runtime rather than following a predefined plan.
 
 ## Why It Matters
 
@@ -68,8 +68,8 @@ If a new subtask emerges (e.g., evaluating environmental impact), the orchestrat
 
 ## Related
 
-- [Workflow Architecture Patterns Overview](index.md)
-- [Parallelization](parallelization.md) — similar structure but with predefined subtasks
-- [Autonomous Agents](autonomous-agents.md) — the next step in autonomy
-- [Agents](../../agentic-building-blocks/agents/index.md) — concepts for building AI agents
-- [Design Your AI Workflow](../../business-first-ai-framework/design.md)
+- [Workflow Architecture Patterns Overview](../)
+- [Parallelization](../parallelization/) — similar structure but with predefined subtasks
+- [Autonomous Agents](../autonomous-agents/) — the next step in autonomy
+- [Agents](../../../agentic-building-blocks/agents/) — concepts for building AI agents
+- [Design Your AI Workflow](../../../business-first-ai-framework/design/)

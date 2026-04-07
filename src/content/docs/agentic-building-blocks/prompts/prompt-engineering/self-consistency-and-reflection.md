@@ -138,11 +138,11 @@ Do all three approaches give the same answer? If not, explain the discrepancy.
 :::
 ## Related Techniques
 
-- [Chain-of-Thought](chain-of-thought.md) — explicit reasoning that pairs well with self-consistency
-- [Multi-Turn Conversation](multi-turn-conversation.md) — use follow-up turns for human-guided reflection
-- [Reframing Prompts](reframing-prompts.md) — restructure the problem to get a different angle
-- [Prompt Engineering Overview](index.md)
-- [Research use case](../../../use-cases/research/index.md) — self-consistency is especially valuable for research tasks where accuracy matters
+- [Chain-of-Thought](../chain-of-thought/) — explicit reasoning that pairs well with self-consistency
+- [Multi-Turn Conversation](../multi-turn-conversation/) — use follow-up turns for human-guided reflection
+- [Reframing Prompts](../reframing-prompts/) — restructure the problem to get a different angle
+- [Prompt Engineering Overview](../)
+- [Research use case](../../../../use-cases/research/) — self-consistency is especially valuable for research tasks where accuracy matters
 
 ## Further Reading
 

@@ -72,7 +72,7 @@ and Jane Smith (jane@company.com) will handle urgent requests.
 
 ## Zero-Shot Chain-of-Thought
 
-A powerful variation of zero-shot prompting is **Zero-Shot CoT** (Chain-of-Thought). Simply appending "Let's think step by step" to a zero-shot prompt can dramatically improve performance on reasoning tasks (Kojima et al. 2022). This bridges zero-shot prompting and [Chain-of-Thought](chain-of-thought.md) prompting without requiring any examples.
+A powerful variation of zero-shot prompting is **Zero-Shot CoT** (Chain-of-Thought). Simply appending "Let's think step by step" to a zero-shot prompt can dramatically improve performance on reasoning tasks (Kojima et al. 2022). This bridges zero-shot prompting and [Chain-of-Thought](../chain-of-thought/) prompting without requiring any examples.
 
 ```text
 A store has 45 apples. They sell 60% in the morning and half of the remainder
@@ -95,21 +95,21 @@ Claude's extended thinking mode essentially automates Zero-Shot CoT reasoning �
 
 **Problem:** Asking about your specific product, internal processes, or proprietary data without providing details. The model has no access to information it hasn't been trained on.
 
-**Fix:** Include necessary context directly in the prompt, or switch to [Contextual Prompting](contextual-prompting.md) for tasks that require background information.
+**Fix:** Include necessary context directly in the prompt, or switch to [Contextual Prompting](../contextual-prompting/) for tasks that require background information.
 :::
 :::caution[Complex tasks without structure]
 
 **Problem:** Asking for multi-part analysis in a single sentence leads to incomplete or disorganized output.
 
-**Fix:** Break the task into explicit steps or switch to [Chain-of-Thought](chain-of-thought.md) prompting for problems that require multi-step reasoning.
+**Fix:** Break the task into explicit steps or switch to [Chain-of-Thought](../chain-of-thought/) prompting for problems that require multi-step reasoning.
 :::
 ## Related Techniques
 
-- [Few-Shot Learning](few-shot-learning.md) — add examples when zero-shot isn't producing the right format or quality
-- [Direct Instruction](direct-instruction.md) — make your zero-shot prompts more explicit with imperative commands
-- [Chain-of-Thought](chain-of-thought.md) — add step-by-step reasoning for complex problems
-- [Prompt Engineering Overview](index.md)
-- [Content Creation use case](../../../use-cases/content-creation/index.md)
+- [Few-Shot Learning](../few-shot-learning/) — add examples when zero-shot isn't producing the right format or quality
+- [Direct Instruction](../direct-instruction/) — make your zero-shot prompts more explicit with imperative commands
+- [Chain-of-Thought](../chain-of-thought/) — add step-by-step reasoning for complex problems
+- [Prompt Engineering Overview](../)
+- [Content Creation use case](../../../../use-cases/content-creation/)
 
 ## Further Reading
 

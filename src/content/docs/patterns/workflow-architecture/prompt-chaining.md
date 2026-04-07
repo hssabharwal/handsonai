@@ -51,8 +51,8 @@ A company needs product launch copy translated into multiple languages with cons
 
 ## Related
 
-- [Workflow Architecture Patterns Overview](index.md)
-- [Augmented LLM](augmented-llm.md) — the foundation this pattern builds on
-- [Routing](routing.md) — another structured workflow for branching paths
-- [Evaluator-Optimizer](evaluator-optimizer.md) — iterative refinement with feedback loops
-- [Design Your AI Workflow](../../business-first-ai-framework/design.md)
+- [Workflow Architecture Patterns Overview](../)
+- [Augmented LLM](../augmented-llm/) — the foundation this pattern builds on
+- [Routing](../routing/) — another structured workflow for branching paths
+- [Evaluator-Optimizer](../evaluator-optimizer/) — iterative refinement with feedback loops
+- [Design Your AI Workflow](../../../business-first-ai-framework/design/)

@@ -7,7 +7,7 @@ description: The CLI building block — terminal-native interfaces for interacti
 
 A **CLI** (Command-Line Interface) is a terminal-native interface for interacting with AI. Instead of using a chat window in a browser or calling an API from code, you work with AI directly from your terminal — the same environment where you already run commands, manage files, and write code.
 
-Where [APIs](../api/index.md) let your code call AI and [SDKs](../sdk/index.md) let you build agent systems, CLIs let *you* interact with AI as a human (or script) from the command line. They combine the power of programmatic access with the immediacy of conversation.
+Where [APIs](../api/) let your code call AI and [SDKs](../sdk/) let you build agent systems, CLIs let *you* interact with AI as a human (or script) from the command line. They combine the power of programmatic access with the immediacy of conversation.
 
 ## Key Characteristics
 
@@ -37,7 +37,7 @@ Or running a CLI in headless mode as part of a CI pipeline — on every push, it
 
 | Tool | Provider | Platforms | Links |
 |------|----------|-----------|-------|
-| **Claude Code** | Anthropic | macOS, Linux, Windows (WSL) | [Getting started](../../platforms/claude/getting-started/index.md#3-install-claude-code) · <a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank">Docs</a> |
+| **Claude Code** | Anthropic | macOS, Linux, Windows (WSL) | [Getting started](../../platforms/claude/getting-started/#3-install-claude-code) · <a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank">Docs</a> |
 | **Codex CLI** | OpenAI | macOS, Linux, Windows (WSL) | <a href="https://github.com/openai/codex" target="_blank">GitHub</a> |
 | **Gemini CLI** | Google | macOS, Linux, Windows | <a href="https://github.com/google-gemini/gemini-cli" target="_blank">GitHub</a> |
 | **GitHub Copilot CLI** | Microsoft | macOS, Linux, Windows | <a href="https://docs.github.com/en/copilot/github-copilot-in-the-cli" target="_blank">Docs</a> |
@@ -84,14 +84,14 @@ CLI is the terminal-native interaction layer:
 
 ## Related
 
-- [Agentic Building Blocks](../index.md) — CLI in the context of all building blocks
-- [API](../api/index.md) — the programmatic interfaces that CLIs abstract over
-- [SDK](../sdk/index.md) — frameworks that power CLI agent capabilities
-- [MCP](../mcp/index.md) — the protocol that connects CLIs to external systems
-- [Agents](../agents/index.md) — the autonomous capabilities CLIs enable
-- [Skills](../skills/index.mdx) — reusable routines that extend CLI functionality
-- [AI Use Cases](../../use-cases/index.md) — what teams build with these blocks
-- [Coding Use Cases](../../use-cases/coding/index.md) — the primary use case for CLI tools
-- [Agentic Coding](../../use-cases/coding/agentic-coding.mdx) — the coding workflow that CLI tools enable
-- [Editor Setup](../../builder-setup/editor-setup.md) — AI coding extensions including Claude Code
-- [Platforms](../../platforms/index.md) — platform-specific CLI guides
+- [Agentic Building Blocks](../) — CLI in the context of all building blocks
+- [API](../api/) — the programmatic interfaces that CLIs abstract over
+- [SDK](../sdk/) — frameworks that power CLI agent capabilities
+- [MCP](../mcp/) — the protocol that connects CLIs to external systems
+- [Agents](../agents/) — the autonomous capabilities CLIs enable
+- [Skills](../skills/) — reusable routines that extend CLI functionality
+- [AI Use Cases](../../use-cases/) — what teams build with these blocks
+- [Coding Use Cases](../../use-cases/coding/) — the primary use case for CLI tools
+- [Agentic Coding](../../use-cases/coding/agentic-coding/) — the coding workflow that CLI tools enable
+- [Editor Setup](../../builder-setup/editor-setup/) — AI coding extensions including Claude Code
+- [Platforms](../../platforms/) — platform-specific CLI guides

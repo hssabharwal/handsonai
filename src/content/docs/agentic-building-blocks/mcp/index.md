@@ -53,10 +53,10 @@ MCP extends what agents, skills, and CLI tools can do by connecting them to exte
 
 ## Related
 
-- [Agentic Building Blocks](../index.md) — MCP in the context of all building blocks
-- [AI Use Cases](../../use-cases/index.md) — what teams build with MCP, organized by six primitives
-- [Automation Use Cases](../../use-cases/automation/index.md) — MCP enables the data connections that power automated workflows
-- [Agents](../agents/index.md) — autonomous systems that use MCP to interact with external tools
-- [Skills](../skills/index.mdx) — reusable routines that MCP can enhance with external data
-- [CLI](../cli/index.md) — terminal-native AI tools that use MCP for external system access
-- [Projects](../projects/index.md) — workspaces where MCP connectors are configured
+- [Agentic Building Blocks](../) — MCP in the context of all building blocks
+- [AI Use Cases](../../use-cases/) — what teams build with MCP, organized by six primitives
+- [Automation Use Cases](../../use-cases/automation/) — MCP enables the data connections that power automated workflows
+- [Agents](../agents/) — autonomous systems that use MCP to interact with external tools
+- [Skills](../skills/) — reusable routines that MCP can enhance with external data
+- [CLI](../cli/) — terminal-native AI tools that use MCP for external system access
+- [Projects](../projects/) — workspaces where MCP connectors are configured

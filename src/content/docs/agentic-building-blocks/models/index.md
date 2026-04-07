@@ -97,12 +97,12 @@ Model is the foundation — the engine everything else runs on:
 
 ## Related
 
-- [Agentic Building Blocks](../index.md) — Model in the context of all building blocks
-- [AI Use Cases](../../use-cases/index.md) — what teams build with these blocks, organized by six primitives
-- [Prompts](../prompts/index.md) — the instructions that steer the model
-- [Context](../context/index.md) — the knowledge that informs the model
-- [Projects](../projects/index.md) — workspaces that organize work for the model
-- [Skills](../skills/index.mdx) — reusable routines the model executes
-- [Agents](../agents/index.md) — autonomous systems that orchestrate the model
-- [MCP](../mcp/index.md) — connectors that extend the model's reach
-- [Platforms](../../platforms/index.md) — platform-specific model guides
+- [Agentic Building Blocks](../) — Model in the context of all building blocks
+- [AI Use Cases](../../use-cases/) — what teams build with these blocks, organized by six primitives
+- [Prompts](../prompts/) — the instructions that steer the model
+- [Context](../context/) — the knowledge that informs the model
+- [Projects](../projects/) — workspaces that organize work for the model
+- [Skills](../skills/) — reusable routines the model executes
+- [Agents](../agents/) — autonomous systems that orchestrate the model
+- [MCP](../mcp/) — connectors that extend the model's reach
+- [Platforms](../../platforms/) — platform-specific model guides

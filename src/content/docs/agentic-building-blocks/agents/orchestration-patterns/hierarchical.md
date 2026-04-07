@@ -3,7 +3,7 @@ title: Hierarchical (Coordinator / Manager)
 description: How a central coordinator agent decomposes complex tasks, delegates to specialist agents, and synthesizes their results into a coherent output.
 ---## What It Is
 
-The hierarchical pattern uses a central coordinator agent that dynamically decomposes a task into subtasks, delegates each subtask to the most appropriate specialist agent, collects their results, and synthesizes a final output. Unlike the [router](router.md) (which just classifies and dispatches), the coordinator actively plans, manages, and combines the work.
+The hierarchical pattern uses a central coordinator agent that dynamically decomposes a task into subtasks, delegates each subtask to the most appropriate specialist agent, collects their results, and synthesizes a final output. Unlike the [router](../router/) (which just classifies and dispatches), the coordinator actively plans, manages, and combines the work.
 
 Think of it like a project manager leading a cross-functional team. The PM breaks the project into work packages, assigns each to the right team member, tracks progress, handles dependencies, and assembles the final deliverable. The team members focus on execution; the PM handles coordination.
 
@@ -75,20 +75,20 @@ A manager asks: "Write a competitive analysis of our three main competitors."
 
 ## When NOT to Use It
 
-- Subtasks are known in advance and don't change — use [Sequential](sequential.md) or [Parallel](parallel.md)
-- The task is just classification and dispatch — use [Router](router.md) instead
-- The coordinator becomes a bottleneck processing every message — consider [Handoff](handoff.md) or [Decentralized](decentralized.md)
+- Subtasks are known in advance and don't change — use [Sequential](../sequential/) or [Parallel](../parallel/)
+- The task is just classification and dispatch — use [Router](../router/) instead
+- The coordinator becomes a bottleneck processing every message — consider [Handoff](../handoff/) or [Decentralized](../decentralized/)
 - The overhead of coordinator reasoning exceeds the benefit of delegation
 
 ## Related Patterns
 
-- [Router](router.md) — classifies and dispatches but doesn't plan or synthesize
-- [Sequential](sequential.md) — fixed pipeline; hierarchical is a dynamic pipeline
-- [Parallel](parallel.md) — the coordinator often fans out subtasks in parallel
-- [Handoff](handoff.md) — peer-to-peer transfers instead of hub-and-spoke delegation
-- [Planning](../capability-patterns/planning.md) — the capability pattern the coordinator uses internally
-- [Orchestrator-Workers](../../../patterns/workflow-architecture/orchestrator-workers.md) — the workflow architecture equivalent
-- [Orchestration Patterns Overview](index.md)
+- [Router](../router/) — classifies and dispatches but doesn't plan or synthesize
+- [Sequential](../sequential/) — fixed pipeline; hierarchical is a dynamic pipeline
+- [Parallel](../parallel/) — the coordinator often fans out subtasks in parallel
+- [Handoff](../handoff/) — peer-to-peer transfers instead of hub-and-spoke delegation
+- [Planning](../../capability-patterns/planning/) — the capability pattern the coordinator uses internally
+- [Orchestrator-Workers](../../../../patterns/workflow-architecture/orchestrator-workers/) — the workflow architecture equivalent
+- [Orchestration Patterns Overview](../)
 
 ## Further Reading
 

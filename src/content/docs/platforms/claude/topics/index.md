@@ -8,10 +8,10 @@ description: Documentation and key features for Anthropic's Claude models, tool 
 *Topics will be listed here as they are added.*
 
 <!-- Example format:
-- [Models Overview](./models.md)
-- [Tool Use](./tool-use.md)
-- [System Prompts](./system-prompts.md)
-- [Artifacts](./artifacts.md)
+- [Models Overview](./models/)
+- [Tool Use](./tool-use/)
+- [System Prompts](./system-prompts/)
+- [Artifacts](./artifacts/)
 -->
 
 ## Key Features

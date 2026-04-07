@@ -11,5 +11,5 @@ description: Questions specific to Google's Gemini models, Vertex AI, and API fe
 
 ## Related Resources
 
-- [Gemini Topics](../topics/README.md)
-- [Agentic Building Blocks](../../../agentic-building-blocks/index.md)
+- [Gemini Topics](../topics/)
+- [Agentic Building Blocks](../../../agentic-building-blocks/)

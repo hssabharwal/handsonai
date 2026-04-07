@@ -101,11 +101,11 @@ burning anyone out?
 :::
 ## Related Techniques
 
-- [Role Prompting](role-prompting.md) — perspective shifts are a form of reframing through a specific persona
-- [Multi-Turn Conversation](multi-turn-conversation.md) — iterative refinement across turns
-- [Self-Consistency and Reflection](self-consistency-and-reflection.md) — related approach for evaluating multiple framings
-- [Prompt Engineering Overview](index.md)
-- [Ideation and Strategy use case](../../../use-cases/ideation-and-strategy/index.md) — reframing is especially powerful for brainstorming and strategic exploration
+- [Role Prompting](../role-prompting/) — perspective shifts are a form of reframing through a specific persona
+- [Multi-Turn Conversation](../multi-turn-conversation/) — iterative refinement across turns
+- [Self-Consistency and Reflection](../self-consistency-and-reflection/) — related approach for evaluating multiple framings
+- [Prompt Engineering Overview](../)
+- [Ideation and Strategy use case](../../../../use-cases/ideation-and-strategy/) — reframing is especially powerful for brainstorming and strategic exploration
 
 ## Further Reading
 

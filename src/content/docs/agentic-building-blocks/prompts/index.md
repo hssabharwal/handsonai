@@ -25,7 +25,7 @@ A prompt by itself is sufficient when:
 - The output format is simple or you can describe it inline
 - You don't need persistence across conversations
 
-When you find yourself writing the same prompt repeatedly or needing to attach the same context every time, that's a signal to consider other building blocks — [Context](../context/index.md), [Projects](../projects/index.md), or [Skills](../skills/index.mdx).
+When you find yourself writing the same prompt repeatedly or needing to attach the same context every time, that's a signal to consider other building blocks — [Context](../context/), [Projects](../projects/), or [Skills](../skills/).
 
 ## Anatomy of an Effective Prompt
 
@@ -53,23 +53,23 @@ Not every prompt needs all four elements. A simple question needs only the task.
 
 **Vague instructions** — "Help me with marketing" gives the AI nothing to anchor on. Be specific: "Draft a 200-word LinkedIn post announcing our Q3 product update, targeting engineering managers."
 
-**Overloading a single prompt** — Asking the AI to research, analyze, write, format, and review in one prompt leads to shallow results. Break complex work into sequential prompts or use a [Skill](../skills/index.mdx).
+**Overloading a single prompt** — Asking the AI to research, analyze, write, format, and review in one prompt leads to shallow results. Break complex work into sequential prompts or use a [Skill](../skills/).
 
 **Ignoring format guidance** — If you don't specify output structure, you get whatever the model defaults to. State what you want: bullet points, a table, a specific word count, or a particular template.
 
-**Repeating yourself every conversation** — If you're pasting the same preamble into every chat, you need a [Project](../projects/index.md) with custom instructions instead.
+**Repeating yourself every conversation** — If you're pasting the same preamble into every chat, you need a [Project](../projects/) with custom instructions instead.
 
 ## Guides
 
 | Guide | Description |
 |-------|-------------|
-| [Prompt Engineering](prompt-engineering/index.md) | Core techniques — context windows, system prompts, few-shot learning, chain-of-thought |
-| [Project Instructions](../projects/workspace-instructions-meta-prompt.md) | When your prompts evolve into standing instructions for a project workspace |
+| [Prompt Engineering](prompt-engineering/) | Core techniques — context windows, system prompts, few-shot learning, chain-of-thought |
+| [Project Instructions](../projects/workspace-instructions-meta-prompt/) | When your prompts evolve into standing instructions for a project workspace |
 
 ## Related
 
-- [Context Engineering](../../ai-engineering/context-engineering.md) — the broader discipline that prompt engineering is part of
-- [Agentic Building Blocks](../index.md) — Prompts in the context of all building blocks
-- [AI Use Cases](../../use-cases/index.md) — see how prompts are used across content creation, research, coding, data analysis, ideation, and automation
-- [Projects](../projects/index.md) — where prompts become persistent custom instructions
-- [Patterns](../../patterns/index.md) — reusable prompt structures
+- [Context Engineering](../../ai-engineering/context-engineering/) — the broader discipline that prompt engineering is part of
+- [Agentic Building Blocks](../) — Prompts in the context of all building blocks
+- [AI Use Cases](../../use-cases/) — see how prompts are used across content creation, research, coding, data analysis, ideation, and automation
+- [Projects](../projects/) — where prompts become persistent custom instructions
+- [Patterns](../../patterns/) — reusable prompt structures

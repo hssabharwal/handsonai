@@ -127,7 +127,7 @@ MCP (Model Context Protocol) lets Claude read from and write to external tools �
 
 Connect the Hands-on AI Playbook MCP server for reference material:
 
-[→ MCP Server Connection Guide](../../../mcp-server/index.md)
+[→ MCP Server Connection Guide](../../../mcp-server/)
 
 **Official docs:**
 
@@ -146,7 +146,7 @@ If you only need Claude for conversations and Claude Code, you're done after Par
 :::
 ### 1. IDE Extension
 
-Use Claude Code inside VS Code or Cursor. See [AI Code Editor Setup](../../../builder-setup/editor-setup.md#claude-code) for installation instructions.
+Use Claude Code inside VS Code or Cursor. See [AI Code Editor Setup](../../../builder-setup/editor-setup/#claude-code) for installation instructions.
 
 ---
 

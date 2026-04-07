@@ -8,10 +8,10 @@ description: Documentation and key features for OpenAI GPT models, Assistants AP
 *Topics will be listed here as they are added.*
 
 <!-- Example format:
-- [Models Overview](./models.md)
-- [Assistants API](./assistants-api.md)
-- [Function Calling](./function-calling.md)
-- [Structured Outputs](./structured-outputs.md)
+- [Models Overview](./models/)
+- [Assistants API](./assistants-api/)
+- [Function Calling](./function-calling/)
+- [Structured Outputs](./structured-outputs/)
 -->
 
 ## Key Features

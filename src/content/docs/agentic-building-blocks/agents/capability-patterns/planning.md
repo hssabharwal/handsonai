@@ -11,7 +11,7 @@ This is what separates an agent from a simple chatbot. A chatbot responds to a s
 
 Real-world tasks are rarely single-step. Processing an exchange requires verifying the order, checking return eligibility, confirming inventory, processing payment, and sending confirmation. A planning agent handles this entire workflow without requiring the user to specify each step.
 
-Andrew Ng has noted that planning is the least mature of the four core agentic patterns — it works well for well-defined workflows but remains challenging for open-ended, ambiguous goals. This makes it both the most powerful pattern (when it works) and the one that most benefits from [guardrails](guardrails.md) and [human oversight](human-in-the-loop.md).
+Andrew Ng has noted that planning is the least mature of the four core agentic patterns — it works well for well-defined workflows but remains challenging for open-ended, ambiguous goals. This makes it both the most powerful pattern (when it works) and the one that most benefits from [guardrails](../guardrails/) and [human oversight](../human-in-the-loop/).
 
 ## How It Works
 
@@ -27,7 +27,7 @@ Andrew Ng has noted that planning is the least mature of the four core agentic p
 
 1. **Receive goal** — The agent receives a high-level objective.
 2. **Decompose** — The agent breaks the goal into an ordered sequence of sub-tasks.
-3. **Execute** — The agent works through each sub-task, using [tool calls](tool-use.md) and [reflection](reflection.md) as needed.
+3. **Execute** — The agent works through each sub-task, using [tool calls](../tool-use/) and [reflection](../reflection/) as needed.
 4. **Monitor** — After each step, the agent checks whether the result changes the remaining plan.
 5. **Replan** — If a step fails or produces unexpected results, the agent revises the remaining plan rather than blindly continuing.
 
@@ -78,11 +78,11 @@ Advanced planning approaches include:
 
 ## Related Patterns
 
-- [Tool Use](tool-use.md) — Planning determines which tools to call and in what order
-- [Reflection](reflection.md) — The agent can reflect on its plan before and during execution
-- [Multi-Agent Collaboration](multi-agent-collaboration.md) — A planning agent can delegate sub-tasks to specialized agents
-- [Human-in-the-Loop](human-in-the-loop.md) — Humans can approve the plan before execution begins
-- [Agent Capability Patterns](index.md)
+- [Tool Use](../tool-use/) — Planning determines which tools to call and in what order
+- [Reflection](../reflection/) — The agent can reflect on its plan before and during execution
+- [Multi-Agent Collaboration](../multi-agent-collaboration/) — A planning agent can delegate sub-tasks to specialized agents
+- [Human-in-the-Loop](../human-in-the-loop/) — Humans can approve the plan before execution begins
+- [Agent Capability Patterns](../)
 
 ## Further Reading
 

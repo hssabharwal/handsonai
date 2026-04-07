@@ -20,8 +20,8 @@ This guide walks you through creating a GitHub account, creating your first repo
 ## Prerequisites
 
 - Email address for GitHub account
-- Cursor or VS Code installed (see [Editor Setup Guide](editor-setup.md))
-- Git installed (see [Git Installation Guide](git-install.md))
+- Cursor or VS Code installed (see [Editor Setup Guide](../editor-setup/))
+- Git installed (see [Git Installation Guide](../git-install/))
 
 ## 1. Create a GitHub Account
 

@@ -14,7 +14,7 @@ Out of the box, Claude is a generalist. It can write, research, and analyze — 
 :::tip[Looking for non-Claude platforms?]
 This page covers the Claude ecosystem (Claude Code, Claude.ai, Cowork, API).
 For Cursor, Codex CLI, Gemini CLI, VS Code Copilot, or any LLM, see
-[How to Add Skills to Your Platform](../../agentic-building-blocks/skills/index.mdx#how-to-add-skills-to-your-platform).
+[How to Add Skills to Your Platform](../../../agentic-building-blocks/skills/#how-to-add-skills-to-your-platform).
 :::
 ## What's Inside a Plugin
 
@@ -41,7 +41,7 @@ The plugins in this marketplace currently focus on **agents** and **skills**. As
 
 Plugins are plain-text Markdown files — there's no compiled code or hidden logic. Every agent and skill in this marketplace is fully readable, so you can review exactly what instructions Claude receives before you install anything.
 
-**Review the source:** All plugin files are open source in the [handsonai-plugins GitHub repository](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins). Each plugin's detail page (linked from the [marketplace](index.md)) includes the full list of agents and skills with descriptions of what they do.
+**Review the source:** All plugin files are open source in the [handsonai-plugins GitHub repository](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins). Each plugin's detail page (linked from the [marketplace](../)) includes the full list of agents and skills with descriptions of what they do.
 
 :::caution[Anthropic's guidance on third-party plugins]
 Anthropic recommends reviewing any plugin before installing it. From the official [plugin documentation](https://code.claude.com/docs/en/discover-plugins): *"Make sure you trust a plugin before installing it. Anthropic does not control what MCP servers, files, or other software are included in plugins and cannot verify that they work as intended."*
@@ -52,7 +52,7 @@ The Hands-on AI plugins contain only Markdown instruction files — no MCP serve
 
 ### Prerequisites
 
-- **Claude Code** installed and working ([Getting Started with Claude](../../platforms/claude/getting-started/index.md#3-install-claude-code))
+- **Claude Code** installed and working ([Getting Started with Claude](../../../platforms/claude/getting-started/#3-install-claude-code))
 - An active **Claude Pro, Max, Team, or Enterprise** subscription (plugins are not available on the free plan)
 
 ### Step 1: Add the Marketplace
@@ -72,7 +72,7 @@ You can see which marketplaces you've added with `/plugin marketplace list`.
 :::
 ### Step 2: Install a Plugin
 
-Browse the [Plugin Marketplace](index.md) to find a plugin that matches your workflow. Each plugin lists the agents and skills it includes.
+Browse the [Plugin Marketplace](../) to find a plugin that matches your workflow. Each plugin lists the agents and skills it includes.
 
 To install a plugin, type the install command shown on the marketplace page in your Claude Code session:
 
@@ -134,10 +134,10 @@ The format is `/plugin-name:command` (the command may differ from the skill dire
 | `ai-registry` | `/ai-registry:workflow-sop` | Writes Standard Operating Procedure docs for workflows |
 | `business-first-ai` | `/business-first-ai:edit-article` | Loads HBR editorial criteria for article editing |
 
-Each plugin on the [marketplace page](index.md) includes a recommended workflow and example prompts so you know exactly what to ask.
+Each plugin on the [marketplace page](../) includes a recommended workflow and example prompts so you know exactly what to ask.
 
 :::note
-Skills from the `ai-registry` plugin require the [Notion MCP connector](../../builder-setup/notion-registry-setup.md) to be configured. Without it, Claude can follow the naming conventions and draft the output, but cannot read from or write to Notion.
+Skills from the `ai-registry` plugin require the [Notion MCP connector](../../../builder-setup/notion-registry-setup/) to be configured. Without it, Claude can follow the naming conventions and draft the output, but cannot read from or write to Notion.
 :::
 ### Checking what's installed
 
@@ -298,7 +298,7 @@ Both support the same plugin format and skill files. If you're not comfortable w
 
 ## Download from GitHub
 
-Every file is plain-text Markdown — no compiled code, no special format. You don't need Claude Code or plugins to use them. Download skill folders from GitHub and place them in your platform's skill directory. See [How to Add Skills to Your Platform](../../agentic-building-blocks/skills/index.mdx#how-to-add-skills-to-your-platform) for step-by-step instructions for Claude Code, Cursor, Codex CLI, Gemini CLI, and VS Code Copilot.
+Every file is plain-text Markdown — no compiled code, no special format. You don't need Claude Code or plugins to use them. Download skill folders from GitHub and place them in your platform's skill directory. See [How to Add Skills to Your Platform](../../../agentic-building-blocks/skills/#how-to-add-skills-to-your-platform) for step-by-step instructions for Claude Code, Cursor, Codex CLI, Gemini CLI, and VS Code Copilot.
 
 GitHub [Browse all skills on GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins)
 
@@ -453,7 +453,7 @@ Check the plugin name is spelled correctly and includes the `@handsonai` suffix:
 
 ### "Permission denied" or authentication errors
 
-The marketplace is public. If you see authentication errors, check your GitHub CLI configuration ([GitHub Setup guide](../../builder-setup/github-setup.md)).
+The marketplace is public. If you see authentication errors, check your GitHub CLI configuration ([GitHub Setup guide](../../../builder-setup/github-setup/)).
 
 Run this in your **terminal** (not inside Claude Code):
 
@@ -494,7 +494,7 @@ If you've added the marketplace, skill files are on your machine at:
 :::tip[Not sure which plugin a skill belongs to?]
 Run `/plugin list` in Claude Code to see all installed plugins with their skills listed.
 :::
-You can also browse skill source files on GitHub. The [Plugin Marketplace](index.md) links each skill name directly to its source folder, or use this URL pattern:
+You can also browse skill source files on GitHub. The [Plugin Marketplace](../) links each skill name directly to its source folder, or use this URL pattern:
 
 ```
 https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins/<plugin-name>/skills/<skill-name>/
@@ -502,5 +502,5 @@ https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins/<plugin-name
 
 ## Next Steps
 
-- [Plugin Marketplace](index.md) — browse available plugins and see what each one does
-- [Notion Registry setup](../../builder-setup/notion-registry-setup.md) — required for `ai-registry` skills that save to Notion
+- [Plugin Marketplace](../) — browse available plugins and see what each one does
+- [Notion Registry setup](../../../builder-setup/notion-registry-setup/) — required for `ai-registry` skills that save to Notion

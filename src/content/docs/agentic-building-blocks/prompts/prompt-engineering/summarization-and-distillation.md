@@ -126,11 +126,11 @@ Label each version clearly.
 :::
 ## Related Techniques
 
-- [Output Formatting](output-formatting.md) — structure summaries for readability
-- [Direct Instruction](direct-instruction.md) — clear instructions improve summary quality
-- [Chain-of-Thought](chain-of-thought.md) — reasoning through what matters before summarizing
-- [Prompt Engineering Overview](index.md)
-- [Research use case](../../../use-cases/research/index.md) — summarization is a core research workflow
+- [Output Formatting](../output-formatting/) — structure summaries for readability
+- [Direct Instruction](../direct-instruction/) — clear instructions improve summary quality
+- [Chain-of-Thought](../chain-of-thought/) — reasoning through what matters before summarizing
+- [Prompt Engineering Overview](../)
+- [Research use case](../../../../use-cases/research/) — summarization is a core research workflow
 
 ## Further Reading
 

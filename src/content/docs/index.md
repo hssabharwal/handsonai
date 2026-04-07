@@ -8,7 +8,7 @@ description: Curated AI knowledge for builders. Apply AI faster. Accelerate busi
 #
 banner:
    content: '⚡ <strong>Agentic AI for Leaders</strong> — next cohort starts Monday April 6th. <a href="https://maven.com/james-gray/hands-on-ai-for-leaders">Reserve your spot &rarr;</a>'
----*Curated by [James Gray](about.md)*
+---*Curated by [James Gray](about/)*
 
 Built for **leaders, professionals, entrepreneurs, and founders** at the intersection of people, business, and technology. No technical background required — just a willingness to get hands-on with AI and start creating real impact.
 
@@ -16,26 +16,26 @@ Practical guides, patterns, ready-made tools, and direct answers to move you fro
 
 :::tip[New here? Start here]
 
-**Begin with the [Business-First AI Framework](business-first-ai-framework/index.md)** — a seven-step method for applying AI to your work: Analyze, Deconstruct, Design, Build, Test, Run, Improve. Then explore [Building Blocks](agentic-building-blocks/index.md), [Use Cases](use-cases/index.md), or [Tools & Resources](use-the-playbook/index.md).
+**Begin with the [Business-First AI Framework](business-first-ai-framework/)** — a seven-step method for applying AI to your work: Analyze, Deconstruct, Design, Build, Test, Run, Improve. Then explore [Building Blocks](agentic-building-blocks/), [Use Cases](use-cases/), or [Tools & Resources](use-the-playbook/).
 
-**Use the playbook where you work** — [connect the MCP server](mcp-server/index.md) to get instant answers inside Claude, ChatGPT, Cursor, or any MCP-compatible tool.
+**Use the playbook where you work** — [connect the MCP server](mcp-server/) to get instant answers inside Claude, ChatGPT, Cursor, or any MCP-compatible tool.
 
-**Learn with James** — explore [Agentic AI for Leaders](courses/leaders/index.md) or [Claude for Builders](courses/builders/index.md) to go from curious to capable in weeks.
+**Learn with James** — explore [Agentic AI for Leaders](courses/leaders/) or [Claude for Builders](courses/builders/) to go from curious to capable in weeks.
 :::
 
 ---
 
-> See [what others have built](what-people-built.md) with the playbook.
+> See [what others have built](what-people-built/) with the playbook.
 
 **If something here saved you time, sparked an idea, or helped you move faster — I'd love to hear about it.**
 
-[Share what you built](what-people-built.md#share-what-you-built)
+[Share what you built](what-people-built/#share-what-you-built)
 [Share on LinkedIn LinkedIn](https://www.linkedin.com/feed/?shareActive=true&text=I%27ve%20been%20using%20the%20Hands-on%20AI%20Playbook%20by%20%40James%20Gray%20and%20it%20helped%20me%20%5Bshare%20what%20helped%5D.%20Check%20it%20out%20%E2%86%92%20handsonai.info)
 
-See [What People Built](what-people-built.md) with the playbook.
+See [What People Built](what-people-built/) with the playbook.
 
 ## About
 
-I'm James Gray — [read more about me and the story behind this playbook](about.md).
+I'm James Gray — [read more about me and the story behind this playbook](about/).
 
-This is an open-source project. See [Contributing Guidelines](CONTRIBUTING.md) to add content or suggest improvements.
+This is an open-source project. See [Contributing Guidelines](CONTRIBUTING/) to add content or suggest improvements.

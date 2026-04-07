@@ -118,11 +118,11 @@ using the same style attributes.
 :::
 ## Related Techniques
 
-- [Output Formatting](output-formatting.md) — structure and layout complement style
-- [Role Prompting](role-prompting.md) — roles implicitly bundle style attributes; unbundling makes them explicit
-- [Few-Shot Learning](few-shot-learning.md) — show the desired style by example instead of describing it
-- [Prompt Engineering Overview](index.md)
-- [Content Creation use case](../../../use-cases/content-creation/index.md) — style unbundling is essential for professional content workflows
+- [Output Formatting](../output-formatting/) — structure and layout complement style
+- [Role Prompting](../role-prompting/) — roles implicitly bundle style attributes; unbundling makes them explicit
+- [Few-Shot Learning](../few-shot-learning/) — show the desired style by example instead of describing it
+- [Prompt Engineering Overview](../)
+- [Content Creation use case](../../../../use-cases/content-creation/) — style unbundling is essential for professional content workflows
 
 ## Further Reading
 

@@ -91,7 +91,7 @@ Requires a **Claude Pro, Max, or Team** subscription. The Claude Code extension 
 3. Click **Install**
 4. Follow any sign-in prompts
 
-The Claude Code extension also includes an integrated terminal panel. See [Getting Started with Claude](../platforms/claude/getting-started/index.md#3-install-claude-code) for Claude Code CLI setup.
+The Claude Code extension also includes an integrated terminal panel. See [Getting Started with Claude](../../platforms/claude/getting-started/#3-install-claude-code) for Claude Code CLI setup.
 
 ### OpenAI Codex
 
@@ -145,8 +145,8 @@ If you're stuck, paste this into ChatGPT, Claude, or Gemini:
 </details>
 ## Next Steps
 
-- Set up Git (see [Git Installation Guide](git-install.md))
-- Set up your AI platform (see [Platforms](../platforms/index.md))
+- Set up Git (see [Git Installation Guide](../git-install/))
+- Set up your AI platform (see [Platforms](../../platforms/))
 
 ## Resources
 

@@ -110,8 +110,8 @@ If you're stuck, paste this into ChatGPT, Claude, or Gemini:
 </details>
 ## Next Steps
 
-- Set up your GitHub account (see [GitHub Setup Guide](github-setup.md))
-- Set up your AI platform (see [Platforms](../platforms/index.md))
+- Set up your GitHub account (see [GitHub Setup Guide](../github-setup/))
+- Set up your AI platform (see [Platforms](../../platforms/))
 
 ## Resources
 

@@ -5,19 +5,19 @@ description: Generate platform-appropriate artifacts from your approved AI Build
 
 import { Tabs, TabItem } from '@astrojs/starlight/components';
 
-> **Part of:** [Business-First AI Framework](../index.md)
+> **Part of:** [Business-First AI Framework](../)
 
 ## Where You Are
 
-You've just finished [Design (Step 3)](../design.md). You should have:
+You've just finished [Design (Step 3)](../design/). You should have:
 
 - **AI Building Block Spec** (`[name]-building-block-spec.md`) — your approved blueprint with architecture approach, autonomy level, orchestration mechanism, step classifications, skill candidates, agent blueprints, and implementation order
 
-If you're returning from [Test (Step 5)](../test.md) to fix issues, you may also have test results telling you which building block needs adjustment.
+If you're returning from [Test (Step 5)](../test/) to fix issues, you may also have test results telling you which building block needs adjustment.
 
 ## Prepare Context
 
-Before the model generates any artifacts, you need to resolve the context your workflow depends on. The **Context Shopping List** (from [Deconstruct](../deconstruct/index.md)) and the **Data Readiness Summary** (from Design) identify every document, file, and reference material the workflow needs — and flag which ones are available, which need to be created, and which need formatting.
+Before the model generates any artifacts, you need to resolve the context your workflow depends on. The **Context Shopping List** (from [Deconstruct](../deconstruct/)) and the **Data Readiness Summary** (from Design) identify every document, file, and reference material the workflow needs — and flag which ones are available, which need to be created, and which need formatting.
 
 Build begins by working through this list:
 
@@ -110,14 +110,14 @@ The model handles artifact generation, but several things require your involveme
 
 As you build, two background practices keep your work organized and recoverable:
 
-**Register building blocks in your AI Registry.** Each time you create a skill, prompt, or agent, register it in your [AI Registry](../../use-the-playbook/build/ai-registry.mdx) Notion database — name, type, description, and which workflow it belongs to. If you registered the workflow during Deconstruct, these building blocks link back to it. This gives you a searchable inventory of everything you've built, and makes it easy for your team to discover and reuse building blocks across workflows.
+**Register building blocks in your AI Registry.** Each time you create a skill, prompt, or agent, register it in your [AI Registry](../../use-the-playbook/build/ai-registry/) Notion database — name, type, description, and which workflow it belongs to. If you registered the workflow during Deconstruct, these building blocks link back to it. This gives you a searchable inventory of everything you've built, and makes it easy for your team to discover and reuse building blocks across workflows.
 
 **Commit source files to GitHub.** The `.md` files for your skills, agents, and prompts are source code — they should live in version control, not just on your local machine. After creating or updating a building block, commit it to your GitHub repository. This gives you a history of changes, makes it easy to share with collaborators, and protects against losing work.
 
 These aren't separate steps — they're part of the rhythm of building. Each time you finish a building block: **register it, commit it.**
 
 :::tip[Need to set up these tools?]
-The [Builder Tools Setup](../../builder-setup/index.md) guide walks you through everything you need — an AI code editor ([Step 2](../../builder-setup/editor-setup.md)), Git ([Step 3](../../builder-setup/git-install.md)), GitHub ([Step 4](../../builder-setup/github-setup.md)), and the AI Registry ([Step 6](../../builder-setup/notion-registry-setup.md)). If you haven't set these up yet, that guide has you covered.
+The [Builder Tools Setup](../../builder-setup/) guide walks you through everything you need — an AI code editor ([Step 2](../../builder-setup/editor-setup/)), Git ([Step 3](../../builder-setup/git-install/)), GitHub ([Step 4](../../builder-setup/github-setup/)), and the AI Registry ([Step 6](../../builder-setup/notion-registry-setup/)). If you haven't set these up yet, that guide has you covered.
 :::
 ## What This Produces
 
@@ -133,7 +133,7 @@ Many workflows stay at the prompt-plus-context level permanently — pasted into
 
 ## How to Use This
 
-This step is facilitated by the **`build`** Business-First AI Framework skill. See [Get the Skills](../skills.mdx) for installation instructions across all supported platforms.
+This step is facilitated by the **`build`** Business-First AI Framework skill. See [Get the Skills](../skills/) for installation instructions across all supported platforms.
 
 **Start with this prompt:**
 
@@ -145,11 +145,11 @@ Upload or reference your Building Block Spec file (`[workflow-name]-building-blo
 
 ## Next Step
 
-Once your artifacts are built, move to **[Step 5: Test](../test.md)** to run structured evaluations before deploying.
+Once your artifacts are built, move to **[Step 5: Test](../test/)** to run structured evaluations before deploying.
 
 ## Related
 
-- [Design Your AI Workflow](../design.md) — the step before Build
-- [Test](../test.md) — the step after Build
-- [Agentic Building Blocks](../../agentic-building-blocks/index.md) — deep dives on individual building blocks
-- [Agents & Skills](../../use-the-playbook/build/index.md) — browse all available agents, skills, and prompts
+- [Design Your AI Workflow](../design/) — the step before Build
+- [Test](../test/) — the step after Build
+- [Agentic Building Blocks](../../agentic-building-blocks/) — deep dives on individual building blocks
+- [Agents & Skills](../../use-the-playbook/build/) — browse all available agents, skills, and prompts

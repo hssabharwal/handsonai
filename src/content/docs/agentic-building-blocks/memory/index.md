@@ -7,7 +7,7 @@ description: The Memory building block — accumulated knowledge from past inter
 
 **Memory** is accumulated knowledge from past interactions — preferences, decisions, facts, and patterns that the AI retains and retrieves when relevant. Memory makes AI persistent rather than stateless: instead of starting from scratch every conversation, the AI improves over time.
 
-The key distinction from [Context](../context/index.md): **Context is knowledge you provide; Memory is knowledge the system accumulates.** You curate context by uploading files, pasting examples, or configuring project knowledge. Memory is managed by the AI itself — it decides what to remember based on your interactions.
+The key distinction from [Context](../context/): **Context is knowledge you provide; Memory is knowledge the system accumulates.** You curate context by uploading files, pasting examples, or configuring project knowledge. Memory is managed by the AI itself — it decides what to remember based on your interactions.
 
 ## Key Characteristics
 
@@ -25,7 +25,7 @@ Use memory when:
 - The AI needs to learn from past interactions — building on previous decisions and patterns
 - Continuity matters — picking up where you left off without re-explaining
 
-When memory isn't available or appropriate, use [Context](../context/index.md) to provide knowledge explicitly for a single conversation or project.
+When memory isn't available or appropriate, use [Context](../context/) to provide knowledge explicitly for a single conversation or project.
 
 ## Platform Implementations
 
@@ -51,7 +51,7 @@ Information stored outside the context window that persists across conversations
 - **Procedural memory** — Learned workflows and procedures ("When writing code for this project, always use TypeScript and follow the existing test patterns")
 
 :::tip[Implementation deep-dive]
-For details on how agents implement memory systems — retrieval mechanisms, storage architectures, and design patterns — see the [Memory capability pattern](../agents/capability-patterns/memory.md).
+For details on how agents implement memory systems — retrieval mechanisms, storage architectures, and design patterns — see the [Memory capability pattern](../agents/capability-patterns/memory/).
 :::
 ## Memory vs. Context
 
@@ -65,14 +65,14 @@ For details on how agents implement memory systems — retrieval mechanisms, sto
 
 ## Relationship to Other Blocks
 
-- **[Context](../context/index.md)** provides knowledge explicitly; Memory accumulates it implicitly
-- **[Projects](../projects/index.md)** organize context persistently; Memory adds learned persistence on top — the AI remembers not just what's in the project, but what it has learned from working with you in it
-- **[Agents](../agents/index.md)** use Memory to improve across runs — an agent that remembers past decisions makes better decisions next time
-- **[Skills](../skills/index.mdx)** benefit from Memory — remembered preferences shape skill outputs without you specifying them each time
+- **[Context](../context/)** provides knowledge explicitly; Memory accumulates it implicitly
+- **[Projects](../projects/)** organize context persistently; Memory adds learned persistence on top — the AI remembers not just what's in the project, but what it has learned from working with you in it
+- **[Agents](../agents/)** use Memory to improve across runs — an agent that remembers past decisions makes better decisions next time
+- **[Skills](../skills/)** benefit from Memory — remembered preferences shape skill outputs without you specifying them each time
 
 ## Related
 
-- [Memory capability pattern](../agents/capability-patterns/memory.md) — implementation deep-dive: how agents store and retrieve memory (episodic, semantic, procedural)
-- [Context](../context/index.md) — the closest sibling building block (user-provided knowledge)
-- [Projects](../projects/index.md) — persistent workspaces that organize context and benefit from memory
-- [Agent capability patterns](../agents/capability-patterns/index.md) — patterns agents use, including memory
+- [Memory capability pattern](../agents/capability-patterns/memory/) — implementation deep-dive: how agents store and retrieve memory (episodic, semantic, procedural)
+- [Context](../context/) — the closest sibling building block (user-provided knowledge)
+- [Projects](../projects/) — persistent workspaces that organize context and benefit from memory
+- [Agent capability patterns](../agents/capability-patterns/) — patterns agents use, including memory

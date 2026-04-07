@@ -13,11 +13,11 @@ title: "AI Workflow Design Matrix, Building Block Comparison, and Framework Term
 
 ## AI Workflow Design Matrix
 
-The [AI Workflow Design Matrix](../../business-first-ai-framework/workflow-design-matrix.md) is a new reference page that combines two dimensions — **Autonomy** (Deterministic, Guided, Autonomous) and **Human Involvement** (Augmented, Automated) — into a 3x2 matrix of six workflow archetypes. Each cell includes a description, real-world example, and link to the corresponding worked example. Use it to classify any AI workflow and find the right implementation pattern.
+The [AI Workflow Design Matrix](../../business-first-ai-framework/workflow-design-matrix/) is a new reference page that combines two dimensions — **Autonomy** (Deterministic, Guided, Autonomous) and **Human Involvement** (Augmented, Automated) — into a 3x2 matrix of six workflow archetypes. Each cell includes a description, real-world example, and link to the corresponding worked example. Use it to classify any AI workflow and find the right implementation pattern.
 
 ## Building Block Comparison Matrix
 
-The new [Building Block Comparison Matrix](../../agentic-building-blocks/comparison.md) is a side-by-side reference for all building blocks — what each one does, when to use it, and how they combine. Useful when you know what you want AI to do but aren't sure which building block fits.
+The new [Building Block Comparison Matrix](../../agentic-building-blocks/comparison/) is a side-by-side reference for all building blocks — what each one does, when to use it, and how they combine. Useful when you know what you want AI to do but aren't sure which building block fits.
 
 ## Framework Terminology Update
 
@@ -26,4 +26,4 @@ The Business-First AI Framework now uses a cleaner two-dimension vocabulary acro
 - **Autonomy**: Deterministic → Guided → Autonomous (replaces the old three-category system)
 - **Human Involvement**: Augmented vs. Automated (replaces Interactive/Autonomous/Hybrid)
 
-This affects the [Analyze](../../business-first-ai-framework/analyze.md), [Design](../../business-first-ai-framework/design.md), and [Build](../../business-first-ai-framework/build/index.mdx) pages, all three worked examples, and the Business-First AI plugin (now v5.0.0).
+This affects the [Analyze](../../business-first-ai-framework/analyze/), [Design](../../business-first-ai-framework/design/), and [Build](../../business-first-ai-framework/build/) pages, all three worked examples, and the Business-First AI plugin (now v5.0.0).

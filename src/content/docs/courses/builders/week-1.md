@@ -9,9 +9,9 @@ Create a GitHub repository to store and version your AI prompts, skills, and ref
 
 **Setup Guides (complete in order):**
 
-1. [Git Installation](../../builder-setup/git-install.md) — Install Git on your machine
-2. [Editor Setup](../../builder-setup/editor-setup.md) — Install Cursor or VS Code
-3. [GitHub Setup](../../builder-setup/github-setup.md) — Create account and clone repositories
+1. [Git Installation](../../../builder-setup/git-install/) — Install Git on your machine
+2. [Editor Setup](../../../builder-setup/editor-setup/) — Install Cursor or VS Code
+3. [GitHub Setup](../../../builder-setup/github-setup/) — Create account and clone repositories
 
 ## Lesson: Configure Your AI Code Editor
 
@@ -19,7 +19,7 @@ Set up Claude Code for AI-assisted development in your editor and terminal.
 
 **Setup Guide:**
 
-- [Getting Started with Claude](../../platforms/claude/getting-started/index.md) — Install Claude Code CLI and configure your environment
+- [Getting Started with Claude](../../../platforms/claude/getting-started/) — Install Claude Code CLI and configure your environment
 
 ## Lesson: Implement Voice-to-Text for Hands-Free AI Collaboration
 
@@ -27,7 +27,7 @@ Enable voice input for hands-free AI collaboration.
 
 **Setup Guide:**
 
-- [Voice-to-Text Setup](../../builder-setup/voice-to-text-setup.md) — Configure Wispr Flow and Claude Desktop Quick Entry
+- [Voice-to-Text Setup](../../../builder-setup/voice-to-text-setup/) — Configure Wispr Flow and Claude Desktop Quick Entry
 
 ## Lesson: Build Your AI Registry
 
@@ -35,7 +35,7 @@ Create your central hub for managing all AI operations across your business.
 
 **Setup Guide:**
 
-- [Notion Registry Setup](../../builder-setup/notion-registry-setup.md) — Duplicate the Notion database templates and customize for your business
+- [Notion Registry Setup](../../../builder-setup/notion-registry-setup/) — Duplicate the Notion database templates and customize for your business
 
 ## Lesson: Configure MCP Server Connections
 
@@ -43,7 +43,7 @@ Connect Claude to external applications and MCP servers.
 
 **Setup Guide:**
 
-- [MCP Connectors Setup](week-1/mcp-connectors-setup.md) — Configure integrations, custom connectors, and desktop extensions
+- [MCP Connectors Setup](../week-1/mcp-connectors-setup/) — Configure integrations, custom connectors, and desktop extensions
 
 ## Lesson: Set Up Claude Projects and Personalization
 
@@ -51,8 +51,8 @@ Configure Claude to work effectively with your context.
 
 **Setup Guides:**
 
-- [Claude Projects Setup](../../platforms/claude/projects/claude-projects-setup.md) — Organize your AI work with projects
-- [Getting Started with Claude](../../platforms/claude/getting-started/index.md) — Set up Claude, personalization, and memory
+- [Claude Projects Setup](../../../platforms/claude/projects/claude-projects-setup/) — Organize your AI work with projects
+- [Getting Started with Claude](../../../platforms/claude/getting-started/) — Set up Claude, personalization, and memory
 
 ## Questions?
 

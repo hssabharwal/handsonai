@@ -125,7 +125,7 @@ Understanding this workflow means you can follow along when an AI agent is build
 
 ## Related
 
-- [Software Development Lifecycle](sdlc.md) — the broader cycle that GitHub tools support
-- [User Stories & Acceptance Criteria](user-stories.md) — what goes into issue descriptions
-- [Roadmaps & Prioritization](roadmapping.md) — how issues connect to strategic priorities via epics and milestones
-- [Coding](../use-cases/coding/index.md) — the use case primitive for AI-assisted development
+- [Software Development Lifecycle](../sdlc/) — the broader cycle that GitHub tools support
+- [User Stories & Acceptance Criteria](../user-stories/) — what goes into issue descriptions
+- [Roadmaps & Prioritization](../roadmapping/) — how issues connect to strategic priorities via epics and milestones
+- [Coding](../../use-cases/coding/) — the use case primitive for AI-assisted development

@@ -81,12 +81,12 @@ API is the programmatic bridge between your code and AI capabilities:
 
 ## Related
 
-- [Agentic Building Blocks](../index.md) — API in the context of all building blocks
-- [SDK](../sdk/index.md) — frameworks that provide higher-level abstractions over APIs
-- [MCP](../mcp/index.md) — the protocol that connects AI to external systems (often backed by APIs)
-- [Agents](../agents/index.md) — autonomous systems that use APIs to call models and tools
-- [AI Use Cases](../../use-cases/index.md) — what teams build with these blocks
-- [Coding Use Cases](../../use-cases/coding/index.md) — code-first AI workflows that rely on APIs
-- [Automation Use Cases](../../use-cases/automation/index.md) — automated pipelines built on API calls
-- [CLI](../cli/index.md) — terminal-native interfaces that abstract over APIs
-- [Platforms](../../platforms/index.md) — platform-specific API guides
+- [Agentic Building Blocks](../) — API in the context of all building blocks
+- [SDK](../sdk/) — frameworks that provide higher-level abstractions over APIs
+- [MCP](../mcp/) — the protocol that connects AI to external systems (often backed by APIs)
+- [Agents](../agents/) — autonomous systems that use APIs to call models and tools
+- [AI Use Cases](../../use-cases/) — what teams build with these blocks
+- [Coding Use Cases](../../use-cases/coding/) — code-first AI workflows that rely on APIs
+- [Automation Use Cases](../../use-cases/automation/) — automated pipelines built on API calls
+- [CLI](../cli/) — terminal-native interfaces that abstract over APIs
+- [Platforms](../../platforms/) — platform-specific API guides

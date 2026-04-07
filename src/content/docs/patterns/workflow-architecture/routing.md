@@ -52,7 +52,7 @@ A company automates customer service across varied query types:
 
 ## Related
 
-- [Workflow Architecture Patterns Overview](index.md)
-- [Prompt Chaining](prompt-chaining.md) — sequential processing within a single path
-- [Parallelization](parallelization.md) — running multiple paths simultaneously
-- [Design Your AI Workflow](../../business-first-ai-framework/design.md)
+- [Workflow Architecture Patterns Overview](../)
+- [Prompt Chaining](../prompt-chaining/) — sequential processing within a single path
+- [Parallelization](../parallelization/) — running multiple paths simultaneously
+- [Design Your AI Workflow](../../../business-first-ai-framework/design/)

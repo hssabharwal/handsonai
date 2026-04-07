@@ -97,7 +97,7 @@ AI can assist with many stakeholder communication tasks, but the relationship ma
 
 ## Related
 
-- [Roadmaps & Prioritization](roadmapping.md) — what you're communicating to stakeholders and why
-- [Product Requirements](requirements.md) — the document that captures stakeholder-aligned requirements
-- [Content Creation](../use-cases/content-creation/index.md) — AI-assisted drafting for stakeholder communications
-- [Research](../use-cases/research/index.md) — gathering and synthesizing stakeholder feedback
+- [Roadmaps & Prioritization](../roadmapping/) — what you're communicating to stakeholders and why
+- [Product Requirements](../requirements/) — the document that captures stakeholder-aligned requirements
+- [Content Creation](../../use-cases/content-creation/) — AI-assisted drafting for stakeholder communications
+- [Research](../../use-cases/research/) — gathering and synthesizing stakeholder feedback

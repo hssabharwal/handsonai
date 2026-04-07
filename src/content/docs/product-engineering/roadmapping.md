@@ -94,7 +94,7 @@ When AI coding agents can build features in hours that previously took weeks, th
 
 ## Related
 
-- [Product Requirements](requirements.md) — the PRD for each prioritized initiative
-- [Stakeholder Management](stakeholder-management.md) — getting buy-in on priorities and communicating trade-offs
-- [Software Development Lifecycle](sdlc.md) — how prioritized work flows through sprints
-- [Automation](../use-cases/automation/index.md) — automating repetitive work that AI makes low-effort
+- [Product Requirements](../requirements/) — the PRD for each prioritized initiative
+- [Stakeholder Management](../stakeholder-management/) — getting buy-in on priorities and communicating trade-offs
+- [Software Development Lifecycle](../sdlc/) — how prioritized work flows through sprints
+- [Automation](../../use-cases/automation/) — automating repetitive work that AI makes low-effort

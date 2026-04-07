@@ -16,10 +16,10 @@ Three layers:
 These are platform-agnostic concepts. Every major AI platform implements them, though the names and interfaces differ. Understanding the blocks gives you a mental model that transfers across tools — you can evaluate any platform by asking "how does it handle models, prompts, context, projects, memory, skills, agents, external connections, APIs, development frameworks, and command-line interfaces?"
 
 :::note[Which block should I use?]
-Not sure where to start? The [Choosing the Right Building Block](comparison.md) page has comparison tables for all blocks and a "I want to..." decision guide.
+Not sure where to start? The [Choosing the Right Building Block](comparison/) page has comparison tables for all blocks and a "I want to..." decision guide.
 :::
 :::tip[Using building blocks for workflow analysis]
-The [Business-First AI Framework](../business-first-ai-framework/index.md) uses these building blocks as the analysis tool in [Design Your AI Workflow](../business-first-ai-framework/design.md), where each step of a workflow gets mapped to the building blocks it needs.
+The [Business-First AI Framework](../business-first-ai-framework/) uses these building blocks as the analysis tool in [Design Your AI Workflow](../business-first-ai-framework/design/), where each step of a workflow gets mapped to the building blocks it needs.
 :::
 <style>
 .blocks-section {
@@ -465,37 +465,37 @@ A project is an active workspace — it provides standing instructions, persiste
 
 **Comparison and decision guide:**
 
-- [Choosing the Right Building Block](comparison.md) — comparison matrix and "I want to..." decision guide
+- [Choosing the Right Building Block](comparison/) — comparison matrix and "I want to..." decision guide
 
 **Framework and courses:**
 
-- [Business-First AI Framework](../business-first-ai-framework/index.md) — applies building blocks to workflow analysis
-- [Design Your AI Workflow](../business-first-ai-framework/design.md) — mapping workflow steps to building blocks
-- [Agentic AI for Leaders](../courses/leaders/index.md) — course covering AI strategy and building blocks
-- [Claude for Builders](../courses/builders/index.md) — hands-on course building with these blocks
+- [Business-First AI Framework](../business-first-ai-framework/) — applies building blocks to workflow analysis
+- [Design Your AI Workflow](../business-first-ai-framework/design/) — mapping workflow steps to building blocks
+- [Agentic AI for Leaders](../courses/leaders/) — course covering AI strategy and building blocks
+- [Claude for Builders](../courses/builders/) — hands-on course building with these blocks
 
 **Fundamentals deep-dives:**
 
-- [Model](models/index.md) — the AI engine that powers everything
-- [Prompts](prompts/index.md) — the Prompt building block, with prompt engineering techniques
-- [Context](context/index.md) — background information and reference materials
-- [Projects](projects/index.md) — project workspaces with memory, knowledge bases, and custom instructions
-- [Memory](memory/index.md) — accumulated knowledge from past interactions
-- [Skills](skills/index.mdx) — reusable routines the AI invokes when relevant
-- [Agents](agents/index.md) — concepts for the Agent building block
-- [MCP](mcp/index.md) — connecting AI to external systems
-- [API](api/index.md) — programmatic interfaces for accessing AI models and services
-- [SDK](sdk/index.md) — frameworks and toolkits for building AI workflows in code
-- [CLI](cli/index.md) — terminal-native interfaces for interacting with AI
-- [AI Engineering](../ai-engineering/index.md) — practices for designing and optimizing AI systems, including context engineering
-- [Patterns](../patterns/index.md) — reusable approaches across building blocks
+- [Model](models/) — the AI engine that powers everything
+- [Prompts](prompts/) — the Prompt building block, with prompt engineering techniques
+- [Context](context/) — background information and reference materials
+- [Projects](projects/) — project workspaces with memory, knowledge bases, and custom instructions
+- [Memory](memory/) — accumulated knowledge from past interactions
+- [Skills](skills/) — reusable routines the AI invokes when relevant
+- [Agents](agents/) — concepts for the Agent building block
+- [MCP](mcp/) — connecting AI to external systems
+- [API](api/) — programmatic interfaces for accessing AI models and services
+- [SDK](sdk/) — frameworks and toolkits for building AI workflows in code
+- [CLI](cli/) — terminal-native interfaces for interacting with AI
+- [AI Engineering](../ai-engineering/) — practices for designing and optimizing AI systems, including context engineering
+- [Patterns](../patterns/) — reusable approaches across building blocks
 
 **Use cases:**
 
-- [AI Use Cases](../use-cases/index.md) — what teams build with these blocks, organized by six primitives
+- [AI Use Cases](../use-cases/) — what teams build with these blocks, organized by six primitives
 
 **Platform-specific guides:**
 
-- [Claude Projects](../platforms/claude/projects/claude-projects-setup.md) — setting up the Project block on Claude
-- [Claude Skills](../platforms/claude/skills/skills-discovery-meta-prompt.md) — discovering Skills on Claude
-- [Claude Subagents](../platforms/claude/subagents/scheduling-subagents.mdx) — scheduling Agents on Claude
+- [Claude Projects](../platforms/claude/projects/claude-projects-setup/) — setting up the Project block on Claude
+- [Claude Skills](../platforms/claude/skills/skills-discovery-meta-prompt/) — discovering Skills on Claude
+- [Claude Subagents](../platforms/claude/subagents/scheduling-subagents/) — scheduling Agents on Claude

@@ -1,11 +1,11 @@
 ---
 title: "Step 6: Run"
 description: Deploy your tested AI workflow — choose a run pattern, follow your Run Guide, share with your team, and operationalize for ongoing use.
----> **Part of:** [Business-First AI Framework](index.md)
+---> **Part of:** [Business-First AI Framework](../)
 
 ## Where You Are
 
-You've just finished [Test (Step 5)](test.md). Your workflow:
+You've just finished [Test (Step 5)](../test/). Your workflow:
 
 - Passes the eval suite at a quality level you trust
 - Has a recorded baseline for future comparison
@@ -117,7 +117,7 @@ For individual workflows, deployment may be as simple as running the workflow yo
 ### Set Governance Expectations
 
 - **Who can modify the workflow?** — Define who has permission to edit the prompt, update context files, or change agent configurations. Unrestricted edits by well-meaning teammates can degrade quality quickly.
-- **When should the workflow be reviewed?** — Set a cadence (monthly or quarterly) or trigger conditions (business process changes, quality complaints) for revisiting the workflow in [Improve (Step 7)](improve.md).
+- **When should the workflow be reviewed?** — Set a cadence (monthly or quarterly) or trigger conditions (business process changes, quality complaints) for revisiting the workflow in [Improve (Step 7)](../improve/).
 - **Where do outputs go?** — Define where the workflow's outputs are stored and who has access. This matters for compliance, audit trails, and team coordination.
 
 ### Monitor Adoption
@@ -130,7 +130,7 @@ In the first few weeks after deployment, check:
 
 ## How to Use This
 
-This step is facilitated by the **`run`** Business-First AI Framework skill. See [Get the Skills](skills.mdx) for installation instructions across all supported platforms.
+This step is facilitated by the **`run`** Business-First AI Framework skill. See [Get the Skills](../skills/) for installation instructions across all supported platforms.
 
 **Start with this prompt:**
 
@@ -142,11 +142,11 @@ The skill reads your Building Block Spec and artifacts, generates the Run Guide,
 
 ## Next Step
 
-Once your workflow is running in production, set a reminder to revisit it. Move to **[Step 7: Improve](improve.md)** when quality signals suggest it is time — or on the review cadence you set during operationalization.
+Once your workflow is running in production, set a reminder to revisit it. Move to **[Step 7: Improve](../improve/)** when quality signals suggest it is time — or on the review cadence you set during operationalization.
 
 ## Related
 
-- [Test](test.md) — the step before Run
-- [Improve](improve.md) — the step after Run
-- [Build](build/index.mdx) — where to go if deployment reveals issues that need fixes
-- [AI Workflow Design Matrix](workflow-design-matrix.md) — how autonomy and involvement combine into workflow archetypes
+- [Test](../test/) — the step before Run
+- [Improve](../improve/) — the step after Run
+- [Build](../build/) — where to go if deployment reveals issues that need fixes
+- [AI Workflow Design Matrix](../workflow-design-matrix/) — how autonomy and involvement combine into workflow archetypes

@@ -72,16 +72,16 @@ Each agent has a tailored extraction prompt and a different set of output schema
 
 - All inputs need the same handling — routing adds unnecessary complexity
 - Categories overlap significantly, making accurate classification difficult
-- The task requires agents to collaborate on a single input — use [Hierarchical](hierarchical.md) or [Group Chat](group-chat.md) instead
-- The routing logic is so complex it needs its own multi-step reasoning — use [Hierarchical](hierarchical.md) instead
+- The task requires agents to collaborate on a single input — use [Hierarchical](../hierarchical/) or [Group Chat](../group-chat/) instead
+- The routing logic is so complex it needs its own multi-step reasoning — use [Hierarchical](../hierarchical/) instead
 
 ## Related Patterns
 
-- [Sequential](sequential.md) — the router can feed into a sequential pipeline per category
-- [Hierarchical](hierarchical.md) — when the coordinator does more than just classify (it also decomposes and synthesizes)
-- [Handoff](handoff.md) — when the routing decision happens mid-conversation rather than at the start
-- [Routing](../../../patterns/workflow-architecture/routing.md) — the workflow architecture equivalent
-- [Orchestration Patterns Overview](index.md)
+- [Sequential](../sequential/) — the router can feed into a sequential pipeline per category
+- [Hierarchical](../hierarchical/) — when the coordinator does more than just classify (it also decomposes and synthesizes)
+- [Handoff](../handoff/) — when the routing decision happens mid-conversation rather than at the start
+- [Routing](../../../../patterns/workflow-architecture/routing/) — the workflow architecture equivalent
+- [Orchestration Patterns Overview](../)
 
 ## Further Reading
 

@@ -13,23 +13,23 @@ The patterns are organized into three tiers of increasing autonomy:
 
 | Pattern | Description |
 |---------|-------------|
-| [Augmented LLM](augmented-llm.md) | An LLM enhanced with retrieval, tools, and memory — the building block for all other patterns |
+| [Augmented LLM](augmented-llm/) | An LLM enhanced with retrieval, tools, and memory — the building block for all other patterns |
 
 ### Structured Workflows
 
 | Pattern | Description |
 |---------|-------------|
-| [Prompt Chaining](prompt-chaining.md) | Break a task into sequential steps, with validation gates between each step |
-| [Routing](routing.md) | Classify input and direct it to a specialized follow-up process |
-| [Parallelization](parallelization.md) | Run subtasks simultaneously and aggregate the results |
-| [Orchestrator-Workers](orchestrator-workers.md) | A central orchestrator dynamically breaks down tasks and delegates to specialized workers |
-| [Evaluator-Optimizer](evaluator-optimizer.md) | Generate output, evaluate it against criteria, and refine iteratively until it meets quality standards |
+| [Prompt Chaining](prompt-chaining/) | Break a task into sequential steps, with validation gates between each step |
+| [Routing](routing/) | Classify input and direct it to a specialized follow-up process |
+| [Parallelization](parallelization/) | Run subtasks simultaneously and aggregate the results |
+| [Orchestrator-Workers](orchestrator-workers/) | A central orchestrator dynamically breaks down tasks and delegates to specialized workers |
+| [Evaluator-Optimizer](evaluator-optimizer/) | Generate output, evaluate it against criteria, and refine iteratively until it meets quality standards |
 
 ### Autonomous
 
 | Pattern | Description |
 |---------|-------------|
-| [Autonomous Agents](autonomous-agents.md) | An LLM with tools, memory, and planning that independently executes multi-step tasks through a think-act-observe loop |
+| [Autonomous Agents](autonomous-agents/) | An LLM with tools, memory, and planning that independently executes multi-step tasks through a think-act-observe loop |
 
 ## Pattern Selection Framework
 
@@ -77,7 +77,7 @@ Most workflows start as a single Augmented LLM or Prompt Chain. Only add complex
 :::
 ## How These Patterns Relate to the Framework
 
-The [Design](../../business-first-ai-framework/design.md) phase of the Business-First AI Framework first assesses the workflow's autonomy level (Deterministic → Guided → Autonomous), then recommends an orchestration mechanism (Prompt → Skill-Powered Prompt → Agent). These seven architecture patterns provide the detailed implementation blueprints within that spectrum:
+The [Design](../../business-first-ai-framework/design/) phase of the Business-First AI Framework first assesses the workflow's autonomy level (Deterministic → Guided → Autonomous), then recommends an orchestration mechanism (Prompt → Skill-Powered Prompt → Agent). These seven architecture patterns provide the detailed implementation blueprints within that spectrum:
 
 | Orchestration Mechanism | Architecture Patterns |
 |------------------------|----------------------|
@@ -85,7 +85,7 @@ The [Design](../../business-first-ai-framework/design.md) phase of the Business-
 | Skill-Powered Prompt | Prompt Chaining, Routing |
 | Agent | Parallelization, Orchestrator-Workers, Evaluator-Optimizer, Autonomous Agents |
 
-The [AI Workflow Design Matrix](../../business-first-ai-framework/workflow-design-matrix.md) adds a second dimension — **human involvement** (Augmented vs. Automated) — to the autonomy spectrum. Architecture patterns map to the matrix's autonomy axis: Deterministic workflows typically use Augmented LLM or Prompt Chaining, Guided workflows use Routing or Evaluator-Optimizer, and Autonomous workflows use Orchestrator-Workers or Autonomous Agents.
+The [AI Workflow Design Matrix](../../business-first-ai-framework/workflow-design-matrix/) adds a second dimension — **human involvement** (Augmented vs. Automated) — to the autonomy spectrum. Architecture patterns map to the matrix's autonomy axis: Deterministic workflows typically use Augmented LLM or Prompt Chaining, Guided workflows use Routing or Evaluator-Optimizer, and Autonomous workflows use Orchestrator-Workers or Autonomous Agents.
 
 ## Credit
 
@@ -93,8 +93,8 @@ The [AI Workflow Design Matrix](../../business-first-ai-framework/workflow-desig
 
 ## Related
 
-- [Design Your AI Workflow](../../business-first-ai-framework/design.md) — assess autonomy and choose an orchestration mechanism for your workflow
-- [Agents](../../agentic-building-blocks/agents/index.md) — concepts for building AI agents
-- [Agent Capability Patterns](../../agentic-building-blocks/agents/capability-patterns/index.md) — behavioral patterns (reflection, tool use, planning, etc.)
-- [Agent Orchestration Patterns](../../agentic-building-blocks/agents/orchestration-patterns/index.md) — multi-agent coordination topologies (sequential, parallel, hierarchical, etc.)
-- [Patterns Overview](../index.md)
+- [Design Your AI Workflow](../../business-first-ai-framework/design/) — assess autonomy and choose an orchestration mechanism for your workflow
+- [Agents](../../agentic-building-blocks/agents/) — concepts for building AI agents
+- [Agent Capability Patterns](../../agentic-building-blocks/agents/capability-patterns/) — behavioral patterns (reflection, tool use, planning, etc.)
+- [Agent Orchestration Patterns](../../agentic-building-blocks/agents/orchestration-patterns/) — multi-agent coordination topologies (sequential, parallel, hierarchical, etc.)
+- [Patterns Overview](../)

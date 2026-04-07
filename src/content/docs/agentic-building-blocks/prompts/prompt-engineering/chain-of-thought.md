@@ -110,7 +110,7 @@ Claude's extended thinking mode is essentially automated Chain-of-Thought — th
 
 **Problem:** "What is the capital of France? Let's think step by step." wastes tokens and adds no value. CoT is overhead for tasks that don't involve multi-step reasoning.
 
-**Fix:** Reserve CoT for problems that actually require working through multiple steps — math, comparisons, debugging, planning. For simple factual questions, use [zero-shot prompting](zero-shot-prompting.md).
+**Fix:** Reserve CoT for problems that actually require working through multiple steps — math, comparisons, debugging, planning. For simple factual questions, use [zero-shot prompting](../zero-shot-prompting/).
 :::
 :::caution[Not verifying the reasoning]
 
@@ -122,15 +122,15 @@ Claude's extended thinking mode is essentially automated Chain-of-Thought — th
 
 **Problem:** A single CoT trace shows one reasoning path. If that path happens to go wrong, you get a confidently wrong answer. Self-Consistency (Wang et al. 2022) is a separate technique that samples multiple reasoning paths and takes the majority answer.
 
-**Fix:** For high-stakes decisions, consider asking the model for multiple approaches: "Solve this problem using two different methods, then compare your answers." See [Self-Consistency and Reflection](self-consistency-and-reflection.md).
+**Fix:** For high-stakes decisions, consider asking the model for multiple approaches: "Solve this problem using two different methods, then compare your answers." See [Self-Consistency and Reflection](../self-consistency-and-reflection/).
 :::
 ## Related Techniques
 
-- [Zero-Shot Prompting](zero-shot-prompting.md) — Zero-Shot CoT ("Let's think step by step") bridges these two techniques
-- [Self-Consistency and Reflection](self-consistency-and-reflection.md) — sample multiple reasoning paths for higher accuracy
-- [Direct Instruction](direct-instruction.md) — combine with CoT by explicitly specifying the reasoning steps
-- [Prompt Engineering Overview](index.md)
-- [Research use case](../../../use-cases/research/index.md)
+- [Zero-Shot Prompting](../zero-shot-prompting/) — Zero-Shot CoT ("Let's think step by step") bridges these two techniques
+- [Self-Consistency and Reflection](../self-consistency-and-reflection/) — sample multiple reasoning paths for higher accuracy
+- [Direct Instruction](../direct-instruction/) — combine with CoT by explicitly specifying the reasoning steps
+- [Prompt Engineering Overview](../)
+- [Research use case](../../../../use-cases/research/)
 
 ## Further Reading
 

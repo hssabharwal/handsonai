@@ -25,11 +25,11 @@ title: "Business-First AI Framework: 7-Step Restructure"
 | 6. Run | `run` | Run Guide |
 | 7. Improve | `improve` | Improvement Plan |
 
-**Step 5: Test** — structured evaluation using criteria defined during Design. Smoke test, full eval suite with 1-5 scoring, building block evals in isolation, baseline establishment, and a diagnosis table mapping problems to building blocks. [Test page](../../business-first-ai-framework/test.md).
+**Step 5: Test** — structured evaluation using criteria defined during Design. Smoke test, full eval suite with 1-5 scoring, building block evals in isolation, baseline establishment, and a diagnosis table mapping problems to building blocks. [Test page](../../business-first-ai-framework/test/).
 
-**Step 7: Improve** — periodic evaluation of running workflows. Watch for quality signals, re-run evals against baseline, assess graduation to a more capable orchestration mechanism, and decide: no changes needed, tune, redesign, or evolve. [Improve page](../../business-first-ai-framework/improve.md).
+**Step 7: Improve** — periodic evaluation of running workflows. Watch for quality signals, re-run evals against baseline, assess graduation to a more capable orchestration mechanism, and decide: no changes needed, tune, redesign, or evolve. [Improve page](../../business-first-ai-framework/improve/).
 
-**Evaluation Criteria in Design.** The [Design skill](../../business-first-ai-framework/design.md) now prompts for what good output looks like, quality dimensions, 3-5 test scenarios, and a minimum quality bar. These feed directly into Test and Improve.
+**Evaluation Criteria in Design.** The [Design skill](../../business-first-ai-framework/design/) now prompts for what good output looks like, quality dimensions, 3-5 test scenarios, and a minimum quality bar. These feed directly into Test and Improve.
 
 **Skills renamed.** All five existing skills shortened from verbose forms (`analyzing-workflows`, `deconstructing-workflows`, etc.) to `analyze`, `deconstruct`, `design`, `build`, `run`. Slash commands updated accordingly — e.g., `/business-first-ai:build` replaces `/business-first-ai:construct-workflow`.
 
@@ -37,4 +37,4 @@ title: "Business-First AI Framework: 7-Step Restructure"
 
 **Plugin version: 7.0.0** — a major version bump reflecting breaking skill renames and new skills. Update with `/plugin install business-first-ai@handsonai`.
 
-**[Start with the framework overview →](../../business-first-ai-framework/index.md)**
+**[Start with the framework overview →](../../business-first-ai-framework/)**

@@ -6,7 +6,7 @@ description: Step-by-step checklist for setting up your developer toolkit — te
 :::note[AI platform setup is in the Platforms section]
 Before starting here, make sure you've set up at least one AI platform — account, apps, personalization, memory, and connections. Each platform has its own Getting Started checklist:
 
-[→ Claude](../platforms/claude/getting-started/index.md) · [→ OpenAI](../platforms/openai/getting-started/index.mdx) · [→ Gemini](../platforms/google-gemini/getting-started/index.md) · [→ M365 Copilot](../platforms/m365-copilot/getting-started/index.md)
+[→ Claude](../platforms/claude/getting-started/) · [→ OpenAI](../platforms/openai/getting-started/) · [→ Gemini](../platforms/google-gemini/getting-started/) · [→ M365 Copilot](../platforms/m365-copilot/getting-started/)
 :::
 ## At a Glance
 
@@ -40,7 +40,7 @@ Before starting here, make sure you've set up at least one AI platform — accou
 
 Every tool in this stack runs through the terminal. You don't need to be an expert — just comfortable opening it, navigating folders, and running commands.
 
-[→ Go to Terminal Basics guide](terminal-basics.mdx)
+[→ Go to Terminal Basics guide](terminal-basics/)
 
 **You're done when:** You can open a terminal, run `pwd`, and navigate to a folder with `cd`.
 
@@ -56,7 +56,7 @@ Every tool in this stack runs through the terminal. You don't need to be an expe
 
 Your editor is where you'll read, write, and edit code. This guide covers Cursor (has AI built in) and VS Code (free), plus AI extensions for Claude Code, OpenAI Codex, and Gemini Code Assist.
 
-[→ Go to Editor Setup guide](editor-setup.md)
+[→ Go to Editor Setup guide](editor-setup/)
 
 **You're done when:** You can open your editor, navigate files and folders, and see at least one AI extension installed.
 
@@ -73,7 +73,7 @@ Your editor is where you'll read, write, and edit code. This guide covers Cursor
 
 Git ensures you never lose your work — every version is saved, and you can always recover or refine what you've built.
 
-[→ Go to Git Installation guide](git-install.md)
+[→ Go to Git Installation guide](git-install/)
 
 **You're done when:** Opening your terminal and typing `git --version` prints a version number.
 
@@ -89,7 +89,7 @@ Git ensures you never lose your work — every version is saved, and you can alw
 
 GitHub is where your files live in the cloud — backed up, versioned, and accessible from any machine.
 
-[→ Go to GitHub Setup guide](github-setup.md)
+[→ Go to GitHub Setup guide](github-setup/)
 
 **You're done when:** You can download (clone) a project from GitHub into your editor.
 
@@ -105,7 +105,7 @@ GitHub is where your files live in the cloud — backed up, versioned, and acces
 
 Voice input can speed up how you write prompts, notes, and messages. This is recommended for anyone who thinks faster than they type.
 
-[→ Go to Voice to Text Setup guide](voice-to-text-setup.md)
+[→ Go to Voice to Text Setup guide](voice-to-text-setup/)
 
 **You're done when:** You can dictate text into any input field on your computer.
 
@@ -123,9 +123,9 @@ Skills work across platforms — Claude Code, Claude.ai, Cowork, Cursor, Codex C
 
 For step-by-step install instructions for your platform:
 
-[→ How to Add Skills to Your Platform](../agentic-building-blocks/skills/index.mdx#how-to-add-skills-to-your-platform)
+[→ How to Add Skills to Your Platform](../agentic-building-blocks/skills/#how-to-add-skills-to-your-platform)
 
-Browse all available plugins on the [Agents & Skills Marketplace](../use-the-playbook/build/index.md).
+Browse all available plugins on the [Agents & Skills Marketplace](../use-the-playbook/build/).
 
 **You're done when:** At least one skill is installed or added to your platform.
 
@@ -141,7 +141,7 @@ Browse all available plugins on the [Agents & Skills Marketplace](../use-the-pla
 
 The Hands-on AI MCP server gives your AI platform access to the playbook's reference material — building blocks, patterns, use cases, and more — right inside your conversations.
 
-[→ Go to MCP Server Connection Guide](../mcp-server/index.md)
+[→ Go to MCP Server Connection Guide](../mcp-server/)
 
 **You're done when:** You can ask your AI platform a question about the playbook and get an answer from the MCP server.
 
@@ -161,7 +161,7 @@ Keeping track of your workflows and the AI building blocks that power them is es
 
 The AI Registry is a Notion workspace template that gives you a structured system for tracking your workflows, AI building blocks, and connected applications. Once it's connected, Claude can name workflows, write SOPs (Standard Operating Procedures), and register skills directly in Notion.
 
-[→ Go to AI Registry Setup guide](notion-registry-setup.md)
+[→ Go to AI Registry Setup guide](notion-registry-setup/)
 
 After setting up the registry, install the AI Registry plugin so Claude can read from and write to your Notion workspace:
 

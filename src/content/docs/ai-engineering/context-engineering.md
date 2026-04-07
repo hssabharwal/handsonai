@@ -26,7 +26,7 @@ Prompt engineering is a subset of context engineering — an essential one, but 
 
 ## The Components
 
-Context engineering orchestrates multiple components that together shape model behavior. Each maps to one or more [building blocks](../agentic-building-blocks/index.md):
+Context engineering orchestrates multiple components that together shape model behavior. Each maps to one or more [building blocks](../../agentic-building-blocks/):
 
 ### System Prompts
 
@@ -34,7 +34,7 @@ The foundational layer that establishes the AI's role, capabilities, and behavio
 
 Effective system prompts include role definition, behavioral guidelines, and capability boundaries. They can incorporate conditional behavior (adapting based on context), persona switching, and output formatting standards.
 
-**Building blocks:** [Prompts](../agentic-building-blocks/prompts/index.md), [Projects](../agentic-building-blocks/projects/index.md)
+**Building blocks:** [Prompts](../../agentic-building-blocks/prompts/), [Projects](../../agentic-building-blocks/projects/)
 
 ### Instructions
 
@@ -42,25 +42,25 @@ Specific guidance for how the AI handles different types of tasks. While system 
 
 Well-designed instructions include priority hierarchies (what takes precedence when guidance conflicts), escalation procedures (what to do when the AI can't complete a request), and dynamic adaptation (adjusting depth based on user responses).
 
-**Building blocks:** [Prompts](../agentic-building-blocks/prompts/index.md), [Skills](../agentic-building-blocks/skills/index.mdx)
+**Building blocks:** [Prompts](../../agentic-building-blocks/prompts/), [Skills](../../agentic-building-blocks/skills/)
 
 ### User Input Processing
 
 How the system interprets and enriches what users provide. This includes intent recognition (identifying what the user actually wants), context extraction (pulling implicit information from messages), and ambiguity resolution (strategies for handling unclear requests).
 
-**Building blocks:** [Prompts](../agentic-building-blocks/prompts/index.md)
+**Building blocks:** [Prompts](../../agentic-building-blocks/prompts/)
 
 ### Structured Inputs and Outputs
 
 Defining precise formats for complex requests and responses. JSON schemas, templates, and metadata structures make interactions more predictable and consistent. On the output side, standardized formats and progressive disclosure (layered detail levels) improve usability.
 
-**Building blocks:** [Prompts](../agentic-building-blocks/prompts/index.md), [Skills](../agentic-building-blocks/skills/index.mdx)
+**Building blocks:** [Prompts](../../agentic-building-blocks/prompts/), [Skills](../../agentic-building-blocks/skills/)
 
 ### Tools
 
 Integrations that extend AI capabilities beyond text generation. Context engineering considers which tools are available, how they're described to the model, and how their outputs are integrated back into the context. Tool categories include information retrieval, computation, communication, and content creation.
 
-**Building blocks:** [MCP](../agentic-building-blocks/mcp/index.md), [Agents](../agentic-building-blocks/agents/index.md)
+**Building blocks:** [MCP](../../agentic-building-blocks/mcp/), [Agents](../../agentic-building-blocks/agents/)
 
 ### RAG and Memory
 
@@ -68,7 +68,7 @@ Systems for accessing external knowledge and maintaining information across inte
 
 This includes decisions about what to retrieve, how to rank results, and what to remember versus forget.
 
-**Building blocks:** [Context](../agentic-building-blocks/context/index.md), [Projects](../agentic-building-blocks/projects/index.md)
+**Building blocks:** [Context](../../agentic-building-blocks/context/), [Projects](../../agentic-building-blocks/projects/)
 
 ### State and Historical Context
 
@@ -76,7 +76,7 @@ Tracking the current status of interactions and learning from past ones. Convers
 
 Historical context adds pattern recognition — identifying recurring themes, successful approaches, and seasonal patterns that inform future interactions.
 
-**Building blocks:** [Context](../agentic-building-blocks/context/index.md), [Projects](../agentic-building-blocks/projects/index.md), [Agents](../agentic-building-blocks/agents/index.md)
+**Building blocks:** [Context](../../agentic-building-blocks/context/), [Projects](../../agentic-building-blocks/projects/), [Agents](../../agentic-building-blocks/agents/)
 
 ## Why Context Engineering Matters
 
@@ -89,7 +89,7 @@ Context engineering addresses what happens when AI moves from simple chat intera
 
 ## Relationship to Context Graphs
 
-[Context graphs](../agentic-building-blocks/context/context-graphs.md) are a specific technique *within* context engineering. Where context engineering is the overall discipline of designing what the model sees, context graphs are a structured approach to organizing relationships, decisions, and reasoning chains in that context.
+[Context graphs](../../agentic-building-blocks/context/context-graphs/) are a specific technique *within* context engineering. Where context engineering is the overall discipline of designing what the model sees, context graphs are a structured approach to organizing relationships, decisions, and reasoning chains in that context.
 
 Think of it this way: context engineering is the practice; context graphs are one of the more advanced tools in that practice.
 
@@ -102,9 +102,9 @@ Think of it this way: context engineering is the practice; context graphs are on
 
 ## Related
 
-- [Product & Engineering](../product-engineering/index.md) — the parent section
-- [Agentic Building Blocks](../agentic-building-blocks/index.md) — the components context engineering operates on
-- [Prompts](../agentic-building-blocks/prompts/index.md) — the most fundamental building block, and a key component of context engineering
-- [Context](../agentic-building-blocks/context/index.md) — the data and knowledge component
-- [Context Graphs](../agentic-building-blocks/context/context-graphs.md) — structured reasoning graphs, an advanced technique within context engineering
-- [Patterns](../patterns/index.md) — reusable approaches across building blocks
+- [Product & Engineering](../../product-engineering/) — the parent section
+- [Agentic Building Blocks](../../agentic-building-blocks/) — the components context engineering operates on
+- [Prompts](../../agentic-building-blocks/prompts/) — the most fundamental building block, and a key component of context engineering
+- [Context](../../agentic-building-blocks/context/) — the data and knowledge component
+- [Context Graphs](../../agentic-building-blocks/context/context-graphs/) — structured reasoning graphs, an advanced technique within context engineering
+- [Patterns](../../patterns/) — reusable approaches across building blocks

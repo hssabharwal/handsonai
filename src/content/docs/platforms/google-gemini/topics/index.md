@@ -8,10 +8,10 @@ description: Documentation and key features for Google Gemini models, Vertex AI,
 *Topics will be listed here as they are added.*
 
 <!-- Example format:
-- [Models Overview](./models.md)
-- [Function Calling](./function-calling.md)
-- [Vertex AI Setup](./vertex-ai-setup.md)
-- [Grounding](./grounding.md)
+- [Models Overview](./models/)
+- [Function Calling](./function-calling/)
+- [Vertex AI Setup](./vertex-ai-setup/)
+- [Grounding](./grounding/)
 -->
 
 ## Key Features

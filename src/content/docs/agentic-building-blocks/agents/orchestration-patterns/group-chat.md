@@ -33,7 +33,7 @@ Group chat also enables **adversarial verification**. A "devil's advocate" agent
 
 1. **Setup** — Each agent is assigned a role, perspective, or expertise area. The shared context (a conversation transcript or workspace) is initialized with the task.
 2. **Discussion** — Agents take turns contributing. Turn order can be round-robin, moderator-directed, or self-selected (any agent can speak when it has something to add).
-3. **Interaction** — Agents respond to each other — agreeing, challenging, refining, or extending previous contributions. This is what distinguishes group chat from [parallel](parallel.md) execution, where agents work independently.
+3. **Interaction** — Agents respond to each other — agreeing, challenging, refining, or extending previous contributions. This is what distinguishes group chat from [parallel](../parallel/) execution, where agents work independently.
 4. **Moderation** — A moderator agent (optional but recommended) manages the discussion: directing questions to specific agents, preventing circular arguments, and deciding when the discussion has converged.
 5. **Synthesis** — The moderator (or a dedicated summarizer) distills the discussion into a final output, capturing areas of agreement, resolved disagreements, and remaining open questions.
 
@@ -69,7 +69,7 @@ A publishing team reviews an article through multi-perspective discussion:
 
 ## When NOT to Use It
 
-- The task has a single correct answer that doesn't benefit from debate — use [Sequential](sequential.md) or [Parallel](parallel.md)
+- The task has a single correct answer that doesn't benefit from debate — use [Sequential](../sequential/) or [Parallel](../parallel/)
 - Agents don't need to interact — independent parallel execution is simpler and faster
 - The discussion could loop indefinitely without converging — always include a turn limit and a moderator
 - Token costs from the shared conversation context are prohibitive (each agent sees the full transcript)
@@ -77,11 +77,11 @@ A publishing team reviews an article through multi-perspective discussion:
 
 ## Related Patterns
 
-- [Parallel](parallel.md) — agents work independently; group chat adds interaction between agents
-- [Evaluator-Optimizer](evaluator-optimizer.md) — structured two-agent feedback loop; group chat is more free-form multi-agent discussion
-- [Hierarchical](hierarchical.md) — coordinator directs workers; group chat is more peer-based
-- [Decentralized](decentralized.md) — agents also coordinate without a master, but through shared state rather than conversation
-- [Orchestration Patterns Overview](index.md)
+- [Parallel](../parallel/) — agents work independently; group chat adds interaction between agents
+- [Evaluator-Optimizer](../evaluator-optimizer/) — structured two-agent feedback loop; group chat is more free-form multi-agent discussion
+- [Hierarchical](../hierarchical/) — coordinator directs workers; group chat is more peer-based
+- [Decentralized](../decentralized/) — agents also coordinate without a master, but through shared state rather than conversation
+- [Orchestration Patterns Overview](../)
 
 ## Further Reading
 

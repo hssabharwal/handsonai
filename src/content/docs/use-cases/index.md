@@ -3,21 +3,21 @@ title: AI Use Cases
 description: Six use case primitives that cover what teams actually build with AI — content creation, research, coding, data analysis, ideation and strategy, and automation
 ---OpenAI's analysis of over 600 enterprise AI deployments found that nearly all use cases fall into six primitives. These primitives describe the **type of work** AI does, not the tools or platforms involved. Understanding them helps you classify your own workflows and find the right building blocks faster.
 
-*The six primitives and department examples in this section are adapted from OpenAI's [Identifying and Scaling AI Use Cases](../resources/openai-use-cases-report.md) and made platform-agnostic.*
+*The six primitives and department examples in this section are adapted from OpenAI's [Identifying and Scaling AI Use Cases](../resources/openai-use-cases-report/) and made platform-agnostic.*
 
 :::tip[Connecting to the Framework]
-The [Business-First AI Framework](../business-first-ai-framework/index.md) helps you **find** opportunities (Step 1 — Analyze) and **deconstruct** them into building blocks (Step 2). Use these six primitives to **classify** the opportunities you find — they tell you what type of AI work each opportunity involves, which makes choosing the right building blocks easier.
+The [Business-First AI Framework](../business-first-ai-framework/) helps you **find** opportunities (Step 1 — Analyze) and **deconstruct** them into building blocks (Step 2). Use these six primitives to **classify** the opportunities you find — they tell you what type of AI work each opportunity involves, which makes choosing the right building blocks easier.
 :::
 ## The Six Primitives
 
 | Primitive | What AI Does | Typical Building Blocks | Example |
 |-----------|-------------|------------------------|---------|
-| [**Content Creation**](content-creation/index.md) | Drafts, edits, translates, repurposes | Prompt, Context, Skill, Project | First-draft blog posts in brand voice |
-| [**Research**](research/index.md) | Searches, synthesizes, structures information | Prompt, Context, Agent, MCP | Multi-source competitive analysis |
-| [**Coding**](coding/index.md) | Generates, debugs, ports, explains code | Prompt, Context, Agent | Python scripts for non-coders |
-| [**Data Analysis**](data-analysis/index.md) | Harmonizes data, identifies trends, visualizes | Prompt, Context, Skill | Expense analysis across sources |
-| [**Ideation & Strategy**](ideation-and-strategy/index.md) | Brainstorms, plans, gives feedback, models scenarios | Prompt, Context, Project | Campaign ideation with constraints |
-| [**Automation**](automation/index.md) | Executes repeatable routine tasks with minimal human involvement | Skill, Agent, MCP | Weekly competitive update pipeline |
+| [**Content Creation**](content-creation/) | Drafts, edits, translates, repurposes | Prompt, Context, Skill, Project | First-draft blog posts in brand voice |
+| [**Research**](research/) | Searches, synthesizes, structures information | Prompt, Context, Agent, MCP | Multi-source competitive analysis |
+| [**Coding**](coding/) | Generates, debugs, ports, explains code | Prompt, Context, Agent | Python scripts for non-coders |
+| [**Data Analysis**](data-analysis/) | Harmonizes data, identifies trends, visualizes | Prompt, Context, Skill | Expense analysis across sources |
+| [**Ideation & Strategy**](ideation-and-strategy/) | Brainstorms, plans, gives feedback, models scenarios | Prompt, Context, Project | Campaign ideation with constraints |
+| [**Automation**](automation/) | Executes repeatable routine tasks with minimal human involvement | Skill, Agent, MCP | Weekly competitive update pipeline |
 
 ## Content Creation
 
@@ -25,7 +25,7 @@ AI drafts, edits, translates, and repurposes content across formats. This is the
 
 Content creation works best when you provide context (brand voice, style guides, examples) so the AI produces output that matches your standards rather than generic copy.
 
-[→ Content Creation detail](content-creation/index.md)
+[→ Content Creation detail](content-creation/)
 
 ---
 
@@ -35,7 +35,7 @@ AI searches, synthesizes, and structures information from multiple sources. Rese
 
 Research primitives are particularly powerful when combined with MCP connections to external data sources, letting the AI pull from your actual tools rather than just web search.
 
-[→ Research detail](research/index.md)
+[→ Research detail](research/)
 
 ---
 
@@ -45,7 +45,7 @@ AI generates, debugs, ports, and explains code. This primitive isn't limited to 
 
 Coding use cases range from simple formula generation (Excel, SQL) to full application development with agents that plan, write, test, and iterate autonomously.
 
-[→ Coding detail](coding/index.md)
+[→ Coding detail](coding/)
 
 ---
 
@@ -55,7 +55,7 @@ AI harmonizes data from multiple sources, identifies trends, and produces visual
 
 This primitive often pairs with coding (generating analysis scripts) and research (interpreting results in context).
 
-[→ Data Analysis detail](data-analysis/index.md)
+[→ Data Analysis detail](data-analysis/)
 
 ---
 
@@ -65,7 +65,7 @@ AI brainstorms ideas, plans approaches, provides feedback, and runs scenario ana
 
 Ideation works best in project workspaces where the AI has persistent context about your goals, constraints, and past decisions.
 
-[→ Ideation & Strategy detail](ideation-and-strategy/index.md)
+[→ Ideation & Strategy detail](ideation-and-strategy/)
 
 ---
 
@@ -75,7 +75,7 @@ AI executes repeatable routine tasks with minimal human involvement. Automation 
 
 Automation typically builds on the other primitives. A content creation workflow becomes automation when it runs on a schedule. A research workflow becomes automation when it monitors sources continuously.
 
-[→ Automation detail](automation/index.md)
+[→ Automation detail](automation/)
 
 ## Classifying Your Use Cases
 
@@ -99,15 +99,15 @@ These are different lenses on the same work:
 | Concept | What it answers | Where to learn more |
 |---------|----------------|-------------------|
 | **Primitives** (this section) | **What** type of work is AI doing? | You're here |
-| **Building Blocks** | **How** do you implement it? | [Agentic Building Blocks](../agentic-building-blocks/index.md) |
-| **Autonomy Levels** | **How much** AI involvement? | [Business-First AI Framework](../business-first-ai-framework/index.md) |
+| **Building Blocks** | **How** do you implement it? | [Agentic Building Blocks](../agentic-building-blocks/) |
+| **Autonomy Levels** | **How much** AI involvement? | [Business-First AI Framework](../business-first-ai-framework/) |
 
 Primitives help you browse use cases by category. Building blocks help you assemble the implementation. Autonomy levels help you decide how much control to hand over. All three work together.
 
 ## Related
 
-- [Business-First AI Framework](../business-first-ai-framework/index.md) — find and prioritize AI opportunities
-- [Analyze Workflows](../business-first-ai-framework/analyze.md) — structured audit to surface workflow candidates
-- [Agentic Building Blocks](../agentic-building-blocks/index.md) — the components for implementing AI workflows
-- [Build AI-Powered Workflows](../business-first-ai-framework/build/index.mdx) — worked examples across the autonomy spectrum
-- [Plugin Marketplace](../use-the-playbook/build/index.md) — pre-built agents and skills you can install
+- [Business-First AI Framework](../business-first-ai-framework/) — find and prioritize AI opportunities
+- [Analyze Workflows](../business-first-ai-framework/analyze/) — structured audit to surface workflow candidates
+- [Agentic Building Blocks](../agentic-building-blocks/) — the components for implementing AI workflows
+- [Build AI-Powered Workflows](../business-first-ai-framework/build/) — worked examples across the autonomy spectrum
+- [Plugin Marketplace](../use-the-playbook/build/) — pre-built agents and skills you can install

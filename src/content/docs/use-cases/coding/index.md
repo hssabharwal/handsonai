@@ -9,10 +9,10 @@ A marketing manager writing an Excel formula, a data analyst creating a SQL quer
 
 Coding is the primitive where AI agents are most mature. Modern AI coding agents can plan an approach, write code, run tests, debug failures, and iterate — handling multi-file changes across entire projects with minimal human guidance.
 
-*Coding is one of six use case primitives identified in OpenAI's [Identifying and Scaling AI Use Cases](../../resources/openai-use-cases-report.md) guide. The examples here are adapted to be platform-agnostic and mapped to [Agentic Building Blocks](../../agentic-building-blocks/index.md).*
+*Coding is one of six use case primitives identified in OpenAI's [Identifying and Scaling AI Use Cases](../../resources/openai-use-cases-report/) guide. The examples here are adapted to be platform-agnostic and mapped to [Agentic Building Blocks](../../agentic-building-blocks/).*
 
 :::tip[Agentic Coding methodology]
-For a structured methodology to go from idea to shipped feature using AI coding agents, see [Agentic Coding](agentic-coding.mdx) — a 7-step lifecycle with Vision Briefs, PRDs, test-driven development, and automated code review.
+For a structured methodology to go from idea to shipped feature using AI coding agents, see [Agentic Coding](agentic-coding/) — a 7-step lifecycle with Vision Briefs, PRDs, test-driven development, and automated code review.
 :::
 ## Key Characteristics
 
@@ -33,9 +33,9 @@ For a structured methodology to go from idea to shipped feature using AI coding 
 
 **NOT the right primitive when:**
 
-- The main output is a written document (that's [Content Creation](../content-creation/index.md))
-- You're analyzing data and the insight is the deliverable, not the analysis code (that's [Data Analysis](../data-analysis/index.md))
-- You're creating a pipeline that runs autonomously (that's [Automation](../automation/index.md) — though coding may be a step within it)
+- The main output is a written document (that's [Content Creation](../content-creation/))
+- You're analyzing data and the insight is the deliverable, not the analysis code (that's [Data Analysis](../data-analysis/))
+- You're creating a pipeline that runs autonomously (that's [Automation](../automation/) — though coding may be a step within it)
 
 ## Department Examples
 
@@ -88,14 +88,14 @@ For a structured methodology to go from idea to shipped feature using AI coding 
 
 **Providing requirements without examples.** "Build a script that processes our invoices" is vague. "Build a script that reads CSV files with columns [date, vendor, amount, category], groups by category, and outputs a summary with totals — here's a sample file" produces working code on the first try.
 
-**Confusing coding with data analysis.** If the goal is the insight (what are our spending trends?), the primitive is [Data Analysis](../data-analysis/index.md). If the goal is the tool (build me a script that analyzes spending), the primitive is Coding. The distinction matters because it changes how you evaluate the output.
+**Confusing coding with data analysis.** If the goal is the insight (what are our spending trends?), the primitive is [Data Analysis](../data-analysis/). If the goal is the tool (build me a script that analyzes spending), the primitive is Coding. The distinction matters because it changes how you evaluate the output.
 
 ## Related
 
-- [Product & Engineering](../../product-engineering/index.md) — PRDs, user stories, acceptance criteria, and the full software development lifecycle
-- [AI Use Cases Overview](index.md) — all six primitives at a glance
-- [Agents](../../agentic-building-blocks/agents/index.md) — autonomous coding agents that plan, write, test, and iterate
-- [Context](../../agentic-building-blocks/context/index.md) — providing codebases, documentation, and examples
-- [Data Analysis](../data-analysis/index.md) — when the insight is the goal, not the code
-- [Automation](../automation/index.md) — when code runs as part of an unattended pipeline
-- [Coding Resources](resources.md) — curated reports, guides, and references
+- [Product & Engineering](../../product-engineering/) — PRDs, user stories, acceptance criteria, and the full software development lifecycle
+- [AI Use Cases Overview](./) — all six primitives at a glance
+- [Agents](../../agentic-building-blocks/agents/) — autonomous coding agents that plan, write, test, and iterate
+- [Context](../../agentic-building-blocks/context/) — providing codebases, documentation, and examples
+- [Data Analysis](../data-analysis/) — when the insight is the goal, not the code
+- [Automation](../automation/) — when code runs as part of an unattended pipeline
+- [Coding Resources](resources/) — curated reports, guides, and references

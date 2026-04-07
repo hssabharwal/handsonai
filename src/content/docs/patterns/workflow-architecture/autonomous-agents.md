@@ -66,9 +66,9 @@ A SaaS company wants an agent that triages inquiries, pulls user data, suggests 
 
 ## Related
 
-- [Workflow Architecture Patterns Overview](index.md)
-- [Orchestrator-Workers](orchestrator-workers.md) — dynamic task delegation without the autonomous loop
-- [Evaluator-Optimizer](evaluator-optimizer.md) — iterative refinement with structured feedback
-- [Agents](../../agentic-building-blocks/agents/index.md) — concepts for building AI agents
-- [Agent Capability Patterns](../../agentic-building-blocks/agents/capability-patterns/index.md) — behavioral patterns (reflection, tool use, planning, etc.)
-- [Design Your AI Workflow](../../business-first-ai-framework/design.md)
+- [Workflow Architecture Patterns Overview](../)
+- [Orchestrator-Workers](../orchestrator-workers/) — dynamic task delegation without the autonomous loop
+- [Evaluator-Optimizer](../evaluator-optimizer/) — iterative refinement with structured feedback
+- [Agents](../../../agentic-building-blocks/agents/) — concepts for building AI agents
+- [Agent Capability Patterns](../../../agentic-building-blocks/agents/capability-patterns/) — behavioral patterns (reflection, tool use, planning, etc.)
+- [Design Your AI Workflow](../../../business-first-ai-framework/design/)

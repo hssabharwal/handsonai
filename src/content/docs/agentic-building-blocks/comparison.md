@@ -14,17 +14,17 @@ All blocks in one view — use this to quickly orient yourself, then drill into 
 
 | Block | Primary Job | Best For | Typical User |
 |-------|------------|----------|--------------|
-| **[Model](models/index.md)** | Process and generate | Choosing the right engine for speed, depth, or cost | Everyone |
-| **[Context](context/index.md)** | Inform | Grounding the model in your specific domain knowledge | Everyone |
-| **[Project](projects/index.md)** | Organize | Persisting instructions and context across conversations | Everyone |
-| **[Memory](memory/index.md)** | Remember | Accumulating preferences and patterns over time | Everyone |
-| **[Prompt](prompts/index.md)** | Instruct | One-off or conversational tasks with clear instructions | Everyone |
-| **[Skill](skills/index.mdx)** | Standardize | Repeatable routines you run the same way every time | Everyone |
-| **[Agent](agents/index.md)** | Execute autonomously | Multi-step workflows requiring planning and tool use | Power user |
-| **[MCP](mcp/index.md)** | Connect | Bridging AI to external tools, data, and services | Power user |
-| **[API](api/index.md)** | Integrate programmatically | Embedding AI in applications and automated pipelines | Developer |
-| **[SDK](sdk/index.md)** | Orchestrate in code | Building agent systems with tool use, memory, and handoffs | Developer |
-| **[CLI](cli/index.md)** | Interact from terminal | Working with AI in the terminal, scripting, and headless automation | Power user / Developer |
+| **[Model](../models/)** | Process and generate | Choosing the right engine for speed, depth, or cost | Everyone |
+| **[Context](../context/)** | Inform | Grounding the model in your specific domain knowledge | Everyone |
+| **[Project](../projects/)** | Organize | Persisting instructions and context across conversations | Everyone |
+| **[Memory](../memory/)** | Remember | Accumulating preferences and patterns over time | Everyone |
+| **[Prompt](../prompts/)** | Instruct | One-off or conversational tasks with clear instructions | Everyone |
+| **[Skill](../skills/)** | Standardize | Repeatable routines you run the same way every time | Everyone |
+| **[Agent](../agents/)** | Execute autonomously | Multi-step workflows requiring planning and tool use | Power user |
+| **[MCP](../mcp/)** | Connect | Bridging AI to external tools, data, and services | Power user |
+| **[API](../api/)** | Integrate programmatically | Embedding AI in applications and automated pipelines | Developer |
+| **[SDK](../sdk/)** | Orchestrate in code | Building agent systems with tool use, memory, and handoffs | Developer |
+| **[CLI](../cli/)** | Interact from terminal | Working with AI in the terminal, scripting, and headless automation | Power user / Developer |
 
 ---
 
@@ -109,6 +109,6 @@ Use this table to find your starting point. Most real workflows combine several 
 
 ## Related
 
-- [Building Blocks Overview](index.md) — what each block is, with cross-platform implementations
-- [Design Your AI Workflow](../business-first-ai-framework/design.md) — mapping workflow steps to building blocks
-- [Business-First AI Framework](../business-first-ai-framework/index.md) — the full Analyze → Deconstruct → Build methodology
+- [Building Blocks Overview](../) — what each block is, with cross-platform implementations
+- [Design Your AI Workflow](../../business-first-ai-framework/design/) — mapping workflow steps to building blocks
+- [Business-First AI Framework](../../business-first-ai-framework/) — the full Analyze → Deconstruct → Build methodology

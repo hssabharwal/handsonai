@@ -1,15 +1,15 @@
 ---
 title: "Step 5: Test"
 description: Run structured tests on your AI workflow artifacts — smoke test, eval suite, building block evals — and establish a quality baseline before deployment.
----> **Part of:** [Business-First AI Framework](index.md)
+---> **Part of:** [Business-First AI Framework](../)
 
 ## Where You Are
 
-You've just finished [Build (Step 4)](build/index.mdx). You should have:
+You've just finished [Build (Step 4)](../build/). You should have:
 
 - **Platform artifacts** — prompts, skills, agents, and configs generated for your platform
 - **Context artifacts** — style guides, reference materials, and examples
-- **AI Building Block Spec** (`[name]-building-block-spec.md`) — which includes the evaluation criteria and test scenarios defined during [Design](design.md)
+- **AI Building Block Spec** (`[name]-building-block-spec.md`) — which includes the evaluation criteria and test scenarios defined during [Design](../design/)
 
 Your first run is a test, not a deployment. The goal is to verify that the workflow produces good output before you share it with your team or use it on real work.
 
@@ -21,7 +21,7 @@ Start with a single test — pick one realistic scenario and run the workflow en
 - **Does it produce output?** — Is there a result, or does it stall?
 - **Is the output in the right format?** — Does it look like what you expected?
 
-If any of these fail, go back to [Build](build/index.mdx) and fix the obvious issue before continuing. Common first-run problems:
+If any of these fail, go back to [Build](../build/) and fix the obvious issue before continuing. Common first-run problems:
 
 - Missing context files the model references but cannot find
 - MCP connections that are not configured or are not responding
@@ -51,7 +51,7 @@ For each test scenario:
 
 3. **Note specific issues** — What exactly was wrong? Which dimension scored low and why?
 
-Record your scores. These become your baseline for measuring improvement (during this test cycle) and regression (during [Improve](improve.md)).
+Record your scores. These become your baseline for measuring improvement (during this test cycle) and regression (during [Improve](../improve/)).
 
 ### Evaluate Building Blocks in Isolation
 
@@ -70,7 +70,7 @@ After running the full eval suite, calculate an average score across all scenari
 Record the baseline alongside your individual scores. You will use this number in two ways:
 
 1. **During this test cycle** — to measure whether your fixes are improving things
-2. **During [Improve (Step 7)](improve.md)** — to detect quality regression over time
+2. **During [Improve (Step 7)](../improve/)** — to detect quality regression over time
 
 :::note[What's a passing score?]
 There is no universal threshold. A workflow that drafts internal meeting notes might be fine at 3.5 average. A workflow that generates client-facing proposals might need 4.5. You decide what "ready" means based on how much manual editing you are willing to accept.
@@ -107,16 +107,16 @@ If you chose the code-first architecture approach during Design, you may encount
 
 After testing and iterating, you reach one of two outcomes:
 
-**Ready to deploy.** You can run the workflow on a new scenario and trust the output without heavy editing. Your eval scores are at or above the threshold you set. Move to **[Step 6: Run](run.md)**.
+**Ready to deploy.** You can run the workflow on a new scenario and trust the output without heavy editing. Your eval scores are at or above the threshold you set. Move to **[Step 6: Run](../run/)**.
 
-**Not ready.** One or more dimensions consistently score below your threshold. Go back to **[Step 4: Build](build/index.mdx)**, fix the identified building blocks, and return to Test. Re-run the full eval suite — do not skip scenarios that passed previously, because a fix in one area can affect others.
+**Not ready.** One or more dimensions consistently score below your threshold. Go back to **[Step 4: Build](../build/)**, fix the identified building blocks, and return to Test. Re-run the full eval suite — do not skip scenarios that passed previously, because a fix in one area can affect others.
 
 :::note[2-4 iterations is normal]
-Most workflows need multiple rounds of Build-then-Test before they are ready for deployment. Each iteration should be targeted — fix a specific issue, re-test, and measure improvement. If you have been through four iterations and scores are not improving, consider going back to [Design (Step 3)](design.md) to re-examine your architecture decisions.
+Most workflows need multiple rounds of Build-then-Test before they are ready for deployment. Each iteration should be targeted — fix a specific issue, re-test, and measure improvement. If you have been through four iterations and scores are not improving, consider going back to [Design (Step 3)](../design/) to re-examine your architecture decisions.
 :::
 ## How to Use This
 
-This step is facilitated by the **`test`** Business-First AI Framework skill. See [Get the Skills](skills.mdx) for installation instructions across all supported platforms.
+This step is facilitated by the **`test`** Business-First AI Framework skill. See [Get the Skills](../skills/) for installation instructions across all supported platforms.
 
 **Start with this prompt:**
 
@@ -128,7 +128,7 @@ The skill guides you through the smoke test, eval suite, building block evals, b
 
 ## Related
 
-- [Design Your AI Workflow](design.md) — where evaluation criteria and test scenarios are defined
-- [Build](build/index.mdx) — where you fix issues identified during testing
-- [Run](run.md) — the next step once your workflow passes testing
-- [Improve](improve.md) — where you re-run evals to detect regression on deployed workflows
+- [Design Your AI Workflow](../design/) — where evaluation criteria and test scenarios are defined
+- [Build](../build/) — where you fix issues identified during testing
+- [Run](../run/) — the next step once your workflow passes testing
+- [Improve](../improve/) — where you re-run evals to detect regression on deployed workflows

@@ -8,7 +8,7 @@ import { Tabs, TabItem } from '@astrojs/starlight/components';
 Skills for building a structured registry of your AI workflows and skills — naming conventions, documentation templates (SOPs and process guides), Notion registration, and GitHub syncing. These are plain-text Markdown files that work in any AI tool. Download them from GitHub, install as a Claude Code plugin, or paste directly into your system prompt to give any AI assistant your registry conventions.
 
 :::note[Prerequisites]
-These skills work best with a **Notion account** and the **Notion MCP connector**. Without it, Claude can follow the naming and documentation conventions but cannot save entries to Notion. See [Notion Registry Setup](../../builder-setup/notion-registry-setup.md) for configuration instructions.
+These skills work best with a **Notion account** and the **Notion MCP connector**. Without it, Claude can follow the naming and documentation conventions but cannot save entries to Notion. See [Notion Registry Setup](../../../builder-setup/notion-registry-setup/) for configuration instructions.
 :::
 ## Get These Skills
 
@@ -21,7 +21,7 @@ Download from GitHub and add to your platform's skill directory:
 
 GitHub [Browse on GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins/ai-registry)
 
-Works with **Claude Code, Cursor, Codex CLI, Gemini CLI, VS Code Copilot**, and more. See [How to Add Skills to Your Platform](../../agentic-building-blocks/skills/index.mdx#how-to-add-skills-to-your-platform) for step-by-step instructions for each tool.
+Works with **Claude Code, Cursor, Codex CLI, Gemini CLI, VS Code Copilot**, and more. See [How to Add Skills to Your Platform](../../../agentic-building-blocks/skills/#how-to-add-skills-to-your-platform) for step-by-step instructions for each tool.
 
 You can also paste any skill file directly into your system prompt, project instructions, or custom GPT.
   </TabItem>
@@ -33,7 +33,7 @@ One-command install with automatic slash commands:
 /plugin install ai-registry@handsonai
 ```
 
-See [Using Plugins](using-plugins.mdx) for setup details, including [Claude.ai upload](using-plugins.mdx#using-skills-in-claudeai-web), [Cowork](using-plugins.mdx#using-plugins-in-claude-cowork), and [API usage](using-plugins.mdx#using-skills-via-the-claude-api).
+See [Using Plugins](../using-plugins/) for setup details, including [Claude.ai upload](../using-plugins/#using-skills-in-claudeai-web), [Cowork](../using-plugins/#using-plugins-in-claude-cowork), and [API usage](../using-plugins/#using-skills-via-the-claude-api).
   </TabItem>
 </Tabs>
 
@@ -307,7 +307,7 @@ These skills work best in sequence, building from naming through to version cont
 No. Each skill works independently. Start with `naming-workflows` if you're building a registry from scratch, or `registering-building-blocks` if you just want to track your existing Claude building blocks (skills, agents, prompts, etc.).
 
 **What if I don't have Notion set up?**
-Claude will still follow the naming conventions, SOP templates, and documentation patterns — it just won't save to Notion. See [Notion Registry Setup](../../builder-setup/notion-registry-setup.md) to configure the MCP connector.
+Claude will still follow the naming conventions, SOP templates, and documentation patterns — it just won't save to Notion. See [Notion Registry Setup](../../../builder-setup/notion-registry-setup/) to configure the MCP connector.
 
 **What's the difference between a Process Guide and an SOP?**
 A Process Guide is strategic: when to execute, why it matters, what order the workflows go in. An SOP is tactical: step-by-step instructions for executing a single workflow. Think of the Process Guide as the playbook and SOPs as the play pages.

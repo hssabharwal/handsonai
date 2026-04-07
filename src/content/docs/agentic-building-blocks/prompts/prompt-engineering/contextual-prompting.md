@@ -5,7 +5,7 @@ description: How to provide relevant background information in your prompt so th
 
 :::note[Contextual Prompting vs. the Context Building Block]
 
-This page covers **contextual prompting** — the technique of including relevant information *within your prompt text*. This is different from the broader [Context building block](../../context/index.md), which covers attaching files, knowledge bases, system prompts, and other external context sources. Think of contextual prompting as one way to provide context; the Context building block covers all the ways.
+This page covers **contextual prompting** — the technique of including relevant information *within your prompt text*. This is different from the broader [Context building block](../../../context/), which covers attaching files, knowledge bases, system prompts, and other external context sources. Think of contextual prompting as one way to provide context; the Context building block covers all the ways.
 :::
 ## What It Is
 
@@ -125,11 +125,11 @@ Task: Analyze the likely causes of the churn increase and suggest
 :::
 ## Related Techniques
 
-- [Context building block](../../context/index.md) — the comprehensive guide to all forms of context (files, knowledge bases, system prompts, and more)
-- [Role Prompting](role-prompting.md) — set the model's perspective as a form of context
-- [Direct Instruction](direct-instruction.md) — combine clear commands with rich context for the best results
-- [Prompt Engineering Overview](index.md)
-- [Research use case](../../../use-cases/research/index.md)
+- [Context building block](../../../context/) — the comprehensive guide to all forms of context (files, knowledge bases, system prompts, and more)
+- [Role Prompting](../role-prompting/) — set the model's perspective as a form of context
+- [Direct Instruction](../direct-instruction/) — combine clear commands with rich context for the best results
+- [Prompt Engineering Overview](../)
+- [Research use case](../../../../use-cases/research/)
 
 ## Further Reading
 

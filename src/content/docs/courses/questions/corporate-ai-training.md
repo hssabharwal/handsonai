@@ -14,8 +14,8 @@ Every corporate engagement is tailored from the ground up:
 - **Needs assessment** — Understanding your team's current AI maturity, industry context, and business goals
 - **Hands-on format** — Participants build real workflows and systems during the training, not just watch slides
 - **Platform coverage** — Training across major AI platforms (Claude, ChatGPT, Gemini, Copilot) so your team isn't locked into a single vendor
-- **AI-first process design** — Applying the [Business-First AI Framework](../../business-first-ai-framework/index.md) to your actual business processes
-- **Follow-up resources** — Access to the [Hands-on AI Playbook](../../index.md) for continued learning after the engagement
+- **AI-first process design** — Applying the [Business-First AI Framework](../../../business-first-ai-framework/) to your actual business processes
+- **Follow-up resources** — Access to the [Hands-on AI Playbook](../../) for continued learning after the engagement
 
 ## Who It's For
 
@@ -39,7 +39,7 @@ Every corporate engagement is tailored from the ground up:
 - Former **CIO and CPO** with hands-on enterprise transformation experience
 - **10 years at Microsoft** building enterprise data platforms
 - **5,000+ executives** trained globally in AI strategy and implementation
-- Creator of the [Business-First AI Framework](../../business-first-ai-framework/index.md) methodology
+- Creator of the [Business-First AI Framework](../../../business-first-ai-framework/) methodology
 
 ## Get Started
 

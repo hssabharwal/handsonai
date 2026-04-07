@@ -1,7 +1,7 @@
 ---
 title: "Example: Content Calendar Planning"
 description: A complete worked example showing the framework deliverables — Workflow Definition, AI Building Block Spec, and workflow prompt — for a real content calendar planning workflow.
----This page walks through the complete output of running a real workflow through the [Business-First AI Framework](../index.md). The workflow is **Content Calendar Planning** — a weekly process for planning and sequencing content across LinkedIn, Substack, X, and YouTube.
+---This page walks through the complete output of running a real workflow through the [Business-First AI Framework](../..//). The workflow is **Content Calendar Planning** — a weekly process for planning and sequencing content across LinkedIn, Substack, X, and YouTube.
 
 The first four steps of the framework — Analyze, Deconstruct, Design, and Build — produced three key deliverables for this workflow. Each one is a detailed markdown document. This page summarizes what's in each and why it matters — then links to the full file on GitHub where you can read every table, every decision point, and every failure mode at full width.
 
@@ -13,7 +13,7 @@ The first four steps of the framework — Analyze, Deconstruct, Design, and Buil
 
 [GitHub View full Workflow Definition on GitHub](https://github.com/jamesgray-ai/handsonai/blob/main/examples/content-calendar-planning/workflow-definition.md)
 
-The Workflow Definition is what [Deconstruct](../deconstruct/index.md) produces. What started as "I plan content on Sundays" became **10 refined steps across four phases** after the six-question deep dive.
+The Workflow Definition is what [Deconstruct](../../deconstruct/) produces. What started as "I plan content on Sundays" became **10 refined steps across four phases** after the six-question deep dive.
 
 **What's inside:**
 
@@ -32,7 +32,7 @@ The Workflow Definition is what [Deconstruct](../deconstruct/index.md) produces.
 
 [GitHub View full Building Block Spec on GitHub](https://github.com/jamesgray-ai/handsonai/blob/main/examples/content-calendar-planning/building-block-spec.md)
 
-The AI Building Block Spec is what [Design](../design.md) produces from the Workflow Definition. It classifies each step on the autonomy spectrum, identifies which steps should become reusable skills, and recommends an implementation order.
+The AI Building Block Spec is what [Design](../../design/) produces from the Workflow Definition. It classifies each step on the autonomy spectrum, identifies which steps should become reusable skills, and recommends an implementation order.
 
 **What's inside:**
 
@@ -52,7 +52,7 @@ The AI Building Block Spec is what [Design](../design.md) produces from the Work
 
 [GitHub View full Workflow Prompt on GitHub](https://github.com/jamesgray-ai/handsonai/blob/main/examples/content-calendar-planning/baseline-prompt.md)
 
-The workflow prompt is one of the platform artifacts that [Build (Step 4)](../build/index.mdx) produces. This is the ready-to-run prompt you paste into any AI tool to execute the workflow.
+The workflow prompt is one of the platform artifacts that [Build (Step 4)](../../build/) produces. This is the ready-to-run prompt you paste into any AI tool to execute the workflow.
 
 **What's inside:**
 
@@ -80,12 +80,12 @@ A few things to take away from this example:
 
 Ready to run your own workflow through the framework?
 
-- **[Step 1 — Analyze](../analyze.md)**: Find which of your workflows are candidates for AI
-- **[Step 2 — Deconstruct](../deconstruct/index.md)**: Break your chosen workflow into atomic steps
-- **[Step 3 — Design](../design.md)**: Design the AI implementation architecture
-- **[Step 4 — Build](../build/index.mdx)**: Generate platform artifacts
-- **[Step 5 — Test](../test.md)**: Evaluate output quality and establish a baseline
-- **[Step 6 — Run](../run.md)**: Deploy and operate the workflow
-- **[Step 7 — Improve](../improve.md)**: Evaluate and evolve running workflows
+- **[Step 1 — Analyze](../../analyze/)**: Find which of your workflows are candidates for AI
+- **[Step 2 — Deconstruct](../../deconstruct/)**: Break your chosen workflow into atomic steps
+- **[Step 3 — Design](../../design/)**: Design the AI implementation architecture
+- **[Step 4 — Build](../../build/)**: Generate platform artifacts
+- **[Step 5 — Test](../../test/)**: Evaluate output quality and establish a baseline
+- **[Step 6 — Run](../../run/)**: Deploy and operate the workflow
+- **[Step 7 — Improve](../../improve/)**: Evaluate and evolve running workflows
 
-Or start from the [Business-First AI Framework overview](../index.md) for the full methodology.
+Or start from the [Business-First AI Framework overview](../..//) for the full methodology.

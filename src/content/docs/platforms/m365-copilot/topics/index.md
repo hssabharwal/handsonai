@@ -8,10 +8,10 @@ description: Documentation and key features for Microsoft 365 Copilot, Azure Ope
 *Topics will be listed here as they are added.*
 
 <!-- Example format:
-- [Copilot Overview](./copilot-overview.md)
-- [Azure OpenAI Setup](./azure-openai-setup.md)
-- [Copilot Studio](./copilot-studio.md)
-- [Graph Integration](./graph-integration.md)
+- [Copilot Overview](./copilot-overview/)
+- [Azure OpenAI Setup](./azure-openai-setup/)
+- [Copilot Studio](./copilot-studio/)
+- [Graph Integration](./graph-integration/)
 -->
 
 ## Key Features

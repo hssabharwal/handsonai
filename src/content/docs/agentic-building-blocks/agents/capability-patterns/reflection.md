@@ -65,10 +65,10 @@ The agent revises the function to add an empty-list check and renames the variab
 
 ## Related Patterns
 
-- [Planning](planning.md) — Reflection can evaluate whether a plan is complete before execution begins
-- [Multi-Agent Collaboration](multi-agent-collaboration.md) — A dedicated critic agent is a form of multi-agent collaboration
-- [Guardrails](guardrails.md) — Guardrails enforce hard constraints; reflection handles softer quality improvements
-- [Agent Capability Patterns](index.md)
+- [Planning](../planning/) — Reflection can evaluate whether a plan is complete before execution begins
+- [Multi-Agent Collaboration](../multi-agent-collaboration/) — A dedicated critic agent is a form of multi-agent collaboration
+- [Guardrails](../guardrails/) — Guardrails enforce hard constraints; reflection handles softer quality improvements
+- [Agent Capability Patterns](../)
 
 ## Further Reading
 
