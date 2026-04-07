@@ -31,7 +31,7 @@ Context alone (without a project) is sufficient when:
 - You have 1-2 files to share — small enough to attach or paste inline
 - The context changes every time — different documents, different data
 
-When you find yourself re-uploading the same context repeatedly, that's a signal to use a [Project](../projects/index.md) to organize it persistently.
+When you find yourself re-uploading the same context repeatedly, that's a signal to use a [Project](../projects/) to organize it persistently.
 
 ## Platform Implementations
 
@@ -67,8 +67,8 @@ Context makes prompts smarter. Projects organize context persistently so you don
 
 ## Related
 
-- [Context Graphs](context-graphs.md) — structured decision and reasoning graphs for agentic AI
-- [Agentic Building Blocks](../index.md) — Context in the context of all building blocks
-- [AI Use Cases](../../use-cases/index.md) — what teams build with context, organized by six primitives
-- [Prompts](../prompts/index.md) — the instructions that context enhances
-- [Projects](../projects/index.md) — where context becomes persistent and organized
+- [Context Graphs](context-graphs/) — structured decision and reasoning graphs for agentic AI
+- [Agentic Building Blocks](../) — Context in the context of all building blocks
+- [AI Use Cases](../../use-cases/) — what teams build with context, organized by six primitives
+- [Prompts](../prompts/) — the instructions that context enhances
+- [Projects](../projects/) — where context becomes persistent and organized

@@ -1,14 +1,14 @@
 ---
 title: Design Your AI Workflow
 description: Gather architecture decisions, assess workflow autonomy level, choose an orchestration mechanism and involvement mode, classify steps on the autonomy spectrum, map AI building blocks, identify skill candidates, and document agent blueprints — producing a platform-agnostic AI Building Block Spec.
----> **Part of:** [Business-First AI Framework](index.md)
+---> **Part of:** [Business-First AI Framework](../)
 
 :::tip[New to the building blocks?]
-See the [Agentic Building Blocks](../agentic-building-blocks/index.md) reference for definitions, examples, and cross-platform comparisons of all blocks.
+See the [Agentic Building Blocks](../../agentic-building-blocks/) reference for definitions, examples, and cross-platform comparisons of all blocks.
 :::
 ## What This Is
 
-The Design phase is where you decide *how* your workflow should be built — before you build it. You take the Workflow Definition from the [Deconstruct step](deconstruct/index.md) and make design decisions. The Design skill supports both **step-decomposed** and **outcome-driven** Workflow Definitions:
+The Design phase is where you decide *how* your workflow should be built — before you build it. You take the Workflow Definition from the [Deconstruct step](../deconstruct/) and make design decisions. The Design skill supports both **step-decomposed** and **outcome-driven** Workflow Definitions:
 
 **For step-decomposed definitions**, you make five design decisions:
 
@@ -130,10 +130,10 @@ The orchestration mechanism recommendation includes an involvement mode — whet
 | **Augmented** | Human is in the loop — reviews, steers, or decides at key points during the run. | Web/desktop deployment, no scheduled execution |
 | **Automated** | AI runs solo — executes end-to-end without human involvement during the run. | Scheduled/unattended execution, CLI |
 
-The involvement mode is determined by your architecture decisions — platform, scheduled execution needs, and which steps require human review. See the [AI Workflow Design Matrix](workflow-design-matrix.md) for how autonomy and involvement combine into six workflow archetypes.
+The involvement mode is determined by your architecture decisions — platform, scheduled execution needs, and which steps require human review. See the [AI Workflow Design Matrix](../workflow-design-matrix/) for how autonomy and involvement combine into six workflow archetypes.
 
 :::note[Deeper architectural patterns]
-For detailed implementation blueprints (prompt chaining, routing, parallelization, orchestrator-workers, evaluator-optimizer, and autonomous agents), see [Workflow Architecture Patterns](../patterns/workflow-architecture/index.md).
+For detailed implementation blueprints (prompt chaining, routing, parallelization, orchestrator-workers, evaluator-optimizer, and autonomous agents), see [Workflow Architecture Patterns](../../patterns/workflow-architecture/).
 :::
 ---
 
@@ -195,7 +195,7 @@ This detail enables generation of skills on any platform during the Build step.
 
 ## Agent Blueprints
 
-When the orchestration mechanism is Agent, document each agent your workflow needs. These are platform-agnostic specifications — the model builds them into working agents during [Build](build/index.mdx). Whether the workflow needs one agent or multiple agents is decided here based on the number of distinct roles, expertise domains, and orchestration needs.
+When the orchestration mechanism is Agent, document each agent your workflow needs. These are platform-agnostic specifications — the model builds them into working agents during [Build](../build/). Whether the workflow needs one agent or multiple agents is decided here based on the number of distinct roles, expertise domains, and orchestration needs.
 
 | Component | What to specify |
 |-----------|----------------|
@@ -233,7 +233,7 @@ The output is the same AI Building Block Spec format, with Capability Domain Map
 
 ## How to Use This
 
-This step is facilitated by the **`design`** Business-First AI Framework Skill. How you get it depends on your platform — see [Get the Skills](skills.mdx) for installation instructions.
+This step is facilitated by the **`design`** Business-First AI Framework Skill. How you get it depends on your platform — see [Get the Skills](../skills/) for installation instructions.
 
 **Start with this prompt:**
 
@@ -268,7 +268,7 @@ Once the architecture decisions, autonomy level, and orchestration mechanism are
 | **Codex CLI** | Run with the `--plan` flag |
 | **Other AI tools** | Ask the model: *"Switch to plan mode. Based on the architecture decisions, autonomy level, and orchestration mechanism we've agreed on, plan the full AI Building Block Spec — classify each step, map building blocks, identify skill candidates, and document agent blueprints."* |
 
-After the model produces the plan, **review and approve the AI Building Block Spec** before moving on. If anything needs adjustment — a step classification, a skill candidate, an agent blueprint — now is the time. Once you approve, the model transitions to [Build (Step 4)](build/index.mdx) and begins building.
+After the model produces the plan, **review and approve the AI Building Block Spec** before moving on. If anything needs adjustment — a step classification, a skill candidate, an agent blueprint — now is the time. Once you approve, the model transitions to [Build (Step 4)](../build/) and begins building.
 
 ## What This Produces
 
@@ -290,4 +290,4 @@ The **AI Building Block Spec** contains:
 - **Tools and connectors** — external integrations required
 - **Implementation order** — quick wins → semi-autonomous → complex agent steps
 
-This AI Building Block Spec is the input for [Step 4: Build](build/index.mdx), where the model generates platform-appropriate artifacts (prompts, skills, agents, connectors) based on your orchestration mechanism and architecture decisions.
+This AI Building Block Spec is the input for [Step 4: Build](../build/), where the model generates platform-appropriate artifacts (prompts, skills, agents, connectors) based on your orchestration mechanism and architecture decisions.

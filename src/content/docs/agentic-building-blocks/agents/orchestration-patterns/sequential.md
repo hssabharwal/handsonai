@@ -62,18 +62,18 @@ Each agent is a specialist. The Writer never sees raw search results — it rece
 
 ## When NOT to Use It
 
-- Stages are independent and could run simultaneously — use [Parallel](parallel.md) instead
-- The number or order of stages isn't known until runtime — use [Hierarchical](hierarchical.md) instead
-- The task requires iteration between stages (writer ↔ editor back-and-forth) — use [Evaluator-Optimizer](evaluator-optimizer.md) instead
+- Stages are independent and could run simultaneously — use [Parallel](../parallel/) instead
+- The number or order of stages isn't known until runtime — use [Hierarchical](../hierarchical/) instead
+- The task requires iteration between stages (writer ↔ editor back-and-forth) — use [Evaluator-Optimizer](../evaluator-optimizer/) instead
 - You only need one agent — adding a pipeline adds complexity without benefit
 
 ## Related Patterns
 
-- [Parallel](parallel.md) — run independent stages simultaneously instead of sequentially
-- [Evaluator-Optimizer](evaluator-optimizer.md) — adds a feedback loop between generator and evaluator
-- [Hierarchical](hierarchical.md) — dynamic task decomposition when stages aren't fixed
-- [Prompt Chaining](../../../patterns/workflow-architecture/prompt-chaining.md) — the single-agent equivalent (sequential LLM calls without separate agents)
-- [Orchestration Patterns Overview](index.md)
+- [Parallel](../parallel/) — run independent stages simultaneously instead of sequentially
+- [Evaluator-Optimizer](../evaluator-optimizer/) — adds a feedback loop between generator and evaluator
+- [Hierarchical](../hierarchical/) — dynamic task decomposition when stages aren't fixed
+- [Prompt Chaining](../../../../patterns/workflow-architecture/prompt-chaining/) — the single-agent equivalent (sequential LLM calls without separate agents)
+- [Orchestration Patterns Overview](../)
 
 ## Further Reading
 

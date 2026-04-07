@@ -95,7 +95,7 @@ The quality gap between "build me a notification system" and a well-structured P
 
 ## Related
 
-- [User Stories & Acceptance Criteria](user-stories.md) — breaking PRD requirements into buildable pieces
-- [Software Development Lifecycle](sdlc.md) — where PRDs fit in the plan-build-test-ship cycle
-- [Roadmaps & Prioritization](roadmapping.md) — deciding which PRDs to write first
-- [Context](../agentic-building-blocks/context/index.md) — how AI tools use documents like PRDs as context
+- [User Stories & Acceptance Criteria](../user-stories/) — breaking PRD requirements into buildable pieces
+- [Software Development Lifecycle](../sdlc/) — where PRDs fit in the plan-build-test-ship cycle
+- [Roadmaps & Prioritization](../roadmapping/) — deciding which PRDs to write first
+- [Context](../../agentic-building-blocks/context/) — how AI tools use documents like PRDs as context

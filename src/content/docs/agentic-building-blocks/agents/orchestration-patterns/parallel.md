@@ -70,18 +70,18 @@ If two or more reviewers flag the same issue, it's high-confidence. Issues flagg
 
 ## When NOT to Use It
 
-- Subtasks depend on each other's output — use [Sequential](sequential.md) instead
-- You need agents to discuss and build on each other's ideas — use [Group Chat](group-chat.md) instead
-- The number of subtasks isn't known until runtime — use [Hierarchical](hierarchical.md) instead
+- Subtasks depend on each other's output — use [Sequential](../sequential/) instead
+- You need agents to discuss and build on each other's ideas — use [Group Chat](../group-chat/) instead
+- The number of subtasks isn't known until runtime — use [Hierarchical](../hierarchical/) instead
 - Running multiple agents costs more than the speed or quality benefit justifies
 
 ## Related Patterns
 
-- [Sequential](sequential.md) — for dependent stages that must happen in order
-- [Hierarchical](hierarchical.md) — the coordinator dynamically decides what to parallelize
-- [Group Chat](group-chat.md) — agents interact with each other instead of working independently
-- [Parallelization](../../../patterns/workflow-architecture/parallelization.md) — the workflow architecture equivalent
-- [Orchestration Patterns Overview](index.md)
+- [Sequential](../sequential/) — for dependent stages that must happen in order
+- [Hierarchical](../hierarchical/) — the coordinator dynamically decides what to parallelize
+- [Group Chat](../group-chat/) — agents interact with each other instead of working independently
+- [Parallelization](../../../../patterns/workflow-architecture/parallelization/) — the workflow architecture equivalent
+- [Orchestration Patterns Overview](../)
 
 ## Further Reading
 

@@ -85,7 +85,7 @@ AI compresses the build-test phase dramatically. Tasks that took a sprint can ha
 
 ## Related
 
-- [Product Requirements](requirements.md) — the document that kicks off the Plan phase
-- [User Stories & Acceptance Criteria](user-stories.md) — how work gets broken into buildable pieces
-- [Project Tracking with GitHub](tracking.md) — the tools teams use to manage the Build phase
-- [Agents](../agentic-building-blocks/agents/index.md) — AI agents that handle the Build and Test phases autonomously
+- [Product Requirements](../requirements/) — the document that kicks off the Plan phase
+- [User Stories & Acceptance Criteria](../user-stories/) — how work gets broken into buildable pieces
+- [Project Tracking with GitHub](../tracking/) — the tools teams use to manage the Build phase
+- [Agents](../../agentic-building-blocks/agents/) — AI agents that handle the Build and Test phases autonomously

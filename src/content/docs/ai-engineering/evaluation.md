@@ -116,8 +116,8 @@ The goal isn't perfection. It's *knowing where you stand* and *improving deliber
 
 ## Related
 
-- [Product & Engineering](../product-engineering/index.md) — the parent section
-- [Context Engineering](context-engineering.md) — designing the context that evals measure
-- [Agentic Building Blocks](../agentic-building-blocks/index.md) — the components that evaluation applies to
-- [Prompts](../agentic-building-blocks/prompts/index.md) — prompt changes are the most common trigger for re-evaluation
-- [Patterns](../patterns/index.md) — reusable approaches including the Evaluator-Optimizer pattern
+- [Product & Engineering](../../product-engineering/) — the parent section
+- [Context Engineering](../context-engineering/) — designing the context that evals measure
+- [Agentic Building Blocks](../../agentic-building-blocks/) — the components that evaluation applies to
+- [Prompts](../../agentic-building-blocks/prompts/) — prompt changes are the most common trigger for re-evaluation
+- [Patterns](../../patterns/) — reusable approaches including the Evaluator-Optimizer pattern

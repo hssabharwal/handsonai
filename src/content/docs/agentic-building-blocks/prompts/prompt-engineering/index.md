@@ -26,10 +26,10 @@ These are the building blocks — techniques you will use daily.
 
 | Technique | What It Does | Best For |
 |-----------|-------------|----------|
-| [Zero-Shot Prompting](zero-shot-prompting.md) | Ask the model to perform a task with no examples | Simple, well-defined tasks |
-| [Few-Shot Learning](few-shot-learning.md) | Provide examples so the model learns the pattern | Custom formats, tone matching, classification |
-| [Chain-of-Thought](chain-of-thought.md) | Ask the model to reason step by step | Math, logic, analysis, complex decisions |
-| [Direct Instruction](direct-instruction.md) | Give explicit, imperative commands | Any task where clarity matters |
+| [Zero-Shot Prompting](zero-shot-prompting/) | Ask the model to perform a task with no examples | Simple, well-defined tasks |
+| [Few-Shot Learning](few-shot-learning/) | Provide examples so the model learns the pattern | Custom formats, tone matching, classification |
+| [Chain-of-Thought](chain-of-thought/) | Ask the model to reason step by step | Math, logic, analysis, complex decisions |
+| [Direct Instruction](direct-instruction/) | Give explicit, imperative commands | Any task where clarity matters |
 
 ### Shaping Techniques
 
@@ -37,10 +37,10 @@ These techniques control *how* the model approaches your task.
 
 | Technique | What It Does | Best For |
 |-----------|-------------|----------|
-| [Contextual Prompting](contextual-prompting.md) | Embed background information in the prompt | Domain-specific tasks, personalized output |
-| [Role Prompting](role-prompting.md) | Assign the model a persona or expertise | Specialized knowledge, audience-appropriate tone |
-| [Output Formatting](output-formatting.md) | Specify the structure and format of the response | Reports, data extraction, structured content |
-| [Multi-Turn Conversation](multi-turn-conversation.md) | Build on previous exchanges to refine results | Exploration, iterative refinement, complex projects |
+| [Contextual Prompting](contextual-prompting/) | Embed background information in the prompt | Domain-specific tasks, personalized output |
+| [Role Prompting](role-prompting/) | Assign the model a persona or expertise | Specialized knowledge, audience-appropriate tone |
+| [Output Formatting](output-formatting/) | Specify the structure and format of the response | Reports, data extraction, structured content |
+| [Multi-Turn Conversation](multi-turn-conversation/) | Build on previous exchanges to refine results | Exploration, iterative refinement, complex projects |
 
 ### Quality Techniques
 
@@ -48,9 +48,9 @@ These techniques improve the reliability and depth of outputs.
 
 | Technique | What It Does | Best For |
 |-----------|-------------|----------|
-| [Self-Consistency and Reflection](self-consistency-and-reflection.md) | Ask the model to check and critique its own work | High-stakes decisions, error reduction |
-| [Emotional Prompting](emotional-prompting.md) | Add motivational or stakes-based language | Tasks where engagement and effort matter |
-| [Reframing Prompts](reframing-prompts.md) | Rephrase a question to approach it differently | When initial prompts give poor results |
+| [Self-Consistency and Reflection](self-consistency-and-reflection/) | Ask the model to check and critique its own work | High-stakes decisions, error reduction |
+| [Emotional Prompting](emotional-prompting/) | Add motivational or stakes-based language | Tasks where engagement and effort matter |
+| [Reframing Prompts](reframing-prompts/) | Rephrase a question to approach it differently | When initial prompts give poor results |
 
 ### Specialized Techniques
 
@@ -58,21 +58,21 @@ These techniques solve specific types of problems.
 
 | Technique | What It Does | Best For |
 |-----------|-------------|----------|
-| [Style Unbundling](style-unbundling.md) | Decompose a writing style into separate attributes | Matching a specific voice or tone |
-| [Summarization and Distillation](summarization-and-distillation.md) | Compress or restructure information | Long documents, research synthesis |
-| [Real-World Constraints](real-world-constraints.md) | Embed business rules and practical limits into prompts | Feasible plans, budget-aware output |
+| [Style Unbundling](style-unbundling/) | Decompose a writing style into separate attributes | Matching a specific voice or tone |
+| [Summarization and Distillation](summarization-and-distillation/) | Compress or restructure information | Long documents, research synthesis |
+| [Real-World Constraints](real-world-constraints/) | Embed business rules and practical limits into prompts | Feasible plans, budget-aware output |
 
 ## Where to Start
 
-**New to prompting?** Start with [Zero-Shot Prompting](zero-shot-prompting.md) and [Direct Instruction](direct-instruction.md) — these two techniques cover most everyday tasks.
+**New to prompting?** Start with [Zero-Shot Prompting](zero-shot-prompting/) and [Direct Instruction](direct-instruction/) — these two techniques cover most everyday tasks.
 
-**Want better results?** Add [Few-Shot Learning](few-shot-learning.md) to teach the model your preferred format, then use [Chain-of-Thought](chain-of-thought.md) for anything requiring reasoning.
+**Want better results?** Add [Few-Shot Learning](few-shot-learning/) to teach the model your preferred format, then use [Chain-of-Thought](chain-of-thought/) for anything requiring reasoning.
 
-**Working on something complex?** Combine techniques — for example, use [Role Prompting](role-prompting.md) + [Contextual Prompting](contextual-prompting.md) + [Output Formatting](output-formatting.md) to get expert-level, structured responses grounded in your specific domain.
+**Working on something complex?** Combine techniques — for example, use [Role Prompting](role-prompting/) + [Contextual Prompting](contextual-prompting/) + [Output Formatting](output-formatting/) to get expert-level, structured responses grounded in your specific domain.
 
 ## Related
 
-- [Prompts](../index.md) — The Prompts building block overview
-- [Resources](resources.md) — Academic papers and platform documentation
-- [Patterns](../../../patterns/index.md) — Reusable AI patterns and best practices
-- [Use Cases](../../../use-cases/index.md) — See these techniques applied to real tasks
+- [Prompts](../) — The Prompts building block overview
+- [Resources](resources/) — Academic papers and platform documentation
+- [Patterns](../../../patterns/) — Reusable AI patterns and best practices
+- [Use Cases](../../../use-cases/) — See these techniques applied to real tasks

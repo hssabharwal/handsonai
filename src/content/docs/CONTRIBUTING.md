@@ -19,9 +19,9 @@ description: How to add content — questions, how-to guides, topics, and patter
 
 | Type | Template |
 |------|----------|
-| Question (AEO) | [question-template.md](./_templates/question-template.md) |
-| How-To Guide | [how-to-template.md](./_templates/how-to-template.md) |
-| Topic | [topic-template.md](./_templates/topic-template.md) |
+| Question (AEO) | [question-template.md](https://github.com/jamesgray-ai/handsonai/blob/main/src/_templates/question-template.md) |
+| How-To Guide | [how-to-template.md](https://github.com/jamesgray-ai/handsonai/blob/main/src/_templates/how-to-template.md) |
+| Topic | [topic-template.md](https://github.com/jamesgray-ai/handsonai/blob/main/src/_templates/topic-template.md) |
 | Pattern | Use topic template |
 | Troubleshooting | Use how-to template |
 
@@ -148,8 +148,8 @@ When you add a new file, update the README.md in that section to include a link:
 ```markdown
 ## Guides
 
-- [How to Stream Responses](./stream-responses.md) - `openai` `claude`
-- [How to Handle Rate Limits](./handle-rate-limits.md) - `all`
+- [How to Stream Responses](./stream-responses/) - `openai` `claude`
+- [How to Handle Rate Limits](./handle-rate-limits/) - `all`
 ```
 
 ## Adding Setup Guides

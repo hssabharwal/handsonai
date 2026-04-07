@@ -1,7 +1,7 @@
 ---
 title: "Analyze Examples — Sample AI Opportunity Reports"
 description: Two complete AI Opportunity Report examples showing what the Analyze step produces — a Marketing Operations Manager and an AI Instructor.
----These are three synthetic AI Opportunity Reports showing what the Analyze step produces. Use them as a reference for format, level of detail, and how opportunities are classified on the [AI Workflow Design Matrix](workflow-design-matrix.md).
+---These are three synthetic AI Opportunity Reports showing what the Analyze step produces. Use them as a reference for format, level of detail, and how opportunities are classified on the [AI Workflow Design Matrix](../workflow-design-matrix/).
 
 - **Example 1** — Marketing Operations Manager at a B2B SaaS company (Individual lens, 7 opportunities)
 - **Example 2** — AI Instructor running courses and maintaining a knowledge base (Individual lens, 7 opportunities)

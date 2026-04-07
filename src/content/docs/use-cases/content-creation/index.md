@@ -9,7 +9,7 @@ This primitive covers any workflow where the primary output is a piece of conten
 
 Content creation use cases scale from simple (rewriting an email for a different audience) to complex (generating a complete content calendar with drafts for each piece, adapted to platform-specific requirements).
 
-*Content Creation is one of six use case primitives identified in OpenAI's [Identifying and Scaling AI Use Cases](../../resources/openai-use-cases-report.md) guide. The examples here are adapted to be platform-agnostic and mapped to [Agentic Building Blocks](../../agentic-building-blocks/index.md).*
+*Content Creation is one of six use case primitives identified in OpenAI's [Identifying and Scaling AI Use Cases](../../resources/openai-use-cases-report/) guide. The examples here are adapted to be platform-agnostic and mapped to [Agentic Building Blocks](../../agentic-building-blocks/).*
 
 ## Key Characteristics
 
@@ -30,9 +30,9 @@ Content creation use cases scale from simple (rewriting an email for a different
 
 **NOT the right primitive when:**
 
-- The main goal is gathering and synthesizing information (that's [Research](../research/index.md))
-- You're generating code, scripts, or technical artifacts (that's [Coding](../coding/index.md))
-- The content is a plan, strategy, or set of recommendations (that's [Ideation & Strategy](../ideation-and-strategy/index.md))
+- The main goal is gathering and synthesizing information (that's [Research](../research/))
+- You're generating code, scripts, or technical artifacts (that's [Coding](../coding/))
+- The content is a plan, strategy, or set of recommendations (that's [Ideation & Strategy](../ideation-and-strategy/))
 
 ## Department Examples
 
@@ -89,9 +89,9 @@ Content creation use cases scale from simple (rewriting an email for a different
 
 ## Related
 
-- [AI Use Cases Overview](index.md) — all six primitives at a glance
-- [Prompts](../../agentic-building-blocks/prompts/index.md) — writing effective instructions for content generation
-- [Context](../../agentic-building-blocks/context/index.md) — providing brand voice, style guides, and examples
-- [Skills](../../agentic-building-blocks/skills/index.mdx) — packaging content creation workflows for reuse
-- [Projects](../../agentic-building-blocks/projects/index.md) — persistent workspaces for recurring content workflows
-- [Content Creation Resources](resources.md) — curated reports, guides, and references
+- [AI Use Cases Overview](./) — all six primitives at a glance
+- [Prompts](../../agentic-building-blocks/prompts/) — writing effective instructions for content generation
+- [Context](../../agentic-building-blocks/context/) — providing brand voice, style guides, and examples
+- [Skills](../../agentic-building-blocks/skills/) — packaging content creation workflows for reuse
+- [Projects](../../agentic-building-blocks/projects/) — persistent workspaces for recurring content workflows
+- [Content Creation Resources](resources/) — curated reports, guides, and references

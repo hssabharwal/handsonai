@@ -14,7 +14,7 @@ Modern LLMs (large language models) are specifically trained to follow instructi
 ## When to Use It
 
 - Every prompt (this is a baseline technique, not situational)
-- When [zero-shot](zero-shot-prompting.md) results are close but not quite right
+- When [zero-shot](../zero-shot-prompting/) results are close but not quite right
 - When you need precise control over what the model does and doesn't do
 - When working with others who will reuse your prompts
 
@@ -102,11 +102,11 @@ and operational complexity. Respond in a two-column table.
 :::
 ## Related Techniques
 
-- [Zero-Shot Prompting](zero-shot-prompting.md) — direct instruction makes zero-shot prompts sharper
-- [Output Formatting](output-formatting.md) — specify exactly how the model should structure its response
-- [Contextual Prompting](contextual-prompting.md) — combine with context for domain-specific direct instructions
-- [Prompt Engineering Overview](index.md)
-- [Content Creation use case](../../../use-cases/content-creation/index.md)
+- [Zero-Shot Prompting](../zero-shot-prompting/) — direct instruction makes zero-shot prompts sharper
+- [Output Formatting](../output-formatting/) — specify exactly how the model should structure its response
+- [Contextual Prompting](../contextual-prompting/) — combine with context for domain-specific direct instructions
+- [Prompt Engineering Overview](../)
+- [Content Creation use case](../../../../use-cases/content-creation/)
 
 ## Further Reading
 

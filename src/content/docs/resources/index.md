@@ -5,14 +5,14 @@ description: Curated PDFs, reports, and guides from leading AI organizations —
 
 | Resource | Source | Topic |
 |----------|--------|-------|
-| [Identifying and Scaling AI Use Cases](openai-use-cases-report.md) | OpenAI | Enterprise AI adoption strategy and the six use case primitives |
-| [2026 Agentic Coding Trends Report](anthropic-coding-trends.md) | Anthropic | Eight trends reshaping software development with coding agents |
-| [The Complete Guide to Building Skills for Claude](anthropic-skills-guide.md) | Anthropic | End-to-end guide to planning, building, testing, and distributing Claude skills |
+| [Identifying and Scaling AI Use Cases](openai-use-cases-report/) | OpenAI | Enterprise AI adoption strategy and the six use case primitives |
+| [2026 Agentic Coding Trends Report](anthropic-coding-trends/) | Anthropic | Eight trends reshaping software development with coding agents |
+| [The Complete Guide to Building Skills for Claude](anthropic-skills-guide/) | Anthropic | End-to-end guide to planning, building, testing, and distributing Claude skills |
 
 ## How These Connect to the Playbook
 
 These resources informed key sections of the playbook:
 
-- **OpenAI Use Cases Report** — the foundation for the [six use case primitives](../use-cases/index.md) used throughout the playbook
-- **Anthropic Coding Trends** — context for the [Coding](../use-cases/coding/index.md) use case and [Agents](../agentic-building-blocks/agents/index.md) building block
-- **Anthropic Skills Guide** — the authoritative reference for the [Skills](../agentic-building-blocks/skills/index.mdx) building block and [Agents & Skills](../use-the-playbook/build/index.md) section
+- **OpenAI Use Cases Report** — the foundation for the [six use case primitives](../use-cases/) used throughout the playbook
+- **Anthropic Coding Trends** — context for the [Coding](../use-cases/coding/) use case and [Agents](../agentic-building-blocks/agents/) building block
+- **Anthropic Skills Guide** — the authoritative reference for the [Skills](../agentic-building-blocks/skills/) building block and [Agents & Skills](../use-the-playbook/build/) section

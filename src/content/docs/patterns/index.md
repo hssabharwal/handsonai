@@ -7,17 +7,17 @@ description: Reusable patterns for workflow architecture, prompting, agents, int
 
 Seven architectural patterns for AI workflows, ranging from simple augmented LLMs to fully autonomous agents. Use these patterns to choose the right level of complexity for your workflow.
 
-[Explore Workflow Architecture Patterns →](workflow-architecture/index.md)
+[Explore Workflow Architecture Patterns →](workflow-architecture/)
 
 ## Categories
 
 ### Prompting Patterns
 
-Patterns for structuring and optimizing prompts. See the [Prompt Engineering](../agentic-building-blocks/prompts/prompt-engineering/index.md) section for 14 detailed technique guides covering zero-shot, few-shot, chain-of-thought, and more.
+Patterns for structuring and optimizing prompts. See the [Prompt Engineering](../agentic-building-blocks/prompts/prompt-engineering/) section for 14 detailed technique guides covering zero-shot, few-shot, chain-of-thought, and more.
 
 ### Agent Patterns
 
-Patterns for building reliable AI agents. See [Agent Capability Patterns](../agentic-building-blocks/agents/capability-patterns/index.md) for seven patterns that make agents effective.
+Patterns for building reliable AI agents. See [Agent Capability Patterns](../agentic-building-blocks/agents/capability-patterns/) for seven patterns that make agents effective.
 
 ### Integration Patterns
 
@@ -29,11 +29,11 @@ Patterns for graceful failure and recovery.
 
 ## Adding a Pattern
 
-Patterns use the [topic template](../_templates/topic-template.md). Focus on:
+Patterns use the [topic template](https://github.com/jamesgray-ai/handsonai/blob/main/src/_templates/topic-template.md). Focus on:
 
 1. **Problem** - When to use this pattern
 2. **Solution** - The pattern structure
 3. **Example** - Working implementation
 4. **Variations** - Common adaptations
 
-See [CONTRIBUTING.md](../CONTRIBUTING.md) for guidelines.
+See [CONTRIBUTING.md](../CONTRIBUTING/) for guidelines.

@@ -9,7 +9,7 @@ Think of it like a writer and editor working together. The writer produces a dra
 
 ## Why It Matters
 
-Single-pass generation rarely produces the best possible output for complex tasks. The evaluator-optimizer pattern provides **measurable quality improvement** — each iteration either raises the score or the loop terminates. Unlike simple [reflection](../capability-patterns/reflection.md) (where one agent self-critiques), using a separate evaluator agent avoids confirmation bias and produces more rigorous feedback.
+Single-pass generation rarely produces the best possible output for complex tasks. The evaluator-optimizer pattern provides **measurable quality improvement** — each iteration either raises the score or the loop terminates. Unlike simple [reflection](../../capability-patterns/reflection/) (where one agent self-critiques), using a separate evaluator agent avoids confirmation bias and produces more rigorous feedback.
 
 This pattern is especially valuable when you have clear, objective quality criteria — factual accuracy, format compliance, code correctness, or rubric-based scoring. The evaluator can check things the generator can't: running tests, validating against a schema, or comparing against reference examples.
 
@@ -74,11 +74,11 @@ The evaluator has a concrete advantage here — it can actually *run* the code, 
 
 ## Related Patterns
 
-- [Reflection](../capability-patterns/reflection.md) — single-agent self-critique; evaluator-optimizer uses a separate evaluator for less bias
-- [Sequential](sequential.md) — one-pass pipeline vs. iterative refinement loop
-- [Hierarchical](hierarchical.md) — the coordinator may use evaluator-optimizer internally for quality-sensitive subtasks
-- [Evaluator-Optimizer (Workflow Architecture)](../../../patterns/workflow-architecture/evaluator-optimizer.md) — the single-agent workflow architecture equivalent
-- [Orchestration Patterns Overview](index.md)
+- [Reflection](../../capability-patterns/reflection/) — single-agent self-critique; evaluator-optimizer uses a separate evaluator for less bias
+- [Sequential](../sequential/) — one-pass pipeline vs. iterative refinement loop
+- [Hierarchical](../hierarchical/) — the coordinator may use evaluator-optimizer internally for quality-sensitive subtasks
+- [Evaluator-Optimizer (Workflow Architecture)](../../../../patterns/workflow-architecture/evaluator-optimizer/) — the single-agent workflow architecture equivalent
+- [Orchestration Patterns Overview](../)
 
 ## Further Reading
 

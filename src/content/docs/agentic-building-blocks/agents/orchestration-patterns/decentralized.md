@@ -74,19 +74,19 @@ Each agent acts independently based on shared signals. The incident response eme
 
 ## When NOT to Use It
 
-- The task has a predictable structure — use [Sequential](sequential.md), [Parallel](parallel.md), or [Hierarchical](hierarchical.md)
+- The task has a predictable structure — use [Sequential](../sequential/), [Parallel](../parallel/), or [Hierarchical](../hierarchical/)
 - Coordination overhead exceeds the benefit — simpler patterns are almost always better when they fit
 - You need guaranteed output quality — decentralized systems are harder to quality-control than centrally coordinated ones
-- The task requires a single coherent narrative or tightly integrated output — use [Hierarchical](hierarchical.md) with a synthesizing coordinator
+- The task requires a single coherent narrative or tightly integrated output — use [Hierarchical](../hierarchical/) with a synthesizing coordinator
 - You can't afford the complexity of shared state management, conflict resolution, and deadlock prevention
 
 ## Related Patterns
 
-- [Hierarchical](hierarchical.md) — centralized coordination; decentralized removes the coordinator
-- [Group Chat](group-chat.md) — agents also coordinate as peers, but through conversation rather than shared state
-- [Parallel](parallel.md) — agents work independently, but with a predetermined fan-out rather than emergent task selection
-- [Handoff](handoff.md) — peer-to-peer transfers, but sequential rather than concurrent
-- [Orchestration Patterns Overview](index.md)
+- [Hierarchical](../hierarchical/) — centralized coordination; decentralized removes the coordinator
+- [Group Chat](../group-chat/) — agents also coordinate as peers, but through conversation rather than shared state
+- [Parallel](../parallel/) — agents work independently, but with a predetermined fan-out rather than emergent task selection
+- [Handoff](../handoff/) — peer-to-peer transfers, but sequential rather than concurrent
+- [Orchestration Patterns Overview](../)
 
 ## Further Reading
 

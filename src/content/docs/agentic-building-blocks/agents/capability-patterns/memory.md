@@ -2,7 +2,7 @@
 title: Memory
 description: How AI agents store and retrieve information across interactions, enabling them to learn from experience and maintain context over time.
 ---:::tip[Memory as a building block]
-This page covers Memory as an **agent capability pattern** — the specific mechanisms agents use to store and retrieve information. For the broader concept of Memory as a platform-level building block, see [Memory](../../memory/index.md).
+This page covers Memory as an **agent capability pattern** — the specific mechanisms agents use to store and retrieve information. For the broader concept of Memory as a platform-level building block, see [Memory](../memory/).
 :::
 ## What It Is
 
@@ -80,15 +80,15 @@ Claude Code's `CLAUDE.md` files and memory directory are a practical implementat
 
 - Customer-facing systems where personalization improves the experience
 - Long-running projects where context accumulates over time
-- Agents that need to learn from mistakes (paired with [Reflection](reflection.md))
+- Agents that need to learn from mistakes (paired with [Reflection](../reflection/))
 - Any workflow where repeating context to the agent is a friction point
 
 ## Related Patterns
 
-- [Reflection](reflection.md) — Reflection generates insights that can be stored in memory for future use
-- [Planning](planning.md) — Memory of past plans helps the agent make better plans in the future
-- [Multi-Agent Collaboration](multi-agent-collaboration.md) — Shared memory allows agents to coordinate without direct communication
-- [Agent Capability Patterns](index.md)
+- [Reflection](../reflection/) — Reflection generates insights that can be stored in memory for future use
+- [Planning](../planning/) — Memory of past plans helps the agent make better plans in the future
+- [Multi-Agent Collaboration](../multi-agent-collaboration/) — Shared memory allows agents to coordinate without direct communication
+- [Agent Capability Patterns](../)
 
 ## Further Reading
 

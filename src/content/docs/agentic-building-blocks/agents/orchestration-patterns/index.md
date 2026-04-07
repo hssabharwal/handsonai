@@ -1,7 +1,7 @@
 ---
 title: Agent Orchestration Patterns
 description: Eight coordination topologies for multi-agent systems — from linear pipelines to decentralized swarms — with a selection guide for choosing the right pattern
----Orchestration patterns describe how multiple agents coordinate to accomplish a task. While [capability patterns](../capability-patterns/index.md) define what individual agents can *do* (reflect, use tools, plan), orchestration patterns define how agents *work together* — who talks to whom, who decides what, and how results flow between agents.
+---Orchestration patterns describe how multiple agents coordinate to accomplish a task. While [capability patterns](../capability-patterns/) define what individual agents can *do* (reflect, use tools, plan), orchestration patterns define how agents *work together* — who talks to whom, who decides what, and how results flow between agents.
 
 These eight patterns are drawn from research and production systems across Anthropic, Google, OpenAI, Microsoft, CrewAI, LangGraph, and others. They're platform-agnostic — the coordination topology is independent of which LLM or framework you use.
 
@@ -11,9 +11,9 @@ Three sections in the Playbook cover different lenses on agent systems:
 
 | Section | Lens | Question It Answers |
 |---------|------|---------------------|
-| [Capability Patterns](../capability-patterns/index.md) | What agents can **do** | "What abilities does an agent need?" |
+| [Capability Patterns](../capability-patterns/) | What agents can **do** | "What abilities does an agent need?" |
 | **Orchestration Patterns** (this section) | How agents **coordinate** | "How do multiple agents work together?" |
-| [Workflow Architecture](../../../patterns/workflow-architecture/index.md) | How to **structure LLM calls** | "What's the right architecture for my workflow?" |
+| [Workflow Architecture](../../../patterns/workflow-architecture/) | How to **structure LLM calls** | "What's the right architecture for my workflow?" |
 
 Capability patterns are about individual agent abilities. Orchestration patterns are about multi-agent coordination. Workflow architecture patterns are about the overall structure of LLM calls in a system — including single-agent systems.
 :::
@@ -25,9 +25,9 @@ Predictable coordination with defined communication paths.
 
 | Pattern | Core Idea | Best For |
 |---------|-----------|----------|
-| [Sequential](sequential.md) | Agents execute in linear order; each output feeds the next | Multi-stage pipelines with clear handoff points |
-| [Parallel](parallel.md) | Multiple agents work simultaneously; results are aggregated | Independent subtasks that benefit from speed or diversity |
-| [Router](router.md) | Classifier inspects input and dispatches to the right specialist | Varied inputs that require different handling |
+| [Sequential](sequential/) | Agents execute in linear order; each output feeds the next | Multi-stage pipelines with clear handoff points |
+| [Parallel](parallel/) | Multiple agents work simultaneously; results are aggregated | Independent subtasks that benefit from speed or diversity |
+| [Router](router/) | Classifier inspects input and dispatches to the right specialist | Varied inputs that require different handling |
 
 ### Coordinated Topologies
 
@@ -35,9 +35,9 @@ Dynamic coordination with a central authority or peer-to-peer transfers.
 
 | Pattern | Core Idea | Best For |
 |---------|-----------|----------|
-| [Hierarchical](hierarchical.md) | Coordinator decomposes tasks, delegates to specialists, synthesizes results | Complex tasks requiring dynamic decomposition |
-| [Handoff](handoff.md) | Responsibility transfers between peer agents as context evolves | Conversational flows where expertise shifts mid-task |
-| [Evaluator-Optimizer](evaluator-optimizer.md) | Generator + evaluator iterate until quality criteria are met | Output that requires measurable quality improvement |
+| [Hierarchical](hierarchical/) | Coordinator decomposes tasks, delegates to specialists, synthesizes results | Complex tasks requiring dynamic decomposition |
+| [Handoff](handoff/) | Responsibility transfers between peer agents as context evolves | Conversational flows where expertise shifts mid-task |
+| [Evaluator-Optimizer](evaluator-optimizer/) | Generator + evaluator iterate until quality criteria are met | Output that requires measurable quality improvement |
 
 ### Emergent Topologies
 
@@ -45,8 +45,8 @@ Flexible coordination where behavior emerges from agent interactions.
 
 | Pattern | Core Idea | Best For |
 |---------|-----------|----------|
-| [Group Chat](group-chat.md) | Agents converse in shared context; a moderator may synthesize | Problems benefiting from debate or multiple perspectives |
-| [Decentralized](decentralized.md) | No master agent; peers coordinate through shared state or messaging | Highly dynamic tasks where no single agent can plan ahead |
+| [Group Chat](group-chat/) | Agents converse in shared context; a moderator may synthesize | Problems benefiting from debate or multiple perspectives |
+| [Decentralized](decentralized/) | No master agent; peers coordinate through shared state or messaging | Highly dynamic tasks where no single agent can plan ahead |
 
 ## Selection Guide
 
@@ -93,11 +93,11 @@ Start: Is the task structure known in advance?
 
 ## Where to Start
 
-**Business leaders evaluating architectures?** Start with [Sequential](sequential.md) and [Hierarchical](hierarchical.md) — they map most naturally to how human teams work.
+**Business leaders evaluating architectures?** Start with [Sequential](sequential/) and [Hierarchical](hierarchical/) — they map most naturally to how human teams work.
 
-**Builders designing your first multi-agent system?** Start with [Sequential](sequential.md) — it's the simplest to implement and debug. Add complexity only when you hit limits.
+**Builders designing your first multi-agent system?** Start with [Sequential](sequential/) — it's the simplest to implement and debug. Add complexity only when you hit limits.
 
-**Exploring advanced coordination?** [Handoff](handoff.md) and [Evaluator-Optimizer](evaluator-optimizer.md) solve real production problems that simpler patterns can't handle.
+**Exploring advanced coordination?** [Handoff](handoff/) and [Evaluator-Optimizer](evaluator-optimizer/) solve real production problems that simpler patterns can't handle.
 
 ## Sources
 
@@ -115,8 +115,8 @@ These patterns are synthesized from multiple authoritative sources:
 
 ## Related
 
-- [Agent Capability Patterns](../capability-patterns/index.md) — what individual agents can do
-- [Multi-Agent Collaboration](../capability-patterns/multi-agent-collaboration.md) — the capability pattern for agent teamwork
-- [Workflow Architecture Patterns](../../../patterns/workflow-architecture/index.md) — how to structure LLM calls in a system
-- [Agents Overview](../index.md) — the Agents building block
-- [Agents Resources](../resources.md) — recommended reading on agents
+- [Agent Capability Patterns](../capability-patterns/) — what individual agents can do
+- [Multi-Agent Collaboration](../capability-patterns/multi-agent-collaboration/) — the capability pattern for agent teamwork
+- [Workflow Architecture Patterns](../../../patterns/workflow-architecture/) — how to structure LLM calls in a system
+- [Agents Overview](../) — the Agents building block
+- [Agents Resources](../resources/) — recommended reading on agents

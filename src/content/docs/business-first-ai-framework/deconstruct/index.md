@@ -23,11 +23,11 @@ The skill walks you through that deconstruction interactively. You provide the b
 
 The context needs and failure modes captured here directly inform design decisions in the next step — they tell you what context to create, what tools to connect, and where human review gates are needed.
 
-This builds directly on the concepts of workflow deconstruction. If terms like the "6-question framework" or "AI building blocks" are new to you, review the [Key Concepts section of the Business-First AI Framework](../index.md#key-concepts) for quick definitions before starting.
+This builds directly on the concepts of workflow deconstruction. If terms like the "6-question framework" or "AI building blocks" are new to you, review the [Key Concepts section of the Business-First AI Framework](../#key-concepts) for quick definitions before starting.
 
 ## How to Use This
 
-This step is facilitated by the **`deconstruct`** Business-First AI Framework Skill. How you get it depends on your platform — see [Get the Skills](../skills.mdx) for installation instructions.
+This step is facilitated by the **`deconstruct`** Business-First AI Framework Skill. How you get it depends on your platform — see [Get the Skills](../skills/) for installation instructions.
 
 **Start with this prompt:**
 
@@ -93,7 +93,7 @@ From there, the model continues through constraints, quality criteria, capabilit
 
 ### Not sure which workflow to try?
 
-Browse the [AI Use Cases](../../use-cases/index.md) section for inspiration — it organizes examples by type (content creation, research, coding, data analysis, ideation, and automation) with department-specific scenarios.
+Browse the [AI Use Cases](../../use-cases/) section for inspiration — it organizes examples by type (content creation, research, coding, data analysis, ideation, and automation) with department-specific scenarios.
 
 Or pick something you do regularly and could describe to a colleague over coffee. Here are some examples students have used:
 
@@ -134,7 +134,7 @@ Most workflows expand from 5-8 rough steps to 12-20 refined steps after the deep
 - **Tools and data sources** — external systems with data readiness assessment
 - **Human gates** — where human review is expected
 
-Both formats are the input for the [Design phase](../design.md) in Step 3 — Design. Step-decomposed definitions go through per-step classification and building block mapping. Outcome-driven definitions go through capability domain mapping with pre-determined Autonomous autonomy and Agent orchestration.
+Both formats are the input for the [Design phase](../design/) in Step 3 — Design. Step-decomposed definitions go through per-step classification and building block mapping. Outcome-driven definitions go through capability domain mapping with pre-determined Autonomous autonomy and Agent orchestration.
 
 ### Process optimization
 
@@ -148,12 +148,12 @@ For step-decomposed workflows, the skill includes an **Optimize for AI** pass af
 - **Gather your context resources early.** The model will identify specific resources the workflow needs — documents like buyer personas and style guides, but also spreadsheets, databases, CRM access, application credentials, and sample data. If you already have these, have them ready. If you don't, the analysis will tell you exactly what to create or set up and what each resource should contain.
 
 :::tip[Register your workflow in the AI Registry]
-If you're using the [AI Registry](../../use-the-playbook/build/ai-registry.mdx) Notion database, register your workflow as soon as naming is confirmed — the skill walks you through it. This creates a record of the workflow with its name, description, trigger, outcome, and type. You'll update this entry as you move through Build. Even if you're not using Notion, save the metadata somewhere — it's the first entry in your workflow inventory. See [Builder Tools Setup](../../builder-setup/notion-registry-setup.md) if you haven't set up the AI Registry yet.
+If you're using the [AI Registry](../../use-the-playbook/build/ai-registry/) Notion database, register your workflow as soon as naming is confirmed — the skill walks you through it. This creates a record of the workflow with its name, description, trigger, outcome, and type. You'll update this entry as you move through Build. Even if you're not using Notion, save the metadata somewhere — it's the first entry in your workflow inventory. See [Builder Tools Setup](../../builder-setup/notion-registry-setup/) if you haven't set up the AI Registry yet.
 :::
 ## Related
 
-- **Previous step:** Not sure which workflow to deconstruct? Start with [Analyze Workflows](../analyze.md) (Step 1) to identify your best candidates.
-- **Next step:** Ready to design? Go to [Design Your AI Workflow](../design.md) (Step 3) — assess autonomy, choose an orchestration mechanism, and map building blocks.
-- [Business-First AI Framework](../index.md) — the full seven-step methodology
-- [Prompts](../../agentic-building-blocks/prompts/index.md)
-- [Agents](../../agentic-building-blocks/agents/index.md)
+- **Previous step:** Not sure which workflow to deconstruct? Start with [Analyze Workflows](../analyze/) (Step 1) to identify your best candidates.
+- **Next step:** Ready to design? Go to [Design Your AI Workflow](../design/) (Step 3) — assess autonomy, choose an orchestration mechanism, and map building blocks.
+- [Business-First AI Framework](../) — the full seven-step methodology
+- [Prompts](../../agentic-building-blocks/prompts/)
+- [Agents](../../agentic-building-blocks/agents/)

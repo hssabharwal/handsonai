@@ -59,11 +59,11 @@ The agent calls a SQL query tool: `execute_query("SELECT product_name, SUM(reven
 
 ## Related Patterns
 
-- [Planning](planning.md) — Planning determines *which* tools to call and in what order
-- [Reflection](reflection.md) — The agent can reflect on tool results to decide if it needs to call additional tools
-- [Multi-Agent Collaboration](multi-agent-collaboration.md) — Different agents may have access to different tool sets
-- [Guardrails](guardrails.md) — Guardrails can restrict which tools an agent is allowed to call
-- [Agent Capability Patterns](index.md)
+- [Planning](../planning/) — Planning determines *which* tools to call and in what order
+- [Reflection](../reflection/) — The agent can reflect on tool results to decide if it needs to call additional tools
+- [Multi-Agent Collaboration](../multi-agent-collaboration/) — Different agents may have access to different tool sets
+- [Guardrails](../guardrails/) — Guardrails can restrict which tools an agent is allowed to call
+- [Agent Capability Patterns](../)
 
 ## Further Reading
 

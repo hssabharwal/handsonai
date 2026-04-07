@@ -105,7 +105,7 @@ When working with AI coding agents, ADRs become more important, not less. Here's
 
 ## Related
 
-- [Product Requirements](requirements.md) — where many design decisions first surface
-- [Software Development Lifecycle](sdlc.md) — the broader process ADRs fit into
-- [Roadmaps & Prioritization](roadmapping.md) — strategic decisions that often generate ADRs
-- [Project Tracking with GitHub](tracking.md) — where ADR-related issues get tracked
+- [Product Requirements](../requirements/) — where many design decisions first surface
+- [Software Development Lifecycle](../sdlc/) — the broader process ADRs fit into
+- [Roadmaps & Prioritization](../roadmapping/) — strategic decisions that often generate ADRs
+- [Project Tracking with GitHub](../tracking/) — where ADR-related issues get tracked

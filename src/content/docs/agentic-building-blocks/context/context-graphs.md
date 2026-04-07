@@ -86,17 +86,17 @@ Context graphs represent the most structured end of this spectrum — purpose-bu
 | [Graphiti](https://github.com/getzep/graphiti) | Temporal knowledge graph library for building agent memory | Agents that need persistent, evolving memory across sessions |
 | [LangGraph](https://www.langchain.com/langgraph) | Framework for building stateful, multi-agent workflows with graph-based orchestration | Complex agent orchestration with branching logic |
 | [Neo4j](https://neo4j.com) | Graph database for storing and querying relationship-rich data | Enterprise-scale knowledge and context graph storage |
-| [MCP](../mcp/index.md) | **Model Context Protocol** — a standard for connecting AI models to external data sources and tools | Connecting agents to live context from APIs, databases, and services |
+| [MCP](../../mcp/) | **Model Context Protocol** — a standard for connecting AI models to external data sources and tools | Connecting agents to live context from APIs, databases, and services |
 
 ## Relationship to Other Blocks
 
 Context graphs intersect with every other building block:
 
-- **[Prompts](../prompts/index.md)** — Context graphs provide the structured background that makes prompts effective. Instead of cramming context into a prompt, agents query the graph for exactly what's relevant.
-- **[Projects](../projects/index.md)** — Projects organize persistent context. Context graphs add structure *within* that context — not just "here are the files" but "here's how they relate."
-- **[Skills](../skills/index.mdx)** — Skills can use context graphs to make decisions based on precedent and historical patterns rather than just the instructions they contain.
-- **[Agents](../agents/index.md)** — Agents are the primary consumers of context graphs. Multi-step workflows benefit most from structured reasoning and memory.
-- **[MCP](../mcp/index.md)** — MCP servers can expose context graph data as tools and resources, giving agents structured access to organizational knowledge.
+- **[Prompts](../../prompts/)** — Context graphs provide the structured background that makes prompts effective. Instead of cramming context into a prompt, agents query the graph for exactly what's relevant.
+- **[Projects](../../projects/)** — Projects organize persistent context. Context graphs add structure *within* that context — not just "here are the files" but "here's how they relate."
+- **[Skills](../../skills/)** — Skills can use context graphs to make decisions based on precedent and historical patterns rather than just the instructions they contain.
+- **[Agents](../../agents/)** — Agents are the primary consumers of context graphs. Multi-step workflows benefit most from structured reasoning and memory.
+- **[MCP](../../mcp/)** — MCP servers can expose context graph data as tools and resources, giving agents structured access to organizational knowledge.
 
 ## Further Reading
 
@@ -111,10 +111,10 @@ Context graphs intersect with every other building block:
 
 ## Related
 
-- [Context Engineering](../../ai-engineering/context-engineering.md) — the broader discipline; context graphs are an advanced technique within it
-- [Context](index.md) — the Context building block overview
-- [Agentic Building Blocks](../index.md) — Context Graphs in the context of all building blocks
-- [AI Use Cases](../../use-cases/index.md) — what teams build with context, organized by six primitives
-- [Agents](../agents/index.md) — autonomous workflows that benefit most from structured context
-- [MCP](../mcp/index.md) — the protocol for connecting agents to external context sources
-- [Prompts](../prompts/index.md) — the instructions that context enhances
+- [Context Engineering](../../../ai-engineering/context-engineering/) — the broader discipline; context graphs are an advanced technique within it
+- [Context](../) — the Context building block overview
+- [Agentic Building Blocks](../) — Context Graphs in the context of all building blocks
+- [AI Use Cases](../../../use-cases/) — what teams build with context, organized by six primitives
+- [Agents](../../agents/) — autonomous workflows that benefit most from structured context
+- [MCP](../../mcp/) — the protocol for connecting agents to external context sources
+- [Prompts](../../prompts/) — the instructions that context enhances

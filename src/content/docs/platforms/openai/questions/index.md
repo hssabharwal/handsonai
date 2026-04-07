@@ -11,5 +11,5 @@ description: Questions specific to OpenAI's GPT models, Assistants API, and plat
 
 ## Related Resources
 
-- [OpenAI Topics](../topics/README.md)
-- [Agentic Building Blocks](../../../agentic-building-blocks/index.md)
+- [OpenAI Topics](../topics/)
+- [Agentic Building Blocks](../../../agentic-building-blocks/)

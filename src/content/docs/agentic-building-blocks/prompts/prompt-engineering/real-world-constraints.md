@@ -141,11 +141,11 @@ activities where people stick with their existing group).
 :::
 ## Related Techniques
 
-- [Contextual Prompting](contextual-prompting.md) — constraints are a specific type of context
-- [Direct Instruction](direct-instruction.md) — clear instructions pair well with clear constraints
-- [Chain-of-Thought](chain-of-thought.md) — ask the model to reason through constraint trade-offs explicitly
-- [Prompt Engineering Overview](index.md)
-- [Automation use case](../../../use-cases/automation/index.md) — real-world constraints are critical when designing automated workflows
+- [Contextual Prompting](../contextual-prompting/) — constraints are a specific type of context
+- [Direct Instruction](../direct-instruction/) — clear instructions pair well with clear constraints
+- [Chain-of-Thought](../chain-of-thought/) — ask the model to reason through constraint trade-offs explicitly
+- [Prompt Engineering Overview](../)
+- [Automation use case](../../../../use-cases/automation/) — real-world constraints are critical when designing automated workflows
 
 ## Further Reading
 

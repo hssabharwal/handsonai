@@ -5,7 +5,7 @@ description: How automated rules and constraints keep AI agents safe, on-topic, 
 
 Guardrails are automated rules and constraints that govern what an agent can and cannot do. They operate continuously during agent execution, checking inputs, outputs, and actions against defined policies — and blocking or modifying anything that violates those policies.
 
-Unlike [human-in-the-loop](human-in-the-loop.md) controls, guardrails are automated. They don't require a human to review every action — they enforce rules programmatically, allowing the agent to operate autonomously within defined boundaries.
+Unlike [human-in-the-loop](../human-in-the-loop/) controls, guardrails are automated. They don't require a human to review every action — they enforce rules programmatically, allowing the agent to operate autonomously within defined boundaries.
 
 ## Why It Matters
 
@@ -86,10 +86,10 @@ A coding agent has guardrails to prevent generating insecure code:
 
 ## Related Patterns
 
-- [Human-in-the-Loop](human-in-the-loop.md) — Guardrails handle routine constraints automatically; HITL handles exceptions and edge cases
-- [Tool Use](tool-use.md) — Action guardrails govern which tools the agent can access
-- [Reflection](reflection.md) — Self-reflection is a soft guardrail; automated guardrails are hard constraints
-- [Agent Capability Patterns](index.md)
+- [Human-in-the-Loop](../human-in-the-loop/) — Guardrails handle routine constraints automatically; HITL handles exceptions and edge cases
+- [Tool Use](../tool-use/) — Action guardrails govern which tools the agent can access
+- [Reflection](../reflection/) — Self-reflection is a soft guardrail; automated guardrails are hard constraints
+- [Agent Capability Patterns](../)
 
 ## Further Reading
 

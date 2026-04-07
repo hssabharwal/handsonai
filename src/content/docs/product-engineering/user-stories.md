@@ -97,7 +97,7 @@ This is the same loop a human engineer follows, but AI agents execute it literal
 
 ## Related
 
-- [Product Requirements](requirements.md) — the PRD that user stories break down from
-- [Software Development Lifecycle](sdlc.md) — where stories fit in the sprint cycle
-- [Project Tracking with GitHub](tracking.md) — how stories become issues that move across a board
-- [Agents](../agentic-building-blocks/agents/index.md) — AI agents that implement and verify against acceptance criteria
+- [Product Requirements](../requirements/) — the PRD that user stories break down from
+- [Software Development Lifecycle](../sdlc/) — where stories fit in the sprint cycle
+- [Project Tracking with GitHub](../tracking/) — how stories become issues that move across a board
+- [Agents](../../agentic-building-blocks/agents/) — AI agents that implement and verify against acceptance criteria

@@ -37,7 +37,7 @@ Common architectures:
 - **Peer collaboration** — Agents communicate as equals, each contributing their expertise to a shared workspace.
 
 :::tip[Deep dive: Orchestration Patterns]
-For detailed coverage of each coordination topology — including selection guides, diagrams, and platform examples — see [Orchestration Patterns](../orchestration-patterns/index.md).
+For detailed coverage of each coordination topology — including selection guides, diagrams, and platform examples — see [Orchestration Patterns](../../orchestration-patterns/).
 :::
 The key design decisions are:
 
@@ -79,11 +79,11 @@ The Writer Agent never sees raw data — it receives a structured brief from the
 
 ## Related Patterns
 
-- [Planning](planning.md) — An orchestrator agent often uses planning to coordinate the team
-- [Tool Use](tool-use.md) — Each agent typically has its own set of tools
-- [Reflection](reflection.md) — A critic agent reviewing another agent's work is multi-agent reflection
-- [Guardrails](guardrails.md) — Each agent can have its own guardrails, limiting what it can do
-- [Agent Capability Patterns](index.md)
+- [Planning](../planning/) — An orchestrator agent often uses planning to coordinate the team
+- [Tool Use](../tool-use/) — Each agent typically has its own set of tools
+- [Reflection](../reflection/) — A critic agent reviewing another agent's work is multi-agent reflection
+- [Guardrails](../guardrails/) — Each agent can have its own guardrails, limiting what it can do
+- [Agent Capability Patterns](../)
 
 ## Further Reading
 

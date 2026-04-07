@@ -5,7 +5,7 @@ description: How responsibility transfers between peer agents as context evolves
 
 The handoff pattern transfers responsibility from one agent to another when the conversation or task context shifts to a domain where a different agent is better suited. There's no central coordinator deciding who does what — the currently active agent recognizes when it's out of its depth and passes the baton to the right peer.
 
-Think of it like a relay race. Each runner carries the baton through their leg of the race, then hands it off to the next runner. The key difference from a [sequential pipeline](sequential.md) is that handoffs aren't predetermined — the active agent decides *when* and *to whom* to hand off based on real-time context.
+Think of it like a relay race. Each runner carries the baton through their leg of the race, then hands it off to the next runner. The key difference from a [sequential pipeline](../sequential/) is that handoffs aren't predetermined — the active agent decides *when* and *to whom* to hand off based on real-time context.
 
 ## Why It Matters
 
@@ -62,18 +62,18 @@ A coding assistant with specialized agents:
 
 ## When NOT to Use It
 
-- The task decomposition is known in advance — use [Sequential](sequential.md) or [Hierarchical](hierarchical.md)
-- You need a central authority tracking all agents' work — use [Hierarchical](hierarchical.md)
-- Agents need to collaborate simultaneously on the same task — use [Group Chat](group-chat.md)
-- Handoff triggers are unreliable, causing agents to ping-pong — simplify to fewer agents or add a [Router](router.md)
+- The task decomposition is known in advance — use [Sequential](../sequential/) or [Hierarchical](../hierarchical/)
+- You need a central authority tracking all agents' work — use [Hierarchical](../hierarchical/)
+- Agents need to collaborate simultaneously on the same task — use [Group Chat](../group-chat/)
+- Handoff triggers are unreliable, causing agents to ping-pong — simplify to fewer agents or add a [Router](../router/)
 
 ## Related Patterns
 
-- [Router](router.md) — centralized dispatch at the start vs. peer-to-peer handoff mid-task
-- [Hierarchical](hierarchical.md) — coordinator-managed delegation vs. autonomous handoff
-- [Sequential](sequential.md) — predetermined pipeline vs. dynamic handoff based on context
-- [Multi-Agent Collaboration](../capability-patterns/multi-agent-collaboration.md) — the capability pattern for agent teamwork
-- [Orchestration Patterns Overview](index.md)
+- [Router](../router/) — centralized dispatch at the start vs. peer-to-peer handoff mid-task
+- [Hierarchical](../hierarchical/) — coordinator-managed delegation vs. autonomous handoff
+- [Sequential](../sequential/) — predetermined pipeline vs. dynamic handoff based on context
+- [Multi-Agent Collaboration](../../capability-patterns/multi-agent-collaboration/) — the capability pattern for agent teamwork
+- [Orchestration Patterns Overview](../)
 
 ## Further Reading
 

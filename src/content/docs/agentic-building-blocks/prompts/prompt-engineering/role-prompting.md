@@ -107,11 +107,11 @@ For each, identify their top concern, likely position, and what data they'd want
 :::
 ## Related Techniques
 
-- [Contextual Prompting](contextual-prompting.md) — provide background information alongside your prompt
-- [Emotional Prompting](emotional-prompting.md) — add stakes and motivation to encourage thoroughness
-- [Reframing Prompts](reframing-prompts.md) — restructure a problem to get a better response
-- [Prompt Engineering Overview](index.md)
-- [Ideation and Strategy use case](../../../use-cases/ideation-and-strategy/index.md) — role prompting is especially effective for strategic analysis
+- [Contextual Prompting](../contextual-prompting/) — provide background information alongside your prompt
+- [Emotional Prompting](../emotional-prompting/) — add stakes and motivation to encourage thoroughness
+- [Reframing Prompts](../reframing-prompts/) — restructure a problem to get a better response
+- [Prompt Engineering Overview](../)
+- [Ideation and Strategy use case](../../../../use-cases/ideation-and-strategy/) — role prompting is especially effective for strategic analysis
 
 ## Further Reading
 

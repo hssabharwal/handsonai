@@ -222,7 +222,7 @@ Free during public preview with generous Gemini rate limits.
 
 ### 2. IDE Extension — Gemini Code Assist
 
-Use Gemini inside VS Code or Cursor. See [AI Code Editor Setup](../../../builder-setup/editor-setup.md#gemini-code-assist) for installation instructions.
+Use Gemini inside VS Code or Cursor. See [AI Code Editor Setup](../../../builder-setup/editor-setup/#gemini-code-assist) for installation instructions.
 
 ---
 
@@ -252,7 +252,7 @@ After adding skills, you can say "edit this article for HBR quality" and Gemini 
 
 Download skill folders from [GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins) and place them in `.gemini/skills/` or `.agents/skills/` in your project root. Gemini CLI discovers them automatically.
 
-[→ How to Add Skills to Your Platform](../../../agentic-building-blocks/skills/index.mdx#how-to-add-skills-to-your-platform)
+[→ How to Add Skills to Your Platform](../../../agentic-building-blocks/skills/#how-to-add-skills-to-your-platform)
 
 ---
 

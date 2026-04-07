@@ -17,7 +17,7 @@ LLMs (large language models) perform in-context learning: they recognize pattern
 - Classification tasks with your own categories or taxonomy
 - Matching a specific tone or writing style
 - Tasks where showing is easier than describing
-- When [zero-shot prompting](zero-shot-prompting.md) produces the right idea but the wrong format
+- When [zero-shot prompting](../zero-shot-prompting/) produces the right idea but the wrong format
 
 ## The Pattern
 
@@ -165,11 +165,11 @@ Output:
 :::
 ## Related Techniques
 
-- [Zero-Shot Prompting](zero-shot-prompting.md) — try this first when you don't need examples
-- [Chain-of-Thought](chain-of-thought.md) — add reasoning steps to your examples for complex tasks
-- [Output Formatting](output-formatting.md) — other ways to control the shape of model output
-- [Prompt Engineering Overview](index.md)
-- [Data Analysis use case](../../../use-cases/data-analysis/index.md)
+- [Zero-Shot Prompting](../zero-shot-prompting/) — try this first when you don't need examples
+- [Chain-of-Thought](../chain-of-thought/) — add reasoning steps to your examples for complex tasks
+- [Output Formatting](../output-formatting/) — other ways to control the shape of model output
+- [Prompt Engineering Overview](../)
+- [Data Analysis use case](../../../../use-cases/data-analysis/)
 
 ## Further Reading
 

@@ -68,12 +68,12 @@ Good projects have:
 
 | Guide | Description |
 |-------|-------------|
-| [Write Custom Workspace Instructions](workspace-instructions-meta-prompt.md) | Meta prompt that walks you through creating purpose-built workspace instructions using the 4 Elements framework |
-| [Set Up Claude Projects](../../platforms/claude/projects/claude-projects-setup.md) | Step-by-step setup guide for Claude's project feature |
+| [Write Custom Workspace Instructions](workspace-instructions-meta-prompt/) | Meta prompt that walks you through creating purpose-built workspace instructions using the 4 Elements framework |
+| [Set Up Claude Projects](../../platforms/claude/projects/claude-projects-setup/) | Step-by-step setup guide for Claude's project feature |
 
 ## Related
 
-- [Agentic Building Blocks](../index.md) — Projects in the context of all building blocks
-- [AI Use Cases](../../use-cases/index.md) — what teams build with projects, organized by six primitives
-- [Prompts](../prompts/index.md) — techniques for the prompts that go inside projects
-- [Business-First AI Framework](../../business-first-ai-framework/index.md) — uses projects as a building block in workflow analysis
+- [Agentic Building Blocks](../) — Projects in the context of all building blocks
+- [AI Use Cases](../../use-cases/) — what teams build with projects, organized by six primitives
+- [Prompts](../prompts/) — techniques for the prompts that go inside projects
+- [Business-First AI Framework](../../business-first-ai-framework/) — uses projects as a building block in workflow analysis

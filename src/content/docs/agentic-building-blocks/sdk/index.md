@@ -5,7 +5,7 @@ description: The SDK building block — frameworks and toolkits for building AI 
 
 ## What an SDK Is
 
-An **SDK** (Software Development Kit) is a framework or toolkit that provides abstractions for building AI workflows in code. Where [APIs](../api/index.md) give you raw access to models and services, SDKs give you patterns and structure — handling orchestration logic, tool use, memory management, and multi-agent coordination so you don't wire everything from scratch.
+An **SDK** (Software Development Kit) is a framework or toolkit that provides abstractions for building AI workflows in code. Where [APIs](../api/) give you raw access to models and services, SDKs give you patterns and structure — handling orchestration logic, tool use, memory management, and multi-agent coordination so you don't wire everything from scratch.
 
 Think of it this way: an API lets you call a model. An SDK lets you build an agent that calls models, uses tools, manages state, and coordinates with other agents — with the plumbing handled for you.
 
@@ -36,19 +36,19 @@ Or using LangGraph to orchestrate a content pipeline where a research agent hand
 
 | Framework | Provider | Languages | Links |
 |-----------|----------|-----------|-------|
-| **Claude Agent SDK** | Anthropic | Python, TypeScript | [Playbook guide](../../platforms/claude/agents/building-agents.mdx) · <a href="https://platform.claude.com/docs/en/agent-sdk/overview" target="_blank">Docs</a> |
-| **OpenAI Agents SDK** | OpenAI | Python, TypeScript | [Playbook guide](../../platforms/openai/agents/building-agents.md) · <a href="https://developers.openai.com/api/docs/guides/agents-sdk" target="_blank">Docs</a> |
-| **Google Agent Development Kit (ADK)** | Google | Python | [Playbook guide](../../platforms/google-gemini/agents/building-agents.md) · <a href="https://docs.cloud.google.com/agent-builder/agent-development-kit/overview" target="_blank">Docs</a> |
+| **Claude Agent SDK** | Anthropic | Python, TypeScript | [Playbook guide](../../platforms/claude/agents/building-agents/) · <a href="https://platform.claude.com/docs/en/agent-sdk/overview" target="_blank">Docs</a> |
+| **OpenAI Agents SDK** | OpenAI | Python, TypeScript | [Playbook guide](../../platforms/openai/agents/building-agents/) · <a href="https://developers.openai.com/api/docs/guides/agents-sdk" target="_blank">Docs</a> |
+| **Google Agent Development Kit (ADK)** | Google | Python | [Playbook guide](../../platforms/google-gemini/agents/building-agents/) · <a href="https://docs.cloud.google.com/agent-builder/agent-development-kit/overview" target="_blank">Docs</a> |
 | **LangGraph** | LangChain | Python, JavaScript | <a href="https://www.langchain.com/langgraph" target="_blank">langchain.com/langgraph</a> |
 | **Microsoft Agent Framework** | Microsoft | Python, .NET (C#) | <a href="https://github.com/microsoft/agent-framework" target="_blank">GitHub</a> |
-| **Microsoft 365 Agents SDK** | Microsoft | .NET, Python, TypeScript | [Playbook guide](../../platforms/m365-copilot/agents/building-agents.md) · <a href="https://github.com/microsoft/Agents" target="_blank">GitHub</a> · <a href="https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/m365-agents-sdk" target="_blank">Docs</a> |
+| **Microsoft 365 Agents SDK** | Microsoft | .NET, Python, TypeScript | [Playbook guide](../../platforms/m365-copilot/agents/building-agents/) · <a href="https://github.com/microsoft/Agents" target="_blank">GitHub</a> · <a href="https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/m365-agents-sdk" target="_blank">Docs</a> |
 | **CrewAI** | CrewAI | Python | <a href="https://www.crewai.com/" target="_blank">crewai.com</a> |
 
 ## Agent-to-Agent (A2A) Protocol
 
 The <a href="https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/" target="_blank">Agent-to-Agent (A2A) protocol</a> is an open standard for agent interoperability. It defines how agents built with different frameworks can discover each other, negotiate capabilities, and collaborate on tasks — regardless of which SDK or platform they were built on.
 
-A2A complements MCP: where [MCP](../mcp/index.md) connects agents to **tools and data**, A2A connects **agents to other agents**.
+A2A complements MCP: where [MCP](../mcp/) connects agents to **tools and data**, A2A connects **agents to other agents**.
 
 <a href="https://google.github.io/A2A/" target="_blank">A2A specification and documentation</a>
 
@@ -90,14 +90,14 @@ SDK is the code-first orchestration layer:
 
 ## Related
 
-- [Agentic Building Blocks](../index.md) — SDK in the context of all building blocks
-- [API](../api/index.md) — the raw programmatic interfaces that SDKs abstract over
-- [Agents](../agents/index.md) — the building block that SDKs implement in code
-- [Agent Capability Patterns](../agents/capability-patterns/index.md) — architectural patterns that SDKs help implement
-- [Multi-Agent Collaboration](../agents/capability-patterns/multi-agent-collaboration.md) — patterns for coordinating multiple agents
-- [MCP](../mcp/index.md) — the protocol that connects SDK-built agents to tools and data
-- [AI Use Cases](../../use-cases/index.md) — what teams build with these blocks
-- [Coding Use Cases](../../use-cases/coding/index.md) — code-first AI workflows
-- [Workflow Architecture Patterns](../../patterns/workflow-architecture/index.md) — architectural patterns from augmented LLMs to autonomous agents
-- [CLI](../cli/index.md) — terminal-native interfaces that use SDKs under the hood
-- [Platforms](../../platforms/index.md) — platform-specific SDK guides
+- [Agentic Building Blocks](../) — SDK in the context of all building blocks
+- [API](../api/) — the raw programmatic interfaces that SDKs abstract over
+- [Agents](../agents/) — the building block that SDKs implement in code
+- [Agent Capability Patterns](../agents/capability-patterns/) — architectural patterns that SDKs help implement
+- [Multi-Agent Collaboration](../agents/capability-patterns/multi-agent-collaboration/) — patterns for coordinating multiple agents
+- [MCP](../mcp/) — the protocol that connects SDK-built agents to tools and data
+- [AI Use Cases](../../use-cases/) — what teams build with these blocks
+- [Coding Use Cases](../../use-cases/coding/) — code-first AI workflows
+- [Workflow Architecture Patterns](../../patterns/workflow-architecture/) — architectural patterns from augmented LLMs to autonomous agents
+- [CLI](../cli/) — terminal-native interfaces that use SDKs under the hood
+- [Platforms](../../platforms/) — platform-specific SDK guides

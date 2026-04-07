@@ -26,7 +26,7 @@ This step guides an AI through a structured analysis of your work — from eithe
 
 ## How to Use This
 
-This step is facilitated by the **`analyze`** Business-First AI Framework Skill. How you get it depends on your platform — see [Get the Skills](skills.mdx) for installation instructions.
+This step is facilitated by the **`analyze`** Business-First AI Framework Skill. How you get it depends on your platform — see [Get the Skills](../skills/) for installation instructions.
 
 **Start with this prompt:**
 
@@ -41,7 +41,7 @@ The skill runs a structured audit and produces a categorized opportunity report.
 Download the skill file from [GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins/business-first-ai/skills/analyze) and paste it into your system prompt or project instructions. Same methodology, same output format.
 :::
 :::tip[Classify opportunities with the six primitives]
-Once you've identified opportunities, use the [six use case primitives](../use-cases/index.md) — Content Creation, Research, Coding, Data Analysis, Ideation & Strategy, and Automation — to classify what type of AI work each one involves. This makes it easier to find examples and choose the right building blocks.
+Once you've identified opportunities, use the [six use case primitives](../../use-cases/) — Content Creation, Research, Coding, Data Analysis, Ideation & Strategy, and Automation — to classify what type of AI work each one involves. This makes it easier to find examples and choose the right building blocks.
 :::
 :::tip[Best results come from rich context]
 The more the AI knows about your actual work, the better the recommendations. If possible, use a tool where you've had many prior conversations or uploaded relevant documents.
@@ -75,9 +75,9 @@ The **AI Opportunity Report** (`ai-opportunity-report.md`) captures:
 - **Detailed opportunity cards** — grouped by autonomy level (Deterministic → Guided → Autonomous), each with: why it's a good candidate, current pain point, how AI helps, and a practical first step
 - **Workflow Candidate Summary** — structured metadata for the workflows you choose to pursue: name, description, trigger, deliverable, autonomy, involvement, pain point, AI opportunity, frequency, priority, reasoning, and lens. Organizational-lens candidates also include business objective, stakeholders, and success metrics.
 
-The Workflow Candidate Summary is the input for [Deconstruct Workflows](deconstruct/index.md) (Step 2) — the trigger and deliverable fields map directly to the scope check that starts the deconstruction.
+The Workflow Candidate Summary is the input for [Deconstruct Workflows](../deconstruct/) (Step 2) — the trigger and deliverable fields map directly to the scope check that starts the deconstruction.
 
-See three complete [example reports](analyze-examples.md) to get a feel for the format and level of detail.
+See three complete [example reports](../analyze-examples/) to get a feel for the format and level of detail.
 
 ## Tips for Better Results
 
@@ -89,8 +89,8 @@ See three complete [example reports](analyze-examples.md) to get a feel for the 
 
 ## Related
 
-- [Example Reports](analyze-examples.md) — three complete AI Opportunity Reports (Marketing Ops Manager, AI Instructor, and VP of Operations using the organizational lens) showing what the finished deliverable looks like
-- **Next step:** Ready to act on an opportunity? Use the [Deconstruct Workflows guide](deconstruct/index.md) (Step 2) to break it into discrete steps.
-- [Business-First AI Framework](index.md) — the full seven-step methodology
-- [Prompts](../agentic-building-blocks/prompts/index.md)
-- [Agents](../agentic-building-blocks/agents/index.md)
+- [Example Reports](../analyze-examples/) — three complete AI Opportunity Reports (Marketing Ops Manager, AI Instructor, and VP of Operations using the organizational lens) showing what the finished deliverable looks like
+- **Next step:** Ready to act on an opportunity? Use the [Deconstruct Workflows guide](../deconstruct/) (Step 2) to break it into discrete steps.
+- [Business-First AI Framework](../) — the full seven-step methodology
+- [Prompts](../../agentic-building-blocks/prompts/)
+- [Agents](../../agentic-building-blocks/agents/)

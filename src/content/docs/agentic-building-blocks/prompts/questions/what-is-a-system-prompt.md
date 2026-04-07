@@ -54,6 +54,6 @@ print(response.choices[0].message.content)
 
 ## Related
 
-- [Prompts](../index.md) — the Prompt building block overview
-- [Prompt Engineering](../prompt-engineering/index.md) — core prompting techniques
-- [Agentic Building Blocks](../../index.md) — all building blocks
+- [Prompts](../..//) — the Prompt building block overview
+- [Prompt Engineering](../../prompt-engineering/) — core prompting techniques
+- [Agentic Building Blocks](../..//) — all building blocks

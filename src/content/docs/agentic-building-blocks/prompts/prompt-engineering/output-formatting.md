@@ -112,11 +112,11 @@ Claude supports structured output via tool use and JSON mode. OpenAI has a JSON 
 :::
 ## Related Techniques
 
-- [Direct Instruction](direct-instruction.md) — be explicit about what you want the model to do
-- [Few-Shot Learning](few-shot-learning.md) — show format by example
-- [Summarization and Distillation](summarization-and-distillation.md) — formatting is especially important for summaries
-- [Prompt Engineering Overview](index.md)
-- [Data Analysis use case](../../../use-cases/data-analysis/index.md) — structured output is critical for data workflows
+- [Direct Instruction](../direct-instruction/) — be explicit about what you want the model to do
+- [Few-Shot Learning](../few-shot-learning/) — show format by example
+- [Summarization and Distillation](../summarization-and-distillation/) — formatting is especially important for summaries
+- [Prompt Engineering Overview](../)
+- [Data Analysis use case](../../../../use-cases/data-analysis/) — structured output is critical for data workflows
 
 ## Further Reading
 

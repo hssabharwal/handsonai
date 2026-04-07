@@ -62,13 +62,13 @@ Combining these two dimensions produces six distinct workflow archetypes:
 
 ### Worked Examples
 
-These three worked examples from the [Build](build/index.mdx) section illustrate different matrix positions:
+These three worked examples from the [Build](../build/) section illustrate different matrix positions:
 
 | Example | Archetype | Why |
 |---------|-----------|-----|
-| [Deterministic Automation](examples/deterministic-automation.mdx) | **Deterministic + Automated** | Fixed rules, structured input/output, runs the same way every time with no human steering |
-| [AI Collaborative](examples/ai-collaborative.mdx) | **Guided + Augmented** | AI researches and drafts; human reviews, refines, and decides what to use |
-| [Autonomous Agent](examples/autonomous-agent.mdx) | **Autonomous + Augmented** | Multi-agent pipeline executes autonomously with one human review gate before publishing |
+| [Deterministic Automation](../examples/deterministic-automation/) | **Deterministic + Automated** | Fixed rules, structured input/output, runs the same way every time with no human steering |
+| [AI Collaborative](../examples/ai-collaborative/) | **Guided + Augmented** | AI researches and drafts; human reviews, refines, and decides what to use |
+| [Autonomous Agent](../examples/autonomous-agent/) | **Autonomous + Augmented** | Multi-agent pipeline executes autonomously with one human review gate before publishing |
 
 ## Choosing Your Archetype
 
@@ -92,7 +92,7 @@ If you're new to AI workflows, start with **Deterministic + Augmented** — the 
 
 ### Orchestration Mechanisms
 
-The [orchestration mechanism](design.md#orchestration-mechanism) describes *who drives the workflow*. The matrix describes *how the AI and human interact*. They're complementary:
+The [orchestration mechanism](../design/#orchestration-mechanism) describes *who drives the workflow*. The matrix describes *how the AI and human interact*. They're complementary:
 
 | Orchestration Mechanism | Typical Archetypes |
 |------------------------|-------------------|
@@ -102,7 +102,7 @@ The [orchestration mechanism](design.md#orchestration-mechanism) describes *who 
 
 ### Architecture Patterns
 
-The seven [workflow architecture patterns](../patterns/workflow-architecture/index.md) provide implementation blueprints within each archetype:
+The seven [workflow architecture patterns](../../patterns/workflow-architecture/) provide implementation blueprints within each archetype:
 
 | Archetype | Common Architecture Patterns |
 |-----------|------------------------------|
@@ -112,7 +112,7 @@ The seven [workflow architecture patterns](../patterns/workflow-architecture/ind
 
 ## Related
 
-- [Business-First AI Framework](index.md) — the full seven-step methodology
-- [Design Your AI Workflow](design.md) — assess autonomy, choose an orchestration mechanism, and map building blocks
-- [Build Workflows](build/index.mdx) — worked examples across the matrix
-- [Workflow Architecture Patterns](../patterns/workflow-architecture/index.md) — implementation blueprints for each pattern
+- [Business-First AI Framework](../) — the full seven-step methodology
+- [Design Your AI Workflow](../design/) — assess autonomy, choose an orchestration mechanism, and map building blocks
+- [Build Workflows](../build/) — worked examples across the matrix
+- [Workflow Architecture Patterns](../../patterns/workflow-architecture/) — implementation blueprints for each pattern

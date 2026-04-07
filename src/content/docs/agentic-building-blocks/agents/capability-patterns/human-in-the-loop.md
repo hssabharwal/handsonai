@@ -87,10 +87,10 @@ A CI/CD agent with HITL checkpoints:
 
 ## Related Patterns
 
-- [Guardrails](guardrails.md) — Guardrails handle routine constraints automatically; HITL handles exceptions that require judgment
-- [Planning](planning.md) — Humans can review and approve the agent's plan before execution begins
-- [Reflection](reflection.md) — The agent's self-assessment can determine when to escalate to a human
-- [Agent Capability Patterns](index.md)
+- [Guardrails](../guardrails/) — Guardrails handle routine constraints automatically; HITL handles exceptions that require judgment
+- [Planning](../planning/) — Humans can review and approve the agent's plan before execution begins
+- [Reflection](../reflection/) — The agent's self-assessment can determine when to escalate to a human
+- [Agent Capability Patterns](../)
 
 ## Further Reading
 

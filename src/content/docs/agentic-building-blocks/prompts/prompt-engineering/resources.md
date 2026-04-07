@@ -104,5 +104,5 @@ These foundational papers cover topics relevant to multiple techniques.
 
 ## Related
 
-- [Prompt Engineering Overview](index.md)
-- [Prompts Building Block](../index.md)
+- [Prompt Engineering Overview](../)
+- [Prompts Building Block](../)

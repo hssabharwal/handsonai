@@ -126,11 +126,11 @@ For very long conversations, ask the model to summarize the key decisions and co
 :::
 ## Related Techniques
 
-- [Chain-of-Thought](chain-of-thought.md) — explicit step-by-step reasoning within a single turn
-- [Self-Consistency and Reflection](self-consistency-and-reflection.md) — have the model critique and revise its own output
-- [Reframing Prompts](reframing-prompts.md) — restructure a problem mid-conversation to get a better angle
-- [Prompt Engineering Overview](index.md)
-- [Ideation and Strategy use case](../../../use-cases/ideation-and-strategy/index.md) — multi-turn conversation is the natural mode for strategic exploration
+- [Chain-of-Thought](../chain-of-thought/) — explicit step-by-step reasoning within a single turn
+- [Self-Consistency and Reflection](../self-consistency-and-reflection/) — have the model critique and revise its own output
+- [Reframing Prompts](../reframing-prompts/) — restructure a problem mid-conversation to get a better angle
+- [Prompt Engineering Overview](../)
+- [Ideation and Strategy use case](../../../../use-cases/ideation-and-strategy/) — multi-turn conversation is the natural mode for strategic exploration
 
 ## Further Reading
 
