@@ -78,7 +78,7 @@ export default defineConfig({
             { label: 'Step 5: Test', link: '/business-first-ai-framework/test/' },
             { label: 'Step 6: Run', link: '/business-first-ai-framework/run/' },
             { label: 'Step 7: Improve', link: '/business-first-ai-framework/improve/' },
-            { label: 'Get the Skills', link: '/business-first-ai-framework/skills/' },
+            { label: 'Set Up the Skills', link: '/business-first-ai-framework/skills/' },
             {
               label: 'Worked Examples',
               collapsed: true,

@@ -233,7 +233,7 @@ The output is the same AI Building Block Spec format, with Capability Domain Map
 
 ## How to Use This
 
-This step is facilitated by the **`design`** Business-First AI Framework Skill. How you get it depends on your platform — see [Get the Skills](../skills/) for installation instructions.
+This step is facilitated by the **`design`** Business-First AI Framework Skill. How you get it depends on your platform — see [Set Up the Skills](../skills/) for installation instructions.
 
 **Start with this prompt:**
 

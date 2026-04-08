@@ -97,7 +97,7 @@ An **Improvement Plan** saved to `outputs/[workflow-name]-improvement-plan.md` t
 
 ## How to Use This
 
-This step is facilitated by the **`improve`** Business-First AI Framework skill. See [Get the Skills](../skills/) for installation instructions across all supported platforms.
+This step is facilitated by the **`improve`** Business-First AI Framework skill. See [Set Up the Skills](../skills/) for installation instructions across all supported platforms.
 
 **Start with this prompt:**
 
