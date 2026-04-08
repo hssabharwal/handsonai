@@ -237,15 +237,23 @@ For updates, uninstalling, and troubleshooting, see [Using Plugins](../../use-th
 <details>
 <summary><strong>ChatGPT</strong> — 🟡 Beta / Limited native support</summary>
 
-#### Native Skills (Beta)
+There are three ways to use these skills with your ChatGPT account, listed from best to simplest:
 
-ChatGPT is rolling out native skill support using the same SKILL.md format. If your plan supports it (currently Enterprise, Edu, and some Team/Business plans — admins may need to enable it), you can create and install skills directly in ChatGPT without using Projects.
+#### Option 1: Native Skills (Best — if your plan supports it)
+
+ChatGPT is rolling out native skill support using the same SKILL.md format. Skills work directly in ChatGPT and output files can be downloaded from the chat. This is the best option if available on your plan (currently Enterprise, Edu, and some Team/Business plans — admins may need to enable it).
 
 See OpenAI's official guide: [Skills in ChatGPT](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)
 
-If you don't see a Skills option in your ChatGPT settings, use the **Projects** approach below — it works on all paid plans and gives you the same result.
+If you don't see a Skills option in your ChatGPT settings, try Option 2 or 3 below.
 
-#### Using ChatGPT Projects (works on all paid plans)
+#### Option 2: OpenAI Codex in a Code Editor
+
+Use **OpenAI Codex** in a code editor like Cursor or VS Code. Codex uses your existing ChatGPT login (Plus, Pro, or any paid plan), supports skills natively, and **saves output files directly to your computer** — so when a skill creates a Workflow Definition or Building Block Spec, you get an actual file instead of text in a chat window.
+
+See the [**OpenAI Codex**](#openai-codex) section under Code Editors & Terminal below for setup instructions.
+
+#### Option 3: ChatGPT Projects (Simplest — works on all paid plans)
 
 **Official docs:** [Projects in ChatGPT](https://help.openai.com/en/articles/10169521-using-projects-in-chatgpt)
 
@@ -304,8 +312,8 @@ ChatGPT will follow the skill's structured interview process — asking about yo
 
 Repeat steps 1–7 for **Deconstruct** (the next step in the framework). Add the remaining skills as you progress.
 
-:::tip[About file saving]
-When a skill says it will "save output to a file," ChatGPT will show the output directly in the chat instead. Copy and save it yourself if you want to keep it.
+:::tip[About file saving with Projects]
+When a skill says it will "save output to a file," ChatGPT Projects will show the output in the chat instead — copy and save it yourself. For automatic file saving, use Option 1 (Native Skills) or Option 2 (OpenAI Codex) above.
 :::
 
 </details>
