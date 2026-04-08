@@ -23,7 +23,7 @@ The framework is facilitated by **seven skills** — reusable AI routines that g
 
 </div>
 
-**Get the skills:** See [Get the Skills](skills/) for installation instructions across Claude Code, Cowork, Claude.ai, Cursor, Codex CLI, Gemini CLI, and VS Code Copilot. The plugin name is `business-first-ai`.
+**Get the skills:** See [Set Up the Skills](skills/) for installation instructions across Claude Code, Cowork, Claude.ai, Cursor, Codex CLI, Gemini CLI, and VS Code Copilot. The plugin name is `business-first-ai`.
 
 ## The Framework
 
@@ -42,7 +42,7 @@ The audit starts by determining which lens to use — individual or organization
 
 **Deliverable:** **Opportunity Report** (`outputs/ai-opportunity-report.md`) — prioritized opportunities with a Workflow Candidate Summary listing the workflows you've chosen to pursue.
 
-**Facilitated by the `analyze` skill.** See [Analyze Workflows](analyze/) for details and [Get the Skills](skills/) for installation on any supported platform.
+**Facilitated by the `analyze` skill.** See [Analyze Workflows](analyze/) for details and [Set Up the Skills](skills/) for installation on any supported platform.
 
 ---
 
@@ -69,7 +69,7 @@ This is purely the *what* — it captures the process without prescribing how AI
 
 **Deliverable:** **Workflow Definition** (`outputs/[name]-definition.md`) — either a step-decomposed breakdown (refined steps with decision points, data flows, context needs, failure modes, and a context shopping list) or an outcome-driven definition (goal, inputs, outputs, constraints, quality criteria, capability domains, and human gates).
 
-**Facilitated by the `deconstruct` skill.** See [Deconstruct Workflows](deconstruct/) for details and [Get the Skills](skills/) for installation on any supported platform.
+**Facilitated by the `deconstruct` skill.** See [Deconstruct Workflows](deconstruct/) for details and [Set Up the Skills](skills/) for installation on any supported platform.
 
 ---
 

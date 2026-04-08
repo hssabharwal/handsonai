@@ -116,7 +116,7 @@ Most workflows need multiple rounds of Build-then-Test before they are ready for
 :::
 ## How to Use This
 
-This step is facilitated by the **`test`** Business-First AI Framework skill. See [Get the Skills](../skills/) for installation instructions across all supported platforms.
+This step is facilitated by the **`test`** Business-First AI Framework skill. See [Set Up the Skills](../skills/) for installation instructions across all supported platforms.
 
 **Start with this prompt:**
 
