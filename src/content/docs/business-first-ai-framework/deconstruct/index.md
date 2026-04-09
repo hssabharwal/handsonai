@@ -140,6 +140,18 @@ Both formats are the input for the [Design phase](../design/) in Step 3 — Desi
 
 For step-decomposed workflows, the skill includes an **Optimize for AI** pass after the deep dive. Once the full process is mapped, the model steps back and challenges it — looking for steps that exist only because a human was doing the work (an integration eliminates the manual transfer), steps that can be collapsed (AI drafts and formats in one pass), steps that can be parallelized (no data dependency), handoffs that can be simplified, and new steps needed for the AI version. These are presented as recommendations for you to accept or reject — you may have good reasons to keep steps as-is (compliance, audit trail, stakeholder expectations). The Workflow Definition records what changed and why.
 
+### Workflow validation
+
+After optimization, the skill runs a **validation pass** — walking through the refined workflow end-to-end to catch gaps before it moves to Design. This is the quality gate that stress-tests the workflow for:
+
+- **Completeness** — Are there gaps where one step's output doesn't connect to the next step's input?
+- **Logic gaps** — Decision points without clear criteria, or steps that assume information not produced by a prior step?
+- **Edge cases** — Scenarios you haven't mentioned (empty inputs, unexpected formats, partial data, exception paths)?
+- **Redundancy** — Steps that duplicate work or produce outputs no downstream step consumes?
+- **Handoff clarity** — Is it clear what passes between each step, and in what form?
+
+The model presents its findings as a summary and asks you to confirm or address each one. Any issues get resolved before the Workflow Definition is finalized.
+
 ## Tips for Better Results
 
 - **Start with workflows you actually do.** Real processes have real complexity that produces useful analysis. Hypothetical workflows tend to be too clean.

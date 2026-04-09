@@ -63,9 +63,9 @@ After confirming the platform, read the Workflow Definition and extract:
 
 - **Trigger/schedule** — from Scenario Metadata. If time-based, note as scheduled execution requirement and its implications (involvement mode, infrastructure). If manual, no action needed.
 
-- **Data readiness flags** — from the Context Shopping List's AI Accessible? and Readiness Notes columns. Summarize items flagged as "Partial" or "No". These inform step classification — a step that depends on inaccessible data may need:
+- **Context readiness flags** — from the Context Shopping List's AI Accessible? and Readiness Notes columns. Summarize items flagged as "Partial" or "No" — these may be structured data, but also documents, transcripts, or reference materials that aren't AI-accessible. These inform step classification — a step that depends on inaccessible context may need:
   - A prerequisite human step prepended (e.g., "Export CRM data to CSV")
-  - A different autonomy classification (Autonomous → Guided or Human, because a human must bridge the data gap)
+  - A different autonomy classification (Autonomous → Guided or Human, because a human must bridge the context gap)
   - An integration research priority flag for the Build phase (this tool connection is critical, not just nice-to-have)
 
 - **Browser access** — deferred to Build. If any step's Data In references a web portal, CRM login, or authenticated website, flag it during step classification (Step 6) as a "requires browser access" note on that step. Do not ask about it here.
@@ -81,7 +81,7 @@ Present a single confirmation block:
 > - **Tools needed:** [extracted list]
 > - **Trigger:** [extracted trigger] → [implications for involvement mode]
 > - [Any flags: e.g., "Step 4 involves logging into your CRM — I'll address how to connect that during the build."]
-> - **Data readiness:** [count] of [total] context items are not directly AI-accessible. [Brief summary of gaps]. These gaps may affect step autonomy and will need resolution before or during Build.
+> - **Context readiness:** [count] of [total] context items are not directly AI-accessible. [Brief summary of gaps — may include structured data, documents, transcripts, or reference materials]. These gaps may affect step autonomy and will need resolution before or during Build.
 > - [Organizational lens: stakeholder implications — different platform access levels, notification needs for handoffs, shareability defaults to "yes"]
 >
 > Integration availability on [platform] will be researched during the Build phase.
