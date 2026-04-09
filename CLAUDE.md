@@ -327,7 +327,16 @@ When updating:
 3. Bump versions (see below)
 4. Copy the updated `plugins/` directory to the `handsonai-plugins` repo, bump versions in its `marketplace.json`, commit and push there
 
-**Critical:** Step 4 is not optional. The `handsonai-plugins` repo is what users actually install from — if it's not updated, no one gets the changes. Always push to `handsonai-plugins` in the same session as the main repo commit. The repo is cloned locally at `~/code/handsonai-plugins`.
+**Critical:** Step 4 is not optional. The `handsonai-plugins` repo is what users actually install from — if it's not updated, no one gets the changes. Always push to `handsonai-plugins` in the same session as the main repo commit. The repo is cloned locally at `~/Code/jamesgray/handsonai-plugins`.
+
+### Updating skill ZIP downloads (GitHub Releases)
+
+Claude.ai users download pre-built skill ZIPs from GitHub Releases on `handsonai-plugins`. When skills are updated, rebuild and publish a new release:
+
+1. From the `handsonai-plugins` repo, run `./scripts/build-skill-zips.sh` — this creates ZIPs in `dist/`
+2. Create a new release: `gh release create vX.Y.Z dist/*.zip --title "vX.Y.Z" --notes "Description of changes"`
+
+The skills page (`docs/business-first-ai-framework/skills.mdx`) uses `/releases/latest/download/` URLs, so they always point to the most recent release automatically.
 
 ### Adding a new agent or skill to an existing plugin
 
