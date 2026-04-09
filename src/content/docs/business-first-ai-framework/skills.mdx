@@ -52,50 +52,48 @@ Claude.ai officially supports Agent Skills. You upload a skill file and Claude u
 
 This setting lets Claude run skills — it does not give Claude access to your computer.
 
-**Step 2 — Download the skill files from GitHub**
+**Step 2 — Download a skill file**
 
-1. Open [this page](https://github.com/jamesgray-ai/handsonai-plugins) in your web browser — this is where the skill files are stored
-2. Look for the green button that says **Code** — click it
-3. Click **Download ZIP** in the dropdown menu
-4. A file called `handsonai-plugins-main.zip` will download to your computer (it usually goes to your **Downloads** folder)
+Start with the **Analyze** skill (Step 1 of the framework). You'll repeat these steps for each skill you want to add.
 
-**Step 3 — Extract (unzip) the file**
+1. Open the [Analyze SKILL.md file](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/skills/analyze/SKILL.md) in your web browser
+2. Click the **Raw** button (top-right of the file) to see the plain text
+3. Select all the text (**Ctrl+A** on Windows, **Cmd+A** on Mac) and copy it (**Ctrl+C** / **Cmd+C**)
 
-1. Open your **Downloads** folder and find the file `handsonai-plugins-main.zip`
-2. **Double-click** it — this creates a new folder called `handsonai-plugins-main`
-3. Open that folder
+**Step 3 — Create the skill folder**
 
-**Step 4 — Find the skill folders**
+1. Open your **Desktop** (or any folder you like)
+2. Create a **new folder** and name it `analyze`
+3. Open the `analyze` folder
+4. Open a text editor (Notepad on Windows, TextEdit on Mac)
+   - **TextEdit users:** before pasting, go to **Format** → **Make Plain Text** so it saves as plain text, not rich text
+5. Paste the text you copied (**Ctrl+V** / **Cmd+V**)
+6. Save the file **inside the `analyze` folder** with the name `SKILL.md`
+   - **Notepad users:** in the "Save as type" dropdown, choose **All Files** so it doesn't add `.txt` to the end
 
-Inside the extracted folder, click through these folders in order:
+When you're done, you should have: `analyze` → `SKILL.md` (one folder containing one file).
 
-`plugins` → `business-first-ai` → `skills`
-
-You'll see a list of folders — one for each skill: `analyze`, `build`, `deconstruct`, `design`, `improve`, `run`, `test`.
-
-**Step 5 — Create a ZIP for your first skill**
-
-Start with the `analyze` folder (Step 1 of the framework).
+**Step 4 — Zip the folder**
 
 - **Mac:** Right-click on the `analyze` folder and choose **Compress "analyze"**. A file called `analyze.zip` appears next to the folder.
 - **Windows:** Right-click on the `analyze` folder, choose **Send to** → **Compressed (zipped) folder**. A file called `analyze.zip` appears.
 
 :::caution[Common mistake]
-Zip the **folder itself** — not the individual files inside it. When you open the ZIP, you should see a single folder named `analyze`, not loose files.
+Zip the **folder itself** — not the file inside it. When you open the ZIP, you should see a single folder named `analyze`, not a loose `SKILL.md` file.
 :::
 
-**Step 6 — Upload the skill to Claude**
+**Step 5 — Upload the skill to Claude**
 
 1. Go back to [claude.ai](https://claude.ai) in your browser
 2. Open **Settings** (gear icon in the bottom-left) → **Capabilities**
 3. Scroll down and click **Upload skill**
 4. Select the `analyze.zip` file you just created
 
-**Step 7 — Turn the skill on**
+**Step 6 — Turn the skill on**
 
 After uploading, find "analyze" in your Skills list and make sure the toggle next to it is **on** (blue/active).
 
-**Step 8 — Test it**
+**Step 7 — Test it**
 
 Start a new chat on claude.ai and type:
 
@@ -103,9 +101,21 @@ Start a new chat on claude.ai and type:
 
 Claude should begin a structured interview process — asking about your role, your workflows, and where AI might help.
 
-**Step 9 — Add more skills as you need them**
+**Step 8 — Add more skills as you need them**
 
-Go back to Step 5 and repeat for `deconstruct` (the next skill in the framework). Add the remaining skills (design, build, test, run, improve) later as you progress.
+Go back to Step 2 and repeat for the next skill you need. Here are the direct links to each skill file:
+
+| Framework Step | Skill | File |
+|---|---|---|
+| 1 | Analyze | [SKILL.md](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/skills/analyze/SKILL.md) |
+| 2 | Deconstruct | [SKILL.md](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/skills/deconstruct/SKILL.md) |
+| 3 | Design | [SKILL.md](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/skills/design/SKILL.md) |
+| 4 | Build | [SKILL.md](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/skills/build/SKILL.md) |
+| 5 | Test | [SKILL.md](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/skills/test/SKILL.md) |
+| 6 | Run | [SKILL.md](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/skills/run/SKILL.md) |
+| 7 | Improve | [SKILL.md](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/skills/improve/SKILL.md) |
+
+Start with **Analyze** and **Deconstruct** — add the rest as you progress through the framework.
 
 For advanced management (updates, troubleshooting), see [Using Plugins](../../use-the-playbook/build/using-plugins/).
 
