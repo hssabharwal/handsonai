@@ -325,9 +325,14 @@ When updating:
 1. Always edit `.claude/agents/` or `.claude/skills/` first and test locally
 2. Copy the updated file to the corresponding `plugins/<plugin-name>/` location in this repo
 3. Bump versions (see below)
-4. Copy the updated `plugins/` directory to the `handsonai-plugins` repo, bump versions in its `marketplace.json`, commit and push there
+4. Commit and push **this repo** first
+5. Copy the updated `plugins/` directory to the `handsonai-plugins` repo, bump versions in its `marketplace.json`
+6. Rebuild skill ZIPs if skills changed (see below)
+7. Commit and push `handsonai-plugins` **as the very last step**
 
-**Critical:** Step 4 is not optional. The `handsonai-plugins` repo is what users actually install from — if it's not updated, no one gets the changes. Always push to `handsonai-plugins` in the same session as the main repo commit. The repo is cloned locally at `~/Code/jamesgray/handsonai-plugins`.
+**Critical — push `handsonai-plugins` last:** Claude Cowork detects plugin updates by comparing commit hashes. If Cowork syncs to a commit before the version bump lands, it treats that commit as "already synced" and won't re-process it — even though the files contain the new version. By making the `handsonai-plugins` push the final action in the session, Cowork only ever sees the complete, version-bumped state. Never push `handsonai-plugins` mid-session while still making changes.
+
+The repo is cloned locally at `~/Code/jamesgray/handsonai-plugins`.
 
 ### Updating skill ZIP downloads (GitHub Releases)
 
@@ -346,7 +351,7 @@ The skills page (`docs/business-first-ai-framework/skills.mdx`) uses `/releases/
 4. Update the plugin's section on `docs/use-the-playbook/build/index.md` — add the agent/skill to the table with a link to the detail page anchor
 5. Update the plugin's detail page (`docs/use-the-playbook/build/<plugin-name>.md`) — add the agent/skill section following the existing component format
 6. Commit and push this repo
-7. Copy updated files to `handsonai-plugins` repo, bump version in its `marketplace.json`, commit and push there
+7. Copy updated files to `handsonai-plugins` repo, bump version in its `marketplace.json`, rebuild skill ZIPs if needed, then commit and push there **as the very last step**
 
 ### Creating a new plugin
 
@@ -367,7 +372,7 @@ The skills page (`docs/business-first-ai-framework/skills.mdx`) uses `/releases/
 5. Create a detail page at `docs/use-the-playbook/build/<plugin-name>.md` following the template used by existing detail pages (see `docs/use-the-playbook/build/ai-registry.md` for reference)
 6. Add the detail page to the sidebar in `astro.config.mjs` under "Tools & Resources > Agents & Skills"
 7. Commit and push this repo
-8. Copy the new plugin directory to `handsonai-plugins` repo, add entry to its `marketplace.json`, commit and push there
+8. Copy the new plugin directory to `handsonai-plugins` repo, add entry to its `marketplace.json`, rebuild skill ZIPs, then commit and push there **as the very last step**
 
 ### Catalog page linking convention
 
