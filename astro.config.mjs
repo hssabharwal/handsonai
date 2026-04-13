@@ -8,6 +8,32 @@ export default defineConfig({
   trailingSlash: 'always',
   redirects: {
     '/courses/leaders/setup-checklist/': '/courses/tools-setup-checklist/',
+    // Legacy "cookbook" → "playbook" rename
+    '/use-the-cookbook/': '/use-the-playbook/',
+    '/use-the-cookbook/build/': '/use-the-playbook/build/',
+    '/use-the-cookbook/build/ai-registry/': '/use-the-playbook/build/ai-registry/',
+    '/use-the-cookbook/build/business-first-ai/': '/use-the-playbook/build/',
+    '/use-the-cookbook/build/agentic-coding/': '/use-cases/coding/agentic-coding/',
+    // Framework step rename (discover → analyze)
+    '/business-first-ai-framework/discover/': '/business-first-ai-framework/analyze/',
+    // Platform-prefixed framework pages moved to top-level framework section
+    '/platforms/business-first-ai-framework/deconstruct/': '/business-first-ai-framework/deconstruct/',
+    '/platforms/business-first-ai-framework/analyze/': '/business-first-ai-framework/analyze/',
+    // Removed how-to namespace — examples live under the framework now
+    '/how-to/workflow-examples/autonomous-agent/': '/business-first-ai-framework/examples/autonomous-agent/',
+    // Legacy builder-setup pages consolidated
+    '/builder-setup/cli/': '/builder-setup/',
+    '/builder-setup/ai-platforms/': '/builder-setup/',
+    // Legacy feed URL
+    '/feed/rss_created.xml': '/rss.xml',
+    // Agents pages moved to building-blocks section
+    '/platforms/claude/agents/building-agents/': '/agentic-building-blocks/agents/',
+    '/platforms/openai/agents/building-agents/': '/agentic-building-blocks/agents/',
+    // Skills subpage consolidated
+    '/agentic-building-blocks/skills/questions/': '/agentic-building-blocks/skills/',
+    // Misindexed as subpages of self-consistency (it's a leaf page)
+    '/agentic-building-blocks/prompts/prompt-engineering/self-consistency-and-reflection/chain-of-thought/': '/agentic-building-blocks/prompts/prompt-engineering/chain-of-thought/',
+    '/agentic-building-blocks/prompts/prompt-engineering/self-consistency-and-reflection/reframing-prompts/': '/agentic-building-blocks/prompts/prompt-engineering/reframing-prompts/',
   },
   integrations: [
     starlight({
