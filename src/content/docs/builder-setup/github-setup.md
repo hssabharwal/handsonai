@@ -7,6 +7,8 @@ howto_steps:
     text: Go to github.com, click Sign up, follow the prompts, and verify your email address.
   - name: Create a repository
     text: Click the + menu, select New repository, name it, add a README, and click Create repository.
+  - name: Install GitHub CLI
+    text: Install gh via Homebrew (macOS), winget (Windows), or apt (Linux), then run gh auth login to connect your GitHub account.
   - name: Clone a repository
     text: Open the Command Palette (Cmd/Ctrl + Shift + P), type Git Clone, paste the repository URL, and choose a local folder.
 ---## What Is GitHub?
@@ -43,9 +45,52 @@ This guide walks you through creating a GitHub account, creating your first repo
 
 You'll land on your new repository's page with a README file. The URL in your browser (e.g., `https://github.com/your-username/my-ai-projects`) is what you'll use to clone it in the next step.
 
-## 3. Clone a Repository
+## 3. Install GitHub CLI
 
-Use your code editor to download (clone) repositories from GitHub.
+The GitHub CLI (`gh`) is required for cloning repos from Claude Desktop's Code tab and for letting Cursor or Claude Code authenticate with GitHub programmatically. Install it before cloning.
+
+### macOS
+
+```bash
+brew install gh
+```
+
+### Windows
+
+```powershell
+winget install --id GitHub.cli
+```
+
+### Linux (Debian/Ubuntu)
+
+```bash
+sudo apt install gh
+```
+
+For other Linux distributions, see the [official install instructions](https://github.com/cli/cli/blob/trunk/docs/install_linux.md).
+
+### Authenticate
+
+```bash
+gh auth login
+```
+
+Follow the browser prompts to connect your GitHub account.
+
+### Verify
+
+```bash
+gh --version
+gh auth status
+```
+
+`gh auth status` should show you are logged in to `github.com` as your username.
+
+**Official docs:** [GitHub CLI manual](https://cli.github.com/manual/)
+
+## 4. Clone a Repository
+
+Download (clone) a repository from GitHub using whichever tool you're working in.
 
 ### In Cursor or VS Code
 
@@ -54,6 +99,19 @@ Use your code editor to download (clone) repositories from GitHub.
 3. Paste the repository URL (e.g., `https://github.com/username/project-name.git`)
 4. Choose a local folder location
 5. Open the cloned repository when prompted
+
+### In Claude Desktop (Code tab)
+
+If you're working in the Claude Desktop app without a separate code editor, you can clone a repo by asking Claude to do it for you. Because you installed and authenticated the GitHub CLI in the previous step, Claude can use `gh` on your behalf.
+
+1. Open **Claude Desktop** and click the **Code** tab
+2. Start a new session and pick (or create) a local folder you want the repo cloned into
+3. In the chat box, paste a prompt like:
+
+   > Clone `https://github.com/username/project-name.git` into this folder.
+
+4. Approve the command when Claude asks for permission to run `gh repo clone` (or `git clone`)
+5. When it finishes, open Finder (macOS) or File Explorer (Windows) and navigate to the folder you chose — you should see the cloned repo there
 
 ### Verify the Clone Worked
 
@@ -118,46 +176,6 @@ If you're stuck, paste this into ChatGPT, Claude, or Gemini:
 > I'm trying to clone a GitHub repository in [Cursor / VS Code] on [Mac / Windows] and getting this error: [paste the error message]. I have Git installed and a GitHub account. What should I try?
 
 </details>
-## 4. Install GitHub CLI (Optional)
-
-The GitHub CLI (`gh`) lets you manage pull requests, issues, and repos from your terminal — no browser needed.
-
-### macOS
-
-```bash
-brew install gh
-```
-
-### Windows
-
-```powershell
-winget install --id GitHub.cli
-```
-
-### Linux (Debian/Ubuntu)
-
-```bash
-sudo apt install gh
-```
-
-For other Linux distributions, see the [official install instructions](https://github.com/cli/cli/blob/trunk/docs/install_linux.md).
-
-### Authenticate
-
-```bash
-gh auth login
-```
-
-Follow the browser prompts to connect your GitHub account.
-
-### Verify
-
-```bash
-gh --version
-```
-
-**Official docs:** [GitHub CLI manual](https://cli.github.com/manual/)
-
 ## Next Steps
 
 - Try cloning a public repository to practice the workflow

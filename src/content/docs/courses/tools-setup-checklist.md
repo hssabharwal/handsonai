@@ -134,14 +134,15 @@ Your AI platform is ready. Next, you'll set up the developer tools you'll use th
 
 ### Step 5: GitHub
 
-**What:** Create an account, enable two-factor authentication (2FA), and create a repository for your coursework.
+**What:** Create an account, enable two-factor authentication (2FA), install the GitHub CLI, and create a repository for your coursework.
 
 **Action:** [Follow the GitHub setup guide →](/builder-setup/github-setup/)
 
 **Done when:**
 
 - You have a GitHub account
-- You can clone a repository and see the files in your editor
+- `gh auth status` shows you are logged in to `github.com`
+- You can clone a repository and see the files in your editor (or in the Claude Desktop Code tab)
 - In your terminal, you can navigate to the cloned folder (`cd my-repo-name`) and run `git status` — it shows `On branch main`
 
 <details>
