@@ -45,13 +45,19 @@ Copilot uses your Microsoft Graph data (emails, files, calendar, chats) to provi
 
 ---
 
-## 4. Add Skills (VS Code Copilot)
+## 4. Add Skills (Copilot Cowork)
 
-After adding skills, you can say "edit this article for HBR quality" and VS Code Copilot applies professional editorial standards automatically — no re-explaining your requirements each time.
+M365 Copilot natively supports Agent Skills through **Copilot Cowork**. After adding a skill, you can say "edit this article for HBR quality" and Copilot applies professional editorial standards automatically — no re-explaining your requirements each time.
 
-Download skill folders from [GitHub](https://github.com/jamesgray-ai/handsonai-plugins/tree/main/plugins) and place them in `.github/skills/` or `.agents/skills/` in your project root. VS Code Copilot discovers them automatically.
+**Requires:** Enrollment in the [Frontier preview program](https://adoption.microsoft.com/en-us/copilot/frontier-program/) (Cowork is currently a Frontier preview feature).
 
-[→ How to Add Skills to Your Platform](../../../agentic-building-blocks/skills/#how-to-add-skills-to-your-platform)
+1. In OneDrive, create the folder path `Documents/Cowork/Skills/<skill-name>/`
+2. Download a `SKILL.md` from the [GitHub plugins page](https://github.com/jamesgray-ai/handsonai-plugins) (navigate to `plugins/<plugin-name>/skills/<skill-name>/SKILL.md` → click **Raw** → save the file)
+3. Place the file inside the new folder — Cowork discovers it automatically the next time you start a conversation
+
+Up to 20 custom skills, 1 MB per `SKILL.md`.
+
+[→ Full Cowork skills setup walkthrough](../../../business-first-ai-framework/skills/) · [→ How to Add Skills to Your Platform](../../../agentic-building-blocks/skills/#how-to-add-skills-to-your-platform)
 
 ---
 
@@ -61,4 +67,4 @@ Download skill folders from [GitHub](https://github.com/jamesgray-ai/handsonai-p
 - [ ] Microsoft 365 desktop apps updated to latest version
 - [ ] Mobile app installed on at least one device
 - [ ] Copilot icon visible in at least one Microsoft 365 app (Word, Excel, Teams, etc.)
-- [ ] At least one skill installed or added via VS Code Copilot (optional)
+- [ ] At least one skill installed via Copilot Cowork (optional, requires Frontier preview)

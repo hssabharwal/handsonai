@@ -5,7 +5,7 @@ description: The Skill building block — reusable routines the AI discovers and
 
 import { Tabs, TabItem } from '@astrojs/starlight/components';
 
-> **Platforms:** `claude` `openai` (via Codex CLI) · `gemini` (via Gemini CLI) · `m365-copilot` (via VS Code Copilot)
+> **Platforms:** `claude` `openai` (via Codex CLI) · `gemini` (via Gemini CLI) · `m365-copilot` (via Copilot Cowork) · `vs-code-copilot`
 
 ## What Skills Are
 
@@ -41,7 +41,8 @@ Agent Skills are an **open standard** — the same `SKILL.md` format works acros
 
 | Platform | Skill Directory | Notes |
 |----------|----------------|-------|
-| **[Cowork](https://support.claude.com/en/articles/13345190-getting-started-with-cowork)** | Managed by plugin system | Install via **+** > **Add plugins** — no file placement needed |
+| **[Claude Cowork](https://support.claude.com/en/articles/13345190-getting-started-with-cowork)** | Managed by plugin system | Install via **+** > **Add plugins** — no file placement needed |
+| **[M365 Copilot Cowork](https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/use-cowork#cowork-skills)** | OneDrive: `Documents/Cowork/Skills/` | Frontier preview; auto-discovered each conversation; up to 20 skills, 1 MB per `SKILL.md` |
 | **[Claude Code](https://code.claude.com/docs/en/skills)** | `.claude/skills/` | Also installable via plugins (`/plugin install`) |
 | **[Claude.ai (web)](https://support.claude.com)** | Uploaded via Settings | ZIP upload under **Settings > Capabilities > Upload skill** |
 | **[Cursor](https://cursor.com/docs/context/skills)** | `.cursor/skills/`, `.claude/skills/`, `.codex/skills/`, or `.agents/skills/` | Reads from Claude and Codex directories too — no need to move files |
@@ -81,12 +82,12 @@ Skills are plain-text Markdown — no compiled code, no special format. A **plug
 Pick your platform below for the complete install steps.
 
 :::note[No skill directory? No problem]
-Some platforms — like the Gemini app, M365 Copilot, and Perplexity — don't have a skill directory. You can still use skills by pasting the `SKILL.md` contents into your platform's equivalent feature (Gems, Notebooks, or Spaces). See the **Other AI Tools** tab below.
+Some platforms — like the Gemini app and Perplexity — don't have a skill directory. You can still use skills by pasting the `SKILL.md` contents into your platform's equivalent feature (Gems or Spaces). See the **Other AI Tools** tab below.
 :::
 ### Install steps by platform
 
 <Tabs>
-  <TabItem label="Cowork">
+  <TabItem label="Claude Cowork">
 
 The simplest path — no terminal needed.
 
@@ -97,6 +98,22 @@ The simplest path — no terminal needed.
 Skills from the plugin are available immediately in Cowork.
 
 [→ Full Cowork plugin guide](../../use-the-playbook/build/using-plugins/#using-plugins-in-claude-cowork)
+  </TabItem>
+  <TabItem label="M365 Copilot">
+
+M365 Copilot Cowork reads custom skills directly from your OneDrive — no plugin install required.
+
+**What you need first:** An M365 Copilot license and enrollment in the [Frontier preview program](https://adoption.microsoft.com/en-us/copilot/frontier-program/) (Cowork is currently a Frontier preview feature).
+
+1. Open OneDrive in File Explorer (Windows), Finder (Mac), or [onedrive.live.com](https://onedrive.live.com).
+2. Navigate to `Documents/Cowork/Skills/` — create the `Cowork` and `Skills` folders if they don't exist.
+3. Inside `Skills/`, create a subfolder named after your skill (e.g., `weekly-report/`).
+4. Download a `SKILL.md` from the [GitHub plugins page](https://github.com/jamesgray-ai/handsonai-plugins) (navigate to `plugins/<plugin-name>/skills/<skill-name>/SKILL.md` → click **Raw** → save) and place it in the new folder.
+5. Open M365 Copilot Cowork and start a new conversation. The skill loads automatically and appears as a chip in the side panel **Skills** section when invoked.
+
+:::note[Limits]
+You can create up to **20 custom skills**, and each `SKILL.md` can be up to **1 MB**. See the [official Cowork skills docs](https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/use-cowork#cowork-skills) for details.
+:::
   </TabItem>
   <TabItem label="Claude Code">
 
@@ -156,12 +173,6 @@ Skills are plain Markdown — platforms without a skill directory can still use 
 3. Paste the `SKILL.md` contents into the Gem's instructions field
 4. Save — select the Gem from the sidebar to use it in any conversation
 
-**M365 Copilot (Notebooks)**
-
-1. Open [Microsoft Copilot](https://copilot.microsoft.com) and create a new **Notebook**
-2. Click the expand button next to your notebook name and paste the `SKILL.md` contents as custom instructions
-3. The instructions apply to all prompts within that Notebook
-
 **Perplexity (Spaces)**
 
 1. Open [Perplexity](https://perplexity.ai) and click **Create a Space**
@@ -179,10 +190,11 @@ When a skill says it will save output to a file, the AI will present the output 
 
 Test that your platform picks up the skill by asking it to perform a task the skill handles:
 
-- **Cowork or Claude.ai:** Start a new conversation and say "Edit this paragraph for HBR quality" — Claude should apply editorial criteria from the skill
+- **Claude Cowork or Claude.ai:** Start a new conversation and say "Edit this paragraph for HBR quality" — Claude should apply editorial criteria from the skill
+- **M365 Copilot Cowork:** Start a new Cowork conversation and ask it to do the skill's task — the skill should appear as a chip in the side panel **Skills** section
 - **Claude Code:** Type `/business-first-ai:analyze` to invoke the skill directly
 - **Cursor, Codex CLI, Gemini CLI, VS Code Copilot:** Ask "Use the editing-hbr-articles skill to review this paragraph" — the AI should reference the skill's instructions in its response
-- **Gemini, M365 Copilot, Perplexity:** Open your Gem, Notebook, or Space and ask it to start the workflow — it should follow the skill's structured interview process
+- **Gemini, Perplexity:** Open your Gem or Space and ask it to start the workflow — it should follow the skill's structured interview process
 
 ## Skill, Project, or Prompt?
 

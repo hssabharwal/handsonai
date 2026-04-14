@@ -21,7 +21,7 @@ Not every platform supports skills natively yet. This table shows you what to ex
 | Claude Code (Terminal) | ✅ Native | Plugin install via command line |
 | ChatGPT | 🟡 Beta | Native skills on some plans; **Projects** workaround for all paid plans |
 | Google Gemini (app) | 🟠 Workaround | No native skills; use **Gems** to get the same result |
-| M365 Copilot | 🟠 Workaround | No native skills; use **Notebooks** to get the same result |
+| M365 Copilot | ✅ Native | Cowork reads `SKILL.md` files from OneDrive (`Documents/Cowork/Skills/`) — Frontier preview |
 | Cursor | ✅ Native | Reads skill files from your project folder |
 | OpenAI Codex | ✅ Native | Reads skill files from your project folder (CLI, desktop app, and IDE extension) |
 | Gemini CLI / Antigravity | ✅ Native | Reads skill files from your project folder |
@@ -372,57 +372,60 @@ When a skill says it will "save output to a file," Gemini will show the output i
 </details>
 
 <details>
-<summary><strong>M365 Copilot</strong> — 🟠 Workaround using Notebooks</summary>
+<summary><strong>M365 Copilot</strong> — ✅ Native skill support (via Copilot Cowork)</summary>
 
-M365 Copilot does not natively support Agent Skills yet. These instructions use **Notebooks** — Copilot's persistent instruction containers — to achieve the same result. You paste the skill's instructions into a Notebook, and Copilot follows them.
+M365 Copilot now natively supports Agent Skills through **Copilot Cowork**. Cowork reads `SKILL.md` files directly from a folder on your OneDrive — no plugin install or paste step required. Each skill loads automatically when relevant to your conversation.
 
-**Official docs:** [Provide Custom Instructions for Copilot Notebooks](https://support.microsoft.com/en-us/topic/provide-custom-instructions-for-your-microsoft-365-copilot-notebook-763a9536-d459-4f90-8835-c411863d91ce)
+**Official docs:** [Cowork skills (Microsoft Learn)](https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/use-cowork#cowork-skills)
 
-**What you need first:** An M365 Copilot license (included with Microsoft 365 Business Premium, E3, or E5 with the Copilot add-on).
+**What you need first:** An M365 Copilot license **and** enrollment in the [Frontier preview program](https://adoption.microsoft.com/en-us/copilot/frontier-program/) (Cowork is currently a Frontier preview feature). Ask your IT admin if you're not sure whether your tenant is enrolled.
 
-**Step 1 — Copy the skill instructions**
+**Step 1 — Open OneDrive**
+
+Open OneDrive in whichever way is easiest:
+
+- **Windows:** Open **File Explorer** → click **OneDrive** in the left sidebar
+- **Mac:** Open **Finder** → click **OneDrive** in the sidebar (install the OneDrive app if needed)
+- **Browser:** Go to [onedrive.live.com](https://onedrive.live.com) and sign in with your Microsoft 365 account
+
+**Step 2 — Create the Cowork Skills folder**
+
+Inside `Documents/`, create the path `Cowork/Skills/` if it doesn't already exist:
+
+1. Open the **Documents** folder
+2. Create a new folder named **Cowork**
+3. Open **Cowork** and create a new folder inside it named **Skills**
+
+The full path should now be `Documents/Cowork/Skills/`.
+
+**Step 3 — Create a folder for the Analyze skill**
+
+Inside `Documents/Cowork/Skills/`, create a new folder named **analyze**.
+
+**Step 4 — Download the SKILL.md**
 
 1. Scroll down to the [**Skill Files**](#skill-files) table on this page
-2. Click the **SKILL.md** link for **Analyze** (the first skill) — this opens a page on GitHub
+2. Click the **SKILL.md** link for **Analyze** — this opens GitHub
+3. **Right-click** the **Raw** button (top-right of the file content area) and choose **Save link as…**
+4. Name the file `SKILL.md` and save it inside the `Documents/Cowork/Skills/analyze/` folder you just created
 
-**Step 2 — View the raw text**
+If your browser doesn't show a **Save link as…** option, click **Raw**, then copy all the text on the page and paste it into a new plain-text file named `SKILL.md` inside the same folder.
 
-1. On the GitHub page, look near the top-right of the file content area
-2. Click the button labeled **Raw** — this shows the plain text
+**Step 5 — Test it**
 
-**Step 3 — Select and copy all the text**
+1. Open M365 Copilot Cowork and start a new conversation
+2. Type:
 
-1. Click anywhere on the page, then:
-   - **Mac:** Press **Cmd+A** (selects all), then **Cmd+C** (copies)
-   - **Windows:** Press **Ctrl+A** (selects all), then **Ctrl+C** (copies)
+   > Help me analyze where AI fits in my work
 
-**Step 4 — Create a new Notebook**
+3. Cowork loads the skill automatically. You'll see it appear as a chip in the side panel **Skills** section, and Cowork follows the skill's structured interview.
 
-1. Open [copilot.microsoft.com](https://copilot.microsoft.com) in your browser
-2. Click **New Notebook** to create a fresh workspace
+**Step 6 — Add more skills**
 
-**Step 5 — Add the instructions**
+Repeat Steps 3–4 for **Deconstruct** (Step 2) and any other framework skill you need. Each skill goes in its own subfolder under `Documents/Cowork/Skills/`.
 
-1. Look for the expand button (an arrow or ↕ icon) next to the notebook name at the top
-2. Click it to reveal the custom instructions area
-3. Paste the text you copied:
-   - **Mac:** Press **Cmd+V**
-   - **Windows:** Press **Ctrl+V**
-
-**Step 6 — Start using it**
-
-The instructions now apply to everything you type in this Notebook. Type:
-
-> Help me analyze where AI fits in my work
-
-Copilot will follow the skill's structured process.
-
-**Step 7 — Add more Notebooks later**
-
-Repeat these steps for **Deconstruct** (Step 2). Create additional Notebooks as you progress.
-
-:::tip[About file saving]
-When a skill says it will "save output to a file," Copilot will show the output in the chat instead. Copy and save it yourself.
+:::note[Limits]
+You can create up to **20 custom skills**, and each `SKILL.md` can be up to **1 MB**.
 :::
 
 </details>
@@ -660,7 +663,7 @@ Using a different tool (VS Code Copilot, Perplexity, or another platform)? See [
 
 ### Skill Files
 
-These are the direct links to each skill's instruction file on GitHub. Used by the ChatGPT, Gemini, and M365 Copilot setup instructions above — and useful for any platform where you need to copy the skill text.
+These are the direct links to each skill's instruction file on GitHub. Used by the ChatGPT, Gemini, and M365 Copilot Cowork setup instructions above — and useful for any platform where you need to copy or download the skill text.
 
 **How to copy a skill:** Click the SKILL.md link → click the **Raw** button (top-right of the file) → select all text (**Cmd+A** on Mac, **Ctrl+A** on Windows) → copy (**Cmd+C** / **Ctrl+C**).
 
@@ -675,7 +678,7 @@ These are the direct links to each skill's instruction file on GitHub. Used by t
 | 7 | Improve | [SKILL.md](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/skills/improve/SKILL.md) |
 
 :::note[About the Build skill]
-The Build skill (Step 4) also has reference files that it uses. On platforms with native skill support (Claude, Cursor, Codex CLI, Gemini CLI), these are included automatically. On paste-based platforms (ChatGPT Projects, Gems, Notebooks), copy and paste the [references/agent-spec.md](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/skills/build/references/agent-spec.md) and [references/skill-spec.md](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/skills/build/references/skill-spec.md) files after the SKILL.md content when you set up Build.
+The Build skill (Step 4) also has reference files that it uses. On platforms with native skill support (Claude, Cursor, Codex CLI, Gemini CLI), these are included automatically. M365 Copilot Cowork's documented format only describes a single `SKILL.md` per skill folder, so until Microsoft documents reference-file support you'll need to paste the [references/agent-spec.md](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/skills/build/references/agent-spec.md) and [references/skill-spec.md](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/skills/build/references/skill-spec.md) contents into the body of `SKILL.md` after the main instructions. On paste-based platforms (ChatGPT Projects, Gems), copy and paste the [references/agent-spec.md](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/skills/build/references/agent-spec.md) and [references/skill-spec.md](https://github.com/jamesgray-ai/handsonai-plugins/blob/main/plugins/business-first-ai/skills/build/references/skill-spec.md) files after the SKILL.md content when you set up Build.
 :::
 
 ## Using These Skills
@@ -690,7 +693,7 @@ Once you've installed or set up the skills for your platform, here's how to use 
 | **Claude Code (Terminal)** | Type `/business-first-ai:analyze` (or any slash command below). Or just describe your need — Claude picks the skill. |
 | **ChatGPT** | Open the **Project** you created for the skill. Type your request. |
 | **Google Gemini (app)** | Click the **Gem** in your sidebar. Type your request. |
-| **M365 Copilot** | Open the **Notebook**. Type your request. |
+| **M365 Copilot** | Start a Cowork conversation. Type your request — Cowork loads the matching skill from OneDrive automatically. |
 | **Cursor / OpenAI Codex / Gemini CLI / Antigravity** | Ask by skill name — e.g., *"Use the analyze skill."* Skills are discovered automatically. |
 
 **Claude Code slash commands:**

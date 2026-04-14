@@ -23,7 +23,7 @@ The framework is facilitated by **seven skills** — reusable AI routines that g
 
 </div>
 
-**Get the skills:** See [Set Up the Skills](skills/) for installation instructions across Claude Code, Cowork, Claude.ai, Cursor, Codex CLI, Gemini CLI, and VS Code Copilot. The plugin name is `business-first-ai`.
+**Get the skills:** See [Set Up the Skills](skills/) for installation instructions across Claude Code, Claude Cowork, Claude.ai, M365 Copilot (Cowork), Cursor, Codex CLI, Gemini CLI, and VS Code Copilot. The plugin name is `business-first-ai`.
 
 ## The Framework
 
